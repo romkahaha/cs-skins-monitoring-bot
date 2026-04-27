@@ -3,6 +3,11 @@ name: Nightly level 1
 on:
   workflow_dispatch:
     inputs:
+      skip_risk:
+        description: Skip nightly risk rebuild and use automation_runtime/risk_metrics_latest.csv
+        required: false
+        default: false
+        type: boolean
       skip_base:
         description: Skip CSFloat base snapshot refresh
         required: false
@@ -23,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
+      SKIP_RISK: ${{ github.event.inputs.skip_risk || 'false' }}
       SKIP_BASE: ${{ github.event.inputs.skip_base || 'false' }}
       STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
@@ -51,7 +57,12 @@ jobs:
         run: |
           set -euo pipefail
 
-          args=(--skip-risk)
+          args=()
+          if [[ "$SKIP_RISK" == "true" ]]; then
+            args+=(--skip-risk)
+          else
+            args+=(--run-risk)
+          fi
 
           if [[ "$SKIP_BASE" == "true" ]]; then
             args+=(--skip-base)

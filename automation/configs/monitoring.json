@@ -26,7 +26,7 @@
     "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv",
     "steam_listings_csv": "automation_runtime/steam_listings_latest.csv",
     "fit_json": "steam_listings/data/float_fit_rel_curves.json",
-    "risk_csv": "skin_homog/screener_preprocess_risk/risk_metrics.csv",
+    "risk_csv": "automation_runtime/risk_metrics_latest.csv",
     "enriched_listings_csv": "automation_runtime/enriched_listings_latest.csv",
     "opportunities_csv": "automation_runtime/opportunities_latest.csv",
     "opportunities_report_csv": "automation_runtime/opportunities_report_latest.csv"
