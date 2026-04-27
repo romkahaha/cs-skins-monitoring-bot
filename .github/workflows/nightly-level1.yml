@@ -13,13 +13,8 @@ on:
         required: false
         default: false
         type: boolean
-      run_backfill:
-        description: Run model-data backfill before refit
-        required: false
-        default: false
-        type: boolean
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "1 22 * * *"
 
 permissions:
   contents: write
@@ -35,7 +30,6 @@ jobs:
     env:
       SKIP_RISK: ${{ github.event.inputs.skip_risk || 'false' }}
       SKIP_BASE: ${{ github.event.inputs.skip_base || 'false' }}
-      RUN_BACKFILL: ${{ github.event.inputs.run_backfill || 'false' }}
       STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
       CSFLOAT_API_KEY_2: ${{ secrets.CSFLOAT_API_KEY_2 }}
@@ -72,12 +66,6 @@ jobs:
 
           if [[ "$SKIP_BASE" == "true" ]]; then
             args+=(--skip-base)
-          fi
-
-          if [[ "$RUN_BACKFILL" == "true" ]]; then
-            args+=(--run-model-backfill)
-          else
-            args+=(--skip-model-backfill)
           fi
 
           python automation/nightly/run_level1.py "${args[@]}"

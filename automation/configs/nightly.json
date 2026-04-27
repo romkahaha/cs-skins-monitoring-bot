@@ -24,7 +24,7 @@
   "schedule": {
     "intended_start": "00:01",
     "timezone": "Europe/Prague",
-    "github_actions_cron_utc": "0 23 * * *"
+    "github_actions_cron_utc": "1 22 * * *"
   },
   "preflight": {
     "require_existing_risk_csv": true,
@@ -65,7 +65,8 @@
   },
   "model_coverage": {
     "min_summary_n_listings": 3,
-    "min_fit_clean_points": 5
+    "min_fit_clean_points": 5,
+    "require_model_ready_for_monitor": true
   },
   "model_backfill": {
     "enabled": true,

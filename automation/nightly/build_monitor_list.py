@@ -6,6 +6,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
@@ -53,7 +55,37 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Output Python item list with ITEMS = [...].",
     )
+    parser.add_argument(
+        "--model-coverage-csv",
+        type=Path,
+        default=None,
+        help="Path to model_coverage_latest.csv; used to exclude items without summary/fit models.",
+    )
     return parser.parse_args()
+
+
+def apply_model_ready_filter(frame: pd.DataFrame, coverage_csv: Path, counts: dict[str, int]) -> pd.DataFrame:
+    if not coverage_csv.is_file():
+        raise FileNotFoundError(f"model coverage CSV not found: {coverage_csv}")
+
+    coverage = pd.read_csv(coverage_csv)
+    if "item" not in coverage.columns or "model_ready" not in coverage.columns:
+        raise KeyError(f"{coverage_csv} must contain 'item' and 'model_ready' columns")
+
+    keep = coverage[["item", "model_ready", "has_summary", "summary_ready", "has_fit", "fit_ready"]].copy()
+    keep["item"] = keep["item"].astype(str)
+    for col in ["model_ready", "has_summary", "summary_ready", "has_fit", "fit_ready"]:
+        if col in keep.columns:
+            keep[col] = keep[col].astype(str).str.lower().isin(["true", "1", "yes"])
+
+    out = frame.merge(keep.drop_duplicates(subset=["item"], keep="last"), on="item", how="left")
+    out["model_ready"] = out["model_ready"].map(lambda value: bool(value) if pd.notna(value) else False)
+    out["monitor_pass_before_model_ready"] = out["monitor_pass"]
+    out["monitor_pass"] = out["monitor_pass"] & out["model_ready"]
+    counts["model_ready_passed"] = int(out["model_ready"].sum())
+    counts["monitor_passed_before_model_ready"] = int(out["monitor_pass_before_model_ready"].sum())
+    counts["monitor_passed"] = int(out["monitor_pass"].sum())
+    return out
 
 
 def main() -> int:
@@ -76,12 +108,19 @@ def main() -> int:
     data_dir = args.data_dir.resolve() if args.data_dir else path_from_config(config, "skin_data_dir")
     out_csv = args.out_csv.resolve() if args.out_csv else path_from_config(config, "monitor_csv")
     out_items_py = args.out_items_py.resolve() if args.out_items_py else path_from_config(config, "monitor_items_py")
+    model_coverage_csv = (
+        args.model_coverage_csv.resolve()
+        if args.model_coverage_csv
+        else path_from_config(config, "model_coverage_csv")
+    )
     frame, counts = build_monitor_frame(
         risk_csv,
         summary_csv,
         data_dir,
         cfg,
     )
+    if bool(config.get("model_coverage", {}).get("require_model_ready_for_monitor", True)):
+        frame = apply_model_ready_filter(frame, model_coverage_csv, counts)
     items = write_monitor_outputs(
         frame,
         out_csv,
@@ -97,6 +136,9 @@ def main() -> int:
     print(f"total risk rows: {counts['total_risk_rows']}")
     print(f"risk passed: {counts['risk_passed']}")
     print(f"high-CV passed: {counts['high_cv_passed']}")
+    if "monitor_passed_before_model_ready" in counts:
+        print(f"model ready: {counts['model_ready_passed']}")
+        print(f"monitor before model-ready filter: {counts['monitor_passed_before_model_ready']}")
     print(f"final monitor items: {counts['monitor_passed']}")
     print(f"saved audit csv: {out_csv}")
     print(f"saved ITEMS py: {out_items_py}")

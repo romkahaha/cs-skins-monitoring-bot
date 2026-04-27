@@ -152,9 +152,9 @@ def nightly_defaults() -> dict[str, Any]:
             "base_snapshot_csv": str(root / "automation_runtime" / "base_snapshot_latest.csv"),
         },
         "schedule": {
-            "intended_start": "00:00",
+            "intended_start": "00:01",
             "timezone": "Europe/Prague",
-            "github_actions_cron_utc": "0 23 * * *",
+            "github_actions_cron_utc": "1 22 * * *",
         },
         "preflight": {
             "require_existing_risk_csv": True,
@@ -196,6 +196,7 @@ def nightly_defaults() -> dict[str, Any]:
         "model_coverage": {
             "min_summary_n_listings": 3,
             "min_fit_clean_points": 5,
+            "require_model_ready_for_monitor": True,
         },
         "model_backfill": {
             "enabled": False,
