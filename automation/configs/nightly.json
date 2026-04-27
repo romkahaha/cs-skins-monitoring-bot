@@ -1,0 +1,64 @@
+{
+  "paths": {
+    "risk_csv": "skin_homog/screener_preprocess_risk/risk_metrics.csv",
+    "risk_script": "skin_homog/screener_preprocess_risk/risk_preprocess.py",
+    "risk_input_items_py": "lists/skins_preprocess_filtered.py",
+    "risk_stage1_csv": "skin_homog/screener_preprocess/preprocess_metrics.csv",
+    "risk_progress_log": "skin_homog/screener_preprocess_risk/_risk_progress.log",
+    "summary_csv": "skin_homog/data_skins_big/_summary.csv",
+    "skin_data_dir": "skin_homog/data_skins_big",
+    "monitor_csv": "automation_runtime/monitor_list_latest.csv",
+    "monitor_items_py": "automation_runtime/monitor_list_latest.py",
+    "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv"
+  },
+  "schedule": {
+    "intended_start": "00:01",
+    "timezone": "Europe/Prague",
+    "github_actions_cron_utc": "0 23 * * *"
+  },
+  "preflight": {
+    "require_existing_risk_csv": true,
+    "max_existing_risk_age_hours": null,
+    "fail_on_stale_existing_risk_csv": false,
+    "require_summary_csv": true,
+    "require_skin_data_dir": true
+  },
+  "risk_rebuild": {
+    "enabled": false,
+    "mode": "merge",
+    "trade_days": 7,
+    "min_discount_sample": 3
+  },
+  "monitor_list": {
+    "enabled": true,
+    "expected_min_items": 0,
+    "expected_max_items": 1000,
+    "fail_if_outside_expected_range": false
+  },
+  "risk_filter": {
+    "ret_7d_min": -0.03,
+    "downside_14d_max": 0.17,
+    "sales_7d_n_min": 21,
+    "tail_ratio_min": 0.85,
+    "n_listings_min": 20
+  },
+  "high_cv_filter": {
+    "pred_cv_min": 0.075,
+    "pred_range_over_mean_min": 0.3,
+    "min_listings": 3,
+    "missing_cv_policy": "assume_high"
+  },
+  "base_snapshot": {
+    "enabled": true,
+    "delay_min_sec": 10.0,
+    "delay_max_sec": 20.0,
+    "rate_limit_pause_sec": 900.0,
+    "rate_limit_stair_step_sec": 60.0,
+    "rate_limit_max_retries": 10,
+    "rate_limit_error_patterns": [
+      "429",
+      "too many requests",
+      "rate limit"
+    ]
+  }
+}

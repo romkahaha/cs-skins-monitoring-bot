@@ -1,0 +1,49 @@
+{
+  "__READ_ME__": "Runtime config for skin_screener.py. TARGET_UNIQUE is final unique listings per skin after dedupe; PAGE_LIMIT is per-request API page size (CSFloat max 50).",
+  "DEFAULT_USE_MIX": true,
+  "DEFAULT_SKIP_KNOWN_IDS": true,
+  "DEFAULT_IGNORE_EXISTING_ITEMS": true,
+  "DEFAULT_SORT": "most_recent",
+  "DEFAULT_LIST_PATH": "../lists/skins_normal.py",
+  "TARGET_UNIQUE": 400,
+  "PAGE_LIMIT": 50,
+  "MIX_OVERFETCH_FACTOR": 1.15,
+  "MIX_SHARDS": [
+    {
+      "sort_by": "most_recent",
+      "share": 0.5,
+      "drop_lowest_price_fraction": 0.0,
+      "drop_highest_price_fraction": 0.0
+    },
+    {
+      "sort_by": "lowest_float",
+      "share": 0.25,
+      "drop_lowest_price_fraction": 0.0,
+      "drop_highest_price_fraction": 0.0
+    },
+    {
+      "sort_by": "highest_float",
+      "share": 0.25,
+      "drop_lowest_price_fraction": 0.0,
+      "drop_highest_price_fraction": 0.0
+    }
+  ],
+  "INNER_DELAY_MIN": 11.0,
+  "INNER_DELAY_MAX": 16.8,
+
+  "ITEM_DELAY_MIN": 11.0,
+  "ITEM_DELAY_MAX": 16.0,
+
+  "SLOW_INNER_MIN": 16.0,
+  "SLOW_INNER_MAX": 21.0,
+
+  "SLOW_ITEM_MIN": 16.0,
+  "SLOW_ITEM_MAX": 21.0,
+
+  "SLOW_MODE_EXTEND_SEC": 1800.0,
+  "KEY_COOLDOWN_429_SEC": 1200.0,
+  "KEY_COOLDOWN_403_SEC": 1800.0,
+  "RETRY_LADDER_MIN_SEC": 90.0,
+  "RETRY_LADDER_STEP_SEC": 150.0,
+  "RETRY_LADDER_MAX_SEC": 900.0
+}

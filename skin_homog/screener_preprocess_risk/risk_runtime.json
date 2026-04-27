@@ -1,0 +1,16 @@
+{
+  "__comment": "Stage-2 Steam risk preprocess. Consumes a shortlist ITEMS file and copies base rows from stage-1 preprocess CSV.",
+  "DEFAULT_RUN_MODE": "create",
+  "DEFAULT_LIST_PATH": "../../lists/skins_preprocess_filtered.py",
+  "STAGE1_CSV": "../screener_preprocess/preprocess_metrics.csv",
+  "OUTPUT_CSV": "risk_metrics.csv",
+  "PROGRESS_LOG": "_risk_progress.log",
+  "TRADE_DAYS": 7,
+  "STEAM_CURRENCY": 3,
+  "AUTO_REFRESH_STEAM_COOKIES": false,
+  "STEAM_COOKIE_REFRESH_SCRIPT": "../../refresh_steam_cookies.ps1",
+  "REQUIRE_STAGE1_OK": true,
+  "MIN_DISCOUNT_SAMPLE_N": 3,
+  "STEAM_ITEM_DELAY_MIN": 6.0,
+  "STEAM_ITEM_DELAY_MAX": 11.0
+}

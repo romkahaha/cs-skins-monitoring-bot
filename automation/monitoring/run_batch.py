@@ -1,0 +1,405 @@
+"""Run one monitoring batch: fetch fresh listings/base, enrich, and update state."""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from automation.config import load_json_config, monitoring_defaults, path_from_config
+from automation.listing_enrichment import OpportunityConfig, build_enriched_listings, load_items_py, write_opportunity_outputs
+from automation.risk_filters import repo_root_from
+from automation.state import load_state, mark_run_finished, mark_run_started, save_state, select_batch
+from automation.telegram_alerts import send_opportunity_alerts
+
+
+def configure_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
+
+def _load_steam_scm_listings(repo_root: Path):
+    steam_dir = repo_root / "steam_listings"
+    steam_dir_str = str(steam_dir)
+    if steam_dir_str not in sys.path:
+        sys.path.insert(0, steam_dir_str)
+    import importlib.util
+
+    module_path = steam_dir / "steam_scm_listings.py"
+    spec = importlib.util.spec_from_file_location("automation_steam_scm_listings", module_path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot import {module_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _apply_steam_scm_config(module, monitoring_cfg: dict, steam_scm_cfg: dict) -> None:
+    config = getattr(module, "CONFIG", None)
+    if not isinstance(config, dict):
+        return
+
+    max_listings = steam_scm_cfg.get("max_listings_per_item", monitoring_cfg.get("max_listings_per_item"))
+    if max_listings is not None:
+        config["max_listings_per_skin"] = int(max_listings)
+
+    direct_keys = [
+        "listings_per_request",
+        "request_timeout_sec",
+        "retry_attempts",
+        "retry_sleep_min_sec",
+        "retry_sleep_max_sec",
+        "delay_between_skins_min_sec",
+        "delay_between_skins_max_sec",
+        "delay_between_render_pages_min_sec",
+        "delay_between_render_pages_max_sec",
+        "batch_log_progress",
+    ]
+    for key in direct_keys:
+        if key in steam_scm_cfg and steam_scm_cfg[key] is not None:
+            config[key] = steam_scm_cfg[key]
+
+
+def parse_args() -> argparse.Namespace:
+    root = repo_root_from(Path(__file__))
+    parser = argparse.ArgumentParser(description="Run one scheduled monitoring batch.")
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=root / "automation" / "configs" / "monitoring.json",
+        help="Monitoring automation JSON config.",
+    )
+    parser.add_argument(
+        "--monitor-items-py",
+        type=Path,
+        default=None,
+        help="Python item list with ITEMS = [...].",
+    )
+    parser.add_argument(
+        "--state-json",
+        type=Path,
+        default=None,
+        help="Batch pointer state file.",
+    )
+    parser.add_argument("--batch-size", type=int, default=None, help="Number of items to scan in this run.")
+    parser.add_argument(
+        "--listings-out-csv",
+        type=Path,
+        default=None,
+        help="Fresh Steam listings output CSV for this batch.",
+    )
+    parser.add_argument(
+        "--base-out-csv",
+        type=Path,
+        default=None,
+        help="Existing CSFloat base snapshot CSV. Build it first with automation/nightly/build_base_snapshot.py.",
+    )
+    parser.add_argument(
+        "--fit-json",
+        type=Path,
+        default=None,
+        help="Saved float-fit curves JSON.",
+    )
+    parser.add_argument(
+        "--risk-csv",
+        type=Path,
+        default=None,
+        help="Risk metrics CSV.",
+    )
+    parser.add_argument(
+        "--out-enriched-csv",
+        type=Path,
+        default=None,
+        help="Output enriched listing-level CSV.",
+    )
+    parser.add_argument(
+        "--out-opportunities-csv",
+        type=Path,
+        default=None,
+        help="Output filtered opportunities CSV.",
+    )
+    parser.add_argument(
+        "--out-report-csv",
+        type=Path,
+        default=None,
+        help="Output opportunity filter report CSV.",
+    )
+    parser.add_argument("--send-telegram", action="store_true", help="Send Telegram alerts after building opportunities.")
+    parser.add_argument("--telegram-dry-run", action="store_true", help="Print Telegram messages instead of sending.")
+    parser.add_argument("--ignore-schedule", action="store_true", help="Run even outside the configured active window.")
+    return parser.parse_args()
+
+
+def file_age_hours(path: Path) -> float:
+    modified = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+    return (datetime.now(timezone.utc) - modified).total_seconds() / 3600.0
+
+
+def require_file(path: Path, label: str) -> None:
+    if not path.is_file():
+        raise FileNotFoundError(f"{label} not found: {path}")
+
+
+def check_age(path: Path, label: str, max_age_hours: float | None, *, fail_on_stale: bool) -> None:
+    if max_age_hours is None:
+        return
+    age = file_age_hours(path)
+    if age <= float(max_age_hours):
+        return
+    msg = f"{label} is stale: {age:.1f}h > {float(max_age_hours):.1f}h ({path})"
+    if fail_on_stale:
+        raise RuntimeError(msg)
+    print(f"warning: {msg}")
+
+
+def parse_hhmm(value: str) -> tuple[int, int]:
+    hh, mm = str(value).split(":", 1)
+    return int(hh), int(mm)
+
+
+def minutes_since_midnight(dt: datetime) -> int:
+    return dt.hour * 60 + dt.minute
+
+
+def is_active_now(schedule_cfg: dict) -> tuple[bool, datetime]:
+    tz = ZoneInfo(str(schedule_cfg.get("timezone", "Europe/Prague")))
+    now = datetime.now(tz)
+    start_h, start_m = parse_hhmm(str(schedule_cfg.get("active_from", "00:00")))
+    end_h, end_m = parse_hhmm(str(schedule_cfg.get("active_to", "23:59")))
+    cur = minutes_since_midnight(now)
+    start = start_h * 60 + start_m
+    end = end_h * 60 + end_m
+    if start <= end:
+        return start <= cur <= end, now
+    return cur >= start or cur <= end, now
+
+
+def run_preflight(
+    config: dict,
+    *,
+    monitor_items_py: Path,
+    base_snapshot_csv: Path,
+    risk_csv: Path,
+    fit_json: Path,
+) -> None:
+    preflight = config.get("preflight", {})
+    fail_on_stale = bool(preflight.get("fail_on_stale_inputs", False))
+
+    if preflight.get("require_monitor_items_py", True):
+        require_file(monitor_items_py, "monitor item list")
+        check_age(
+            monitor_items_py,
+            "monitor item list",
+            preflight.get("max_monitor_items_age_hours"),
+            fail_on_stale=fail_on_stale,
+        )
+    if preflight.get("require_base_snapshot_csv", True):
+        require_file(base_snapshot_csv, "base snapshot CSV")
+        check_age(
+            base_snapshot_csv,
+            "base snapshot CSV",
+            preflight.get("max_base_snapshot_age_hours"),
+            fail_on_stale=fail_on_stale,
+        )
+    if preflight.get("require_risk_csv", True):
+        require_file(risk_csv, "risk CSV")
+        check_age(risk_csv, "risk CSV", preflight.get("max_risk_csv_age_hours"), fail_on_stale=fail_on_stale)
+    if preflight.get("require_fit_json", True):
+        require_file(fit_json, "fit JSON")
+        check_age(fit_json, "fit JSON", preflight.get("max_fit_json_age_hours"), fail_on_stale=fail_on_stale)
+
+
+def main() -> int:
+    configure_stdio()
+    args = parse_args()
+    config = load_json_config(args.config.resolve() if args.config else None, monitoring_defaults())
+    schedule_cfg = config.get("schedule", {})
+    preflight_cfg = config.get("preflight", {})
+    monitoring_cfg = config.get("monitoring", {})
+    steam_scm_cfg = config.get("steam_scm", {})
+    opp_cfg = config.get("opportunity_filter", {})
+    alerts_cfg = config.get("alerts", {})
+    telegram_cfg = config.get("telegram", {})
+
+    monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
+    state_path = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
+    listings_out_csv = args.listings_out_csv.resolve() if args.listings_out_csv else path_from_config(config, "steam_listings_csv")
+    base_snapshot_csv = args.base_out_csv.resolve() if args.base_out_csv else path_from_config(config, "base_snapshot_csv")
+    fit_json = args.fit_json.resolve() if args.fit_json else path_from_config(config, "fit_json")
+    risk_csv = args.risk_csv.resolve() if args.risk_csv else path_from_config(config, "risk_csv")
+    enriched_csv = args.out_enriched_csv.resolve() if args.out_enriched_csv else path_from_config(config, "enriched_listings_csv")
+    opportunities_csv = args.out_opportunities_csv.resolve() if args.out_opportunities_csv else path_from_config(config, "opportunities_csv")
+    report_csv = args.out_report_csv.resolve() if args.out_report_csv else path_from_config(config, "opportunities_report_csv")
+    batch_size = int(args.batch_size if args.batch_size is not None else monitoring_cfg.get("batch_size", 5))
+
+    print(f"config: {args.config.resolve() if args.config else '<defaults>'}")
+    print(
+        "schedule: "
+        f"{schedule_cfg.get('active_from', '<unset>')}..{schedule_cfg.get('active_to', '<unset>')} "
+        f"{schedule_cfg.get('timezone', '<unset>')} every {schedule_cfg.get('interval_minutes', '<unset>')}m "
+        f"(github cron UTC: {schedule_cfg.get('github_actions_cron_utc', '<unset>')})"
+    )
+    if not bool(monitoring_cfg.get("enabled", True)):
+        print("monitoring disabled by config")
+        return 0
+
+    if bool(schedule_cfg.get("enabled", True)) and not args.ignore_schedule:
+        active, now_local = is_active_now(schedule_cfg)
+        print(f"local schedule time: {now_local.isoformat(timespec='seconds')} active={active}")
+        if not active and bool(schedule_cfg.get("enforce_active_window", False)):
+            print("outside active window; skipping run")
+            return 0
+
+    run_preflight(
+        config,
+        monitor_items_py=monitor_items_py,
+        base_snapshot_csv=base_snapshot_csv,
+        risk_csv=risk_csv,
+        fit_json=fit_json,
+    )
+
+    opp_config = OpportunityConfig(
+        steam_sales_n_min=int(opp_cfg.get("steam_sales_n_min", 50)),
+        downside_risk_max=float(opp_cfg.get("downside_risk_max", 10.0)),
+        tail_ratio_min=float(opp_cfg.get("tail_ratio_min", 0.9)),
+        downside_14d_max=float(opp_cfg.get("downside_14d_max", 0.12)),
+        continuity_ratio_max=float(opp_cfg.get("continuity_ratio_max", 3.5)),
+        spread_hybrid_disc_max=float(opp_cfg.get("spread_hybrid_disc_max", 0.17)),
+    )
+
+    repo_root = repo_root_from(Path(__file__))
+    items = load_items_py(monitor_items_py)
+    if not items:
+        print(f"no items in {monitor_items_py}")
+        return 1
+    min_monitor_items = int(preflight_cfg.get("min_monitor_items", 1))
+    if len(items) < min_monitor_items:
+        raise RuntimeError(f"monitor item list too small: {len(items)} < {min_monitor_items}")
+
+    state = load_state(state_path, items)
+    batch, start_pointer, next_pointer = select_batch(items, state, batch_size)
+    state = mark_run_started(state, batch, start_pointer)
+    save_state(state_path, state)
+
+    print(f"monitor items: {len(items)} from {monitor_items_py}")
+    print(f"batch start pointer: {start_pointer}")
+    print(f"batch size: {len(batch)}")
+    for idx, item in enumerate(batch, start=1):
+        print(f"  {idx}. {item}")
+
+    listing_errors: list[dict] = []
+    listing_rows = 0
+    alert_stats: dict[str, int] = {}
+
+    try:
+        if not base_snapshot_csv.is_file():
+            raise FileNotFoundError(
+                f"{base_snapshot_csv} not found; run python automation/nightly/build_base_snapshot.py first"
+            )
+
+        steam_scm_listings = _load_steam_scm_listings(repo_root)
+        _apply_steam_scm_config(steam_scm_listings, monitoring_cfg, steam_scm_cfg)
+        listings_path, listing_errors, listings_df = steam_scm_listings.run_batch_to_csv(
+            batch,
+            out_csv=listings_out_csv,
+        )
+        listing_rows = len(listings_df)
+        print(f"fresh listings: {listings_path} rows={len(listings_df)} errors={len(listing_errors)}")
+        print(f"base snapshot: {base_snapshot_csv}")
+        if (
+            bool(monitoring_cfg.get("fail_if_all_listing_fetches_error", True))
+            and listing_errors
+            and len(listing_errors) >= len(batch)
+        ):
+            failed_items = ", ".join(str(err.get("market_hash_name", "?")) for err in listing_errors[:3])
+            raise RuntimeError(
+                f"all Steam listing fetches failed for this batch ({len(listing_errors)} item errors: {failed_items})"
+            )
+        if listings_df.empty and listing_errors:
+            failed_items = ", ".join(str(err.get("market_hash_name", "?")) for err in listing_errors[:3])
+            raise RuntimeError(
+                f"Steam listings fetch returned 0 rows with {len(listing_errors)} item errors"
+                f" ({failed_items})"
+            )
+
+        enriched, opportunities, report = build_enriched_listings(
+            listings_out_csv,
+            base_snapshot_csv,
+            fit_json,
+            risk_csv,
+            monitor_items_py=monitor_items_py,
+            cfg=opp_config,
+        )
+        write_opportunity_outputs(
+            enriched,
+            opportunities,
+            report,
+            enriched_csv=enriched_csv,
+            opportunities_csv=opportunities_csv,
+            report_csv=report_csv,
+        )
+
+        telegram_enabled = bool(telegram_cfg.get("enabled", False)) or args.send_telegram or args.telegram_dry_run
+        if telegram_enabled:
+            stats = send_opportunity_alerts(
+                opportunities_csv,
+                state_path,
+                monitor_items_py,
+                cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
+                dry_run=args.telegram_dry_run,
+                sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
+                max_alerts=telegram_cfg.get("max_alerts"),
+                alerts_cfg=alerts_cfg,
+            )
+            alert_stats = stats
+            print(
+                "telegram alerts: "
+                f"loaded={stats['loaded']} filtered={stats['filtered']} "
+                f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
+            )
+
+    except Exception as exc:
+        state = mark_run_finished(
+            state,
+            next_pointer=start_pointer,
+            status="error",
+            error=str(exc),
+            listing_errors=listing_errors,
+            listing_rows=listing_rows,
+            alert_stats=alert_stats,
+        )
+        save_state(state_path, state)
+        print(f"monitoring failed: {exc}", file=sys.stderr)
+        return 1
+
+    state = mark_run_finished(
+        state,
+        next_pointer=next_pointer,
+        status="ok",
+        listing_errors=listing_errors,
+        listing_rows=listing_rows,
+        enriched_rows=len(enriched),
+        opportunities_rows=len(opportunities),
+        alert_stats=alert_stats,
+    )
+    save_state(state_path, state)
+
+    print(f"enriched rows: {len(enriched)}")
+    print(f"opportunity rows: {len(opportunities)}")
+    print(f"next batch pointer: {next_pointer}")
+    print(f"saved state: {state_path}")
+    print(f"saved opportunities: {opportunities_csv}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

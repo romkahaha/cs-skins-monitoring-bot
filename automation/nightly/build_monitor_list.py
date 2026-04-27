@@ -1,0 +1,111 @@
+"""CLI for building the latest Steam monitoring list from offline metrics."""
+
+from __future__ import annotations
+
+import argparse
+import sys
+from pathlib import Path
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from automation.config import load_json_config, nightly_defaults, path_from_config
+from automation.risk_filters import FilterConfig, build_monitor_frame, repo_root_from, write_monitor_outputs
+
+
+def parse_args() -> argparse.Namespace:
+    root = repo_root_from(Path(__file__))
+    parser = argparse.ArgumentParser(description="Build monitor_list_latest from risk metrics and high-CV panels.")
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=root / "automation" / "configs" / "nightly.json",
+        help="Nightly automation JSON config.",
+    )
+    parser.add_argument(
+        "--risk-csv",
+        type=Path,
+        default=None,
+        help="Path to risk_metrics.csv.",
+    )
+    parser.add_argument(
+        "--summary-csv",
+        type=Path,
+        default=None,
+        help="Path to skin_homog data_skins_big _summary.csv.",
+    )
+    parser.add_argument(
+        "--data-dir",
+        type=Path,
+        default=None,
+        help="Directory with raw panel CSVs for CV recomputation.",
+    )
+    parser.add_argument(
+        "--out-csv",
+        type=Path,
+        default=None,
+        help="Output audit CSV.",
+    )
+    parser.add_argument(
+        "--out-items-py",
+        type=Path,
+        default=None,
+        help="Output Python item list with ITEMS = [...].",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    config = load_json_config(args.config.resolve() if args.config else None, nightly_defaults())
+    risk_filter = config.get("risk_filter", {})
+    high_cv_filter = config.get("high_cv_filter", {})
+    cfg = FilterConfig(
+        risk_ret_7d_min=float(risk_filter.get("ret_7d_min", -0.03)),
+        risk_downside_14d_max=float(risk_filter.get("downside_14d_max", 0.17)),
+        risk_sales_7d_n_min=int(risk_filter.get("sales_7d_n_min", 21)),
+        risk_tail_ratio_min=float(risk_filter.get("tail_ratio_min", 0.85)),
+        risk_n_listings_min=int(risk_filter.get("n_listings_min", 20)),
+        cv_min_listings=int(high_cv_filter.get("min_listings", 3)),
+        pred_cv_min=float(high_cv_filter.get("pred_cv_min", 0.075)),
+        pred_range_over_mean_min=float(high_cv_filter.get("pred_range_over_mean_min", 0.3)),
+    )
+    risk_csv = args.risk_csv.resolve() if args.risk_csv else path_from_config(config, "risk_csv")
+    summary_csv = args.summary_csv.resolve() if args.summary_csv else path_from_config(config, "summary_csv")
+    data_dir = args.data_dir.resolve() if args.data_dir else path_from_config(config, "skin_data_dir")
+    out_csv = args.out_csv.resolve() if args.out_csv else path_from_config(config, "monitor_csv")
+    out_items_py = args.out_items_py.resolve() if args.out_items_py else path_from_config(config, "monitor_items_py")
+    frame, counts = build_monitor_frame(
+        risk_csv,
+        summary_csv,
+        data_dir,
+        cfg,
+    )
+    items = write_monitor_outputs(
+        frame,
+        out_csv,
+        out_items_py,
+        source_csv=risk_csv,
+        counts=counts,
+    )
+
+    print(f"config: {args.config.resolve() if args.config else '<defaults>'}")
+    print(f"risk csv: {risk_csv}")
+    print(f"summary csv: {summary_csv}")
+    print(f"data dir: {data_dir}")
+    print(f"total risk rows: {counts['total_risk_rows']}")
+    print(f"risk passed: {counts['risk_passed']}")
+    print(f"high-CV passed: {counts['high_cv_passed']}")
+    print(f"final monitor items: {counts['monitor_passed']}")
+    print(f"saved audit csv: {out_csv}")
+    print(f"saved ITEMS py: {out_items_py}")
+
+    if not items:
+        print("warning: monitor list is empty")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,1124 @@
+1/1124 "P90 | Ancient Earth (Factory New)"  steam_n=264  median=5.49  iqr_risk=25.642286819798993  downside=6.197432492253211  ret7=-0.2435915795503365  0.9s
+2/1124 "Dual Berettas | Switch Board (Factory New)"  steam_n=48  median=12.854  iqr_risk=7.73765383549433  downside=0.254675924885575  ret7=-0.03098697867522182  0.7s
+3/1124 "P90 | Traction (Factory New)"  steam_n=98  median=6.617  iqr_risk=23.221402588368292  downside=7.520180866943963  ret7=-0.25005945303210464  0.8s
+4/1124 "MAC-10 | Whitefish (Factory New)"  steam_n=76  median=7.974  iqr_risk=19.100684030206384  downside=7.130748165447591  ret7=-0.2013301769811746  0.8s
+5/1124 "Tec-9 | Phoenix Chalk (Factory New)"  steam_n=60  median=26.366  iqr_risk=11.292961122963618  downside=5.831178523773268  ret7=-0.15656331689884517  1.0s
+6/1124 "Dual Berettas | Oil Change (Factory New)"  steam_n=201  median=6.991  iqr_risk=34.71543390898229  downside=12.721299011621584  ret7=-0.29217312279904584  0.7s
+7/1124 "P250 | Dark Filigree (Factory New)"  steam_n=20  median=33.332  iqr_risk=4.431328036322368  downside=11.749375709421118  ret7=-0.10800327282644939  1.0s
+8/1124 "Desert Eagle | Calligraffiti (Factory New)"  steam_n=148  median=19.119  iqr_risk=9.019763894415702  downside=7.571295927841887  ret7=0.008665056191576426  0.8s
+9/1124 "R8 Revolver | Tango (Factory New)"  steam_n=136  median=6.707  iqr_risk=16.030188679245274  downside=14.022641509433967  ret7=-0.04375701234172136  0.8s
+10/1124 "AUG | Triqua (Factory New)"  steam_n=103  median=4.923  iqr_risk=23.880180844071777  downside=13.113186878846427  ret7=-0.229308583106267  0.8s
+11/1124 "MP7 | Sunbaked (Factory New)"  steam_n=300  median=4.59  iqr_risk=19.278019278019283  downside=12.22201222201222  ret7=-0.16493528610354236  0.9s
+12/1124 "P250 | Cyber Shell (Factory New)"  steam_n=109  median=15.668  iqr_risk=24.63330508778002  downside=7.557077898053438  ret7=-0.18932015075130937  0.9s
+13/1124 "SG 553 | Damascus Steel (Factory New)"  steam_n=102  median=4.222  iqr_risk=16.16596128495109  downside=6.107911838849197  ret7=-0.2028208184346444  0.8s
+14/1124 "Galil AR | Black Sand (Factory New)"  steam_n=80  median=23.862  iqr_risk=10.40593405059706  downside=4.137744190533264  ret7=0.005960675027093965  0.9s
+15/1124 "MAG-7 | Popdog (Factory New)"  steam_n=50  median=5.675  iqr_risk=19.436042040502432  downside=8.083397419465092  ret7=-0.15143890548828431  0.8s
+16/1124 "XM1014 | Solitude (Factory New)"  steam_n=16  median=66.442  iqr_risk=9.210412408496717  downside=4.73491378994119  ret7=-0.06930679968773568  0.8s
+17/1124 "Desert Eagle | Mudder (Factory New)"  steam_n=80  median=18.761  iqr_risk=18.29510258141321  downside=10.757004962868667  ret7=-0.13234872383137375  0.9s
+18/1124 "Desert Eagle | The Bronze (Factory New)"  steam_n=236  median=16.4285  iqr_risk=10.64264748060952  downside=9.059065473030278  ret7=-0.054199803900207066  0.8s
+19/1124 "Dual Berettas | Heist (Factory New)"  steam_n=322  median=9.991  iqr_risk=11.36271324126726  downside=12.672623883021924  ret7=-0.16903590304355753  1.0s
+20/1124 "AUG | Amber Fade (Factory New)"  steam_n=250  median=12.999  iqr_risk=14.756001930269038  downside=14.047231270358317  ret7=-0.17756452680344148  0.8s
+21/1124 "Desert Eagle | Blue Ply (Factory New)"  steam_n=182  median=7.641  iqr_risk=16.847533576158114  downside=8.5614509406331  ret7=-0.22768650088809939  1.1s
+22/1124 "MP7 | Astrolabe (Factory New)"  steam_n=309  median=13.632  iqr_risk=14.497100579884018  downside=10.833547576199042  ret7=-0.10209992758870379  0.8s
+23/1124 "Five-SeveN | Scumbria (Factory New)"  steam_n=73  median=14.683  iqr_risk=15.23193126102815  downside=12.842526659366872  ret7=-0.14532739987285437  0.9s
+24/1124 "MP9 | Black Sand (Factory New)"  steam_n=103  median=5.085  iqr_risk=7.831336921088665  downside=4.347742221707841  ret7=-0.01236203090507726  0.9s
+25/1124 "FAMAS | Faulty Wiring (Factory New)"  steam_n=227  median=19.025  iqr_risk=18.79246626255012  downside=15.013034328967612  ret7=-0.11576332014355395  1.0s
+26/1124 "FAMAS | CaliCamo (Factory New)"  steam_n=121  median=35.067  iqr_risk=2.800265768604513  downside=5.204159906011454  ret7=0.24580950176877048  0.8s
+27/1124 "Tec-9 | Groundwater (Factory New)"  steam_n=108  median=4.8545  iqr_risk=18.606618035733163  downside=14.092398773654724  ret7=-0.1707509881422925  1.0s
+28/1124 "USP-S | Desert Tactical (Factory New)"  steam_n=144  median=11.2585  iqr_risk=16.795025538529877  downside=12.698201199200524  ret7=-0.1601125648709889  0.8s
+29/1124 "Tec-9 | Cracked Opal (Factory New)"  steam_n=92  median=12.0635  iqr_risk=24.157579062159222  downside=30.393493275172666  ret7=-0.2599833924662187  1.1s
+30/1124 "AK-47 | Emerald Pinstripe (Factory New)"  steam_n=57  median=31.623  iqr_risk=7.907184408222939  downside=7.55129640294287  ret7=-0.08512060077642702  1.1s
+31/1124 "P2000 | Urban Hazard (Factory New)"  steam_n=91  median=7.692  iqr_risk=13.072225944702206  downside=6.485543432913183  ret7=-0.02114394144754672  0.7s
+32/1124 "Galil AR | Akoben (Factory New)"  steam_n=204  median=9.2345  iqr_risk=18.68151703049351  downside=10.108935700331264  ret7=-0.12622272385252076  0.7s
+33/1124 "MAC-10 | Strats (Factory New)"  steam_n=145  median=11.451  iqr_risk=19.586903862683304  downside=10.37515519322099  ret7=-0.14073462649607915  0.8s
+34/1124 "AUG | Surveillance (Factory New)"  steam_n=266  median=3.026  iqr_risk=16.478385298990815  downside=4.127127579454737  ret7=-0.1735557167029247  1.1s
+35/1124 "CZ75-Auto | Silver (Factory New)"  steam_n=221  median=26.802  iqr_risk=8.76368513145527  downside=5.873415088101225  ret7=0.17041863368577115  1.1s
+36/1124 "Tec-9 | Safety Net (Factory New)"  steam_n=62  median=27.9835  iqr_risk=10.235446238514925  downside=7.237711737735146  ret7=-0.07539861855270802  0.9s
+37/1124 "MAC-10 | Classic Crate (Factory New)"  steam_n=26  median=6.8895  iqr_risk=15.74870310555533  downside=7.3479032957199  ret7=-0.3046799871781173  0.8s
+38/1124 "FAMAS | Crypsis (Factory New)"  steam_n=356  median=4.8205  iqr_risk=24.280874894750244  downside=8.880142552233252  ret7=-0.16669662113587347  0.8s
+39/1124 "PP-Bizon | Photic Zone (Factory New)"  steam_n=33  median=10.196  iqr_risk=15.4916121344113  downside=16.11620763691277  ret7=-0.22105662885080934  0.8s
+40/1124 "SSG 08 | Ghost Crusader (Factory New)"  steam_n=53  median=32.46  iqr_risk=5.714022819285965  downside=2.5671696724328297  ret7=0.01820635872825438  0.9s
+41/1124 "SSG 08 | Hand Brake (Factory New)"  steam_n=147  median=7.465  iqr_risk=16.262372170043864  downside=5.347052800566308  ret7=-0.2040530343861161  0.7s
+42/1124 "P90 | Off World (Factory New)"  steam_n=146  median=3.944  iqr_risk=29.211318482841662  downside=8.22396146899458  ret7=-0.25056248721619967  0.8s
+43/1124 "P250 | Verdigris (Factory New)"  steam_n=177  median=6.906  iqr_risk=24.436807941962574  downside=20.633829705994653  ret7=-0.2797873719694024  0.9s
+44/1124 "Glock-18 | Wraiths (Factory New)"  steam_n=105  median=17.168  iqr_risk=21.618095064329037  downside=6.9388003339470385  ret7=-0.202577752871953  1.0s
+45/1124 "Dual Berettas | Moon in Libra (Factory New)"  steam_n=25  median=19.307  iqr_risk=16.793985028236218  downside=20.52817055553123  ret7=-0.15914884761458825  1.0s
+46/1124 "Dual Berettas | Panther (Factory New)"  steam_n=47  median=16.076  iqr_risk=20.630822029743427  downside=20.135316228141864  ret7=-0.23946957878315134  0.9s
+47/1124 "AWP | Acheron (Factory New)"  steam_n=497  median=13.773  iqr_risk=7.821507366023772  downside=6.818020069745927  ret7=-0.12541274686935378  0.9s
+48/1124 "CZ75-Auto | Imprint (Factory New)"  steam_n=51  median=7.436  iqr_risk=14.821459652693173  downside=14.00473965376428  ret7=-0.26627218934911245  0.9s
+49/1124 "Sawed-Off | Clay Ambush (Factory New)"  steam_n=101  median=3.325  iqr_risk=12.230582451512333  downside=12.830120806978638  ret7=-0.19593549812237687  0.8s
+50/1124 "Glock-18 | Oxide Blaze (Factory New)"  steam_n=169  median=7.822  iqr_risk=15.242563761588737  downside=10.613340693254383  ret7=-0.19471000637348623  0.8s
+51/1124 "XM1014 | Blue Tire (Factory New)"  steam_n=160  median=5.661  iqr_risk=9.847679773290826  downside=9.74140984767977  ret7=-0.023331062670299607  0.8s
+52/1124 "Dual Berettas | Dualing Dragons (Factory New)"  steam_n=50  median=11.611  iqr_risk=19.461379922906445  downside=14.340781111216511  ret7=-0.05497402496704662  0.9s
+53/1124 "FAMAS | Night Borre (Factory New)"  steam_n=40  median=32.05  iqr_risk=14.044206349470102  downside=15.441315755366263  ret7=-0.15241771267057702  0.8s
+54/1124 "Galil AR | Sage Spray (Factory New)"  steam_n=126  median=7.466  iqr_risk=20.852149243242536  downside=9.409039445087908  ret7=-0.13120136186770437  0.9s
+55/1124 "R8 Revolver | Survivalist (Factory New)"  steam_n=149  median=5.188  iqr_risk=21.078004929679576  downside=3.099173553718997  ret7=-0.2037502858449577  0.9s
+56/1124 "FAMAS | Cyanospatter (Factory New)"  steam_n=60  median=19.521  iqr_risk=12.038954674086593  downside=15.949177641113213  ret7=-0.20282243515214693  1.0s
+57/1124 "UMP-45 | Primal Saber (Field-Tested)"  steam_n=229  median=14.74  iqr_risk=8.7980325017664  downside=5.962280558726025  ret7=-0.07120474698313228  0.8s
+58/1124 "Dual Berettas | Elite 1.6 (Factory New)"  steam_n=145  median=4.013  iqr_risk=26.52049200252808  downside=14.657980456026051  ret7=-0.19397485912440415  0.7s
+59/1124 "Tec-9 | Brother (Factory New)"  steam_n=151  median=11.068  iqr_risk=9.316656942823807  downside=7.557249124854132  ret7=-0.14172513413124233  0.8s
+60/1124 "MAG-7 | Navy Sheen (Factory New)"  steam_n=474  median=2.496  iqr_risk=28.395262047704033  downside=24.54161934122992  ret7=-0.2353326778105539  0.7s
+61/1124 "XM1014 | Solitude (Minimal Wear)"  steam_n=112  median=4.971  iqr_risk=12.771131212917036  downside=6.70946405991635  ret7=-0.046024681367590525  0.7s
+62/1124 "AUG | Luxe Trim (Factory New)"  steam_n=87  median=6.931  iqr_risk=13.533474951816899  downside=8.08632162401699  ret7=-0.18019501076358113  0.8s
+63/1124 "Sawed-Off | Snake Camo (Factory New)"  steam_n=125  median=7.114  iqr_risk=155.44926100669915  downside=19.478403670203058  ret7=-0.14219681303977627  0.9s
+64/1124 "MP7 | Tall Grass (Factory New)"  steam_n=8  median=37.9815  iqr_risk=10.11094967639678  downside=8.199181085721834  ret7=-0.13148198859817262  0.7s
+65/1124 "Tec-9 | Flash Out (Factory New)"  steam_n=130  median=8.8455  iqr_risk=15.515738174014123  downside=12.270857551640876  ret7=-0.1569898811278122  0.9s
+66/1124 "UMP-45 | Wild Child (Field-Tested)"  steam_n=2047  median=4.564  iqr_risk=4.453036753844819  downside=4.0837605352332895  ret7=-0.050548505054850534  1.0s
+67/1124 "AUG | Radiation Hazard (Factory New)"  steam_n=65  median=24.636  iqr_risk=14.324245065198445  downside=10.577967592841182  ret7=0.1860031104199067  0.9s
+68/1124 "AWP | Safari Mesh (Factory New)"  steam_n=143  median=18.816  iqr_risk=2.159586547951311  downside=8.075898589636099  ret7=-0.2196053736356004  1.0s
+69/1124 "Glock-18 | Warhawk (Factory New)"  steam_n=92  median=19.6935  iqr_risk=13.184511989436714  downside=13.289216470066378  ret7=-0.18702756529217401  0.8s
+70/1124 "AUG | Syd Mead (Field-Tested)"  steam_n=252  median=13.4995  iqr_risk=4.592721615566118  downside=5.057948683593481  ret7=0.00822139029582325  0.9s
+71/1124 "AK-47 | Nightwish (Battle-Scarred)"  steam_n=326  median=80.69  iqr_risk=5.416413879180596  downside=4.6661778408040515  ret7=0.01346377133822485  1.0s
+72/1124 "FAMAS | Hexane (Factory New)"  steam_n=33  median=29.05  iqr_risk=8.356109534669146  downside=7.260066500705048  ret7=-0.1403346613545816  0.9s
+73/1124 "Five-SeveN | Forest Night (Factory New)"  steam_n=194  median=8.367  iqr_risk=26.89822605300003  downside=29.171858341147615  ret7=-0.302377249500111  0.9s
+74/1124 "M4A1-S | Player Two (Field-Tested)"  steam_n=213  median=69.228  iqr_risk=6.822613500905274  downside=7.551191380189012  ret7=-0.05839913533756946  0.8s
+75/1124 "XM1014 | Entombed (Minimal Wear)"  steam_n=844  median=5.662  iqr_risk=11.124537958487354  downside=7.9791015069661615  ret7=0.02049545535555164  1.0s
+76/1124 "MP7 | Powercore (Factory New)"  steam_n=50  median=42.537  iqr_risk=17.768617076772912  downside=12.936836760481413  ret7=-0.19091506260326052  0.8s
+77/1124 "MP7 | Akoben (Factory New)"  steam_n=87  median=7.058  iqr_risk=16.808552761829333  downside=4.038804197188676  ret7=-0.2447783461210572  0.9s
+78/1124 "Glock-18 | Ironwork (Factory New)"  steam_n=89  median=27.994  iqr_risk=7.989504194400572  downside=5.62509581344276  ret7=-0.05577189624447232  0.8s
+79/1124 "AK-47 | Head Shot (Field-Tested)"  steam_n=732  median=45.105  iqr_risk=5.628990516686955  downside=5.637830705955403  ret7=-0.004130143456578472  0.8s
+80/1124 "P250 | Hive (Factory New)"  steam_n=36  median=20.0605  iqr_risk=15.140285339585894  downside=9.155307395779516  ret7=-0.15189530685920571  0.9s
+81/1124 "FAMAS | Macabre (Factory New)"  steam_n=7  median=30.7  iqr_risk=13.914812933407367  downside=1.463691242660869  ret7=-0.07234068552575312  0.9s
+82/1124 "MAC-10 | Sienna Damask (Factory New)"  steam_n=474  median=3.316  iqr_risk=16.490461962767174  downside=5.8894507009882675  ret7=-0.10172317954419108  0.8s
+83/1124 "Glock-18 | Bunsen Burner (Factory New)"  steam_n=139  median=10.416  iqr_risk=17.11695040710586  downside=5.1165803108808365  ret7=-0.15527368689878263  0.8s
+84/1124 "Glock-18 | Night (Minimal Wear)"  steam_n=48  median=38.7825  iqr_risk=2.725214317770951  downside=2.0378254067663795  ret7=-0.10801393728223008  0.8s
+85/1124 "PP-Bizon | Bamboo Print (Factory New)"  steam_n=5  median=24.967  iqr_risk=4.819088597692154  downside=1.3080383336592947  ret7=0.15232345331005326  0.8s
+86/1124 "P250 | Valence (Factory New)"  steam_n=138  median=4.305  iqr_risk=25.729171115001925  downside=8.711619763419737  ret7=-0.2335402558314521  0.8s
+87/1124 "R8 Revolver | Desert Brush (Factory New)"  steam_n=414  median=4.0765  iqr_risk=26.083564916386326  downside=13.736531617181033  ret7=-0.07436355515855297  0.8s
+88/1124 "MAC-10 | Pipe Down (Factory New)"  steam_n=57  median=18.375  iqr_risk=6.3272184741711115  downside=5.946060734763212  ret7=-0.04107086942907834  0.8s
+89/1124 "PP-Bizon | Seabird (Factory New)"  steam_n=23  median=13.726  iqr_risk=10.131179572081642  downside=11.156602605693152  ret7=-0.1464563631922392  0.8s
+90/1124 "P90 | Desert DDPAT (Factory New)"  steam_n=303  median=3.222  iqr_risk=15.705303052054328  downside=6.058169915874698  ret7=-0.23991507430997872  0.8s
+91/1124 "Glock-18 | Clear Polymer (Factory New)"  steam_n=207  median=7.957  iqr_risk=18.65903125745646  downside=5.714626580768314  ret7=-0.16197998946814107  0.8s
+92/1124 "AK-47 | Midnight Laminate (Field-Tested)"  steam_n=3481  median=6.008  iqr_risk=6.933807665069096  downside=4.479799726600462  ret7=-0.05411392405063298  0.8s
+93/1124 "Dual Berettas | Briar (Factory New)"  steam_n=43  median=11.427  iqr_risk=13.485124794393188  downside=15.386540799542297  ret7=-0.15500343878954603  0.8s
+94/1124 "P2000 | Red FragCam (Factory New)"  steam_n=21  median=29.589  iqr_risk=13.06657051926531  downside=12.477205438799638  ret7=-0.18067003039894702  1.0s
+95/1124 "Glock-18 | Red Tire (Factory New)"  steam_n=33  median=51.622  iqr_risk=9.446913730070841  downside=3.977108963759652  ret7=-0.061823311585258334  0.9s
+96/1124 "Galil AR | Blue Titanium (Factory New)"  steam_n=155  median=21.623  iqr_risk=11.503716837343338  downside=12.294334220633711  ret7=-0.11437365841804714  0.8s
+97/1124 "M4A1-S | Mud-Spec (Factory New)"  steam_n=424  median=6.461  iqr_risk=11.270573757883394  downside=6.445162282725741  ret7=-0.13186966857782123  0.8s
+98/1124 "AK-47 | Uncharted (Factory New)"  steam_n=603  median=5.137  iqr_risk=11.752319162255981  downside=4.230455485364139  ret7=-0.1794917049064596  1.0s
+99/1124 "Dual Berettas | Royal Consorts (Factory New)"  steam_n=60  median=27.9615  iqr_risk=9.8648413316132  downside=6.247578836633221  ret7=0.006490592093906455  1.0s
+100/1124 "Glock-18 | Catacombs (Factory New)"  steam_n=237  median=7.35  iqr_risk=19.080747883469332  downside=3.6064148144358903  ret7=-0.18888888888888888  1.1s
+101/1124 "Dual Berettas | Cartel (Factory New)"  steam_n=34  median=12.4565  iqr_risk=19.141181806401438  downside=11.709537384994169  ret7=-0.16676416819012796  0.9s
+102/1124 "Glock-18 | Weasel (Factory New)"  steam_n=88  median=60.814  iqr_risk=9.26167451329687  downside=2.1838020104338938  ret7=-0.0950851486340113  0.8s
+103/1124 "Tec-9 | Ossified (Factory New)"  steam_n=79  median=52.041  iqr_risk=9.84650973179495  downside=6.534760473648777  ret7=-0.2945153723848055  0.9s
+104/1124 "Five-SeveN | Violent Daimyo (Factory New)"  steam_n=266  median=3.795  iqr_risk=14.05215338021663  downside=6.26251219136594  ret7=-0.16564849624060152  0.7s
+105/1124 "Desert Eagle | Heat Treated (Factory New)"  steam_n=44  median=81.4535  iqr_risk=7.683128703373318  downside=5.82689416760744  ret7=-0.1250719780300905  0.9s
+106/1124 "FAMAS | Decommissioned (Factory New)"  steam_n=94  median=16.406  iqr_risk=22.40973200485917  downside=10.657640342422386  ret7=-0.22451450433435027  0.9s
+107/1124 "AWP | Duality (Field-Tested)"  steam_n=4642  median=4.523  iqr_risk=4.222363210746234  downside=2.844078846616638  ret7=-0.06782499476658987  0.7s
+108/1124 "MAC-10 | Surfwood (Factory New)"  steam_n=17  median=13.683  iqr_risk=14.346575940506126  downside=12.115555421741163  ret7=-0.14951483816134292  0.8s
+109/1124 "Dual Berettas | Balance (Factory New)"  steam_n=21  median=20.845  iqr_risk=14.594449384911812  downside=10.101711871943074  ret7=0.009600808489135915  0.9s
+110/1124 "MP9 | Slide (Factory New)"  steam_n=305  median=3.658  iqr_risk=17.994557743511724  downside=20.604500102408043  ret7=-0.15553745928338758  0.8s
+111/1124 "Glock-18 | Grinder (Factory New)"  steam_n=132  median=18.294  iqr_risk=14.272537760645754  downside=7.890682064159778  ret7=-0.1840208343021904  1.0s
+112/1124 "XM1014 | Entombed (Field-Tested)"  steam_n=1502  median=4.649  iqr_risk=8.44285653523881  downside=6.167325932542215  ret7=-0.05792555416143874  0.8s
+113/1124 "AUG | Navy Murano (Factory New)"  steam_n=11  median=18.982  iqr_risk=8.334464708633142  downside=3.439380911435947  ret7=-0.10284040002905781  0.7s
+114/1124 "AK-47 | Steel Delta (Factory New)"  steam_n=202  median=27.495  iqr_risk=6.437737002612937  downside=6.386788264322063  ret7=-0.08246451654811793  0.8s
+115/1124 "Galil AR | Sandstorm (Minimal Wear)"  steam_n=37  median=26.384  iqr_risk=21.971647009105233  downside=17.930001152560614  ret7=-0.12527050554027896  0.8s
+116/1124 "AUG | Aristocrat (Factory New)"  steam_n=96  median=19.965  iqr_risk=17.2249035919575  downside=8.185588513497127  ret7=-0.2788828080769956  0.8s
+117/1124 "M4A1-S | Blood Tiger (Factory New)"  steam_n=112  median=34.7035  iqr_risk=13.932421338313658  downside=7.3788089521837295  ret7=-0.1134710281324719  1.8s
+118/1124 "AUG | Amber Slipstream (Factory New)"  steam_n=208  median=3.577  iqr_risk=20.109326762398393  downside=15.90336193955873  ret7=-0.1793449550977284  0.9s
+119/1124 "AUG | Arctic Wolf (Factory New)"  steam_n=46  median=32.208  iqr_risk=11.807251908396955  downside=11.049618320610675  ret7=-0.17602366798155444  0.8s
+120/1124 "P2000 | Wicked Sick (Field-Tested)"  steam_n=2194  median=4.543  iqr_risk=3.4505350513212574  downside=3.7781174929023815  ret7=-0.05445116681071738  0.9s
+121/1124 "UMP-45 | Primal Saber (Minimal Wear)"  steam_n=74  median=15.499  iqr_risk=4.253050811963368  downside=4.797532697469873  ret7=-0.1602665647020265  0.9s
+122/1124 "AWP | Black Nile (Factory New)"  steam_n=163  median=39.05  iqr_risk=8.363738983414864  downside=4.185615567692829  ret7=-0.14236884802596006  1.6s
+123/1124 "FAMAS | 2A2F (Factory New)"  steam_n=392  median=12.9655  iqr_risk=19.38842189681291  downside=33.13704814803815  ret7=1.0633811603243917  0.9s
+124/1124 "Dual Berettas | Anodized Navy (Factory New)"  steam_n=59  median=29.913  iqr_risk=4.579882868628539  downside=3.021764766117123  ret7=-0.11236071751806409  0.8s
+125/1124 "Glock-18 | Off World (Factory New)"  steam_n=159  median=12.869  iqr_risk=10.767808298339569  downside=6.706476095080325  ret7=-0.11249822669882248  1.2s
+126/1124 "Five-SeveN | Monkey Business (Field-Tested)"  steam_n=352  median=15.003  iqr_risk=5.534525693150946  downside=5.274155968141433  ret7=-0.04064447685983297  1.1s
+127/1124 "P2000 | Imperial Dragon (Field-Tested)"  steam_n=185  median=14.294  iqr_risk=5.904681568958244  downside=5.449177562210037  ret7=0.004149090657630916  1.4s
+128/1124 "Glock-18 | Winterized (Factory New)"  steam_n=498  median=4.137  iqr_risk=23.36943062340996  downside=4.817975099624007  ret7=-0.2082602766413404  1.6s
+129/1124 "M4A4 | The Emperor (Field-Tested)"  steam_n=180  median=71.131  iqr_risk=9.077187745726196  downside=7.095623453551338  ret7=-0.0064230720149730525  1.3s
+130/1124 "P2000 | Granite Marbleized (Factory New)"  steam_n=54  median=16.025  iqr_risk=14.262221836098938  downside=19.50405222593176  ret7=-0.3104173482263869  1.3s
+131/1124 "MAC-10 | Lapis Gator (Factory New)"  steam_n=195  median=5.513  iqr_risk=15.722692166237579  downside=10.224347186465614  ret7=-0.14648241206030166  0.9s
+132/1124 "AK-47 | Safari Mesh (Factory New)"  steam_n=96  median=17.226  iqr_risk=13.237683801672532  downside=7.306771148870153  ret7=-0.12802055247494537  0.8s
+133/1124 "Five-SeveN | Nightshade (Factory New)"  steam_n=27  median=24.753  iqr_risk=21.122179304736736  downside=14.341126245171786  ret7=-0.04486166007905146  0.9s
+134/1124 "AK-47 | Safety Net (Factory New)"  steam_n=168  median=29.721  iqr_risk=7.132886236961084  downside=4.953707868163202  ret7=-0.046914584180402175  1.2s
+135/1124 "Negev | dev_texture (Factory New)"  steam_n=161  median=4.872  iqr_risk=15.599663375685047  downside=10.529772778587407  ret7=-0.01640969162995587  1.0s
+136/1124 "Tec-9 | Mummy's Rot (Factory New)"  steam_n=29  median=35.99  iqr_risk=5.974469247047566  downside=3.7670830773431723  ret7=-0.08112818278508915  2.5s
+137/1124 "AWP | POP AWP (Factory New)"  steam_n=59  median=67.228  iqr_risk=4.363544394191848  downside=6.669542965960481  ret7=-0.07748909067018905  0.8s
+138/1124 "M4A1-S | Fizzy POP (Factory New)"  steam_n=135  median=14.427  iqr_risk=4.600207043595699  downside=1.6206988749717182  ret7=-0.06453401160894812  0.8s
+139/1124 "Tec-9 | Snek-9 (Factory New)"  steam_n=83  median=15.555  iqr_risk=17.067588777098976  downside=11.386729863746927  ret7=-0.4680413487037939  1.1s
+140/1124 "Five-SeveN | Fraise Crane (Factory New)"  steam_n=1089  median=5.145  iqr_risk=18.664047151277003  downside=9.199788423756976  ret7=-0.15050393834166165  0.7s
+141/1124 "R8 Revolver | Phoenix Marker (Factory New)"  steam_n=43  median=25.332  iqr_risk=6.585604895578516  downside=12.529780639198092  ret7=-0.0953338980657914  0.9s
+142/1124 "Five-SeveN | Buddy (Factory New)"  steam_n=125  median=15.247  iqr_risk=13.258803197234828  downside=12.232663642255343  ret7=-0.21607194662024953  0.9s
+143/1124 "PP-Bizon | Chemical Green (Factory New)"  steam_n=12  median=30.5915  iqr_risk=1.6483985578154532  downside=1.8115965823641067  ret7=-0.010151280445601651  0.9s
+144/1124 "AWP | Hyper Beast (Battle-Scarred)"  steam_n=63  median=40.374  iqr_risk=2.322477835939075  downside=3.459418924185838  ret7=0.02600770316134704  0.9s
+145/1124 "UMP-45 | Moonrise (Factory New)"  steam_n=262  median=4.393  iqr_risk=10.207665627606794  downside=6.849014356587774  ret7=-0.07890167136965487  1.0s
+146/1124 "USP-S | Flashback (Factory New)"  steam_n=416  median=6.624  iqr_risk=14.154046673286997  downside=13.530287984111219  ret7=-0.16900300386210843  0.7s
+147/1124 "P250 | Mint Kimono (Minimal Wear)"  steam_n=34  median=13.284  iqr_risk=3.8069526178486974  downside=5.51477279621428  ret7=-0.1318116389060251  1.0s
+148/1124 "P250 | Vino Primo (Factory New)"  steam_n=62  median=41.806  iqr_risk=11.885308931523697  downside=9.064170094967123  ret7=0.014768595412308683  0.9s
+149/1124 "UMP-45 | Momentum (Field-Tested)"  steam_n=309  median=5.512  iqr_risk=7.2733208786026475  downside=7.182631092086407  ret7=0.013491189427312644  0.9s
+150/1124 "CZ75-Auto | Circaetus (Factory New)"  steam_n=105  median=5.335  iqr_risk=25.035901517379795  downside=6.678547329446167  ret7=-0.24222797927461148  0.8s
+151/1124 "MP7 | Vault Heist (Factory New)"  steam_n=27  median=30.306  iqr_risk=6.574404512219536  downside=3.773950192634094  ret7=-0.15804582565183034  0.8s
+152/1124 "P250 | Contaminant (Factory New)"  steam_n=39  median=14.743  iqr_risk=23.69322254373624  downside=16.10077251851655  ret7=-0.17556015477368858  0.8s
+153/1124 "R8 Revolver | Bone Forged (Factory New)"  steam_n=210  median=2.1155  iqr_risk=33.20687156315274  downside=10.038791082313827  ret7=-0.4035036496350364  0.9s
+154/1124 "P250 | Steel Disruption (Factory New)"  steam_n=42  median=19.6335  iqr_risk=21.89561332676153  downside=15.244816846167572  ret7=-0.1631224964146185  0.9s
+155/1124 "CZ75-Auto | Tacticat (Factory New)"  steam_n=131  median=11.205  iqr_risk=6.572850214596146  downside=6.730310692016299  ret7=-0.10200255645504896  0.8s
+156/1124 "SG 553 | Barricade (Factory New)"  steam_n=9  median=19.307  iqr_risk=1.4791270003619141  downside=13.593282035950127  ret7=0.12053547523427022  0.7s
+157/1124 "AWP | Exoskeleton (Factory New)"  steam_n=31  median=67.852  iqr_risk=4.2754210313097  downside=5.84958620290527  ret7=-0.15792713422844606  1.4s
+158/1124 "USP-S | Night Ops (Factory New)"  steam_n=275  median=5.517  iqr_risk=14.622164683349007  downside=9.895897990671623  ret7=-0.09086362120706892  0.9s
+159/1124 "Dual Berettas | Melondrama (Field-Tested)"  steam_n=2455  median=8.077  iqr_risk=6.3175208403424135  downside=4.261522933722099  ret7=-0.06377213055522102  0.8s
+160/1124 "FAMAS | Rapid Eye Movement (Battle-Scarred)"  steam_n=852  median=7.475  iqr_risk=4.844688909409672  downside=4.041701797352814  ret7=-0.0462526205450734  1.3s
+161/1124 "Dual Berettas | Hemoglobin (Factory New)"  steam_n=26  median=36.1105  iqr_risk=22.535586152592092  downside=13.449818950076809  ret7=-0.1866244098053167  1.2s
+162/1124 "Five-SeveN | Hybrid (Factory New)"  steam_n=492  median=7.857  iqr_risk=8.986136413556082  downside=9.858263240177266  ret7=-0.11062499999999997  0.9s
+163/1124 "USP-S | Royal Guard (Minimal Wear)"  steam_n=1360  median=4.9745  iqr_risk=7.881753395732229  downside=8.618764339228068  ret7=-0.07028452986621447  0.9s
+164/1124 "P90 | Sand Spray (Factory New)"  steam_n=126  median=2.367  iqr_risk=23.72759856630825  downside=13.420947829549986  ret7=-0.36976942783945344  1.4s
+165/1124 "AWP | Atheris (Factory New)"  steam_n=184  median=53.0645  iqr_risk=6.810502890771709  downside=4.307693445119704  ret7=-0.14554797270172626  0.9s
+166/1124 "P2000 | Panther Camo (Factory New)"  steam_n=21  median=32.51  iqr_risk=15.805128584096964  downside=15.891343974775834  ret7=-0.11148439328642834  1.3s
+167/1124 "SSG 08 | Spring Twilly (Factory New)"  steam_n=188  median=11.965  iqr_risk=16.19025879050736  downside=12.490594431903682  ret7=-0.09007756475925655  0.9s
+1/957 "P2000 | Imperial (Factory New)"  steam_n=503  median=3.957  iqr_risk=18.792960561595095  downside=8.945546726466144  ret7=-0.2519290928050052  1.0s
+2/957 "MP7 | Asterion (Factory New)"  steam_n=41  median=25.832  iqr_risk=11.689302494221453  downside=4.146964180502466  ret7=-0.09642573995771664  0.8s
+3/957 "CZ75-Auto | Midnight Palm (Factory New)"  steam_n=83  median=12.35  iqr_risk=10.143182916387623  downside=12.173514975288443  ret7=-0.1093603744149767  1.0s
+4/957 "MAC-10 | Pipsqueak (Factory New)"  steam_n=537  median=6.188  iqr_risk=10.497482504195816  downside=3.514994141676423  ret7=-0.14381927879893364  1.0s
+5/957 "P90 | Verdant Growth (Factory New)"  steam_n=96  median=10.72  iqr_risk=24.11313019005594  downside=7.070636878496231  ret7=-0.1808773555761508  0.7s
+6/957 "UMP-45 | K.O. Factory (Field-Tested)"  steam_n=2358  median=5.942  iqr_risk=5.959455613773706  downside=4.0343505699985025  ret7=-0.046804979253112  1.1s
+7/957 "P2000 | Turf (Factory New)"  steam_n=86  median=23.64  iqr_risk=4.193731344519369  downside=3.396798191686224  ret7=-0.04187382609656398  0.7s
+8/957 "R8 Revolver | Blaze (Factory New)"  steam_n=460  median=4.965  iqr_risk=4.328599031891792  downside=5.1194199318738605  ret7=-0.044315992292870865  0.9s
+9/957 "CZ75-Auto | Polymer (Factory New)"  steam_n=331  median=9.29  iqr_risk=16.156524450449506  downside=4.074208803201159  ret7=0.14617974089564423  0.9s
+10/957 "MP9 | Deadly Poison (Factory New)"  steam_n=30  median=16.2685  iqr_risk=17.83135916995694  downside=16.985471690880512  ret7=-0.18453521801629125  0.8s
+11/957 "AUG | Stymphalian (Field-Tested)"  steam_n=455  median=4.692  iqr_risk=6.911705100582371  downside=5.823751519935161  ret7=0.038363171355498604  0.9s
+12/957 "Glock-18 | Steel Disruption (Factory New)"  steam_n=45  median=82.065  iqr_risk=6.393716931705878  downside=11.273839359864354  ret7=0.005127170442811746  0.8s
+13/957 "MP9 | Orange Peel (Factory New)"  steam_n=68  median=9.9165  iqr_risk=15.519786932229392  downside=2.659487209178888  ret7=-0.18370627300029607  0.9s
+14/957 "MAC-10 | Carnivore (Factory New)"  steam_n=56  median=9.401  iqr_risk=22.390836206286465  downside=6.667610275904597  ret7=-0.2308132875143184  0.9s
+15/957 "P250 | Visions (Minimal Wear)"  steam_n=628  median=6.888  iqr_risk=6.5670094184740275  downside=5.040467755407697  ret7=0.0037233280824862103  1.4s
+16/957 "M4A4 | Neo-Noir (Field-Tested)"  steam_n=335  median=45.307  iqr_risk=7.28640496862583  downside=6.1078582298387  ret7=-0.0048635080012549015  1.2s
+17/957 "M4A4 | Temukau (Field-Tested)"  steam_n=983  median=44.87  iqr_risk=6.2505706122976195  downside=5.633752635950454  ret7=-0.002081749991739157  0.7s
+18/957 "AK-47 | Baroque Purple (Field-Tested)"  steam_n=84  median=6.89  iqr_risk=3.864345375867964  downside=4.197875185094666  ret7=0.0017979144192734609  0.9s
+19/957 "Tec-9 | Rust Leaf (Factory New)"  steam_n=10  median=31.759  iqr_risk=0.7345856269259075  downside=3.247758877833004  ret7=0.12913764629855673  0.7s
+20/957 "USP-S | Royal Guard (Factory New)"  steam_n=642  median=12.658  iqr_risk=4.967526077543792  downside=5.250934855343434  ret7=-0.060228529303354206  0.8s
+21/957 "SG 553 | Atlas (Factory New)"  steam_n=35  median=4.551  iqr_risk=16.314867729744673  downside=23.26481703382801  ret7=-0.177178515712057  0.7s
+22/957 "PP-Bizon | Brass (Factory New)"  steam_n=124  median=7.852  iqr_risk=6.606473508256521  downside=6.5456893931719256  ret7=-0.07594862471409314  1.0s
+23/957 "P250 | Asiimov (Battle-Scarred)"  steam_n=262  median=13.646  iqr_risk=4.555690921844434  downside=4.7735075866652  ret7=-0.03636761169011005  1.0s
+24/957 "Nova | Gila (Minimal Wear)"  steam_n=130  median=4.75  iqr_risk=6.7580968456588355  downside=8.60217322502374  ret7=-0.05773531205529581  0.9s
+25/957 "M4A4 | Converter (Factory New)"  steam_n=1189  median=3.39  iqr_risk=5.021289091176047  downside=2.672147995889009  ret7=-0.06644238856181672  1.0s
+26/957 "CZ75-Auto | Eco (Factory New)"  steam_n=34  median=40.3405  iqr_risk=7.001687505167073  downside=1.1849009624128835  ret7=-0.03164061087472725  1.0s
+27/957 "FAMAS | Rapid Eye Movement (Field-Tested)"  steam_n=2450  median=7.944  iqr_risk=5.1174202593760985  downside=2.829102198187371  ret7=-0.06301204819277118  0.9s
+28/957 "Dual Berettas | Flora Carnivora (Factory New)"  steam_n=205  median=9.726  iqr_risk=10.265706632990794  downside=6.31422431791102  ret7=-0.10752897633193725  0.8s
+29/957 "Glock-18 | Mirror Mosaic (Battle-Scarred)"  steam_n=380  median=5.299  iqr_risk=2.9919621749408964  downside=2.9938534278959916  ret7=-0.024810220329568478  0.7s
+30/957 "Tec-9 | Whiteout (Field-Tested)"  steam_n=1143  median=8.678  iqr_risk=13.81632008977102  downside=18.5152715923835  ret7=0.26803543805371954  1.1s
+31/957 "UMP-45 | Full Stop (Factory New)"  steam_n=78  median=9.803  iqr_risk=5.774340907055202  downside=1.9844942724350432  ret7=-0.030673130710423324  1.0s
+32/957 "MP7 | Special Delivery (Factory New)"  steam_n=40  median=20.3755  iqr_risk=19.782459961741992  downside=9.21868964008619  ret7=-0.2242079005175175  0.9s
+33/957 "MAG-7 | Silver (Factory New)"  steam_n=51  median=31.819  iqr_risk=10.844395931655844  downside=11.303409635817575  ret7=-0.35463057439529444  1.3s
+34/957 "P250 | Asiimov (Field-Tested)"  steam_n=329  median=15.085  iqr_risk=4.781070381038816  downside=5.169080219389978  ret7=-0.04670547763958721  1.1s
+35/957 "G3SG1 | Stinger (Field-Tested)"  steam_n=216  median=4.86  iqr_risk=8.554194077218941  downside=12.337375732991458  ret7=0.03238866396761164  0.8s
+36/957 "USP-S | Blueprint (Minimal Wear)"  steam_n=157  median=32.148  iqr_risk=13.561043623091932  downside=10.775020425158763  ret7=-0.08173939031679611  0.8s
+37/957 "MAC-10 | Button Masher (Factory New)"  steam_n=58  median=13.786  iqr_risk=16.263877406401324  downside=12.932561710168883  ret7=-0.15023186033824332  0.8s
+38/957 "MAG-7 | Bulldozer (Minimal Wear)"  steam_n=4  median=46.3215  iqr_risk=15.852909251029137  downside=5.3607635119913155  ret7=-0.002925558900125136  0.8s
+39/957 "AWP | Asiimov (Battle-Scarred)"  steam_n=87  median=95.732  iqr_risk=5.143301769396942  downside=3.34778102062658  ret7=-0.02559757087879122  0.8s
+40/957 "CZ75-Auto | Red Astor (Factory New)"  steam_n=36  median=19.2255  iqr_risk=9.59090111982364  downside=5.766966455394943  ret7=0.004933163590070011  0.9s
+41/957 "Galil AR | Urban Rubble (Factory New)"  steam_n=2  median=48.6885  iqr_risk=3.9118066894646626  downside=3.129281041724421  ret7=-0.02145994561807163  0.9s
+42/957 "SSG 08 | Dark Water (Minimal Wear)"  steam_n=56  median=15.3  iqr_risk=14.140179559867153  downside=9.528319393873467  ret7=-0.16705044446824457  1.1s
+43/957 "P250 | Visions (Field-Tested)"  steam_n=2030  median=4.487  iqr_risk=5.365939479239967  downside=2.8149190710767087  ret7=-0.04134594237959088  0.8s
+44/957 "P2000 | Ivory (Factory New)"  steam_n=60  median=18.974  iqr_risk=6.82249556946761  downside=8.501903293799359  ret7=-0.08680906335690564  1.0s
+45/957 "AWP | Chromatic Aberration (Field-Tested)"  steam_n=624  median=44.152  iqr_risk=6.591262323164717  downside=6.2441149443543225  ret7=-0.06032369891143541  0.9s
+46/957 "AK-47 | Nouveau Rouge (Well-Worn)"  steam_n=911  median=12.828  iqr_risk=2.4581951488508973  downside=2.4776121721435547  ret7=-0.03843027980959013  0.7s
+47/957 "FAMAS | Pulse (Factory New)"  steam_n=127  median=61.861  iqr_risk=18.255147188014124  downside=12.607855351637994  ret7=-0.005076282940360555  0.9s
+48/957 "Nova | Wurst Hölle (Factory New)"  steam_n=527  median=4.506  iqr_risk=12.147599869380644  downside=9.2522042015892  ret7=-0.14040728831725613  0.8s
+49/957 "G3SG1 | Orange Kimono (Factory New)"  steam_n=14  median=16.3485  iqr_risk=8.293549660791836  downside=6.410854660971331  ret7=-0.13422980270544815  0.8s
+50/957 "R8 Revolver | Llama Cannon (Field-Tested)"  steam_n=224  median=11.538  iqr_risk=5.815725093809032  downside=7.634445111917891  ret7=-0.031448135937103716  0.8s
+51/957 "MP9 | Sand Dashed (Factory New)"  steam_n=183  median=3.419  iqr_risk=24.75967709729868  downside=15.203810936474882  ret7=-0.053713346122225336  0.8s
+52/957 "P2000 | Amber Fade (Factory New)"  steam_n=432  median=4.137  iqr_risk=5.021657384930253  downside=4.457613403779322  ret7=-0.0832069339111593  0.9s
+53/957 "Galil AR | Chromatic Aberration (Factory New)"  steam_n=53  median=55.981  iqr_risk=9.031134766330002  downside=5.342241788108071  ret7=-0.10676575635166963  0.8s
+54/957 "Five-SeveN | Urban Hazard (Factory New)"  steam_n=258  median=6.41  iqr_risk=15.095409923892664  downside=10.368246064636093  ret7=-0.1413461538461538  0.9s
+55/957 "MP5-SD | Statics (Factory New)"  steam_n=39  median=4.474  iqr_risk=19.961199541874123  downside=17.997802865624198  ret7=-0.2336033736544223  0.7s
+56/957 "SSG 08 | Azure Glyph (Factory New)"  steam_n=69  median=8.666  iqr_risk=17.939071901407658  downside=10.72995389647359  ret7=-0.14692493946731233  0.8s
+57/957 "MP7 | Nemesis (Factory New)"  steam_n=46  median=37.605  iqr_risk=11.178191842786154  downside=7.994100833022822  ret7=-0.14555804489963875  0.8s
+58/957 "Five-SeveN | Kami (Factory New)"  steam_n=107  median=12.376  iqr_risk=11.709659850472846  downside=11.278902807347622  ret7=-0.11723868954758188  0.9s
+59/957 "P2000 | Pulse (Factory New)"  steam_n=46  median=19.053  iqr_risk=18.956033260101776  downside=19.908785005144754  ret7=-0.14874982732421604  1.0s
+60/957 "Sawed-Off | Devourer (Field-Tested)"  steam_n=233  median=5.701  iqr_risk=6.4991941699950875  downside=6.481676126410188  ret7=0.007062876830318698  1.0s
+61/957 "AWP | Chromatic Aberration (Minimal Wear)"  steam_n=333  median=58.352  iqr_risk=11.044711099901901  downside=6.052973343006733  ret7=-0.04940397461173074  0.7s
+62/957 "Dual Berettas | Urban Shock (Factory New)"  steam_n=43  median=14.44  iqr_risk=17.694208147337086  downside=12.063786181532327  ret7=-0.17102439024390248  0.8s
+63/957 "M4A4 | Royal Paladin (Field-Tested)"  steam_n=60  median=101.2325  iqr_risk=8.207717410636665  downside=11.55163558825822  ret7=-0.007967271797494346  0.9s
+64/957 "P250 | Mint Kimono (Factory New)"  steam_n=44  median=29.768  iqr_risk=3.9828671865667875  downside=7.9793860173034625  ret7=-0.07754803049978354  1.0s
+65/957 "FAMAS | Eye of Athena (Factory New)"  steam_n=46  median=76.3345  iqr_risk=7.643869371151522  downside=10.001752480689527  ret7=-0.11852819354231392  0.9s
+66/957 "P2000 | Pathfinder (Factory New)"  steam_n=6  median=45.579  iqr_risk=2.1681859250181232  downside=6.00807786236325  ret7=-0.035254108402686724  0.9s
+67/957 "MAC-10 | Palm (Factory New)"  steam_n=38  median=7.248  iqr_risk=11.003029819805459  downside=27.274176947275336  ret7=-0.3026359879370043  0.8s
+68/957 "MAG-7 | Carbon Fiber (Factory New)"  steam_n=200  median=5.701  iqr_risk=8.88107041953195  downside=9.431917124224803  ret7=-0.15361253196930946  0.9s
+69/957 "SSG 08 | Red Stone (Minimal Wear)"  steam_n=55  median=17.042  iqr_risk=10.843366142092648  downside=19.6901372353993  ret7=0.23102113724322715  1.0s
+70/957 "R8 Revolver | Banana Cannon (Factory New)"  steam_n=293  median=8.615  iqr_risk=5.865597874424405  downside=2.8821363835943417  ret7=-0.07049927721561222  0.8s
+71/957 "Five-SeveN | Angry Mob (Field-Tested)"  steam_n=181  median=72.832  iqr_risk=8.272371199500778  downside=10.835288021706786  ret7=0.054881296073100216  1.2s
+72/957 "Negev | Nuclear Waste (Factory New)"  steam_n=20  median=14.992  iqr_risk=10.528890288601357  downside=7.985285150465373  ret7=0.25081780144541654  0.9s
+73/957 "Glock-18 | Gold Toof (Field-Tested)"  steam_n=178  median=40.263  iqr_risk=8.764779660083468  downside=7.768161802073351  ret7=0.01562734785875297  0.7s
+74/957 "Desert Eagle | Urban DDPAT (Minimal Wear)"  steam_n=72  median=20.5225  iqr_risk=6.269509549759271  downside=2.677107031373999  ret7=0.06382073464756788  0.9s
+75/957 "Sawed-Off | Bamboo Shadow (Factory New)"  steam_n=9  median=14.461  iqr_risk=10.992835613109984  downside=0.7853901668625775  ret7=0.08499764642592966  0.8s
+76/957 "P250 | Boreal Forest (Factory New)"  steam_n=217  median=8.021  iqr_risk=15.66659448994409  downside=19.867279744239674  ret7=-0.22100233811121273  0.9s
+77/957 "Galil AR | Crimson Tsunami (Factory New)"  steam_n=146  median=19.164  iqr_risk=17.836213759276852  downside=9.491281682545402  ret7=-0.16267596071153767  0.8s
+78/957 "Galil AR | Firefight (Factory New)"  steam_n=66  median=29.246  iqr_risk=14.64736142536806  downside=8.003828579738961  ret7=-0.13644182888184686  0.8s
+79/957 "M249 | Jungle (Field-Tested)"  steam_n=33  median=6.831  iqr_risk=9.456755354628324  downside=12.78292447935967  ret7=0.007623417955739953  0.9s
+80/957 "XM1014 | Watchdog (Factory New)"  steam_n=24  median=11.85  iqr_risk=10.430442387270169  downside=9.752143679877129  ret7=-0.08608563320034568  0.7s
+81/957 "XM1014 | Scumbria (Factory New)"  steam_n=28  median=5.506  iqr_risk=9.34887533011564  downside=7.301702941444313  ret7=-0.06852659110723625  0.8s
+82/957 "UMP-45 | Momentum (Minimal Wear)"  steam_n=237  median=6.88  iqr_risk=11.068251820720217  downside=9.47062379458245  ret7=-0.09191994069681242  0.8s
+83/957 "P2000 | Space Race (Factory New)"  steam_n=12  median=59.912  iqr_risk=3.119648002873449  downside=0.9469310454608505  ret7=-0.1090608887086495  0.8s
+84/957 "Glock-18 | Royal Legion (Factory New)"  steam_n=18  median=79.7915  iqr_risk=5.322307147840174  downside=9.684363558592729  ret7=-0.11385036604963983  0.8s
+85/957 "AUG | Syd Mead (Minimal Wear)"  steam_n=80  median=14.191  iqr_risk=7.033538882223278  downside=4.283043611707922  ret7=-0.029987461688492645  0.8s
+86/957 "M4A4 | Temukau (Minimal Wear)"  steam_n=334  median=73.4165  iqr_risk=8.898708939016679  downside=6.382508327794947  ret7=-0.1050801796023092  0.7s
+87/957 "P250 | Asiimov (Minimal Wear)"  steam_n=17  median=69.522  iqr_risk=12.35489556108445  downside=2.547726261060312  ret7=-0.1402168989985405  0.8s
+88/957 "MAC-10 | Echoing Sands (Factory New)"  steam_n=49  median=8.889  iqr_risk=6.528565296948079  downside=12.356834662389584  ret7=-0.083593587341245  0.9s
+89/957 "P2000 | Dispatch (Factory New)"  steam_n=7  median=57.758  iqr_risk=5.977749628990682  downside=1.567238434187875  ret7=-0.011726041384151453  0.9s
+90/957 "Dual Berettas | Hydro Strike (Factory New)"  steam_n=69  median=12.752  iqr_risk=11.896386818329123  downside=10.204807563098282  ret7=-0.1286989890045015  0.8s
+91/957 "SG 553 | Fallout Warning (Factory New)"  steam_n=16  median=17.774  iqr_risk=9.576521344232503  downside=11.554836512261584  ret7=0.09302191131410065  0.9s
+92/957 "P90 | Nostalgia (Field-Tested)"  steam_n=176  median=5.179  iqr_risk=10.183577518094388  downside=10.807858132230445  ret7=0.045525748971999125  0.8s
+93/957 "Nova | Yorkshire (Factory New)"  steam_n=319  median=5.137  iqr_risk=13.155640171346974  downside=9.043312708234167  ret7=0.1648706896551726  0.8s
+94/957 "PP-Bizon | High Roller (Factory New)"  steam_n=12  median=61.463  iqr_risk=5.849067357091097  downside=5.2398980646947235  ret7=-0.11389452178023096  0.9s
+95/957 "MP5-SD | Agent (Factory New)"  steam_n=29  median=14.752  iqr_risk=15.983453700878183  downside=17.220357372935954  ret7=-0.2630494505494504  0.8s
+96/957 "CZ75-Auto | Slalom (Factory New)"  steam_n=29  median=34.375  iqr_risk=0.5795179333410233  downside=0.612386114634997  ret7=-0.024269088844734665  0.7s
+97/957 "AWP | Duality (Minimal Wear)"  steam_n=1436  median=7.9  iqr_risk=6.26365438771516  downside=5.884804323942063  ret7=-0.05277078085642328  0.8s
+98/957 "M4A4 | Jungle Tiger (Minimal Wear)"  steam_n=10  median=39.6755  iqr_risk=5.099952385819449  downside=2.599086106880125  ret7=-0.13400140886677114  1.0s
+99/957 "M4A4 | Choppa (Factory New)"  steam_n=1082  median=3.222  iqr_risk=12.370175166640832  downside=9.114865912261665  ret7=-0.1698219836111896  0.7s
+100/957 "AK-47 | Asiimov (Field-Tested)"  steam_n=603  median=52.998  iqr_risk=4.749294420288896  downside=5.662430980012831  ret7=-0.02202191198563641  0.9s
+101/957 "AK-47 | Emerald Pinstripe (Minimal Wear)"  steam_n=319  median=5.553  iqr_risk=4.815979811981302  downside=3.934531108386203  ret7=-0.05764237493508739  0.9s
+102/957 "Desert Eagle | Sputnik (Factory New)"  steam_n=206  median=10.7  iqr_risk=9.552117938288536  downside=4.601212879715093  ret7=-0.05509938529187408  0.8s
+103/957 "R8 Revolver | Reboot (Factory New)"  steam_n=34  median=18.0165  iqr_risk=12.981781960494024  downside=4.585807673675565  ret7=-0.13239152371342078  1.0s
+104/957 "P90 | Shapewood (Field-Tested)"  steam_n=92  median=11.495  iqr_risk=12.171304401375924  downside=9.900676525701812  ret7=-0.030375043207742758  1.3s
+105/957 "MP7 | Fade (Factory New)"  steam_n=497  median=42.299  iqr_risk=7.077127316660853  downside=7.07903747248181  ret7=-0.00435840964414036  0.9s
+106/957 "MP7 | Prey (Factory New)"  steam_n=325  median=4.064  iqr_risk=22.520231213872837  downside=5.0404624277456636  ret7=-0.20451934124856386  0.8s
+107/957 "UMP-45 | K.O. Factory (Minimal Wear)"  steam_n=1011  median=9.615  iqr_risk=4.518705338377485  downside=6.284153005464489  ret7=-0.09787488775815623  0.7s
+108/957 "UMP-45 | Wild Child (Battle-Scarred)"  steam_n=985  median=3.94  iqr_risk=9.48141441577386  downside=6.337709370755992  ret7=0.028039765485597945  0.8s
+109/957 "SSG 08 | Detour (Factory New)"  steam_n=25  median=71.775  iqr_risk=8.045808576113082  downside=4.015992081376028  ret7=-0.027003121414699405  1.0s
+110/957 "FAMAS | Neural Net (Factory New)"  steam_n=146  median=24.377  iqr_risk=20.842772995015853  downside=20.61839949810044  ret7=-0.2539563193698532  0.8s
+111/957 "P250 | Supernova (Factory New)"  steam_n=244  median=7.495  iqr_risk=8.166964237407354  downside=8.712059730563219  ret7=-0.09428759028233746  1.0s
+112/957 "Five-SeveN | Withered Vine (Factory New)"  steam_n=205  median=17.316  iqr_risk=7.322486019709748  downside=2.140165456323255  ret7=-0.17048108360579173  0.8s
+113/957 "Sawed-Off | Jungle Thicket (Factory New)"  steam_n=17  median=9.978  iqr_risk=5.391769848452759  downside=5.258901234330158  ret7=0.034954880199149496  0.9s
+114/957 "M4A1-S | Bright Water (Minimal Wear)"  steam_n=52  median=85.479  iqr_risk=11.982682070605998  downside=5.716780079780262  ret7=-0.03873496712020397  0.9s
+115/957 "SSG 08 | Abyss (Factory New)"  steam_n=80  median=9.83  iqr_risk=8.095036762810267  downside=8.578676538830388  ret7=-0.11842505320766206  1.0s
+116/957 "MAC-10 | Rangeen (Factory New)"  steam_n=117  median=3.444  iqr_risk=18.462257536807655  downside=12.403598971722362  ret7=-0.11378923766816151  0.8s
+117/957 "Tec-9 | Titanium Bit (Factory New)"  steam_n=25  median=39.913  iqr_risk=15.952503335877417  downside=13.450984667943896  ret7=-0.1801886130157021  1.0s
+118/957 "Desert Eagle | Serpent Strike (Factory New)"  steam_n=2736  median=4.453  iqr_risk=10.37690567072752  downside=10.948321181230146  ret7=-0.16680796947859255  0.8s
+119/957 "Dual Berettas | Twin Turbo (Minimal Wear)"  steam_n=89  median=8.781  iqr_risk=6.9378564652364165  downside=8.533449154770215  ret7=-0.1169847737508043  1.0s
+120/957 "CZ75-Auto | Pole Position (Factory New)"  steam_n=55  median=17.008  iqr_risk=19.06351195424261  downside=19.671459943671753  ret7=-0.14856496367750394  0.8s
+121/957 "XM1014 | Tranquility (Factory New)"  steam_n=15  median=52.34  iqr_risk=7.179257659955776  downside=5.8183201209380835  ret7=-0.027350228403503096  0.8s
+122/957 "M4A4 | Faded Zebra (Minimal Wear)"  steam_n=15  median=22.469  iqr_risk=0.19222774069820162  downside=3.5101679534004178  ret7=-0.001147552271005825  0.9s
+123/957 "MP7 | Abyssal Apparition (Minimal Wear)"  steam_n=994  median=10.162  iqr_risk=7.857476271977593  downside=3.238291582386807  ret7=-0.08217387244373886  0.7s
+124/957 "Desert Eagle | Light Rail (Factory New)"  steam_n=166  median=21.1635  iqr_risk=10.91340844349437  downside=10.176368264140025  ret7=-0.17056675794539877  0.8s
+125/957 "CZ75-Auto | Indigo (Factory New)"  steam_n=3  median=17.076  iqr_risk=9.940475853999093  downside=3.7851251815966886  ret7=0.02538018373384543  0.8s
+126/957 "USP-S | Lead Conduit (Factory New)"  steam_n=42  median=35.349  iqr_risk=10.34787678822597  downside=6.577300272741578  ret7=-0.1264513431073503  0.8s
+127/957 "PP-Bizon | High Roller (Field-Tested)"  steam_n=179  median=11.752  iqr_risk=3.991690416509287  downside=4.91879270679532  ret7=-0.0365281501340482  1.0s
+128/957 "Five-SeveN | Capillary (Factory New)"  steam_n=158  median=4.572  iqr_risk=17.830102160513583  downside=10.919871179644687  ret7=-0.23450854700854684  0.7s
+129/957 "Dual Berettas | Twin Turbo (Factory New)"  steam_n=30  median=47.011  iqr_risk=7.7994241215958535  downside=5.123506328554009  ret7=-0.06943760651391784  0.8s
+130/957 "FAMAS | Djinn (Field-Tested)"  steam_n=173  median=15.239  iqr_risk=6.667810977461477  downside=8.849043400187497  ret7=-0.06634646173551073  1.0s
+131/957 "P250 | Mehndi (Battle-Scarred)"  steam_n=10  median=17.042  iqr_risk=2.2065448463898565  downside=3.289500803825396  ret7=0.017086817880993754  0.9s
+132/957 "M4A4 | Evil Daimyo (Factory New)"  steam_n=258  median=14.292  iqr_risk=8.016728146774204  downside=5.418585749119476  ret7=-0.06770646392795376  1.0s
+133/957 "AUG | Eye of Zapems (Factory New)"  steam_n=418  median=26.597  iqr_risk=5.451020385292104  downside=5.872398605865684  ret7=-0.1350659371492704  0.7s
+134/957 "M4A1-S | Leaded Glass (Field-Tested)"  steam_n=739  median=11.67  iqr_risk=2.5947381124788813  downside=3.42229578290404  ret7=0.003843197540353671  0.9s
+135/957 "Desert Eagle | Ocean Drive (Field-Tested)"  steam_n=63  median=90.368  iqr_risk=7.150231331013655  downside=8.897865726797727  ret7=0.0393633136629814  0.8s
+136/957 "AK-47 | Jungle Spray (Field-Tested)"  steam_n=46  median=20.6055  iqr_risk=3.5482677844901986  downside=8.975465417334485  ret7=-0.07209922909665945  0.9s
+137/957 "M4A1-S | Vaporwave (Battle-Scarred)"  steam_n=51  median=57.604  iqr_risk=1.2876590202299147  downside=2.112143869559011  ret7=-0.016214924557930055  0.7s
+138/957 "USP-S | Jawbreaker (Well-Worn)"  steam_n=2016  median=4.296  iqr_risk=4.934969098791613  downside=4.266211604095575  ret7=-0.053354705747652775  0.7s
+139/957 "AK-47 | Nightwish (Field-Tested)"  steam_n=823  median=87.474  iqr_risk=4.713313673440281  downside=5.232721300313298  ret7=-0.01237436821007376  0.8s
+140/957 "MP7 | Cirrus (Factory New)"  steam_n=339  median=25.26  iqr_risk=8.456814580031693  downside=7.706022187004756  ret7=-0.10387342391114529  0.8s
+141/957 "Five-SeveN | Hot Shot (Factory New)"  steam_n=30  median=112.44  iqr_risk=26.263424581139372  downside=14.76558517317239  ret7=0.4232407800962765  0.8s
+142/957 "M4A4 | Magnesium (Factory New)"  steam_n=201  median=8.712  iqr_risk=13.230132301322994  downside=5.467554675546743  ret7=-0.1326677645121449  1.0s
+143/957 "MP9 | Hydra (Minimal Wear)"  steam_n=93  median=14.692  iqr_risk=8.706600942991848  downside=6.327689669952856  ret7=-0.02870614339204003  0.8s
+144/957 "AK-47 | Blue Laminate (Factory New)"  steam_n=76  median=64.006  iqr_risk=13.26131403930087  downside=6.482967211324114  ret7=-0.12458369310472428  1.0s
+145/957 "AUG | Plague (Factory New)"  steam_n=20  median=10.786  iqr_risk=8.619219357933448  downside=6.983850622701504  ret7=-0.22896499080531552  0.7s
+146/957 "MP7 | Abyssal Apparition (Field-Tested)"  steam_n=2407  median=8.034  iqr_risk=5.55937285277032  downside=3.7978637016678154  ret7=-0.06674684305472034  0.8s
+147/957 "AK-47 | Nouveau Rouge (Battle-Scarred)"  steam_n=706  median=12.6755  iqr_risk=3.7239540186355597  downside=3.1282791703156656  ret7=-0.026552158840214335  1.0s
+148/957 "PP-Bizon | Osiris (Factory New)"  steam_n=172  median=6.974  iqr_risk=13.983516875919486  downside=10.612618017168735  ret7=-0.1273454746136865  0.9s
+149/957 "Five-SeveN | Case Hardened (Minimal Wear)"  steam_n=29  median=22.538  iqr_risk=9.38424125337875  downside=7.371819314166611  ret7=-0.010786717182973082  0.9s
+150/957 "MP7 | Forest DDPAT (Factory New)"  steam_n=162  median=5.9185  iqr_risk=12.181259600614442  downside=9.841269841269842  ret7=-0.30061934254406864  1.0s
+151/957 "FAMAS | Eye of Athena (Field-Tested)"  steam_n=310  median=6.39  iqr_risk=6.0443977244620335  downside=4.351657185258462  ret7=-0.08433368788937856  0.8s
+152/957 "Desert Eagle | Mulberry (Minimal Wear)"  steam_n=851  median=13.481  iqr_risk=5.538707931400098  downside=5.390415885044008  ret7=-0.011921203750817733  0.8s
+153/957 "P90 | Nostalgia (Factory New)"  steam_n=48  median=29.3575  iqr_risk=13.214280975946288  downside=6.746447666936445  ret7=-0.09321510226781193  0.8s
+154/957 "AWP | Mortis (Minimal Wear)"  steam_n=801  median=7.007  iqr_risk=5.6831130355515045  downside=4.814266180492253  ret7=-0.0680899025392826  0.9s
+155/957 "Five-SeveN | Fowl Play (Field-Tested)"  steam_n=120  median=23.087  iqr_risk=6.889322854371717  downside=6.434383984064083  ret7=-0.02402017163584902  1.1s
+156/957 "M4A4 | In Living Color (Field-Tested)"  steam_n=278  median=43.938  iqr_risk=8.22201932073091  downside=5.68349621814165  ret7=-0.019881950916433744  0.7s
+157/957 "MAC-10 | Last Dive (Factory New)"  steam_n=67  median=13.41  iqr_risk=15.009999003930641  downside=15.744025499375544  ret7=-0.19054340155257576  0.9s
+158/957 "Dual Berettas | Melondrama (Minimal Wear)"  steam_n=1062  median=10.162  iqr_risk=6.792174949373593  downside=3.06180782311278  ret7=-0.0734895881968437  0.8s
+159/957 "MP9 | Starlight Protector (Field-Tested)"  steam_n=1218  median=86.492  iqr_risk=5.165244998882656  downside=5.707126787602024  ret7=-0.05072232602652338  0.7s
+160/957 "UMP-45 | Plastique (Factory New)"  steam_n=26  median=11.5805  iqr_risk=14.444444444444448  downside=11.622169354128124  ret7=-0.13106837244768288  0.8s
+161/957 "MAG-7 | Heat (Factory New)"  steam_n=52  median=22.529  iqr_risk=8.226838162596174  downside=20.803921658795456  ret7=-0.10670274203083074  0.8s
+162/957 "Desert Eagle | Night (Minimal Wear)"  steam_n=66  median=28.2385  iqr_risk=12.552888478156671  downside=8.591468187601935  ret7=0.04094621830911227  0.7s
+163/957 "Galil AR | Control (Factory New)"  steam_n=835  median=7.589  iqr_risk=12.169545066155713  downside=5.779239273970128  ret7=-0.16227657572906862  0.9s
+164/957 "MP9 | Rose Iron (Factory New)"  steam_n=54  median=28.033  iqr_risk=20.274821988656523  downside=15.094927310525666  ret7=-0.19589395408988042  0.9s
+165/957 "P250 | Cartel (Field-Tested)"  steam_n=95  median=10.648  iqr_risk=6.997479402580788  downside=5.492645122455886  ret7=-0.11402236067252713  0.8s
+166/957 "AK-47 | Baroque Purple (Minimal Wear)"  steam_n=72  median=16.486  iqr_risk=5.67074708632228  downside=0.2463502044120242  ret7=-0.037538677097320394  0.7s
+167/957 "R8 Revolver | Fade (Minimal Wear)"  steam_n=42  median=114.295  iqr_risk=17.076288689162052  downside=13.2120016522569  ret7=-0.07794811510652355  0.8s
+168/957 "MAG-7 | Sonar (Factory New)"  steam_n=372  median=8.675  iqr_risk=18.68886479428258  downside=15.541021067235624  ret7=0.12304987914743992  0.9s
+169/957 "Galil AR | Amber Fade (Factory New)"  steam_n=23  median=86.133  iqr_risk=8.267213722347213  downside=11.359510482742  ret7=-0.11742669412572326  0.9s
+170/957 "Nova | Moon in Libra (Factory New)"  steam_n=21  median=11.63  iqr_risk=8.059429532553086  downside=15.102670124045133  ret7=-0.1354926233678142  1.0s
+171/957 "AK-47 | Legion of Anubis (Field-Tested)"  steam_n=796  median=45.565  iqr_risk=6.1306435528298575  downside=5.262996041770091  ret7=0.011678512848551037  1.0s
+172/957 "M4A1-S | Glitched Paint (Minimal Wear)"  steam_n=881  median=6.025  iqr_risk=5.861722621968286  downside=3.8693955510183975  ret7=-0.10804986917038628  1.1s
+173/957 "Sawed-Off | Wasteland Princess (Factory New)"  steam_n=19  median=82.247  iqr_risk=5.991056470931112  downside=4.127078563591671  ret7=0.044355361822475015  0.9s
+174/957 "AK-47 | Ice Coaled (Factory New)"  steam_n=489  median=24.763  iqr_risk=5.000280464449132  downside=4.5635572508073485  ret7=-0.1281692732290709  0.9s
+175/957 "Five-SeveN | Boost Protocol (Factory New)"  steam_n=146  median=14.35  iqr_risk=6.051299947653121  downside=4.7112196824288874  ret7=0.005597827908691677  0.9s
+176/957 "M4A1-S | Moss Quartz (Field-Tested)"  steam_n=18  median=41.7715  iqr_risk=5.136648087215829  downside=8.006908279819058  ret7=-0.0076550387596899805  0.9s
+177/957 "P250 | Vino Primo (Minimal Wear)"  steam_n=242  median=4.287  iqr_risk=7.935638479972605  downside=2.891703754421992  ret7=-0.023738188522701265  0.8s
+178/957 "AK-47 | Searing Rage (Well-Worn)"  steam_n=2102  median=5.666  iqr_risk=4.815154508254546  downside=4.091999435586288  ret7=-0.061855670103092786  1.1s
+179/957 "AWP | Mortis (Field-Tested)"  steam_n=2361  median=4.717  iqr_risk=5.69902422611036  downside=3.1754710632570613  ret7=-0.06227180527383358  1.0s
+180/957 "M4A4 | Hellish (Battle-Scarred)"  steam_n=183  median=24.982  iqr_risk=5.403579871664975  downside=2.8997659225098693  ret7=0.007397974652840977  1.1s
+181/957 "Glock-18 | Shinobu (Battle-Scarred)"  steam_n=1290  median=5.188  iqr_risk=5.16636465281258  downside=4.183213170374361  ret7=-0.07669285447063223  1.0s
+182/957 "USP-S | Cortex (Minimal Wear)"  steam_n=602  median=9.309  iqr_risk=4.26482318532305  downside=2.579101302844985  ret7=-0.02084884586746083  1.3s
+183/957 "P250 | Muertos (Factory New)"  steam_n=40  median=40.2935  iqr_risk=2.477984692159784  downside=6.646365946664471  ret7=-0.05023997707681638  0.8s
+184/957 "P250 | Mint Kimono (Field-Tested)"  steam_n=52  median=10.5575  iqr_risk=7.8209934395501435  downside=6.827553889409546  ret7=-0.223079862437906  1.0s
+185/957 "Galil AR | Sky Mandala (Factory New)"  steam_n=817  median=2.991  iqr_risk=8.23529411764705  downside=3.6797385620915044  ret7=-0.0716444981862151  0.7s
+186/957 "Dual Berettas | Demolition (Field-Tested)"  steam_n=7  median=35.05  iqr_risk=0.5439314848319722  downside=3.4378778303914705  ret7=0.0455508158577691  0.9s
+187/957 "AWP | Chrome Cannon (Field-Tested)"  steam_n=868  median=36.958  iqr_risk=8.181046338466375  downside=7.030925765684631  ret7=-0.08164354322305212  1.0s
+188/957 "UMP-45 | Late Night Transit (Factory New)"  steam_n=566  median=10.791  iqr_risk=20.408340271995556  downside=5.455523175131831  ret7=0.6950238899895118  0.8s
+189/957 "MP5-SD | Phosphor (Minimal Wear)"  steam_n=179  median=7.863  iqr_risk=9.030937793934449  downside=7.384904797010454  ret7=-0.16900863022792656  0.9s
+190/957 "M4A4 | Tooth Fairy (Minimal Wear)"  steam_n=1055  median=7.742  iqr_risk=6.240269849507004  downside=6.344058121432276  ret7=-0.017151569050946502  0.8s
+191/957 "FAMAS | Rapid Eye Movement (Minimal Wear)"  steam_n=1057  median=10.153  iqr_risk=6.177448917249325  downside=2.977200655566011  ret7=-0.07045497273923662  0.8s
+192/957 "P250 | Inferno (Factory New)"  steam_n=60  median=19.452  iqr_risk=9.627447940887713  downside=9.343254275822884  ret7=-0.053096057799544294  0.9s
+193/957 "SG 553 | Cyrex (Factory New)"  steam_n=6  median=64.237  iqr_risk=0.8115669316850698  downside=0.8458365526007405  ret7=-0.05339511198614422  1.1s
+194/957 "P90 | Wave Breaker (Factory New)"  steam_n=352  median=9.487  iqr_risk=2.5851565397044  downside=3.2420405784817605  ret7=-0.06346716854872436  1.0s
+195/957 "MP7 | Scorched (Field-Tested)"  steam_n=46  median=11.799  iqr_risk=19.05276277523888  downside=17.083506439551304  ret7=-0.0779511631267158  0.8s
+196/957 "SG 553 | Darkwing (Factory New)"  steam_n=84  median=11.111  iqr_risk=7.440645645238544  downside=8.226011983840808  ret7=-0.17630429195579544  0.8s
+197/957 "AK-47 | Jungle Spray (Minimal Wear)"  steam_n=9  median=61.062  iqr_risk=3.363748061312868  downside=10.095892384852439  ret7=-0.1115311287883769  1.0s
+198/957 "AWP | Exoskeleton (Minimal Wear)"  steam_n=216  median=18.997  iqr_risk=6.965299287747031  downside=6.839515101963804  ret7=-0.05959324440837843  1.0s
+199/957 "AUG | Momentum (Field-Tested)"  steam_n=381  median=6.88  iqr_risk=3.9549082721092366  downside=4.07038004647739  ret7=-0.024136435901141784  0.9s
+200/957 "Tec-9 | Urban DDPAT (Factory New)"  steam_n=264  median=6.581  iqr_risk=23.627699544857496  downside=11.775666676848838  ret7=-0.19164701919838323  1.0s
+201/957 "M4A1-S | Control Panel (Field-Tested)"  steam_n=143  median=16.993  iqr_risk=6.749857522796335  downside=6.815159574468073  ret7=0.006662837449741499  0.9s
+202/957 "MP9 | Ruby Poison Dart (Factory New)"  steam_n=193  median=9.837  iqr_risk=10.746328504836859  downside=6.255325547591604  ret7=-0.12482188657737248  0.9s
+203/957 "MP5-SD | Kitbash (Factory New)"  steam_n=308  median=5.231  iqr_risk=2.64847203536422  downside=3.863155871612524  ret7=-0.0433477200225183  0.9s
+204/957 "MAC-10 | Disco Tech (Field-Tested)"  steam_n=639  median=6.85  iqr_risk=4.958677685950419  downside=5.690046076208577  ret7=-0.09031540919827707  0.9s
+205/957 "AK-47 | Safety Net (Minimal Wear)"  steam_n=802  median=5.751  iqr_risk=5.288436530092066  downside=5.427149619405972  ret7=-0.04262574595055413  0.9s
+206/957 "MAC-10 | Malachite (Factory New)"  steam_n=64  median=16.52  iqr_risk=12.281481571688664  downside=10.844481248972476  ret7=-0.18583706448458637  1.0s
+207/957 "AK-47 | Head Shot (Battle-Scarred)"  steam_n=366  median=35.049  iqr_risk=5.869620970219278  downside=3.6820760539643254  ret7=-0.022749314195461112  0.8s
+208/957 "P250 | Franklin (Factory New)"  steam_n=227  median=8.427  iqr_risk=10.305895506969835  downside=10.18436372033104  ret7=-0.17316942811330838  0.9s
+209/957 "Glock-18 | Moonrise (Factory New)"  steam_n=441  median=5.043  iqr_risk=5.333745603524924  downside=6.280678699802887  ret7=-0.18454561311704165  0.8s
+210/957 "CZ75-Auto | Slalom (Field-Tested)"  steam_n=35  median=14.379  iqr_risk=3.277233347535855  downside=6.4536287459167685  ret7=-0.02162672070435334  0.7s
+211/957 "MAG-7 | Copper Coated (Factory New)"  steam_n=53  median=18.495  iqr_risk=9.401203563553699  downside=0.36662075178204023  ret7=-0.10646931745197641  0.8s
+212/957 "AK-47 | Safety Net (Field-Tested)"  steam_n=2369  median=3.664  iqr_risk=6.826678225063657  downside=4.388578858969507  ret7=-0.03154236835070834  0.9s
+213/957 "SCAR-20 | Bloodsport (Minimal Wear)"  steam_n=89  median=14.521  iqr_risk=8.135279633232209  downside=5.058021685009596  ret7=-0.07859860494610016  0.8s
+214/957 "AWP | Ice Coaled (Field-Tested)"  steam_n=1061  median=10.303  iqr_risk=5.469453345078956  downside=4.695017473209371  ret7=-0.032468163701759645  0.7s
+215/957 "MP5-SD | Phosphor (Field-Tested)"  steam_n=499  median=5.457  iqr_risk=8.703275251247208  downside=5.729882148796186  ret7=-0.037267080745341574  0.9s
+216/957 "M4A1-S | Black Lotus (Field-Tested)"  steam_n=6442  median=6.676  iqr_risk=5.416516624654901  downside=4.531268755251478  ret7=-0.04582843713278484  0.7s
+217/957 "MP7 | Bloodsport (Minimal Wear)"  steam_n=209  median=59.594  iqr_risk=4.178696885567616  downside=6.9532843548579635  ret7=-0.09422725492755513  0.9s
+218/957 "M4A4 | Tooth Fairy (Factory New)"  steam_n=295  median=26.101  iqr_risk=7.68703282048562  downside=6.830813294891858  ret7=-0.10787193420472907  0.8s
+219/957 "CZ75-Auto | Vendetta (Factory New)"  steam_n=6  median=8.769  iqr_risk=4.20033216626268  downside=2.777403716671161  ret7=-0.0819006940736785  0.9s
+220/957 "AK-47 | Cartel (Factory New)"  steam_n=39  median=102.041  iqr_risk=10.081511761682124  downside=6.4195040755880814  ret7=-0.024613957801993935  0.9s
+221/957 "AK-47 | Searing Rage (Field-Tested)"  steam_n=4538  median=6.495  iqr_risk=5.094345430479877  downside=4.263243759042081  ret7=-0.05520106840777561  0.8s
+222/957 "FAMAS | Yeti Camo (Factory New)"  steam_n=860  median=4.464  iqr_risk=5.569290539049048  downside=2.8917045605050604  ret7=-0.012855209742895668  0.8s
+223/957 "AK-47 | Ice Coaled (Battle-Scarred)"  steam_n=1553  median=5.107  iqr_risk=4.284740481059495  downside=2.746129126497225  ret7=-0.032418952618453956  0.8s
+224/957 "M4A1-S | Leaded Glass (Minimal Wear)"  steam_n=446  median=12.775  iqr_risk=7.535308368842944  downside=5.616620835248386  ret7=0.0051040136107030065  0.8s
+225/957 "AWP | Queen's Gambit (Well-Worn)"  steam_n=441  median=72.048  iqr_risk=9.685458099173424  downside=6.942722539052815  ret7=-0.09509426932953668  0.9s
+226/957 "AWP | Black Nile (Battle-Scarred)"  steam_n=251  median=4.482  iqr_risk=5.230056995610694  downside=5.939772454305248  ret7=-0.04577936578829833  1.0s
+227/957 "FAMAS | Commemoration (Field-Tested)"  steam_n=111  median=41.555  iqr_risk=7.868165225369432  downside=9.167528842212109  ret7=0.016257752081634713  0.8s
+228/957 "MP7 | Impire (Factory New)"  steam_n=60  median=30.7375  iqr_risk=12.30157230327311  downside=4.695492226673722  ret7=-0.2310208757637474  0.8s
+229/957 "Galil AR | Connexion (Factory New)"  steam_n=291  median=6.547  iqr_risk=5.151697438033095  downside=6.724970308330633  ret7=-0.09183222958057391  1.0s
+230/957 "Tec-9 | Fuel Injector (Field-Tested)"  steam_n=272  median=13.76  iqr_risk=4.494958001655031  downside=5.5502259196063015  ret7=0.007317430118542356  0.9s
+231/957 "Glock-18 | Water Elemental (Field-Tested)"  steam_n=398  median=23.008  iqr_risk=4.0251128729596815  downside=3.635445374712107  ret7=-0.0271111687637825  1.1s
+232/957 "P90 | Blind Spot (Factory New)"  steam_n=22  median=27.8575  iqr_risk=19.314977896898604  downside=7.587455184656619  ret7=-0.19995205705210795  0.9s
+233/957 "P90 | Cold Blooded (Factory New)"  steam_n=18  median=108.2815  iqr_risk=12.114428428931474  downside=18.69865073744964  ret7=-0.010508879112266944  0.9s
+234/957 "Galil AR | Chromatic Aberration (Field-Tested)"  steam_n=1069  median=5.056  iqr_risk=7.876813740005923  downside=6.475175204816905  ret7=-0.03907272387362137  0.8s
+235/957 "Five-SeveN | Monkey Business (Minimal Wear)"  steam_n=28  median=81.779  iqr_risk=4.97979293023592  downside=2.093705392366489  ret7=0.04145198246083348  0.8s
+236/957 "Five-SeveN | Anodized Gunmetal (Factory New)"  steam_n=25  median=31.221  iqr_risk=4.047791501881283  downside=3.915108550038134  ret7=-0.1332900620222126  0.9s
+237/957 "P2000 | Wicked Sick (Battle-Scarred)"  steam_n=1003  median=3.919  iqr_risk=10.071581062413669  downside=5.626020344091428  ret7=-0.06797583081571001  0.9s
+238/957 "SSG 08 | Big Iron (Field-Tested)"  steam_n=202  median=12.136  iqr_risk=4.489799274724742  downside=3.157661028377822  ret7=-0.05156136528685562  0.9s
+239/957 "SCAR-20 | Emerald (Factory New)"  steam_n=8  median=61.882  iqr_risk=6.747356214361695  downside=2.282123390316967  ret7=-0.13623107122826694  0.9s
+240/957 "AK-47 | Breakthrough (Minimal Wear)"  steam_n=999  median=10.6  iqr_risk=9.019611535311121  downside=8.017850922203491  ret7=-0.14291969524476744  0.8s
+241/957 "AK-47 | Point Disarray (Factory New)"  steam_n=36  median=102.671  iqr_risk=9.559375263992207  downside=11.838777163245334  ret7=-0.16527685251123736  0.8s
+242/957 "P90 | ScaraB Rush (Factory New)"  steam_n=12  median=53.6985  iqr_risk=20.723165414231378  downside=14.19523301481276  ret7=-0.03670153492217554  0.7s
+243/957 "AK-47 | Searing Rage (Battle-Scarred)"  steam_n=1746  median=5.252  iqr_risk=6.404547607768815  downside=4.604452865940302  ret7=-0.058130978660779986  0.8s
+244/957 "CZ75-Auto | Army Sheen (Minimal Wear)"  steam_n=31  median=4.786  iqr_risk=6.894655584459541  downside=10.553475879280072  ret7=0.06703847029364907  0.9s
+245/957 "P250 | Muertos (Field-Tested)"  steam_n=121  median=14.68  iqr_risk=9.832022397013729  downside=5.132648980135979  ret7=-0.0546740711357927  0.8s
+246/957 "P90 | Deathgaze (Well-Worn)"  steam_n=972  median=7.35  iqr_risk=8.55108777791036  downside=2.837105092205909  ret7=-0.08529222864482977  0.9s
+1/711 "M4A4 | Etch Lord (Factory New)"  steam_n=424  median=9.79  iqr_risk=5.158308487480786  downside=8.325509898793973  ret7=-0.08248829953198134  0.8s
+2/711 "Dual Berettas | Balance (Minimal Wear)"  steam_n=68  median=4.953  iqr_risk=6.042084168336671  downside=8.476953907815632  ret7=-0.07142203932327384  0.8s
+3/711 "Glock-18 | Vogue (Field-Tested)"  steam_n=3174  median=4.837  iqr_risk=5.041878459860476  downside=3.5807626612886523  ret7=-0.006758140487405306  1.0s
+4/711 "R8 Revolver | Fade (Field-Tested)"  steam_n=41  median=108.73  iqr_risk=3.0299630720329076  downside=11.361660356191283  ret7=0.01236294028915963  1.3s
+5/711 "AWP | Ice Coaled (Well-Worn)"  steam_n=751  median=7.896  iqr_risk=3.4123198701035236  downside=4.477877004262226  ret7=-0.004962463417737539  0.7s
+6/711 "AUG | Death by Puppy (Minimal Wear)"  steam_n=132  median=6.7235  iqr_risk=9.354799915817324  downside=7.916178106491076  ret7=-0.03206199665704301  1.0s
+7/711 "P90 | Shallow Grave (Minimal Wear)"  steam_n=56  median=55.3355  iqr_risk=5.1526236355596815  downside=6.266284666011329  ret7=0.00691459007038242  0.8s
+8/711 "XM1014 | XOXO (Field-Tested)"  steam_n=518  median=4.692  iqr_risk=7.970661183303997  downside=5.617620248871188  ret7=-0.03692824171212761  0.8s
+9/711 "Glock-18 | Mirror Mosaic (Well-Worn)"  steam_n=408  median=7.222  iqr_risk=10.98057818953008  downside=8.943520482196673  ret7=-0.1466002044989776  0.7s
+10/711 "G3SG1 | Dream Glade (Factory New)"  steam_n=433  median=7.88  iqr_risk=2.1766916817474242  downside=1.5186221035447183  ret7=-0.0025412960609911828  0.9s
+11/711 "Glock-18 | Shinobu (Field-Tested)"  steam_n=3505  median=6.56  iqr_risk=5.418331517132833  downside=3.2994309238406587  ret7=-0.04104868913857673  0.9s
+12/711 "Desert Eagle | Crimson Web (Field-Tested)"  steam_n=305  median=15.21  iqr_risk=3.6199270834007957  downside=4.178134086243635  ret7=0.022021234762092057  0.9s
+13/711 "Tec-9 | Bamboozle (Factory New)"  steam_n=82  median=18.7865  iqr_risk=11.432037344143477  downside=4.117785557807674  ret7=-0.14833800744793346  1.0s
+14/711 "MAC-10 | Nuclear Garden (Factory New)"  steam_n=18  median=68.671  iqr_risk=7.966618304354932  downside=5.116947090070921  ret7=0.18961086032488694  0.9s
+15/711 "AK-47 | Aquamarine Revenge (Battle-Scarred)"  steam_n=64  median=42.4255  iqr_risk=3.84483014105916  downside=5.0871641420056175  ret7=-0.09014748331228584  0.9s
+16/711 "AK-47 | The Oligarch (Well-Worn)"  steam_n=123  median=56.78  iqr_risk=6.907453895138394  downside=8.663258715057909  ret7=-0.07886847438323819  0.8s
+17/711 "USP-S | Cortex (Battle-Scarred)"  steam_n=689  median=4.198  iqr_risk=5.975336856639537  downside=5.213540922725333  ret7=-0.09019607843137256  0.9s
+18/711 "MAC-10 | Fade (Factory New)"  steam_n=49  median=86.176  iqr_risk=3.1786431964390003  downside=1.818666740241057  ret7=-0.039427342234903295  0.8s
+19/711 "AWP | Ice Coaled (Battle-Scarred)"  steam_n=911  median=5.803  iqr_risk=2.14798776506169  downside=2.1995394714231726  ret7=0.009628610729023324  0.7s
+20/711 "USP-S | 27 (Factory New)"  steam_n=131  median=11.666  iqr_risk=8.749575263336725  downside=9.802922188243288  ret7=-0.10670443814919728  0.9s
+21/711 "AK-47 | Crossfade (Factory New)"  steam_n=405  median=10.017  iqr_risk=5.857284440039654  downside=4.707631318136766  ret7=-0.10334288443170958  1.0s
+22/711 "AWP | Sun in Leo (Factory New)"  steam_n=45  median=96.09  iqr_risk=8.99561749304813  downside=6.017299424218155  ret7=-0.08919020608000305  0.9s
+23/711 "FAMAS | Bad Trip (Field-Tested)"  steam_n=761  median=60.53  iqr_risk=6.704440950487997  downside=6.711033321137452  ret7=0.014624281321032218  0.9s
+24/711 "M4A4 | The Battlestar (Minimal Wear)"  steam_n=43  median=52.603  iqr_risk=5.45708955223881  downside=9.840085287846492  ret7=-0.11940753731485543  1.0s
+25/711 "Desert Eagle | Heat Treated (Minimal Wear)"  steam_n=963  median=4.1  iqr_risk=5.072938663559796  downside=5.461297604310776  ret7=-0.044262295081966996  1.1s
+26/711 "USP-S | Ticket to Hell (Factory New)"  steam_n=1391  median=4.692  iqr_risk=4.33751415568044  downside=3.653768081878598  ret7=-0.03560703560703549  1.2s
+27/711 "AK-47 | Slate (Field-Tested)"  steam_n=5453  median=6.145  iqr_risk=5.018107410234329  downside=3.9300388131932373  ret7=-0.05380452085323151  0.8s
+28/711 "AK-47 | Midnight Laminate (Minimal Wear)"  steam_n=1741  median=15.104  iqr_risk=4.714828897338397  downside=4.027111919325508  ret7=-0.06011822412275181  0.9s
+29/711 "Glock-18 | Shinobu (Well-Worn)"  steam_n=1515  median=5.477  iqr_risk=4.306333594876189  downside=4.543546886119383  ret7=-0.06037870668095746  0.9s
+30/711 "P250 | Red Tide (Factory New)"  steam_n=427  median=3.12  iqr_risk=6.863846249844009  downside=5.335080494196938  ret7=-0.17402945113788482  0.8s
+31/711 "AK-47 | Elite Build (Factory New)"  steam_n=217  median=14.307  iqr_risk=5.219705949632958  downside=5.167023658507844  ret7=-0.093019399767866  1.0s
+32/711 "MAC-10 | Saibā Oni (Factory New)"  steam_n=146  median=11.1615  iqr_risk=8.262546911495829  downside=6.276736272099792  ret7=-0.08325693807817325  0.8s
+33/711 "AK-47 | Emerald Pinstripe (Field-Tested)"  steam_n=941  median=3.618  iqr_risk=6.6374728028863395  downside=6.196810708088906  ret7=0.028563505268996092  1.1s
+34/711 "AK-47 | Inheritance (Field-Tested)"  steam_n=1244  median=56.1485  iqr_risk=3.9680559911052895  downside=3.724841063945033  ret7=-0.048354565670844174  0.8s
+35/711 "AK-47 | Wintergreen (Factory New)"  steam_n=855  median=9.401  iqr_risk=6.50283634351152  downside=6.3644781234368075  ret7=-0.06569270522758908  0.7s
+36/711 "USP-S | Royal Blue (Minimal Wear)"  steam_n=31  median=31.815  iqr_risk=15.614206279138209  downside=8.552886328082657  ret7=-0.13594075511543613  0.9s
+37/711 "Nova | Rising Skull (Factory New)"  steam_n=15  median=13.734  iqr_risk=3.687438754400603  downside=6.49802199397524  ret7=-0.026727785613540167  0.9s
+38/711 "MAG-7 | BI83 Spectrum (Factory New)"  steam_n=19  median=13.495  iqr_risk=6.851229396665219  downside=8.017004876398378  ret7=-0.07591697469434178  0.9s
+39/711 "AWP | Duality (Battle-Scarred)"  steam_n=1542  median=4.003  iqr_risk=5.016639348333592  downside=3.476878756270802  ret7=-0.03420473979965799  0.7s
+40/711 "SG 553 | Candy Apple (Factory New)"  steam_n=21  median=21.85  iqr_risk=15.569325430622419  downside=2.5289833660681724  ret7=-0.14923540131526813  0.8s
+41/711 "Galil AR | Kami (Factory New)"  steam_n=86  median=17.768  iqr_risk=17.975394035604943  downside=11.684998299126883  ret7=-0.16914208558371413  1.0s
+42/711 "P250 | Wingshot (Factory New)"  steam_n=34  median=22.7105  iqr_risk=15.027531948262343  downside=6.76924004929038  ret7=-0.13963030989878467  1.0s
+43/711 "Desert Eagle | Mecha Industries (Field-Tested)"  steam_n=1806  median=6.986  iqr_risk=5.823239247501801  downside=2.784412941159843  ret7=-0.07353140686474025  0.8s
+44/711 "M4A4 | Tooth Fairy (Field-Tested)"  steam_n=3292  median=4.885  iqr_risk=4.647639326808901  downside=3.9515171368903736  ret7=-0.020866773675762507  0.8s
+45/711 "MP9 | Setting Sun (Minimal Wear)"  steam_n=5  median=40.541  iqr_risk=6.54749778512648  downside=3.6868761044756946  ret7=0.10277251683501687  1.0s
+46/711 "P90 | Shallow Grave (Field-Tested)"  steam_n=167  median=41.035  iqr_risk=8.45403609702711  downside=4.7046232669407555  ret7=-0.024725740440268318  0.9s
+47/711 "AUG | Navy Murano (Minimal Wear)"  steam_n=45  median=6.427  iqr_risk=6.2028421978428945  downside=5.533182119767317  ret7=0.06277190801740207  0.8s
+48/711 "UMP-45 | Wild Child (Factory New)"  steam_n=152  median=31.323  iqr_risk=12.47016474153756  downside=8.397595809737156  ret7=-0.11256248742513109  0.9s
+49/711 "USP-S | Printstream (Field-Tested)"  steam_n=821  median=46.12  iqr_risk=4.189333644936662  downside=4.091957604635961  ret7=-0.0357801014597785  0.8s
+50/711 "AK-47 | The Oligarch (Field-Tested)"  steam_n=190  median=95.826  iqr_risk=11.279059425089317  downside=6.020697115931563  ret7=-0.1407408106806659  0.8s
+51/711 "SSG 08 | Big Iron (Factory New)"  steam_n=11  median=67.62  iqr_risk=9.026138223127807  downside=11.667058413142332  ret7=-0.07304481390354556  0.9s
+52/711 "P250 | Forest Night (Factory New)"  steam_n=14  median=13.8795  iqr_risk=3.195982596903609  downside=2.306757825743028  ret7=-0.028250175685172296  0.9s
+53/711 "FAMAS | Night Borre (Minimal Wear)"  steam_n=19  median=12.555  iqr_risk=5.389348111966945  downside=5.485628405034749  ret7=-0.03438821870593767  1.0s
+54/711 "M4A1-S | Decimator (Factory New)"  steam_n=54  median=82.059  iqr_risk=3.249242650897499  downside=2.932494485674858  ret7=-0.05429333952193083  0.8s
+55/711 "AK-47 | Crossfade (Minimal Wear)"  steam_n=1077  median=4.518  iqr_risk=5.198769993142036  downside=5.442116673672092  ret7=-0.025161433979069114  0.9s
+56/711 "M4A1-S | Flashback (Minimal Wear)"  steam_n=288  median=6.837  iqr_risk=2.779321845469711  downside=2.0464585588484816  ret7=-0.0021561017680034045  0.9s
+57/711 "SCAR-20 | Bloodsport (Field-Tested)"  steam_n=104  median=14.204  iqr_risk=8.523429077330588  downside=10.132727882851043  ret7=-0.04304889074344531  1.0s
+58/711 "P90 | Elite Build (Factory New)"  steam_n=102  median=8.136  iqr_risk=15.26442723779412  downside=2.757936278978513  ret7=-0.1856671003903514  0.9s
+59/711 "AK-47 | Searing Rage (Factory New)"  steam_n=203  median=47.15  iqr_risk=8.520951896877834  downside=4.270370709839761  ret7=-0.10901495755289048  1.0s
+60/711 "P2000 | Wicked Sick (Minimal Wear)"  steam_n=990  median=8.119  iqr_risk=7.49990853770075  downside=3.329227692345211  ret7=-0.0825859056493885  0.9s
+61/711 "Tec-9 | Fuel Injector (Battle-Scarred)"  steam_n=91  median=12.532  iqr_risk=6.275748970041193  downside=5.423783048678059  ret7=-0.03209739900387376  0.8s
+62/711 "AK-47 | Slate (Minimal Wear)"  steam_n=2337  median=9.231  iqr_risk=3.95269722987202  downside=3.974296668286628  ret7=-0.025207402680280766  1.1s
+63/711 "P2000 | Wicked Sick (Factory New)"  steam_n=201  median=33.631  iqr_risk=2.543550831140128  downside=2.33562338357772  ret7=-0.03952057484472504  0.7s
+64/711 "FAMAS | Mecha Industries (Minimal Wear)"  steam_n=128  median=50.532  iqr_risk=6.8808207580058784  downside=6.217241894516657  ret7=0.02782608695652189  0.9s
+65/711 "Tec-9 | Toxic (Minimal Wear)"  steam_n=22  median=34.4325  iqr_risk=5.237263472660172  downside=3.750989848513872  ret7=-0.03250259868671235  0.9s
+66/711 "AWP | Fever Dream (Field-Tested)"  steam_n=385  median=16.034  iqr_risk=2.405663619492736  downside=2.9030423834190353  ret7=-0.02960546562442301  1.0s
+67/711 "MP9 | Hypnotic (Factory New)"  steam_n=84  median=31.478  iqr_risk=8.92979334884356  downside=2.7122186695198875  ret7=-0.08391346873022265  1.1s
+68/711 "SSG 08 | Parallax (Factory New)"  steam_n=20  median=34.1995  iqr_risk=5.757819644088289  downside=4.67981503437096  ret7=-0.06723862729449348  0.7s
+69/711 "Dual Berettas | Royal Consorts (Field-Tested)"  steam_n=266  median=4.896  iqr_risk=6.360343104596941  downside=8.327781479013979  ret7=0.0015287403179780057  0.9s
+70/711 "Sawed-Off | Wasteland Princess (Minimal Wear)"  steam_n=58  median=53.2285  iqr_risk=7.557900919863105  downside=6.889936479368021  ret7=0.02865713315473717  0.9s
+71/711 "Glock-18 | AXIA (Field-Tested)"  steam_n=584  median=46.163  iqr_risk=5.328835553142947  downside=6.2641498053762135  ret7=0.06521036346002873  0.8s
+72/711 "Nova | Red Quartz (Field-Tested)"  steam_n=16  median=11.123  iqr_risk=3.292627202924388  downside=4.314013600566231  ret7=0.04382662419152439  1.0s
+73/711 "AWP | Printstream (Well-Worn)"  steam_n=484  median=55.547  iqr_risk=8.87228410025501  downside=7.024041550364157  ret7=-0.07654817014586424  0.9s
+74/711 "Desert Eagle | Printstream (Field-Tested)"  steam_n=1073  median=46.036  iqr_risk=5.305758123291169  downside=5.247262627444362  ret7=0.017677034656291557  0.9s
+75/711 "USP-S | Cyrex (Minimal Wear)"  steam_n=655  median=5.085  iqr_risk=6.372529913863661  downside=4.462719725610946  ret7=0.08276573787409713  0.8s
+76/711 "MP9 | Starlight Protector (Battle-Scarred)"  steam_n=255  median=83.919  iqr_risk=6.955200923360809  downside=6.962399682294769  ret7=0.00983855872718764  1.0s
+77/711 "Glock-18 | Blue Fissure (Minimal Wear)"  steam_n=60  median=10.303  iqr_risk=17.96469268688088  downside=8.840966285568872  ret7=-0.16518754186202267  0.9s
+78/711 "AK-47 | Legion of Anubis (Minimal Wear)"  steam_n=523  median=50.53  iqr_risk=4.390703868205126  downside=6.520369676333859  ret7=-0.029987348778366507  0.8s
+79/711 "USP-S | Jawbreaker (Field-Tested)"  steam_n=4038  median=5.333  iqr_risk=5.260114528734775  downside=3.786536345153052  ret7=-0.03384670487106023  0.8s
+80/711 "MP9 | Airlock (Field-Tested)"  steam_n=185  median=13.559  iqr_risk=7.540719143362466  downside=5.760251011965986  ret7=0.01308087013080872  0.9s
+81/711 "Desert Eagle | Conspiracy (Minimal Wear)"  steam_n=263  median=22.497  iqr_risk=4.312222706297619  downside=3.694285638075591  ret7=-0.0124295290096329  0.9s
+82/711 "MP7 | Olive Plaid (Factory New)"  steam_n=4  median=13.2215  iqr_risk=21.135821821625687  downside=4.557003363704655  ret7=-0.03963617281791143  0.8s
+83/711 "USP-S | Guardian (Factory New)"  steam_n=191  median=12.008  iqr_risk=3.3969349353141354  downside=2.182273352383609  ret7=-0.030618839877201487  0.9s
+84/711 "AK-47 | Nightwish (Well-Worn)"  steam_n=459  median=81.586  iqr_risk=5.038579689083375  downside=4.480561889859488  ret7=0.010757469092346206  0.8s
+85/711 "MP7 | Armor Core (Factory New)"  steam_n=317  median=4.564  iqr_risk=26.53590397724897  downside=11.270963155033243  ret7=-0.2877008118846087  1.1s
+86/711 "P250 | Crimson Kimono (Factory New)"  steam_n=20  median=51.2125  iqr_risk=4.6948904774296345  downside=2.3984371412389507  ret7=-0.08390619753653672  0.9s
+87/711 "AK-47 | Redline (Field-Tested)"  steam_n=610  median=39.003  iqr_risk=4.236117506216055  downside=3.392378472956794  ret7=0.006835785205593359  0.9s
+88/711 "MP9 | Capillary (Factory New)"  steam_n=156  median=4.538  iqr_risk=27.577051122321848  downside=8.905046874042604  ret7=-0.23173093854551852  0.9s
+89/711 "AWP | Exoskeleton (Battle-Scarred)"  steam_n=371  median=5.467  iqr_risk=1.9767548274915285  downside=2.8004026722796667  ret7=-0.012127697520955993  0.9s
+90/711 "AK-47 | Phantom Disruptor (Factory New)"  steam_n=142  median=42.9255  iqr_risk=2.2478833115456123  downside=4.841793058854944  ret7=-0.03732356134636261  0.8s
+91/711 "USP-S | Jawbreaker (Battle-Scarred)"  steam_n=1570  median=4.186  iqr_risk=5.112910097997427  downside=4.308100175164522  ret7=-0.08998417363780231  0.8s
+92/711 "Five-SeveN | Copper Galaxy (Factory New)"  steam_n=47  median=42.73  iqr_risk=15.839839347554355  downside=6.2462290162542065  ret7=-0.15458951562546452  0.9s
+93/711 "Galil AR | Rocket Pop (Factory New)"  steam_n=64  median=19.452  iqr_risk=8.694111991093342  downside=7.183016624073294  ret7=-0.1391873369589246  0.9s
+94/711 "AK-47 | Phantom Disruptor (Field-Tested)"  steam_n=2610  median=7.363  iqr_risk=6.913318664602172  downside=6.030478363621559  ret7=-0.028221512247071368  0.8s
+95/711 "Glock-18 | Gold Toof (Minimal Wear)"  steam_n=59  median=57.103  iqr_risk=12.050312328843102  downside=5.958859947725654  ret7=0.14351374337260014  0.8s
+96/711 "Galil AR | Signal (Factory New)"  steam_n=415  median=6.718  iqr_risk=8.350842752634085  downside=9.131481680290781  ret7=-0.0977645521846422  1.0s
+97/711 "SG 553 | Triarch (Factory New)"  steam_n=29  median=13.62  iqr_risk=9.32047649380221  downside=12.779229907527403  ret7=-0.1781004489337823  1.0s
+98/711 "SG 553 | Integrale (Field-Tested)"  steam_n=108  median=9.7  iqr_risk=3.6425813342096545  downside=3.8068928688793884  ret7=-0.07718056618209646  0.8s
+99/711 "AK-47 | Inheritance (Battle-Scarred)"  steam_n=378  median=49.0085  iqr_risk=4.570930833635202  downside=2.837803185405578  ret7=-0.03229449188856737  0.8s
+100/711 "P250 | Visions (Factory New)"  steam_n=260  median=25.102  iqr_risk=5.70583934645095  downside=7.422359261260682  ret7=-0.08184073815616033  0.9s
+101/711 "Desert Eagle | Printstream (Battle-Scarred)"  steam_n=291  median=42.293  iqr_risk=6.476638052167341  downside=5.7221126710670855  ret7=-0.03323298093304394  0.9s
+102/711 "Galil AR | Cerberus (Field-Tested)"  steam_n=39  median=48.126  iqr_risk=10.11032599935114  downside=9.469631274064307  ret7=0.2551022635496474  0.8s
+103/711 "SSG 08 | Threat Detected (Factory New)"  steam_n=9  median=50.485  iqr_risk=2.7668524640268917  downside=11.272912996967726  ret7=-0.04153601944030727  0.9s
+104/711 "P250 | Kintsugi (Well-Worn)"  steam_n=884  median=7.342  iqr_risk=8.119115977832672  downside=3.0847299192094524  ret7=-0.08327957682879639  0.8s
+105/711 "M4A1-S | Solitude (Factory New)"  steam_n=314  median=35.511  iqr_risk=4.674926910761506  downside=5.638312682723113  ret7=-0.08383324160704464  0.8s
+106/711 "M4A1-S | Electrum (Minimal Wear)"  steam_n=3000  median=6.191  iqr_risk=14.785905795377015  downside=8.868370536068412  ret7=-0.20344001127872546  0.9s
+107/711 "P2000 | Wicked Sick (Well-Worn)"  steam_n=1209  median=4.043  iqr_risk=5.746134306641339  downside=4.858319563984317  ret7=-0.02429998766498076  2.7s
+108/711 "Glock-18 | Coral Bloom (Factory New)"  steam_n=472  median=4.692  iqr_risk=6.203580474820755  downside=5.409350448632632  ret7=-0.07132429614181435  0.8s
+109/711 "Glock-18 | Water Elemental (Factory New)"  steam_n=82  median=44.594  iqr_risk=4.590630270417848  downside=3.531592783573248  ret7=-0.0409446143391099  0.9s
+110/711 "M4A1-S | Vaporwave (Field-Tested)"  steam_n=196  median=68.3745  iqr_risk=9.018912888939093  downside=7.419359976139902  ret7=-0.051879469884418494  0.7s
+111/711 "UMP-45 | Crimson Foil (Field-Tested)"  steam_n=1589  median=5.368  iqr_risk=5.162967777880963  downside=4.791531247098152  ret7=0.03147325738559559  0.9s
+112/711 "USP-S | The Traitor (Well-Worn)"  steam_n=105  median=41.092  iqr_risk=5.074889437290782  downside=5.35392283822416  ret7=-0.07316327010872126  0.9s
+113/711 "R8 Revolver | Grip (Factory New)"  steam_n=99  median=3.214  iqr_risk=24.090029892737828  downside=7.91864486255202  ret7=-0.2083439979523931  0.8s
+114/711 "AWP | Hyper Beast (Field-Tested)"  steam_n=142  median=45.346  iqr_risk=6.711483334765542  downside=6.130673417810759  ret7=0.01595859147591505  0.8s
+115/711 "AK-47 | Rat Rod (Field-Tested)"  steam_n=691  median=5.445  iqr_risk=6.351331789229878  downside=2.985668789808918  ret7=0.0019844849359553773  0.8s
+116/711 "AWP | Chrome Cannon (Battle-Scarred)"  steam_n=421  median=32.839  iqr_risk=6.504484543122943  downside=4.926168181749192  ret7=-0.06180277305352988  0.8s
+117/711 "M4A4 | Desert-Strike (Field-Tested)"  steam_n=58  median=41.4625  iqr_risk=4.315026128798169  downside=6.0534556735775285  ret7=-0.03579546814059775  1.0s
+118/711 "AK-47 | The Empress (Battle-Scarred)"  steam_n=33  median=119.616  iqr_risk=7.960258257583256  downside=8.820110408639449  ret7=-0.09444395150556972  0.9s
+119/711 "PP-Bizon | Lumen (Factory New)"  steam_n=8  median=9.9955  iqr_risk=25.808308548402564  downside=45.20344963595468  ret7=0.03275877628372892  0.9s
+120/711 "MP7 | Abyssal Apparition (Battle-Scarred)"  steam_n=807  median=7.42  iqr_risk=5.122482454489234  downside=3.5763263330554733  ret7=-0.043752463539613706  0.8s
+121/711 "AK-47 | Head Shot (Well-Worn)"  steam_n=412  median=40.118  iqr_risk=4.796961173891723  downside=4.768434644219123  ret7=-0.043902677708595794  0.9s
+122/711 "AK-47 | Slate (Factory New)"  steam_n=392  median=22.9335  iqr_risk=6.31872844864558  downside=3.9135544080561226  ret7=-0.07395631168187644  0.8s
+123/711 "M4A1-S | Electrum (Field-Tested)"  steam_n=3236  median=3.85  iqr_risk=17.31056124286229  downside=11.703276917536913  ret7=-0.12071093557146395  1.1s
+124/711 "MAC-10 | Stalker (Minimal Wear)"  steam_n=28  median=74.313  iqr_risk=5.087069054767567  downside=11.33837181212687  ret7=0.024827226137971836  0.9s
+125/711 "USP-S | Cortex (Well-Worn)"  steam_n=966  median=4.313  iqr_risk=4.046991351001337  downside=3.561352388881178  ret7=-0.04819277108433728  0.9s
+126/711 "USP-S | Overgrowth (Field-Tested)"  steam_n=25  median=26.29  iqr_risk=8.439069325171598  downside=6.724511930585675  ret7=0.06735910752067698  1.2s
+127/711 "AK-47 | Slate (Battle-Scarred)"  steam_n=2298  median=5.043  iqr_risk=3.8879631833690516  downside=3.3761802745378153  ret7=-0.022055927530523878  0.8s
+128/711 "Dual Berettas | Melondrama (Factory New)"  steam_n=152  median=32.306  iqr_risk=8.208017619304846  downside=7.162915899452973  ret7=-0.09717986654186417  0.9s
+129/711 "M4A1-S | Golden Coil (Battle-Scarred)"  steam_n=27  median=59.421  iqr_risk=10.1757451686588  downside=15.341085153182263  ret7=-0.1008950793127229  1.0s
+130/711 "M4A1-S | Decimator (Field-Tested)"  steam_n=707  median=16.187  iqr_risk=4.572586724668478  downside=4.906261972144299  ret7=0.0177646188008882  0.8s
+131/711 "SG 553 | Tiger Moth (Factory New)"  steam_n=28  median=15.88  iqr_risk=3.1462796678856124  downside=8.23584971887705  ret7=-0.06621996861040702  1.0s
+132/711 "Galil AR | Chromatic Aberration (Minimal Wear)"  steam_n=344  median=9.265  iqr_risk=5.702104982680523  downside=4.2419397815081235  ret7=-0.08004990123713485  0.7s
+133/711 "MAC-10 | Cat Fight (Factory New)"  steam_n=267  median=6.075  iqr_risk=4.135758403426559  downside=1.6915484651913462  ret7=-0.05549407114624505  0.8s
+134/711 "AK-47 | Ice Coaled (Field-Tested)"  steam_n=6850  median=5.989  iqr_risk=4.8529926788186115  downside=4.019145139502688  ret7=-0.005469008949287257  0.8s
+135/711 "Five-SeveN | Heat Treated (Minimal Wear)"  steam_n=532  median=11.179  iqr_risk=4.039664059025148  downside=1.4128358755657955  ret7=-0.012092113452476183  0.8s
+136/711 "Galil AR | Rainbow Spoon (Factory New)"  steam_n=182  median=98.0745  iqr_risk=12.69391997784632  downside=9.077592071228903  ret7=0.0338220714844768  0.8s
+137/711 "USP-S | Cyrex (Field-Tested)"  steam_n=903  median=4.743  iqr_risk=6.48884004058166  downside=4.954345620561378  ret7=-0.010970101097010132  0.8s
+138/711 "SG 553 | Barricade (Minimal Wear)"  steam_n=11  median=13.863  iqr_risk=8.796733829811371  downside=15.899897932181602  ret7=0.09340315773018615  0.9s
+139/711 "Desert Eagle | Mecha Industries (Minimal Wear)"  steam_n=785  median=10.07  iqr_risk=6.757820184930154  downside=4.151091874877047  ret7=0.019468326909773737  1.1s
+140/711 "AK-47 | Slate (Well-Worn)"  steam_n=3394  median=5.314  iqr_risk=4.378876151099428  downside=3.8150723548205283  ret7=-0.01835549728413577  1.1s
+141/711 "Galil AR | Eco (Field-Tested)"  steam_n=374  median=15.487  iqr_risk=4.896517551995333  downside=3.74798307690353  ret7=0.0023486430062631403  0.8s
+142/711 "Glock-18 | Sacrifice (Factory New)"  steam_n=135  median=19.777  iqr_risk=22.52763406972606  downside=23.319389497248203  ret7=0.09495661880359241  0.9s
+143/711 "Glock-18 | Vogue (Minimal Wear)"  steam_n=1017  median=7.873  iqr_risk=8.051550176602388  downside=6.405793065032728  ret7=0.015647226173542084  0.9s
+144/711 "FAMAS | Bad Trip (Well-Worn)"  steam_n=437  median=55.463  iqr_risk=9.54805279511545  downside=8.527661270597617  ret7=0.02960741548527812  0.9s
+145/711 "AK-47 | Wasteland Rebel (Field-Tested)"  steam_n=26  median=98.301  iqr_risk=3.004353354563105  downside=1.8260101500347201  ret7=0.005853818286018386  0.9s
+146/711 "P90 | Nostalgia (Minimal Wear)"  steam_n=98  median=7.631  iqr_risk=8.631233928024198  downside=10.579190705234973  ret7=-0.004759731368585762  0.9s
+147/711 "FAMAS | Valence (Factory New)"  steam_n=40  median=45.0025  iqr_risk=12.39240163545076  downside=10.765829556199755  ret7=-0.15156865805595654  0.8s
+148/711 "XM1014 | XOXO (Well-Worn)"  steam_n=100  median=4.173  iqr_risk=5.843782904183024  downside=4.994256724418491  ret7=-0.0413533834586467  0.7s
+149/711 "Tec-9 | Whiteout (Minimal Wear)"  steam_n=279  median=53.364  iqr_risk=13.806746605701495  downside=17.22390705920776  ret7=0.5212019866723239  0.8s
+150/711 "AK-47 | Head Shot (Minimal Wear)"  steam_n=336  median=73.112  iqr_risk=5.649157446993688  downside=5.281594377903246  ret7=-0.03126676524083061  0.7s
+151/711 "AUG | Random Access (Factory New)"  steam_n=96  median=16.452  iqr_risk=7.3191541227375145  downside=4.137973063562692  ret7=-0.07581371487202859  0.8s
+152/711 "P250 | Contamination (Factory New)"  steam_n=12  median=22.152  iqr_risk=16.69308092394446  downside=8.892702660105432  ret7=0.10126937524286528  0.9s
+153/711 "AK-47 | Point Disarray (Field-Tested)"  steam_n=825  median=17.228  iqr_risk=3.5239745811669727  downside=2.4147891392258973  ret7=-0.02081565699417376  0.9s
+154/711 "USP-S | Blueprint (Field-Tested)"  steam_n=205  median=9.948  iqr_risk=7.4726609963547945  downside=7.958687727825027  ret7=0.01801668394293876  1.0s
+155/711 "M4A1-S | Golden Coil (Field-Tested)"  steam_n=87  median=82.469  iqr_risk=7.687890116107549  downside=7.533938052506385  ret7=0.08284346019358435  0.8s
+156/711 "AK-47 | Aquamarine Revenge (Field-Tested)"  steam_n=188  median=49.7795  iqr_risk=5.82273778904739  downside=6.772198153165341  ret7=-0.08711836330575673  0.9s
+157/711 "Galil AR | Tuxedo (Factory New)"  steam_n=471  median=4.919  iqr_risk=10.862645233168875  downside=7.540187808371789  ret7=-0.11901583063131804  1.0s
+158/711 "UMP-45 | Crimson Foil (Factory New)"  steam_n=446  median=17.3805  iqr_risk=14.803973051182634  downside=7.228807972917112  ret7=0.1264595045406809  0.8s
+159/711 "USP-S | The Traitor (Field-Tested)"  steam_n=229  median=46.242  iqr_risk=6.294776752264456  downside=6.266866759843097  ret7=-0.02159115081897467  0.9s
+160/711 "MAC-10 | Heat (Factory New)"  steam_n=18  median=29.507  iqr_risk=3.5991155664376424  downside=3.869396835301385  ret7=-0.07515647411657334  0.9s
+161/711 "USP-S | Black Lotus (Minimal Wear)"  steam_n=535  median=3.708  iqr_risk=9.264729577313489  downside=7.444008808206673  ret7=0.006030414263240802  0.9s
+162/711 "AWP | Printstream (Field-Tested)"  steam_n=863  median=63.314  iqr_risk=5.123281418464279  downside=4.9438485208590714  ret7=-0.08291834163316747  0.8s
+163/711 "AWP | Green Energy (Factory New)"  steam_n=105  median=94.97  iqr_risk=6.89380350440297  downside=4.150868807388898  ret7=-0.042214830131758974  0.8s
+164/711 "Five-SeveN | Heat Treated (Well-Worn)"  steam_n=553  median=5.115  iqr_risk=5.288774767178932  downside=3.679147664124481  ret7=-0.02851524090462132  0.8s
+165/711 "AK-47 | Rat Rod (Minimal Wear)"  steam_n=196  median=11.752  iqr_risk=6.126759359020402  downside=4.84839156533785  ret7=-0.044795113260371444  0.8s
+166/711 "P250 | Kintsugi (Field-Tested)"  steam_n=1180  median=8.89  iqr_risk=8.38119406972085  downside=8.915453452651263  ret7=-0.06200787401574803  0.8s
+167/711 "AK-47 | Ice Coaled (Minimal Wear)"  steam_n=2295  median=10.512  iqr_risk=5.0498806478302685  downside=4.602904394632481  ret7=-0.04975170130586726  0.9s
+168/711 "FAMAS | Rapid Eye Movement (Factory New)"  steam_n=163  median=34.469  iqr_risk=3.8532308076735218  downside=2.98433719886874  ret7=-0.09234997465111927  0.7s
+169/711 "P250 | Kintsugi (Minimal Wear)"  steam_n=871  median=15.649  iqr_risk=3.6793441997903007  downside=4.543577034283353  ret7=-0.03897091439072309  0.8s
+170/711 "PP-Bizon | High Roller (Minimal Wear)"  steam_n=75  median=13.675  iqr_risk=7.19932138443426  downside=7.129851040958263  ret7=-0.00793377026560882  0.9s
+171/711 "Sawed-Off | Kiss♥Love (Battle-Scarred)"  steam_n=660  median=4.068  iqr_risk=9.502583821116307  downside=6.49016678504077  ret7=-0.03354037267080756  0.8s
+172/711 "USP-S | Cortex (Field-Tested)"  steam_n=2121  median=4.914  iqr_risk=4.902457306079452  downside=3.9705852561635178  ret7=-0.03614217252396168  0.9s
+173/711 "AUG | Fleet Flock (Field-Tested)"  steam_n=115  median=14.884  iqr_risk=7.456287264688147  downside=6.567964091913978  ret7=-0.046326935804103186  0.8s
+174/711 "MP7 | Fade (Field-Tested)"  steam_n=275  median=9.649  iqr_risk=5.149410534814161  downside=3.6475422562181006  ret7=-0.05678766782695177  0.8s
+175/711 "AWP | Black Nile (Minimal Wear)"  steam_n=600  median=7.112  iqr_risk=7.852168363807883  downside=4.1979967259510005  ret7=-0.0788177339901478  0.8s
+176/711 "Five-SeveN | Heat Treated (Factory New)"  steam_n=124  median=50.16  iqr_risk=8.841336644244183  downside=10.821665481422754  ret7=0.2265445955316323  0.8s
+177/711 "M4A1-S | Player Two (Battle-Scarred)"  steam_n=71  median=68.916  iqr_risk=11.38877975144233  downside=12.933033591029  ret7=-0.024057024057023924  0.9s
+178/711 "FAMAS | ZX Spectron (Factory New)"  steam_n=35  median=45.263  iqr_risk=9.92699341591637  downside=9.025745823850873  ret7=-0.12571468484019988  0.8s
+179/711 "FAMAS | Rapid Eye Movement (Well-Worn)"  steam_n=1291  median=7.528  iqr_risk=6.4096658287158315  downside=2.842890798773336  ret7=-0.056596558317399626  0.8s
+180/711 "Glock-18 | Shinobu (Minimal Wear)"  steam_n=1270  median=11.453  iqr_risk=5.376064824433828  downside=3.41090103192742  ret7=-0.05193594848767269  0.8s
+181/711 "Glock-18 | Block-18 (Factory New)"  steam_n=2689  median=4.081  iqr_risk=0.41732128829537385  downside=0.7364493322859448  ret7=-0.010503175378602903  0.8s
+182/711 "UMP-45 | Scaffold (Factory New)"  steam_n=15  median=16.786  iqr_risk=11.27608417136137  downside=9.886683397977041  ret7=0.017888545267115585  0.9s
+183/711 "SSG 08 | Blood in the Water (Minimal Wear)"  steam_n=20  median=117.7965  iqr_risk=7.649339599089017  downside=5.924416916181643  ret7=-0.024193383683455805  0.8s
+184/711 "M4A1-S | Control Panel (Minimal Wear)"  steam_n=56  median=43.9645  iqr_risk=5.223194209357146  downside=2.966054774274757  ret7=-0.05074828156269029  0.8s
+185/711 "AWP | Mortis (Factory New)"  steam_n=192  median=24.961  iqr_risk=4.68085106382978  downside=2.2213546749951165  ret7=-0.11001029111649896  0.8s
+186/711 "USP-S | Black Lotus (Factory New)"  steam_n=52  median=46.173  iqr_risk=6.316690429766394  downside=5.3647108143574265  ret7=0.0005274261603376296  0.9s
+187/711 "SG 553 | Integrale (Battle-Scarred)"  steam_n=268  median=5.003  iqr_risk=4.768433574611375  downside=5.47613766961712  ret7=-0.0877889098303739  0.8s
+188/711 "MP7 | Abyssal Apparition (Well-Worn)"  steam_n=1261  median=7.664  iqr_risk=7.218088451058479  downside=4.899392160972537  ret7=-0.05128859402908903  1.0s
+189/711 "UMP-45 | Primal Saber (Factory New)"  steam_n=9  median=36.151  iqr_risk=13.010697445470473  downside=8.354605388801174  ret7=0.07284276522026079  0.8s
+190/711 "XM1014 | Incinegator (Field-Tested)"  steam_n=505  median=6.958  iqr_risk=6.9855841640966805  downside=5.241339740371515  ret7=-0.08013937282229966  0.7s
+191/711 "XM1014 | XOXO (Minimal Wear)"  steam_n=151  median=7.983  iqr_risk=4.419357661678486  downside=4.0630586705671945  ret7=-0.03275840675021702  0.8s
+192/711 "Nova | Graphite (Factory New)"  steam_n=22  median=19.7725  iqr_risk=7.373260412619666  downside=5.676758016795679  ret7=-0.07350418852071872  0.9s
+193/711 "AWP | Neo-Noir (Field-Tested)"  steam_n=264  median=51.2865  iqr_risk=4.934191295400608  downside=4.760559208346802  ret7=-0.034656348028626716  1.2s
+194/711 "Glock-18 | Snack Attack (Field-Tested)"  steam_n=80  median=21.168  iqr_risk=7.563417923017379  downside=12.929418808994116  ret7=-0.08088540465759753  0.9s
+195/711 "M4A4 | Polysoup (Field-Tested)"  steam_n=140  median=18.663  iqr_risk=12.380941948416853  downside=12.513487312341512  ret7=0.008102839039843879  0.8s
+196/711 "P250 | Whiteout (Minimal Wear)"  steam_n=17  median=98.286  iqr_risk=2.4151504243930146  downside=2.1465423483467467  ret7=0.017876401522088692  0.8s
+197/711 "M4A4 | Neo-Noir (Minimal Wear)"  steam_n=136  median=71.1635  iqr_risk=4.429965801827952  downside=2.8884152999407013  ret7=-0.08398492699010829  0.9s
+198/711 "Sawed-Off | Kiss♥Love (Field-Tested)"  steam_n=1520  median=4.624  iqr_risk=6.752870502524341  downside=3.280574313529172  ret7=-0.03253934495959154  0.9s
+199/711 "M4A1-S | Glitched Paint (Factory New)"  steam_n=369  median=15.679  iqr_risk=7.039066820855745  downside=4.807934033888082  ret7=-0.11864504421464983  0.8s
+200/711 "M4A1-S | Basilisk (Minimal Wear)"  steam_n=282  median=13.052  iqr_risk=10.586651744528973  downside=8.144159949184072  ret7=0.015241519462247943  0.8s
+201/711 "MP7 | Bloodsport (Field-Tested)"  steam_n=352  median=47.0355  iqr_risk=10.437731288209944  downside=9.584220405252182  ret7=0.06789839349507965  0.8s
+202/711 "FAMAS | Waters of Nephthys (Field-Tested)"  steam_n=7  median=87.176  iqr_risk=26.879558005955946  downside=14.503102440463572  ret7=0.06492153415380608  0.8s
+203/711 "M4A1-S | Nitro (Factory New)"  steam_n=214  median=25.102  iqr_risk=5.474949867193823  downside=9.852875975708468  ret7=-0.09489733001999212  1.0s
+204/711 "P250 | Black & Tan (Factory New)"  steam_n=3  median=37.759  iqr_risk=7.974120113184506  downside=7.2199123646866505  ret7=-0.07412395291836138  0.8s
+205/711 "AK-47 | Aquamarine Revenge (Minimal Wear)"  steam_n=64  median=86.634  iqr_risk=9.366033634400885  downside=5.148402746026569  ret7=0.032622298544819905  1.0s
+206/711 "AWP | Queen's Gambit (Field-Tested)"  steam_n=375  median=87.176  iqr_risk=5.5905136469284615  downside=4.092201381359731  ret7=-0.04088140492549819  0.8s
+207/711 "AUG | Death by Puppy (Field-Tested)"  steam_n=175  median=5.273  iqr_risk=5.15512674990541  downside=6.621263715474833  ret7=-0.04032563422945856  0.9s
+208/711 "Galil AR | Stone Cold (Factory New)"  steam_n=48  median=42.0815  iqr_risk=11.779177555690675  downside=8.786804127539673  ret7=-0.10785398813100167  0.8s
+209/711 "MAG-7 | Bulldozer (Field-Tested)"  steam_n=32  median=16.024  iqr_risk=2.4088287055142725  downside=3.0376173249902316  ret7=0.2308485056681553  1.1s
+210/711 "M4A1-S | Black Lotus (Factory New)"  steam_n=692  median=23.471  iqr_risk=2.3740870919537813  downside=1.7721465704123056  ret7=-0.03202475019858697  0.8s
+211/711 "Five-SeveN | Heat Treated (Field-Tested)"  steam_n=1049  median=5.502  iqr_risk=6.0000712174625175  downside=4.52230887013495  ret7=0.03896826869549086  0.7s
+212/711 "Desert Eagle | Mecha Industries (Factory New)"  steam_n=257  median=19.307  iqr_risk=12.018060064935064  downside=6.072443181818177  ret7=-0.08692421991084676  1.0s
+213/711 "M4A1-S | Decimator (Minimal Wear)"  steam_n=368  median=24.915  iqr_risk=7.237842779523248  downside=5.883292280299737  ret7=-0.0632275029970224  1.0s
+214/711 "Dual Berettas | Royal Consorts (Minimal Wear)"  steam_n=165  median=6.968  iqr_risk=3.2561141791580055  downside=2.62497310478376  ret7=-0.020442689976032602  1.2s
+215/711 "P90 | Shallow Grave (Factory New)"  steam_n=22  median=82.048  iqr_risk=16.040570256714354  downside=16.119264694981837  ret7=-0.0972568873537657  0.7s
+216/711 "AWP | Atheris (Well-Worn)"  steam_n=1508  median=4.87  iqr_risk=6.034009873834332  downside=3.3319111761240054  ret7=-0.047845940043676705  0.8s
+217/711 "AK-47 | Frontside Misty (Field-Tested)"  steam_n=883  median=22.34  iqr_risk=5.716584352023599  downside=5.077435358794999  ret7=-0.07420160110183349  1.1s
+218/711 "Sawed-Off | Wasteland Princess (Field-Tested)"  steam_n=135  median=41.28  iqr_risk=6.155246329605059  downside=4.06246257753935  ret7=-0.06000046802237147  0.9s
+219/711 "AWP | Wildfire (Field-Tested)"  steam_n=159  median=55.553  iqr_risk=6.555162897919435  downside=5.856864800649144  ret7=0.0010389894460547389  0.8s
+220/711 "Glock-18 | Green Line (Factory New)"  steam_n=554  median=18.64  iqr_risk=21.866624625571504  downside=17.200063061642755  ret7=0.9409216226860968  0.9s
+221/711 "Desert Eagle | Conspiracy (Field-Tested)"  steam_n=72  median=22.6105  iqr_risk=6.021445506142688  downside=9.649130684675614  ret7=-0.02648361381753761  0.9s
+222/711 "M4A4 | Desert-Strike (Minimal Wear)"  steam_n=38  median=48.139  iqr_risk=6.617964854579768  downside=13.756680686885309  ret7=-0.16476326194729352  1.1s
+223/711 "Desert Eagle | Mint Fan (Factory New)"  steam_n=1077  median=3.419  iqr_risk=12.259588347767405  downside=3.8522101001012263  ret7=-0.15576400888669473  0.9s
+224/711 "Sawed-Off | The Kraken (Minimal Wear)"  steam_n=18  median=109.013  iqr_risk=5.025796361963155  downside=13.292461538318246  ret7=0.11657882589265323  0.9s
+225/711 "P90 | Attack Vector (Minimal Wear)"  steam_n=19  median=20.024  iqr_risk=2.8967613258619025  downside=6.165427815906942  ret7=0.030557387026423966  0.8s
+226/711 "AWP | Green Energy (Battle-Scarred)"  steam_n=548  median=12.34  iqr_risk=3.944454323542246  downside=4.5587545870447315  ret7=-0.06726698991764801  0.8s
+227/711 "Dual Berettas | Cobra Strike (Minimal Wear)"  steam_n=3  median=103.369  iqr_risk=4.9925379325924935  downside=7.988060692147993  ret7=0.07274147596728242  1.0s
+228/711 "MP9 | Arctic Tri-Tone (Field-Tested)"  steam_n=1536  median=5.265  iqr_risk=6.2053929150438885  downside=3.3542664405642566  ret7=0.0  0.9s
+229/711 "FAMAS | Commemoration (Minimal Wear)"  steam_n=87  median=45.56  iqr_risk=5.023046140706917  downside=8.263593260929868  ret7=-0.0642999787119729  1.0s
+230/711 "MP9 | Mount Fuji (Field-Tested)"  steam_n=354  median=6.7035  iqr_risk=8.415533635474985  downside=6.627862199709704  ret7=0.038052312693955814  1.5s
+231/711 "M4A4 | Asiimov (Battle-Scarred)"  steam_n=27  median=104.897  iqr_risk=3.26734067579228  downside=0.8922098923771842  ret7=-0.07391377735844151  0.8s
+232/711 "AWP | Redline (Minimal Wear)"  steam_n=39  median=90.674  iqr_risk=7.0791283994800445  downside=6.006153585239108  ret7=-0.11518372959272682  1.0s
+233/711 "MAC-10 | Surfwood (Field-Tested)"  steam_n=17  median=6.299  iqr_risk=8.017909310301027  downside=7.5193699987298395  ret7=0.05875460328088389  0.8s
+234/711 "Tec-9 | Isaac (Factory New)"  steam_n=28  median=34.554  iqr_risk=13.877934887098561  downside=12.90412826152304  ret7=-0.08295714369467078  1.0s
+235/711 "AK-47 | Phantom Disruptor (Battle-Scarred)"  steam_n=388  median=6.702  iqr_risk=2.921318170300935  downside=2.787176009419765  ret7=-0.01726937269372697  0.8s
+236/711 "M4A1-S | Flashback (Field-Tested)"  steam_n=690  median=4.7695  iqr_risk=4.059596551435505  downside=3.8608018749476827  ret7=0.02180355630821329  0.8s
+237/711 "M4A1-S | Leaded Glass (Well-Worn)"  steam_n=83  median=11.5  iqr_risk=5.511921335820047  downside=6.246552312905513  ret7=0.07692307692307687  0.8s
+238/711 "Glock-18 | Neo-Noir (Field-Tested)"  steam_n=80  median=47.582  iqr_risk=8.682398762338035  downside=6.753347483601391  ret7=-0.11322299883825016  0.8s
+239/711 "AK-47 | The Empress (Well-Worn)"  steam_n=66  median=119.2835  iqr_risk=10.055134663440562  downside=11.789625991415065  ret7=-0.05555532340761593  0.8s
+240/711 "AWP | PAW (Factory New)"  steam_n=403  median=10.452  iqr_risk=9.529046139134586  downside=9.212526894573275  ret7=-0.1323475385745776  1.2s
+241/711 "Glock-18 | Fully Tuned (Well-Worn)"  steam_n=562  median=71.531  iqr_risk=10.17568163213904  downside=9.825857593630412  ret7=-0.11637086092715232  0.8s
+242/711 "MAG-7 | Justice (Field-Tested)"  steam_n=342  median=6.854  iqr_risk=6.58610449560437  downside=8.600158772161947  ret7=-0.03457794566322836  1.1s
+243/711 "MP5-SD | Desert Strike (Factory New)"  steam_n=87  median=4.29  iqr_risk=4.102395799146718  downside=4.069576632753538  ret7=0.002810304449648804  0.8s
+244/711 "USP-S | Guardian (Minimal Wear)"  steam_n=257  median=4.303  iqr_risk=5.919348871624126  downside=5.097217083898553  ret7=0.010077874484654359  0.9s
+245/711 "SG 553 | Gator Mesh (Factory New)"  steam_n=0  median=None  iqr_risk=None  downside=None  ret7=None  0.7s
+246/711 "FAMAS | Styx (Field-Tested)"  steam_n=44  median=18.939  iqr_risk=6.724904372996994  downside=2.0200558254936354  ret7=0.015363056002491327  1.0s
+247/711 "AK-47 | Midnight Laminate (Battle-Scarred)"  steam_n=1214  median=3.528  iqr_risk=7.149639725185729  downside=4.440596548064565  ret7=-0.03955243299505595  0.9s
+248/711 "AWP | Atheris (Minimal Wear)"  steam_n=1368  median=10.47  iqr_risk=6.924281784841073  downside=6.122020171149145  ret7=-0.004603874928064466  0.9s
+249/711 "M4A1-S | Decimator (Battle-Scarred)"  steam_n=249  median=15.046  iqr_risk=3.2342256785564865  downside=2.4904201836933924  ret7=-0.02673460401333594  1.3s
+250/711 "AK-47 | Crane Flight (Field-Tested)"  steam_n=2001  median=33.373  iqr_risk=8.405813670127484  downside=8.793913155970861  ret7=-0.13453911282383058  0.7s
+251/711 "M4A1-S | Flashback (Well-Worn)"  steam_n=313  median=4.312  iqr_risk=4.1355140186916  downside=7.68691588785047  ret7=0.004544924833935315  1.1s
+252/711 "AK-47 | Blue Laminate (Minimal Wear)"  steam_n=205  median=20.841  iqr_risk=7.415180132913606  downside=6.27725311880611  ret7=-0.026874699292047555  0.9s
+253/711 "AUG | Lil' Pig (Field-Tested)"  steam_n=7  median=75.187  iqr_risk=3.3264343479429725  downside=3.377887315428546  ret7=-0.13485680094814012  0.9s
+254/711 "AUG | Spalted Wood (Factory New)"  steam_n=87  median=11.179  iqr_risk=8.09419022023413  downside=8.170848289172278  ret7=-0.298723462352379  0.8s
+255/711 "AUG | Stymphalian (Minimal Wear)"  steam_n=186  median=6.287  iqr_risk=9.259899977982574  downside=4.891013745164028  ret7=-0.09661556262655469  0.8s
+256/711 "P90 | Glacier Mesh (Minimal Wear)"  steam_n=6  median=8.376  iqr_risk=2.8645894479795224  downside=3.615957172039727  ret7=0.07183161098078994  1.2s
+257/711 "M4A1-S | Nightmare (Well-Worn)"  steam_n=495  median=9.635  iqr_risk=4.984710761110887  downside=5.784777782432041  ret7=-0.09075273168757592  0.9s
+258/711 "AK-47 | Point Disarray (Minimal Wear)"  steam_n=237  median=28.46  iqr_risk=4.194172307951054  downside=5.234130821735413  ret7=-0.028408498209256283  1.0s
+259/711 "AK-47 | The Outsiders (Well-Worn)"  steam_n=353  median=9.838  iqr_risk=6.533964477889702  downside=4.834729133794553  ret7=-0.09573954207322977  0.9s
+260/711 "Tec-9 | Fuel Injector (Well-Worn)"  steam_n=101  median=13.22  iqr_risk=5.194153345399789  downside=4.182700351346835  ret7=-0.06446897156640596  0.9s
+261/711 "Desert Eagle | Code Red (Minimal Wear)"  steam_n=59  median=70.074  iqr_risk=8.281971445390901  downside=6.5580560737057825  ret7=0.04319856683359813  0.9s
+262/711 "M4A4 | Griffin (Field-Tested)"  steam_n=485  median=4.47  iqr_risk=6.133339237871712  downside=5.44693665168389  ret7=-0.09141750914175084  1.1s
+263/711 "Dual Berettas | Melondrama (Well-Worn)"  steam_n=1335  median=7.571  iqr_risk=7.266431447646282  downside=4.236565627418312  ret7=-0.04468845760980589  0.8s
+264/711 "M4A1-S | Basilisk (Factory New)"  steam_n=50  median=74.77  iqr_risk=7.953714144831238  downside=6.741330832851691  ret7=-0.07755344565069389  0.9s
+265/711 "USP-S | Kill Confirmed (Field-Tested)"  steam_n=58  median=83.739  iqr_risk=5.208972458620288  downside=4.593750704644904  ret7=0.0015149478931228977  0.9s
+266/711 "MP9 | Arctic Tri-Tone (Factory New)"  steam_n=597  median=18.059  iqr_risk=10.562234181060669  downside=6.16808436767642  ret7=0.07376283846872078  0.9s
+267/711 "AK-47 | Blue Laminate (Field-Tested)"  steam_n=207  median=19.151  iqr_risk=5.518334027041182  downside=3.240286971271545  ret7=-0.05662371652909204  0.9s
+268/711 "AWP | POP AWP (Field-Tested)"  steam_n=228  median=11.7135  iqr_risk=7.3495280829336265  downside=6.783055684494641  ret7=0.09884716885040978  0.9s
+269/711 "Negev | Boroque Sand (Factory New)"  steam_n=4  median=13.7465  iqr_risk=15.128528669522865  downside=10.208932449087378  ret7=0.023526174588979654  0.9s
+270/711 "SSG 08 | Turbo Peek (Field-Tested)"  steam_n=97  median=20.082  iqr_risk=7.316306174392441  downside=4.608928939946355  ret7=-0.09149223497636738  0.8s
+271/711 "AWP | Fever Dream (Factory New)"  steam_n=109  median=35.751  iqr_risk=4.610767399359538  downside=4.322943737460101  ret7=-0.06043368212300715  0.8s
+272/711 "AWP | PAW (Minimal Wear)"  steam_n=937  median=4.288  iqr_risk=5.200594353640421  downside=3.6682763744428017  ret7=-0.00045934772622868714  0.8s
+273/711 "Tec-9 | Blue Titanium (Factory New)"  steam_n=110  median=22.926  iqr_risk=16.629774061616413  downside=9.143889806400285  ret7=-0.11518366690780502  0.8s
+274/711 "AK-47 | The Oligarch (Battle-Scarred)"  steam_n=141  median=50.292  iqr_risk=2.3734901854587886  downside=1.8537914116293144  ret7=-0.021642498715871872  0.9s
+275/711 "AWP | Crakow! (Well-Worn)"  steam_n=302  median=29.912  iqr_risk=8.003933266895997  downside=4.45108082068872  ret7=-0.10144014401440138  1.0s
+276/711 "M249 | Humidor (Minimal Wear)"  steam_n=2  median=14.303  iqr_risk=1.286443403481782  downside=1.0291547227854403  ret7=None  0.8s
+277/711 "Glock-18 | Bullet Queen (Field-Tested)"  steam_n=178  median=70.8765  iqr_risk=7.947863031428497  downside=6.351396978137913  ret7=-0.07274494714245194  0.9s
+278/711 "SG 553 | Berry Gel Coat (Factory New)"  steam_n=52  median=8.207  iqr_risk=6.970678705512216  downside=1.976585069180483  ret7=-0.0526812021213906  0.8s
+279/711 "AWP | Crakow! (Battle-Scarred)"  steam_n=383  median=28.593  iqr_risk=3.9104359099580837  downside=6.6509031244839685  ret7=-0.10702611625947778  0.9s
+280/711 "AWP | Pink DDPAT (Field-Tested)"  steam_n=8  median=44.2855  iqr_risk=3.9242360355962  downside=2.621113601562328  ret7=0.6910406603372012  1.2s
+281/711 "MP9 | Setting Sun (Field-Tested)"  steam_n=13  median=29.11  iqr_risk=7.670751975564159  downside=13.738938741098295  ret7=0.132334862782443  0.8s
+282/711 "UMP-45 | Blaze (Factory New)"  steam_n=20  median=48.5195  iqr_risk=5.726916693777879  downside=4.292768102393888  ret7=0.048094225421233316  0.9s
+283/711 "MP9 | Music Box (Factory New)"  steam_n=12  median=96.94  iqr_risk=3.2556804131057113  downside=3.926620924374322  ret7=-0.1491597685005328  0.8s
+284/711 "Five-SeveN | Withered Vine (Field-Tested)"  steam_n=18  median=4.6355  iqr_risk=8.652104200070795  downside=13.75799096266373  ret7=-0.09464586846543  0.7s
+285/711 "USP-S | Printstream (Minimal Wear)"  steam_n=226  median=78.458  iqr_risk=6.433794485138444  downside=5.001674808976968  ret7=-0.004775336500395855  0.8s
+286/711 "P250 | Nevermore (Factory New)"  steam_n=326  median=4.598  iqr_risk=7.9666242642461444  downside=6.080075893145901  ret7=-0.11428571428571421  0.9s
+287/711 "Glock-18 | Water Elemental (Minimal Wear)"  steam_n=343  median=23.887  iqr_risk=3.8697775821227105  downside=5.106597069366706  ret7=-0.02212723158159413  0.9s
+288/711 "Desert Eagle | Conspiracy (Factory New)"  steam_n=233  median=23.956  iqr_risk=5.5633576843096675  downside=5.509182665660952  ret7=-0.037106681709916045  1.0s
+289/711 "SSG 08 | Turbo Peek (Factory New)"  steam_n=19  median=83.373  iqr_risk=11.310835599304852  downside=4.769070930105324  ret7=-0.13617322936134557  0.9s
+290/711 "XM1014 | Ziggy (Factory New)"  steam_n=69  median=10.982  iqr_risk=14.058633875684185  downside=10.965734423033664  ret7=0.0035674806552103977  0.9s
+291/711 "MP9 | Food Chain (Field-Tested)"  steam_n=975  median=4.957  iqr_risk=6.218780717767651  downside=5.127485004714242  ret7=-0.003657572162910183  0.9s
+292/711 "P250 | Mehndi (Well-Worn)"  steam_n=10  median=17.599  iqr_risk=1.197396020872996  downside=4.471802609694615  ret7=-0.045493840501404925  0.9s
+293/711 "SG 553 | Dragon Tech (Factory New)"  steam_n=683  median=3.931  iqr_risk=1.6355904481517816  downside=2.239500767469363  ret7=0.015167095115681262  0.9s
+294/711 "FAMAS | Commemoration (Factory New)"  steam_n=38  median=86.4965  iqr_risk=9.386812191920926  downside=4.159943991325032  ret7=-0.07242121428416937  0.9s
+295/711 "CZ75-Auto | Victoria (Minimal Wear)"  steam_n=8  median=125.243  iqr_risk=8.89101893351698  downside=4.322909884993268  ret7=-0.0812790588822665  0.8s
+296/711 "CZ75-Auto | Syndicate (Field-Tested)"  steam_n=29  median=12.036  iqr_risk=7.0652676148630995  downside=8.37918896440482  ret7=0.013431114040870051  0.9s
+297/711 "AWP | Containment Breach (Well-Worn)"  steam_n=30  median=66.1995  iqr_risk=8.07584987801494  downside=4.65486260244555  ret7=-0.12056293326651624  1.0s
+298/711 "Desert Eagle | Code Red (Field-Tested)"  steam_n=141  median=54.271  iqr_risk=12.273630511180084  downside=6.9503909708549  ret7=-0.11079933998641145  0.9s
+299/711 "USP-S | Kill Confirmed (Battle-Scarred)"  steam_n=28  median=65.997  iqr_risk=1.3289237502022546  downside=1.7478039036001  ret7=-0.031947824680337966  0.8s
+300/711 "Five-SeveN | Boost Protocol (Field-Tested)"  steam_n=320  median=3.581  iqr_risk=7.958814526227911  downside=5.676916655071662  ret7=-0.10959443496521848  0.7s
+301/711 "Tec-9 | Bamboo Forest (Minimal Wear)"  steam_n=69  median=13.863  iqr_risk=3.2158523454042234  downside=9.18216177543956  ret7=-0.040188158298394505  0.9s
+302/711 "UMP-45 | Neo-Noir (Well-Worn)"  steam_n=126  median=5.286  iqr_risk=5.901513699942514  downside=7.041578846522316  ret7=-0.01800076599004219  0.7s
+303/711 "USP-S | Whiteout (Field-Tested)"  steam_n=36  median=83.009  iqr_risk=2.7657046333447775  downside=7.157774755458318  ret7=-0.013066533504541789  0.8s
+304/711 "M4A1-S | Black Lotus (Well-Worn)"  steam_n=365  median=7.744  iqr_risk=4.416305154961509  downside=4.794101171167643  ret7=-0.056613226452905785  0.8s
+305/711 "AWP | Atheris (Battle-Scarred)"  steam_n=1023  median=4.591  iqr_risk=3.7755146450798573  downside=3.285894590242412  ret7=-0.03890306122448972  1.1s
+306/711 "SSG 08 | Death's Head (Factory New)"  steam_n=5  median=54.818  iqr_risk=2.8568439068321285  downside=8.820902605725639  ret7=-0.17487802130185726  0.8s
+307/711 "AK-47 | Nightwish (Minimal Wear)"  steam_n=437  median=98.287  iqr_risk=4.873367222252391  downside=7.213771615452616  ret7=-0.015964227481594873  0.8s
+308/711 "Dual Berettas | Melondrama (Battle-Scarred)"  steam_n=856  median=7.522  iqr_risk=5.355110783854346  downside=5.448825222571792  ret7=-0.04446177847113886  0.8s
+309/711 "MAC-10 | Stalker (Field-Tested)"  steam_n=35  median=52.502  iqr_risk=6.584340350092763  downside=12.819607704707778  ret7=-0.11369472930242308  0.8s
+310/711 "P2000 | Fire Elemental (Field-Tested)"  steam_n=20  median=105.602  iqr_risk=6.592542612680667  downside=9.039443762026425  ret7=0.08073788347306787  0.9s
+311/711 "P250 | Epicenter (Factory New)"  steam_n=18  median=48.417  iqr_risk=9.038918671613148  downside=6.3517102135404775  ret7=-0.13215210736990812  0.7s
+312/711 "Desert Eagle | Mecha Industries (Well-Worn)"  steam_n=155  median=7.642  iqr_risk=5.885507265331748  downside=5.493140114309629  ret7=-0.08484923997009719  0.8s
+313/711 "AK-47 | Emerald Pinstripe (Battle-Scarred)"  steam_n=497  median=3.36  iqr_risk=4.420840256349395  downside=4.98457156420602  ret7=-0.12062256809338512  1.3s
+314/711 "P250 | Undertow (Factory New)"  steam_n=16  median=74.1725  iqr_risk=11.309703164343029  downside=11.38778333538577  ret7=-0.11815788202328614  1.1s
+315/711 "PP-Bizon | Antique (Factory New)"  steam_n=14  median=22.489  iqr_risk=12.028216487333424  downside=15.734089110814084  ret7=0.023180691098523498  0.9s
+316/711 "Dual Berettas | Panther (Minimal Wear)"  steam_n=62  median=5.547  iqr_risk=14.000036293029932  downside=9.97332462300615  ret7=-0.1369683034981114  0.8s
+317/711 "Tec-9 | Avalanche (Factory New)"  steam_n=39  median=27.657  iqr_risk=4.561238302630799  downside=8.268347948914137  ret7=-0.05642002752196462  1.0s
+318/711 "Desert Eagle | Mulberry (Factory New)"  steam_n=253  median=30.418  iqr_risk=5.2803952545704576  downside=7.087141363535912  ret7=-0.07900889783724097  0.8s
+319/711 "Glock-18 | Fully Tuned (Battle-Scarred)"  steam_n=429  median=58.115  iqr_risk=4.814646373114581  downside=4.2623982273347485  ret7=-0.09758344782995232  0.9s
+320/711 "M4A1-S | Flashback (Battle-Scarred)"  steam_n=223  median=3.94  iqr_risk=8.636190958591875  downside=7.015322274281376  ret7=-0.04891979140799607  0.9s
+321/711 "AWP | Electric Hive (Minimal Wear)"  steam_n=23  median=46.132  iqr_risk=7.68796506928647  downside=7.080718946079047  ret7=-0.13758644199863646  0.8s
+322/711 "P250 | Mehndi (Minimal Wear)"  steam_n=10  median=25.1525  iqr_risk=4.218437931155781  downside=2.7953551453373593  ret7=-0.08944154349942479  0.9s
+323/711 "AK-47 | Aphrodite (Minimal Wear)"  steam_n=309  median=52.624  iqr_risk=4.896919392527611  downside=2.8454826599993503  ret7=-0.010261194029850818  1.3s
+324/711 "AWP | Black Nile (Field-Tested)"  steam_n=1787  median=4.085  iqr_risk=7.491370235268209  downside=5.7727617695301925  ret7=-0.05473836508319274  0.8s
+325/711 "MP7 | Bloodsport (Factory New)"  steam_n=66  median=117.722  iqr_risk=2.8718108118609096  downside=3.9348031373688377  ret7=-0.10561988358701413  0.9s
+326/711 "M4A4 | Cyber Security (Minimal Wear)"  steam_n=26  median=71.368  iqr_risk=3.684740065740941  downside=2.8889358444942235  ret7=-0.11826043983197432  0.8s
+327/711 "AWP | Exothermic (Factory New)"  steam_n=369  median=22.599  iqr_risk=6.5177274333503465  downside=3.9690953272169676  ret7=-0.08371310095660378  0.9s
+328/711 "PP-Bizon | Urban Dashed (Factory New)"  steam_n=53  median=3.752  iqr_risk=14.194274083398062  downside=12.041029486595779  ret7=-0.05460801915020952  0.9s
+329/711 "CZ75-Auto | Yellow Jacket (Factory New)"  steam_n=1  median=53.075  iqr_risk=0.0  downside=0.0  ret7=0.0  1.3s
+330/711 "USP-S | Stainless (Factory New)"  steam_n=21  median=90.041  iqr_risk=12.942389433454304  downside=4.9396714888034765  ret7=-0.12901259650548558  1.0s
+331/711 "M4A4 | Bullet Rain (Field-Tested)"  steam_n=8  median=95.2055  iqr_risk=2.438689311988424  downside=1.8958727695074697  ret7=-0.012167208770027749  0.9s
+332/711 "M4A1-S | Black Lotus (Minimal Wear)"  steam_n=1973  median=10.809  iqr_risk=5.750101689901268  downside=5.075250526938575  ret7=-0.019173374333001703  0.9s
+333/711 "Galil AR | Rainbow Spoon (Field-Tested)"  steam_n=441  median=45.353  iqr_risk=7.566771736447415  downside=5.723135666712549  ret7=0.058722654801631524  1.0s
+334/711 "XM1014 | Entombed (Factory New)"  steam_n=780  median=11.401  iqr_risk=0.8263445681030944  downside=2.1801431158464695  ret7=-0.024466969591052212  0.7s
+335/711 "Glock-18 | Reactor (Minimal Wear)"  steam_n=17  median=41.878  iqr_risk=4.1438356959855565  downside=2.0152420682943215  ret7=0.01832998757288995  1.1s
+336/711 "AK-47 | Neon Rider (Field-Tested)"  steam_n=272  median=57.24  iqr_risk=6.692533371688611  downside=4.327098868230568  ret7=-0.0009835509581143098  0.8s
+337/711 "P250 | Epicenter (Field-Tested)"  steam_n=332  median=6.384  iqr_risk=7.981976681169971  downside=4.289054395119461  ret7=0.01754385964912286  0.9s
+338/711 "M4A1-S | Nightmare (Battle-Scarred)"  steam_n=367  median=9.76  iqr_risk=5.339419789934638  downside=7.425614756214685  ret7=-0.1058670923967272  0.9s
+339/711 "P250 | Asiimov (Well-Worn)"  steam_n=117  median=14.338  iqr_risk=3.58290004968475  downside=4.713752877866486  ret7=-0.07490383966529457  0.9s
+340/711 "AWP | Hyper Beast (Well-Worn)"  steam_n=85  median=40.54  iqr_risk=1.9687464579811835  downside=3.20173860763548  ret7=0.005085517660155858  0.9s
+341/711 "Desert Eagle | Ocean Drive (Battle-Scarred)"  steam_n=12  median=92.666  iqr_risk=4.744047449251636  downside=15.000471771601099  ret7=-0.16457899147025323  0.8s
+342/711 "FAMAS | Spitfire (Field-Tested)"  steam_n=10  median=33.2025  iqr_risk=12.597803305490515  downside=16.01607877122785  ret7=0.34664491702916056  0.8s
+343/711 "Desert Eagle | Directive (Minimal Wear)"  steam_n=120  median=8.1085  iqr_risk=7.413557695855942  downside=5.078908200794612  ret7=-0.12605042016806722  0.9s
+344/711 "MP9 | Food Chain (Well-Worn)"  steam_n=491  median=4.25  iqr_risk=4.468800715008124  downside=4.468800715008124  ret7=-0.027459954233409634  0.8s
+345/711 "SSG 08 | Rapid Transit (Factory New)"  steam_n=123  median=13.922  iqr_risk=9.477457191109718  downside=7.718783180007552  ret7=-0.09463037132577556  0.8s
+346/711 "AK-47 | Wintergreen (Minimal Wear)"  steam_n=3279  median=3.775  iqr_risk=8.907916079453294  downside=7.737921131704202  ret7=-0.05326937642009588  0.8s
+347/711 "USP-S | Alpine Camo (Factory New)"  steam_n=1944  median=5.255  iqr_risk=10.210278600166998  downside=8.900781902376078  ret7=0.10455311973018566  0.8s
+348/711 "Galil AR | Tornado (Field-Tested)"  steam_n=49  median=12.075  iqr_risk=9.952079616636931  downside=13.072104576836601  ret7=0.13842138421384198  1.2s
+349/711 "AK-47 | First Class (Field-Tested)"  steam_n=3  median=97.799  iqr_risk=10.750939268559467  downside=0.2275170019498844  ret7=None  1.0s
+350/711 "Five-SeveN | Orange Peel (Factory New)"  steam_n=78  median=11.602  iqr_risk=24.99527052591752  downside=25.312145289443816  ret7=-0.20658607753230507  1.2s
+351/711 "AWP | Printstream (Minimal Wear)"  steam_n=367  median=104.527  iqr_risk=4.897492794460685  downside=4.445547725209824  ret7=-0.03021656555473551  0.8s
+352/711 "P250 | Digital Architect (Factory New)"  steam_n=2  median=89.837  iqr_risk=0.0  downside=0.0  ret7=None  0.8s
+353/711 "Desert Eagle | Trigger Discipline (Factory New)"  steam_n=237  median=10.928  iqr_risk=11.280780155958821  downside=8.096470119954418  ret7=-0.10540408958130476  1.0s
+354/711 "P90 | Desert Warfare (Factory New)"  steam_n=10  median=9.453  iqr_risk=3.559359738980289  downside=4.9015349738874345  ret7=0.11769814160829051  1.1s
+355/711 "USP-S | Jawbreaker (Factory New)"  steam_n=176  median=38.122  iqr_risk=4.842380804638763  downside=5.269181934084387  ret7=-0.10286519492719592  0.8s
+356/711 "SSG 08 | Necropos (Factory New)"  steam_n=56  median=12.798  iqr_risk=5.68260673951668  downside=4.590618970999796  ret7=-0.24838362068965525  0.9s
+357/711 "AK-47 | Breakthrough (Factory New)"  steam_n=305  median=23.001  iqr_risk=7.320031248246593  downside=5.0238893708485  ret7=-0.07666544132663478  0.9s
+358/711 "AK-47 | Point Disarray (Battle-Scarred)"  steam_n=203  median=16.83  iqr_risk=2.2234657491025764  downside=3.6194569623945383  ret7=0.0020348315279190565  0.9s
+359/711 "AWP | POP AWP (Well-Worn)"  steam_n=63  median=11.718  iqr_risk=3.8350217076700424  downside=3.081637864986806  ret7=0.029963545834444716  0.8s
+360/711 "AWP | Pink DDPAT (Minimal Wear)"  steam_n=5  median=109.525  iqr_risk=7.567526686945129  downside=6.315218614363268  ret7=-0.09192638080363491  0.9s
+361/711 "Galil AR | Chromatic Aberration (Well-Worn)"  steam_n=432  median=4.321  iqr_risk=8.061358454061784  downside=5.665983370569121  ret7=0.01873814041745714  1.0s
+362/711 "AK-47 | Ice Coaled (Well-Worn)"  steam_n=673  median=6.85  iqr_risk=5.619930475086905  downside=3.6500579374275746  ret7=-0.05691388209725623  0.8s
+363/711 "AK-47 | Cartel (Minimal Wear)"  steam_n=202  median=27.055  iqr_risk=5.70986855244956  downside=5.551569307699709  ret7=-0.02761294977004236  0.8s
+364/711 "M4A1-S | Flashback (Factory New)"  steam_n=95  median=67.681  iqr_risk=8.675829453927445  downside=7.142836030444095  ret7=0.13188491895103138  0.8s
+365/711 "Tec-9 | Fuel Injector (Factory New)"  steam_n=15  median=72.025  iqr_risk=7.900087950747587  downside=10.613192612137205  ret7=-0.06498491011678253  1.2s
+366/711 "AWP | Neo-Noir (Minimal Wear)"  steam_n=252  median=57.399  iqr_risk=6.475190937380296  downside=9.959809159699015  ret7=-0.057022356329721635  0.7s
+367/711 "USP-S | Printstream (Battle-Scarred)"  steam_n=324  median=39.4015  iqr_risk=3.8198053302785016  downside=2.5862395970048486  ret7=-0.022894995340402624  0.8s
+368/711 "MP9 | Airlock (Minimal Wear)"  steam_n=82  median=15.337  iqr_risk=4.976918261958161  downside=5.237076834802569  ret7=-0.04224124010980135  0.8s
+369/711 "PP-Bizon | Fuel Rod (Factory New)"  steam_n=17  median=16.803  iqr_risk=14.797032095644274  downside=8.173952762094961  ret7=0.5940200483926723  0.9s
+370/711 "Glock-18 | Brass (Battle-Scarred)"  steam_n=11  median=54.818  iqr_risk=1.6993874493213459  downside=1.804967976966914  ret7=-0.05544703499937287  0.9s
+371/711 "M4A4 | Neo-Noir (Battle-Scarred)"  steam_n=136  median=36.926  iqr_risk=8.794574732400102  downside=9.86111799736671  ret7=-0.0828136822605472  0.8s
+372/711 "P2000 | Fire Elemental (Minimal Wear)"  steam_n=15  median=105.007  iqr_risk=7.756081040776319  downside=8.943810625200847  ret7=-0.05320626104519055  0.8s
+373/711 "CZ75-Auto | Tread Plate (Factory New)"  steam_n=13  median=22.777  iqr_risk=7.176893815206207  downside=8.860185305781485  ret7=-0.07567131393732907  0.9s
+374/711 "MP9 | Arctic Tri-Tone (Battle-Scarred)"  steam_n=194  median=5.282  iqr_risk=6.661624279096162  downside=5.309634111751917  ret7=0.002757533976758042  0.8s
+375/711 "M4A4 | Radiation Hazard (Field-Tested)"  steam_n=8  median=46.1865  iqr_risk=19.75049759745874  downside=10.386014998291081  ret7=-0.5885608856088561  1.0s
+376/711 "Desert Eagle | Naga (Factory New)"  steam_n=35  median=64.032  iqr_risk=7.102508394232664  downside=8.352044242543938  ret7=-0.09532476230689702  1.0s
+377/711 "UMP-45 | K.O. Factory (Well-Worn)"  steam_n=1176  median=5.228  iqr_risk=8.624464540694913  downside=5.730604474059974  ret7=-0.08044485634847065  0.9s
+378/711 "MAG-7 | SWAG-7 (Factory New)"  steam_n=52  median=10.786  iqr_risk=6.284661498031356  downside=11.180525031095973  ret7=0.05372252540930256  0.9s
+379/711 "AK-47 | Phantom Disruptor (Minimal Wear)"  steam_n=955  median=11.256  iqr_risk=6.816237793142781  downside=8.015539240145408  ret7=-0.10504563457895644  1.2s
+380/711 "MP9 | Starlight Protector (Minimal Wear)"  steam_n=606  median=99.363  iqr_risk=3.5437349870763324  downside=6.362891858238419  ret7=-0.04689351616725923  0.7s
+381/711 "Glock-18 | Vogue (Factory New)"  steam_n=331  median=19.303  iqr_risk=3.688444182852653  downside=4.257406317441642  ret7=-0.08905352283035983  0.9s
+382/711 "AK-47 | The Outsiders (Field-Tested)"  steam_n=1115  median=10.271  iqr_risk=5.9868097063566506  downside=4.264153494075966  ret7=-0.08165537719216842  0.7s
+383/711 "AWP | Redline (Field-Tested)"  steam_n=126  median=45.341  iqr_risk=3.1100937349158952  downside=3.208107532729228  ret7=-0.022717044212511528  1.0s
+384/711 "P2000 | Imperial Dragon (Factory New)"  steam_n=29  median=64.103  iqr_risk=20.65979546525343  downside=14.850479003008582  ret7=-0.15394879711149778  1.0s
+385/711 "P90 | Deathgaze (Minimal Wear)"  steam_n=953  median=15.463  iqr_risk=3.4944108732165904  downside=3.2369957076021025  ret7=-0.031037333842142134  0.8s
+386/711 "Nova | Antique (Factory New)"  steam_n=45  median=16.974  iqr_risk=8.61335665126016  downside=8.541975242548078  ret7=-0.007651493996090553  1.0s
+387/711 "M4A4 | Full Throttle (Battle-Scarred)"  steam_n=208  median=33.905  iqr_risk=2.7817648066438574  downside=3.0809396393363184  ret7=-0.00618478133427125  0.8s
+388/711 "M4A4 | Poly Mag (Factory New)"  steam_n=608  median=4.351  iqr_risk=15.89250392196985  downside=7.411954618829994  ret7=-0.1265984654731458  0.8s
+389/711 "Desert Eagle | Kumicho Dragon (Field-Tested)"  steam_n=259  median=24.127  iqr_risk=4.176363892362857  downside=4.108034686389639  ret7=-0.02765129563705615  0.9s
+390/711 "Negev | Lionfish (Factory New)"  steam_n=136  median=3.615  iqr_risk=8.817528856096814  downside=9.306615242726592  ret7=-0.08922332706261771  0.9s
+391/711 "Glock-18 | Snack Attack (Battle-Scarred)"  steam_n=30  median=17.713  iqr_risk=2.948519526881246  downside=4.501858358092616  ret7=-0.03292158376530285  0.9s
+392/711 "Galil AR | Sugar Rush (Field-Tested)"  steam_n=4  median=69.4515  iqr_risk=2.7271297209947667  downside=1.7012026827977729  ret7=0.017294252941350008  0.9s
+393/711 "SSG 08 | Bloodshot (Field-Tested)"  steam_n=129  median=22.067  iqr_risk=3.295250855497825  downside=3.4256124278032347  ret7=-0.004144652942248195  0.8s
+394/711 "MP9 | Urban Sovereign (Factory New)"  steam_n=666  median=8.925  iqr_risk=6.189888224590594  downside=3.915388614504823  ret7=-0.09461152882205515  0.7s
+395/711 "Dual Berettas | Sweet Little Angels (Field-Tested)"  steam_n=1850  median=4.436  iqr_risk=8.981233243967832  downside=4.691689008042895  ret7=-0.11831578947368426  0.9s
+396/711 "Desert Eagle | Printstream (Minimal Wear)"  steam_n=427  median=58.48  iqr_risk=5.6984023845622245  downside=6.116113328588962  ret7=-0.014374740340672987  0.8s
+397/711 "M4A4 | Evil Daimyo (Field-Tested)"  steam_n=1111  median=4.171  iqr_risk=3.539907675380912  downside=2.8223588222631566  ret7=-0.028350515463917425  0.9s
+398/711 "M4A1-S | Golden Coil (Well-Worn)"  steam_n=55  median=63.673  iqr_risk=7.705884718788958  downside=7.259603931602257  ret7=-0.03742650216975962  0.9s
+399/711 "SG 553 | Desert Blossom (Factory New)"  steam_n=15  median=27.507  iqr_risk=6.542697250738143  downside=4.331865432001218  ret7=0.12661060103387078  0.8s
+400/711 "M4A1-S | Atomic Alloy (Minimal Wear)"  steam_n=75  median=69.778  iqr_risk=2.554264724210444  downside=1.309295191790979  ret7=-0.03664747103309496  1.0s
+401/711 "M4A4 | Spider Lily (Field-Tested)"  steam_n=589  median=10.61  iqr_risk=8.391984495692727  downside=5.879025602507381  ret7=-0.009648452426442411  0.8s
+402/711 "AWP | Atheris (Field-Tested)"  steam_n=3220  median=6.299  iqr_risk=6.967421735810634  downside=5.298740137439551  ret7=-0.019128757434496046  0.9s
+403/711 "MAC-10 | Propaganda (Field-Tested)"  steam_n=13  median=49.865  iqr_risk=4.098418263563844  downside=4.939387185063366  ret7=-0.0906104735076595  0.9s
+404/711 "USP-S | Neo-Noir (Field-Tested)"  steam_n=101  median=120.894  iqr_risk=8.628213926403665  downside=8.350878478769264  ret7=-0.03291947222979019  0.9s
+405/711 "AUG | Syd Mead (Factory New)"  steam_n=23  median=50.878  iqr_risk=10.529225615064382  downside=16.315761244032956  ret7=-0.1299792521381563  0.9s
+406/711 "Galil AR | Eco (Well-Worn)"  steam_n=117  median=14.5  iqr_risk=6.53748666879042  downside=5.824180390310111  ret7=-0.049147307640660665  0.9s
+407/711 "M249 | Emerald Poison Dart (Factory New)"  steam_n=84  median=6.761  iqr_risk=4.5883780823539935  downside=6.164707971936889  ret7=0.12369996848408449  1.0s
+408/711 "Glock-18 | Grinder (Minimal Wear)"  steam_n=254  median=4.025  iqr_risk=6.493506493506505  downside=6.706796852782264  ret7=-0.11912077523044196  1.1s
+409/711 "AK-47 | Nouveau Rouge (Field-Tested)"  steam_n=843  median=17.962  iqr_risk=4.202967127786896  downside=3.718651710412777  ret7=-0.03834330110111228  1.0s
+410/711 "USP-S | Purple DDPAT (Minimal Wear)"  steam_n=22  median=28.2425  iqr_risk=3.3671413565684647  downside=1.534964613503689  ret7=-0.05114649994271603  1.0s
+411/711 "R8 Revolver | Memento (Factory New)"  steam_n=12  median=13.307  iqr_risk=11.053041590718284  downside=14.470151342111828  ret7=-0.05347846663511602  0.8s
+412/711 "Tec-9 | Remote Control (Factory New)"  steam_n=20  median=69.3935  iqr_risk=9.703353829759672  downside=7.74505709718762  ret7=-0.05692710618327812  1.0s
+413/711 "AWP | Chrome Cannon (Well-Worn)"  steam_n=555  median=33.338  iqr_risk=5.137923773426001  downside=4.825075955840324  ret7=-0.015435237810349944  0.8s
+414/711 "Glock-18 | Trace Lock (Factory New)"  steam_n=448  median=10.88  iqr_risk=9.650324441240087  downside=4.623287671232876  ret7=-0.08891417425227555  0.8s
+415/711 "P90 | Deathgaze (Field-Tested)"  steam_n=1290  median=8.951  iqr_risk=8.392350874815044  downside=9.83813945082625  ret7=-0.10277072524561204  0.8s
+416/711 "MP7 | Nemesis (Field-Tested)"  steam_n=61  median=9.47  iqr_risk=6.6919497000703725  downside=5.252707770855876  ret7=-0.04869449695978745  1.2s
+417/711 "AK-47 | Legion of Anubis (Battle-Scarred)"  steam_n=190  median=43.676  iqr_risk=5.972806507844278  downside=10.437884950610119  ret7=-0.020393444805663186  0.8s
+418/711 "UMP-45 | K.O. Factory (Battle-Scarred)"  steam_n=864  median=4.987  iqr_risk=8.420383683520663  downside=5.937959248520483  ret7=-0.04346138921226239  0.8s
+419/711 "Glock-18 | Neo-Noir (Well-Worn)"  steam_n=27  median=42.827  iqr_risk=4.575884491417431  downside=6.117888464133112  ret7=-0.1092138449154817  1.2s
+420/711 "M4A1-S | Solitude (Minimal Wear)"  steam_n=1907  median=6.352  iqr_risk=7.090418522934053  downside=5.992344857877904  ret7=-0.0413070283600494  0.9s
+421/711 "MP5-SD | Bamboo Garden (Factory New)"  steam_n=26  median=11.667  iqr_risk=12.483778873604992  downside=8.337658967038676  ret7=-0.0964912280701754  0.9s
+422/711 "AK-47 | Elite Build (Minimal Wear)"  steam_n=2132  median=4.034  iqr_risk=6.41610936998742  downside=4.4419218715297415  ret7=-0.025180752929443995  1.0s
+423/711 "UMP-45 | Wild Child (Minimal Wear)"  steam_n=1015  median=8.154  iqr_risk=5.9644592018692775  downside=3.996802557953639  ret7=-0.08848527185935506  0.7s
+424/711 "P250 | Muertos (Minimal Wear)"  steam_n=95  median=16.049  iqr_risk=8.07684925484951  downside=6.26954201261833  ret7=-0.04348629504157686  1.2s
+425/711 "P250 | Cartel (Factory New)"  steam_n=11  median=71.698  iqr_risk=9.303925536220161  downside=4.853635505193578  ret7=0.02098249135719854  0.9s
+426/711 "M4A1-S | Leaded Glass (Factory New)"  steam_n=55  median=51.438  iqr_risk=6.938516133724826  downside=4.55013532499053  ret7=-0.21497413365459572  0.9s
+427/711 "MP9 | Hydra (Factory New)"  steam_n=12  median=64.63  iqr_risk=9.331532321092178  downside=3.5184490814988063  ret7=-0.13342418235877107  0.9s
+428/711 "P2000 | Fire Elemental (Battle-Scarred)"  steam_n=0  median=None  iqr_risk=None  downside=None  ret7=None  0.8s
+429/711 "Glock-18 | Nuclear Garden (Minimal Wear)"  steam_n=399  median=6.718  iqr_risk=8.502705073841206  downside=5.658722035385284  ret7=-0.08951482082288753  0.9s
+430/711 "Nova | Rising Sun (Factory New)"  steam_n=313  median=9.436  iqr_risk=7.061186149710101  downside=9.598462518489718  ret7=-0.06817461156325966  0.8s
+431/711 "P2000 | Panther Camo (Minimal Wear)"  steam_n=7  median=9.314  iqr_risk=11.368642747386177  downside=6.492376132297481  ret7=-0.003954408001860976  0.8s
+432/711 "P250 | Crimson Kimono (Field-Tested)"  steam_n=27  median=19.277  iqr_risk=5.4177268871925275  downside=8.203986429177283  ret7=-0.03962558502340097  1.0s
+433/711 "CZ75-Auto | Distressed (Factory New)"  steam_n=52  median=5.355  iqr_risk=8.720451927823184  downside=3.8227389897438764  ret7=-0.04101915431875669  0.8s
+434/711 "AK-47 | Searing Rage (Minimal Wear)"  steam_n=1633  median=10.327  iqr_risk=4.323514152302985  downside=2.469206971426372  ret7=-0.0565725324257198  0.9s
+435/711 "M4A4 | Desert Storm (Minimal Wear)"  steam_n=8  median=24.1365  iqr_risk=12.831244073316828  downside=6.148546187117155  ret7=-0.15276050942571995  0.9s
+436/711 "AWP | Crakow! (Minimal Wear)"  steam_n=599  median=98.791  iqr_risk=1.9296188635077267  downside=2.150219180360781  ret7=-0.05144681779417304  0.9s
+437/711 "CZ75-Auto | Emerald (Factory New)"  steam_n=17  median=59.245  iqr_risk=5.3546675907661125  downside=4.145119155515274  ret7=-0.07067451853225748  0.9s
+438/711 "AWP | POP AWP (Minimal Wear)"  steam_n=145  median=13.782  iqr_risk=4.9172999552972705  downside=1.8973824069934955  ret7=-0.09162738197994824  0.8s
+439/711 "M4A1-S | Party Animal (Factory New)"  steam_n=187  median=85.586  iqr_risk=14.754886985712123  downside=11.497481743665725  ret7=-0.03904541631623215  0.9s
+440/711 "SG 553 | Colony IV (Field-Tested)"  steam_n=37  median=11.58  iqr_risk=11.993649907539863  downside=11.234778967935524  ret7=-0.0950889914304548  1.1s
+441/711 "FAMAS | Djinn (Battle-Scarred)"  steam_n=56  median=14.072  iqr_risk=12.372179987969883  downside=12.888895330719555  ret7=0.06224034466841055  0.8s
+442/711 "MP9 | Latte Rush (Field-Tested)"  steam_n=243  median=39.751  iqr_risk=21.501709090631437  downside=24.36504037933412  ret7=0.32403767958796426  0.8s
+443/711 "UMP-45 | Exposure (Factory New)"  steam_n=108  median=6.231  iqr_risk=6.302322165831682  downside=7.00403074462703  ret7=-0.06422462481846059  0.9s
+444/711 "R8 Revolver | Nitro (Factory New)"  steam_n=133  median=8.797  iqr_risk=24.775845870112388  downside=23.035969053391028  ret7=-0.19117500249575714  0.9s
+445/711 "P90 | Trigon (Field-Tested)"  steam_n=113  median=11.153  iqr_risk=4.606819515839283  downside=3.089592856761712  ret7=0.05233219567690539  0.8s
+446/711 "M4A4 | Royal Paladin (Minimal Wear)"  steam_n=30  median=110.952  iqr_risk=7.780735535887209  downside=7.539940994977819  ret7=-0.21343874967898158  1.0s
+447/711 "UMP-45 | Continuum (Factory New)"  steam_n=334  median=6.0275  iqr_risk=10.560471976401182  downside=3.4361795423742265  ret7=-0.11104313245640873  0.8s
+448/711 "MP7 | Whiteout (Field-Tested)"  steam_n=16  median=45.8935  iqr_risk=5.7864752318422115  downside=3.0284256870108885  ret7=-0.06625855239467049  0.8s
+449/711 "M4A4 | Turbine (Factory New)"  steam_n=69  median=36.966  iqr_risk=6.210077592351028  downside=6.683431276306765  ret7=-0.1236666192575736  0.8s
+450/711 "AK-47 | Frontside Misty (Well-Worn)"  steam_n=174  median=19.816  iqr_risk=7.245036225181116  downside=3.555017775088868  ret7=-0.006751467710371717  0.9s
+451/711 "Five-SeveN | Retrobution (Factory New)"  steam_n=32  median=28.6325  iqr_risk=18.481743446040618  downside=9.314809500497985  ret7=-0.17723833449777748  0.9s
+452/711 "M4A1-S | Black Lotus (Battle-Scarred)"  steam_n=871  median=6.53  iqr_risk=3.569349551150459  downside=3.0791384539967606  ret7=-0.06254631688157697  0.7s
+453/711 "Desert Eagle | Kumicho Dragon (Battle-Scarred)"  steam_n=76  median=23.05  iqr_risk=3.7286285922153537  downside=3.767603803980673  ret7=0.006594174418096843  0.8s
+454/711 "AWP | Hyper Beast (Minimal Wear)"  steam_n=74  median=65.7005  iqr_risk=5.357678458480525  downside=5.245784956229441  ret7=-0.039900548183206874  0.8s
+455/711 "M4A1-S | Nightmare (Field-Tested)"  steam_n=814  median=11.6215  iqr_risk=4.7334754797441345  downside=4.686567164179105  ret7=-0.01470714715747834  0.8s
+456/711 "M4A1-S | Atomic Alloy (Field-Tested)"  steam_n=68  median=36.396  iqr_risk=2.5885494817119263  downside=2.65600264306265  ret7=-0.041309677589434046  1.3s
+457/711 "P250 | Bengal Tiger (Minimal Wear)"  steam_n=12  median=30.614  iqr_risk=4.555676819790327  downside=5.897410457386648  ret7=-0.022382119774586928  0.8s
+458/711 "AUG | Fleet Flock (Minimal Wear)"  steam_n=52  median=16.198  iqr_risk=6.224405720820972  downside=6.22379084324311  ret7=0.008716179408026159  1.0s
+459/711 "M4A4 | Griffin (Minimal Wear)"  steam_n=186  median=9.61  iqr_risk=6.5339865278628295  downside=4.261073688507845  ret7=-0.10857142857142865  0.9s
+460/711 "Five-SeveN | Case Hardened (Field-Tested)"  steam_n=42  median=20.087  iqr_risk=23.059821484164683  downside=4.702797138765475  ret7=0.3930121089808274  1.0s
+461/711 "P2000 | Panther Camo (Field-Tested)"  steam_n=20  median=7.584  iqr_risk=7.2807405323581005  downside=7.359777090115065  ret7=-0.04474025974025975  0.8s
+462/711 "AUG | Fleet Flock (Battle-Scarred)"  steam_n=51  median=13.405  iqr_risk=5.111569473092067  downside=4.897806112882046  ret7=0.04169893139228753  0.9s
+463/711 "FAMAS | Dark Water (Minimal Wear)"  steam_n=12  median=64.698  iqr_risk=5.962720073343637  downside=3.28101631556282  ret7=-0.16714552411720318  1.0s
+464/711 "AWP | Exoskeleton (Field-Tested)"  steam_n=528  median=6.787  iqr_risk=7.0347192707340955  downside=5.832954728650355  ret7=-0.01449275362318836  0.8s
+465/711 "SG 553 | Danger Close (Factory New)"  steam_n=51  median=4.154  iqr_risk=19.578352990844085  downside=35.19881791076282  ret7=-0.2526570048309178  0.8s
+466/711 "Dual Berettas | Emerald (Factory New)"  steam_n=13  median=71.424  iqr_risk=8.13075361183061  downside=5.112286076322981  ret7=-0.13682805596465397  0.9s
+467/711 "Sawed-Off | Kiss♥Love (Minimal Wear)"  steam_n=623  median=8.35  iqr_risk=4.241693841863983  downside=1.6186965357531127  ret7=-0.06734234234234238  0.8s
+468/711 "AK-47 | Inheritance (Minimal Wear)"  steam_n=390  median=87.351  iqr_risk=5.2868317973142505  downside=3.972486884054807  ret7=-0.014096735132171134  0.9s
+469/711 "Five-SeveN | Fowl Play (Minimal Wear)"  steam_n=37  median=25.329  iqr_risk=14.981258769684146  downside=12.984799865547803  ret7=-0.01762150146509045  0.9s
+470/711 "Five-SeveN | Case Hardened (Factory New)"  steam_n=14  median=93.1135  iqr_risk=8.717012776685891  downside=9.39103271775674  ret7=-0.07424037178531029  1.1s
+471/711 "AWP | Chrome Cannon (Minimal Wear)"  steam_n=480  median=48.573  iqr_risk=3.8229792604399493  downside=3.6365424369136687  ret7=-0.03862849826961923  0.9s
+472/711 "MP9 | Airlock (Factory New)"  steam_n=13  median=55.434  iqr_risk=5.56519173192078  downside=7.062197719944721  ret7=-0.34149374466160876  0.9s
+473/711 "FAMAS | Pulse (Field-Tested)"  steam_n=76  median=12.8935  iqr_risk=4.382828575228647  downside=4.752888895843275  ret7=0.014104981926764015  1.0s
+474/711 "AWP | Mortis (Battle-Scarred)"  steam_n=411  median=4.685  iqr_risk=6.113038328115759  downside=3.807428716473469  ret7=-0.08519906797690213  0.9s
+475/711 "AUG | Radiation Hazard (Field-Tested)"  steam_n=38  median=4.4025  iqr_risk=10.015635267725639  downside=9.566971063424797  ret7=-0.16154363921920567  1.1s
+476/711 "SG 553 | Cyrex (Field-Tested)"  steam_n=155  median=5.803  iqr_risk=4.968244212251579  downside=4.080447995629309  ret7=-0.06839681875261616  0.9s
+477/711 "AK-47 | Nouveau Rouge (Minimal Wear)"  steam_n=299  median=46.631  iqr_risk=4.781696821703113  downside=2.9821792455639575  ret7=-0.0037175515436385087  1.0s
+478/711 "M4A4 | Turbine (Minimal Wear)"  steam_n=406  median=4.558  iqr_risk=7.107566958481415  downside=4.593915229262368  ret7=-0.05828536184210531  0.9s
+479/711 "MP7 | Bloodsport (Battle-Scarred)"  steam_n=87  median=40.691  iqr_risk=11.014256537683705  downside=10.171813402595333  ret7=0.048766710600640195  0.9s
+480/711 "Sawed-Off | Kiss♥Love (Factory New)"  steam_n=109  median=35.896  iqr_risk=4.210688543899852  downside=4.846419951508287  ret7=-0.08662356245693992  0.8s
+481/711 "M4A4 | 龍王 (Dragon King) (Minimal Wear)"  steam_n=174  median=33.34  iqr_risk=6.640162028354944  downside=6.386617658090173  ret7=0.012921600959376445  0.9s
+482/711 "P90 | Ancient Earth (Well-Worn)"  steam_n=90  median=7.837  iqr_risk=0.38561530519586257  downside=0.7463522036048763  ret7=-0.40516129032258075  0.8s
+483/711 "AK-47 | Frontside Misty (Minimal Wear)"  steam_n=253  median=38.312  iqr_risk=6.421763528909509  downside=2.775477453103381  ret7=0.047786366830639526  0.9s
+484/711 "M4A4 | Urban DDPAT (Factory New)"  steam_n=49  median=54.767  iqr_risk=6.342024120126255  downside=9.392982904267551  ret7=-0.05508994452988647  0.8s
+485/711 "MAG-7 | Monster Call (Factory New)"  steam_n=177  median=7.777  iqr_risk=8.62670723194648  downside=10.320439369394286  ret7=-0.09697588362893961  0.9s
+486/711 "USP-S | Cyrex (Factory New)"  steam_n=497  median=20.937  iqr_risk=16.64718372020899  downside=12.896915332681246  ret7=0.10464407891653793  0.8s
+487/711 "MAC-10 | Derailment (Factory New)"  steam_n=266  median=36.0105  iqr_risk=15.92351087576189  downside=22.739971580353576  ret7=0.37496800614282044  0.8s
+488/711 "R8 Revolver | Skull Crusher (Field-Tested)"  steam_n=216  median=12.214  iqr_risk=5.939105982740226  downside=4.977536442677524  ret7=-0.038895756077461874  0.8s
+489/711 "AWP | Corticera (Minimal Wear)"  steam_n=58  median=37.315  iqr_risk=6.289992646567283  downside=5.166120729995307  ret7=-0.08722339712178262  1.0s
+490/711 "Galil AR | Urban Rubble (Minimal Wear)"  steam_n=6  median=11.267  iqr_risk=8.232512863301347  downside=14.559866499791397  ret7=-0.08167895632444688  0.9s
+491/711 "Dual Berettas | Sweet Little Angels (Minimal Wear)"  steam_n=651  median=10.282  iqr_risk=7.838017516307118  downside=4.200830531173824  ret7=-0.1077551020408164  0.8s
+492/711 "M4A4 | Tornado (Minimal Wear)"  steam_n=9  median=65.784  iqr_risk=6.9737112219391  downside=4.389815362693374  ret7=0.08776547191626616  0.9s
+493/711 "USP-S | Whiteout (Battle-Scarred)"  steam_n=33  median=54.699  iqr_risk=3.0715193867937507  downside=4.617706513487063  ret7=-0.006727402709291841  0.9s
+494/711 "XM1014 | Banana Leaf (Factory New)"  steam_n=7  median=26.199  iqr_risk=0.8896594633968701  downside=0.38242078426612813  ret7=None  0.8s
+495/711 "SG 553 | Barricade (Field-Tested)"  steam_n=28  median=12.038  iqr_risk=23.656527627532988  downside=15.768179146685297  ret7=-0.05350568942436407  0.7s
+496/711 "Nova | Red Quartz (Factory New)"  steam_n=16  median=24.904  iqr_risk=1.175118375635954  downside=0.5552989623842206  ret7=0.028918855717514846  0.7s
+497/711 "Tec-9 | Toxic (Factory New)"  steam_n=37  median=72.553  iqr_risk=12.348746861552533  downside=6.359047894507418  ret7=0.09465478146257977  1.0s
+498/711 "AUG | Death by Puppy (Factory New)"  steam_n=71  median=30.563  iqr_risk=6.100145950441567  downside=5.504694038037729  ret7=-0.09236721564209371  0.8s
+499/711 "M4A1-S | Stratosphere (Field-Tested)"  steam_n=1002  median=7.955  iqr_risk=5.018726591760301  downside=3.093632958801496  ret7=-0.08241693271845818  0.9s
+500/711 "Glock-18 | Glockingbird (Minimal Wear)"  steam_n=1056  median=3.412  iqr_risk=7.767904431236398  downside=8.827164126404984  ret7=-0.12443618997081463  0.9s
+501/711 "FAMAS | Bad Trip (Minimal Wear)"  steam_n=405  median=68.617  iqr_risk=6.366656178817334  downside=6.797286305237018  ret7=-0.03884954757488901  0.7s
+502/711 "AK-47 | Breakthrough (Field-Tested)"  steam_n=2428  median=5.215  iqr_risk=6.6110678394346385  downside=5.1482740933528355  ret7=-0.14208975914053024  0.8s
+503/711 "R8 Revolver | Crazy 8 (Factory New)"  steam_n=181  median=9.85  iqr_risk=8.420533779690087  downside=9.088015115885026  ret7=-0.10689722931813728  0.9s
+504/711 "Glock-18 | Nuclear Garden (Factory New)"  steam_n=149  median=33.596  iqr_risk=6.964871550458783  downside=3.9046555283302435  ret7=-0.02478630151902883  0.8s
+505/711 "P2000 | Handgun (Factory New)"  steam_n=49  median=37.682  iqr_risk=11.545062946248754  downside=4.307591263722595  ret7=-0.18767555797495916  0.8s
+506/711 "Glock-18 | AXIA (Minimal Wear)"  steam_n=248  median=66.971  iqr_risk=6.093968545228037  downside=9.443927244162015  ret7=0.09242931485962425  0.8s
+507/711 "AWP | Green Energy (Minimal Wear)"  steam_n=439  median=30.638  iqr_risk=5.179070481236779  downside=2.9420221960163557  ret7=-0.0007184611867672164  0.9s
+508/711 "Desert Eagle | Crimson Web (Minimal Wear)"  steam_n=51  median=48.648  iqr_risk=2.328965362114306  downside=4.227967888145969  ret7=0.05895768056161499  1.0s
+509/711 "AK-47 | Predator (Minimal Wear)"  steam_n=9  median=31.355  iqr_risk=4.570218781000315  downside=7.2546676766364255  ret7=0.029351029845214427  1.0s
+510/711 "MP9 | Hydra (Field-Tested)"  steam_n=276  median=7.375  iqr_risk=5.742176284811943  downside=6.097644340538393  ret7=-0.027041499330655916  0.9s
+511/711 "AK-47 | Redline (Battle-Scarred)"  steam_n=142  median=33.008  iqr_risk=2.8492530173014012  downside=2.6857464679557452  ret7=-0.00839563308413438  1.2s
+512/711 "SG 553 | Ultraviolet (Minimal Wear)"  steam_n=10  median=24.856  iqr_risk=3.810898848114818  downside=1.4335620318499536  ret7=0.024173856421943807  1.1s
+513/711 "Five-SeveN | Fairy Tale (Minimal Wear)"  steam_n=16  median=76.978  iqr_risk=11.892413042306114  downside=6.778425094551328  ret7=-0.011027988360039376  0.9s
+514/711 "MP5-SD | Phosphor (Factory New)"  steam_n=36  median=27.687  iqr_risk=7.977277280141934  downside=7.950447872249092  ret7=-0.031875409358853024  0.8s
+515/711 "AK-47 | Red Laminate (Field-Tested)"  steam_n=32  median=73.5305  iqr_risk=3.250953984581569  downside=3.8459572158725317  ret7=-0.06991297860161183  0.9s
+516/711 "FAMAS | Mecha Industries (Field-Tested)"  steam_n=157  median=40.789  iqr_risk=6.029219657216807  downside=5.43610130069386  ret7=-0.027679188204187577  0.9s
+517/711 "AUG | Chameleon (Field-Tested)"  steam_n=71  median=98.288  iqr_risk=9.125671356050397  downside=7.922788090542082  ret7=-0.03951881542400182  1.0s
+518/711 "AK-47 | Aquamarine Revenge (Well-Worn)"  steam_n=93  median=42.506  iqr_risk=2.251597049272602  downside=4.266681803453557  ret7=-0.03046666742938209  0.9s
+519/711 "MAC-10 | Amber Fade (Factory New)"  steam_n=1  median=59.339  iqr_risk=0.0  downside=0.0  ret7=-0.09762922185556355  0.9s
+520/711 "G3SG1 | Stinger (Factory New)"  steam_n=51  median=15.808  iqr_risk=8.677415126491022  downside=22.04745051776117  ret7=0.07370751399921849  0.9s
+521/711 "CZ75-Auto | Tuxedo (Factory New)"  steam_n=81  median=4.066  iqr_risk=15.210266930177859  downside=16.1859254997123  ret7=-0.1106440845592781  1.1s
+522/711 "MP9 | Hydra (Well-Worn)"  steam_n=74  median=5.96  iqr_risk=7.432557982398357  downside=6.841331779253032  ret7=-0.12557781201849005  0.9s
+523/711 "P2000 | Acid Etched (Factory New)"  steam_n=80  median=30.247  iqr_risk=12.035329833535846  downside=7.755009808384444  ret7=-0.1387830470719269  0.8s
+524/711 "AK-47 | The Outsiders (Battle-Scarred)"  steam_n=502  median=9.5985  iqr_risk=4.4094357785345375  downside=3.100061069650455  ret7=-0.06285021959715287  0.8s
+525/711 "UMP-45 | Houndstooth (Field-Tested)"  steam_n=17  median=6.671  iqr_risk=8.031641637242574  downside=14.490293836851595  ret7=-0.1783146390566579  0.9s
+526/711 "AWP | Asiimov (Well-Worn)"  steam_n=45  median=111.877  iqr_risk=8.720786355582396  downside=7.0398010174100705  ret7=-0.00040151480585848276  0.9s
+527/711 "USP-S | Kill Confirmed (Well-Worn)"  steam_n=33  median=67.865  iqr_risk=2.7406086645396854  downside=4.804824421406424  ret7=0.008069870026407688  1.0s
+528/711 "USP-S | Blueprint (Well-Worn)"  steam_n=32  median=6.683  iqr_risk=11.67623194142093  downside=19.155414148487573  ret7=0.18960717599752552  0.9s
+529/711 "Negev | Nuclear Waste (Minimal Wear)"  steam_n=27  median=6.26  iqr_risk=20.505339237844165  downside=4.866778240199052  ret7=0.4700770471241711  0.8s
+530/711 "Desert Eagle | Printstream (Factory New)"  steam_n=86  median=103.6705  iqr_risk=4.170477409914023  downside=3.80031384479124  ret7=-0.019715141720302087  0.9s
+531/711 "MAC-10 | Surfwood (Minimal Wear)"  steam_n=15  median=7.342  iqr_risk=11.996846154891863  downside=18.24064381941517  ret7=-0.14822765301629226  0.8s
+532/711 "MP5-SD | Condition Zero (Factory New)"  steam_n=19  median=7.769  iqr_risk=5.571137174910763  downside=7.167261601223862  ret7=-0.02580645161290329  0.9s
+533/711 "AUG | Chameleon (Minimal Wear)"  steam_n=79  median=104.787  iqr_risk=11.364630667732218  downside=11.8821372252782  ret7=0.11930503554751581  1.2s
+534/711 "SG 553 | Desert Blossom (Minimal Wear)"  steam_n=6  median=14.976  iqr_risk=0.0  downside=4.284553446110671  ret7=0.1582897932151004  0.8s
+535/711 "USP-S | Printstream (Well-Worn)"  steam_n=65  median=43.181  iqr_risk=3.6621684504420617  downside=5.3215449046067915  ret7=-0.007911651279653986  1.0s
+536/711 "P90 | Trigon (Minimal Wear)"  steam_n=26  median=19.807  iqr_risk=5.632631930028918  downside=6.234972595988698  ret7=-0.032318572406276114  1.1s
+537/711 "FAMAS | Mecha Industries (Factory New)"  steam_n=75  median=95.705  iqr_risk=7.366515046941137  downside=5.201568307873967  ret7=0.017374427451284813  0.9s
+538/711 "P250 | Mehndi (Field-Tested)"  steam_n=8  median=21.059  iqr_risk=11.380688042567687  downside=4.993694017141231  ret7=-0.11877744445893668  1.1s
+539/711 "FAMAS | Bad Trip (Battle-Scarred)"  steam_n=358  median=56.938  iqr_risk=10.231656121250404  downside=11.85445551230141  ret7=-0.044017493490018045  1.0s
+540/711 "M4A1-S | Guardian (Field-Tested)"  steam_n=39  median=31.896  iqr_risk=5.628400622185029  downside=5.768329783047338  ret7=0.034122111498472885  0.9s
+541/711 "AUG | Anodized Navy (Factory New)"  steam_n=6  median=50.6995  iqr_risk=2.2198614048595946  downside=5.554526758998449  ret7=0.18075414900780307  1.1s
+542/711 "P90 | Storm (Minimal Wear)"  steam_n=24  median=4.0295  iqr_risk=11.1061419200954  downside=8.37805605247465  ret7=-0.009531374106433677  0.9s
+543/711 "AK-47 | Neon Rider (Minimal Wear)"  steam_n=83  median=98.494  iqr_risk=7.611640929814179  downside=9.30177211666746  ret7=-0.022076932098041513  1.1s
+544/711 "AK-47 | Legion of Anubis (Factory New)"  steam_n=158  median=82.436  iqr_risk=5.082094256234358  downside=4.212882223697968  ret7=-0.03086750807441574  1.0s
+545/711 "AWP | Containment Breach (Battle-Scarred)"  steam_n=27  median=61.066  iqr_risk=4.141619301895139  downside=2.9657171872696613  ret7=-0.028203162883824295  0.9s
+546/711 "P250 | Bengal Tiger (Field-Tested)"  steam_n=4  median=26.899  iqr_risk=5.32027065980914  downside=10.207773883755866  ret7=0.24622709306503787  0.9s
+547/711 "AWP | Printstream (Battle-Scarred)"  steam_n=379  median=55.69  iqr_risk=8.706022659511028  downside=8.261505935924532  ret7=0.06156239582175793  0.8s
+548/711 "AWP | Elite Build (Battle-Scarred)"  steam_n=85  median=16.013  iqr_risk=2.757215025258845  downside=3.392437353073588  ret7=0.010941199053042583  0.9s
+549/711 "SG 553 | Phantom (Factory New)"  steam_n=142  median=6.081  iqr_risk=4.813280780279241  downside=8.066671120315327  ret7=-0.04242216900444751  1.0s
+550/711 "UMP-45 | Wild Child (Well-Worn)"  steam_n=1302  median=4.037  iqr_risk=5.0227515727179926  downside=5.097346893104908  ret7=-0.04310971179462331  0.7s
+551/711 "AUG | Wings (Minimal Wear)"  steam_n=10  median=23.848  iqr_risk=4.4273610743752325  downside=6.909806062984727  ret7=0.03305556147567201  1.0s
+552/711 "G3SG1 | Keeping Tabs (Factory New)"  steam_n=14  median=6.2525  iqr_risk=16.257113506285975  downside=15.692924812888299  ret7=0.16580628226441507  0.8s
+553/711 "USP-S | The Traitor (Minimal Wear)"  steam_n=77  median=82.492  iqr_risk=4.056734998322053  downside=3.769526224105863  ret7=0.02339252461570296  0.9s
+554/711 "M4A4 | X-Ray (Minimal Wear)"  steam_n=18  median=108.235  iqr_risk=11.576423108979517  downside=14.859114769919135  ret7=-0.128608501288074  0.9s
+555/711 "Tec-9 | Whiteout (Well-Worn)"  steam_n=292  median=4.777  iqr_risk=13.24199940341757  downside=18.5579750287638  ret7=0.29855659660673606  0.9s
+556/711 "Tec-9 | Bamboo Forest (Factory New)"  steam_n=69  median=37.883  iqr_risk=8.246066949440296  downside=10.758153096586785  ret7=0.035890310402684644  1.0s
+557/711 "AWP | Fever Dream (Minimal Wear)"  steam_n=339  median=18.91  iqr_risk=5.926184839770578  downside=4.782256398849709  ret7=-0.048998006505088676  0.9s
+558/711 "AK-47 | Inheritance (Well-Worn)"  steam_n=71  median=54.186  iqr_risk=7.566667956806129  downside=7.541786695713233  ret7=-0.1291029207232267  0.8s
+559/711 "MP7 | Smoking Kills (Well-Worn)"  steam_n=377  median=7.239  iqr_risk=7.491411779313772  downside=5.656498765227711  ret7=-0.10667624771361373  0.8s
+560/711 "Glock-18 | Water Elemental (Well-Worn)"  steam_n=29  median=23.148  iqr_risk=5.7837000095240665  downside=7.230490835259797  ret7=0.08218776761166446  0.9s
+561/711 "Tec-9 | Orange Murano (Factory New)"  steam_n=1  median=26.905  iqr_risk=0.0  downside=0.0  ret7=-0.0636528154799193  0.8s
+562/711 "P250 | Whiteout (Field-Tested)"  steam_n=15  median=51.208  iqr_risk=7.0239689265000935  downside=3.721461273816244  ret7=-0.05470902085678475  0.9s
+563/711 "Desert Eagle | Firebreathing (Factory New)"  steam_n=808  median=10.829  iqr_risk=19.61285996612084  downside=7.340485601355173  ret7=-0.19166920499543094  0.9s
+564/711 "CZ75-Auto | Slalom (Minimal Wear)"  steam_n=21  median=18.811  iqr_risk=6.969594132574248  downside=2.2083888385191637  ret7=-0.08587106980423187  0.8s
+565/711 "Glock-18 | Groundwater (Minimal Wear)"  steam_n=6  median=31.353  iqr_risk=16.018737654490852  downside=5.167531998948151  ret7=-0.0491012993646841  0.9s
+566/711 "P90 | ScaraB Rush (Field-Tested)"  steam_n=43  median=13.632  iqr_risk=10.367294177079774  downside=11.207524181685805  ret7=-0.15131811435437137  0.9s
+567/711 "AK-47 | Cartel (Field-Tested)"  steam_n=406  median=20.046  iqr_risk=4.91192812389171  downside=2.1229853804626284  ret7=-0.09221462874030295  0.9s
+568/711 "XM1014 | Teclu Burner (Factory New)"  steam_n=39  median=15.179  iqr_risk=15.12485850278903  downside=19.04859321086153  ret7=-0.08233976681378041  1.0s
+569/711 "MAC-10 | Toybox (Field-Tested)"  steam_n=24  median=19.529  iqr_risk=6.820684311406554  downside=7.100546470372338  ret7=-0.08376001371910147  0.7s
+570/711 "P250 | Dark Filigree (Field-Tested)"  steam_n=8  median=6.585  iqr_risk=8.954098558417273  downside=5.298872067072803  ret7=-0.1809111198634633  0.9s
+571/711 "Galil AR | Rainbow Spoon (Minimal Wear)"  steam_n=293  median=54.704  iqr_risk=15.496305274840816  downside=11.226561130907177  ret7=0.11146431919142508  0.7s
+572/711 "AWP | Elite Build (Field-Tested)"  steam_n=115  median=16.693  iqr_risk=6.250217625961896  downside=3.0815836205996168  ret7=-0.04263679549586519  0.9s
+573/711 "USP-S | Royal Blue (Field-Tested)"  steam_n=84  median=12.272  iqr_risk=8.0415024135981  downside=7.954629272970168  ret7=0.030634390651085086  0.8s
+574/711 "XM1014 | XOXO (Battle-Scarred)"  steam_n=154  median=4.121  iqr_risk=12.659803686856586  downside=8.324156092889648  ret7=-0.10068541715906398  0.9s
+575/711 "Desert Eagle | Mulberry (Field-Tested)"  steam_n=2064  median=4.285  iqr_risk=8.154476945277958  downside=3.5962159562040457  ret7=-0.06233595800524938  0.8s
+576/711 "Negev | Phoenix Stencil (Factory New)"  steam_n=3  median=33.614  iqr_risk=8.473739169700576  downside=0.6186323483758099  ret7=-0.24253554769362518  0.8s
+577/711 "M4A1-S | Glitched Paint (Well-Worn)"  steam_n=260  median=4.37  iqr_risk=3.845889705377382  downside=4.186983494723349  ret7=0.017596665894882957  0.8s
+578/711 "M4A4 | Desert Storm (Field-Tested)"  steam_n=15  median=12.545  iqr_risk=7.511380880121396  downside=7.675105822218676  ret7=-0.052024886446047525  0.9s
+579/711 "Glock-18 | Glockingbird (Factory New)"  steam_n=510  median=10.958  iqr_risk=10.055721374645394  downside=9.415341397377496  ret7=-0.05725813374538591  0.8s
+580/711 "Nova | Green Apple (Factory New)"  steam_n=17  median=18.649  iqr_risk=9.169897072583879  downside=6.330704451276572  ret7=-0.12418825063310168  0.9s
+581/711 "Glock-18 | Water Elemental (Battle-Scarred)"  steam_n=76  median=22.739  iqr_risk=4.343039066127225  downside=6.031261745263207  ret7=-0.007036747458952219  0.9s
+582/711 "MP7 | Amberline (Factory New)"  steam_n=671  median=9.367  iqr_risk=5.553341443973641  downside=8.505684440156077  ret7=-0.16319410795619738  1.0s
+583/711 "AWP | Crakow! (Field-Tested)"  steam_n=1198  median=46.152  iqr_risk=6.395944561289982  downside=3.7793237340236256  ret7=-0.09940229885057472  0.8s
+584/711 "Tec-9 | Hades (Factory New)"  steam_n=11  median=47.008  iqr_risk=7.782220141621435  downside=4.289130407277617  ret7=-0.06149892933618839  0.9s
+585/711 "P90 | ScaraB Rush (Minimal Wear)"  steam_n=19  median=28.452  iqr_risk=11.733464313731043  downside=9.835544216485156  ret7=-0.21045972806536195  0.9s
+586/711 "AWP | LongDog (Well-Worn)"  steam_n=66  median=124.901  iqr_risk=16.049789071641616  downside=17.98323196003225  ret7=0.4367450825343482  0.8s
+587/711 "Glock-18 | Snack Attack (Well-Worn)"  steam_n=40  median=17.7835  iqr_risk=5.086446786186759  downside=6.857009260526439  ret7=-0.04867106822414091  0.8s
+588/711 "M4A4 | Polysoup (Factory New)"  steam_n=105  median=65.069  iqr_risk=20.49845529924191  downside=12.058968895445634  ret7=0.01960831779999528  0.8s
+589/711 "AUG | Eye of Zapems (Field-Tested)"  steam_n=2065  median=4.496  iqr_risk=8.017411775157122  downside=5.760987851733411  ret7=-0.12139573756790634  0.8s
+590/711 "P250 | Cartel (Minimal Wear)"  steam_n=37  median=17.157  iqr_risk=10.00040001600064  downside=5.032201288051528  ret7=-0.03650249901724034  0.9s
+591/711 "Desert Eagle | Starcade (Field-Tested)"  steam_n=40  median=81.866  iqr_risk=7.884095360235423  downside=10.249087854295286  ret7=-0.11599825532012575  1.0s
+592/711 "M4A4 | Full Throttle (Field-Tested)"  steam_n=189  median=57.792  iqr_risk=6.237570522614174  downside=4.315429195722124  ret7=-0.09766496812229519  1.0s
+593/711 "Desert Eagle | Kumicho Dragon (Minimal Wear)"  steam_n=113  median=34.905  iqr_risk=8.151745273452459  downside=5.470175992067963  ret7=0.011872146118721671  0.8s
+594/711 "Tec-9 | Bamboo Forest (Field-Tested)"  steam_n=73  median=12.059  iqr_risk=11.60937667720814  downside=6.942506337266427  ret7=-0.06620721697382692  0.8s
+595/711 "SCAR-20 | Wild Berry (Factory New)"  steam_n=22  median=6.0  iqr_risk=12.68611120043735  downside=7.016754027719714  ret7=0.09869987181834827  0.8s
+596/711 "Glock-18 | Bullet Queen (Well-Worn)"  steam_n=76  median=69.842  iqr_risk=4.984166564232227  downside=11.854589940353895  ret7=-0.05433619930945777  0.9s
+597/711 "MP7 | Nemesis (Minimal Wear)"  steam_n=106  median=9.632  iqr_risk=4.534335229090771  downside=3.968704519884801  ret7=-0.06099706744868039  0.8s
+598/711 "M4A4 | In Living Color (Well-Worn)"  steam_n=22  median=40.132  iqr_risk=9.152842727048982  downside=3.8542948560177095  ret7=-0.05657514804482944  0.8s
+599/711 "M4A1-S | Control Panel (Well-Worn)"  steam_n=238  median=6.291  iqr_risk=4.078458755197253  downside=3.538896118322924  ret7=-0.05035183737294746  0.8s
+600/711 "Desert Eagle | Heirloom (Minimal Wear)"  steam_n=43  median=24.7  iqr_risk=11.725694726203733  downside=5.957641434968308  ret7=-0.16975710258078514  0.9s
+601/711 "FAMAS | Pulse (Minimal Wear)"  steam_n=73  median=13.592  iqr_risk=5.065107121159999  downside=5.621390562212256  ret7=0.06584946558038718  0.9s
+602/711 "P250 | Nuclear Threat (Field-Tested)"  steam_n=4  median=47.3365  iqr_risk=11.913063764588676  downside=5.8863338776831275  ret7=0.012617210442108728  0.9s
+603/711 "AK-47 | Orbit Mk01 (Field-Tested)"  steam_n=116  median=35.0155  iqr_risk=4.646557718556744  downside=4.475438029204808  ret7=0.014975515317162014  1.1s
+604/711 "MP7 | Just Smile (Factory New)"  steam_n=401  median=9.145  iqr_risk=6.411182346470516  downside=8.733430371448566  ret7=-0.17609999999999992  0.8s
+605/711 "AWP | Neo-Noir (Factory New)"  steam_n=169  median=72.979  iqr_risk=6.8084692822491135  downside=5.843351213889053  ret7=-0.07209732397724133  0.8s
+606/711 "P2000 | Dispatch (Minimal Wear)"  steam_n=4  median=23.1355  iqr_risk=5.4355586917581435  downside=2.590429107671495  ret7=0.003302299673748621  0.8s
+607/711 "MAC-10 | Toybox (Minimal Wear)"  steam_n=11  median=37.195  iqr_risk=10.84527442311156  downside=5.68961537388358  ret7=-0.13688991387019345  0.9s
+608/711 "Nova | Sobek's Bite (Field-Tested)"  steam_n=36  median=14.3075  iqr_risk=5.752389674317442  downside=12.445624177207941  ret7=-0.028402527689067147  0.8s
+609/711 "M4A4 | Hellish (Well-Worn)"  steam_n=226  median=30.828  iqr_risk=12.443079529810435  downside=18.753971195594612  ret7=0.18259388967358703  0.8s
+610/711 "M4A4 | Desolate Space (Battle-Scarred)"  steam_n=340  median=14.058  iqr_risk=2.7266822273139297  downside=2.6845685489339473  ret7=-0.02398728051983956  0.8s
+611/711 "UMP-45 | Metal Flowers (Factory New)"  steam_n=5  median=13.247  iqr_risk=16.224602985158455  downside=0.14322020809054056  ret7=-0.12796990496304117  0.8s
+612/711 "Five-SeveN | Heat Treated (Battle-Scarred)"  steam_n=427  median=5.119  iqr_risk=5.609802795328359  downside=3.924947348267281  ret7=0.03570027461749703  0.8s
+613/711 "XM1014 | Halftone Shift (Factory New)"  steam_n=69  median=6.034  iqr_risk=10.76277241872097  downside=3.7215672263903774  ret7=-0.013474330547501356  0.7s
+614/711 "P2000 | Imperial Dragon (Minimal Wear)"  steam_n=73  median=14.83  iqr_risk=5.753516409912927  downside=6.657736101808438  ret7=-0.06664965877925888  0.9s
+615/711 "AK-47 | Orbit Mk01 (Minimal Wear)"  steam_n=58  median=49.036  iqr_risk=5.719362371814393  downside=6.1977865773175  ret7=-0.0035840128863383613  0.9s
+616/711 "M4A4 | Faded Zebra (Battle-Scarred)"  steam_n=10  median=4.859  iqr_risk=5.954097820264529  downside=8.865219003667228  ret7=-0.0767563662633195  0.9s
+617/711 "SCAR-20 | Cardiac (Field-Tested)"  steam_n=30  median=10.817  iqr_risk=10.758152547814525  downside=5.9588130073843  ret7=0.05158908796254624  0.9s
+618/711 "MAC-10 | Propaganda (Minimal Wear)"  steam_n=6  median=73.106  iqr_risk=0.19010284769947197  downside=2.2963325935106815  ret7=-0.05424602995068539  0.8s
+619/711 "M4A1-S | Dark Water (Field-Tested)"  steam_n=26  median=84.602  iqr_risk=5.2252590029994685  downside=4.385339418140333  ret7=-0.14840996376632742  1.1s
+620/711 "FAMAS | Sergeant (Minimal Wear)"  steam_n=5  median=35.879  iqr_risk=7.740453349921976  downside=3.2222331357976115  ret7=-0.07467664215064662  0.8s
+621/711 "MAC-10 | Disco Tech (Minimal Wear)"  steam_n=226  median=9.8475  iqr_risk=6.051122577322657  downside=4.719083319303176  ret7=-0.11132177681473465  1.0s
+622/711 "M4A4 | 龍王 (Dragon King) (Field-Tested)"  steam_n=369  median=17.854  iqr_risk=7.384512572049102  downside=4.588867541001855  ret7=0.027112785789160654  0.9s
+623/711 "MAG-7 | Core Breach (Factory New)"  steam_n=14  median=25.042  iqr_risk=0.0  downside=1.1435867654195329  ret7=-0.08096068896395558  0.9s
+624/711 "SCAR-20 | Bloodsport (Factory New)"  steam_n=43  median=27.039  iqr_risk=6.173134547861103  downside=4.912770924867186  ret7=0.024374477146551055  0.8s
+625/711 "Glock-18 | Ramese's Reach (Minimal Wear)"  steam_n=59  median=29.358  iqr_risk=9.69223640194961  downside=6.817543776572893  ret7=-0.0972679341747883  0.9s
+626/711 "SSG 08 | Death's Head (Field-Tested)"  steam_n=10  median=27.1185  iqr_risk=8.919304666056728  downside=4.842086001829827  ret7=-0.023480708726610344  1.0s
+627/711 "USP-S | Para Green (Field-Tested)"  steam_n=36  median=10.2245  iqr_risk=7.457252388389693  downside=12.596093385529713  ret7=-0.08471760797342187  0.9s
+628/711 "M4A4 | In Living Color (Minimal Wear)"  steam_n=112  median=67.275  iqr_risk=6.0229080914745605  downside=3.8771922903269767  ret7=-0.03167092924126169  1.1s
+629/711 "Sawed-Off | Kiss♥Love (Well-Worn)"  steam_n=713  median=4.197  iqr_risk=5.195852807895784  downside=4.673894991577501  ret7=-0.09566414315209903  0.8s
+630/711 "AWP | Worm God (Factory New)"  steam_n=651  median=7.521  iqr_risk=5.269934822720458  downside=4.8717029721370455  ret7=-0.08661616161616159  0.9s
+631/711 "Tec-9 | Remote Control (Minimal Wear)"  steam_n=69  median=7.957  iqr_risk=12.553571211771711  downside=3.2391613146041482  ret7=-0.11996001332889039  0.9s
+632/711 "P90 | Chopper (Factory New)"  steam_n=90  median=9.7  iqr_risk=4.981092981092966  downside=6.640766640766641  ret7=-0.15031315240083498  0.8s
+633/711 "P90 | Attack Vector (Field-Tested)"  steam_n=41  median=13.7  iqr_risk=7.672038549446071  downside=3.544860316489788  ret7=-0.07903594991248142  0.7s
+634/711 "Glock-18 | Royal Legion (Minimal Wear)"  steam_n=80  median=9.786  iqr_risk=2.87224288378131  downside=5.923743393738339  ret7=-0.07889999999999997  0.9s
+635/711 "USP-S | Monster Mashup (Field-Tested)"  steam_n=114  median=28.8515  iqr_risk=2.3619384632200284  downside=2.262542354355673  ret7=-0.003116559318512402  0.9s
+636/711 "AWP | Sun in Leo (Field-Tested)"  steam_n=92  median=26.471  iqr_risk=5.139389053462581  downside=5.483536082199803  ret7=-0.016088419029312795  0.9s
+637/711 "MAC-10 | Heat (Field-Tested)"  steam_n=173  median=3.695  iqr_risk=11.67293800983273  downside=9.722870718778315  ret7=-0.04255918827508465  0.9s
+638/711 "MP7 | Fade (Minimal Wear)"  steam_n=604  median=10.23  iqr_risk=6.245366938472942  downside=5.120752214115723  ret7=-0.030666163427061854  0.9s
+639/711 "CZ75-Auto | Victoria (Field-Tested)"  steam_n=8  median=110.6455  iqr_risk=14.534045363540368  downside=18.086185428107527  ret7=-0.3331564614172122  0.9s
+640/711 "P90 | Module (Factory New)"  steam_n=156  median=4.4685  iqr_risk=14.704400587037009  downside=8.027949970429093  ret7=-0.11530506721820066  0.9s
+641/711 "Five-SeveN | Boost Protocol (Minimal Wear)"  steam_n=248  median=5.945  iqr_risk=5.278000266987052  downside=6.396008543585639  ret7=-0.022877478393492634  1.1s
+642/711 "Glock-18 | Mirror Mosaic (Field-Tested)"  steam_n=489  median=8.646  iqr_risk=4.974252986303291  downside=8.512277997688035  ret7=-0.08677823340352431  0.9s
+643/711 "AK-47 | Frontside Misty (Battle-Scarred)"  steam_n=234  median=19.581  iqr_risk=1.7446239451557797  downside=2.546484877363952  ret7=0.011324445359551127  0.8s
+644/711 "MP7 | Army Recon (Factory New)"  steam_n=207  median=3.906  iqr_risk=38.41488592959637  downside=20.62558067513163  ret7=-0.24440505207179253  1.0s
+645/711 "SSG 08 | Fever Dream (Factory New)"  steam_n=299  median=7.547  iqr_risk=7.909559907348915  downside=5.514318803958723  ret7=-0.18575005690871838  0.7s
+646/711 "MP9 | Setting Sun (Factory New)"  steam_n=11  median=90.516  iqr_risk=15.770531226479065  downside=19.575242520488704  ret7=0.06888943991963425  0.9s
+647/711 "Galil AR | Phoenix Blacklight (Field-Tested)"  steam_n=5  median=95.725  iqr_risk=7.031746961732904  downside=5.517844588034418  ret7=-0.07591054576142109  0.7s
+648/711 "Desert Eagle | Firebreathing (Minimal Wear)"  steam_n=3356  median=4.402  iqr_risk=16.32616040452599  downside=13.423731888165804  ret7=-0.19584569732937696  0.9s
+649/711 "M4A4 | Tooth Fairy (Battle-Scarred)"  steam_n=647  median=4.48  iqr_risk=4.495282179099163  downside=4.406266690404139  ret7=-0.06886291179596171  0.9s
+650/711 "Tec-9 | Decimator (Minimal Wear)"  steam_n=21  median=48.853  iqr_risk=6.4617111856850835  downside=5.83070070845268  ret7=-0.12916658779883028  0.8s
+651/711 "USP-S | Para Green (Minimal Wear)"  steam_n=19  median=16.243  iqr_risk=12.064799174174174  downside=7.068787537537524  ret7=-0.1166240854720707  0.9s
+652/711 "SSG 08 | Dark Water (Field-Tested)"  steam_n=119  median=4.41  iqr_risk=7.728433339412718  downside=6.469998176180929  ret7=0.1488681102362206  0.9s
+653/711 "AK-47 | Steel Delta (Minimal Wear)"  steam_n=383  median=5.519  iqr_risk=7.10879069263288  downside=5.582252411749831  ret7=-0.021802325581395166  0.8s
+654/711 "Nova | Rising Skull (Minimal Wear)"  steam_n=13  median=7.955  iqr_risk=26.70623145400595  downside=20.51487689469885  ret7=-0.1382558879694462  0.9s
+655/711 "AWP | Wildfire (Battle-Scarred)"  steam_n=56  median=50.5235  iqr_risk=4.688933712220736  downside=4.7283450085088  ret7=-0.05248355327182841  0.9s
+656/711 "Dual Berettas | Royal Consorts (Well-Worn)"  steam_n=142  median=4.393  iqr_risk=8.680803931974983  downside=11.611325195560367  ret7=-0.06445586174684725  0.8s
+657/711 "Desert Eagle | Midnight Storm (Minimal Wear)"  steam_n=58  median=38.092  iqr_risk=4.733157133333173  downside=5.86097767284244  ret7=-0.016436652990177825  0.9s
+658/711 "UMP-45 | K.O. Factory (Factory New)"  steam_n=233  median=36.594  iqr_risk=9.942766320399887  downside=7.160034272904468  ret7=-0.12415834839791451  0.8s
+659/711 "Nova | Rising Skull (Field-Tested)"  steam_n=29  median=5.634  iqr_risk=11.631968701970106  downside=8.987704345396127  ret7=0.04139678963672222  0.8s
+660/711 "AWP | Ice Coaled (Factory New)"  steam_n=66  median=45.408  iqr_risk=7.737292520122476  downside=5.708082067462236  ret7=0.0011405313534305073  0.9s
+661/711 "AK-47 | Emerald Pinstripe (Well-Worn)"  steam_n=546  median=3.424  iqr_risk=5.2413633336229  downside=3.5907682506587935  ret7=-0.05835468260745802  0.9s
+662/711 "CZ75-Auto | Xiangliu (Factory New)"  steam_n=26  median=43.477  iqr_risk=10.369357498219813  downside=11.276132167198542  ret7=0.010850340562712502  0.8s
+663/711 "Glock-18 | Snack Attack (Minimal Wear)"  steam_n=63  median=46.075  iqr_risk=2.1009499947802506  downside=2.8447645892055533  ret7=-0.015977807406133082  0.8s
+664/711 "SSG 08 | Big Iron (Minimal Wear)"  steam_n=73  median=18.256  iqr_risk=4.663455762698922  downside=4.881884604043128  ret7=0.08630171055904068  0.9s
+665/711 "SSG 08 | Parallax (Minimal Wear)"  steam_n=76  median=19.3495  iqr_risk=3.11657897293511  downside=5.289747247746286  ret7=0.020097219318419457  0.7s
+666/711 "Dual Berettas | Sweet Little Angels (Factory New)"  steam_n=446  median=24.324  iqr_risk=3.971568482942723  downside=3.2673315973075296  ret7=-0.09421945175778224  0.8s
+667/711 "Five-SeveN | Case Hardened (Well-Worn)"  steam_n=27  median=18.589  iqr_risk=4.041424602172261  downside=6.9392120296872735  ret7=-0.03762344353799918  0.8s
+668/711 "MP9 | Music Box (Field-Tested)"  steam_n=8  median=13.4025  iqr_risk=10.866306615747336  downside=15.449800013558402  ret7=0.056506728669062145  0.8s
+669/711 "AK-47 | Cartel (Battle-Scarred)"  steam_n=69  median=19.657  iqr_risk=4.313998162744319  downside=3.928275974075414  ret7=-0.07094905278646324  0.8s
+670/711 "UMP-45 | Crimson Foil (Battle-Scarred)"  steam_n=260  median=5.222  iqr_risk=8.81438930219418  downside=4.256521329692061  ret7=-0.007062285434036419  0.8s
+671/711 "AUG | Carved Jade (Minimal Wear)"  steam_n=7  median=31.588  iqr_risk=8.39303739053398  downside=5.069777348368165  ret7=-0.08530906011854356  0.9s
+672/711 "MP9 | Food Chain (Factory New)"  steam_n=35  median=39.849  iqr_risk=3.6682750994141333  downside=4.379962905363736  ret7=-0.17910608508346793  0.8s
+673/711 "AK-47 | Green Laminate (Minimal Wear)"  steam_n=15  median=49.69  iqr_risk=6.885846691235126  downside=7.522281348292541  ret7=-0.10697317447554999  0.7s
+674/711 "USP-S | Purple DDPAT (Field-Tested)"  steam_n=21  median=18.503  iqr_risk=5.905188011974876  downside=15.182419317695828  ret7=0.02092801436346292  0.9s
+675/711 "AK-47 | Neon Rider (Battle-Scarred)"  steam_n=91  median=52.117  iqr_risk=5.268367627724948  downside=3.01349863943498  ret7=0.0607095204458048  1.0s
+676/711 "XM1014 | XOXO (Factory New)"  steam_n=39  median=34.191  iqr_risk=6.280843427545965  downside=6.277414395647425  ret7=-0.11464145342605048  1.4s
+677/711 "MP9 | Goo (Factory New)"  steam_n=115  median=8.709  iqr_risk=12.574372454907119  downside=13.899287667374688  ret7=-0.18596112311015112  0.8s
+678/711 "USP-S | The Traitor (Battle-Scarred)"  steam_n=141  median=38.542  iqr_risk=3.8051432155550806  downside=5.245139034079043  ret7=0.02584862015170275  0.8s
+679/711 "P90 | Leather (Factory New)"  steam_n=1  median=30.512  iqr_risk=0.0  downside=0.0  ret7=0.34556359146233917  1.0s
+680/711 "Galil AR | Cerberus (Well-Worn)"  steam_n=13  median=34.901  iqr_risk=4.413289595994693  downside=6.619934393992059  ret7=0.2587591600208168  0.9s
+681/711 "AK-47 | Crane Flight (Minimal Wear)"  steam_n=1030  median=57.2395  iqr_risk=16.537488468312326  downside=10.108572586732267  ret7=-0.1683728965384862  0.9s
+682/711 "SG 553 | Pulse (Minimal Wear)"  steam_n=75  median=12.222  iqr_risk=4.276833748851868  downside=5.330665267025328  ret7=-0.08528784648187626  1.0s
+683/711 "M4A4 | The Emperor (Minimal Wear)"  steam_n=94  median=91.5275  iqr_risk=9.64612552265324  downside=5.788770268747079  ret7=-0.020125146258330284  0.9s
+684/711 "Glock-18 | Reactor (Field-Tested)"  steam_n=17  median=29.794  iqr_risk=6.328880669273265  downside=5.484583195129879  ret7=0.03504822070634095  0.8s
+685/711 "MAC-10 | Case Hardened (Field-Tested)"  steam_n=0  median=None  iqr_risk=None  downside=None  ret7=None  0.9s
+686/711 "G3SG1 | Murky (Factory New)"  steam_n=37  median=4.915  iqr_risk=5.861365953109062  downside=3.038500744922768  ret7=0.31814505257481795  0.9s
+687/711 "Five-SeveN | Fowl Play (Battle-Scarred)"  steam_n=26  median=21.6885  iqr_risk=7.385262174471562  downside=11.292771225037956  ret7=0.07830458017129871  0.9s
+688/711 "P90 | Death by Kitty (Field-Tested)"  steam_n=8  median=115.042  iqr_risk=8.971609831209458  downside=17.972024117507953  ret7=0.05184540531737314  0.8s
+689/711 "AUG | Stymphalian (Factory New)"  steam_n=79  median=22.687  iqr_risk=7.135234667615236  downside=3.3696721139963715  ret7=-0.12782830412174506  0.8s
+690/711 "USP-S | Orion (Minimal Wear)"  steam_n=23  median=79.289  iqr_risk=10.142050004003538  downside=6.887060613339743  ret7=-0.04693833466753072  1.0s
+691/711 "M4A4 | In Living Color (Battle-Scarred)"  steam_n=95  median=36.486  iqr_risk=5.733507879430628  downside=7.9650465916560345  ret7=0.10186777003991954  1.2s
+692/711 "M4A1-S | Blood Tiger (Minimal Wear)"  steam_n=210  median=6.342  iqr_risk=7.339340056089265  downside=6.712811026910903  ret7=-0.10767435074409115  0.8s
+693/711 "P2000 | Imperial Dragon (Battle-Scarred)"  steam_n=39  median=12.885  iqr_risk=4.163114953726259  downside=4.691305406721874  ret7=-0.018373729476153233  0.8s
+694/711 "M4A4 | Cyber Security (Field-Tested)"  steam_n=46  median=29.8335  iqr_risk=10.639240569110262  downside=5.546609707145627  ret7=-0.042667326896096425  0.8s
+695/711 "USP-S | Jawbreaker (Minimal Wear)"  steam_n=1458  median=9.305  iqr_risk=3.027234450780799  downside=1.4283430155092505  ret7=-0.01926146642545501  0.8s
+696/711 "AWP | The End (Minimal Wear)"  steam_n=289  median=37.178  iqr_risk=8.541498360182134  downside=5.3126889268154285  ret7=-0.0878742382760751  0.8s
+697/711 "FAMAS | Eye of Athena (Minimal Wear)"  steam_n=89  median=13.136  iqr_risk=7.990867579908667  downside=8.152207001522065  ret7=-0.12423386819089599  0.9s
+698/711 "UMP-45 | Neo-Noir (Field-Tested)"  steam_n=271  median=6.863  iqr_risk=2.0726296123306915  downside=6.611980382998603  ret7=-0.025637353193927237  0.9s
+699/711 "Five-SeveN | Case Hardened (Battle-Scarred)"  steam_n=23  median=16.863  iqr_risk=8.899476501382281  downside=5.079701194047408  ret7=0.00794979079497904  0.9s
+700/711 "Five-SeveN | Monkey Business (Well-Worn)"  steam_n=124  median=14.249  iqr_risk=7.023891167126203  downside=5.528418872202557  ret7=-0.014727942179190046  0.8s
+701/711 "Glock-18 | AXIA (Battle-Scarred)"  steam_n=86  median=44.7095  iqr_risk=6.378626509243247  downside=3.6541590834926656  ret7=0.03870574146462702  0.8s
+702/711 "MAC-10 | Disco Tech (Factory New)"  steam_n=38  median=47.9385  iqr_risk=5.613685365908907  downside=3.375418812641705  ret7=-0.11882517379629975  0.8s
+703/711 "USP-S | Stainless (Minimal Wear)"  steam_n=119  median=14.957  iqr_risk=9.311418914440992  downside=9.238518125786998  ret7=-0.03838522066370165  0.8s
+704/711 "P250 | Bengal Tiger (Factory New)"  steam_n=0  median=None  iqr_risk=None  downside=None  ret7=None  0.8s
+705/711 "MP7 | Powercore (Minimal Wear)"  steam_n=147  median=4.889  iqr_risk=6.067286304416894  downside=5.104067365745165  ret7=0.0024125452352230514  0.9s
+706/711 "MAG-7 | Praetorian (Factory New)"  steam_n=40  median=14.482  iqr_risk=14.810681771631574  downside=13.869211156391472  ret7=-0.16953300701150942  0.9s
+707/711 "Desert Eagle | Code Red (Well-Worn)"  steam_n=67  median=50.498  iqr_risk=8.463494733469505  downside=8.67916216107973  ret7=0.010646634937018451  0.8s
+708/711 "AUG | Navy Murano (Well-Worn)"  steam_n=25  median=3.669  iqr_risk=8.067162546488731  downside=6.120105009844679  ret7=-0.049258474576271194  0.9s
+709/711 "G3SG1 | Flux (Field-Tested)"  steam_n=91  median=8.036  iqr_risk=7.27172312223859  downside=6.529209621993128  ret7=-0.0857489253830046  0.9s
+710/711 "PP-Bizon | Bamboo Print (Field-Tested)"  steam_n=63  median=12.145  iqr_risk=6.404015309205666  downside=14.798898811522188  ret7=-0.11202348536419349  1.0s
+711/711 "Galil AR | Chromatic Aberration (Battle-Scarred)"  steam_n=288  median=4.2015  iqr_risk=5.550284629981024  downside=5.7993358633776175  ret7=-0.03646696661141369  1.0s

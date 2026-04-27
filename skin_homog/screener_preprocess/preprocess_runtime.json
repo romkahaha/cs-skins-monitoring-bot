@@ -1,0 +1,26 @@
+{
+  "__comment": "Runtime for lightweight preprocess screener. Values also feed imported skin_screener request pacing.",
+  "DEFAULT_RUN_MODE": "create",
+  "DEFAULT_LIST_PATH": "../../lists/skins_normal.py",
+  "DEFAULT_SORT": "best_deal",
+  "LISTINGS_CAP": 50,
+  "DISCOUNT_SAMPLE_LIMIT": 8,
+  "OUTPUT_CSV": "preprocess_metrics.csv",
+  "PROGRESS_LOG": "_preprocess_progress.log",
+
+  "PREPROCESS_ITEM_DELAY_MIN": 1.0,
+  "PREPROCESS_ITEM_DELAY_MAX": 2.0,
+  
+  "INNER_DELAY_MIN": 1,
+  "INNER_DELAY_MAX": 2,
+  "SLOW_INNER_MIN": 5,
+  "SLOW_INNER_MAX": 10,
+  
+  "SLOW_MODE_EXTEND_SEC": 900.0,
+  "KEY_COOLDOWN_429_SEC": 600.0,
+  "KEY_COOLDOWN_403_SEC": 900.0,
+  "RETRY_LADDER_MIN_SEC": 120.0,
+  "RETRY_LADDER_STEP_SEC": 120.0,
+  "RETRY_LADDER_MAX_SEC": 300.0,
+  "PAGE_LIMIT": 50
+}

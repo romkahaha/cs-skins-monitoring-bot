@@ -1,0 +1,6 @@
+local_secrets.py
+local_steam_cookies.py
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
