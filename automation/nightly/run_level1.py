@@ -185,6 +185,20 @@ def main() -> int:
         root,
         dry_run=args.dry_run,
     )
+    if bool(config.get("model_backfill", {}).get("enabled", False)):
+        run_step(
+            "model backfill",
+            [
+                sys.executable,
+                str(root / "automation" / "nightly" / "run_model_backfill.py"),
+                "--config",
+                str(config_path),
+            ],
+            root,
+            dry_run=args.dry_run,
+        )
+    else:
+        print("model backfill: disabled by config")
 
     if monitor_list_enabled:
         run_step(

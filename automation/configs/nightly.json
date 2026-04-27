@@ -10,6 +10,7 @@
     "model_coverage_csv": "automation_runtime/model_coverage_latest.csv",
     "model_backfill_queue_csv": "automation_runtime/model_backfill_queue_latest.csv",
     "model_backfill_queue_items_py": "automation_runtime/model_backfill_queue_latest.py",
+    "model_backfill_batch_items_py": "automation_runtime/model_backfill_batch_latest.py",
     "model_backfill_runtime_json": "automation_runtime/model_backfill_runtime_latest.json",
     "model_backfill_progress_log": "automation_runtime/model_backfill_progress_latest.log",
     "summary_csv": "skin_homog/data_skins_big/_summary.csv",

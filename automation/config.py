@@ -140,6 +140,7 @@ def nightly_defaults() -> dict[str, Any]:
             "model_coverage_csv": str(root / "automation_runtime" / "model_coverage_latest.csv"),
             "model_backfill_queue_csv": str(root / "automation_runtime" / "model_backfill_queue_latest.csv"),
             "model_backfill_queue_items_py": str(root / "automation_runtime" / "model_backfill_queue_latest.py"),
+            "model_backfill_batch_items_py": str(root / "automation_runtime" / "model_backfill_batch_latest.py"),
             "model_backfill_runtime_json": str(root / "automation_runtime" / "model_backfill_runtime_latest.json"),
             "model_backfill_progress_log": str(root / "automation_runtime" / "model_backfill_progress_latest.log"),
             "summary_csv": str(root / "skin_homog" / "data_skins_big" / "_summary.csv"),
