@@ -1,0 +1,215 @@
+item,needs_backfill,model_ready,backfill_reason,has_summary,summary_ready,summary_n_listings,has_fit,fit_ready,fit_n_clean,pred_cv,pred_mean,pred_min,pred_max
+AK-47 | Orbit Mk01 (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+AK-47 | Red Laminate (Field-Tested),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+AUG | Carved Jade (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+AUG | Navy Murano (Well-Worn),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+AWP | Pink DDPAT (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+CZ75-Auto | Emerald (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+CZ75-Auto | Xiangliu (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+Desert Eagle | Naga (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+Desert Eagle | Ocean Drive (Battle-Scarred),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+Dual Berettas | Sweet Little Angels (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+Five-SeveN | Fowl Play (Battle-Scarred),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+M4A1-S | Party Animal (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+M4A4 | Bullet Rain (Field-Tested),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+MAC-10 | Propaganda (Field-Tested),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+MAG-7 | SWAG-7 (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+MP9 | Airlock (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+MP9 | Latte Rush (Field-Tested),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+MP9 | Music Box (Field-Tested),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+MP9 | Setting Sun (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+P2000 | Panther Camo (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+P250 | Bengal Tiger (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+P250 | Mehndi (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+SG 553 | Ultraviolet (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+SSG 08 | Death's Head (Field-Tested),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+Tec-9 | Toxic (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+UMP-45 | K.O. Factory (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+USP-S | Purple DDPAT (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
+Five-SeveN | Withered Vine (Field-Tested),False,True,,True,True,16.0,True,True,16.0,0.0063,3.6788,3.66,3.73
+USP-S | Purple DDPAT (Field-Tested),False,True,,True,True,17.0,True,True,16.0,0.0137,15.9041,15.72,16.58
+AUG | Fleet Flock (Battle-Scarred),False,True,,True,True,18.0,True,True,17.0,0.1725,14.0689,11.49,17.55
+MAC-10 | Surfwood (Field-Tested),False,True,,True,True,19.0,True,True,19.0,0.0239,5.7168,5.6,6.01
+Nova | Rising Skull (Factory New),False,True,,True,True,20.0,True,True,19.0,3.3635,54.3565,12.03,831.02
+Nova | Red Quartz (Field-Tested),False,True,,True,True,20.0,True,True,20.0,0.0281,10.175,9.6,10.61
+FAMAS | Night Borre (Minimal Wear),False,True,,True,True,21.0,True,True,21.0,0.0344,11.1605,10.72,11.85
+XM1014 | Scumbria (Factory New),False,True,,True,True,21.0,True,True,21.0,0.1927,6.0529,4.68,8.01
+PP-Bizon | Bamboo Print (Factory New),False,True,,True,True,23.0,True,True,22.0,0.2389,22.3822,17.71,34.85
+SG 553 | Colony IV (Field-Tested),False,True,,True,True,24.0,True,True,23.0,0.0674,10.3729,10.02,13.26
+M4A4 | Neo-Noir (Battle-Scarred),False,True,,True,True,25.0,True,True,23.0,0.0387,29.9364,29.23,33.8
+Nova | Sobek's Bite (Field-Tested),False,True,,True,True,25.0,True,True,25.0,0.1273,12.5744,11.16,15.06
+Glock-18 | Neo-Noir (Well-Worn),False,True,,True,True,26.0,True,True,26.0,0.0058,37.8458,37.6,38.72
+AUG | Death by Puppy (Field-Tested),False,True,,True,True,27.0,True,True,26.0,0.0367,4.7485,4.49,5.09
+Dual Berettas | Demolition (Field-Tested),False,True,,True,True,27.0,True,True,26.0,0.1334,34.8615,30.83,48.84
+P90 | Storm (Minimal Wear),False,True,,True,True,30.0,True,True,29.0,0.1807,3.8073,3.33,5.37
+MP7 | Tall Grass (Factory New),False,True,,True,True,30.0,True,True,30.0,0.198,35.5613,29.93,49.29
+SCAR-20 | Cardiac (Field-Tested),False,True,,True,True,31.0,True,True,31.0,0.0475,9.3029,8.98,10.52
+R8 Revolver | Fade (Field-Tested),False,True,,True,True,32.0,True,True,31.0,0.0692,90.4559,79.31,99.71
+MP9 | Setting Sun (Minimal Wear),False,True,,True,True,32.0,True,True,32.0,0.0509,36.8572,35.0,40.7
+CZ75-Auto | Victoria (Minimal Wear),False,True,,True,True,33.0,True,True,33.0,0.0262,90.6215,88.36,97.69
+Five-SeveN | Withered Vine (Factory New),False,True,,True,True,33.0,True,True,33.0,0.2193,20.6524,14.75,29.18
+M4A4 | Jungle Tiger (Minimal Wear),False,True,,True,True,34.0,True,True,33.0,0.1378,36.2282,32.16,46.91
+SSG 08 | Death's Head (Factory New),False,True,,True,True,34.0,True,True,33.0,0.1383,50.1935,44.19,65.52
+SSG 08 | Dark Water (Field-Tested),False,True,,True,True,34.0,True,True,34.0,0.0223,3.4726,3.41,3.7
+AWP | The End (Minimal Wear),False,True,,True,True,36.0,True,True,35.0,0.4978,39.4233,35.59,153.88
+P250 | Mehndi (Battle-Scarred),False,True,,True,True,37.0,True,True,37.0,0.1233,14.5957,13.69,21.19
+PP-Bizon | Chemical Green (Factory New),False,True,,True,True,37.0,True,True,37.0,0.1594,30.4322,22.85,42.62
+P2000 | Imperial Dragon (Battle-Scarred),False,True,,True,True,38.0,True,True,38.0,0.0956,11.7255,10.92,14.6
+SG 553 | Fallout Warning (Factory New),False,True,,True,True,41.0,True,True,41.0,0.1989,20.3815,16.15,28.71
+CZ75-Auto | Silver (Factory New),False,True,,True,True,42.0,True,True,41.0,0.1676,31.6752,23.64,41.29
+Glock-18 | Snack Attack (Minimal Wear),False,True,,True,True,43.0,True,True,42.0,0.036,36.177,35.32,42.0
+P2000 | Dispatch (Factory New),False,True,,True,True,43.0,True,True,42.0,0.1411,55.2,47.34,69.21
+Glock-18 | Weasel (Factory New),False,True,,True,True,45.0,True,True,45.0,0.1074,65.9209,57.33,78.27
+R8 Revolver | Tango (Factory New),False,True,,True,True,47.0,True,True,47.0,0.197,6.2498,5.28,8.52
+CZ75-Auto | Red Astor (Factory New),False,True,,True,True,48.0,True,True,48.0,0.1962,20.4496,16.73,28.52
+M4A4 | Faded Zebra (Minimal Wear),False,True,,True,True,48.0,True,True,48.0,0.0899,20.2502,18.21,27.02
+M4A4 | Hellish (Well-Worn),False,True,,True,True,49.0,True,True,49.0,0.0182,23.1145,22.68,24.17
+SSG 08 | Detour (Factory New),False,True,,True,True,50.0,True,True,47.0,0.198,65.509,56.72,116.7
+Dual Berettas | Royal Consorts (Minimal Wear),False,True,,True,True,52.0,True,True,51.0,0.0627,6.4285,6.2,8.08
+SSG 08 | Parallax (Factory New),False,True,,True,True,54.0,True,True,54.0,0.1462,33.3211,29.84,44.05
+UMP-45 | Wild Child (Battle-Scarred),False,True,,True,True,54.0,True,True,54.0,0.1382,3.275,2.95,4.65
+AK-47 | Aquamarine Revenge (Well-Worn),False,True,,True,True,55.0,True,True,54.0,0.0116,36.9875,36.49,39.33
+SSG 08 | Red Stone (Minimal Wear),False,True,,True,True,56.0,True,True,56.0,0.1096,12.3455,11.6,17.44
+P250 | Cartel (Field-Tested),False,True,,True,True,57.0,True,True,55.0,0.0986,10.1828,9.61,16.45
+AWP | Wildfire (Battle-Scarred),False,True,,True,True,57.0,True,True,57.0,0.0432,44.1637,42.59,53.29
+FAMAS | Commemoration (Field-Tested),False,True,,True,True,57.0,True,True,57.0,0.0267,36.177,35.07,38.35
+P90 | Shapewood (Field-Tested),False,True,,True,True,58.0,True,True,57.0,0.0767,9.824,9.22,11.62
+MP9 | Starlight Protector (Battle-Scarred),False,True,,True,True,58.0,True,True,58.0,0.0482,70.7553,68.46,82.36
+USP-S | The Traitor (Battle-Scarred),False,True,,True,True,59.0,True,True,56.0,0.085,33.8319,32.29,47.7
+G3SG1 | Flux (Field-Tested),False,True,,True,True,59.0,True,True,58.0,0.1201,7.842,6.8,9.22
+AUG | Fleet Flock (Field-Tested),False,True,,True,True,59.0,True,True,59.0,0.0633,12.8624,12.2,14.57
+P90 | Nostalgia (Field-Tested),False,True,,True,True,60.0,True,True,59.0,0.0793,4.4665,4.12,5.22
+AWP | Exoskeleton (Minimal Wear),False,True,,True,True,61.0,True,True,58.0,0.0343,16.8608,16.47,19.61
+P90 | Nostalgia (Minimal Wear),False,True,,True,True,61.0,True,True,61.0,0.1588,7.6152,6.02,8.88
+SSG 08 | Threat Detected (Factory New),False,True,,True,True,62.0,True,True,60.0,0.1676,54.5402,45.11,72.15
+Glock-18 | Mirror Mosaic (Battle-Scarred),False,True,,True,True,62.0,True,True,61.0,0.1284,5.3039,4.65,6.87
+AWP | Hyper Beast (Well-Worn),False,True,,True,True,65.0,True,True,65.0,0.0036,34.1169,33.84,34.36
+MP9 | Food Chain (Well-Worn),False,True,,True,True,66.0,True,True,64.0,0.0082,3.5529,3.52,3.71
+P250 | Kintsugi (Field-Tested),False,True,,True,True,66.0,True,True,66.0,0.0,7.31,7.31,7.31
+UMP-45 | Primal Saber (Factory New),False,True,,True,True,67.0,True,True,66.0,0.2128,34.9054,28.64,48.81
+SG 553 | Barricade (Factory New),False,True,,True,True,68.0,True,True,65.0,0.2189,20.8347,16.34,31.12
+P250 | Vino Primo (Minimal Wear),False,True,,True,True,68.0,True,True,67.0,0.0702,4.021,3.72,4.93
+SSG 08 | Big Iron (Field-Tested),False,True,,True,True,70.0,True,True,68.0,0.0912,11.7461,10.6,15.83
+P90 | Deathgaze (Minimal Wear),False,True,,True,True,70.0,True,True,69.0,0.0165,13.8473,13.82,15.73
+AK-47 | Head Shot (Battle-Scarred),False,True,,True,True,71.0,True,True,65.0,0.1654,30.8545,28.28,64.54
+AUG | Chameleon (Field-Tested),False,True,,True,True,73.0,True,True,73.0,0.0076,79.1333,77.9,81.0
+MP7 | Abyssal Apparition (Battle-Scarred),False,True,,True,True,74.0,True,True,72.0,0.1682,7.0815,6.35,10.19
+MP9 | Urban Sovereign (Factory New),False,True,,True,True,74.0,True,True,74.0,0.0022,7.7228,7.72,7.84
+SSG 08 | Big Iron (Minimal Wear),False,True,,True,True,79.0,True,True,77.0,0.1169,16.7024,15.02,20.31
+Dual Berettas | Twin Turbo (Factory New),False,True,,True,True,81.0,True,True,78.0,0.2012,46.2927,40.35,74.12
+UMP-45 | Scaffold (Factory New),False,True,,True,True,81.0,True,True,81.0,0.15,14.3965,12.98,20.58
+FAMAS | Commemoration (Minimal Wear),False,True,,True,True,82.0,True,True,81.0,0.027,38.9657,37.97,43.67
+M4A1-S | Flashback (Battle-Scarred),False,True,,True,True,86.0,True,True,86.0,0.0978,3.6686,3.47,5.07
+AK-47 | Breakthrough (Minimal Wear),False,True,,True,True,87.0,True,True,87.0,0.0039,9.0467,9.04,9.28
+M4A4 | Desert-Strike (Minimal Wear),False,True,,True,True,88.0,True,True,88.0,0.0378,39.527,38.19,44.46
+Dual Berettas | Twin Turbo (Minimal Wear),False,True,,True,True,90.0,True,True,89.0,0.0887,7.7259,7.19,9.44
+M4A4 | Desert-Strike (Field-Tested),False,True,,True,True,94.0,True,True,92.0,0.0506,33.4859,31.71,38.65
+AUG | Chameleon (Minimal Wear),False,True,,True,True,94.0,True,True,94.0,0.0199,81.1936,79.35,85.1
+USP-S | Cortex (Battle-Scarred),False,True,,True,True,95.0,True,True,86.0,0.1262,3.8604,3.56,5.35
+MP5-SD | Phosphor (Field-Tested),False,True,,True,True,96.0,True,True,95.0,0.0822,4.5002,4.25,5.52
+AK-47 | Orbit Mk01 (Field-Tested),False,True,,True,True,97.0,True,True,95.0,0.018,30.7143,30.04,33.85
+AK-47 | Nightwish (Well-Worn),False,True,,True,True,97.0,True,True,96.0,0.0085,67.7999,66.9,72.67
+CZ75-Auto | Slalom (Factory New),False,True,,True,True,99.0,True,True,97.0,0.2277,38.0747,29.09,50.87
+AK-47 | Nightwish (Battle-Scarred),False,True,,True,True,99.0,True,True,99.0,0.1236,74.3932,66.17,113.88
+P2000 | Imperial Dragon (Minimal Wear),False,True,,True,True,103.0,True,True,102.0,0.1058,13.6958,12.69,17.27
+SSG 08 | Bloodshot (Field-Tested),False,True,,True,True,107.0,True,True,107.0,0.1847,22.6851,19.0,33.62
+P90 | Attack Vector (Minimal Wear),False,True,,True,True,110.0,True,True,107.0,0.095,16.947,15.85,20.75
+AUG | Syd Mead (Field-Tested),False,True,,True,True,110.0,True,True,110.0,0.0923,12.7981,11.32,14.55
+Glock-18 | Ironwork (Factory New),False,True,,True,True,112.0,True,True,112.0,0.1456,29.3679,25.26,39.5
+USP-S | Printstream (Battle-Scarred),False,True,,True,True,116.0,True,True,112.0,0.0366,34.8744,34.07,44.8
+Dual Berettas | Melondrama (Well-Worn),False,True,,True,True,122.0,True,True,122.0,0.0075,6.4451,6.37,6.62
+Desert Eagle | The Bronze (Factory New),False,True,,True,True,127.0,True,True,123.0,0.1707,14.6409,12.91,20.34
+MP9 | Hydra (Minimal Wear),False,True,,True,True,127.0,True,True,125.0,0.0988,12.4176,11.97,22.77
+CZ75-Auto | Tuxedo (Factory New),False,True,,True,True,128.0,True,True,126.0,0.2097,4.326,3.68,6.47
+M4A4 | The Emperor (Minimal Wear),False,True,,True,True,128.0,True,True,127.0,0.0604,79.29,75.0,108.4
+Desert Eagle | Calligraffiti (Factory New),False,True,,True,True,130.0,True,True,126.0,0.1351,19.086,15.26,24.08
+SSG 08 | Blood in the Water (Minimal Wear),False,True,,True,True,132.0,True,True,131.0,0.0337,101.3929,97.69,112.78
+UMP-45 | Wild Child (Minimal Wear),False,True,,True,True,132.0,True,True,132.0,0.2111,8.1068,6.62,10.89
+Desert Eagle | Code Red (Field-Tested),False,True,,True,True,134.0,True,True,133.0,0.0581,45.9578,43.63,54.66
+AWP | POP AWP (Minimal Wear),False,True,,True,True,136.0,True,True,133.0,0.0373,13.0171,12.6,14.93
+AK-47 | Cartel (Factory New),False,True,,True,True,137.0,True,True,134.0,0.132,98.9909,89.59,136.7
+M4A4 | Turbine (Minimal Wear),False,True,,True,True,137.0,True,True,134.0,0.0922,4.1531,3.76,5.65
+USP-S | The Traitor (Minimal Wear),False,True,,True,True,139.0,True,True,138.0,0.0425,69.0547,67.04,83.2
+USP-S | Royal Blue (Field-Tested),False,True,,True,True,140.0,True,True,140.0,0.0142,10.5704,10.35,11.13
+Galil AR | Blue Titanium (Factory New),False,True,,True,True,141.0,True,True,134.0,0.1158,17.8701,16.45,26.56
+FAMAS | Pulse (Factory New),False,True,,True,True,141.0,True,True,139.0,0.3428,64.141,48.58,305.36
+AUG | Momentum (Field-Tested),False,True,,True,True,151.0,True,True,151.0,0.1707,6.7709,5.64,8.7
+PP-Bizon | Brass (Factory New),False,True,,True,True,153.0,True,True,151.0,0.1789,8.5433,6.35,11.77
+AK-47 | Ice Coaled (Battle-Scarred),False,True,,True,True,154.0,True,True,139.0,0.1161,4.636,4.31,9.33
+USP-S | Blueprint (Field-Tested),False,True,,True,True,156.0,True,True,152.0,0.0737,8.6085,8.19,10.87
+SG 553 | Dragon Tech (Factory New),False,True,,True,True,158.0,True,True,156.0,0.2385,3.7385,2.83,5.12
+XM1014 | Entombed (Factory New),False,True,,True,True,161.0,True,True,158.0,0.2463,12.0669,8.45,15.94
+P250 | Epicenter (Field-Tested),False,True,,True,True,163.0,True,True,161.0,0.1411,6.524,5.43,8.01
+AK-47 | Aquamarine Revenge (Minimal Wear),False,True,,True,True,166.0,True,True,165.0,0.0473,72.9979,70.47,100.2
+P250 | Muertos (Factory New),False,True,,True,True,166.0,True,True,165.0,0.1414,37.2502,34.44,58.04
+FAMAS | Rapid Eye Movement (Well-Worn),False,True,,True,True,166.0,True,True,166.0,0.0082,6.6092,6.53,6.82
+AK-47 | Neon Rider (Minimal Wear),False,True,,True,True,167.0,True,True,154.0,0.0447,78.3437,75.03,90.03
+AK-47 | Inheritance (Battle-Scarred),False,True,,True,True,174.0,True,True,163.0,0.0947,44.4124,42.56,87.56
+M4A4 | 龍王 (Dragon King) (Minimal Wear),False,True,,True,True,186.0,True,True,183.0,0.0489,28.3181,27.26,33.29
+Desert Eagle | Ocean Drive (Field-Tested),False,True,,True,True,197.0,True,True,195.0,0.0652,71.8687,67.61,88.55
+AK-47 | Nouveau Rouge (Minimal Wear),False,True,,True,True,200.0,True,True,191.0,0.0802,43.1981,40.08,71.4
+FAMAS | Bad Trip (Field-Tested),False,True,,True,True,203.0,True,True,202.0,0.0356,50.088,48.82,61.31
+M4A1-S | Leaded Glass (Minimal Wear),False,True,,True,True,207.0,True,True,202.0,0.0441,10.6261,10.2,12.88
+AK-47 | Safety Net (Field-Tested),False,True,,True,True,208.0,True,True,195.0,0.0613,3.0527,2.9,4.83
+M4A1-S | Flashback (Field-Tested),False,True,,True,True,214.0,True,True,210.0,0.027,3.9707,3.9,4.61
+AK-47 | Searing Rage (Battle-Scarred),False,True,,True,True,221.0,True,True,211.0,0.0987,4.6325,4.44,6.65
+USP-S | Black Lotus (Minimal Wear),False,True,,True,True,223.0,True,True,217.0,0.0838,3.3096,3.15,7.0
+M4A1-S | Blood Tiger (Minimal Wear),False,True,,True,True,226.0,True,True,214.0,0.0751,5.4045,5.17,10.49
+Sawed-Off | Kiss♥Love (Field-Tested),False,True,,True,True,227.0,True,True,224.0,0.1546,3.9099,3.44,5.32
+M4A1-S | Basilisk (Minimal Wear),False,True,,True,True,228.0,True,True,219.0,1.1488,11.6879,10.45,213.41
+FAMAS | Rapid Eye Movement (Minimal Wear),False,True,,True,True,228.0,True,True,225.0,0.0945,9.5837,9.02,13.59
+UMP-45 | Blaze (Factory New),False,True,,True,True,230.0,True,True,225.0,0.0622,40.8033,39.24,55.99
+Glock-18 | Grinder (Minimal Wear),False,True,,True,True,233.0,True,True,226.0,0.0507,3.5964,3.45,5.47
+AK-47 | Phantom Disruptor (Minimal Wear),False,True,,True,True,239.0,True,True,236.0,0.0417,8.9982,8.72,10.55
+AK-47 | Cartel (Minimal Wear),False,True,,True,True,244.0,True,True,237.0,0.131,23.0828,22.38,66.59
+M4A1-S | Atomic Alloy (Minimal Wear),False,True,,True,True,244.0,True,True,238.0,0.0848,54.9521,53.56,115.24
+AK-47 | The Outsiders (Field-Tested),False,True,,True,True,246.0,True,True,238.0,0.0712,8.801,8.35,11.53
+USP-S | Whiteout (Field-Tested),False,True,,True,True,251.0,True,True,244.0,0.0968,80.9845,70.25,99.2
+M4A4 | Neo-Noir (Minimal Wear),False,True,,True,True,252.0,True,True,250.0,0.059,61.0279,58.22,74.8
+UMP-45 | Primal Saber (Field-Tested),False,True,,True,True,253.0,True,True,253.0,0.1192,14.2123,12.28,17.11
+Desert Eagle | Mecha Industries (Minimal Wear),False,True,,True,True,264.0,True,True,256.0,0.0668,8.7657,8.34,11.21
+Glock-18 | Vogue (Minimal Wear),False,True,,True,True,265.0,True,True,258.0,0.1776,6.7715,6.29,19.5
+Desert Eagle | Crimson Web (Field-Tested),False,True,,True,True,269.0,True,True,266.0,0.1242,13.7436,12.83,35.45
+Tec-9 | Fuel Injector (Field-Tested),False,True,,True,True,270.0,True,True,266.0,0.0873,12.2222,11.43,22.77
+USP-S | Jawbreaker (Minimal Wear),False,True,,True,True,273.0,True,True,262.0,0.0902,7.8251,7.46,10.81
+M4A4 | Evil Daimyo (Field-Tested),False,True,,True,True,275.0,True,True,263.0,0.2554,3.6381,3.47,18.67
+AWP | Hyper Beast (Field-Tested),False,True,,True,True,276.0,True,True,270.0,0.0747,38.4565,35.99,47.19
+M4A1-S | Player Two (Field-Tested),False,True,,True,True,278.0,True,True,274.0,0.0883,63.2409,57.76,77.27
+AK-47 | Frontside Misty (Minimal Wear),False,True,,True,True,285.0,True,True,276.0,0.1341,31.8267,30.4,92.09
+Five-SeveN | Case Hardened (Minimal Wear),False,True,,True,True,287.0,True,True,280.0,0.166,18.6842,18.39,69.36
+FAMAS | Yeti Camo (Factory New),False,True,,True,True,300.0,True,True,287.0,0.2081,5.1452,4.11,7.9
+AK-47 | Emerald Pinstripe (Field-Tested),False,True,,True,True,322.0,True,True,296.0,0.4367,3.0315,2.78,25.74
+USP-S | Cyrex (Minimal Wear),False,True,,True,True,322.0,True,True,314.0,0.0341,4.261,4.18,5.69
+MAC-10 | Fade (Factory New),False,True,,True,True,324.0,True,True,279.0,0.0873,78.9706,70.88,112.91
+MP7 | Fade (Minimal Wear),False,True,,True,True,324.0,True,True,280.0,0.1179,9.9002,8.55,12.74
+AWP | Chromatic Aberration (Minimal Wear),False,True,,True,True,331.0,True,True,329.0,0.1805,64.5389,44.66,78.78
+Tec-9 | Whiteout (Field-Tested),False,True,,True,True,337.0,True,True,326.0,0.221,8.5161,6.96,18.41
+M4A1-S | Control Panel (Field-Tested),False,True,,True,True,338.0,True,True,336.0,0.141,15.3807,14.29,37.35
+M4A4 | Neo-Noir (Field-Tested),False,True,,True,True,345.0,True,True,341.0,0.1199,39.5447,35.4,53.73
+AWP | Wildfire (Field-Tested),False,True,,True,True,348.0,True,True,337.0,0.062,49.7881,47.38,59.96
+USP-S | Cortex (Minimal Wear),False,True,,True,True,351.0,True,True,339.0,0.0615,7.9677,7.79,15.59
+Glock-18 | Water Elemental (Minimal Wear),False,True,,True,True,377.0,True,True,368.0,0.0865,20.5858,19.77,45.89
+M4A4 | The Emperor (Field-Tested),False,True,,True,True,380.0,True,True,374.0,0.1272,68.4127,58.89,89.51
+AWP | Worm God (Factory New),False,True,,True,True,382.0,True,True,378.0,0.1204,7.0646,6.68,11.81
+Desert Eagle | Heat Treated (Minimal Wear),False,True,,True,True,400.0,True,True,363.0,0.5113,3.9314,3.51,29.58
+AK-47 | Midnight Laminate (Minimal Wear),False,True,,True,True,400.0,True,True,368.0,0.182,14.1247,11.73,40.27
+AK-47 | Wintergreen (Minimal Wear),False,True,,True,True,400.0,True,True,369.0,0.1153,2.9564,2.7,7.57
+AK-47 | Wintergreen (Factory New),False,True,,True,True,400.0,True,True,376.0,0.3299,9.945,7.48,43.17
+AK-47 | Blue Laminate (Field-Tested),False,True,,True,True,400.0,True,True,377.0,0.1285,17.7891,17.12,49.61
+AK-47 | Ice Coaled (Factory New),False,True,,True,True,400.0,True,True,381.0,0.2124,24.0195,21.11,69.99
+AWP | Atheris (Field-Tested),False,True,,True,True,400.0,True,True,381.0,0.11,5.1582,4.87,9.97
+AWP | Redline (Field-Tested),False,True,,True,True,400.0,True,True,382.0,0.1595,41.5479,38.61,149.32
+Desert Eagle | Printstream (Field-Tested),False,True,,True,True,400.0,True,True,385.0,0.0823,40.192,36.49,65.7
+MP9 | Arctic Tri-Tone (Factory New),False,True,,True,True,400.0,True,True,386.0,0.2347,19.3854,16.07,31.55
+AWP | Duality (Minimal Wear),False,True,,True,True,400.0,True,True,388.0,0.2136,8.0703,6.33,13.95
+USP-S | Printstream (Field-Tested),False,True,,True,True,400.0,True,True,390.0,0.1218,42.9025,37.86,54.72
+USP-S | Royal Guard (Minimal Wear),False,True,,True,True,400.0,True,True,390.0,0.1155,4.8396,4.29,8.56
+Desert Eagle | Conspiracy (Minimal Wear),False,True,,True,True,400.0,True,True,391.0,0.0375,19.4615,18.84,26.47
+AK-47 | Searing Rage (Field-Tested),False,True,,True,True,400.0,True,True,392.0,0.148,5.6884,5.23,13.05
+M4A1-S | Vaporwave (Field-Tested),False,True,,True,True,400.0,True,True,392.0,0.0697,60.8379,56.42,75.62
+Five-SeveN | Heat Treated (Battle-Scarred),False,True,,True,True,400.0,True,True,396.0,0.0997,4.5691,4.14,6.57
+Five-SeveN | Heat Treated (Field-Tested),False,True,,True,True,400.0,True,True,396.0,0.0508,4.8306,4.55,6.48
+P250 | Visions (Field-Tested),False,True,,True,True,400.0,True,True,396.0,0.1439,4.2694,3.5,5.33
+Glock-18 | Water Elemental (Field-Tested),False,True,,True,True,400.0,True,True,397.0,0.0424,19.6666,18.78,21.99
+Nova | Yorkshire (Factory New),False,True,,True,True,400.0,True,True,397.0,0.1678,4.4986,3.81,6.18
+FAMAS | Rapid Eye Movement (Field-Tested),False,True,,True,True,400.0,True,True,399.0,0.0908,7.1108,6.18,8.94

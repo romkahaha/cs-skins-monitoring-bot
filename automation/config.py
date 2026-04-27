@@ -137,8 +137,12 @@ def nightly_defaults() -> dict[str, Any]:
             "risk_progress_log": str(root / "skin_homog" / "screener_preprocess_risk" / "_risk_progress.log"),
             "risk_runtime_json": str(root / "automation_runtime" / "risk_runtime_latest.json"),
             "risk_candidates_csv": str(root / "automation_runtime" / "risk_candidates_latest.csv"),
+            "model_coverage_csv": str(root / "automation_runtime" / "model_coverage_latest.csv"),
+            "model_backfill_queue_csv": str(root / "automation_runtime" / "model_backfill_queue_latest.csv"),
+            "model_backfill_queue_items_py": str(root / "automation_runtime" / "model_backfill_queue_latest.py"),
             "summary_csv": str(root / "skin_homog" / "data_skins_big" / "_summary.csv"),
             "skin_data_dir": str(root / "skin_homog" / "data_skins_big"),
+            "fit_json": str(root / "steam_listings" / "data" / "float_fit_rel_curves.json"),
             "monitor_csv": str(root / "automation_runtime" / "monitor_list_latest.csv"),
             "monitor_items_py": str(root / "automation_runtime" / "monitor_list_latest.py"),
             "base_snapshot_csv": str(root / "automation_runtime" / "base_snapshot_latest.csv"),
@@ -184,6 +188,10 @@ def nightly_defaults() -> dict[str, Any]:
             "pred_range_over_mean_min": 0.3,
             "min_listings": 3,
             "missing_cv_policy": "assume_high",
+        },
+        "model_coverage": {
+            "min_summary_n_listings": 3,
+            "min_fit_clean_points": 5,
         },
         "base_snapshot": {
             "enabled": True,

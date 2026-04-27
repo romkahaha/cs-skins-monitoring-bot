@@ -168,6 +168,24 @@ def main() -> int:
             raise FileNotFoundError(f"{risk_csv} not found; enable risk_rebuild or provide an existing risk CSV")
         print(f"using existing risk csv: {risk_csv}")
 
+    run_step(
+        "risk candidates",
+        [sys.executable, str(root / "automation" / "nightly" / "build_risk_candidates.py"), "--config", str(config_path)],
+        root,
+        dry_run=args.dry_run,
+    )
+    run_step(
+        "model backfill queue",
+        [
+            sys.executable,
+            str(root / "automation" / "nightly" / "build_model_backfill_queue.py"),
+            "--config",
+            str(config_path),
+        ],
+        root,
+        dry_run=args.dry_run,
+    )
+
     if monitor_list_enabled:
         run_step(
             "monitor list",

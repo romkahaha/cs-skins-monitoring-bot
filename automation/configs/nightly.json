@@ -7,8 +7,12 @@
     "risk_progress_log": "automation_runtime/risk_progress_latest.log",
     "risk_runtime_json": "automation_runtime/risk_runtime_latest.json",
     "risk_candidates_csv": "automation_runtime/risk_candidates_latest.csv",
+    "model_coverage_csv": "automation_runtime/model_coverage_latest.csv",
+    "model_backfill_queue_csv": "automation_runtime/model_backfill_queue_latest.csv",
+    "model_backfill_queue_items_py": "automation_runtime/model_backfill_queue_latest.py",
     "summary_csv": "skin_homog/data_skins_big/_summary.csv",
     "skin_data_dir": "skin_homog/data_skins_big",
+    "fit_json": "steam_listings/data/float_fit_rel_curves.json",
     "monitor_csv": "automation_runtime/monitor_list_latest.csv",
     "monitor_items_py": "automation_runtime/monitor_list_latest.py",
     "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv"
@@ -54,6 +58,10 @@
     "pred_range_over_mean_min": 0.3,
     "min_listings": 3,
     "missing_cv_policy": "assume_high"
+  },
+  "model_coverage": {
+    "min_summary_n_listings": 3,
+    "min_fit_clean_points": 5
   },
   "base_snapshot": {
     "enabled": true,
