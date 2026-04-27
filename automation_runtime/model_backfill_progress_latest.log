@@ -7,14 +7,41 @@ Mode: merge | sort: mix(most_recent:50%+lowest_float:25%+highest_float:25%)
 Target unique/listings per skin: 400 | page_limit: 50
 Skip known listing ids across runs: True
 Ignore items already present in data: True
-Список: 1 скинов из C:\Roman\cs-skins-monitoring-bot\automation_runtime\model_backfill_batch_latest.py
+Список: 28 скинов из C:\Roman\cs-skins-monitoring-bot\automation_runtime\model_backfill_batch_latest.py
 Timing JSON: C:\Roman\cs-skins-monitoring-bot\automation_runtime\model_backfill_runtime_latest.json
 
-Merge: в C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big уже есть _summary.csv (956 строк) — колонки по текущему списку будут добавлены/обновлены.
---- ÐŸÑ€Ð¾Ð³Ð¾Ð½: 1 ÑÐºÐ¸Ð½Ð¾Ð² Ð¿Ð¾Ð´Ñ€ÑÐ´ ---
+Merge: в C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big уже есть _summary.csv (1069 строк) — колонки по текущему списку будут добавлены/обновлены.
+--- ÐŸÑ€Ð¾Ð³Ð¾Ð½: 28 ÑÐºÐ¸Ð½Ð¾Ð² Ð¿Ð¾Ð´Ñ€ÑÐ´ ---
 ÐŸÑ€Ð¾Ð³Ñ€ÐµÑÑ Ñ‚Ð°ÐºÐ¶Ðµ Ð¿Ð¸ÑˆÐµÑ‚ÑÑ Ð²: C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big\_screener_progress.log
-1/1  "AK-47 | Orbit Mk01 (Minimal Wear)"  собран  — 91/400 листингов, 140.8с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
-Ð“Ð¾Ñ‚Ð¾Ð²Ð¾: 1 ÑÐºÐ¸Ð½Ð¾Ð², 146s (146.4s/ÑÐºÐ¸Ð½).
+1/28  "AK-47 | Cartel (Field-Tested)"  собран  — 315/400 листингов, 501.1с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+2/28  "AK-47 | Emerald Pinstripe (Well-Worn)"  собран  — 134/400 листингов, 207.2с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+3/28  "AUG | Carved Jade (Minimal Wear)"  собран  — 25/400 листингов, 85.3с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+4/28  "AUG | Navy Murano (Well-Worn)"  собран  — 30/400 листингов, 94.9с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+5/28  "CZ75-Auto | Xiangliu (Factory New)"  собран  — 42/400 листингов, 83.1с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+6/28  "Desert Eagle | Code Red (Well-Worn)"  собран  — 36/400 листингов, 91.6с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+7/28  "Dual Berettas | Sweet Little Angels (Factory New)"  собран  — 273/400 листингов, 367.7с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+8/28  "FAMAS | Sergeant (Minimal Wear)"  собран  — 20/400 листингов, 79.7с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+9/28  "Five-SeveN | Fowl Play (Battle-Scarred)"  собран  — 14/400 листингов, 88.1с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+10/28  "G3SG1 | Murky (Factory New)"  собран  — 17/400 листингов, 93.9с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+11/28  "Galil AR | Cerberus (Well-Worn)"  собран  — 11/400 листингов, 96.7с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+12/28  "Galil AR | Phoenix Blacklight (Field-Tested)"  собран  — 27/400 листингов, 91.0с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+13/28  "Glock-18 | Glockingbird (Factory New)"  собран  — 195/400 листингов, 276.9с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+14/28  "M4A4 | Faded Zebra (Battle-Scarred)"  собран  — 28/400 листингов, 88.2с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+15/28  "M4A4 | Full Throttle (Field-Tested)"  собран  — 166/400 листингов, 273.6с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+16/28  "M4A4 | In Living Color (Well-Worn)"  собран  — 17/400 листингов, 93.5с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+17/28  "MAC-10 | Propaganda (Minimal Wear)"  собран  — 54/400 листингов, 139.5с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+18/28  "MAC-10 | Toybox (Field-Tested)"  собран  — 56/400 листингов, 153.7с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+19/28  "MAG-7 | Core Breach (Factory New)"  собран  — 45/400 листингов, 94.9с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+20/28  "MP9 | Music Box (Field-Tested)"  собран  — 23/400 листингов, 85.5с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+21/28  "MP9 | Setting Sun (Factory New)"  собран  — 63/400 листингов, 145.8с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+22/28  "P250 | Cartel (Minimal Wear)"  собран  — 52/400 листингов, 147.0с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+23/28  "P90 | Death by Kitty (Field-Tested)"  собран  — 32/400 листингов, 89.2с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+24/28  "SG 553 | Pulse (Minimal Wear)"  собран  — 103/400 листингов, 205.3с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+25/28  "SSG 08 | Death's Head (Field-Tested)"  собран  — 21/400 листингов, 88.1с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+26/28  "Tec-9 | Bamboo Forest (Field-Tested)"  собран  — 37/400 листингов, 87.2с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+27/28  "Tec-9 | Hades (Factory New)"  собран  — 31/400 листингов, 99.2с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+28/28  "XM1014 | Teclu Burner (Factory New)"  собран  — 33/400 листингов, 83.9с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+Ð“Ð¾Ñ‚Ð¾Ð²Ð¾: 28 ÑÐºÐ¸Ð½Ð¾Ð², 4538s (162.1s/ÑÐºÐ¸Ð½).
 Saved incrementally into C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big/
 -- Most homogeneous (lowest pred_cv) --
                                        item  base_price  pred_mean  pred_cv  factor_mean  factor_cv  float_qty  n_listings
@@ -28,13 +55,13 @@ Saved incrementally into C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_
               MP7 | Amberline (Factory New)        8.54     8.5090   0.0024       0.9964     0.0024        475         226
                FAMAS | Bad Trip (Well-Worn)       46.37    46.4302   0.0028       1.0013     0.0028        163          47
         Glock-18 | Snack Attack (Well-Worn)       15.93    15.8581   0.0031       0.9955     0.0031        129          36
-                P250 | Kintsugi (Well-Worn)        6.54     6.5246   0.0036       0.9976     0.0036        121          52
+              AUG | Navy Murano (Well-Worn)        3.25     3.1320   0.0035       0.9637     0.0035         92          30
               AWP | Hyper Beast (Well-Worn)       34.65    34.1169   0.0036       0.9846     0.0036        120          65
+                P250 | Kintsugi (Well-Worn)        6.54     6.5246   0.0036       0.9976     0.0036        121          52
         AK-47 | Breakthrough (Minimal Wear)        9.04     9.0467   0.0039       1.0007     0.0039        367          87
 Galil AR | Chromatic Aberration (Well-Worn)        3.66     3.6055   0.0041       0.9851     0.0041        192          78
              M4A1-S | Nightmare (Well-Worn)        8.64     8.5081   0.0041       0.9847     0.0041        165          59
           M4A1-S | Leaded Glass (Well-Worn)        9.58     9.2990   0.0046       0.9707     0.0046         58          20
+    Glock-18 | Fully Tuned (Battle-Scarred)       50.49    50.3163   0.0049       0.9966     0.0049        133          56
+        P2000 | Panther Camo (Field-Tested)        6.81     6.5319   0.0053       0.9592     0.0053         52          16
           Tec-9 | Fuel Injector (Well-Worn)       11.44    11.3583   0.0056       0.9929     0.0056        157          48
-               Tec-9 | Whiteout (Well-Worn)        3.82     3.8731   0.0057       1.0139     0.0057         74          26
-            Glock-18 | Neo-Noir (Well-Worn)       38.34    37.8458   0.0058       0.9871     0.0058         89          26
-                  XM1014 | XOXO (Well-Worn)        3.66     3.5271   0.0059       0.9637     0.0059        136          49

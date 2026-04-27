@@ -3,8 +3,8 @@
 # PROFILE = 'risk_plus_high_cv'
 # TOTAL_RISK_ROWS = 1124
 # RISK_PASSED = 747
-# HIGH_CV_PASSED = 788
-# N_OUTPUT_ITEMS = 465
+# HIGH_CV_PASSED = 774
+# N_OUTPUT_ITEMS = 451
 
 ITEMS = [
     "Dual Berettas | Switch Board (Factory New)",
@@ -374,7 +374,6 @@ ITEMS = [
     "AK-47 | Searing Rage (Minimal Wear)",
     "M4A1-S | Stratosphere (Field-Tested)",
     "AWP | Hyper Beast (Minimal Wear)",
-    "Galil AR | Phoenix Blacklight (Field-Tested)",
     "MP5-SD | Phosphor (Factory New)",
     "MP5-SD | Condition Zero (Factory New)",
     "MAG-7 | SWAG-7 (Factory New)",
@@ -406,8 +405,6 @@ ITEMS = [
     "Five-SeveN | Heat Treated (Battle-Scarred)",
     "M4A1-S | Guardian (Field-Tested)",
     "FAMAS | Mecha Industries (Factory New)",
-    "AK-47 | Cartel (Field-Tested)",
-    "SSG 08 | Death's Head (Field-Tested)",
     "AWP | Elite Build (Battle-Scarred)",
     "Desert Eagle | Printstream (Factory New)",
     "P90 | Storm (Minimal Wear)",
@@ -415,24 +412,18 @@ ITEMS = [
     "Galil AR | Rainbow Spoon (Minimal Wear)",
     "Five-SeveN | Fowl Play (Battle-Scarred)",
     "P2000 | Imperial Dragon (Minimal Wear)",
-    "AK-47 | Emerald Pinstripe (Well-Worn)",
     "AUG | Fleet Flock (Battle-Scarred)",
     "Tec-9 | Remote Control (Factory New)",
     "Glock-18 | Mirror Mosaic (Field-Tested)",
-    "MAC-10 | Propaganda (Minimal Wear)",
     "M4A4 | Full Throttle (Field-Tested)",
     "AK-47 | Legion of Anubis (Factory New)",
     "M4A4 | Polysoup (Factory New)",
     "Tec-9 | Toxic (Factory New)",
     "XM1014 | Halftone Shift (Factory New)",
     "AWP | Crakow! (Field-Tested)",
-    "P90 | Death by Kitty (Field-Tested)",
     "R8 Revolver | Memento (Factory New)",
-    "M4A4 | In Living Color (Well-Worn)",
     "Desert Eagle | Kumicho Dragon (Minimal Wear)",
     "CZ75-Auto | Slalom (Minimal Wear)",
-    "P250 | Cartel (Minimal Wear)",
-    "AUG | Navy Murano (Well-Worn)",
     "G3SG1 | Murky (Factory New)",
     "MAG-7 | Core Breach (Factory New)",
     "Glock-18 | Water Elemental (Battle-Scarred)",
@@ -441,7 +432,6 @@ ITEMS = [
     "AWP | Neo-Noir (Factory New)",
     "AWP | Worm God (Factory New)",
     "Tec-9 | Hades (Factory New)",
-    "Galil AR | Cerberus (Well-Worn)",
     "MP9 | Setting Sun (Factory New)",
     "MP5-SD | Bamboo Garden (Factory New)",
     "USP-S | Monster Mashup (Field-Tested)",
@@ -450,7 +440,6 @@ ITEMS = [
     "MAC-10 | Heat (Field-Tested)",
     "MP7 | Nemesis (Minimal Wear)",
     "Sawed-Off | Kiss♥Love (Well-Worn)",
-    "Tec-9 | Bamboo Forest (Field-Tested)",
     "USP-S | Orion (Minimal Wear)",
     "AWP | Ice Coaled (Factory New)",
     "USP-S | Jawbreaker (Minimal Wear)",
@@ -458,11 +447,9 @@ ITEMS = [
     "Desert Eagle | Mulberry (Field-Tested)",
     "USP-S | The Traitor (Battle-Scarred)",
     "SCAR-20 | Bloodsport (Factory New)",
-    "MP9 | Music Box (Field-Tested)",
     "USP-S | Stainless (Minimal Wear)",
     "Desert Eagle | Midnight Storm (Minimal Wear)",
     "P2000 | Imperial Dragon (Battle-Scarred)",
-    "Desert Eagle | Code Red (Well-Worn)",
     "UMP-45 | Neo-Noir (Field-Tested)",
     "AWP | Sun in Leo (Field-Tested)",
     "Glock-18 | Reactor (Field-Tested)",
@@ -471,5 +458,4 @@ ITEMS = [
     "Galil AR | Chromatic Aberration (Battle-Scarred)",
     "G3SG1 | Flux (Field-Tested)",
     "M4A4 | Desert Storm (Field-Tested)",
-    "AUG | Carved Jade (Minimal Wear)",
 ]

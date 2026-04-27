@@ -69,7 +69,7 @@
   },
   "model_backfill": {
     "enabled": false,
-    "max_items_per_run": 5,
+    "max_items_per_run": 30,
     "target_unique": 400,
     "page_limit": 50,
     "mode": "merge",
