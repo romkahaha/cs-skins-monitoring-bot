@@ -42,6 +42,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--run-risk", action="store_true", help="Force the heavy risk rebuild for this run.")
     parser.add_argument("--skip-risk", action="store_true", help="Skip the heavy risk rebuild for this run.")
+    parser.add_argument("--run-model-backfill", action="store_true", help="Force model-data backfill for this run.")
+    parser.add_argument("--skip-model-backfill", action="store_true", help="Skip model-data backfill for this run.")
     parser.add_argument("--skip-base", action="store_true", help="Skip CSFloat base snapshot refresh.")
     parser.add_argument("--dry-run", action="store_true", help="Print the sequence without running steps.")
     return parser.parse_args()
@@ -146,6 +148,11 @@ def main() -> int:
 
     base_enabled = bool(config.get("base_snapshot", {}).get("enabled", True)) and not args.skip_base
     monitor_list_enabled = bool(config.get("monitor_list", {}).get("enabled", True))
+    model_backfill_enabled = bool(config.get("model_backfill", {}).get("enabled", False))
+    if args.run_model_backfill:
+        model_backfill_enabled = True
+    if args.skip_model_backfill:
+        model_backfill_enabled = False
     schedule = config.get("schedule", {})
 
     print(f"config: {config_path}")
@@ -155,6 +162,7 @@ def main() -> int:
         f"(github cron UTC: {schedule.get('github_actions_cron_utc', '<unset>')})"
     )
     print(f"risk rebuild: {'on' if risk_enabled else 'off'}")
+    print(f"model backfill: {'on' if model_backfill_enabled else 'off'}")
     print(f"monitor list: {'on' if monitor_list_enabled else 'off'}")
     print(f"base snapshot: {'on' if base_enabled else 'off'}")
     print(f"dry run: {'on' if args.dry_run else 'off'}")
@@ -185,7 +193,7 @@ def main() -> int:
         root,
         dry_run=args.dry_run,
     )
-    if bool(config.get("model_backfill", {}).get("enabled", False)):
+    if model_backfill_enabled:
         run_step(
             "model backfill",
             [
@@ -200,7 +208,7 @@ def main() -> int:
     else:
         print("model backfill: disabled by config")
 
-    if bool(config.get("model_refit", {}).get("enabled", True)):
+    if model_backfill_enabled and bool(config.get("model_refit", {}).get("enabled", True)):
         run_step(
             "model refit",
             [
@@ -223,8 +231,10 @@ def main() -> int:
             root,
             dry_run=args.dry_run,
         )
-    else:
+    elif model_backfill_enabled:
         print("model refit: disabled by config")
+    else:
+        print("model refit: skipped because model backfill did not run")
 
     if monitor_list_enabled:
         run_step(

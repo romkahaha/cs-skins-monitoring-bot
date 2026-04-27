@@ -29,6 +29,7 @@ jobs:
         run: >
           python -B -c "import automation.telegram_alerts,
           automation.monitoring.run_batch, automation.monitoring.send_telegram_alerts,
+          automation.nightly.run_model_backfill, automation.nightly.run_model_refit,
           automation.state, automation.config; print('imports ok')"
 
       - name: Nightly dry run
