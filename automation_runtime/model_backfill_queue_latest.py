@@ -3,7 +3,6 @@
 # N_OUTPUT_ITEMS = 27
 
 ITEMS = [
-    "AK-47 | Orbit Mk01 (Minimal Wear)",
     "AK-47 | Red Laminate (Field-Tested)",
     "AUG | Carved Jade (Minimal Wear)",
     "AUG | Navy Murano (Well-Worn)",
@@ -30,4 +29,5 @@ ITEMS = [
     "Tec-9 | Toxic (Factory New)",
     "UMP-45 | K.O. Factory (Factory New)",
     "USP-S | Purple DDPAT (Minimal Wear)",
+    "AK-47 | Orbit Mk01 (Minimal Wear)",
 ]

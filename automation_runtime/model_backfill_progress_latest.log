@@ -1,0 +1,40 @@
+COMMAND:
+C:\Users\romka\AppData\Local\Python\pythoncore-3.14-64\python.exe C:\Roman\cs-skins-monitoring-bot\skin_homog\skin_screener.py --merge --mix --sort most_recent --target 400 --skip-known-ids --ignore-existing-items C:\Roman\cs-skins-monitoring-bot\automation_runtime\model_backfill_batch_latest.py
+
+[skin_screener] модули загружены, заходим в main…
+[skin_screener] загрузка списка (import model_backfill_batch_latest.py)…
+Mode: merge | sort: mix(most_recent:50%+lowest_float:25%+highest_float:25%)
+Target unique/listings per skin: 400 | page_limit: 50
+Skip known listing ids across runs: True
+Ignore items already present in data: True
+Список: 1 скинов из C:\Roman\cs-skins-monitoring-bot\automation_runtime\model_backfill_batch_latest.py
+Timing JSON: C:\Roman\cs-skins-monitoring-bot\automation_runtime\model_backfill_runtime_latest.json
+
+Merge: в C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big уже есть _summary.csv (956 строк) — колонки по текущему списку будут добавлены/обновлены.
+--- ÐŸÑ€Ð¾Ð³Ð¾Ð½: 1 ÑÐºÐ¸Ð½Ð¾Ð² Ð¿Ð¾Ð´Ñ€ÑÐ´ ---
+ÐŸÑ€Ð¾Ð³Ñ€ÐµÑÑ Ñ‚Ð°ÐºÐ¶Ðµ Ð¿Ð¸ÑˆÐµÑ‚ÑÑ Ð²: C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big\_screener_progress.log
+1/1  "AK-47 | Orbit Mk01 (Minimal Wear)"  собран  — 91/400 листингов, 140.8с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+Ð“Ð¾Ñ‚Ð¾Ð²Ð¾: 1 ÑÐºÐ¸Ð½Ð¾Ð², 146s (146.4s/ÑÐºÐ¸Ð½).
+Saved incrementally into C:\Roman\cs-skins-monitoring-bot\skin_homog\data_skins_big/
+-- Most homogeneous (lowest pred_cv) --
+                                       item  base_price  pred_mean  pred_cv  factor_mean  factor_cv  float_qty  n_listings
+             P250 | Kintsugi (Field-Tested)        7.31     7.3100   0.0000       1.0000     0.0000        281          66
+             P250 | Kintsugi (Minimal Wear)       13.63    13.6312   0.0008       1.0001     0.0008        241          80
+             AWP | Exothermic (Factory New)       21.28    21.2819   0.0009       1.0001     0.0009        410         207
+         AK-47 | Breakthrough (Factory New)       21.23    21.2331   0.0012       1.0001     0.0012        301         124
+           AWP | Queen's Gambit (Well-Worn)       62.54    62.5523   0.0016       1.0002     0.0016        229          90
+                  P250 | Mehndi (Well-Worn)       16.75    15.9927   0.0020       0.9548     0.0020         32          15
+        MP9 | Urban Sovereign (Factory New)        7.72     7.7228   0.0022       1.0004     0.0022        208          74
+              MP7 | Amberline (Factory New)        8.54     8.5090   0.0024       0.9964     0.0024        475         226
+               FAMAS | Bad Trip (Well-Worn)       46.37    46.4302   0.0028       1.0013     0.0028        163          47
+        Glock-18 | Snack Attack (Well-Worn)       15.93    15.8581   0.0031       0.9955     0.0031        129          36
+                P250 | Kintsugi (Well-Worn)        6.54     6.5246   0.0036       0.9976     0.0036        121          52
+              AWP | Hyper Beast (Well-Worn)       34.65    34.1169   0.0036       0.9846     0.0036        120          65
+        AK-47 | Breakthrough (Minimal Wear)        9.04     9.0467   0.0039       1.0007     0.0039        367          87
+Galil AR | Chromatic Aberration (Well-Worn)        3.66     3.6055   0.0041       0.9851     0.0041        192          78
+             M4A1-S | Nightmare (Well-Worn)        8.64     8.5081   0.0041       0.9847     0.0041        165          59
+          M4A1-S | Leaded Glass (Well-Worn)        9.58     9.2990   0.0046       0.9707     0.0046         58          20
+          Tec-9 | Fuel Injector (Well-Worn)       11.44    11.3583   0.0056       0.9929     0.0056        157          48
+               Tec-9 | Whiteout (Well-Worn)        3.82     3.8731   0.0057       1.0139     0.0057         74          26
+            Glock-18 | Neo-Noir (Well-Worn)       38.34    37.8458   0.0058       0.9871     0.0058         89          26
+                  XM1014 | XOXO (Well-Worn)        3.66     3.5271   0.0059       0.9637     0.0059        136          49
