@@ -1,11 +1,11 @@
 {
   "paths": {
-    "risk_csv": "automation_runtime/risk_metrics_latest.csv",
+    "risk_csv": "automation_runtime/risk_metrics_sample30.csv",
     "risk_script": "skin_homog/screener_preprocess_risk/risk_preprocess.py",
-    "risk_input_items_py": "lists/skins_normal_filtered1.py",
+    "risk_input_items_py": "lists/skins_normal_filtered1_sample30.py",
     "risk_stage1_csv": "skin_homog/screener_preprocess/preprocess_metrics.csv",
-    "risk_progress_log": "automation_runtime/risk_progress_latest.log",
-    "risk_runtime_json": "automation_runtime/risk_runtime_latest.json",
+    "risk_progress_log": "automation_runtime/risk_progress_sample30.log",
+    "risk_runtime_json": "automation_runtime/risk_runtime_sample30.json",
     "risk_candidates_csv": "automation_runtime/risk_candidates_latest.csv",
     "summary_csv": "skin_homog/data_skins_big/_summary.csv",
     "skin_data_dir": "skin_homog/data_skins_big",

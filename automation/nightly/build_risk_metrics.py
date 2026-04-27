@@ -192,6 +192,8 @@ def main() -> int:
     write_runtime_config(runtime_json, runtime_cfg)
     env = os.environ.copy()
     env["RISK_PREPROCESS_RUNTIME_CONFIG"] = str(runtime_json)
+    env["PYTHONIOENCODING"] = "utf-8"
+    env["PYTHONUTF8"] = "1"
     subprocess.run(cmd, cwd=str(root), check=True, env=env)
     validate_output(output_csv)
 

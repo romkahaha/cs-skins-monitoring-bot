@@ -136,6 +136,7 @@ def nightly_defaults() -> dict[str, Any]:
             "risk_stage1_csv": str(root / "skin_homog" / "screener_preprocess" / "preprocess_metrics.csv"),
             "risk_progress_log": str(root / "skin_homog" / "screener_preprocess_risk" / "_risk_progress.log"),
             "risk_runtime_json": str(root / "automation_runtime" / "risk_runtime_latest.json"),
+            "risk_candidates_csv": str(root / "automation_runtime" / "risk_candidates_latest.csv"),
             "summary_csv": str(root / "skin_homog" / "data_skins_big" / "_summary.csv"),
             "skin_data_dir": str(root / "skin_homog" / "data_skins_big"),
             "monitor_csv": str(root / "automation_runtime" / "monitor_list_latest.csv"),
