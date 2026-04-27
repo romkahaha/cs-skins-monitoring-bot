@@ -1,0 +1,96 @@
+name: Monitoring batch
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: Number of monitor-list items to scan
+        required: false
+        default: "5"
+      telegram_mode:
+        description: Telegram mode for this run
+        required: false
+        default: dry-run
+        type: choice
+        options:
+          - dry-run
+          - real
+          - off
+  schedule:
+    - cron: "*/10 6-21 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: automation-runtime-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  monitoring:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
+      TELEGRAM_MODE: ${{ github.event.inputs.telegram_mode || 'dry-run' }}
+      STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Rebase runtime state
+        run: git pull --rebase
+
+      - name: Run monitoring batch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          args=(--batch-size "$BATCH_SIZE")
+          case "$TELEGRAM_MODE" in
+            dry-run)
+              args+=(--telegram-dry-run)
+              ;;
+            real)
+              args+=(--send-telegram)
+              ;;
+            off)
+              ;;
+            *)
+              echo "Unknown TELEGRAM_MODE=$TELEGRAM_MODE" >&2
+              exit 2
+              ;;
+          esac
+
+          python automation/monitoring/run_batch.py "${args[@]}"
+
+      - name: Commit runtime outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation_runtime
+
+          if git diff --cached --quiet; then
+            echo "No automation_runtime changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Update monitoring runtime [skip ci]"
+          git push

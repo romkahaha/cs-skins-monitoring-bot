@@ -1,0 +1,38 @@
+name: Smoke checks
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Import automation modules
+        run: >
+          python -B -c "import automation.telegram_alerts,
+          automation.monitoring.run_batch, automation.monitoring.send_telegram_alerts,
+          automation.state, automation.config; print('imports ok')"
+
+      - name: Nightly dry run
+        run: python -B automation/nightly/run_level1.py --skip-risk --skip-base --dry-run
+
+      - name: Telegram dry run
+        run: python -B automation/monitoring/send_telegram_alerts.py --dry-run
