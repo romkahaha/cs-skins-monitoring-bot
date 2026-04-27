@@ -1,0 +1,169 @@
+"""Build the latest runtime risk metrics CSV.
+
+This is the automation-facing wrapper around
+skin_homog/screener_preprocess_risk/risk_preprocess.py. The underlying script
+does the real data collection: it copies the first-stage preprocess metrics for
+each item, collects Steam pricehistory/trend data, then writes one merged CSV.
+"""
+
+from __future__ import annotations
+
+import argparse
+import subprocess
+import sys
+from pathlib import Path
+
+import pandas as pd
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from automation.config import load_json_config, nightly_defaults, path_from_config
+from automation.risk_filters import repo_root_from
+
+
+REQUIRED_STAGE1_COLUMNS = {
+    "item",
+    "status",
+    "base_price",
+    "n_listings",
+    "avg_discount",
+    "discount_sample_n",
+}
+
+REQUIRED_RISK_COLUMNS = {
+    "steam_sales_7d_n",
+    "steam_sales_7d_downside_risk%",
+    "steam_sales_7d_tail_ratio",
+    "steam_daily_ret_7d",
+    "steam_daily_ema_gap_3_14",
+    "steam_daily_downside_14d_pct",
+    "risk_collected_at_utc",
+}
+
+
+def configure_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
+
+def parse_args() -> argparse.Namespace:
+    root = repo_root_from(Path(__file__))
+    parser = argparse.ArgumentParser(description="Build automation_runtime/risk_metrics_latest.csv.")
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=root / "automation" / "configs" / "nightly.json",
+        help="Nightly automation JSON config.",
+    )
+    parser.add_argument("--create", action="store_true", help="Wipe and rebuild the risk CSV.")
+    parser.add_argument("--merge", action="store_true", help="Resume into the risk CSV, skipping existing items.")
+    parser.add_argument("--dry-run", action="store_true", help="Print the risk collection command without running it.")
+    return parser.parse_args()
+
+
+def require_file(path: Path, label: str) -> None:
+    if not path.is_file():
+        raise FileNotFoundError(f"{label} not found: {path}")
+
+
+def validate_stage1(stage1_csv: Path, items_py: Path) -> None:
+    require_file(stage1_csv, "stage-1 preprocess CSV")
+    require_file(items_py, "risk input item list")
+
+    header = pd.read_csv(stage1_csv, nrows=0)
+    missing = sorted(REQUIRED_STAGE1_COLUMNS - set(header.columns))
+    if missing:
+        raise RuntimeError(f"stage-1 preprocess CSV missing columns: {missing} ({stage1_csv})")
+
+
+def validate_output(output_csv: Path) -> None:
+    require_file(output_csv, "risk metrics CSV")
+    header = pd.read_csv(output_csv, nrows=0)
+    cols = set(header.columns)
+
+    missing_stage1 = sorted(REQUIRED_STAGE1_COLUMNS - cols)
+    missing_risk = sorted(REQUIRED_RISK_COLUMNS - cols)
+    if missing_stage1 or missing_risk:
+        raise RuntimeError(
+            "risk metrics CSV is not the expected merged shape: "
+            f"missing_stage1={missing_stage1}, missing_risk={missing_risk} ({output_csv})"
+        )
+
+
+def risk_command(config: dict, *, mode: str) -> list[str]:
+    risk_cfg = config.get("risk_rebuild", {})
+    mode_flag = "--create" if mode == "create" else "--merge"
+    return [
+        sys.executable,
+        str(path_from_config(config, "risk_script")),
+        mode_flag,
+        str(path_from_config(config, "risk_input_items_py")),
+        "--stage1-csv",
+        str(path_from_config(config, "risk_stage1_csv")),
+        "--output",
+        str(path_from_config(config, "risk_csv")),
+        "--progress-log",
+        str(path_from_config(config, "risk_progress_log")),
+        "--days",
+        str(int(risk_cfg.get("trade_days", 7))),
+        "--min-discount-sample",
+        str(int(risk_cfg.get("min_discount_sample", 3))),
+    ]
+
+
+def main() -> int:
+    configure_stdio()
+    args = parse_args()
+    root = repo_root_from(Path(__file__))
+    config_path = args.config.resolve()
+    config = load_json_config(config_path, nightly_defaults())
+    risk_cfg = config.get("risk_rebuild", {})
+
+    mode = str(risk_cfg.get("mode", "create")).lower()
+    if args.create and args.merge:
+        raise RuntimeError("Use only one of --create or --merge")
+    if args.create:
+        mode = "create"
+    if args.merge:
+        mode = "merge"
+    if mode not in {"create", "merge"}:
+        raise RuntimeError(f"Unsupported risk_rebuild.mode={mode!r}; expected create or merge")
+
+    risk_script = path_from_config(config, "risk_script")
+    items_py = path_from_config(config, "risk_input_items_py")
+    stage1_csv = path_from_config(config, "risk_stage1_csv")
+    output_csv = path_from_config(config, "risk_csv")
+    progress_log = path_from_config(config, "risk_progress_log")
+
+    require_file(risk_script, "risk collector script")
+    validate_stage1(stage1_csv, items_py)
+
+    cmd = risk_command(config, mode=mode)
+    print(f"config: {config_path}")
+    print(f"mode: {mode}")
+    print(f"risk script: {risk_script}")
+    print(f"items: {items_py}")
+    print(f"stage-1 preprocess CSV: {stage1_csv}")
+    print(f"output risk CSV: {output_csv}")
+    print(f"progress log: {progress_log}")
+    print("command:")
+    print(" ".join(cmd))
+
+    if args.dry_run:
+        return 0
+
+    subprocess.run(cmd, cwd=str(root), check=True)
+    validate_output(output_csv)
+
+    rows = len(pd.read_csv(output_csv, usecols=["item"]))
+    print(f"saved merged risk metrics: {output_csv} rows={rows}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

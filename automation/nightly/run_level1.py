@@ -1,9 +1,9 @@
 """Run the level-1 nightly automation sequence.
 
-By default this uses the latest existing risk_metrics.csv, rebuilds the monitor
-list, then refreshes the CSFloat base snapshot. The heavy Steam risk rebuild is
-available through automation/configs/nightly.json, but starts disabled so manual
-smoke runs do not unexpectedly spend hours on Steam requests.
+By default this uses the latest existing risk_metrics CSV, rebuilds the monitor
+list, then refreshes the CSFloat base snapshot. The Steam risk refresh is routed
+through automation/nightly/build_risk_metrics.py so runtime outputs stay under
+automation_runtime/.
 """
 
 from __future__ import annotations
@@ -120,23 +120,14 @@ def validate_monitor_list(config: dict) -> None:
 
 def risk_command(config: dict, config_path: Path) -> list[str]:
     risk_cfg = config.get("risk_rebuild", {})
-    mode = str(risk_cfg.get("mode", "merge")).lower()
+    mode = str(risk_cfg.get("mode", "create")).lower()
     mode_flag = "--create" if mode == "create" else "--merge"
     return [
         sys.executable,
-        str(path_from_config(config, "risk_script")),
+        str(repo_root_from(Path(__file__)) / "automation" / "nightly" / "build_risk_metrics.py"),
+        "--config",
+        str(config_path),
         mode_flag,
-        str(path_from_config(config, "risk_input_items_py")),
-        "--stage1-csv",
-        str(path_from_config(config, "risk_stage1_csv")),
-        "--output",
-        str(path_from_config(config, "risk_csv")),
-        "--progress-log",
-        str(path_from_config(config, "risk_progress_log")),
-        "--days",
-        str(int(risk_cfg.get("trade_days", 7))),
-        "--min-discount-sample",
-        str(int(risk_cfg.get("min_discount_sample", 3))),
     ]
 
 
