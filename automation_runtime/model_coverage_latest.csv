@@ -25,7 +25,6 @@ SSG 08 | Death's Head (Field-Tested),True,False,"missing_summary, missing_fit_js
 Tec-9 | Toxic (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
 UMP-45 | K.O. Factory (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
 USP-S | Purple DDPAT (Minimal Wear),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,
-AK-47 | Orbit Mk01 (Minimal Wear),True,False,missing_fit_json,True,True,91.0,False,False,,0.0169,41.9082,41.23,46.29
 Five-SeveN | Withered Vine (Field-Tested),False,True,,True,True,16.0,True,True,16.0,0.0063,3.6788,3.66,3.73
 USP-S | Purple DDPAT (Field-Tested),False,True,,True,True,17.0,True,True,16.0,0.0137,15.9041,15.72,16.58
 AUG | Fleet Flock (Battle-Scarred),False,True,,True,True,18.0,True,True,17.0,0.1725,14.0689,11.49,17.55
@@ -103,6 +102,7 @@ M4A1-S | Flashback (Battle-Scarred),False,True,,True,True,86.0,True,True,86.0,0.
 AK-47 | Breakthrough (Minimal Wear),False,True,,True,True,87.0,True,True,87.0,0.0039,9.0467,9.04,9.28
 M4A4 | Desert-Strike (Minimal Wear),False,True,,True,True,88.0,True,True,88.0,0.0378,39.527,38.19,44.46
 Dual Berettas | Twin Turbo (Minimal Wear),False,True,,True,True,90.0,True,True,89.0,0.0887,7.7259,7.19,9.44
+AK-47 | Orbit Mk01 (Minimal Wear),False,True,,True,True,91.0,True,True,89.0,0.0169,41.9082,41.23,46.29
 M4A4 | Desert-Strike (Field-Tested),False,True,,True,True,94.0,True,True,92.0,0.0506,33.4859,31.71,38.65
 AUG | Chameleon (Minimal Wear),False,True,,True,True,94.0,True,True,94.0,0.0199,81.1936,79.35,85.1
 USP-S | Cortex (Battle-Scarred),False,True,,True,True,95.0,True,True,86.0,0.1262,3.8604,3.56,5.35

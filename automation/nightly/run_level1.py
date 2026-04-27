@@ -200,6 +200,32 @@ def main() -> int:
     else:
         print("model backfill: disabled by config")
 
+    if bool(config.get("model_refit", {}).get("enabled", True)):
+        run_step(
+            "model refit",
+            [
+                sys.executable,
+                str(root / "automation" / "nightly" / "run_model_refit.py"),
+                "--config",
+                str(config_path),
+            ],
+            root,
+            dry_run=args.dry_run,
+        )
+        run_step(
+            "model backfill queue after refit",
+            [
+                sys.executable,
+                str(root / "automation" / "nightly" / "build_model_backfill_queue.py"),
+                "--config",
+                str(config_path),
+            ],
+            root,
+            dry_run=args.dry_run,
+        )
+    else:
+        print("model refit: disabled by config")
+
     if monitor_list_enabled:
         run_step(
             "monitor list",
