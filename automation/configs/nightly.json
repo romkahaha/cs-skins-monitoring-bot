@@ -68,7 +68,7 @@
     "min_fit_clean_points": 5
   },
   "model_backfill": {
-    "enabled": false,
+    "enabled": true,
     "max_items_per_run": 30,
     "target_unique": 400,
     "page_limit": 50,
