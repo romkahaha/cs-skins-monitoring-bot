@@ -135,6 +135,7 @@ def nightly_defaults() -> dict[str, Any]:
             "risk_input_items_py": str(root / "lists" / "skins_preprocess_filtered.py"),
             "risk_stage1_csv": str(root / "skin_homog" / "screener_preprocess" / "preprocess_metrics.csv"),
             "risk_progress_log": str(root / "skin_homog" / "screener_preprocess_risk" / "_risk_progress.log"),
+            "risk_runtime_json": str(root / "automation_runtime" / "risk_runtime_latest.json"),
             "summary_csv": str(root / "skin_homog" / "data_skins_big" / "_summary.csv"),
             "skin_data_dir": str(root / "skin_homog" / "data_skins_big"),
             "monitor_csv": str(root / "automation_runtime" / "monitor_list_latest.csv"),
@@ -155,9 +156,14 @@ def nightly_defaults() -> dict[str, Any]:
         },
         "risk_rebuild": {
             "enabled": False,
-            "mode": "merge",
+            "mode": "create",
             "trade_days": 7,
             "min_discount_sample": 3,
+            "steam_currency": 3,
+            "auto_refresh_steam_cookies": False,
+            "require_stage1_ok": True,
+            "steam_item_delay_min_sec": 6.0,
+            "steam_item_delay_max_sec": 11.0,
         },
         "monitor_list": {
             "enabled": True,
