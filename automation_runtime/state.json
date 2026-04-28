@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 126,
-  "last_run_at_utc": "2026-04-28T09:41:01.659858+00:00",
+  "batch_pointer": 151,
+  "last_run_at_utc": "2026-04-28T09:45:46.140981+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Dual Berettas | Melondrama (Minimal Wear)",
-    "P90 | Wave Breaker (Factory New)",
-    "AWP | Ice Coaled (Field-Tested)",
-    "Dual Berettas | Twin Turbo (Factory New)",
-    "UMP-45 | K.O. Factory (Minimal Wear)"
+    "Desert Eagle | Night (Minimal Wear)",
+    "Glock-18 | Shinobu (Field-Tested)",
+    "FAMAS | Yeti Camo (Factory New)",
+    "CZ75-Auto | Vendetta (Factory New)",
+    "USP-S | Ticket to Hell (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T09:41:45.296835+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T09:41:45.296835+00:00",
+  "last_finished_at_utc": "2026-04-28T09:46:44.713042+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T09:46:44.713042+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 738,
-  "last_enriched_rows": 738,
+  "last_listing_rows": 727,
+  "last_enriched_rows": 727,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 121,
+  "last_batch_start_pointer": 146,
   "sent_alerts": {
     "listing:650349216050752953": {
       "sent_at_utc": "2026-04-28T09:06:03.853009+00:00",
