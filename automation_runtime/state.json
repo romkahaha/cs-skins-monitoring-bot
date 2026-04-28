@@ -2,39 +2,39 @@
   "version": 1,
   "items_signature": "f2572d29f846d47ceabb31f8839c5f2cfa5a224092ea0191125ac6176f2b8ef3",
   "items_count": 108,
-  "batch_pointer": 54,
-  "last_run_at_utc": "2026-04-28T16:18:48.217117+00:00",
+  "batch_pointer": 104,
+  "last_run_at_utc": "2026-04-28T16:29:36.335936+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Slate (Battle-Scarred)",
-    "Galil AR | Rainbow Spoon (Factory New)",
-    "M4A4 | Hellish (Battle-Scarred)",
-    "Galil AR | Eco (Field-Tested)",
-    "AK-47 | Ice Coaled (Field-Tested)",
-    "AK-47 | Slate (Well-Worn)",
-    "Glock-18 | Block-18 (Factory New)",
-    "Glock-18 | Vogue (Minimal Wear)",
-    "USP-S | Black Lotus (Minimal Wear)",
-    "Five-SeveN | Heat Treated (Minimal Wear)"
+    "AWP | Elite Build (Battle-Scarred)",
+    "Desert Eagle | Printstream (Factory New)",
+    "AUG | Fleet Flock (Battle-Scarred)",
+    "XM1014 | Halftone Shift (Factory New)",
+    "Desert Eagle | Kumicho Dragon (Minimal Wear)",
+    "Glock-18 | Water Elemental (Battle-Scarred)",
+    "USP-S | Monster Mashup (Field-Tested)",
+    "AWP | Ice Coaled (Factory New)",
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "SSG 08 | Big Iron (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T16:20:40.401111+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T16:20:40.401111+00:00",
+  "last_finished_at_utc": "2026-04-28T16:30:57.805062+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T16:30:57.805062+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 1767,
-  "last_enriched_rows": 1767,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 773,
+  "last_enriched_rows": 773,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
+    "considered": 1,
     "sent": 0,
-    "skipped": 0
+    "skipped": 1
   },
-  "last_batch_start_pointer": 44,
+  "last_batch_start_pointer": 94,
   "sent_alerts": {
     "listing:637964317056662933": {
       "sent_at_utc": "2026-04-28T14:19:32.914886+00:00",
@@ -167,7 +167,13 @@
       "item": "SSG 08 | Bloodshot (Field-Tested)",
       "listing_id": "634586617427755191",
       "spread_hybrid_disc": 0.1594925370146899
+    },
+    "listing:639090217035868317": {
+      "sent_at_utc": "2026-04-28T16:26:04.612418+00:00",
+      "item": "M4A1-S | Black Lotus (Minimal Wear)",
+      "listing_id": "639090217035868317",
+      "spread_hybrid_disc": 0.1486509231552186
     }
   },
-  "last_alert_sent_at_utc": "2026-04-28T15:55:29.389289+00:00"
+  "last_alert_sent_at_utc": "2026-04-28T16:26:04.612495+00:00"
 }
