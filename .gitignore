@@ -3,6 +3,7 @@ local_steam_cookies.py
 .env
 automation/CODEX_CONTEXT.md
 automation/CHAT_CONTEXT.md
+workflow_name_map.local.md
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
