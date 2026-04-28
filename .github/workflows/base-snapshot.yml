@@ -83,4 +83,10 @@ jobs:
           fi
 
           git commit -m "Update base snapshot [skip ci]"
+          if git push; then
+            exit 0
+          fi
+
+          echo "Push rejected; rebasing runtime commit and retrying."
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
