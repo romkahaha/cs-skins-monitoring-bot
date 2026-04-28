@@ -1,42 +1,66 @@
 {
   "version": 1,
-  "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
-  "items_count": 451,
-  "batch_pointer": 55,
-  "last_run_at_utc": "2026-04-28T10:56:09.472589+00:00",
-  "last_status": "running",
+  "items_signature": "f2572d29f846d47ceabb31f8839c5f2cfa5a224092ea0191125ac6176f2b8ef3",
+  "items_count": 108,
+  "batch_pointer": 25,
+  "last_run_at_utc": "2026-04-28T14:20:37.407008+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "P250 | Visions (Minimal Wear)",
-    "FAMAS | Pulse (Factory New)",
-    "G3SG1 | Stinger (Field-Tested)",
-    "USP-S | Royal Guard (Factory New)",
-    "CZ75-Auto | Red Astor (Factory New)"
+    "AUG | Momentum (Field-Tested)",
+    "Desert Eagle | Mulberry (Minimal Wear)",
+    "M4A1-S | Control Panel (Field-Tested)",
+    "MP9 | Hydra (Minimal Wear)",
+    "M4A4 | Tooth Fairy (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T10:56:08.913178+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T10:56:08.913178+00:00",
+  "last_finished_at_utc": "2026-04-28T14:21:26.655581+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T14:21:26.655581+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 766,
-  "last_enriched_rows": 766,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 876,
+  "last_enriched_rows": 876,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 55,
+  "last_batch_start_pointer": 20,
   "sent_alerts": {
-    "listing:650349216050752953": {
-      "sent_at_utc": "2026-04-28T09:06:03.853009+00:00",
-      "item": "Glock-18 | Nuclear Garden (Factory New)",
-      "listing_id": "650349216050752953",
-      "spread_hybrid_disc": 0.0360332590519322
+    "listing:637964317056662933": {
+      "sent_at_utc": "2026-04-28T14:19:32.914886+00:00",
+      "item": "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+      "listing_id": "637964317056662933",
+      "spread_hybrid_disc": 0.1464755363427493
+    },
+    "listing:624453518131677462": {
+      "sent_at_utc": "2026-04-28T14:20:33.953751+00:00",
+      "item": "MP7 | Fade (Factory New)",
+      "listing_id": "624453518131677462",
+      "spread_hybrid_disc": 0.1478727208966869
+    },
+    "listing:649223316126856348": {
+      "sent_at_utc": "2026-04-28T14:20:35.117613+00:00",
+      "item": "MP7 | Fade (Factory New)",
+      "listing_id": "649223316126856348",
+      "spread_hybrid_disc": 0.1554308641706785
+    },
+    "listing:637964317058886941": {
+      "sent_at_utc": "2026-04-28T14:20:36.282066+00:00",
+      "item": "MP7 | Fade (Factory New)",
+      "listing_id": "637964317058886941",
+      "spread_hybrid_disc": 0.1668438093234155
+    },
+    "listing:626705318056084691": {
+      "sent_at_utc": "2026-04-28T14:21:26.054517+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "626705318056084691",
+      "spread_hybrid_disc": 0.0920618688733081
     }
   },
-  "last_alert_sent_at_utc": "2026-04-28T09:06:03.853076+00:00"
+  "last_alert_sent_at_utc": "2026-04-28T14:21:26.054575+00:00"
 }
