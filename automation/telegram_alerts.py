@@ -121,6 +121,82 @@ BANDS: dict[str, dict[str, Any]] = {
             {"label": "excellent", "lo": 400, "hi": None},
         ],
     },
+    "steam_daily_range_14d_pct": {
+        "lower_is_better": True,
+        "fmt": "pct",
+        "bands": [
+            {"label": "excellent", "lo": None, "hi": 0.05},
+            {"label": "very_good", "lo": 0.05, "hi": 0.08},
+            {"label": "good", "lo": 0.08, "hi": 0.12},
+            {"label": "ok", "lo": 0.12, "hi": 0.18},
+            {"label": "bad", "lo": 0.18, "hi": 0.25},
+            {"label": "awful", "lo": 0.25, "hi": None},
+        ],
+    },
+    "steam_daily_ret_3d": {
+        "fmt": "pct",
+        "bands": [
+            {"label": "bad", "lo": None, "hi": -0.05},
+            {"label": "ok", "lo": -0.05, "hi": -0.02},
+            {"label": "good", "lo": -0.02, "hi": 0.02},
+            {"label": "very_good", "lo": 0.02, "hi": 0.05},
+            {"label": "excellent", "lo": 0.05, "hi": None},
+        ],
+    },
+    "steam_daily_ret_7d": {
+        "fmt": "pct",
+        "bands": [
+            {"label": "bad", "lo": None, "hi": -0.10},
+            {"label": "ok", "lo": -0.10, "hi": -0.03},
+            {"label": "good", "lo": -0.03, "hi": 0.03},
+            {"label": "very_good", "lo": 0.03, "hi": 0.08},
+            {"label": "excellent", "lo": 0.08, "hi": None},
+        ],
+    },
+    "steam_daily_slope_7d": {
+        "fmt": "pct",
+        "bands": [
+            {"label": "bad", "lo": None, "hi": -0.02},
+            {"label": "ok", "lo": -0.02, "hi": -0.005},
+            {"label": "good", "lo": -0.005, "hi": 0.005},
+            {"label": "very_good", "lo": 0.005, "hi": 0.02},
+            {"label": "excellent", "lo": 0.02, "hi": None},
+        ],
+    },
+    "steam_daily_ema_gap_3_14": {
+        "fmt": "pct",
+        "bands": [
+            {"label": "bad", "lo": None, "hi": -0.05},
+            {"label": "ok", "lo": -0.05, "hi": -0.02},
+            {"label": "good", "lo": -0.02, "hi": 0.02},
+            {"label": "very_good", "lo": 0.02, "hi": 0.05},
+            {"label": "excellent", "lo": 0.05, "hi": None},
+        ],
+    },
+    "steam_sales_7d_iqr_risk%": {
+        "lower_is_better": True,
+        "fmt": "pct_points",
+        "bands": [
+            {"label": "excellent", "lo": None, "hi": 5.0},
+            {"label": "very_good", "lo": 5.0, "hi": 8.0},
+            {"label": "good", "lo": 8.0, "hi": 12.0},
+            {"label": "ok", "lo": 12.0, "hi": 18.0},
+            {"label": "bad", "lo": 18.0, "hi": 25.0},
+            {"label": "awful", "lo": 25.0, "hi": None},
+        ],
+    },
+    "steam_sales_7d_band_risk%": {
+        "lower_is_better": True,
+        "fmt": "pct_points",
+        "bands": [
+            {"label": "excellent", "lo": None, "hi": 8.0},
+            {"label": "very_good", "lo": 8.0, "hi": 12.0},
+            {"label": "good", "lo": 12.0, "hi": 18.0},
+            {"label": "ok", "lo": 18.0, "hi": 25.0},
+            {"label": "bad", "lo": 25.0, "hi": 35.0},
+            {"label": "awful", "lo": 35.0, "hi": None},
+        ],
+    },
 }
 
 
@@ -193,6 +269,16 @@ def fmt_float(value: Any) -> str:
     return "-" if val is None else f"{val:.6f}"
 
 
+def fmt_seed(value: Any) -> str:
+    val = _as_float(value)
+    return "-" if val is None else f"{val:.0f}"
+
+
+def fmt_pct(value: Any) -> str:
+    val = _as_float(value)
+    return "-" if val is None else f"{val:.2%}"
+
+
 def steam_item_url(item: str) -> str:
     return "https://steamcommunity.com/market/listings/730/" + urllib.parse.quote(item, safe="")
 
@@ -215,6 +301,20 @@ def metric_line(row: pd.Series, metric: str, label: str | None = None) -> str:
     return f"{icon_for(metric, row.get(metric))} {html.escape(label)}: <code>{html.escape(value)}</code>{html.escape(suffix)}"
 
 
+def model_line(row: pd.Series, model: str, label: str) -> str:
+    fair = fmt_money(row.get(f"pred_{model}_eur"))
+    disc = fmt_money(row.get(f"pred_{model}_eur_disc"))
+    spread = fmt_pct(row.get(f"spread_{model}"))
+    spread_disc = fmt_pct(row.get(f"spread_{model}_disc"))
+    return (
+        f"{html.escape(label)}: "
+        f"<code>{html.escape(fair)}</code> / "
+        f"<code>{html.escape(disc)}</code> | "
+        f"sp <code>{html.escape(spread)}</code> / "
+        f"disc <code>{html.escape(spread_disc)}</code>"
+    )
+
+
 def format_alert(row: pd.Series) -> str:
     item = str(row.get("item") or "-")
     link = steam_item_url(item)
@@ -232,11 +332,16 @@ def format_alert(row: pd.Series) -> str:
         f"<a href=\"{html.escape(link)}\">Open Steam market page</a>",
         "",
         f"Ask: <code>{html.escape(fmt_money(row.get('ask')))}</code>",
-        f"Fair disc: <code>{html.escape(fmt_money(row.get('pred_hybrid_eur_disc')))}</code>",
-        f"Model spread: <b>{html.escape(spread_text)}</b> / max 17.00%",
-        f"Fair/Ask gap: <code>{'-' if fair_gap is None else html.escape(f'{fair_gap:.2%}')}</code>",
         f"Float: <code>{html.escape(fmt_float(row.get('float_value')))}</code>",
+        f"Seed: <code>{html.escape(fmt_seed(row.get('paint_seed')))}</code>",
         f"Listing ID: <code>{html.escape(str(row.get('listing_id') or '-'))}</code>",
+        "",
+        "<b>Model table</b>",
+        model_line(row, "smooth", "Smooth"),
+        model_line(row, "segmented", "Segmented"),
+        model_line(row, "hybrid", "Hybrid"),
+        f"Hybrid disc spread: <b>{html.escape(spread_text)}</b> / max 17.00%",
+        f"Hybrid fair/ask gap: <code>{'-' if fair_gap is None else html.escape(f'{fair_gap:.2%}')}</code>",
         "",
         "<b>Risk checks</b>",
         metric_line(row, "steam_sales_7d_n", "sales 7d"),
@@ -246,6 +351,13 @@ def format_alert(row: pd.Series) -> str:
         metric_line(row, "continuity_ratio", "continuity"),
         metric_line(row, "steam_turnover_proxy", "turnover"),
         metric_line(row, "scm_total_listings", "SCM listings"),
+        metric_line(row, "steam_daily_ret_3d", "ret 3d"),
+        metric_line(row, "steam_daily_ret_7d", "ret 7d"),
+        metric_line(row, "steam_daily_slope_7d", "slope 7d"),
+        metric_line(row, "steam_daily_ema_gap_3_14", "EMA gap 3/14"),
+        metric_line(row, "steam_daily_range_14d_pct", "range 14d"),
+        metric_line(row, "steam_sales_7d_iqr_risk%", "IQR risk"),
+        metric_line(row, "steam_sales_7d_band_risk%", "band risk"),
     ]
     return "\n".join(lines)
 
