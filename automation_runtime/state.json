@@ -2,39 +2,39 @@
   "version": 1,
   "items_signature": "f2572d29f846d47ceabb31f8839c5f2cfa5a224092ea0191125ac6176f2b8ef3",
   "items_count": 108,
-  "batch_pointer": 0,
-  "last_run_at_utc": "2026-04-28T20:00:42.603913+00:00",
+  "batch_pointer": 50,
+  "last_run_at_utc": "2026-04-28T20:19:50.916685+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Desert Eagle | Kumicho Dragon (Minimal Wear)",
-    "Glock-18 | Water Elemental (Battle-Scarred)",
-    "USP-S | Monster Mashup (Field-Tested)",
-    "AWP | Ice Coaled (Factory New)",
-    "USP-S | Jawbreaker (Minimal Wear)",
-    "SSG 08 | Big Iron (Minimal Wear)",
-    "USP-S | The Traitor (Battle-Scarred)",
-    "Desert Eagle | Midnight Storm (Minimal Wear)",
-    "UMP-45 | Neo-Noir (Field-Tested)",
-    "AWP | Sun in Leo (Field-Tested)"
+    "AK-47 | Slate (Minimal Wear)",
+    "AWP | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Redline (Field-Tested)",
+    "Sawed-Off | Wasteland Princess (Minimal Wear)",
+    "AK-47 | Slate (Battle-Scarred)",
+    "Galil AR | Rainbow Spoon (Factory New)",
+    "M4A4 | Hellish (Battle-Scarred)",
+    "Galil AR | Eco (Field-Tested)",
+    "AK-47 | Ice Coaled (Field-Tested)",
+    "AK-47 | Slate (Well-Worn)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T20:02:09.263366+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T20:02:09.263366+00:00",
+  "last_finished_at_utc": "2026-04-28T20:22:01.810827+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T20:22:01.810827+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 953,
-  "last_enriched_rows": 953,
-  "last_opportunities_rows": 1,
+  "last_listing_rows": 1658,
+  "last_enriched_rows": 1658,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 1,
+    "loaded": 0,
     "filtered": 0,
-    "considered": 1,
+    "considered": 0,
     "sent": 0,
-    "skipped": 1
+    "skipped": 0
   },
-  "last_batch_start_pointer": 98,
+  "last_batch_start_pointer": 40,
   "sent_alerts": {
     "listing:637964317056662933": {
       "sent_at_utc": "2026-04-28T14:19:32.914886+00:00",
@@ -251,7 +251,19 @@
       "item": "FAMAS | Yeti Camo (Factory New)",
       "listing_id": "633460717437089773",
       "spread_hybrid_disc": 0.1666148252932151
+    },
+    "listing:635712517316024719": {
+      "sent_at_utc": "2026-04-28T20:13:49.133874+00:00",
+      "item": "XM1014 | Entombed (Minimal Wear)",
+      "listing_id": "635712517316024719",
+      "spread_hybrid_disc": 0.1657723371684641
+    },
+    "listing:632334817635531923": {
+      "sent_at_utc": "2026-04-28T20:18:17.429662+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "632334817635531923",
+      "spread_hybrid_disc": 0.1559566912447909
     }
   },
-  "last_alert_sent_at_utc": "2026-04-28T19:18:23.788608+00:00"
+  "last_alert_sent_at_utc": "2026-04-28T20:18:17.429712+00:00"
 }
