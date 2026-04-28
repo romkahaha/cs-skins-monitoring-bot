@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f2572d29f846d47ceabb31f8839c5f2cfa5a224092ea0191125ac6176f2b8ef3",
   "items_count": 108,
-  "batch_pointer": 75,
-  "last_run_at_utc": "2026-04-28T14:39:55.690578+00:00",
+  "batch_pointer": 100,
+  "last_run_at_utc": "2026-04-28T14:44:31.937251+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A4 | Full Throttle (Battle-Scarred)",
-    "M4A1-S | Black Lotus (Minimal Wear)",
-    "Desert Eagle | Printstream (Minimal Wear)",
-    "SSG 08 | Bloodshot (Field-Tested)",
-    "M4A4 | Evil Daimyo (Field-Tested)"
+    "Desert Eagle | Printstream (Factory New)",
+    "AUG | Fleet Flock (Battle-Scarred)",
+    "XM1014 | Halftone Shift (Factory New)",
+    "Desert Eagle | Kumicho Dragon (Minimal Wear)",
+    "Glock-18 | Water Elemental (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T14:40:38.643075+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T14:40:38.643075+00:00",
+  "last_finished_at_utc": "2026-04-28T14:44:57.698987+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T14:44:57.698987+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 768,
-  "last_enriched_rows": 768,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 274,
+  "last_enriched_rows": 274,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 70,
+  "last_batch_start_pointer": 95,
   "sent_alerts": {
     "listing:637964317056662933": {
       "sent_at_utc": "2026-04-28T14:19:32.914886+00:00",
@@ -108,7 +108,25 @@
       "item": "FAMAS | Yeti Camo (Factory New)",
       "listing_id": "652601015940675348",
       "spread_hybrid_disc": 0.1678208587127663
+    },
+    "listing:650349216050752953": {
+      "sent_at_utc": "2026-04-28T14:44:27.092353+00:00",
+      "item": "Glock-18 | Nuclear Garden (Factory New)",
+      "listing_id": "650349216050752953",
+      "spread_hybrid_disc": 0.0263679359281266
+    },
+    "listing:657104615564620440": {
+      "sent_at_utc": "2026-04-28T14:44:30.748070+00:00",
+      "item": "Glock-18 | Nuclear Garden (Factory New)",
+      "listing_id": "657104615564620440",
+      "spread_hybrid_disc": 0.0773570621668728
+    },
+    "listing:639090217034211633": {
+      "sent_at_utc": "2026-04-28T14:44:57.097916+00:00",
+      "item": "XM1014 | Halftone Shift (Factory New)",
+      "listing_id": "639090217034211633",
+      "spread_hybrid_disc": 0.0969016646481858
     }
   },
-  "last_alert_sent_at_utc": "2026-04-28T14:32:59.172896+00:00"
+  "last_alert_sent_at_utc": "2026-04-28T14:44:57.097982+00:00"
 }
