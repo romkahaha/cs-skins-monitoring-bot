@@ -1,4 +1,4 @@
-name: Smoke checks
+name: Proofread
 
 on:
   workflow_dispatch:

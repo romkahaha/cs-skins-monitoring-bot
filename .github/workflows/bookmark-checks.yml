@@ -1,4 +1,4 @@
-name: Health checks
+name: Bookmark checks
 
 on:
   workflow_dispatch:

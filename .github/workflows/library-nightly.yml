@@ -1,18 +1,20 @@
-name: Base snapshot
+name: Library nightly
 
 on:
   workflow_dispatch:
     inputs:
-      delay_min_sec:
-        description: Optional delay minimum override
+      skip_risk:
+        description: Skip nightly risk rebuild and use automation_runtime/risk_metrics_latest.csv
         required: false
-        default: ""
-      delay_max_sec:
-        description: Optional delay maximum override
+        default: false
+        type: boolean
+      skip_base:
+        description: Skip CSFloat base snapshot refresh
         required: false
-        default: ""
+        default: true
+        type: boolean
   schedule:
-    - cron: "17 * * * *"
+    - cron: "1 22 * * *"
 
 permissions:
   contents: write
@@ -22,12 +24,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  base-snapshot:
+  nightly-level1:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      DELAY_MIN_SEC: ${{ github.event.inputs.delay_min_sec || '' }}
-      DELAY_MAX_SEC: ${{ github.event.inputs.delay_max_sec || '' }}
+      SKIP_RISK: ${{ github.event.inputs.skip_risk || 'false' }}
+      SKIP_BASE: ${{ github.event.inputs.skip_base || 'true' }}
+      STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
       CSFLOAT_API_KEY_2: ${{ secrets.CSFLOAT_API_KEY_2 }}
 
@@ -49,44 +52,37 @@ jobs:
       - name: Rebase runtime state
         run: git pull --rebase
 
-      - name: Run base snapshot
+      - name: Run nightly level 1
         shell: bash
         run: |
           set -euo pipefail
 
           args=()
-          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]]; then
-            args+=(--respect-schedule)
-          fi
-          if [[ -n "$DELAY_MIN_SEC" ]]; then
-            args+=(--delay-min-sec "$DELAY_MIN_SEC")
-          fi
-          if [[ -n "$DELAY_MAX_SEC" ]]; then
-            args+=(--delay-max-sec "$DELAY_MAX_SEC")
+          if [[ "$SKIP_RISK" == "true" ]]; then
+            args+=(--skip-risk)
+          else
+            args+=(--run-risk)
           fi
 
-          python -B automation/base/run_snapshot.py "${args[@]}"
+          if [[ "$SKIP_BASE" == "true" ]]; then
+            args+=(--skip-base)
+          fi
 
-      - name: Commit base snapshot
-        if: always()
+          python automation/nightly/run_level1.py "${args[@]}"
+
+      - name: Commit runtime outputs
         shell: bash
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation_runtime/base_snapshot_latest.csv
+          git add automation_runtime skin_homog/data_skins_big steam_listings/data/float_fit_rel_curves.json
 
           if git diff --cached --quiet; then
-            echo "No base snapshot changes to commit."
+            echo "No nightly output changes to commit."
             exit 0
           fi
 
-          git commit -m "Update base snapshot [skip ci]"
-          if git push; then
-            exit 0
-          fi
-
-          echo "Push rejected; rebasing runtime commit and retrying."
-          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git commit -m "Update nightly runtime [skip ci]"
           git push

@@ -1,4 +1,4 @@
-name: Monitoring cycle
+name: Reading cycle
 
 on:
   workflow_dispatch:
