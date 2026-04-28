@@ -1,0 +1,60 @@
+name: Health checks
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_bad_cookies:
+        description: Use intentionally invalid Steam cookies
+        required: false
+        default: false
+        type: boolean
+      force_failure_for_test:
+        description: Force a failure after startup to test Telegram alerts
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "7 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  steam-cookies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      FORCE_BAD_COOKIES: ${{ github.event.inputs.force_bad_cookies || 'false' }}
+      FORCE_FAILURE_FOR_TEST: ${{ github.event.inputs.force_failure_for_test || 'false' }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run Steam cookie health check
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          args=()
+          if [[ "$FORCE_BAD_COOKIES" == "true" ]]; then
+            args+=(--force-bad-cookies)
+          fi
+          if [[ "$FORCE_FAILURE_FOR_TEST" == "true" ]]; then
+            args+=(--force-failure-for-test)
+          fi
+
+          python -B automation/health/check_steam_cookies.py "${args[@]}"
+

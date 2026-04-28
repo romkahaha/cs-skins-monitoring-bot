@@ -126,6 +126,41 @@ def monitoring_defaults() -> dict[str, Any]:
     }
 
 
+def health_defaults() -> dict[str, Any]:
+    return {
+        "enabled": True,
+        "schedule": {
+            "enabled": True,
+            "timezone": "Europe/Prague",
+            "interval_minutes": 60,
+            "github_actions_cron_utc": "7 * * * *",
+        },
+        "steam": {
+            "item": "Dreams & Nightmares Case",
+            "currency": 3,
+            "limit": 10,
+            "max_listings": 10,
+            "min_rows": 1,
+            "fail_if_missing_cookies": True,
+            "check_login_endpoint": True,
+            "login_check_url": "https://steamcommunity.com/my/",
+            "check_listing_endpoint": True,
+            "listings_per_request": 10,
+            "request_timeout_sec": 45.0,
+            "retry_attempts": 2,
+            "retry_sleep_min_sec": 2.0,
+            "retry_sleep_max_sec": 5.0,
+            "delay_between_render_pages_min_sec": 0.0,
+            "delay_between_render_pages_max_sec": 0.0,
+            "batch_log_progress": 1,
+        },
+        "telegram": {
+            "enabled": True,
+            "timeout_sec": 120,
+        },
+    }
+
+
 def nightly_defaults() -> dict[str, Any]:
     root = repo_root()
     return {
