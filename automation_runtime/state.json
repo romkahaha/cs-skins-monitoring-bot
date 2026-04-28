@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 226,
-  "last_run_at_utc": "2026-04-28T10:00:12.688909+00:00",
+  "batch_pointer": 251,
+  "last_run_at_utc": "2026-04-28T10:06:40.676808+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Desert Eagle | Mecha Industries (Factory New)",
-    "Galil AR | Cerberus (Field-Tested)",
-    "M4A1-S | Nitro (Factory New)",
-    "UMP-45 | Primal Saber (Factory New)",
-    "AK-47 | Ice Coaled (Field-Tested)"
+    "SG 553 | Integrale (Field-Tested)",
+    "MP9 | Hypnotic (Factory New)",
+    "Glock-18 | Water Elemental (Factory New)",
+    "Tec-9 | Isaac (Factory New)",
+    "UMP-45 | Scaffold (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T10:01:01.419580+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T10:01:01.419580+00:00",
+  "last_finished_at_utc": "2026-04-28T10:07:16.135134+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T10:07:16.135134+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 640,
-  "last_enriched_rows": 640,
+  "last_listing_rows": 353,
+  "last_enriched_rows": 353,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 221,
+  "last_batch_start_pointer": 246,
   "sent_alerts": {
     "listing:650349216050752953": {
       "sent_at_utc": "2026-04-28T09:06:03.853009+00:00",
