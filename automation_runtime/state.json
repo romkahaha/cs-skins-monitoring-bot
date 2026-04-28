@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f2572d29f846d47ceabb31f8839c5f2cfa5a224092ea0191125ac6176f2b8ef3",
   "items_count": 108,
-  "batch_pointer": 25,
-  "last_run_at_utc": "2026-04-28T14:20:37.407008+00:00",
+  "batch_pointer": 50,
+  "last_run_at_utc": "2026-04-28T14:34:45.512765+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AUG | Momentum (Field-Tested)",
-    "Desert Eagle | Mulberry (Minimal Wear)",
-    "M4A1-S | Control Panel (Field-Tested)",
-    "MP9 | Hydra (Minimal Wear)",
-    "M4A4 | Tooth Fairy (Minimal Wear)"
+    "Galil AR | Rainbow Spoon (Factory New)",
+    "M4A4 | Hellish (Battle-Scarred)",
+    "Galil AR | Eco (Field-Tested)",
+    "AK-47 | Ice Coaled (Field-Tested)",
+    "AK-47 | Slate (Well-Worn)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T14:21:26.655581+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T14:21:26.655581+00:00",
+  "last_finished_at_utc": "2026-04-28T14:35:45.752135+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T14:35:45.752135+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 876,
-  "last_enriched_rows": 876,
-  "last_opportunities_rows": 1,
+  "last_listing_rows": 774,
+  "last_enriched_rows": 774,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 1,
+    "loaded": 0,
     "filtered": 0,
-    "considered": 1,
-    "sent": 1,
+    "considered": 0,
+    "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 20,
+  "last_batch_start_pointer": 45,
   "sent_alerts": {
     "listing:637964317056662933": {
       "sent_at_utc": "2026-04-28T14:19:32.914886+00:00",
@@ -60,7 +60,55 @@
       "item": "Desert Eagle | Mulberry (Minimal Wear)",
       "listing_id": "626705318056084691",
       "spread_hybrid_disc": 0.0920618688733081
+    },
+    "listing:661608215081663464": {
+      "sent_at_utc": "2026-04-28T14:31:41.602598+00:00",
+      "item": "AWP | Exoskeleton (Battle-Scarred)",
+      "listing_id": "661608215081663464",
+      "spread_hybrid_disc": 0.1464658633051665
+    },
+    "listing:660482407770143710": {
+      "sent_at_utc": "2026-04-28T14:32:37.774479+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "660482407770143710",
+      "spread_hybrid_disc": 0.1597672407326029
+    },
+    "listing:635712517314255967": {
+      "sent_at_utc": "2026-04-28T14:32:41.251099+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "635712517314255967",
+      "spread_hybrid_disc": 0.1645401753919823
+    },
+    "listing:642467916671134385": {
+      "sent_at_utc": "2026-04-28T14:32:44.904021+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "642467916671134385",
+      "spread_hybrid_disc": 0.1652411589997388
+    },
+    "listing:627831217921463612": {
+      "sent_at_utc": "2026-04-28T14:32:48.392505+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "627831217921463612",
+      "spread_hybrid_disc": 0.1663880712881547
+    },
+    "listing:655978715571135077": {
+      "sent_at_utc": "2026-04-28T14:32:52.036168+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "655978715571135077",
+      "spread_hybrid_disc": 0.1665660401206598
+    },
+    "listing:641342016869814967": {
+      "sent_at_utc": "2026-04-28T14:32:55.523105+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "641342016869814967",
+      "spread_hybrid_disc": 0.167315713559657
+    },
+    "listing:652601015940675348": {
+      "sent_at_utc": "2026-04-28T14:32:59.172836+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "652601015940675348",
+      "spread_hybrid_disc": 0.1678208587127663
     }
   },
-  "last_alert_sent_at_utc": "2026-04-28T14:21:26.054575+00:00"
+  "last_alert_sent_at_utc": "2026-04-28T14:32:59.172896+00:00"
 }
