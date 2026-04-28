@@ -177,7 +177,7 @@ def main() -> int:
         print(f"using existing risk csv: {risk_csv}")
 
     run_step(
-        "risk candidates",
+        "risk-only candidates",
         [sys.executable, str(root / "automation" / "nightly" / "build_risk_candidates.py"), "--config", str(config_path)],
         root,
         dry_run=args.dry_run,
@@ -238,7 +238,7 @@ def main() -> int:
 
     if monitor_list_enabled:
         run_step(
-            "monitor list",
+            "monitor list (risk + high-CV + model-ready)",
             [sys.executable, str(root / "automation" / "nightly" / "build_monitor_list.py"), "--config", str(config_path)],
             root,
             dry_run=args.dry_run,

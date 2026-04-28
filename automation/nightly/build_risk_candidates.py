@@ -30,16 +30,12 @@ def parse_args() -> argparse.Namespace:
 
 def filter_config(config: dict) -> FilterConfig:
     risk_filter = config.get("risk_filter", {})
-    high_cv_filter = config.get("high_cv_filter", {})
     return FilterConfig(
         risk_ret_7d_min=float(risk_filter.get("ret_7d_min", -0.03)),
         risk_downside_14d_max=float(risk_filter.get("downside_14d_max", 0.17)),
         risk_sales_7d_n_min=int(risk_filter.get("sales_7d_n_min", 21)),
         risk_tail_ratio_min=float(risk_filter.get("tail_ratio_min", 0.85)),
         risk_n_listings_min=int(risk_filter.get("n_listings_min", 20)),
-        cv_min_listings=int(high_cv_filter.get("min_listings", 3)),
-        pred_cv_min=float(high_cv_filter.get("pred_cv_min", 0.075)),
-        pred_range_over_mean_min=float(high_cv_filter.get("pred_range_over_mean_min", 0.3)),
     )
 
 
@@ -58,8 +54,9 @@ def main() -> int:
     print(f"config: {config_path}")
     print(f"risk csv: {risk_csv}")
     print(f"total risk rows: {len(frame)}")
-    print(f"risk candidates: {len(candidates)}")
-    print(f"saved risk candidates: {out_csv}")
+    print("profile: risk-only candidates (high-CV is applied later in build_monitor_list.py)")
+    print(f"risk-only candidates: {len(candidates)}")
+    print(f"saved risk-only candidates: {out_csv}")
     return 0
 
 
