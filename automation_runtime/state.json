@@ -2,39 +2,39 @@
   "version": 1,
   "items_signature": "f2572d29f846d47ceabb31f8839c5f2cfa5a224092ea0191125ac6176f2b8ef3",
   "items_count": 108,
-  "batch_pointer": 2,
-  "last_run_at_utc": "2026-04-28T20:32:14.959827+00:00",
+  "batch_pointer": 52,
+  "last_run_at_utc": "2026-04-28T20:51:09.835750+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "USP-S | Monster Mashup (Field-Tested)",
-    "AWP | Ice Coaled (Factory New)",
-    "USP-S | Jawbreaker (Minimal Wear)",
-    "SSG 08 | Big Iron (Minimal Wear)",
-    "USP-S | The Traitor (Battle-Scarred)",
-    "Desert Eagle | Midnight Storm (Minimal Wear)",
-    "UMP-45 | Neo-Noir (Field-Tested)",
-    "AWP | Sun in Leo (Field-Tested)",
-    "Desert Eagle | Calligraffiti (Factory New)",
-    "P2000 | Urban Hazard (Factory New)"
+    "AK-47 | Redline (Field-Tested)",
+    "Sawed-Off | Wasteland Princess (Minimal Wear)",
+    "AK-47 | Slate (Battle-Scarred)",
+    "Galil AR | Rainbow Spoon (Factory New)",
+    "M4A4 | Hellish (Battle-Scarred)",
+    "Galil AR | Eco (Field-Tested)",
+    "AK-47 | Ice Coaled (Field-Tested)",
+    "AK-47 | Slate (Well-Worn)",
+    "Glock-18 | Block-18 (Factory New)",
+    "Glock-18 | Vogue (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T20:33:37.119993+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T20:33:37.119993+00:00",
+  "last_finished_at_utc": "2026-04-28T20:53:08.735949+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T20:53:08.735949+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 967,
-  "last_enriched_rows": 967,
-  "last_opportunities_rows": 1,
+  "last_listing_rows": 1653,
+  "last_enriched_rows": 1653,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 1,
+    "loaded": 0,
     "filtered": 0,
-    "considered": 1,
+    "considered": 0,
     "sent": 0,
-    "skipped": 1
+    "skipped": 0
   },
-  "last_batch_start_pointer": 100,
+  "last_batch_start_pointer": 42,
   "sent_alerts": {
     "listing:637964317056662933": {
       "sent_at_utc": "2026-04-28T14:19:32.914886+00:00",
@@ -263,7 +263,13 @@
       "item": "Desert Eagle | Mulberry (Minimal Wear)",
       "listing_id": "632334817635531923",
       "spread_hybrid_disc": 0.1559566912447909
+    },
+    "listing:625579418065093234": {
+      "sent_at_utc": "2026-04-28T20:49:14.523368+00:00",
+      "item": "P90 | Shallow Grave (Minimal Wear)",
+      "listing_id": "625579418065093234",
+      "spread_hybrid_disc": 0.1669075974687074
     }
   },
-  "last_alert_sent_at_utc": "2026-04-28T20:18:17.429712+00:00"
+  "last_alert_sent_at_utc": "2026-04-28T20:49:14.523421+00:00"
 }
