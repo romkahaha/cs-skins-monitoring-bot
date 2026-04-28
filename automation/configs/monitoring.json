@@ -81,7 +81,18 @@
     "steam_sales_7d_tail_ratio_min": 0.9,
     "steam_daily_downside_14d_pct_max": 0.12,
     "continuity_ratio_max": 3.5,
-    "exclude_any": []
+    "exclude_any": [
+      "Fade",
+      "Case Hardened",
+      "Heat Treated"
+    ]
+  },
+  "model_plot": {
+    "enabled": true,
+    "data_dir": "skin_homog/data_skins_big",
+    "fit_json": "steam_listings/data/float_fit_rel_curves.json",
+    "dpi": 120,
+    "fail_on_error": false
   },
   "telegram": {
     "enabled": false,

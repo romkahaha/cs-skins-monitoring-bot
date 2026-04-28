@@ -128,6 +128,13 @@ def monitoring_defaults() -> dict[str, Any]:
             "continuity_ratio_max": 3.5,
             "exclude_any": [],
         },
+        "model_plot": {
+            "enabled": False,
+            "data_dir": "skin_homog/data_skins_big",
+            "fit_json": "steam_listings/data/float_fit_rel_curves.json",
+            "dpi": 120,
+            "fail_on_error": False,
+        },
         "telegram": {
             "enabled": False,
             "cooldown_hours": 12.0,

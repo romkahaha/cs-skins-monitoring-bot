@@ -229,6 +229,7 @@ def main() -> int:
     opp_cfg = config.get("opportunity_filter", {})
     alerts_cfg = config.get("alerts", {})
     telegram_cfg = config.get("telegram", {})
+    plot_cfg = config.get("model_plot", {})
 
     monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
     state_path = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
@@ -359,6 +360,7 @@ def main() -> int:
                 sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
                 max_alerts=telegram_cfg.get("max_alerts"),
                 alerts_cfg=alerts_cfg,
+                plot_cfg=plot_cfg,
             )
             alert_stats = stats
             print(

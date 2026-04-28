@@ -482,6 +482,53 @@ def send_message(text: str, *, bot_token: str, chat_id: str, timeout: int = 120)
     return payload
 
 
+def send_photo(
+    image_bytes: bytes,
+    *,
+    bot_token: str,
+    chat_id: str,
+    caption: str | None = None,
+    timeout: int = 120,
+) -> dict[str, Any]:
+    url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
+    data = {"chat_id": chat_id}
+    if caption:
+        data["caption"] = caption
+    response = requests.post(
+        url,
+        data=data,
+        files={"photo": ("fit.png", image_bytes, "image/png")},
+        timeout=timeout,
+    )
+    if not response.ok:
+        raise RuntimeError(f"sendPhoto failed: {response.status_code} {response.text[:800]}")
+    payload = response.json()
+    if not payload.get("ok"):
+        raise RuntimeError(f"sendPhoto failed: {payload}")
+    return payload
+
+
+def _plot_config_value(plot_cfg: dict[str, Any], key: str, default: Any) -> Any:
+    value = plot_cfg.get(key, default)
+    return default if value is None else value
+
+
+def maybe_render_fit_plot(row: pd.Series, plot_cfg: dict[str, Any] | None) -> bytes | None:
+    cfg = plot_cfg or {}
+    if not bool(cfg.get("enabled", False)):
+        return None
+    item = str(row.get("item", "") or "").strip()
+    if not item:
+        return None
+
+    from automation.model_fit_plot import render_item_fit_plot
+
+    data_dir = Path(str(_plot_config_value(cfg, "data_dir", "skin_homog/data_skins_big")))
+    fit_json = Path(str(_plot_config_value(cfg, "fit_json", "steam_listings/data/float_fit_rel_curves.json")))
+    dpi = int(_plot_config_value(cfg, "dpi", 120))
+    return render_item_fit_plot(item, data_dir=data_dir, fit_json=fit_json, dpi=dpi)
+
+
 def send_opportunity_alerts(
     opportunities_csv: Path,
     state_json: Path,
@@ -494,6 +541,7 @@ def send_opportunity_alerts(
     sleep_sec: float = 0.6,
     max_alerts: int | None = None,
     alerts_cfg: dict[str, Any] | None = None,
+    plot_cfg: dict[str, Any] | None = None,
 ) -> dict[str, int]:
     raw_df = load_opportunities(opportunities_csv)
     df, filter_stats = apply_alert_filters(raw_df, alerts_cfg)
@@ -519,6 +567,15 @@ def send_opportunity_alerts(
         else:
             assert token is not None and chat is not None
             send_message(message, bot_token=token, chat_id=chat)
+            try:
+                image_bytes = maybe_render_fit_plot(row, plot_cfg)
+                if image_bytes:
+                    caption = str(row.get("item", "") or "Model fit")
+                    send_photo(image_bytes, bot_token=token, chat_id=chat, caption=caption[:1024])
+            except Exception as exc:
+                if bool((plot_cfg or {}).get("fail_on_error", False)):
+                    raise
+                print(f"fit plot skipped: {exc}")
             state = mark_sent(state, key, row)
             save_state(state_json, state)
             time.sleep(max(0.0, float(sleep_sec)))

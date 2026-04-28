@@ -65,6 +65,7 @@ def main() -> int:
     config = load_json_config(args.config.resolve() if args.config else None, monitoring_defaults())
     alerts_cfg = config.get("alerts", {})
     telegram_cfg = config.get("telegram", {})
+    plot_cfg = config.get("model_plot", {})
     opportunities_csv = args.opportunities_csv.resolve() if args.opportunities_csv else path_from_config(config, "opportunities_csv")
     state_json = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
     monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
@@ -80,6 +81,7 @@ def main() -> int:
         sleep_sec=float(args.sleep_sec if args.sleep_sec != 0.6 else telegram_cfg.get("sleep_sec", 0.6)),
         max_alerts=max_alerts,
         alerts_cfg=alerts_cfg,
+        plot_cfg=plot_cfg,
     )
     print(f"opportunity rows loaded: {stats['loaded']}")
     print(f"alerts filtered out: {stats['filtered']}")
