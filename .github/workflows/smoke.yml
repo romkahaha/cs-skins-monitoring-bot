@@ -28,6 +28,7 @@ jobs:
       - name: Import automation modules
         run: >
           python -B -c "import automation.telegram_alerts,
+          automation.base.run_snapshot,
           automation.monitoring.run_batch, automation.monitoring.run_cycle,
           automation.monitoring.send_telegram_alerts,
           automation.health.check_steam_cookies,

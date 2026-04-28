@@ -1,0 +1,25 @@
+{
+  "paths": {
+    "monitor_items_py": "automation_runtime/monitor_list_latest.py",
+    "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv"
+  },
+  "schedule": {
+    "intended_start": "06:30",
+    "timezone": "Europe/Prague",
+    "github_actions_cron_utc": "30 4 * * *"
+  },
+  "base_snapshot": {
+    "enabled": true,
+    "delay_min_sec": 10.0,
+    "delay_max_sec": 20.0,
+    "rate_limit_pause_sec": 900.0,
+    "rate_limit_stair_step_sec": 60.0,
+    "rate_limit_max_retries": 10,
+    "rate_limit_error_patterns": [
+      "429",
+      "too many requests",
+      "rate limit"
+    ]
+  }
+}
+
