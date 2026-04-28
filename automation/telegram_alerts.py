@@ -201,7 +201,7 @@ BANDS: dict[str, dict[str, Any]] = {
 
 
 THRESHOLDS = {
-    "spread_hybrid_disc": "<= 17.00%",
+    "spread_hybrid_disc": "<= 12.00%",
     "steam_sales_7d_n": ">= 50",
     "steam_sales_7d_downside_risk%": "<= 10.00%",
     "steam_sales_7d_tail_ratio": ">= 0.900",

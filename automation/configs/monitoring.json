@@ -68,12 +68,12 @@
     "tail_ratio_min": 0.9,
     "downside_14d_max": 0.12,
     "continuity_ratio_max": 3.5,
-    "spread_hybrid_disc_max": 0.17,
+    "spread_hybrid_disc_max": 0.12,
     "exclude_any": []
   },
   "alerts": {
     "enabled": true,
-    "spread_hybrid_disc_max": 0.17,
+    "spread_hybrid_disc_max": 0.12,
     "ask_min": null,
     "ask_max": null,
     "steam_sales_7d_n_min": 50,
