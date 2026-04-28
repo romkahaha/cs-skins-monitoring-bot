@@ -50,7 +50,7 @@ def monitoring_defaults() -> dict[str, Any]:
             "active_to": "23:00",
             "timezone": "Europe/Prague",
             "interval_minutes": 10,
-            "github_actions_cron_utc": "*/10 6-21 * * *",
+            "github_actions_cron_utc": "0 6,12,18 * * *",
             "enforce_active_window": False,
         },
         "preflight": {
@@ -81,6 +81,18 @@ def monitoring_defaults() -> dict[str, Any]:
             "batch_size": 5,
             "max_listings_per_item": 200,
             "fail_if_all_listing_fetches_error": True,
+        },
+        "cycle": {
+            "enabled": True,
+            "batch_size": None,
+            "cycle_sleep_sec": 600.0,
+            "commit_runtime": True,
+            "commit_every_batches": 5,
+            "max_runtime_minutes": 330.0,
+            "max_batches_per_run": None,
+            "max_cycles_per_run": None,
+            "respect_active_window": True,
+            "checkpoint_message": "Update monitoring runtime [skip ci]",
         },
         "steam_scm": {
             "listings_per_request": 100,

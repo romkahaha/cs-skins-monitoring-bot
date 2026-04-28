@@ -1,23 +1,35 @@
-name: Monitoring batch
+name: Monitoring cycle
 
 on:
   workflow_dispatch:
     inputs:
       batch_size:
-        description: Number of monitor-list items to scan
+        description: Number of monitor-list items per batch
         required: false
         default: "5"
       telegram_mode:
-        description: Telegram mode for this run
+        description: Telegram mode for this cycle
         required: false
-        default: dry-run
+        default: real
         type: choice
         options:
           - dry-run
           - real
           - off
+      max_runtime_minutes:
+        description: Max runtime for this cycle job
+        required: false
+        default: "330"
+      max_batches:
+        description: Optional max batches for manual tests
+        required: false
+        default: ""
+      max_cycles:
+        description: Optional max full-list cycles for manual tests
+        required: false
+        default: ""
   schedule:
-    - cron: "*/10 6-21 * * *"
+    - cron: "0 6,12,18 * * *"
 
 permissions:
   contents: write
@@ -29,10 +41,13 @@ concurrency:
 jobs:
   monitoring:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 360
     env:
       BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
       TELEGRAM_MODE: ${{ github.event.inputs.telegram_mode || 'real' }}
+      MAX_RUNTIME_MINUTES: ${{ github.event.inputs.max_runtime_minutes || '330' }}
+      MAX_BATCHES: ${{ github.event.inputs.max_batches || '' }}
+      MAX_CYCLES: ${{ github.event.inputs.max_cycles || '' }}
       STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -55,12 +70,17 @@ jobs:
       - name: Rebase runtime state
         run: git pull --rebase
 
-      - name: Run monitoring batch
+      - name: Configure runtime commits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run monitoring cycle
         shell: bash
         run: |
           set -euo pipefail
 
-          args=(--batch-size "$BATCH_SIZE")
+          args=(--batch-size "$BATCH_SIZE" --max-runtime-minutes "$MAX_RUNTIME_MINUTES")
           case "$TELEGRAM_MODE" in
             dry-run)
               args+=(--telegram-dry-run)
@@ -76,15 +96,21 @@ jobs:
               ;;
           esac
 
-          python automation/monitoring/run_batch.py "${args[@]}"
+          if [[ -n "$MAX_BATCHES" ]]; then
+            args+=(--max-batches "$MAX_BATCHES")
+          fi
+          if [[ -n "$MAX_CYCLES" ]]; then
+            args+=(--max-cycles "$MAX_CYCLES")
+          fi
 
-      - name: Commit runtime outputs
+          python -B automation/monitoring/run_cycle.py "${args[@]}"
+
+      - name: Final runtime commit
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add automation_runtime
 
           if git diff --cached --quiet; then

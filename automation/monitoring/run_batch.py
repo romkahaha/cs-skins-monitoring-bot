@@ -366,6 +366,7 @@ def main() -> int:
                 f"loaded={stats['loaded']} filtered={stats['filtered']} "
                 f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
             )
+            state = load_state(state_path, items)
 
     except Exception as exc:
         state = mark_run_finished(

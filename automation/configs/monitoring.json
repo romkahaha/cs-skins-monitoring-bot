@@ -5,7 +5,7 @@
     "active_to": "23:00",
     "timezone": "Europe/Prague",
     "interval_minutes": 10,
-    "github_actions_cron_utc": "*/10 6-21 * * *",
+    "github_actions_cron_utc": "0 6,12,18 * * *",
     "enforce_active_window": false
   },
   "preflight": {
@@ -36,6 +36,18 @@
     "batch_size": 5,
     "max_listings_per_item": 200,
     "fail_if_all_listing_fetches_error": true
+  },
+  "cycle": {
+    "enabled": true,
+    "batch_size": null,
+    "cycle_sleep_sec": 600.0,
+    "commit_runtime": true,
+    "commit_every_batches": 5,
+    "max_runtime_minutes": 330.0,
+    "max_batches_per_run": null,
+    "max_cycles_per_run": null,
+    "respect_active_window": true,
+    "checkpoint_message": "Update monitoring runtime [skip ci]"
   },
   "steam_scm": {
     "listings_per_request": 100,
