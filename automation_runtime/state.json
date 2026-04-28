@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 152,
-  "last_run_at_utc": "2026-04-28T08:22:04.271512+00:00",
+  "batch_pointer": 177,
+  "last_run_at_utc": "2026-04-28T08:27:38.690448+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Glock-18 | Shinobu (Field-Tested)",
-    "FAMAS | Yeti Camo (Factory New)",
-    "CZ75-Auto | Vendetta (Factory New)",
-    "USP-S | Ticket to Hell (Factory New)",
-    "USP-S | Cortex (Battle-Scarred)"
+    "Desert Eagle | Crimson Web (Field-Tested)",
+    "AUG | Death by Puppy (Minimal Wear)",
+    "Nova | Graphite (Factory New)",
+    "P2000 | Wicked Sick (Factory New)",
+    "AWP | Printstream (Well-Worn)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T08:23:28.056766+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T08:23:28.056766+00:00",
+  "last_finished_at_utc": "2026-04-28T08:28:17.084463+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T08:28:17.084463+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 829,
-  "last_enriched_rows": 829,
+  "last_listing_rows": 572,
+  "last_enriched_rows": 572,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,5 +29,5 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 147
+  "last_batch_start_pointer": 172
 }
