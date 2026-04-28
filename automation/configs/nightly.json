@@ -34,15 +34,15 @@
     "require_skin_data_dir": true
   },
   "risk_rebuild": {
-    "enabled": false,
+    "enabled": true,
     "mode": "create",
     "trade_days": 7,
     "min_discount_sample": 3,
     "steam_currency": 3,
     "auto_refresh_steam_cookies": false,
     "require_stage1_ok": true,
-    "steam_item_delay_min_sec": 6.0,
-    "steam_item_delay_max_sec": 11.0
+    "steam_item_delay_min_sec": 10.0,
+    "steam_item_delay_max_sec": 20.0
   },
   "monitor_list": {
     "enabled": true,

@@ -32,7 +32,7 @@ jobs:
     timeout-minutes: 45
     env:
       BATCH_SIZE: ${{ github.event.inputs.batch_size || '5' }}
-      TELEGRAM_MODE: ${{ github.event.inputs.telegram_mode || 'dry-run' }}
+      TELEGRAM_MODE: ${{ github.event.inputs.telegram_mode || 'real' }}
       STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
