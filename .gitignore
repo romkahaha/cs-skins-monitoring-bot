@@ -1,6 +1,8 @@
 local_secrets.py
 local_steam_cookies.py
 .env
+automation/CODEX_CONTEXT.md
+automation/CHAT_CONTEXT.md
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
