@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 277,
-  "last_run_at_utc": "2026-04-28T08:45:57.453092+00:00",
+  "batch_pointer": 302,
+  "last_run_at_utc": "2026-04-28T08:49:06.572929+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "MAG-7 | Justice (Field-Tested)",
-    "SG 553 | Dragon Tech (Factory New)",
-    "Tec-9 | Fuel Injector (Factory New)",
-    "USP-S | Kill Confirmed (Field-Tested)",
-    "Sawed-Off | Kiss♥Love (Field-Tested)"
+    "AUG | Random Access (Factory New)",
+    "MAG-7 | Bulldozer (Field-Tested)",
+    "XM1014 | Ziggy (Factory New)",
+    "AK-47 | Neon Rider (Field-Tested)",
+    "M249 | Emerald Poison Dart (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T08:46:22.864038+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T08:46:22.864038+00:00",
+  "last_finished_at_utc": "2026-04-28T08:49:29.259322+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T08:49:29.259322+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 548,
-  "last_enriched_rows": 548,
+  "last_listing_rows": 330,
+  "last_enriched_rows": 330,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,5 +29,5 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 272
+  "last_batch_start_pointer": 297
 }
