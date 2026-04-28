@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 202,
-  "last_run_at_utc": "2026-04-28T08:31:53.279989+00:00",
+  "batch_pointer": 227,
+  "last_run_at_utc": "2026-04-28T08:36:38.462201+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Ice Coaled (Battle-Scarred)",
-    "Galil AR | Signal (Factory New)",
-    "AK-47 | Ice Coaled (Battle-Scarred)",
-    "MAC-10 | Saibā Oni (Factory New)",
-    "AWP | Duality (Battle-Scarred)"
+    "Galil AR | Cerberus (Field-Tested)",
+    "M4A1-S | Nitro (Factory New)",
+    "UMP-45 | Primal Saber (Factory New)",
+    "AK-47 | Ice Coaled (Field-Tested)",
+    "AK-47 | Slate (Well-Worn)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T08:33:01.305247+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T08:33:01.305247+00:00",
+  "last_finished_at_utc": "2026-04-28T08:38:02.400848+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T08:38:02.400848+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 890,
-  "last_enriched_rows": 890,
+  "last_listing_rows": 654,
+  "last_enriched_rows": 654,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,5 +29,5 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 197
+  "last_batch_start_pointer": 222
 }
