@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(_REPO_ROOT) not in sys.path:
@@ -33,8 +36,35 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--delay-min-sec", type=float, default=None, help="Override delay minimum.")
     parser.add_argument("--delay-max-sec", type=float, default=None, help="Override delay maximum.")
+    parser.add_argument(
+        "--respect-schedule",
+        action="store_true",
+        help="Run only when the current local hour is allowed by config schedule.run_hours_local.",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Print the command without running it.")
     return parser.parse_args()
+
+
+def should_run_now(config_path: Path) -> tuple[bool, str]:
+    raw = json.loads(config_path.read_text(encoding="utf-8"))
+    if not isinstance(raw, dict):
+        raise ValueError(f"{config_path} must contain a JSON object")
+    schedule = raw.get("schedule", {})
+    if not isinstance(schedule, dict):
+        schedule = {}
+
+    if not bool(schedule.get("enabled", True)):
+        return False, "base schedule disabled"
+
+    tz = ZoneInfo(str(schedule.get("timezone", "Europe/Prague")))
+    now = datetime.now(tz)
+    allowed_hours = schedule.get("run_hours_local")
+    if allowed_hours is None:
+        return True, f"no run_hours_local configured; running at {now.isoformat(timespec='seconds')}"
+    allowed = {int(hour) for hour in allowed_hours}
+    if now.hour in allowed:
+        return True, f"local hour {now.hour:02d} is allowed ({sorted(allowed)})"
+    return False, f"local hour {now.hour:02d} is not in allowed hours {sorted(allowed)}"
 
 
 def main() -> int:
@@ -42,6 +72,12 @@ def main() -> int:
     args = parse_args()
     root = repo_root_from(Path(__file__))
     config_path = args.config.resolve()
+    if args.respect_schedule:
+        ok, reason = should_run_now(config_path)
+        print(f"base schedule gate: {reason}")
+        if not ok:
+            return 0
+
     cmd = [
         sys.executable,
         "-B",
@@ -63,4 +99,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

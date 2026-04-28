@@ -12,7 +12,7 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "30 4 * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
@@ -55,6 +55,9 @@ jobs:
           set -euo pipefail
 
           args=()
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]]; then
+            args+=(--respect-schedule)
+          fi
           if [[ -n "$DELAY_MIN_SEC" ]]; then
             args+=(--delay-min-sec "$DELAY_MIN_SEC")
           fi
@@ -81,4 +84,3 @@ jobs:
 
           git commit -m "Update base snapshot [skip ci]"
           git push
-
