@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 50,
-  "last_run_at_utc": "2026-04-28T10:53:51.652869+00:00",
-  "last_status": "ok",
+  "batch_pointer": 55,
+  "last_run_at_utc": "2026-04-28T10:56:09.472589+00:00",
+  "last_status": "running",
   "last_batch_items": [
-    "P250 | Asiimov (Battle-Scarred)",
-    "P250 | Vino Primo (Factory New)",
-    "USP-S | Night Ops (Factory New)",
-    "USP-S | Royal Guard (Minimal Wear)",
-    "R8 Revolver | Blaze (Factory New)"
+    "P250 | Visions (Minimal Wear)",
+    "FAMAS | Pulse (Factory New)",
+    "G3SG1 | Stinger (Field-Tested)",
+    "USP-S | Royal Guard (Factory New)",
+    "CZ75-Auto | Red Astor (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T10:54:56.160326+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T10:54:56.160326+00:00",
+  "last_finished_at_utc": "2026-04-28T10:56:08.913178+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T10:56:08.913178+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 802,
-  "last_enriched_rows": 802,
+  "last_listing_rows": 766,
+  "last_enriched_rows": 766,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 45,
+  "last_batch_start_pointer": 55,
   "sent_alerts": {
     "listing:650349216050752953": {
       "sent_at_utc": "2026-04-28T09:06:03.853009+00:00",
