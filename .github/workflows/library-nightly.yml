@@ -14,7 +14,7 @@ on:
         default: true
         type: boolean
   schedule:
-    - cron: "41 22 * * *"
+    - cron: "35 22 * * *"
 
 permissions:
   contents: write
