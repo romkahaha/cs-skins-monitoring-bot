@@ -51,11 +51,11 @@
     "fail_if_outside_expected_range": false
   },
   "risk_filter": {
-    "ret_7d_min": -0.1,
-    "downside_14d_max": 0.3,
-    "sales_7d_n_min": 5,
-    "tail_ratio_min": 0.7,
-    "n_listings_min": 5
+    "ret_7d_min": -0.03,
+    "downside_14d_max": 0.12,
+    "sales_7d_n_min": 50,
+    "tail_ratio_min": 0.9,
+    "n_listings_min": 20
   },
   "high_cv_filter": {
     "pred_cv_min": 0.075,
