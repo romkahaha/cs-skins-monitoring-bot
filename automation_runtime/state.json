@@ -2,21 +2,25 @@
   "version": 1,
   "items_signature": "713f3f5d0aaec6d674823125627f709a3bb18a7281e5b328b115001a8f54cb7f",
   "items_count": 451,
-  "batch_pointer": 2,
-  "last_run_at_utc": "2026-04-28T00:17:39.035292+00:00",
+  "batch_pointer": 27,
+  "last_run_at_utc": "2026-04-28T08:01:33.102581+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "R8 Revolver | Tango (Factory New)"
+    "Dual Berettas | Balance (Factory New)",
+    "AK-47 | Midnight Laminate (Field-Tested)",
+    "Dual Berettas | Royal Consorts (Factory New)",
+    "Glock-18 | Weasel (Factory New)",
+    "FAMAS | Macabre (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-28T00:17:39.851951+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-28T00:17:39.851951+00:00",
+  "last_finished_at_utc": "2026-04-28T08:01:57.219017+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-28T08:01:57.219017+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 72,
-  "last_enriched_rows": 72,
+  "last_listing_rows": 338,
+  "last_enriched_rows": 338,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -25,5 +29,5 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 1
+  "last_batch_start_pointer": 22
 }
