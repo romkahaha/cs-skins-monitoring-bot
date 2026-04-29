@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 3,
-  "last_run_at_utc": "2026-04-29T13:43:47.372926+00:00",
+  "batch_pointer": 28,
+  "last_run_at_utc": "2026-04-29T13:58:57.877556+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Cartel (Battle-Scarred)",
-    "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "P90 | Ancient Earth (Factory New)",
-    "Desert Eagle | Calligraffiti (Factory New)",
-    "Galil AR | Black Sand (Factory New)"
+    "UMP-45 | Full Stop (Factory New)",
+    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+    "AWP | Asiimov (Battle-Scarred)",
+    "P2000 | Turf (Factory New)",
+    "P250 | Visions (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T13:44:10.755901+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T13:44:10.755901+00:00",
+  "last_finished_at_utc": "2026-04-29T13:59:36.171397+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T13:59:36.171397+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 431,
-  "last_enriched_rows": 431,
+  "last_listing_rows": 663,
+  "last_enriched_rows": 663,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 152,
+  "last_batch_start_pointer": 23,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
