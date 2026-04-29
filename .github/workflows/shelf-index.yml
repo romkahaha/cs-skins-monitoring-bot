@@ -13,7 +13,6 @@ on:
         default: ""
   schedule:
     - cron: "17 * * * *"
-    - cron: "*/5 22,23,0 * * *"
 
 permissions:
   contents: write
@@ -24,7 +23,7 @@ concurrency:
 
 jobs:
   library-nightly:
-    if: github.event_name == 'schedule' && github.event.schedule == '*/5 22,23,0 * * *'
+    if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
@@ -61,7 +60,7 @@ jobs:
               except Exception:
                   last_success = None
 
-          allowed_window = now.hour in (0, 1, 2)
+          allowed_window = now.hour in (0, 1, 2, 3)
           already_done = last_success == now.date().isoformat()
           run_nightly = allowed_window and not already_done
 
