@@ -28,9 +28,6 @@ on:
         description: Optional max full-list cycles for manual tests
         required: false
         default: ""
-  schedule:
-    - cron: "0 6,12,18 * * *"
-
 permissions:
   contents: write
 
@@ -54,12 +51,12 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.ref_name }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip

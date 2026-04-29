@@ -206,12 +206,9 @@ def nightly_defaults() -> dict[str, Any]:
             "base_snapshot_csv": str(root / "automation_runtime" / "base_snapshot_latest.csv"),
         },
         "schedule": {
-            "intended_start": "00:17",
+            "intended_start": "manual",
             "timezone": "Europe/Prague",
-            "github_actions_cron_utc": (
-                "temporary test: */5 6 * * * via night-clock.yml; "
-                "schedule_gate.py allows 08:00-08:59 Prague"
-            ),
+            "github_actions_cron_utc": "disabled; run Library nightly manually",
         },
         "preflight": {
             "require_existing_risk_csv": True,
