@@ -24,7 +24,7 @@
   "schedule": {
     "intended_start": "00:17",
     "timezone": "Europe/Prague",
-    "github_actions_cron_utc": "temporary test: 50,55 5 * * * via night-clock.yml; schedule_gate.py allows 07:00-07:59 Prague"
+    "github_actions_cron_utc": "temporary test: */5 6 * * * via night-clock.yml; schedule_gate.py allows 08:00-08:59 Prague"
   },
   "preflight": {
     "require_existing_risk_csv": true,

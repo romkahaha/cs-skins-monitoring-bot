@@ -2,7 +2,7 @@ name: Night clock
 
 on:
   schedule:
-    - cron: "50,55 5 * * *"
+    - cron: "*/5 6 * * *"
 
 permissions:
   contents: write
@@ -32,7 +32,7 @@ jobs:
       - name: Nightly schedule gate
         id: gate
         shell: bash
-        run: python -B automation/nightly/schedule_gate.py --mode nightly --start-hour 7 --end-hour 7 >> "$GITHUB_OUTPUT"
+        run: python -B automation/nightly/schedule_gate.py --mode nightly --start-hour 8 --end-hour 8 >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         if: steps.gate.outputs.run_nightly != 'false'
