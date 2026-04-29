@@ -208,7 +208,10 @@ def nightly_defaults() -> dict[str, Any]:
         "schedule": {
             "intended_start": "00:17",
             "timezone": "Europe/Prague",
-            "github_actions_cron_utc": "17,47 22,23,0,1,2,3,4 * * * via night-clock.yml",
+            "github_actions_cron_utc": (
+                "17,47 * * * * via night-clock.yml; "
+                "schedule_gate.py limits actual nightly work to 00:00-05:59 Prague"
+            ),
         },
         "preflight": {
             "require_existing_risk_csv": True,

@@ -2,7 +2,7 @@ name: Night clock
 
 on:
   schedule:
-    - cron: "17,47 22,23,0,1,2,3,4 * * *"
+    - cron: "17,47 * * * *"
 
 permissions:
   contents: write
