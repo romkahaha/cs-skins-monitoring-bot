@@ -43,32 +43,7 @@ jobs:
       - name: Nightly schedule gate
         id: gate
         shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json
-          from datetime import datetime
-          from pathlib import Path
-          from zoneinfo import ZoneInfo
-
-          now = datetime.now(ZoneInfo("Europe/Prague"))
-          state_path = Path("automation_runtime/nightly_schedule_state.json")
-          last_success = None
-          if state_path.is_file():
-              try:
-                  last_success = json.loads(state_path.read_text(encoding="utf-8")).get("last_success_local_date")
-              except Exception:
-                  last_success = None
-
-          allowed_window = now.hour in (0, 1, 2, 3)
-          already_done = last_success == now.date().isoformat()
-          run_nightly = allowed_window and not already_done
-
-          print(f"run_nightly={'true' if run_nightly else 'false'}")
-          print(f"local_time={now.isoformat()}")
-          print(f"allowed_window={'true' if allowed_window else 'false'}")
-          print(f"already_done={'true' if already_done else 'false'}")
-          PY
+        run: python -B automation/nightly/schedule_gate.py --mode nightly >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         if: steps.gate.outputs.run_nightly != 'false'
