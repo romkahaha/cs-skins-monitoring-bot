@@ -61,7 +61,7 @@ jobs:
               except Exception:
                   last_success = None
 
-          allowed_window = now.hour in (0, 1, 2) and 15 <= now.minute <= 59
+          allowed_window = now.hour in (0, 1, 2)
           already_done = last_success == now.date().isoformat()
           run_nightly = allowed_window and not already_done
 
