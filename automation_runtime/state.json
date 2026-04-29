@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 77,
-  "last_run_at_utc": "2026-04-29T20:49:49.405028+00:00",
+  "batch_pointer": 102,
+  "last_run_at_utc": "2026-04-29T20:55:36.974433+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Slate (Minimal Wear)",
-    "AWP | Ice Coaled (Battle-Scarred)",
-    "AK-47 | Ice Coaled (Battle-Scarred)",
-    "AWP | Duality (Battle-Scarred)",
-    "AK-47 | Redline (Field-Tested)"
+    "AUG | Stymphalian (Minimal Wear)",
+    "AK-47 | Midnight Laminate (Battle-Scarred)",
+    "MP7 | Fade (Field-Tested)",
+    "SG 553 | Berry Gel Coat (Factory New)",
+    "Desert Eagle | Conspiracy (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T20:51:23.644738+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T20:51:23.644738+00:00",
+  "last_finished_at_utc": "2026-04-29T20:56:26.803193+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T20:56:26.803193+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 990,
-  "last_enriched_rows": 990,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 735,
+  "last_enriched_rows": 735,
+  "last_opportunities_rows": 9,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "loaded": 9,
+    "filtered": 8,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 72,
+  "last_batch_start_pointer": 97,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -132,7 +132,13 @@
       "item": "Desert Eagle | Mulberry (Minimal Wear)",
       "listing_id": "505108692486103424",
       "spread_hybrid_disc": 0.0740794160619421
+    },
+    "listing:514115891815428174": {
+      "sent_at_utc": "2026-04-29T20:56:26.202078+00:00",
+      "item": "AK-47 | Midnight Laminate (Battle-Scarred)",
+      "listing_id": "514115891815428174",
+      "spread_hybrid_disc": 0.0828819085335773
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T20:43:31.942926+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T20:56:26.202142+00:00"
 }
