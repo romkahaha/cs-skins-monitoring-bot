@@ -2,32 +2,47 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 25,
-  "last_run_at_utc": "2026-04-29T11:53:08.115984+00:00",
+  "batch_pointer": 50,
+  "last_run_at_utc": "2026-04-29T11:58:47.522713+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A4 | Temukau (Field-Tested)",
-    "P250 | Asiimov (Field-Tested)",
-    "M4A4 | Converter (Factory New)",
-    "UMP-45 | Full Stop (Factory New)",
-    "Glock-18 | Mirror Mosaic (Battle-Scarred)"
+    "MAC-10 | Disco Tech (Field-Tested)",
+    "AWP | Chrome Cannon (Field-Tested)",
+    "M4A1-S | Black Lotus (Field-Tested)",
+    "MP7 | Bloodsport (Minimal Wear)",
+    "MP7 | Cirrus (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T11:53:56.418424+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T11:53:56.418424+00:00",
+  "last_finished_at_utc": "2026-04-29T11:59:49.295419+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T11:59:49.295419+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 821,
-  "last_enriched_rows": 821,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 893,
+  "last_enriched_rows": 893,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 20
+  "last_batch_start_pointer": 45,
+  "sent_alerts": {
+    "listing:635712517316299291": {
+      "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
+      "item": "Desert Eagle | Urban DDPAT (Minimal Wear)",
+      "listing_id": "635712517316299291",
+      "spread_hybrid_disc": 0.0495160182973661
+    },
+    "listing:652601015927222508": {
+      "sent_at_utc": "2026-04-29T11:59:48.694423+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "652601015927222508",
+      "spread_hybrid_disc": 0.1165505195502319
+    }
+  },
+  "last_alert_sent_at_utc": "2026-04-29T11:59:48.694500+00:00"
 }
