@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 4,
-  "last_run_at_utc": "2026-04-29T14:26:02.939115+00:00",
+  "batch_pointer": 29,
+  "last_run_at_utc": "2026-04-29T14:40:49.405360+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "P90 | Ancient Earth (Factory New)",
-    "Desert Eagle | Calligraffiti (Factory New)",
-    "Galil AR | Black Sand (Factory New)",
-    "MP7 | Astrolabe (Factory New)"
+    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+    "AWP | Asiimov (Battle-Scarred)",
+    "P2000 | Turf (Factory New)",
+    "P250 | Visions (Field-Tested)",
+    "Nova | Wurst Hölle (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T14:26:30.103649+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T14:26:30.103649+00:00",
+  "last_finished_at_utc": "2026-04-29T14:42:12.919373+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T14:42:12.919373+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 426,
-  "last_enriched_rows": 426,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 821,
+  "last_enriched_rows": 821,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 153,
+  "last_batch_start_pointer": 24,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -72,7 +72,13 @@
       "item": "Desert Eagle | Mulberry (Minimal Wear)",
       "listing_id": "512989991888124455",
       "spread_hybrid_disc": 0.1174277829308472
+    },
+    "listing:511864091773297017": {
+      "sent_at_utc": "2026-04-29T14:42:12.318326+00:00",
+      "item": "Nova | Wurst Hölle (Factory New)",
+      "listing_id": "511864091773297017",
+      "spread_hybrid_disc": 0.0957487010897685
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T13:23:14.761450+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T14:42:12.318402+00:00"
 }
