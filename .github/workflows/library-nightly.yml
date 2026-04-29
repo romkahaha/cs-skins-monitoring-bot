@@ -1,6 +1,9 @@
 name: Library nightly
 
 on:
+  repository_dispatch:
+    types:
+      - library_nightly
   workflow_dispatch:
     inputs:
       skip_risk:
@@ -25,8 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      SKIP_RISK: ${{ github.event.inputs.skip_risk || 'false' }}
-      SKIP_BASE: ${{ github.event.inputs.skip_base || 'true' }}
+      SKIP_RISK: ${{ github.event.inputs.skip_risk || github.event.client_payload.skip_risk || 'false' }}
+      SKIP_BASE: ${{ github.event.inputs.skip_base || github.event.client_payload.skip_base || 'true' }}
       STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
       CSFLOAT_API_KEY_2: ${{ secrets.CSFLOAT_API_KEY_2 }}
@@ -105,7 +108,7 @@ jobs:
           python automation/nightly/run_level1.py "${args[@]}"
 
       - name: Mark nightly schedule success
-        if: github.event_name == 'schedule' && steps.gate.outputs.run_nightly != 'false'
+        if: github.event_name != 'workflow_dispatch' && steps.gate.outputs.run_nightly != 'false'
         shell: bash
         run: |
           set -euo pipefail
