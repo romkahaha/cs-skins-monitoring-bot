@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 50,
-  "last_run_at_utc": "2026-04-29T15:28:51.914462+00:00",
+  "batch_pointer": 75,
+  "last_run_at_utc": "2026-04-29T15:35:13.478808+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "MAC-10 | Disco Tech (Field-Tested)",
-    "AWP | Chrome Cannon (Field-Tested)",
-    "M4A1-S | Black Lotus (Field-Tested)",
-    "MP7 | Bloodsport (Minimal Wear)",
-    "MP7 | Cirrus (Factory New)"
+    "Desert Eagle | Printstream (Field-Tested)",
+    "USP-S | Jawbreaker (Field-Tested)",
+    "AK-47 | Slate (Minimal Wear)",
+    "AWP | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Ice Coaled (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T15:30:12.981354+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T15:30:12.981354+00:00",
+  "last_finished_at_utc": "2026-04-29T15:36:55.036166+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T15:36:55.036166+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 893,
-  "last_enriched_rows": 893,
-  "last_opportunities_rows": 1,
+  "last_listing_rows": 998,
+  "last_enriched_rows": 998,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 1,
+    "loaded": 0,
     "filtered": 0,
-    "considered": 1,
+    "considered": 0,
     "sent": 0,
-    "skipped": 1
+    "skipped": 0
   },
-  "last_batch_start_pointer": 45,
+  "last_batch_start_pointer": 70,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -84,7 +84,13 @@
       "item": "Desert Eagle | Mulberry (Minimal Wear)",
       "listing_id": "498353293061364967",
       "spread_hybrid_disc": 0.1033344850055442
+    },
+    "listing:526500790807818689": {
+      "sent_at_utc": "2026-04-29T15:35:12.261429+00:00",
+      "item": "AK-47 | Wintergreen (Factory New)",
+      "listing_id": "526500790807818689",
+      "spread_hybrid_disc": 0.0905469905673254
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T14:46:11.573218+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T15:35:12.261509+00:00"
 }
