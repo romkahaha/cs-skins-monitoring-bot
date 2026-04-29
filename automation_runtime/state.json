@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 126,
-  "last_run_at_utc": "2026-04-29T12:56:54.119817+00:00",
+  "batch_pointer": 151,
+  "last_run_at_utc": "2026-04-29T13:01:04.072151+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Elite Build (Minimal Wear)",
-    "M4A1-S | Nightmare (Field-Tested)",
-    "AWP | Exoskeleton (Field-Tested)",
-    "AK-47 | Searing Rage (Minimal Wear)",
-    "MP7 | Powercore (Minimal Wear)"
+    "AWP | Ice Coaled (Factory New)",
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "USP-S | The Traitor (Battle-Scarred)",
+    "UMP-45 | Neo-Noir (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T12:58:01.307969+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T12:58:01.307969+00:00",
+  "last_finished_at_utc": "2026-04-29T13:01:57.875435+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T13:01:57.875435+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 887,
-  "last_enriched_rows": 887,
+  "last_listing_rows": 689,
+  "last_enriched_rows": 689,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 121,
+  "last_batch_start_pointer": 146,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
