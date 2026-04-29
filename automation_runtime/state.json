@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 127,
-  "last_run_at_utc": "2026-04-29T21:00:22.308227+00:00",
+  "batch_pointer": 152,
+  "last_run_at_utc": "2026-04-29T21:58:48.893443+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A1-S | Nightmare (Field-Tested)",
-    "AWP | Exoskeleton (Field-Tested)",
-    "AK-47 | Searing Rage (Minimal Wear)",
-    "MP7 | Powercore (Minimal Wear)",
-    "M4A4 | Turbine (Minimal Wear)"
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "USP-S | The Traitor (Battle-Scarred)",
+    "UMP-45 | Neo-Noir (Field-Tested)",
+    "AWP | Sun in Leo (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T21:01:31.348030+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T21:01:31.348030+00:00",
+  "last_finished_at_utc": "2026-04-29T21:59:49.707483+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T21:59:49.707483+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 850,
-  "last_enriched_rows": 850,
+  "last_listing_rows": 674,
+  "last_enriched_rows": 674,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 122,
+  "last_batch_start_pointer": 147,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -144,7 +144,19 @@
       "item": "AK-47 | Wintergreen (Minimal Wear)",
       "listing_id": "500605092726366179",
       "spread_hybrid_disc": 0.1051794580699144
+    },
+    "listing:508486392186625478": {
+      "sent_at_utc": "2026-04-29T21:56:20.611298+00:00",
+      "item": "AK-47 | Nouveau Rouge (Minimal Wear)",
+      "listing_id": "508486392186625478",
+      "spread_hybrid_disc": 0.1032181032431885
+    },
+    "listing:496101493250268863": {
+      "sent_at_utc": "2026-04-29T21:56:51.479122+00:00",
+      "item": "Glock-18 | Nuclear Garden (Factory New)",
+      "listing_id": "496101493250268863",
+      "spread_hybrid_disc": 0.0513975652327364
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T20:57:11.755861+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T21:56:51.479195+00:00"
 }
