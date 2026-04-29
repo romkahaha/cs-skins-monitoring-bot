@@ -1,18 +1,9 @@
-name: Library nightly
+name: Night clock
 
 on:
-  workflow_dispatch:
-    inputs:
-      skip_risk:
-        description: Skip nightly risk rebuild and use automation_runtime/risk_metrics_latest.csv
-        required: false
-        default: false
-        type: boolean
-      skip_base:
-        description: Skip CSFloat base snapshot refresh
-        required: false
-        default: true
-        type: boolean
+  schedule:
+    - cron: "17,47 22,23,0,1,2,3,4 * * *"
+
 permissions:
   contents: write
 
@@ -25,8 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      SKIP_RISK: ${{ github.event.inputs.skip_risk || 'false' }}
-      SKIP_BASE: ${{ github.event.inputs.skip_base || 'true' }}
       STEAM_COOKIES: ${{ secrets.STEAM_COOKIES }}
       CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
       CSFLOAT_API_KEY_2: ${{ secrets.CSFLOAT_API_KEY_2 }}
@@ -37,37 +26,55 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
 
+      - name: Rebase runtime state
+        run: git pull --rebase
+
+      - name: Nightly schedule gate
+        id: gate
+        shell: bash
+        run: python -B automation/nightly/schedule_gate.py --mode nightly >> "$GITHUB_OUTPUT"
+
       - name: Set up Python
+        if: steps.gate.outputs.run_nightly != 'false'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Install dependencies
+        if: steps.gate.outputs.run_nightly != 'false'
         run: python -m pip install -r requirements.txt
 
-      - name: Rebase runtime state
-        run: git pull --rebase
-
       - name: Run nightly level 1
+        if: steps.gate.outputs.run_nightly != 'false'
+        shell: bash
+        run: python automation/nightly/run_level1.py --run-risk --skip-base
+
+      - name: Mark nightly schedule success
+        if: steps.gate.outputs.run_nightly != 'false'
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p automation_runtime
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
 
-          args=()
-          if [[ "$SKIP_RISK" == "true" ]]; then
-            args+=(--skip-risk)
-          else
-            args+=(--run-risk)
-          fi
+          now = datetime.now(ZoneInfo("Europe/Prague"))
+          payload = {
+              "last_success_local_date": now.date().isoformat(),
+              "last_success_local_time": now.isoformat(),
+          }
+          Path("automation_runtime/nightly_schedule_state.json").write_text(
+              json.dumps(payload, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          PY
 
-          if [[ "$SKIP_BASE" == "true" ]]; then
-            args+=(--skip-base)
-          fi
-
-          python automation/nightly/run_level1.py "${args[@]}"
-
-      - name: Commit runtime outputs
+      - name: Commit nightly runtime
+        if: steps.gate.outputs.run_nightly != 'false'
         shell: bash
         run: |
           set -euo pipefail

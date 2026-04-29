@@ -22,9 +22,9 @@
     "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv"
   },
   "schedule": {
-    "intended_start": "00:15",
+    "intended_start": "00:17",
     "timezone": "Europe/Prague",
-    "github_actions_cron_utc": "7 * * * * via bookmark-checks.yml, 17 * * * * via shelf-index.yml"
+    "github_actions_cron_utc": "17,47 22,23,0,1,2,3,4 * * * via night-clock.yml"
   },
   "preflight": {
     "require_existing_risk_csv": true,

@@ -206,9 +206,9 @@ def nightly_defaults() -> dict[str, Any]:
             "base_snapshot_csv": str(root / "automation_runtime" / "base_snapshot_latest.csv"),
         },
         "schedule": {
-            "intended_start": "00:01",
+            "intended_start": "00:17",
             "timezone": "Europe/Prague",
-            "github_actions_cron_utc": "1 22 * * *",
+            "github_actions_cron_utc": "17,47 22,23,0,1,2,3,4 * * * via night-clock.yml",
         },
         "preflight": {
             "require_existing_risk_csv": True,
