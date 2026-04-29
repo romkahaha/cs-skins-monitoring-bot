@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 128,
-  "last_run_at_utc": "2026-04-29T22:36:24.659263+00:00",
+  "batch_pointer": 153,
+  "last_run_at_utc": "2026-04-29T22:40:27.622944+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Exoskeleton (Field-Tested)",
-    "AK-47 | Searing Rage (Minimal Wear)",
-    "MP7 | Powercore (Minimal Wear)",
-    "M4A4 | Turbine (Minimal Wear)",
-    "AK-47 | Nouveau Rouge (Minimal Wear)"
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "USP-S | The Traitor (Battle-Scarred)",
+    "UMP-45 | Neo-Noir (Field-Tested)",
+    "AWP | Sun in Leo (Field-Tested)",
+    "AK-47 | Cartel (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T22:37:06.871711+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T22:37:06.871711+00:00",
+  "last_finished_at_utc": "2026-04-29T22:41:23.423258+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T22:41:23.423258+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 853,
-  "last_enriched_rows": 853,
+  "last_listing_rows": 528,
+  "last_enriched_rows": 528,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 123,
+  "last_batch_start_pointer": 148,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
