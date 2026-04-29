@@ -1,11 +1,11 @@
 {
   "schedule": {
-    "enabled": true,
+    "enabled": false,
     "active_from": "08:00",
     "active_to": "23:00",
     "timezone": "Europe/Prague",
     "interval_minutes": 10,
-    "github_actions_cron_utc": "0 6,12,18 * * *",
+    "github_actions_cron_utc": "disabled; run Reading cycle manually",
     "enforce_active_window": false
   },
   "preflight": {
@@ -46,7 +46,7 @@
     "max_runtime_minutes": 330.0,
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
-    "respect_active_window": true,
+    "respect_active_window": false,
     "checkpoint_message": "Update monitoring runtime [skip ci]"
   },
   "steam_scm": {

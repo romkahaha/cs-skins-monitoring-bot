@@ -4,14 +4,14 @@
     "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv"
   },
   "schedule": {
-    "enabled": true,
+    "enabled": false,
     "run_hours_local": [
       6,
       12,
       18
     ],
     "timezone": "Europe/Prague",
-    "github_actions_cron_utc": "17 * * * *"
+    "github_actions_cron_utc": "disabled; run Shelf index manually"
   },
   "base_snapshot": {
     "enabled": true,
