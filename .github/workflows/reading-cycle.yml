@@ -77,7 +77,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          args=(--batch-size "$BATCH_SIZE" --max-runtime-minutes "$MAX_RUNTIME_MINUTES")
+          args=(--batch-size "$BATCH_SIZE" --max-runtime-minutes "$MAX_RUNTIME_MINUTES" --ignore-schedule)
           case "$TELEGRAM_MODE" in
             dry-run)
               args+=(--telegram-dry-run)
