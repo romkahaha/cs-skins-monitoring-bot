@@ -2,34 +2,79 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 28,
-  "last_run_at_utc": "2026-04-29T17:33:03.331645+00:00",
-  "last_status": "ok",
+  "batch_pointer": 33,
+  "last_run_at_utc": "2026-04-29T17:34:48.249528+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "UMP-45 | Full Stop (Factory New)",
-    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
-    "AWP | Asiimov (Battle-Scarred)",
-    "P2000 | Turf (Factory New)",
-    "P250 | Visions (Field-Tested)"
+    "Sawed-Off | Devourer (Field-Tested)",
+    "AK-47 | Asiimov (Field-Tested)",
+    "MP7 | Prey (Factory New)",
+    "AK-47 | Emerald Pinstripe (Minimal Wear)",
+    "AWP | Mortis (Minimal Wear)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-04-29T17:33:36.761875+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T17:33:36.761875+00:00",
-  "last_failed_monitoring_at_utc": null,
-  "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 660,
-  "last_enriched_rows": 660,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: Sawed-Off | Devourer (Field-Tested), AK-47 | Asiimov (Field-Tested), MP7 | Prey (Factory New))",
+  "last_finished_at_utc": "2026-04-29T17:36:30.556146+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T17:34:47.699284+00:00",
+  "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
+  "consecutive_errors": 1,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "Sawed-Off | Devourer (Field-Tested)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Sawed-Off%20%7C%20Devourer%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Asiimov (Field-Tested)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Asiimov%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "MP7 | Prey (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP7%20%7C%20Prey%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Emerald Pinstripe (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Emerald%20Pinstripe%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AWP | Mortis (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Mortis%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 537,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 23,
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 33,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
