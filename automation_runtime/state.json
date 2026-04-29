@@ -2,79 +2,34 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 33,
-  "last_run_at_utc": "2026-04-29T17:34:48.249528+00:00",
-  "last_status": "error",
+  "batch_pointer": 58,
+  "last_run_at_utc": "2026-04-29T17:57:55.620545+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "Sawed-Off | Devourer (Field-Tested)",
-    "AK-47 | Asiimov (Field-Tested)",
-    "MP7 | Prey (Factory New)",
-    "AK-47 | Emerald Pinstripe (Minimal Wear)",
-    "AWP | Mortis (Minimal Wear)"
+    "Dual Berettas | Royal Consorts (Field-Tested)",
+    "Five-SeveN | Boost Protocol (Factory New)",
+    "Glock-18 | Shinobu (Field-Tested)",
+    "USP-S | Cortex (Battle-Scarred)",
+    "AWP | Black Nile (Battle-Scarred)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: Sawed-Off | Devourer (Field-Tested), AK-47 | Asiimov (Field-Tested), MP7 | Prey (Factory New))",
-  "last_finished_at_utc": "2026-04-29T17:36:30.556146+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T17:34:47.699284+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-04-29T17:58:42.156217+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T17:58:42.156217+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
-  "consecutive_errors": 1,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "Sawed-Off | Devourer (Field-Tested)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Sawed-Off%20%7C%20Devourer%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "AK-47 | Asiimov (Field-Tested)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Asiimov%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "MP7 | Prey (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP7%20%7C%20Prey%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "AK-47 | Emerald Pinstripe (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Emerald%20Pinstripe%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "AWP | Mortis (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Mortis%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    }
-  ],
-  "last_listing_error_count": 5,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 537,
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 869,
+  "last_enriched_rows": 869,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
-  "last_batch_start_pointer": 33,
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
+  "last_batch_start_pointer": 53,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -153,7 +108,13 @@
       "item": "P250 | Visions (Field-Tested)",
       "listing_id": "497227393136995961",
       "spread_hybrid_disc": 0.0849126216537574
+    },
+    "listing:492723793435321593": {
+      "sent_at_utc": "2026-04-29T17:55:37.409050+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "492723793435321593",
+      "spread_hybrid_disc": 0.101474451280593
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T16:51:43.757322+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T17:55:37.409117+00:00"
 }
