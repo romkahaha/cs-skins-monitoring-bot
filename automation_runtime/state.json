@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 75,
-  "last_run_at_utc": "2026-04-29T23:47:14.155660+00:00",
+  "batch_pointer": 100,
+  "last_run_at_utc": "2026-04-29T23:52:23.262364+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Desert Eagle | Printstream (Field-Tested)",
-    "USP-S | Jawbreaker (Field-Tested)",
-    "AK-47 | Slate (Minimal Wear)",
-    "AWP | Ice Coaled (Battle-Scarred)",
-    "AK-47 | Ice Coaled (Battle-Scarred)"
+    "AK-47 | Blue Laminate (Field-Tested)",
+    "AWP | Atheris (Well-Worn)",
+    "AUG | Stymphalian (Minimal Wear)",
+    "AK-47 | Midnight Laminate (Battle-Scarred)",
+    "MP7 | Fade (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T23:48:43.548535+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T23:48:43.548535+00:00",
+  "last_finished_at_utc": "2026-04-29T23:53:13.433960+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T23:53:13.433960+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 988,
-  "last_enriched_rows": 988,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 859,
+  "last_enriched_rows": 859,
+  "last_opportunities_rows": 6,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
+    "loaded": 6,
+    "filtered": 6,
     "considered": 0,
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 70,
+  "last_batch_start_pointer": 95,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -168,7 +168,13 @@
       "item": "AK-47 | Midnight Laminate (Minimal Wear)",
       "listing_id": "516367691460778262",
       "spread_hybrid_disc": 0.1090128177585804
+    },
+    "listing:492723793436693805": {
+      "sent_at_utc": "2026-04-29T23:49:31.553741+00:00",
+      "item": "AWP | Duality (Battle-Scarred)",
+      "listing_id": "492723793436693805",
+      "spread_hybrid_disc": 0.0161799742881093
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T23:03:06.043941+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T23:49:31.553809+00:00"
 }
