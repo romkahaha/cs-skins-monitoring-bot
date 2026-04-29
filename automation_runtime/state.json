@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 125,
-  "last_run_at_utc": "2026-04-29T12:14:22.531645+00:00",
+  "batch_pointer": 150,
+  "last_run_at_utc": "2026-04-29T12:19:21.025768+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "SG 553 | Cyrex (Field-Tested)",
-    "AK-47 | Elite Build (Minimal Wear)",
-    "M4A1-S | Nightmare (Field-Tested)",
-    "AWP | Exoskeleton (Field-Tested)",
-    "AK-47 | Searing Rage (Minimal Wear)"
+    "Sawed-Off | Kiss♥Love (Well-Worn)",
+    "AWP | Ice Coaled (Factory New)",
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "USP-S | The Traitor (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-29T12:15:42.975001+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-29T12:15:42.975001+00:00",
+  "last_finished_at_utc": "2026-04-29T12:20:23.573894+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-29T12:20:23.573894+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 881,
-  "last_enriched_rows": 881,
+  "last_listing_rows": 786,
+  "last_enriched_rows": 786,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 120,
+  "last_batch_start_pointer": 145,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -48,7 +48,19 @@
       "item": "AK-47 | Midnight Laminate (Minimal Wear)",
       "listing_id": "511864091772511785",
       "spread_hybrid_disc": 0.1076650044697741
+    },
+    "listing:650349216050752953": {
+      "sent_at_utc": "2026-04-29T12:17:25.380072+00:00",
+      "item": "Glock-18 | Nuclear Garden (Factory New)",
+      "listing_id": "650349216050752953",
+      "spread_hybrid_disc": 0.0508273404389548
+    },
+    "listing:642467916671492549": {
+      "sent_at_utc": "2026-04-29T12:18:29.397478+00:00",
+      "item": "P2000 | Imperial Dragon (Minimal Wear)",
+      "listing_id": "642467916671492549",
+      "spread_hybrid_disc": 0.1092256810287815
     }
   },
-  "last_alert_sent_at_utc": "2026-04-29T12:02:34.776926+00:00"
+  "last_alert_sent_at_utc": "2026-04-29T12:18:29.397552+00:00"
 }
