@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 125,
-  "last_run_at_utc": "2026-04-30T03:16:40.305536+00:00",
+  "batch_pointer": 150,
+  "last_run_at_utc": "2026-04-30T03:20:43.342433+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "SG 553 | Cyrex (Field-Tested)",
-    "AK-47 | Elite Build (Minimal Wear)",
-    "M4A1-S | Nightmare (Field-Tested)",
-    "AWP | Exoskeleton (Field-Tested)",
-    "AK-47 | Searing Rage (Minimal Wear)"
+    "Sawed-Off | Kiss♥Love (Well-Worn)",
+    "AWP | Ice Coaled (Factory New)",
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "USP-S | The Traitor (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T03:17:42.626484+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T03:17:42.626484+00:00",
+  "last_finished_at_utc": "2026-04-30T03:21:44.851669+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T03:21:44.851669+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 875,
-  "last_enriched_rows": 875,
+  "last_listing_rows": 778,
+  "last_enriched_rows": 778,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 120,
+  "last_batch_start_pointer": 145,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -192,7 +192,13 @@
       "item": "AWP | Duality (Field-Tested)",
       "listing_id": "507360492261490105",
       "spread_hybrid_disc": 0.0915299165513259
+    },
+    "listing:505108692487153544": {
+      "sent_at_utc": "2026-04-30T03:19:15.102281+00:00",
+      "item": "Glock-18 | Nuclear Garden (Factory New)",
+      "listing_id": "505108692487153544",
+      "spread_hybrid_disc": -0.1169734409729184
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T01:35:20.372967+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T03:19:15.102351+00:00"
 }
