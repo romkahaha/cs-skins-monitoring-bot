@@ -2,34 +2,79 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 26,
-  "last_run_at_utc": "2026-04-30T03:35:30.560773+00:00",
-  "last_status": "ok",
+  "batch_pointer": 36,
+  "last_run_at_utc": "2026-04-30T03:38:20.619181+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "P250 | Asiimov (Field-Tested)",
-    "M4A4 | Converter (Factory New)",
-    "UMP-45 | Full Stop (Factory New)",
-    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
-    "AWP | Asiimov (Battle-Scarred)"
+    "AK-47 | Emerald Pinstripe (Minimal Wear)",
+    "AWP | Mortis (Minimal Wear)",
+    "MP7 | Fade (Factory New)",
+    "UMP-45 | Wild Child (Battle-Scarred)",
+    "AUG | Momentum (Field-Tested)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-04-30T03:36:18.321355+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T03:36:18.321355+00:00",
-  "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
-  "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 779,
-  "last_enriched_rows": 779,
-  "last_opportunities_rows": 1,
-  "last_alert_stats": {
-    "loaded": 1,
-    "filtered": 0,
-    "considered": 1,
-    "sent": 1,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 21,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AK-47 | Emerald Pinstripe (Minimal Wear), AWP | Mortis (Minimal Wear), MP7 | Fade (Factory New))",
+  "last_finished_at_utc": "2026-04-30T03:40:05.444571+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T03:38:20.081201+00:00",
+  "last_failed_monitoring_at_utc": "2026-04-30T03:40:05.444571+00:00",
+  "consecutive_errors": 1,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "AK-47 | Emerald Pinstripe (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Emerald%20Pinstripe%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AWP | Mortis (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Mortis%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "MP7 | Fade (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP7%20%7C%20Fade%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "UMP-45 | Wild Child (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/UMP-45%20%7C%20Wild%20Child%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AUG | Momentum (Field-Tested)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AUG%20%7C%20Momentum%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 701,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 36,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
