@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 2,
-  "last_run_at_utc": "2026-04-30T17:13:49.621084+00:00",
+  "batch_pointer": 27,
+  "last_run_at_utc": "2026-04-30T17:27:11.288578+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Sun in Leo (Field-Tested)",
-    "AK-47 | Cartel (Battle-Scarred)",
-    "AWP | The End (Minimal Wear)",
-    "P90 | Ancient Earth (Factory New)",
-    "Desert Eagle | Calligraffiti (Factory New)"
+    "P2000 | Wicked Sick (Field-Tested)",
+    "AWP | POP AWP (Factory New)",
+    "AK-47 | Steel Delta (Factory New)",
+    "M4A4 | The Emperor (Field-Tested)",
+    "Glock-18 | Winterized (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T17:14:26.650004+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T17:14:26.650004+00:00",
+  "last_finished_at_utc": "2026-04-30T17:28:02.838234+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T17:28:02.838234+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 501,
-  "last_enriched_rows": 501,
+  "last_listing_rows": 700,
+  "last_enriched_rows": 700,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 196,
+  "last_batch_start_pointer": 22,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
