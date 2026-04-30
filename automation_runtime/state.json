@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 100,
-  "last_run_at_utc": "2026-04-30T20:01:30.361759+00:00",
+  "batch_pointer": 125,
+  "last_run_at_utc": "2026-04-30T20:07:07.099663+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Ice Coaled (Battle-Scarred)",
-    "AK-47 | Ice Coaled (Battle-Scarred)",
-    "AWP | Duality (Battle-Scarred)",
-    "AK-47 | Redline (Field-Tested)",
-    "AWP | Green Energy (Factory New)"
+    "UMP-45 | Crimson Foil (Factory New)",
+    "AK-47 | Aquamarine Revenge (Field-Tested)",
+    "Glock-18 | Water Elemental (Factory New)",
+    "MP9 | Hypnotic (Factory New)",
+    "USP-S | Printstream (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T20:02:16.117915+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T20:02:16.117915+00:00",
+  "last_finished_at_utc": "2026-04-30T20:07:49.863241+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T20:07:49.863241+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 896,
-  "last_enriched_rows": 896,
+  "last_listing_rows": 677,
+  "last_enriched_rows": 677,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 95,
+  "last_batch_start_pointer": 120,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
@@ -156,7 +156,19 @@
       "item": "Nova | Wurst Hölle (Factory New)",
       "listing_id": "500605092731060543",
       "spread_hybrid_disc": 0.0984091281165066
+    },
+    "listing:529878490348072152": {
+      "sent_at_utc": "2026-04-30T20:03:18.629411+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "529878490348072152",
+      "spread_hybrid_disc": 0.0678856536097701
+    },
+    "listing:510738192157408954": {
+      "sent_at_utc": "2026-04-30T20:04:26.298862+00:00",
+      "item": "M4A4 | Hellish (Battle-Scarred)",
+      "listing_id": "510738192157408954",
+      "spread_hybrid_disc": 0.0724445589652286
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T19:53:44.098758+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T20:04:26.298938+00:00"
 }
