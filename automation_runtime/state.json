@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 1,
-  "last_run_at_utc": "2026-04-30T03:21:46.228057+00:00",
+  "batch_pointer": 26,
+  "last_run_at_utc": "2026-04-30T03:35:30.560773+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "UMP-45 | Neo-Noir (Field-Tested)",
-    "AWP | Sun in Leo (Field-Tested)",
-    "AK-47 | Cartel (Battle-Scarred)",
-    "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "P90 | Ancient Earth (Factory New)"
+    "P250 | Asiimov (Field-Tested)",
+    "M4A4 | Converter (Factory New)",
+    "UMP-45 | Full Stop (Factory New)",
+    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+    "AWP | Asiimov (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T03:22:24.984157+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T03:22:24.984157+00:00",
+  "last_finished_at_utc": "2026-04-30T03:36:18.321355+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T03:36:18.321355+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 514,
-  "last_enriched_rows": 514,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 779,
+  "last_enriched_rows": 779,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 150,
+  "last_batch_start_pointer": 21,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -198,7 +198,19 @@
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "505108692487153544",
       "spread_hybrid_disc": -0.1169734409729184
+    },
+    "listing:642467210054968348": {
+      "sent_at_utc": "2026-04-30T03:34:25.231250+00:00",
+      "item": "P2000 | Wicked Sick (Field-Tested)",
+      "listing_id": "642467210054968348",
+      "spread_hybrid_disc": 0.0819586047088236
+    },
+    "listing:516367691461480658": {
+      "sent_at_utc": "2026-04-30T03:36:17.720176+00:00",
+      "item": "P250 | Asiimov (Field-Tested)",
+      "listing_id": "516367691461480658",
+      "spread_hybrid_disc": 0.0299751235264078
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T03:19:15.102351+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T03:36:17.720239+00:00"
 }
