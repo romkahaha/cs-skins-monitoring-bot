@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 151,
-  "last_run_at_utc": "2026-04-30T17:04:12.339358+00:00",
+  "batch_pointer": 176,
+  "last_run_at_utc": "2026-04-30T17:09:41.969374+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Wintergreen (Minimal Wear)",
-    "M4A4 | Poly Mag (Factory New)",
-    "AWP | Fever Dream (Factory New)",
-    "M4A4 | Full Throttle (Battle-Scarred)",
-    "M4A1-S | Atomic Alloy (Field-Tested)"
+    "AWP | Hyper Beast (Minimal Wear)",
+    "M4A4 | Turbine (Minimal Wear)",
+    "M4A1-S | Solitude (Minimal Wear)",
+    "MP9 | Hydra (Field-Tested)",
+    "AK-47 | Redline (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T17:04:57.018153+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T17:04:57.018153+00:00",
+  "last_finished_at_utc": "2026-04-30T17:10:21.474373+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T17:10:21.474373+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 830,
-  "last_enriched_rows": 830,
+  "last_listing_rows": 708,
+  "last_enriched_rows": 708,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 146,
+  "last_batch_start_pointer": 171,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
