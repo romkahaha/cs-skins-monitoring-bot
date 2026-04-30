@@ -2,41 +2,53 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 25,
-  "last_run_at_utc": "2026-04-30T15:52:12.034255+00:00",
+  "batch_pointer": 50,
+  "last_run_at_utc": "2026-04-30T15:55:53.553238+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Black Nile (Factory New)",
-    "M4A1-S | Blood Tiger (Factory New)",
-    "P2000 | Wicked Sick (Field-Tested)",
-    "AWP | POP AWP (Factory New)",
-    "AK-47 | Steel Delta (Factory New)"
+    "Nova | Wurst Hölle (Factory New)",
+    "P2000 | Amber Fade (Factory New)",
+    "MAG-7 | Carbon Fiber (Factory New)",
+    "MAC-10 | Carnivore (Factory New)",
+    "Desert Eagle | Urban DDPAT (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T15:53:04.197158+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T15:53:04.197158+00:00",
+  "last_finished_at_utc": "2026-04-30T15:56:30.973290+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T15:56:30.973290+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 798,
-  "last_enriched_rows": 798,
-  "last_opportunities_rows": 1,
+  "last_listing_rows": 639,
+  "last_enriched_rows": 639,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 1,
+    "loaded": 0,
     "filtered": 0,
-    "considered": 1,
-    "sent": 1,
+    "considered": 0,
+    "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 20,
+  "last_batch_start_pointer": 45,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
       "item": "P2000 | Wicked Sick (Field-Tested)",
       "listing_id": "642467210054968348",
       "spread_hybrid_disc": 0.0762984194329807
+    },
+    "listing:645844275580310145": {
+      "sent_at_utc": "2026-04-30T15:54:27.781668+00:00",
+      "item": "PP-Bizon | Brass (Factory New)",
+      "listing_id": "645844275580310145",
+      "spread_hybrid_disc": 0.0037725685433022
+    },
+    "listing:498353293066870231": {
+      "sent_at_utc": "2026-04-30T15:55:11.873232+00:00",
+      "item": "MAC-10 | Pipsqueak (Factory New)",
+      "listing_id": "498353293066870231",
+      "spread_hybrid_disc": -0.0216850005001849
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T15:53:03.596166+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T15:55:11.873302+00:00"
 }
