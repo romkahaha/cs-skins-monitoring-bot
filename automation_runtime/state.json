@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 25,
-  "last_run_at_utc": "2026-04-30T19:49:11.823877+00:00",
+  "batch_pointer": 50,
+  "last_run_at_utc": "2026-04-30T19:52:57.664776+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Black Nile (Factory New)",
-    "M4A1-S | Blood Tiger (Factory New)",
-    "P2000 | Wicked Sick (Field-Tested)",
-    "AWP | POP AWP (Factory New)",
-    "AK-47 | Steel Delta (Factory New)"
+    "Nova | Wurst Hölle (Factory New)",
+    "P2000 | Amber Fade (Factory New)",
+    "MAG-7 | Carbon Fiber (Factory New)",
+    "MAC-10 | Carnivore (Factory New)",
+    "Desert Eagle | Urban DDPAT (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T19:50:11.657361+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T19:50:11.657361+00:00",
+  "last_finished_at_utc": "2026-04-30T19:53:44.700066+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T19:53:44.700066+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 798,
-  "last_enriched_rows": 798,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 622,
+  "last_enriched_rows": 622,
+  "last_opportunities_rows": 2,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 2,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 2,
+    "sent": 2,
     "skipped": 0
   },
-  "last_batch_start_pointer": 20,
+  "last_batch_start_pointer": 45,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
@@ -138,7 +138,25 @@
       "item": "Desert Eagle | Mulberry (Minimal Wear)",
       "listing_id": "498353293067859655",
       "spread_hybrid_disc": 0.0976123512467961
+    },
+    "listing:515241791634671341": {
+      "sent_at_utc": "2026-04-30T19:50:59.763170+00:00",
+      "item": "Five-SeveN | Monkey Business (Field-Tested)",
+      "listing_id": "515241791634671341",
+      "spread_hybrid_disc": 0.103226495531025
+    },
+    "listing:500605092731057735": {
+      "sent_at_utc": "2026-04-30T19:53:40.869355+00:00",
+      "item": "Nova | Wurst Hölle (Factory New)",
+      "listing_id": "500605092731057735",
+      "spread_hybrid_disc": 0.0741960310968515
+    },
+    "listing:500605092731060543": {
+      "sent_at_utc": "2026-04-30T19:53:44.098684+00:00",
+      "item": "Nova | Wurst Hölle (Factory New)",
+      "listing_id": "500605092731060543",
+      "spread_hybrid_disc": 0.0984091281165066
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T19:10:32.658647+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T19:53:44.098758+00:00"
 }
