@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 50,
-  "last_run_at_utc": "2026-04-30T15:55:53.553238+00:00",
+  "batch_pointer": 75,
+  "last_run_at_utc": "2026-04-30T16:00:02.882056+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Nova | Wurst Hölle (Factory New)",
-    "P2000 | Amber Fade (Factory New)",
-    "MAG-7 | Carbon Fiber (Factory New)",
-    "MAC-10 | Carnivore (Factory New)",
-    "Desert Eagle | Urban DDPAT (Minimal Wear)"
+    "Desert Eagle | Heat Treated (Minimal Wear)",
+    "Dual Berettas | Royal Consorts (Field-Tested)",
+    "AK-47 | Head Shot (Battle-Scarred)",
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "P2000 | Wicked Sick (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T15:56:30.973290+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T15:56:30.973290+00:00",
+  "last_finished_at_utc": "2026-04-30T16:01:30.650809+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T16:01:30.650809+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 639,
-  "last_enriched_rows": 639,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 912,
+  "last_enriched_rows": 912,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 45,
+  "last_batch_start_pointer": 70,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
@@ -48,7 +48,25 @@
       "item": "MAC-10 | Pipsqueak (Factory New)",
       "listing_id": "498353293066870231",
       "spread_hybrid_disc": -0.0216850005001849
+    },
+    "listing:491597893777094738": {
+      "sent_at_utc": "2026-04-30T15:59:02.370591+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "491597893777094738",
+      "spread_hybrid_disc": 0.1173173718747211
+    },
+    "listing:652601015927222508": {
+      "sent_at_utc": "2026-04-30T16:00:01.581031+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "652601015927222508",
+      "spread_hybrid_disc": 0.0895691367950528
+    },
+    "listing:515241791633157649": {
+      "sent_at_utc": "2026-04-30T16:01:30.049395+00:00",
+      "item": "Glock-18 | Shinobu (Battle-Scarred)",
+      "listing_id": "515241791633157649",
+      "spread_hybrid_disc": 0.0663549722905796
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T15:55:11.873302+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T16:01:30.049467+00:00"
 }
