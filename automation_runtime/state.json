@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
   "items_count": 199,
-  "batch_pointer": 153,
-  "last_run_at_utc": "2026-04-30T18:41:00.712572+00:00",
+  "batch_pointer": 178,
+  "last_run_at_utc": "2026-04-30T18:46:00.110567+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Fever Dream (Factory New)",
-    "M4A4 | Full Throttle (Battle-Scarred)",
-    "M4A1-S | Atomic Alloy (Field-Tested)",
-    "Desert Eagle | Trigger Discipline (Factory New)",
-    "SSG 08 | Turbo Peek (Field-Tested)"
+    "M4A1-S | Solitude (Minimal Wear)",
+    "MP9 | Hydra (Field-Tested)",
+    "AK-47 | Redline (Battle-Scarred)",
+    "M4A4 | Desolate Space (Battle-Scarred)",
+    "UMP-45 | Wild Child (Well-Worn)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T18:41:50.469766+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T18:41:50.469766+00:00",
+  "last_finished_at_utc": "2026-04-30T18:46:53.068664+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T18:46:53.068664+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 725,
-  "last_enriched_rows": 725,
+  "last_listing_rows": 762,
+  "last_enriched_rows": 762,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 148,
+  "last_batch_start_pointer": 173,
   "sent_alerts": {
     "listing:642467210054968348": {
       "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
