@@ -1,261 +1,42 @@
 {
   "version": 1,
-  "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
-  "items_count": 154,
-  "batch_pointer": 36,
-  "last_run_at_utc": "2026-04-30T03:38:20.619181+00:00",
-  "last_status": "error",
+  "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
+  "items_count": 199,
+  "batch_pointer": 25,
+  "last_run_at_utc": "2026-04-30T15:52:12.034255+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Emerald Pinstripe (Minimal Wear)",
-    "AWP | Mortis (Minimal Wear)",
-    "MP7 | Fade (Factory New)",
-    "UMP-45 | Wild Child (Battle-Scarred)",
-    "AUG | Momentum (Field-Tested)"
+    "AWP | Black Nile (Factory New)",
+    "M4A1-S | Blood Tiger (Factory New)",
+    "P2000 | Wicked Sick (Field-Tested)",
+    "AWP | POP AWP (Factory New)",
+    "AK-47 | Steel Delta (Factory New)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AK-47 | Emerald Pinstripe (Minimal Wear), AWP | Mortis (Minimal Wear), MP7 | Fade (Factory New))",
-  "last_finished_at_utc": "2026-04-30T03:40:05.444571+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T03:38:20.081201+00:00",
-  "last_failed_monitoring_at_utc": "2026-04-30T03:40:05.444571+00:00",
-  "consecutive_errors": 1,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "AK-47 | Emerald Pinstripe (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Emerald%20Pinstripe%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "AWP | Mortis (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Mortis%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "MP7 | Fade (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP7%20%7C%20Fade%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "UMP-45 | Wild Child (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/UMP-45%20%7C%20Wild%20Child%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "AUG | Momentum (Field-Tested)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AUG%20%7C%20Momentum%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    }
-  ],
-  "last_listing_error_count": 5,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 701,
-  "last_opportunities_rows": 0,
-  "last_alert_stats": {},
-  "last_batch_start_pointer": 36,
+  "last_error": null,
+  "last_finished_at_utc": "2026-04-30T15:53:04.197158+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T15:53:04.197158+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 798,
+  "last_enriched_rows": 798,
+  "last_opportunities_rows": 1,
+  "last_alert_stats": {
+    "loaded": 1,
+    "filtered": 0,
+    "considered": 1,
+    "sent": 1,
+    "skipped": 0
+  },
+  "last_batch_start_pointer": 20,
   "sent_alerts": {
-    "listing:635712517316299291": {
-      "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
-      "item": "Desert Eagle | Urban DDPAT (Minimal Wear)",
-      "listing_id": "635712517316299291",
-      "spread_hybrid_disc": 0.0495160182973661
-    },
-    "listing:652601015927222508": {
-      "sent_at_utc": "2026-04-30T00:24:25.057061+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "652601015927222508",
-      "spread_hybrid_disc": 0.1165505195502319
-    },
-    "listing:511864091772511785": {
-      "sent_at_utc": "2026-04-29T12:02:34.776851+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "511864091772511785",
-      "spread_hybrid_disc": 0.1076650044697741
-    },
-    "listing:650349216050752953": {
-      "sent_at_utc": "2026-04-30T00:42:00.228941+00:00",
-      "item": "Glock-18 | Nuclear Garden (Factory New)",
-      "listing_id": "650349216050752953",
-      "spread_hybrid_disc": 0.0416555094132647
-    },
-    "listing:642467916671492549": {
-      "sent_at_utc": "2026-04-29T12:18:29.397478+00:00",
-      "item": "P2000 | Imperial Dragon (Minimal Wear)",
-      "listing_id": "642467916671492549",
-      "spread_hybrid_disc": 0.1092256810287815
-    },
-    "listing:507360492258834457": {
-      "sent_at_utc": "2026-04-29T13:15:01.596808+00:00",
-      "item": "AWP | Duality (Field-Tested)",
-      "listing_id": "507360492258834457",
-      "spread_hybrid_disc": 0.0656452624052403
-    },
-    "listing:512989991888124455": {
-      "sent_at_utc": "2026-04-29T13:23:14.761374+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "512989991888124455",
-      "spread_hybrid_disc": 0.1174277829308472
-    },
-    "listing:511864091773297017": {
-      "sent_at_utc": "2026-04-29T14:42:12.318326+00:00",
-      "item": "Nova | Wurst Hölle (Factory New)",
-      "listing_id": "511864091773297017",
-      "spread_hybrid_disc": 0.0957487010897685
-    },
-    "listing:498353293061364967": {
-      "sent_at_utc": "2026-04-29T14:46:11.573141+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "498353293061364967",
-      "spread_hybrid_disc": 0.1033344850055442
-    },
-    "listing:526500790807818689": {
-      "sent_at_utc": "2026-04-29T15:35:12.261429+00:00",
-      "item": "AK-47 | Wintergreen (Factory New)",
-      "listing_id": "526500790807818689",
-      "spread_hybrid_disc": 0.0905469905673254
-    },
-    "listing:525374890920985195": {
-      "sent_at_utc": "2026-04-29T16:25:43.274498+00:00",
-      "item": "SG 553 | Berry Gel Coat (Factory New)",
-      "listing_id": "525374890920985195",
-      "spread_hybrid_disc": 0.0841392914162939
-    },
-    "listing:509612292206677011": {
-      "sent_at_utc": "2026-04-29T16:32:49.126351+00:00",
-      "item": "Glock-18 | Nuclear Garden (Factory New)",
-      "listing_id": "509612292206677011",
-      "spread_hybrid_disc": -0.0086009308518146
-    },
-    "listing:497227393136995961": {
-      "sent_at_utc": "2026-04-29T16:51:43.757213+00:00",
-      "item": "P250 | Visions (Field-Tested)",
-      "listing_id": "497227393136995961",
-      "spread_hybrid_disc": 0.0849126216537574
-    },
-    "listing:492723793435321593": {
-      "sent_at_utc": "2026-04-29T17:55:37.409050+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "492723793435321593",
-      "spread_hybrid_disc": 0.101474451280593
-    },
-    "listing:494975593210406670": {
-      "sent_at_utc": "2026-04-29T19:15:25.333286+00:00",
-      "item": "Nova | Wurst Hölle (Factory New)",
-      "listing_id": "494975593210406670",
-      "spread_hybrid_disc": 0.0717407570651378
-    },
-    "listing:526500790808943041": {
-      "sent_at_utc": "2026-04-29T19:37:03.257050+00:00",
-      "item": "MP9 | Hydra (Field-Tested)",
-      "listing_id": "526500790808943041",
-      "spread_hybrid_disc": 0.1135598716220342
-    },
-    "listing:505108692486103424": {
-      "sent_at_utc": "2026-04-29T20:43:31.942857+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "505108692486103424",
-      "spread_hybrid_disc": 0.0740794160619421
-    },
-    "listing:514115891815428174": {
-      "sent_at_utc": "2026-04-29T20:56:26.202078+00:00",
-      "item": "AK-47 | Midnight Laminate (Battle-Scarred)",
-      "listing_id": "514115891815428174",
-      "spread_hybrid_disc": 0.0828819085335773
-    },
-    "listing:500605092726366179": {
-      "sent_at_utc": "2026-04-29T20:57:11.755793+00:00",
-      "item": "AK-47 | Wintergreen (Minimal Wear)",
-      "listing_id": "500605092726366179",
-      "spread_hybrid_disc": 0.1051794580699144
-    },
-    "listing:508486392186625478": {
-      "sent_at_utc": "2026-04-29T21:56:20.611298+00:00",
-      "item": "AK-47 | Nouveau Rouge (Minimal Wear)",
-      "listing_id": "508486392186625478",
-      "spread_hybrid_disc": 0.1032181032431885
-    },
-    "listing:496101493250268863": {
-      "sent_at_utc": "2026-04-29T21:56:51.479122+00:00",
-      "item": "Glock-18 | Nuclear Garden (Factory New)",
-      "listing_id": "496101493250268863",
-      "spread_hybrid_disc": 0.0513975652327364
-    },
-    "listing:511864091775321189": {
-      "sent_at_utc": "2026-04-29T22:59:23.138098+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "511864091775321189",
-      "spread_hybrid_disc": 0.1101008921376593
-    },
-    "listing:516367691460778262": {
-      "sent_at_utc": "2026-04-29T23:03:06.043875+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "516367691460778262",
-      "spread_hybrid_disc": 0.1090128177585804
-    },
-    "listing:492723793436693805": {
-      "sent_at_utc": "2026-04-29T23:49:31.553741+00:00",
-      "item": "AWP | Duality (Battle-Scarred)",
-      "listing_id": "492723793436693805",
-      "spread_hybrid_disc": 0.0161799742881093
-    },
-    "listing:509612292209186103": {
-      "sent_at_utc": "2026-04-30T00:18:55.947081+00:00",
-      "item": "P250 | Asiimov (Field-Tested)",
-      "listing_id": "509612292209186103",
-      "spread_hybrid_disc": 0.0972230998192199
-    },
-    "listing:507360492261542737": {
-      "sent_at_utc": "2026-04-30T00:22:56.287282+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "507360492261542737",
-      "spread_hybrid_disc": 0.115805631166125
-    },
-    "listing:507360492261490105": {
-      "sent_at_utc": "2026-04-30T01:35:20.372904+00:00",
-      "item": "AWP | Duality (Field-Tested)",
-      "listing_id": "507360492261490105",
-      "spread_hybrid_disc": 0.0915299165513259
-    },
-    "listing:505108692487153544": {
-      "sent_at_utc": "2026-04-30T03:19:15.102281+00:00",
-      "item": "Glock-18 | Nuclear Garden (Factory New)",
-      "listing_id": "505108692487153544",
-      "spread_hybrid_disc": -0.1169734409729184
-    },
     "listing:642467210054968348": {
-      "sent_at_utc": "2026-04-30T03:34:25.231250+00:00",
+      "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
       "item": "P2000 | Wicked Sick (Field-Tested)",
       "listing_id": "642467210054968348",
-      "spread_hybrid_disc": 0.0819586047088236
-    },
-    "listing:516367691461480658": {
-      "sent_at_utc": "2026-04-30T03:36:17.720176+00:00",
-      "item": "P250 | Asiimov (Field-Tested)",
-      "listing_id": "516367691461480658",
-      "spread_hybrid_disc": 0.0299751235264078
+      "spread_hybrid_disc": 0.0762984194329807
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T03:36:17.720239+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T15:53:03.596166+00:00"
 }
