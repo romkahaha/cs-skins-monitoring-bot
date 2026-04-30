@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "f01520afe4569467a21be3e0215b9c4740b5b01ebf0e0199b64044262118499c",
   "items_count": 154,
-  "batch_pointer": 26,
-  "last_run_at_utc": "2026-04-30T00:18:07.828656+00:00",
+  "batch_pointer": 51,
+  "last_run_at_utc": "2026-04-30T00:22:57.467260+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "P250 | Asiimov (Field-Tested)",
-    "M4A4 | Converter (Factory New)",
-    "UMP-45 | Full Stop (Factory New)",
-    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
-    "AWP | Asiimov (Battle-Scarred)"
+    "AWP | Chrome Cannon (Field-Tested)",
+    "M4A1-S | Black Lotus (Field-Tested)",
+    "MP7 | Bloodsport (Minimal Wear)",
+    "MP7 | Cirrus (Factory New)",
+    "M4A4 | Tooth Fairy (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-04-30T00:18:56.548217+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T00:18:56.548217+00:00",
+  "last_finished_at_utc": "2026-04-30T00:24:25.658135+00:00",
+  "last_successful_monitoring_at_utc": "2026-04-30T00:24:25.658135+00:00",
   "last_failed_monitoring_at_utc": "2026-04-29T17:36:30.556146+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 778,
-  "last_enriched_rows": 778,
+  "last_listing_rows": 890,
+  "last_enriched_rows": 890,
   "last_opportunities_rows": 1,
   "last_alert_stats": {
     "loaded": 1,
@@ -29,7 +29,7 @@
     "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 21,
+  "last_batch_start_pointer": 46,
   "sent_alerts": {
     "listing:635712517316299291": {
       "sent_at_utc": "2026-04-29T11:55:58.688956+00:00",
@@ -38,7 +38,7 @@
       "spread_hybrid_disc": 0.0495160182973661
     },
     "listing:652601015927222508": {
-      "sent_at_utc": "2026-04-29T11:59:48.694423+00:00",
+      "sent_at_utc": "2026-04-30T00:24:25.057061+00:00",
       "item": "MP7 | Cirrus (Factory New)",
       "listing_id": "652601015927222508",
       "spread_hybrid_disc": 0.1165505195502319
@@ -180,7 +180,13 @@
       "item": "P250 | Asiimov (Field-Tested)",
       "listing_id": "509612292209186103",
       "spread_hybrid_disc": 0.0972230998192199
+    },
+    "listing:507360492261542737": {
+      "sent_at_utc": "2026-04-30T00:22:56.287282+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "507360492261542737",
+      "spread_hybrid_disc": 0.115805631166125
     }
   },
-  "last_alert_sent_at_utc": "2026-04-30T00:18:55.947154+00:00"
+  "last_alert_sent_at_utc": "2026-04-30T00:24:25.057128+00:00"
 }
