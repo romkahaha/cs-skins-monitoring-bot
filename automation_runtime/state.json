@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 54,
-  "last_run_at_utc": "2026-05-01T19:17:52.174663+00:00",
+  "batch_pointer": 79,
+  "last_run_at_utc": "2026-05-01T19:22:47.979945+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "P2000 | Amber Fade (Factory New)",
-    "MAC-10 | Carnivore (Factory New)",
-    "Desert Eagle | Urban DDPAT (Minimal Wear)",
-    "Glock-18 | Gold Toof (Field-Tested)",
-    "M4A4 | Temukau (Minimal Wear)"
+    "M4A4 | Tooth Fairy (Minimal Wear)",
+    "AWP | Exoskeleton (Battle-Scarred)",
+    "AK-47 | Searing Rage (Field-Tested)",
+    "Desert Eagle | Heat Treated (Minimal Wear)",
+    "Dual Berettas | Royal Consorts (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T19:18:30.132238+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T19:18:30.132238+00:00",
+  "last_finished_at_utc": "2026-05-01T19:24:00.636051+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T19:24:00.636051+00:00",
   "last_failed_monitoring_at_utc": "2026-05-01T14:57:04.814373+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 586,
-  "last_enriched_rows": 586,
+  "last_listing_rows": 925,
+  "last_enriched_rows": 925,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 49,
+  "last_batch_start_pointer": 74,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T17:50:16.615486+00:00",
@@ -108,7 +108,13 @@
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "501730992850268981",
       "spread_hybrid_disc": 0.0584739792689001
+    },
+    "listing:518619491406308992": {
+      "sent_at_utc": "2026-05-01T19:21:22.828655+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "518619491406308992",
+      "spread_hybrid_disc": 0.0652059250370975
     }
   },
-  "last_alert_sent_at_utc": "2026-05-01T17:50:16.615575+00:00"
+  "last_alert_sent_at_utc": "2026-05-01T19:21:22.828733+00:00"
 }
