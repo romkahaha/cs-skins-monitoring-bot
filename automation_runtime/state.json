@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 100,
-  "last_run_at_utc": "2026-05-01T17:45:00.422540+00:00",
+  "batch_pointer": 125,
+  "last_run_at_utc": "2026-05-01T17:50:17.812199+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Minimal Wear)",
-    "AK-47 | Slate (Field-Tested)",
-    "USP-S | Printstream (Field-Tested)",
-    "Desert Eagle | Crimson Web (Field-Tested)",
-    "AWP | Printstream (Well-Worn)"
+    "Galil AR | Rainbow Spoon (Factory New)",
+    "M4A4 | Hellish (Battle-Scarred)",
+    "USP-S | Cortex (Well-Worn)",
+    "AK-47 | Searing Rage (Battle-Scarred)",
+    "MP9 | Capillary (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T17:46:23.835479+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T17:46:23.835479+00:00",
+  "last_finished_at_utc": "2026-05-01T17:50:52.941348+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T17:50:52.941348+00:00",
   "last_failed_monitoring_at_utc": "2026-05-01T14:57:04.814373+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 923,
-  "last_enriched_rows": 923,
+  "last_listing_rows": 653,
+  "last_enriched_rows": 653,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,10 +29,10 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 95,
+  "last_batch_start_pointer": 120,
   "sent_alerts": {
     "listing:529878490348072152": {
-      "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
+      "sent_at_utc": "2026-05-01T17:50:16.615486+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "529878490348072152",
       "spread_hybrid_disc": 0.0891105290538061
@@ -110,5 +110,5 @@
       "spread_hybrid_disc": 0.0584739792689001
     }
   },
-  "last_alert_sent_at_utc": "2026-05-01T16:57:48.413270+00:00"
+  "last_alert_sent_at_utc": "2026-05-01T17:50:16.615575+00:00"
 }
