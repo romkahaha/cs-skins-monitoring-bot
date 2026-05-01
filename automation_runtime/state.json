@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 126,
-  "last_run_at_utc": "2026-05-01T11:47:49.483253+00:00",
+  "batch_pointer": 151,
+  "last_run_at_utc": "2026-05-01T11:53:18.049067+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A4 | Hellish (Battle-Scarred)",
-    "USP-S | Cortex (Well-Worn)",
-    "AK-47 | Searing Rage (Battle-Scarred)",
-    "MP9 | Capillary (Factory New)",
-    "AK-47 | Head Shot (Minimal Wear)"
+    "MP9 | Food Chain (Field-Tested)",
+    "AUG | Stymphalian (Minimal Wear)",
+    "AK-47 | Phantom Disruptor (Factory New)",
+    "AK-47 | Midnight Laminate (Battle-Scarred)",
+    "AK-47 | Nouveau Rouge (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T11:48:55.673811+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T11:48:55.673811+00:00",
+  "last_finished_at_utc": "2026-05-01T11:54:32.896221+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T11:54:32.896221+00:00",
   "last_failed_monitoring_at_utc": "2026-05-01T09:48:58.823324+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 718,
-  "last_enriched_rows": 718,
+  "last_listing_rows": 923,
+  "last_enriched_rows": 923,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 121,
+  "last_batch_start_pointer": 146,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
