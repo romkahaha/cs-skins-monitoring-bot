@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 178,
-  "last_run_at_utc": "2026-05-01T08:33:20.327992+00:00",
+  "batch_pointer": 203,
+  "last_run_at_utc": "2026-05-01T08:38:31.855810+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AUG | Stymphalian (Factory New)",
-    "Desert Eagle | Trigger Discipline (Factory New)",
-    "SSG 08 | Turbo Peek (Field-Tested)",
-    "M4A1-S | Black Lotus (Minimal Wear)",
-    "Five-SeveN | Orange Peel (Factory New)"
+    "M4A4 | Desolate Space (Battle-Scarred)",
+    "UMP-45 | Wild Child (Well-Worn)",
+    "Five-SeveN | Heat Treated (Battle-Scarred)",
+    "Tec-9 | Remote Control (Minimal Wear)",
+    "AWP | Elite Build (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T08:34:27.104495+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T08:34:27.104495+00:00",
+  "last_finished_at_utc": "2026-05-01T08:39:09.491481+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T08:39:09.491481+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 636,
-  "last_enriched_rows": 636,
+  "last_listing_rows": 619,
+  "last_enriched_rows": 619,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 173,
+  "last_batch_start_pointer": 198,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
