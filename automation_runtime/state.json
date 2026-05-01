@@ -2,41 +2,47 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 1,
-  "last_run_at_utc": "2026-05-01T07:00:41.008410+00:00",
+  "batch_pointer": 26,
+  "last_run_at_utc": "2026-05-01T07:13:43.223200+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "FAMAS | Eye of Athena (Minimal Wear)",
-    "AK-47 | Cartel (Battle-Scarred)",
-    "AWP | The End (Minimal Wear)",
-    "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "P90 | Ancient Earth (Factory New)"
+    "AWP | Duality (Field-Tested)",
+    "Tec-9 | Ossified (Factory New)",
+    "AWP | Black Nile (Factory New)",
+    "M4A1-S | Blood Tiger (Factory New)",
+    "MP9 | Orange Peel (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T07:01:14.804057+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T07:01:14.804057+00:00",
+  "last_finished_at_utc": "2026-05-01T07:14:52.146648+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T07:14:52.146648+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 474,
-  "last_enriched_rows": 474,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 681,
+  "last_enriched_rows": 681,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 1,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
+    "considered": 1,
+    "sent": 1,
     "skipped": 0
   },
-  "last_batch_start_pointer": 224,
+  "last_batch_start_pointer": 21,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "529878490348072152",
       "spread_hybrid_disc": 0.0891105290538061
+    },
+    "listing:527626690797149120": {
+      "sent_at_utc": "2026-05-01T07:14:51.545611+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "527626690797149120",
+      "spread_hybrid_disc": 0.0593158896258133
     }
   },
-  "last_alert_sent_at_utc": "2026-05-01T05:03:55.091631+00:00"
+  "last_alert_sent_at_utc": "2026-05-01T07:14:51.545687+00:00"
 }
