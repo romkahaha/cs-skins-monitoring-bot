@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 27,
-  "last_run_at_utc": "2026-05-01T05:37:30.235501+00:00",
+  "batch_pointer": 52,
+  "last_run_at_utc": "2026-05-01T05:40:50.418052+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Tec-9 | Ossified (Factory New)",
-    "AWP | Black Nile (Factory New)",
-    "M4A1-S | Blood Tiger (Factory New)",
-    "MP9 | Orange Peel (Factory New)",
-    "P2000 | Wicked Sick (Field-Tested)"
+    "FAMAS | Eye of Athena (Factory New)",
+    "Nova | Wurst Hölle (Factory New)",
+    "P2000 | Amber Fade (Factory New)",
+    "MAC-10 | Carnivore (Factory New)",
+    "Desert Eagle | Urban DDPAT (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T05:38:04.178723+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T05:38:04.178723+00:00",
+  "last_finished_at_utc": "2026-05-01T05:41:21.927422+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T05:41:21.927422+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 688,
-  "last_enriched_rows": 688,
+  "last_listing_rows": 551,
+  "last_enriched_rows": 551,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 22,
+  "last_batch_start_pointer": 47,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
