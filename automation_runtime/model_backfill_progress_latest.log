@@ -7,15 +7,14 @@ Mode: merge | sort: mix(most_recent:50%+lowest_float:25%+highest_float:25%)
 Target unique/listings per skin: 400 | page_limit: 50
 Skip known listing ids across runs: True
 Ignore items already present in data: True
-Список: 2 скинов из /home/runner/work/books/books/automation_runtime/model_backfill_batch_latest.py
+Список: 1 скинов из /home/runner/work/books/books/automation_runtime/model_backfill_batch_latest.py
 Timing JSON: /home/runner/work/books/books/automation_runtime/model_backfill_runtime_latest.json
 
-Merge: в /home/runner/work/books/books/skin_homog/data_skins_big уже есть _summary.csv (1097 строк) — колонки по текущему списку будут добавлены/обновлены.
---- ÐŸÑ€Ð¾Ð³Ð¾Ð½: 2 ÑÐºÐ¸Ð½Ð¾Ð² Ð¿Ð¾Ð´Ñ€ÑÐ´ ---
+Merge: в /home/runner/work/books/books/skin_homog/data_skins_big уже есть _summary.csv (1099 строк) — колонки по текущему списку будут добавлены/обновлены.
+--- ÐŸÑ€Ð¾Ð³Ð¾Ð½: 1 ÑÐºÐ¸Ð½Ð¾Ð² Ð¿Ð¾Ð´Ñ€ÑÐ´ ---
 ÐŸÑ€Ð¾Ð³Ñ€ÐµÑÑ Ñ‚Ð°ÐºÐ¶Ðµ Ð¿Ð¸ÑˆÐµÑ‚ÑÑ Ð²: /home/runner/work/books/books/skin_homog/data_skins_big/_screener_progress.log
-1/2  "MP7 | Army Recon (Factory New)"  собран  — 49/400 листингов, 87.7с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
-2/2  "Tec-9 | Remote Control (Minimal Wear)"  собран  — 90/400 листингов, 143.9с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
-Ð“Ð¾Ñ‚Ð¾Ð²Ð¾: 2 ÑÐºÐ¸Ð½Ð¾Ð², 259s (129.7s/ÑÐºÐ¸Ð½).
+1/1  "AK-47 | Crane Flight (Minimal Wear)"  собран  — 150/400 листингов, 206.5с, mix,merge_block,skip_known_ids=0, 1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1->1/1
+Ð“Ð¾Ñ‚Ð¾Ð²Ð¾: 1 ÑÐºÐ¸Ð½Ð¾Ð², 213s (213.1s/ÑÐºÐ¸Ð½).
 Saved incrementally into /home/runner/work/books/books/skin_homog/data_skins_big/
 -- Most homogeneous (lowest pred_cv) --
                                        item  base_price  pred_mean  pred_cv  factor_mean  factor_cv  float_qty  n_listings
@@ -33,8 +32,8 @@ Saved incrementally into /home/runner/work/books/books/skin_homog/data_skins_big
                 P250 | Kintsugi (Well-Worn)        6.54     6.5246   0.0036       0.9976     0.0036        121          52
               AWP | Hyper Beast (Well-Worn)       34.65    34.1169   0.0036       0.9846     0.0036        120          65
         AK-47 | Breakthrough (Minimal Wear)        9.04     9.0467   0.0039       1.0007     0.0039        367          87
-             M4A1-S | Nightmare (Well-Worn)        8.64     8.5081   0.0041       0.9847     0.0041        165          59
 Galil AR | Chromatic Aberration (Well-Worn)        3.66     3.6055   0.0041       0.9851     0.0041        192          78
+             M4A1-S | Nightmare (Well-Worn)        8.64     8.5081   0.0041       0.9847     0.0041        165          59
           M4A1-S | Leaded Glass (Well-Worn)        9.58     9.2990   0.0046       0.9707     0.0046         58          20
     Glock-18 | Fully Tuned (Battle-Scarred)       50.49    50.3163   0.0049       0.9966     0.0049        133          56
         P2000 | Panther Camo (Field-Tested)        6.81     6.5319   0.0053       0.9592     0.0053         52          16
