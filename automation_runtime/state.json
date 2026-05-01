@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 50,
-  "last_run_at_utc": "2026-05-01T13:15:19.474871+00:00",
+  "batch_pointer": 75,
+  "last_run_at_utc": "2026-05-01T13:19:40.864655+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "SSG 08 | Azure Glyph (Factory New)",
-    "MAC-10 | Button Masher (Factory New)",
-    "FAMAS | Eye of Athena (Factory New)",
-    "Nova | Wurst Hölle (Factory New)",
-    "P2000 | Amber Fade (Factory New)"
+    "M4A1-S | Black Lotus (Field-Tested)",
+    "MP7 | Bloodsport (Minimal Wear)",
+    "MAC-10 | Malachite (Factory New)",
+    "MP7 | Cirrus (Factory New)",
+    "M4A4 | Tooth Fairy (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T13:15:45.921401+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T13:15:45.921401+00:00",
+  "last_finished_at_utc": "2026-05-01T13:20:56.970606+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T13:20:56.970606+00:00",
   "last_failed_monitoring_at_utc": "2026-05-01T09:48:58.823324+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 539,
-  "last_enriched_rows": 539,
+  "last_listing_rows": 760,
+  "last_enriched_rows": 760,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 45,
+  "last_batch_start_pointer": 70,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
