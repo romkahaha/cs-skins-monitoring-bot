@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 202,
-  "last_run_at_utc": "2026-05-01T06:07:17.510291+00:00",
+  "batch_pointer": 227,
+  "last_run_at_utc": "2026-05-01T06:11:11.636342+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AUG | Death by Puppy (Factory New)",
-    "M4A4 | Desolate Space (Battle-Scarred)",
-    "UMP-45 | Wild Child (Well-Worn)",
-    "Five-SeveN | Heat Treated (Battle-Scarred)",
-    "Tec-9 | Remote Control (Minimal Wear)"
+    "UMP-45 | Neo-Noir (Field-Tested)",
+    "AWP | Sun in Leo (Field-Tested)",
+    "FAMAS | Eye of Athena (Minimal Wear)",
+    "AK-47 | Cartel (Battle-Scarred)",
+    "AWP | The End (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T06:08:12.505240+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T06:08:12.505240+00:00",
+  "last_finished_at_utc": "2026-05-01T06:11:51.872759+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T06:11:51.872759+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 659,
-  "last_enriched_rows": 659,
+  "last_listing_rows": 467,
+  "last_enriched_rows": 467,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 197,
+  "last_batch_start_pointer": 222,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
