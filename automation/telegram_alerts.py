@@ -201,11 +201,11 @@ BANDS: dict[str, dict[str, Any]] = {
 
 
 THRESHOLDS = {
-    "spread_hybrid_disc": "<= 12.00%",
-    "steam_sales_7d_n": ">= 50",
-    "steam_sales_7d_downside_risk%": "<= 10.00%",
-    "steam_sales_7d_tail_ratio": ">= 0.900",
-    "steam_daily_downside_14d_pct": "<= 12.00%",
+    "spread_hybrid_disc": "<= 10.00%",
+    "steam_sales_7d_n": ">= 100",
+    "steam_sales_7d_downside_risk%": "<= 8.00%",
+    "steam_sales_7d_tail_ratio": ">= 0.920",
+    "steam_daily_downside_14d_pct": "<= 10.00%",
     "continuity_ratio": "<= 3.50",
 }
 
@@ -340,7 +340,7 @@ def format_alert(row: pd.Series) -> str:
         model_line(row, "smooth", "Smooth"),
         model_line(row, "segmented", "Segmented"),
         model_line(row, "hybrid", "Hybrid"),
-        f"Hybrid disc spread: <b>{html.escape(spread_text)}</b> / max 17.00%",
+        f"Hybrid disc spread: <b>{html.escape(spread_text)}</b> / max 10.00%",
         f"Hybrid fair/ask gap: <code>{'-' if fair_gap is None else html.escape(f'{fair_gap:.2%}')}</code>",
         "",
         "<b>Risk checks</b>",
