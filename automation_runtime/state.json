@@ -2,34 +2,79 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 26,
-  "last_run_at_utc": "2026-05-01T20:04:33.990198+00:00",
-  "last_status": "ok",
+  "batch_pointer": 31,
+  "last_run_at_utc": "2026-05-01T20:07:00.676812+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AWP | Duality (Field-Tested)",
-    "Tec-9 | Ossified (Factory New)",
-    "AWP | Black Nile (Factory New)",
-    "M4A1-S | Blood Tiger (Factory New)",
-    "MP9 | Orange Peel (Factory New)"
+    "AK-47 | Safety Net (Factory New)",
+    "M4A1-S | Fizzy POP (Factory New)",
+    "AWP | Hyper Beast (Battle-Scarred)",
+    "USP-S | Royal Guard (Minimal Wear)",
+    "PP-Bizon | Brass (Factory New)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-01T20:05:30.112803+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T20:05:30.112803+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-01T14:57:04.814373+00:00",
-  "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 668,
-  "last_enriched_rows": 668,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AK-47 | Safety Net (Factory New), M4A1-S | Fizzy POP (Factory New), AWP | Hyper Beast (Battle-Scarred))",
+  "last_finished_at_utc": "2026-05-01T20:08:36.423562+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T20:07:00.119403+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-01T20:08:36.423562+00:00",
+  "consecutive_errors": 1,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "AK-47 | Safety Net (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Safety%20Net%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "M4A1-S | Fizzy POP (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Fizzy%20POP%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AWP | Hyper Beast (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Hyper%20Beast%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "USP-S | Royal Guard (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Royal%20Guard%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "PP-Bizon | Brass (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/PP-Bizon%20%7C%20Brass%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 300,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 21,
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 31,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T17:50:16.615486+00:00",
