@@ -1,7 +1,7 @@
 rule,passed_rows,failed_rows
-steam_sales_7d_n >= 50,613,0
-steam_sales_7d_downside_risk% <= 10.0,613,0
-steam_sales_7d_tail_ratio >= 0.9,613,0
-steam_daily_downside_14d_pct <= 0.12,613,0
-continuity_ratio <= 3.5,613,0
-spread_hybrid_disc <= 0.12,0,613
+steam_sales_7d_n >= 50,475,0
+steam_sales_7d_downside_risk% <= 10.0,475,0
+steam_sales_7d_tail_ratio >= 0.9,475,0
+steam_daily_downside_14d_pct <= 0.12,475,0
+continuity_ratio <= 3.5,475,0
+spread_hybrid_disc <= 0.12,0,475
