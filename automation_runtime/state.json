@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 175,
-  "last_run_at_utc": "2026-05-01T05:14:40.311495+00:00",
+  "batch_pointer": 200,
+  "last_run_at_utc": "2026-05-01T05:19:08.061208+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A1-S | Flashback (Battle-Scarred)",
-    "M4A4 | Full Throttle (Battle-Scarred)",
-    "M4A1-S | Atomic Alloy (Field-Tested)",
-    "AUG | Stymphalian (Factory New)",
-    "Desert Eagle | Trigger Discipline (Factory New)"
+    "M4A1-S | Black Lotus (Battle-Scarred)",
+    "AK-47 | Redline (Battle-Scarred)",
+    "AUG | Death by Puppy (Factory New)",
+    "M4A4 | Desolate Space (Battle-Scarred)",
+    "UMP-45 | Wild Child (Well-Worn)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T05:15:24.452094+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T05:15:24.452094+00:00",
+  "last_finished_at_utc": "2026-05-01T05:20:02.161981+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T05:20:02.161981+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 729,
-  "last_enriched_rows": 729,
+  "last_listing_rows": 638,
+  "last_enriched_rows": 638,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 170,
+  "last_batch_start_pointer": 195,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
