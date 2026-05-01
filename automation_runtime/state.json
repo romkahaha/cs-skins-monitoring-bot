@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 197,
-  "last_run_at_utc": "2026-05-01T10:21:07.291232+00:00",
+  "batch_pointer": 222,
+  "last_run_at_utc": "2026-05-01T10:24:40.025593+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A1-S | Nightmare (Field-Tested)",
-    "AK-47 | Searing Rage (Minimal Wear)",
-    "AWP | Hyper Beast (Minimal Wear)",
-    "M4A1-S | Black Lotus (Battle-Scarred)",
-    "AK-47 | Redline (Battle-Scarred)"
+    "MP7 | Army Recon (Factory New)",
+    "AK-47 | Crane Flight (Minimal Wear)",
+    "AWP | Ice Coaled (Factory New)",
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "MAC-10 | Disco Tech (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T10:22:08.222318+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T10:22:08.222318+00:00",
+  "last_finished_at_utc": "2026-05-01T10:25:48.968590+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T10:25:48.968590+00:00",
   "last_failed_monitoring_at_utc": "2026-05-01T09:48:58.823324+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 752,
-  "last_enriched_rows": 752,
+  "last_listing_rows": 783,
+  "last_enriched_rows": 783,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 192,
+  "last_batch_start_pointer": 217,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
