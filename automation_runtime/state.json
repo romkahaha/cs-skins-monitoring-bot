@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
   "items_count": 228,
-  "batch_pointer": 179,
-  "last_run_at_utc": "2026-05-01T15:26:45.590327+00:00",
+  "batch_pointer": 204,
+  "last_run_at_utc": "2026-05-01T15:30:21.262084+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Desert Eagle | Trigger Discipline (Factory New)",
-    "SSG 08 | Turbo Peek (Field-Tested)",
-    "M4A1-S | Black Lotus (Minimal Wear)",
-    "Five-SeveN | Orange Peel (Factory New)",
-    "SSG 08 | Bloodshot (Field-Tested)"
+    "UMP-45 | Wild Child (Well-Worn)",
+    "Five-SeveN | Heat Treated (Battle-Scarred)",
+    "Tec-9 | Remote Control (Minimal Wear)",
+    "AWP | Elite Build (Battle-Scarred)",
+    "Galil AR | Rainbow Spoon (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-01T15:27:23.248615+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-01T15:27:23.248615+00:00",
+  "last_finished_at_utc": "2026-05-01T15:31:16.529704+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T15:31:16.529704+00:00",
   "last_failed_monitoring_at_utc": "2026-05-01T14:57:04.814373+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 590,
-  "last_enriched_rows": 590,
+  "last_listing_rows": 656,
+  "last_enriched_rows": 656,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 174,
+  "last_batch_start_pointer": 199,
   "sent_alerts": {
     "listing:529878490348072152": {
       "sent_at_utc": "2026-05-01T05:03:55.091555+00:00",
@@ -84,7 +84,13 @@
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "494975741574492486",
       "spread_hybrid_disc": 0.077607104994281
+    },
+    "listing:502856892567907660": {
+      "sent_at_utc": "2026-05-01T15:30:20.018895+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "502856892567907660",
+      "spread_hybrid_disc": 0.0574255160225404
     }
   },
-  "last_alert_sent_at_utc": "2026-05-01T15:15:16.776508+00:00"
+  "last_alert_sent_at_utc": "2026-05-01T15:30:20.018964+00:00"
 }
