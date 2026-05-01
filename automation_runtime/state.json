@@ -1,231 +1,33 @@
 {
   "version": 1,
-  "items_signature": "039df8ac4db9bd67babee403a8be9cd8a612e0b77ce1f231420c9889e9533ea3",
-  "items_count": 199,
-  "batch_pointer": 146,
-  "last_run_at_utc": "2026-04-30T21:00:32.966265+00:00",
-  "last_status": "error",
+  "items_signature": "26997ac6ea3a50661c48f4ebc52c6eb5695186b93403b5daa7ce00e3bea26bbe",
+  "items_count": 228,
+  "batch_pointer": 25,
+  "last_run_at_utc": "2026-05-01T04:46:13.602290+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Wintergreen (Minimal Wear)",
-    "M4A4 | Poly Mag (Factory New)",
-    "AWP | Fever Dream (Factory New)",
-    "M4A4 | Full Throttle (Battle-Scarred)",
-    "M4A1-S | Atomic Alloy (Field-Tested)"
+    "Dual Berettas | Briar (Factory New)",
+    "AWP | Duality (Field-Tested)",
+    "Tec-9 | Ossified (Factory New)",
+    "AWP | Black Nile (Factory New)",
+    "M4A1-S | Blood Tiger (Factory New)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AK-47 | Wintergreen (Minimal Wear), M4A4 | Poly Mag (Factory New), AWP | Fever Dream (Factory New))",
-  "last_finished_at_utc": "2026-04-30T21:02:13.429137+00:00",
-  "last_successful_monitoring_at_utc": "2026-04-30T21:00:32.399016+00:00",
-  "last_failed_monitoring_at_utc": "2026-04-30T21:02:13.429137+00:00",
-  "consecutive_errors": 1,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "AK-47 | Wintergreen (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Wintergreen%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "M4A4 | Poly Mag (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Poly%20Mag%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "AWP | Fever Dream (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Fever%20Dream%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "M4A4 | Full Throttle (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Full%20Throttle%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "M4A1-S | Atomic Alloy (Field-Tested)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Atomic%20Alloy%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    }
-  ],
-  "last_listing_error_count": 5,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 105,
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-01T04:47:13.447599+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-01T04:47:13.447599+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 696,
+  "last_enriched_rows": 696,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
-  "last_batch_start_pointer": 146,
-  "sent_alerts": {
-    "listing:642467210054968348": {
-      "sent_at_utc": "2026-04-30T15:53:03.596093+00:00",
-      "item": "P2000 | Wicked Sick (Field-Tested)",
-      "listing_id": "642467210054968348",
-      "spread_hybrid_disc": 0.0762984194329807
-    },
-    "listing:645844275580310145": {
-      "sent_at_utc": "2026-04-30T15:54:27.781668+00:00",
-      "item": "PP-Bizon | Brass (Factory New)",
-      "listing_id": "645844275580310145",
-      "spread_hybrid_disc": 0.0037725685433022
-    },
-    "listing:498353293066870231": {
-      "sent_at_utc": "2026-04-30T15:55:11.873232+00:00",
-      "item": "MAC-10 | Pipsqueak (Factory New)",
-      "listing_id": "498353293066870231",
-      "spread_hybrid_disc": -0.0216850005001849
-    },
-    "listing:491597893777094738": {
-      "sent_at_utc": "2026-04-30T15:59:02.370591+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "491597893777094738",
-      "spread_hybrid_disc": 0.1173173718747211
-    },
-    "listing:652601015927222508": {
-      "sent_at_utc": "2026-04-30T16:00:01.581031+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "652601015927222508",
-      "spread_hybrid_disc": 0.0895691367950528
-    },
-    "listing:515241791633157649": {
-      "sent_at_utc": "2026-04-30T16:01:30.049395+00:00",
-      "item": "Glock-18 | Shinobu (Battle-Scarred)",
-      "listing_id": "515241791633157649",
-      "spread_hybrid_disc": 0.0663549722905796
-    },
-    "listing:499479193104925189": {
-      "sent_at_utc": "2026-04-30T16:08:33.599582+00:00",
-      "item": "Desert Eagle | Mint Fan (Factory New)",
-      "listing_id": "499479193104925189",
-      "spread_hybrid_disc": 0.0549301868084441
-    },
-    "listing:525374890925360059": {
-      "sent_at_utc": "2026-04-30T16:14:27.755938+00:00",
-      "item": "AK-47 | Midnight Laminate (Battle-Scarred)",
-      "listing_id": "525374890925360059",
-      "spread_hybrid_disc": 0.1123585519460479
-    },
-    "listing:519745391315232920": {
-      "sent_at_utc": "2026-04-30T16:14:30.964442+00:00",
-      "item": "AK-47 | Midnight Laminate (Battle-Scarred)",
-      "listing_id": "519745391315232920",
-      "spread_hybrid_disc": 0.1155740833435227
-    },
-    "listing:518619491410435924": {
-      "sent_at_utc": "2026-04-30T16:14:34.253743+00:00",
-      "item": "AK-47 | Midnight Laminate (Battle-Scarred)",
-      "listing_id": "518619491410435924",
-      "spread_hybrid_disc": 0.1161073557028996
-    },
-    "listing:520871291127396276": {
-      "sent_at_utc": "2026-04-30T16:18:30.922375+00:00",
-      "item": "SSG 08 | Turbo Peek (Field-Tested)",
-      "listing_id": "520871291127396276",
-      "spread_hybrid_disc": 0.1135824098645068
-    },
-    "listing:650349216050752953": {
-      "sent_at_utc": "2026-04-30T16:22:45.494109+00:00",
-      "item": "Glock-18 | Nuclear Garden (Factory New)",
-      "listing_id": "650349216050752953",
-      "spread_hybrid_disc": 0.0246003782633512
-    },
-    "listing:512989991894167595": {
-      "sent_at_utc": "2026-04-30T16:46:20.950240+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "512989991894167595",
-      "spread_hybrid_disc": 0.1198026452335727
-    },
-    "listing:512989991894348567": {
-      "sent_at_utc": "2026-04-30T17:29:42.487963+00:00",
-      "item": "MAC-10 | Pipsqueak (Factory New)",
-      "listing_id": "512989991894348567",
-      "spread_hybrid_disc": 0.0499505351276168
-    },
-    "listing:509612292213533427": {
-      "sent_at_utc": "2026-04-30T18:21:44.639969+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "509612292213533427",
-      "spread_hybrid_disc": 0.1089235300681528
-    },
-    "listing:503982792715470079": {
-      "sent_at_utc": "2026-04-30T18:22:46.289188+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "503982792715470079",
-      "spread_hybrid_disc": 0.0347446819726698
-    },
-    "listing:528752590496301261": {
-      "sent_at_utc": "2026-04-30T18:31:26.099252+00:00",
-      "item": "AK-47 | Slate (Factory New)",
-      "listing_id": "528752590496301261",
-      "spread_hybrid_disc": 0.1144212393787139
-    },
-    "listing:498353293067859655": {
-      "sent_at_utc": "2026-04-30T19:10:32.658580+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "498353293067859655",
-      "spread_hybrid_disc": 0.0976123512467961
-    },
-    "listing:515241791634671341": {
-      "sent_at_utc": "2026-04-30T19:50:59.763170+00:00",
-      "item": "Five-SeveN | Monkey Business (Field-Tested)",
-      "listing_id": "515241791634671341",
-      "spread_hybrid_disc": 0.103226495531025
-    },
-    "listing:500605092731057735": {
-      "sent_at_utc": "2026-04-30T19:53:40.869355+00:00",
-      "item": "Nova | Wurst Hölle (Factory New)",
-      "listing_id": "500605092731057735",
-      "spread_hybrid_disc": 0.0741960310968515
-    },
-    "listing:500605092731060543": {
-      "sent_at_utc": "2026-04-30T19:53:44.098684+00:00",
-      "item": "Nova | Wurst Hölle (Factory New)",
-      "listing_id": "500605092731060543",
-      "spread_hybrid_disc": 0.0984091281165066
-    },
-    "listing:529878490348072152": {
-      "sent_at_utc": "2026-04-30T20:03:18.629411+00:00",
-      "item": "Desert Eagle | Mint Fan (Factory New)",
-      "listing_id": "529878490348072152",
-      "spread_hybrid_disc": 0.0678856536097701
-    },
-    "listing:510738192157408954": {
-      "sent_at_utc": "2026-04-30T20:04:26.298862+00:00",
-      "item": "M4A4 | Hellish (Battle-Scarred)",
-      "listing_id": "510738192157408954",
-      "spread_hybrid_disc": 0.0724445589652286
-    },
-    "listing:505108692490848188": {
-      "sent_at_utc": "2026-04-30T20:14:00.831785+00:00",
-      "item": "M4A4 | Poly Mag (Factory New)",
-      "listing_id": "505108692490848188",
-      "spread_hybrid_disc": 0.087116786652496
-    },
-    "listing:506234592341696520": {
-      "sent_at_utc": "2026-04-30T20:21:50.439165+00:00",
-      "item": "Desert Eagle | Mulberry (Field-Tested)",
-      "listing_id": "506234592341696520",
-      "spread_hybrid_disc": 0.1196505944114845
-    }
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
   },
-  "last_alert_sent_at_utc": "2026-04-30T20:21:50.439234+00:00"
+  "last_batch_start_pointer": 20
 }
