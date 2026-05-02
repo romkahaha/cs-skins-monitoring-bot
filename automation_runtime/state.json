@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 75,
-  "last_run_at_utc": "2026-05-02T05:47:54.808745+00:00",
+  "batch_pointer": 100,
+  "last_run_at_utc": "2026-05-02T05:53:38.893493+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Sawed-Off | Devourer (Field-Tested)",
-    "Galil AR | Firefight (Factory New)",
-    "AK-47 | Asiimov (Field-Tested)",
-    "P2000 | Ivory (Factory New)",
-    "AUG | Syd Mead (Minimal Wear)"
+    "Dual Berettas | Royal Consorts (Field-Tested)",
+    "Tec-9 | Fuel Injector (Field-Tested)",
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "P2000 | Wicked Sick (Battle-Scarred)",
+    "Five-SeveN | Boost Protocol (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T05:48:20.282668+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T05:48:20.282668+00:00",
+  "last_finished_at_utc": "2026-05-02T05:54:44.631720+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T05:54:44.631720+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 503,
-  "last_enriched_rows": 503,
+  "last_listing_rows": 833,
+  "last_enriched_rows": 833,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,14 +29,20 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 70,
+  "last_batch_start_pointer": 95,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
       "item": "AWP | Black Nile (Factory New)",
       "listing_id": "623326277440672160",
       "spread_hybrid_disc": 0.0698440535350241
+    },
+    "listing:512989991900870975": {
+      "sent_at_utc": "2026-05-02T05:52:14.901815+00:00",
+      "item": "Five-SeveN | Capillary (Factory New)",
+      "listing_id": "512989991900870975",
+      "spread_hybrid_disc": 0.0817722382752932
     }
   },
-  "last_alert_sent_at_utc": "2026-05-02T05:41:39.448803+00:00"
+  "last_alert_sent_at_utc": "2026-05-02T05:52:14.901879+00:00"
 }
