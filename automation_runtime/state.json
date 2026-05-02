@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 79,
-  "last_run_at_utc": "2026-05-02T09:17:15.653091+00:00",
+  "batch_pointer": 104,
+  "last_run_at_utc": "2026-05-02T09:22:57.167046+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AUG | Syd Mead (Minimal Wear)",
-    "M4A4 | Choppa (Factory New)",
-    "AWP | Mortis (Minimal Wear)",
-    "MP7 | Abyssal Apparition (Minimal Wear)",
-    "Galil AR | Chromatic Aberration (Factory New)"
+    "Five-SeveN | Boost Protocol (Factory New)",
+    "Desert Eagle | Night (Minimal Wear)",
+    "P250 | Cartel (Field-Tested)",
+    "P90 | Elite Build (Factory New)",
+    "USP-S | Cortex (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T09:18:13.268343+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T09:18:13.268343+00:00",
+  "last_finished_at_utc": "2026-05-02T09:23:55.460699+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T09:23:55.460699+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 720,
-  "last_enriched_rows": 720,
+  "last_listing_rows": 548,
+  "last_enriched_rows": 548,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 74,
+  "last_batch_start_pointer": 99,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
