@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 176,
-  "last_run_at_utc": "2026-05-02T07:01:23.098755+00:00",
+  "batch_pointer": 201,
+  "last_run_at_utc": "2026-05-02T07:06:23.932844+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Neon Rider (Field-Tested)",
-    "MP9 | Arctic Tri-Tone (Factory New)",
-    "AWP | PAW (Factory New)",
-    "Glock-18 | Water Elemental (Minimal Wear)",
-    "AK-47 | Wintergreen (Minimal Wear)"
+    "Glock-18 | Glockingbird (Factory New)",
+    "AK-47 | Cartel (Minimal Wear)",
+    "AK-47 | Emerald Pinstripe (Battle-Scarred)",
+    "UMP-45 | K.O. Factory (Battle-Scarred)",
+    "AK-47 | Elite Build (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T07:02:08.138874+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T07:02:08.138874+00:00",
+  "last_finished_at_utc": "2026-05-02T07:07:30.546943+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T07:07:30.546943+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 918,
-  "last_enriched_rows": 918,
+  "last_listing_rows": 898,
+  "last_enriched_rows": 898,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 171,
+  "last_batch_start_pointer": 196,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
