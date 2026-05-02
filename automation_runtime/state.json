@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 75,
-  "last_run_at_utc": "2026-05-02T10:11:48.029611+00:00",
+  "batch_pointer": 100,
+  "last_run_at_utc": "2026-05-02T10:16:14.115890+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Sawed-Off | Devourer (Field-Tested)",
-    "Galil AR | Firefight (Factory New)",
-    "AK-47 | Asiimov (Field-Tested)",
-    "P2000 | Ivory (Factory New)",
-    "AUG | Syd Mead (Minimal Wear)"
+    "Dual Berettas | Royal Consorts (Field-Tested)",
+    "Tec-9 | Fuel Injector (Field-Tested)",
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "P2000 | Wicked Sick (Battle-Scarred)",
+    "Five-SeveN | Boost Protocol (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T10:12:14.780657+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T10:12:14.780657+00:00",
+  "last_finished_at_utc": "2026-05-02T10:17:01.994531+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T10:17:01.994531+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 502,
-  "last_enriched_rows": 502,
+  "last_listing_rows": 838,
+  "last_enriched_rows": 838,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 70,
+  "last_batch_start_pointer": 95,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
