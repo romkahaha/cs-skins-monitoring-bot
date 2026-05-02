@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 129,
-  "last_run_at_utc": "2026-05-02T09:28:38.701847+00:00",
+  "batch_pointer": 154,
+  "last_run_at_utc": "2026-05-02T09:33:41.468543+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Desert Eagle | Printstream (Field-Tested)",
-    "AK-47 | Slate (Minimal Wear)",
-    "AWP | Ice Coaled (Battle-Scarred)",
-    "AK-47 | Ice Coaled (Battle-Scarred)",
-    "AWP | Duality (Battle-Scarred)"
+    "Glock-18 | Water Elemental (Factory New)",
+    "USP-S | Printstream (Minimal Wear)",
+    "M4A1-S | Glitched Paint (Factory New)",
+    "AWP | Atheris (Battle-Scarred)",
+    "SSG 08 | Rapid Transit (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T09:29:50.638686+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T09:29:50.638686+00:00",
+  "last_finished_at_utc": "2026-05-02T09:34:45.523306+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T09:34:45.523306+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 999,
-  "last_enriched_rows": 999,
+  "last_listing_rows": 735,
+  "last_enriched_rows": 735,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 124,
+  "last_batch_start_pointer": 149,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
@@ -60,7 +60,13 @@
       "item": "P2000 | Wicked Sick (Field-Tested)",
       "listing_id": "502856892571510216",
       "spread_hybrid_disc": 0.0828321014442502
+    },
+    "listing:516367691472151994": {
+      "sent_at_utc": "2026-05-02T09:33:40.246307+00:00",
+      "item": "SSG 08 | Big Iron (Field-Tested)",
+      "listing_id": "516367691472151994",
+      "spread_hybrid_disc": 0.0787469149269149
     }
   },
-  "last_alert_sent_at_utc": "2026-05-02T09:10:51.224315+00:00"
+  "last_alert_sent_at_utc": "2026-05-02T09:33:40.246374+00:00"
 }
