@@ -2,34 +2,79 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 176,
-  "last_run_at_utc": "2026-05-02T15:49:52.492948+00:00",
-  "last_status": "ok",
+  "batch_pointer": 186,
+  "last_run_at_utc": "2026-05-02T15:52:59.777817+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AK-47 | Neon Rider (Field-Tested)",
-    "MP9 | Arctic Tri-Tone (Factory New)",
-    "AWP | PAW (Factory New)",
-    "Glock-18 | Water Elemental (Minimal Wear)",
-    "AK-47 | Wintergreen (Minimal Wear)"
+    "Glock-18 | Glockingbird (Minimal Wear)",
+    "M4A4 | Evil Daimyo (Field-Tested)",
+    "Glock-18 | Nuclear Garden (Minimal Wear)",
+    "UMP-45 | Wild Child (Minimal Wear)",
+    "Negev | Lionfish (Factory New)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-02T15:50:41.057680+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T15:50:41.057680+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-02T10:41:46.784041+00:00",
-  "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 919,
-  "last_enriched_rows": 919,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: Glock-18 | Glockingbird (Minimal Wear), M4A4 | Evil Daimyo (Field-Tested), Glock-18 | Nuclear Garden (Minimal Wear))",
+  "last_finished_at_utc": "2026-05-02T15:54:37.817945+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T15:52:59.354008+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-02T15:54:37.817945+00:00",
+  "consecutive_errors": 1,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "Glock-18 | Glockingbird (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Glockingbird%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "M4A4 | Evil Daimyo (Field-Tested)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Evil%20Daimyo%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "Glock-18 | Nuclear Garden (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Nuclear%20Garden%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "UMP-45 | Wild Child (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/UMP-45%20%7C%20Wild%20Child%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "Negev | Lionfish (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Negev%20%7C%20Lionfish%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 141,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 171,
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 186,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
