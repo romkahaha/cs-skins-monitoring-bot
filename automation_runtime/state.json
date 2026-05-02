@@ -2,34 +2,34 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 2,
-  "last_run_at_utc": "2026-05-02T07:11:32.633780+00:00",
+  "batch_pointer": 27,
+  "last_run_at_utc": "2026-05-02T07:24:22.277259+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "FAMAS | Eye of Athena (Minimal Wear)",
-    "AK-47 | Cartel (Battle-Scarred)",
-    "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "P90 | Ancient Earth (Factory New)",
-    "Dual Berettas | Switch Board (Factory New)"
+    "Glock-18 | Catacombs (Factory New)",
+    "M4A1-S | Mud-Spec (Factory New)",
+    "AWP | Duality (Field-Tested)",
+    "AWP | Black Nile (Factory New)",
+    "UMP-45 | Primal Saber (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T07:11:58.343025+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T07:11:58.343025+00:00",
+  "last_finished_at_utc": "2026-05-02T07:25:11.869594+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T07:25:11.869594+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 386,
-  "last_enriched_rows": 386,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 787,
+  "last_enriched_rows": 787,
+  "last_opportunities_rows": 2,
   "last_alert_stats": {
-    "loaded": 0,
+    "loaded": 2,
     "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "considered": 2,
+    "sent": 1,
+    "skipped": 1
   },
-  "last_batch_start_pointer": 226,
+  "last_batch_start_pointer": 22,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
@@ -42,7 +42,13 @@
       "item": "Five-SeveN | Capillary (Factory New)",
       "listing_id": "512989991900870975",
       "spread_hybrid_disc": 0.0817722382752932
+    },
+    "listing:510738192164118886": {
+      "sent_at_utc": "2026-05-02T07:25:11.268395+00:00",
+      "item": "M4A1-S | Mud-Spec (Factory New)",
+      "listing_id": "510738192164118886",
+      "spread_hybrid_disc": -0.0873536936310805
     }
   },
-  "last_alert_sent_at_utc": "2026-05-02T05:52:14.901879+00:00"
+  "last_alert_sent_at_utc": "2026-05-02T07:25:11.268465+00:00"
 }
