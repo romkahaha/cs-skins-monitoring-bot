@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "27e39df3dd15de16dda060d812f02dc7b3f45b36852d2e000bf25da540cc06e4",
   "items_count": 229,
-  "batch_pointer": 103,
-  "last_run_at_utc": "2026-05-02T08:29:43.275688+00:00",
+  "batch_pointer": 128,
+  "last_run_at_utc": "2026-05-02T08:36:14.019869+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "P2000 | Wicked Sick (Battle-Scarred)",
-    "Five-SeveN | Boost Protocol (Factory New)",
-    "Desert Eagle | Night (Minimal Wear)",
-    "P250 | Cartel (Field-Tested)",
-    "P90 | Elite Build (Factory New)"
+    "M4A1-S | Solitude (Factory New)",
+    "Desert Eagle | Printstream (Field-Tested)",
+    "AK-47 | Slate (Minimal Wear)",
+    "AWP | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Ice Coaled (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-02T08:30:38.776577+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-02T08:30:38.776577+00:00",
+  "last_finished_at_utc": "2026-05-02T08:37:23.741737+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-02T08:37:23.741737+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 539,
-  "last_enriched_rows": 539,
+  "last_listing_rows": 999,
+  "last_enriched_rows": 999,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 98,
+  "last_batch_start_pointer": 123,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-02T05:41:39.448736+00:00",
@@ -48,7 +48,13 @@
       "item": "M4A1-S | Mud-Spec (Factory New)",
       "listing_id": "510738192164118886",
       "spread_hybrid_disc": -0.0873536936310805
+    },
+    "listing:491597893784895254": {
+      "sent_at_utc": "2026-05-02T08:36:12.813383+00:00",
+      "item": "MP9 | Airlock (Field-Tested)",
+      "listing_id": "491597893784895254",
+      "spread_hybrid_disc": 0.0917633773337687
     }
   },
-  "last_alert_sent_at_utc": "2026-05-02T07:25:11.268465+00:00"
+  "last_alert_sent_at_utc": "2026-05-02T08:36:12.813450+00:00"
 }
