@@ -1,0 +1,74 @@
+name: CSFloat smoke
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/csfloat-smoke.yml
+
+permissions:
+  contents: read
+
+jobs:
+  csfloat-smoke:
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
+      CSFLOAT_API_KEY_2: ${{ secrets.CSFLOAT_API_KEY_2 }}
+
+    steps:
+      - name: Check CSFloat secrets and API
+        shell: python
+        run: |
+          import os
+          import sys
+          import urllib.parse
+          import urllib.request
+
+          url = "https://csfloat.com/api/v1/listings?" + urllib.parse.urlencode(
+              {
+                  "market_hash_name": "AK-47 | Redline (Field-Tested)",
+                  "sort_by": "lowest_price",
+                  "limit": "1",
+                  "type": "buy_now",
+              }
+          )
+
+          failed = False
+          for name in ("CSFLOAT_API_KEY", "CSFLOAT_API_KEY_2"):
+              key = os.environ.get(name, "").strip()
+              if not key:
+                  print(f"{name}: missing")
+                  failed = True
+                  continue
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "User-Agent": "Mozilla/5.0",
+                      "Authorization": key,
+                  },
+              )
+              try:
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      status = response.status
+                      body = response.read(200).decode("utf-8", errors="replace")
+              except urllib.error.HTTPError as exc:
+                  status = exc.code
+                  body = exc.read(200).decode("utf-8", errors="replace")
+              except Exception as exc:
+                  print(f"{name}: request failed: {type(exc).__name__}")
+                  failed = True
+                  continue
+
+              ok = status == 200
+              print(f"{name}: http {status} ({'ok' if ok else 'failed'})")
+              if not ok:
+                  print(f"{name}: body head: {body}")
+                  failed = True
+
+          if failed:
+              sys.exit(1)
