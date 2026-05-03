@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
   "items_count": 244,
-  "batch_pointer": 25,
-  "last_run_at_utc": "2026-05-03T02:40:06.784664+00:00",
+  "batch_pointer": 50,
+  "last_run_at_utc": "2026-05-03T02:44:46.703854+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Glock-18 | Night (Minimal Wear)",
-    "MP7 | Akoben (Factory New)",
-    "Glock-18 | Catacombs (Factory New)",
-    "AK-47 | Nightwish (Battle-Scarred)",
-    "M4A1-S | Mud-Spec (Factory New)"
+    "M4A4 | Neo-Noir (Field-Tested)",
+    "Dual Berettas | Hemoglobin (Factory New)",
+    "M4A4 | Converter (Factory New)",
+    "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+    "AWP | Asiimov (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-03T02:40:58.628915+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T02:40:58.628915+00:00",
+  "last_finished_at_utc": "2026-05-03T02:45:51.220707+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-03T02:45:51.220707+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 699,
-  "last_enriched_rows": 699,
+  "last_listing_rows": 818,
+  "last_enriched_rows": 818,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,5 +29,14 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 20
+  "last_batch_start_pointer": 45,
+  "sent_alerts": {
+    "listing:623326277440672160": {
+      "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
+      "item": "AWP | Black Nile (Factory New)",
+      "listing_id": "623326277440672160",
+      "spread_hybrid_disc": 0.0592122180722237
+    }
+  },
+  "last_alert_sent_at_utc": "2026-05-03T02:41:48.211415+00:00"
 }
