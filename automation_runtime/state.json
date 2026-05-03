@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
   "items_count": 244,
-  "batch_pointer": 229,
-  "last_run_at_utc": "2026-05-03T06:47:18.445627+00:00",
+  "batch_pointer": 0,
+  "last_run_at_utc": "2026-05-03T06:49:45.756427+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A1-S | Blood Tiger (Minimal Wear)",
-    "MP7 | Fade (Minimal Wear)",
-    "AWP | Neo-Noir (Factory New)",
-    "AWP | Worm God (Factory New)",
-    "USP-S | Monster Mashup (Field-Tested)"
+    "AWP | Sun in Leo (Field-Tested)",
+    "FAMAS | Eye of Athena (Minimal Wear)",
+    "AK-47 | Cartel (Battle-Scarred)",
+    "AWP | The End (Minimal Wear)",
+    "Galil AR | Chromatic Aberration (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-03T06:47:56.819473+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T06:47:56.819473+00:00",
+  "last_finished_at_utc": "2026-05-03T06:50:21.724114+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-03T06:50:21.724114+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 844,
-  "last_enriched_rows": 844,
+  "last_listing_rows": 478,
+  "last_enriched_rows": 478,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 224,
+  "last_batch_start_pointer": 239,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
