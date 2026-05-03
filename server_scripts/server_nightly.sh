@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/server_common.sh"
 
 start_log "nightly"
-acquire_lock "cs-skins-nightly"
+acquire_lock "cs-skins-main-pipeline"
 load_secrets
 require_env STEAM_COOKIES CSFLOAT_API_KEY
 enter_repo

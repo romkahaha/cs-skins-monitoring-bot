@@ -7,7 +7,7 @@ source "$SCRIPT_DIR/server_common.sh"
 MONITORING_MAX_RUNTIME_MINUTES="${MONITORING_MAX_RUNTIME_MINUTES:-895}"
 
 start_log "monitoring_day"
-acquire_lock "cs-skins-monitoring-day"
+acquire_lock "cs-skins-main-pipeline"
 load_secrets
 require_env STEAM_COOKIES TELEGRAM_BOT_TOKEN TELEGRAM_CHAT_ID
 enter_repo
