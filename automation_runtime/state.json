@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
   "items_count": 244,
-  "batch_pointer": 127,
-  "last_run_at_utc": "2026-05-03T04:44:54.986622+00:00",
+  "batch_pointer": 152,
+  "last_run_at_utc": "2026-05-03T04:50:16.132107+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "MP9 | Airlock (Field-Tested)",
-    "USP-S | Jawbreaker (Battle-Scarred)",
-    "M4A1-S | Solitude (Factory New)",
-    "Desert Eagle | Printstream (Field-Tested)",
-    "P90 | Nostalgia (Minimal Wear)"
+    "USP-S | Cortex (Field-Tested)",
+    "Glock-18 | Shinobu (Minimal Wear)",
+    "Glock-18 | Vogue (Minimal Wear)",
+    "M4A1-S | Black Lotus (Factory New)",
+    "AWP | Black Nile (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-03T04:45:47.751679+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T04:45:47.751679+00:00",
+  "last_finished_at_utc": "2026-05-03T04:51:28.527913+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-03T04:51:28.527913+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 712,
-  "last_enriched_rows": 712,
+  "last_listing_rows": 999,
+  "last_enriched_rows": 999,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 122,
+  "last_batch_start_pointer": 147,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
