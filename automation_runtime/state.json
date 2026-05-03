@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
   "items_count": 244,
-  "batch_pointer": 153,
-  "last_run_at_utc": "2026-05-03T05:41:59.019706+00:00",
+  "batch_pointer": 178,
+  "last_run_at_utc": "2026-05-03T05:46:06.970991+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Glock-18 | Shinobu (Minimal Wear)",
-    "Glock-18 | Vogue (Minimal Wear)",
-    "M4A1-S | Black Lotus (Factory New)",
-    "AWP | Black Nile (Minimal Wear)",
-    "Sawed-Off | Kiss♥Love (Battle-Scarred)"
+    "AWP | Mortis (Factory New)",
+    "Sawed-Off | Kiss♥Love (Field-Tested)",
+    "AK-47 | Frontside Misty (Field-Tested)",
+    "Desert Eagle | Conspiracy (Factory New)",
+    "AK-47 | Blue Laminate (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-03T05:42:39.757657+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T05:42:39.757657+00:00",
+  "last_finished_at_utc": "2026-05-03T05:46:50.083353+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-03T05:46:50.083353+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 1000,
-  "last_enriched_rows": 1000,
+  "last_listing_rows": 978,
+  "last_enriched_rows": 978,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 148,
+  "last_batch_start_pointer": 173,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
