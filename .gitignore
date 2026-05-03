@@ -1,6 +1,7 @@
 local_secrets.py
 local_steam_cookies.py
 .env
+.venv/
 automation/CODEX_CONTEXT.md
 automation/CHAT_CONTEXT.md
 workflow_name_map.local.md

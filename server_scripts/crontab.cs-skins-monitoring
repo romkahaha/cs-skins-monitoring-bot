@@ -1,0 +1,15 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+CRON_TZ=Europe/Berlin
+
+# CS skins monitoring bot server schedule.
+# Logs: /home/roma/cs-arbitrage/logs/cs-skins-monitoring-bot/
+
+# Check Steam cookies hourly.
+7 * * * * /home/roma/cs-arbitrage/cs-skins-monitoring-bot/server_scripts/server_check_steam_cookies.sh
+
+# Rebuild nightly data at 23:00 Berlin time.
+0 23 * * * /home/roma/cs-arbitrage/cs-skins-monitoring-bot/server_scripts/server_nightly.sh
+
+# Run daytime monitoring from 08:00 until roughly 22:55 Berlin time.
+0 8 * * * /home/roma/cs-arbitrage/cs-skins-monitoring-bot/server_scripts/server_monitoring_day.sh
