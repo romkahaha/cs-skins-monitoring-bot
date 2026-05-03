@@ -13,8 +13,6 @@ on:
         required: false
         default: false
         type: boolean
-  schedule:
-    - cron: "7 * * * *"
 
 permissions:
   contents: read
@@ -57,4 +55,3 @@ jobs:
           fi
 
           python -B automation/health/check_steam_cookies.py "${args[@]}"
-
