@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "checked_at_utc": "2026-05-03T23:10:26Z",
+  "github_run_id": "25293523655",
+  "github_sha": "37335e702c623bd4e918b062d6d3091191079f8c",
+  "checks": [
+    {
+      "name": "CSFLOAT_API_KEY",
+      "set": true,
+      "status_code": 200,
+      "ok": true,
+      "body_head": "{\"data\":[{\"id\":\"971081518321632500\",\"created_at\":\"2026-05-03T16:11:15.791026Z\",\"type\":\"buy_now\",\"price\":3098,\"state\":\"listed\",\"seller\":{\"away\":false,\"flags\":48,\"obfuscated_id\":\"10009575079985222965\",\""
+    },
+    {
+      "name": "CSFLOAT_API_KEY_2",
+      "set": true,
+      "status_code": 200,
+      "ok": true,
+      "body_head": "{\"data\":[{\"id\":\"971081518321632500\",\"created_at\":\"2026-05-03T16:11:15.791026Z\",\"type\":\"buy_now\",\"price\":3098,\"state\":\"listed\",\"seller\":{\"away\":false,\"flags\":48,\"obfuscated_id\":\"10009575079985222965\",\""
+    }
+  ]
+}
