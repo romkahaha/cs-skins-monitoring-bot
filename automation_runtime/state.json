@@ -2,34 +2,79 @@
   "version": 1,
   "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
   "items_count": 244,
-  "batch_pointer": 125,
-  "last_run_at_utc": "2026-05-03T07:23:36.796542+00:00",
-  "last_status": "ok",
+  "batch_pointer": 135,
+  "last_run_at_utc": "2026-05-03T07:27:25.558588+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AWP | Printstream (Well-Worn)",
-    "M4A4 | Tooth Fairy (Field-Tested)",
-    "MP9 | Airlock (Field-Tested)",
-    "USP-S | Jawbreaker (Battle-Scarred)",
-    "M4A1-S | Solitude (Factory New)"
+    "Glock-18 | Blue Fissure (Minimal Wear)",
+    "Glock-18 | Gold Toof (Minimal Wear)",
+    "AK-47 | Slate (Battle-Scarred)",
+    "USP-S | Cortex (Well-Worn)",
+    "R8 Revolver | Grip (Factory New)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-03T07:24:41.064767+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T07:24:41.064767+00:00",
-  "last_failed_monitoring_at_utc": null,
-  "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 764,
-  "last_enriched_rows": 764,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: Glock-18 | Blue Fissure (Minimal Wear), Glock-18 | Gold Toof (Minimal Wear), AK-47 | Slate (Battle-Scarred))",
+  "last_finished_at_utc": "2026-05-03T07:28:58.350701+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-03T07:27:25.021988+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-03T07:28:58.350701+00:00",
+  "consecutive_errors": 1,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "Glock-18 | Blue Fissure (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Blue%20Fissure%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "Glock-18 | Gold Toof (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Gold%20Toof%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Slate (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Slate%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "USP-S | Cortex (Well-Worn)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Well-Worn%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    },
+    {
+      "market_hash_name": "R8 Revolver | Grip (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/R8%20Revolver%20%7C%20Grip%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "pages_fetched": 0,
+        "listings_target_cap": 200
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 300,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 120,
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 135,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
