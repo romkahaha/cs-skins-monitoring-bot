@@ -9,7 +9,7 @@ on:
       - .github/workflows/csfloat-smoke.yml
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   csfloat-smoke:
@@ -21,14 +21,21 @@ jobs:
       CSFLOAT_API_KEY_2: ${{ secrets.CSFLOAT_API_KEY_2 }}
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
       - name: Check CSFloat secrets and API
         shell: python
         run: |
+          import json
           import os
-          import sys
+          from datetime import datetime, timezone
+          from pathlib import Path
           import urllib.parse
           import urllib.request
 
+          out_path = Path("automation_runtime/csfloat_smoke_latest.json")
+          out_path.parent.mkdir(parents=True, exist_ok=True)
           url = "https://csfloat.com/api/v1/listings?" + urllib.parse.urlencode(
               {
                   "market_hash_name": "AK-47 | Redline (Field-Tested)",
@@ -39,10 +46,12 @@ jobs:
           )
 
           failed = False
+          checks = []
           for name in ("CSFLOAT_API_KEY", "CSFLOAT_API_KEY_2"):
               key = os.environ.get(name, "").strip()
               if not key:
                   print(f"{name}: missing")
+                  checks.append({"name": name, "set": False, "status_code": None, "ok": False, "body_head": "missing"})
                   failed = True
                   continue
               request = urllib.request.Request(
@@ -61,6 +70,7 @@ jobs:
                   body = exc.read(200).decode("utf-8", errors="replace")
               except Exception as exc:
                   print(f"{name}: request failed: {type(exc).__name__}")
+                  checks.append({"name": name, "set": True, "status_code": None, "ok": False, "body_head": type(exc).__name__})
                   failed = True
                   continue
 
@@ -69,6 +79,39 @@ jobs:
               if not ok:
                   print(f"{name}: body head: {body}")
                   failed = True
+              checks.append({"name": name, "set": True, "status_code": status, "ok": ok, "body_head": body[:200]})
 
-          if failed:
+          payload = {
+              "status": "failure" if failed else "success",
+              "checked_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+              "github_run_id": os.environ.get("GITHUB_RUN_ID", ""),
+              "github_sha": os.environ.get("GITHUB_SHA", ""),
+              "checks": checks,
+          }
+          out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+      - name: Commit smoke result
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation_runtime/csfloat_smoke_latest.json
+          if git diff --cached --quiet; then
+            echo "No smoke result changes to commit."
+            exit 0
+          fi
+          git commit -m "Update CSFloat smoke result [skip ci]"
+          git push
+
+      - name: Fail on smoke failure
+        shell: python
+        run: |
+          import json
+          import sys
+          from pathlib import Path
+
+          payload = json.loads(Path("automation_runtime/csfloat_smoke_latest.json").read_text(encoding="utf-8"))
+          if payload.get("status") != "success":
               sys.exit(1)
