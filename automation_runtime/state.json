@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
   "items_count": 244,
-  "batch_pointer": 75,
-  "last_run_at_utc": "2026-05-03T07:12:43.442422+00:00",
+  "batch_pointer": 100,
+  "last_run_at_utc": "2026-05-03T07:18:15.775087+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "P250 | Inferno (Factory New)",
-    "AWP | Duality (Minimal Wear)",
-    "Desert Eagle | Mulberry (Minimal Wear)",
-    "MP9 | Rose Iron (Factory New)",
-    "MP5-SD | Phosphor (Minimal Wear)"
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "P2000 | Wicked Sick (Battle-Scarred)",
+    "Five-SeveN | Boost Protocol (Factory New)",
+    "Desert Eagle | Night (Minimal Wear)",
+    "P250 | Cartel (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-03T07:13:22.725631+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T07:13:22.725631+00:00",
+  "last_finished_at_utc": "2026-05-03T07:19:37.402197+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-03T07:19:37.402197+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 663,
-  "last_enriched_rows": 663,
+  "last_listing_rows": 657,
+  "last_enriched_rows": 657,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,7 +29,7 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 70,
+  "last_batch_start_pointer": 95,
   "sent_alerts": {
     "listing:623326277440672160": {
       "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
