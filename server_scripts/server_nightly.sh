@@ -43,18 +43,20 @@ PY
 }
 
 remote_pipeline_status() {
-  git show "origin/main:$PIPELINE_STATUS_FILE" 2>/dev/null | "$PYTHON_BIN" - "$PIPELINE_RUN_ID" <<'PY'
+  local payload
+  payload="$(git show "origin/main:$PIPELINE_STATUS_FILE" 2>/dev/null || true)"
+  "$PYTHON_BIN" -c '
 import json
 import sys
 
 run_id = sys.argv[1]
 try:
-    payload = json.load(sys.stdin)
+    payload = json.loads(sys.stdin.read())
 except Exception:
     raise SystemExit(0)
 if payload.get("run_id") == run_id:
     print(payload.get("status", ""))
-PY
+' "$PIPELINE_RUN_ID" <<<"$payload"
 }
 
 checkpoint_local_monitoring_runtime() {
