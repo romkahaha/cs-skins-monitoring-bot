@@ -20,6 +20,11 @@ from automation.listing_enrichment import load_items_py
 from automation.risk_filters import repo_root_from
 from automation.state import load_state
 
+RECOVERABLE_BATCH_ERROR_PATTERNS = (
+    "all Steam listing fetches failed for this batch",
+    "Steam listings fetch returned 0 rows with",
+)
+
 
 def configure_stdio() -> None:
     for stream in (sys.stdout, sys.stderr):
@@ -145,6 +150,12 @@ def value_or_config(value, cfg: dict, key: str, default):
     return default if raw is None else raw
 
 
+def is_recoverable_batch_error(state: dict, cycle_cfg: dict) -> bool:
+    error = str(state.get("last_error") or "")
+    patterns = cycle_cfg.get("recoverable_batch_error_patterns", RECOVERABLE_BATCH_ERROR_PATTERNS)
+    return any(str(pattern) and str(pattern) in error for pattern in patterns)
+
+
 def main() -> int:
     configure_stdio()
     args = parse_args()
@@ -171,6 +182,7 @@ def main() -> int:
     max_cycles = value_or_config(args.max_cycles, cycle_cfg, "max_cycles_per_run", None)
     max_batches = None if max_batches is None else int(max_batches)
     max_cycles = None if max_cycles is None else int(max_cycles)
+    recoverable_error_sleep_sec = float(value_or_config(args.cycle_sleep_sec, cycle_cfg, "recoverable_error_sleep_sec", cycle_sleep_sec))
     commit_enabled = bool(cycle_cfg.get("commit_runtime", True)) and not args.no_git
     respect_active_window = bool(cycle_cfg.get("respect_active_window", True)) and not args.ignore_schedule
     checkpoint_message = str(cycle_cfg.get("checkpoint_message", "Update monitoring runtime [skip ci]"))
@@ -247,6 +259,17 @@ def main() -> int:
         batches_since_commit += 1
 
         if result.returncode != 0:
+            if is_recoverable_batch_error(after, cycle_cfg):
+                print(
+                    "recoverable batch failure; "
+                    f"sleeping {recoverable_error_sleep_sec:.1f}s before retry: {after.get('last_error')}",
+                    file=sys.stderr,
+                )
+                if commit_enabled and batches_since_commit > 0:
+                    commit_runtime(root, checkpoint_message)
+                    batches_since_commit = 0
+                time.sleep(max(0.0, recoverable_error_sleep_sec))
+                continue
             print(f"batch failed with exit {result.returncode}", file=sys.stderr)
             if commit_enabled:
                 commit_runtime(root, checkpoint_message)
