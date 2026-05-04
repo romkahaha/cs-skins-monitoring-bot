@@ -133,7 +133,7 @@
   },
   "base_snapshot": {
     "enabled": true,
-    "delay_min_sec": 10.0,
+    "delay_min_sec": 15.0,
     "delay_max_sec": 20.0,
     "rate_limit_pause_sec": 900.0,
     "rate_limit_stair_step_sec": 60.0,
