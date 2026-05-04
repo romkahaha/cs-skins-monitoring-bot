@@ -1,69 +1,69 @@
 {
   "version": 1,
-  "items_signature": "c01fc07a45cc1b782fc8b479809ed042a24642e7edea2567d2d3f44585b0d692",
-  "items_count": 244,
-  "batch_pointer": 135,
-  "last_run_at_utc": "2026-05-03T07:27:25.558588+00:00",
+  "items_signature": "ca99e11baa89fac9f32fce85f48aa4c2c70a9a5a6dd66baf7a58071f87e9256b",
+  "items_count": 228,
+  "batch_pointer": 206,
+  "last_run_at_utc": "2026-05-04T19:25:43.911449+00:00",
   "last_status": "error",
   "last_batch_items": [
-    "Glock-18 | Blue Fissure (Minimal Wear)",
-    "Glock-18 | Gold Toof (Minimal Wear)",
-    "AK-47 | Slate (Battle-Scarred)",
-    "USP-S | Cortex (Well-Worn)",
-    "R8 Revolver | Grip (Factory New)"
+    "M4A4 | Desolate Space (Battle-Scarred)",
+    "Five-SeveN | Heat Treated (Battle-Scarred)",
+    "Desert Eagle | Printstream (Factory New)",
+    "Galil AR | Rainbow Spoon (Minimal Wear)",
+    "P2000 | Imperial Dragon (Minimal Wear)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: Glock-18 | Blue Fissure (Minimal Wear), Glock-18 | Gold Toof (Minimal Wear), AK-47 | Slate (Battle-Scarred))",
-  "last_finished_at_utc": "2026-05-03T07:28:58.350701+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-03T07:27:25.021988+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-03T07:28:58.350701+00:00",
-  "consecutive_errors": 1,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: M4A4 | Desolate Space (Battle-Scarred), Five-SeveN | Heat Treated (Battle-Scarred), Desert Eagle | Printstream (Factory New))",
+  "last_finished_at_utc": "2026-05-04T19:27:26.865913+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-04T16:22:18.633786+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-04T19:27:26.865913+00:00",
+  "consecutive_errors": 3,
   "last_listing_errors": [
     {
-      "market_hash_name": "Glock-18 | Blue Fissure (Minimal Wear)",
+      "market_hash_name": "M4A4 | Desolate Space (Battle-Scarred)",
       "meta": {
         "total_count": null,
         "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Blue%20Fissure%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Desolate%20Space%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
         "pages_fetched": 0,
         "listings_target_cap": 200
       }
     },
     {
-      "market_hash_name": "Glock-18 | Gold Toof (Minimal Wear)",
+      "market_hash_name": "Five-SeveN | Heat Treated (Battle-Scarred)",
       "meta": {
         "total_count": null,
         "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Gold%20Toof%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Five-SeveN%20%7C%20Heat%20Treated%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
         "pages_fetched": 0,
         "listings_target_cap": 200
       }
     },
     {
-      "market_hash_name": "AK-47 | Slate (Battle-Scarred)",
+      "market_hash_name": "Desert Eagle | Printstream (Factory New)",
       "meta": {
         "total_count": null,
         "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Slate%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Printstream%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
         "pages_fetched": 0,
         "listings_target_cap": 200
       }
     },
     {
-      "market_hash_name": "USP-S | Cortex (Well-Worn)",
+      "market_hash_name": "Galil AR | Rainbow Spoon (Minimal Wear)",
       "meta": {
         "total_count": null,
         "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Well-Worn%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Galil%20AR%20%7C%20Rainbow%20Spoon%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
         "pages_fetched": 0,
         "listings_target_cap": 200
       }
     },
     {
-      "market_hash_name": "R8 Revolver | Grip (Factory New)",
+      "market_hash_name": "P2000 | Imperial Dragon (Minimal Wear)",
       "meta": {
         "total_count": null,
         "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/R8%20Revolver%20%7C%20Grip%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P2000%20%7C%20Imperial%20Dragon%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
         "pages_fetched": 0,
         "listings_target_cap": 200
       }
@@ -71,29 +71,41 @@
   ],
   "last_listing_error_count": 5,
   "last_listing_rows": 0,
-  "last_enriched_rows": 300,
+  "last_enriched_rows": 100,
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
-  "last_batch_start_pointer": 135,
+  "last_batch_start_pointer": 206,
   "sent_alerts": {
     "listing:623326277440672160": {
-      "sent_at_utc": "2026-05-03T02:41:48.211351+00:00",
+      "sent_at_utc": "2026-05-04T06:06:29.124478+00:00",
       "item": "AWP | Black Nile (Factory New)",
       "listing_id": "623326277440672160",
-      "spread_hybrid_disc": 0.0592122180722237
+      "spread_hybrid_disc": 0.0579156527718823
     },
-    "listing:514115891831164674": {
-      "sent_at_utc": "2026-05-03T02:52:36.448761+00:00",
+    "listing:512989991900870975": {
+      "sent_at_utc": "2026-05-04T06:19:52.464675+00:00",
+      "item": "Five-SeveN | Capillary (Factory New)",
+      "listing_id": "512989991900870975",
+      "spread_hybrid_disc": 0.0994304644623067
+    },
+    "listing:512989991907264755": {
+      "sent_at_utc": "2026-05-04T06:33:20.800837+00:00",
+      "item": "Tec-9 | Urban DDPAT (Factory New)",
+      "listing_id": "512989991907264755",
+      "spread_hybrid_disc": 0.0743028104599368
+    },
+    "listing:508486392208545158": {
+      "sent_at_utc": "2026-05-04T12:12:33.975540+00:00",
       "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "514115891831164674",
-      "spread_hybrid_disc": 0.0575990283809934
+      "listing_id": "508486392208545158",
+      "spread_hybrid_disc": 0.0569706536613073
     },
-    "listing:503982792726441079": {
-      "sent_at_utc": "2026-05-03T02:54:59.245557+00:00",
-      "item": "P90 | Elite Build (Factory New)",
-      "listing_id": "503982792726441079",
-      "spread_hybrid_disc": 0.0938266355851409
+    "listing:545639912136486710": {
+      "sent_at_utc": "2026-05-04T16:09:41.103430+00:00",
+      "item": "SG 553 | Integrale (Field-Tested)",
+      "listing_id": "545639912136486710",
+      "spread_hybrid_disc": -0.0021004748391735
     }
   },
-  "last_alert_sent_at_utc": "2026-05-03T02:54:59.245611+00:00"
+  "last_alert_sent_at_utc": "2026-05-04T16:09:41.103607+00:00"
 }
