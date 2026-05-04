@@ -1,0 +1,2 @@
+run_id,status,started_at_utc,finished_at_utc,duration_sec,github_run_id,github_run_attempt,github_sha,failed_stage,stage_summary
+20260503T231228Z-vps-4086220,success,2026-05-04T04:01:11Z,2026-05-04T05:25:22Z,5051,25300338769,1,6e7d852f9bf40ca2743b0c6a7b978d2cf1e96fb6,,model backfill=1s/0; model refit=98s/0; model backfill queue after refit=1s/0; monitor list=1s/0; base snapshot=4950s/0

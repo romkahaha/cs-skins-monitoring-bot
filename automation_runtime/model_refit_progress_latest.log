@@ -1,5 +1,5 @@
 COMMAND:
-/opt/hostedtoolcache/Python/3.12.13/x64/bin/python /home/runner/work/books/books/steam_listings/fit_rel_models_from_data_skins_big.py --data-dir /home/runner/work/books/books/skin_homog/data_skins_big --out-json /home/runner/work/books/books/steam_listings/data/float_fit_rel_curves.json --min-points 5 --grid-n 300 --smooth-frac 0.25 --supersmooth-frac 0.35 --smooth-min-pts 12 --smooth-robust-iters 2 --seg-min-seg 12 --seg-z-thresh 4.0 --seg-max-jumps 2 --hybrid-alpha 0.7 --outlier-neighbors 6 --outlier-z 3.5 --outlier-min-abs-dev 0.03
+/opt/hostedtoolcache/Python/3.12.13/x64/bin/python /home/runner/work/cs-skins-monitoring-bot/cs-skins-monitoring-bot/steam_listings/fit_rel_models_from_data_skins_big.py --data-dir /home/runner/work/cs-skins-monitoring-bot/cs-skins-monitoring-bot/skin_homog/data_skins_big --out-json /home/runner/work/cs-skins-monitoring-bot/cs-skins-monitoring-bot/steam_listings/data/float_fit_rel_curves.json --min-points 5 --grid-n 300 --smooth-frac 0.25 --supersmooth-frac 0.35 --smooth-min-pts 12 --smooth-robust-iters 2 --seg-min-seg 12 --seg-z-thresh 4.0 --seg-max-jumps 2 --hybrid-alpha 0.7 --outlier-neighbors 6 --outlier-z 3.5 --outlier-min-abs-dev 0.03
 
 [fit_rel] 25/1100 ok=25 last='AK-47 | Emerald Pinstripe (Battle-Scarred)'
 [fit_rel] 50/1100 ok=50 last='AK-47 | Legion of Anubis (Battle-Scarred)'
@@ -45,5 +45,5 @@ COMMAND:
 [fit_rel] 1050/1100 ok=1050 last='USP-S | Jawbreaker (Factory New)'
 [fit_rel] 1075/1100 ok=1075 last='USP-S | Stainless (Minimal Wear)'
 [fit_rel] 1100/1100 ok=1100 last='XM1014 | Ziggy (Factory New)'
-saved: /home/runner/work/books/books/steam_listings/data/float_fit_rel_curves.json
+saved: /home/runner/work/cs-skins-monitoring-bot/cs-skins-monitoring-bot/steam_listings/data/float_fit_rel_curves.json
 items ok: 1100/1100 | skipped: 0
