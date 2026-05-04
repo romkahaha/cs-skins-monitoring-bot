@@ -12,4 +12,5 @@ CRON_TZ=Europe/Berlin
 0 23 * * * /home/roma/cs-arbitrage/cs-skins-monitoring-bot/server_scripts/server_nightly.sh
 
 # Run daytime monitoring from 08:00 until roughly 22:55 Berlin time.
+# If nightly is still running, the script waits up to 6 hours for the shared lock.
 0 8 * * * /home/roma/cs-arbitrage/cs-skins-monitoring-bot/server_scripts/server_monitoring_day.sh

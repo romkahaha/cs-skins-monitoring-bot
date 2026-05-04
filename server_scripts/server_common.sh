@@ -72,6 +72,19 @@ acquire_lock() {
   echo "[$(timestamp)] acquired lock: $lock_file"
 }
 
+acquire_lock_wait() {
+  local name="$1"
+  local timeout_sec="${2:-0}"
+  local lock_file="$LOCK_DIR/$name.lock"
+  exec 9>"$lock_file"
+  if flock -w "$timeout_sec" 9; then
+    echo "[$(timestamp)] acquired lock: $lock_file"
+    return 0
+  fi
+  echo "[$(timestamp)] could not acquire lock within ${timeout_sec}s: $lock_file" >&2
+  exit 0
+}
+
 print_context() {
   echo "[$(timestamp)] bot_root=$BOT_ROOT"
   echo "[$(timestamp)] python=$PYTHON_BIN"

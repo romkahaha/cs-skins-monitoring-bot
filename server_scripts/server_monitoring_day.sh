@@ -5,9 +5,11 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/server_common.sh"
 
 MONITORING_MAX_RUNTIME_MINUTES="${MONITORING_MAX_RUNTIME_MINUTES:-895}"
+MONITORING_LOCK_WAIT_MINUTES="${MONITORING_LOCK_WAIT_MINUTES:-360}"
 
 start_log "monitoring_day"
-acquire_lock "cs-skins-main-pipeline"
+echo "[$(timestamp)] waiting up to ${MONITORING_LOCK_WAIT_MINUTES} minutes for nightly/main lock"
+acquire_lock_wait "cs-skins-main-pipeline" "$((MONITORING_LOCK_WAIT_MINUTES * 60))"
 load_secrets
 require_env STEAM_COOKIES TELEGRAM_BOT_TOKEN TELEGRAM_CHAT_ID
 enter_repo
