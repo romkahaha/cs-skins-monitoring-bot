@@ -1,111 +1,72 @@
 {
   "version": 1,
-  "items_signature": "ca99e11baa89fac9f32fce85f48aa4c2c70a9a5a6dd66baf7a58071f87e9256b",
-  "items_count": 228,
-  "batch_pointer": 206,
-  "last_run_at_utc": "2026-05-04T19:25:43.911449+00:00",
+  "items_signature": "87f5c9f3253303d08430ef9ea0b7fe3441294f447f4d95cb1a3eb7414543ac4c",
+  "items_count": 283,
+  "batch_pointer": 168,
+  "last_run_at_utc": "2026-05-05T20:36:08.522031+00:00",
   "last_status": "error",
   "last_batch_items": [
-    "M4A4 | Desolate Space (Battle-Scarred)",
-    "Five-SeveN | Heat Treated (Battle-Scarred)",
-    "Desert Eagle | Printstream (Factory New)",
-    "Galil AR | Rainbow Spoon (Minimal Wear)",
-    "P2000 | Imperial Dragon (Minimal Wear)"
+    "AWP | Printstream (Field-Tested)",
+    "AWP | Black Nile (Minimal Wear)",
+    "M4A1-S | Black Lotus (Factory New)",
+    "XM1014 | Incinegator (Field-Tested)",
+    "USP-S | Black Lotus (Minimal Wear)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: M4A4 | Desolate Space (Battle-Scarred), Five-SeveN | Heat Treated (Battle-Scarred), Desert Eagle | Printstream (Factory New))",
-  "last_finished_at_utc": "2026-05-04T19:27:26.865913+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-04T16:22:18.633786+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-04T19:27:26.865913+00:00",
+  "last_error": "Steam rate limit (429) for \"1/5 AWP | Printstream (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Printstream%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+  "last_finished_at_utc": "2026-05-05T20:36:08.800596+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-05T18:38:27.856099+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-05T20:36:08.800596+00:00",
   "consecutive_errors": 3,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "M4A4 | Desolate Space (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Desolate%20Space%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "Five-SeveN | Heat Treated (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Five-SeveN%20%7C%20Heat%20Treated%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "Desert Eagle | Printstream (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Printstream%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "Galil AR | Rainbow Spoon (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Galil%20AR%20%7C%20Rainbow%20Spoon%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    },
-    {
-      "market_hash_name": "P2000 | Imperial Dragon (Minimal Wear)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P2000%20%7C%20Imperial%20Dragon%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-        "pages_fetched": 0,
-        "listings_target_cap": 200
-      }
-    }
-  ],
-  "last_listing_error_count": 5,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
   "last_listing_rows": 0,
-  "last_enriched_rows": 100,
+  "last_enriched_rows": 396,
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
-  "last_batch_start_pointer": 206,
+  "last_batch_start_pointer": 168,
   "sent_alerts": {
-    "listing:623326277440672160": {
-      "sent_at_utc": "2026-05-04T06:06:29.124478+00:00",
-      "item": "AWP | Black Nile (Factory New)",
-      "listing_id": "623326277440672160",
-      "spread_hybrid_disc": 0.0579156527718823
+    "listing:520871291150145756": {
+      "sent_at_utc": "2026-05-05T12:09:31.070251+00:00",
+      "item": "P2000 | Turf (Factory New)",
+      "listing_id": "520871291150145756",
+      "spread_hybrid_disc": 0.0427010621914566
+    },
+    "listing:512989991909596151": {
+      "sent_at_utc": "2026-05-05T12:13:35.438112+00:00",
+      "item": "P2000 | Turf (Factory New)",
+      "listing_id": "512989991909596151",
+      "spread_hybrid_disc": 0.0923572514990479
+    },
+    "listing:794463791549667275": {
+      "sent_at_utc": "2026-05-05T12:20:14.490754+00:00",
+      "item": "P90 | Sand Spray (Factory New)",
+      "listing_id": "794463791549667275",
+      "spread_hybrid_disc": 0.0584354797989785
     },
     "listing:512989991900870975": {
-      "sent_at_utc": "2026-05-04T06:19:52.464675+00:00",
+      "sent_at_utc": "2026-05-05T12:25:36.191625+00:00",
       "item": "Five-SeveN | Capillary (Factory New)",
       "listing_id": "512989991900870975",
-      "spread_hybrid_disc": 0.0994304644623067
-    },
-    "listing:512989991907264755": {
-      "sent_at_utc": "2026-05-04T06:33:20.800837+00:00",
-      "item": "Tec-9 | Urban DDPAT (Factory New)",
-      "listing_id": "512989991907264755",
-      "spread_hybrid_disc": 0.0743028104599368
+      "spread_hybrid_disc": 0.1128436173902113
     },
     "listing:508486392208545158": {
-      "sent_at_utc": "2026-05-04T12:12:33.975540+00:00",
+      "sent_at_utc": "2026-05-05T12:30:20.745482+00:00",
       "item": "MP7 | Cirrus (Factory New)",
       "listing_id": "508486392208545158",
-      "spread_hybrid_disc": 0.0569706536613073
+      "spread_hybrid_disc": 0.0540624947859649
     },
-    "listing:545639912136486710": {
-      "sent_at_utc": "2026-05-04T16:09:41.103430+00:00",
-      "item": "SG 553 | Integrale (Field-Tested)",
-      "listing_id": "545639912136486710",
-      "spread_hybrid_disc": -0.0021004748391735
+    "listing:499479193120406593": {
+      "sent_at_utc": "2026-05-05T12:32:25.876214+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "499479193120406593",
+      "spread_hybrid_disc": 0.1116170174970982
+    },
+    "listing:512989991907264755": {
+      "sent_at_utc": "2026-05-05T12:47:13.429658+00:00",
+      "item": "Tec-9 | Urban DDPAT (Factory New)",
+      "listing_id": "512989991907264755",
+      "spread_hybrid_disc": 0.039236881679015
     }
   },
-  "last_alert_sent_at_utc": "2026-05-04T16:09:41.103607+00:00"
+  "last_alert_sent_at_utc": "2026-05-05T12:47:13.430721+00:00"
 }
