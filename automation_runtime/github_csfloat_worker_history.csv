@@ -1,2 +1,3 @@
 run_id,status,started_at_utc,finished_at_utc,duration_sec,github_run_id,github_run_attempt,github_sha,failed_stage,stage_summary
 20260503T231228Z-vps-4086220,success,2026-05-04T04:01:11Z,2026-05-04T05:25:22Z,5051,25300338769,1,6e7d852f9bf40ca2743b0c6a7b978d2cf1e96fb6,,model backfill=1s/0; model refit=98s/0; model backfill queue after refit=1s/0; monitor list=1s/0; base snapshot=4950s/0
+20260505T050905Z-vps-4146939,success,2026-05-05T09:57:31Z,2026-05-05T11:51:44Z,6853,25369741923,1,effb1d62f25400c1f6ab46bfebb988d08749e272,,model backfill=267s/0; model refit=96s/0; model backfill queue after refit=1s/0; monitor list=0s/0; base snapshot=6489s/0
