@@ -1,72 +1,27 @@
 {
   "version": 1,
-  "items_signature": "87f5c9f3253303d08430ef9ea0b7fe3441294f447f4d95cb1a3eb7414543ac4c",
-  "items_count": 283,
-  "batch_pointer": 168,
-  "last_run_at_utc": "2026-05-05T20:36:08.522031+00:00",
+  "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
+  "items_count": 281,
+  "batch_pointer": 32,
+  "last_run_at_utc": "2026-05-06T20:29:16.511041+00:00",
   "last_status": "error",
   "last_batch_items": [
-    "AWP | Printstream (Field-Tested)",
-    "AWP | Black Nile (Minimal Wear)",
-    "M4A1-S | Black Lotus (Factory New)",
-    "XM1014 | Incinegator (Field-Tested)",
-    "USP-S | Black Lotus (Minimal Wear)"
+    "M4A1-S | Mud-Spec (Factory New)",
+    "Five-SeveN | Violent Daimyo (Factory New)",
+    "AWP | Duality (Field-Tested)",
+    "Tec-9 | Ossified (Factory New)",
+    "AWP | Black Nile (Factory New)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 AWP | Printstream (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Printstream%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-05T20:36:08.800596+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-05T18:38:27.856099+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-05T20:36:08.800596+00:00",
+  "last_error": "Steam rate limit (429) for \"1/5 M4A1-S | Mud-Spec (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Mud-Spec%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+  "last_finished_at_utc": "2026-05-06T20:29:16.807771+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-06T17:28:13.909051+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-06T20:29:16.807771+00:00",
   "consecutive_errors": 3,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
   "last_listing_rows": 0,
-  "last_enriched_rows": 396,
+  "last_enriched_rows": 738,
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
-  "last_batch_start_pointer": 168,
-  "sent_alerts": {
-    "listing:520871291150145756": {
-      "sent_at_utc": "2026-05-05T12:09:31.070251+00:00",
-      "item": "P2000 | Turf (Factory New)",
-      "listing_id": "520871291150145756",
-      "spread_hybrid_disc": 0.0427010621914566
-    },
-    "listing:512989991909596151": {
-      "sent_at_utc": "2026-05-05T12:13:35.438112+00:00",
-      "item": "P2000 | Turf (Factory New)",
-      "listing_id": "512989991909596151",
-      "spread_hybrid_disc": 0.0923572514990479
-    },
-    "listing:794463791549667275": {
-      "sent_at_utc": "2026-05-05T12:20:14.490754+00:00",
-      "item": "P90 | Sand Spray (Factory New)",
-      "listing_id": "794463791549667275",
-      "spread_hybrid_disc": 0.0584354797989785
-    },
-    "listing:512989991900870975": {
-      "sent_at_utc": "2026-05-05T12:25:36.191625+00:00",
-      "item": "Five-SeveN | Capillary (Factory New)",
-      "listing_id": "512989991900870975",
-      "spread_hybrid_disc": 0.1128436173902113
-    },
-    "listing:508486392208545158": {
-      "sent_at_utc": "2026-05-05T12:30:20.745482+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "508486392208545158",
-      "spread_hybrid_disc": 0.0540624947859649
-    },
-    "listing:499479193120406593": {
-      "sent_at_utc": "2026-05-05T12:32:25.876214+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "499479193120406593",
-      "spread_hybrid_disc": 0.1116170174970982
-    },
-    "listing:512989991907264755": {
-      "sent_at_utc": "2026-05-05T12:47:13.429658+00:00",
-      "item": "Tec-9 | Urban DDPAT (Factory New)",
-      "listing_id": "512989991907264755",
-      "spread_hybrid_disc": 0.039236881679015
-    }
-  },
-  "last_alert_sent_at_utc": "2026-05-05T12:47:13.430721+00:00"
+  "last_batch_start_pointer": 32
 }
