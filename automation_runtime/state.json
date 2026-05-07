@@ -1,31 +1,27 @@
 {
   "version": 1,
-  "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
-  "items_count": 281,
-  "batch_pointer": 166,
-  "last_run_at_utc": "2026-05-06T22:00:36.622644+00:00",
-  "last_status": "ok",
+  "items_signature": "0a680a730a5e0b30a7ceca2ba17fe88325f0273c48ce102e4e462e7b52367097",
+  "items_count": 291,
+  "batch_pointer": 239,
+  "last_run_at_utc": "2026-05-07T20:22:23.475972+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AK-47 | Slate (Factory New)",
-    "AK-47 | Head Shot (Minimal Wear)",
-    "USP-S | Guardian (Factory New)",
-    "Desert Eagle | Mecha Industries (Factory New)",
-    "AK-47 | Ice Coaled (Field-Tested)"
+    "Sawed-Off | Kiss♥Love (Factory New)",
+    "AWP | Chrome Cannon (Minimal Wear)",
+    "AWP | Atheris (Field-Tested)",
+    "Glock-18 | Glockingbird (Factory New)",
+    "AWP | Mortis (Battle-Scarred)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-06T22:02:09.011686+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-06T22:02:09.011686+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-06T20:29:16.807771+00:00",
-  "consecutive_errors": 0,
+  "last_error": "Steam rate limit (429) for \"1/5 Sawed-Off | Kiss♥Love (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Sawed-Off%20%7C%20Kiss%E2%99%A5Love%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+  "last_finished_at_utc": "2026-05-07T20:22:23.940013+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-07T18:52:03.172155+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-07T20:22:23.940013+00:00",
+  "consecutive_errors": 2,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 968,
-  "last_enriched_rows": 968,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 704,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 3757
-  },
-  "last_batch_start_pointer": 161
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 239
 }
