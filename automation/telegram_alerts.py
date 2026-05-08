@@ -201,11 +201,11 @@ BANDS: dict[str, dict[str, Any]] = {
 
 
 THRESHOLDS = {
-    "spread_hybrid_disc": "<= 10.00%",
-    "steam_sales_7d_n": ">= 100",
-    "steam_sales_7d_downside_risk%": "<= 8.00%",
-    "steam_sales_7d_tail_ratio": ">= 0.920",
-    "steam_daily_downside_14d_pct": "<= 10.00%",
+    "spread_hybrid_disc": "<= 12.00%",
+    "steam_sales_7d_n": ">= 50",
+    "steam_sales_7d_downside_risk%": "<= 10.00%",
+    "steam_sales_7d_tail_ratio": ">= 0.900",
+    "steam_daily_downside_14d_pct": "<= 12.00%",
     "continuity_ratio": "<= 3.50",
 }
 
@@ -462,16 +462,27 @@ def telegram_credentials(bot_token: str | None = None, chat_id: str | None = Non
     return token, chat
 
 
-def send_message(text: str, *, bot_token: str, chat_id: str, timeout: int = 120) -> dict[str, Any]:
+def send_message(
+    text: str,
+    *,
+    bot_token: str,
+    chat_id: str,
+    timeout: int = 20,
+    reply_to_message_id: int | None = None,
+) -> dict[str, Any]:
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    data = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": "true",
+    }
+    if reply_to_message_id is not None:
+        data["reply_to_message_id"] = str(int(reply_to_message_id))
+        data["allow_sending_without_reply"] = "true"
     response = requests.post(
         url,
-        data={
-            "chat_id": chat_id,
-            "text": text,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": "true",
-        },
+        data=data,
         timeout=timeout,
     )
     if not response.ok:
@@ -488,12 +499,13 @@ def send_photo(
     bot_token: str,
     chat_id: str,
     caption: str | None = None,
-    timeout: int = 120,
+    timeout: int = 20,
 ) -> dict[str, Any]:
     url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
     data = {"chat_id": chat_id}
     if caption:
         data["caption"] = caption
+        data["parse_mode"] = "HTML"
     response = requests.post(
         url,
         data=data,
@@ -521,12 +533,24 @@ def maybe_render_fit_plot(row: pd.Series, plot_cfg: dict[str, Any] | None) -> by
     if not item:
         return None
 
-    from automation.model_fit_plot import render_item_fit_plot
+    from automation.model_fit_plot import precomputed_plot_path, render_item_fit_plot
 
     data_dir = Path(str(_plot_config_value(cfg, "data_dir", "skin_homog/data_skins_big")))
     fit_json = Path(str(_plot_config_value(cfg, "fit_json", "steam_listings/data/float_fit_rel_curves.json")))
     dpi = int(_plot_config_value(cfg, "dpi", 120))
-    return render_item_fit_plot(item, data_dir=data_dir, fit_json=fit_json, dpi=dpi)
+    precomputed_dir_raw = _plot_config_value(cfg, "precomputed_dir", None)
+    precomputed_dir = None if precomputed_dir_raw in (None, "") else Path(str(precomputed_dir_raw))
+    if precomputed_dir is not None:
+        precomputed_path = precomputed_plot_path(item, precomputed_dir)
+        if precomputed_path.is_file():
+            return precomputed_path.read_bytes()
+
+    image_bytes = render_item_fit_plot(item, data_dir=data_dir, fit_json=fit_json, dpi=dpi)
+    if precomputed_dir is not None and bool(cfg.get("write_precomputed_on_miss", True)):
+        precomputed_path = precomputed_plot_path(item, precomputed_dir)
+        precomputed_path.parent.mkdir(parents=True, exist_ok=True)
+        precomputed_path.write_bytes(image_bytes)
+    return image_bytes
 
 
 def send_opportunity_alerts(
@@ -534,6 +558,7 @@ def send_opportunity_alerts(
     state_json: Path,
     monitor_items_py: Path,
     *,
+    config_path: Path | None = None,
     bot_token: str | None = None,
     chat_id: str | None = None,
     cooldown_hours: float = 12.0,
@@ -542,11 +567,16 @@ def send_opportunity_alerts(
     max_alerts: int | None = None,
     alerts_cfg: dict[str, Any] | None = None,
     plot_cfg: dict[str, Any] | None = None,
+    alert_enrichment_cfg: dict[str, Any] | None = None,
 ) -> dict[str, int]:
     raw_df = load_opportunities(opportunities_csv)
     df, filter_stats = apply_alert_filters(raw_df, alerts_cfg)
     items = load_items_py(monitor_items_py) if monitor_items_py.is_file() else []
     state = load_state(state_json, items)
+    plot_cache: dict[str, bytes | None] = {}
+    enrichment_cfg = dict(alert_enrichment_cfg or {})
+    if config_path is None:
+        config_path = repo_root_from(Path(__file__)) / "automation" / "configs" / "monitoring.json"
     token = chat = None
     if not dry_run:
         token, chat = telegram_credentials(bot_token=bot_token, chat_id=chat_id)
@@ -566,16 +596,55 @@ def send_opportunity_alerts(
             print(message)
         else:
             assert token is not None and chat is not None
-            send_message(message, bot_token=token, chat_id=chat)
+            item = str(row.get("item", "") or "").strip()
+            image_bytes = plot_cache.get(item) if item else None
             try:
-                image_bytes = maybe_render_fit_plot(row, plot_cfg)
+                primary_payload = send_message(message, bot_token=token, chat_id=chat)
+            except Exception as exc:
+                if bool((plot_cfg or {}).get("fail_on_error", False)):
+                    raise
+                print(f"telegram text send failed: {exc}")
+                continue
+            primary_message_id = None
+            result_payload = primary_payload.get("result") if isinstance(primary_payload, dict) else None
+            if isinstance(result_payload, dict):
+                try:
+                    primary_message_id = int(result_payload.get("message_id"))
+                except Exception:
+                    primary_message_id = None
+            try:
+                if item and item not in plot_cache:
+                    image_bytes = maybe_render_fit_plot(row, plot_cfg)
+                    plot_cache[item] = image_bytes
                 if image_bytes:
-                    caption = str(row.get("item", "") or "Model fit")
-                    send_photo(image_bytes, bot_token=token, chat_id=chat, caption=caption[:1024])
+                    send_photo(
+                        image_bytes,
+                        bot_token=token,
+                        chat_id=chat,
+                        caption=(item or "Model fit")[:1024],
+                    )
             except Exception as exc:
                 if bool((plot_cfg or {}).get("fail_on_error", False)):
                     raise
                 print(f"fit plot skipped: {exc}")
+            if bool(enrichment_cfg.get("enabled", False)):
+                try:
+                    from automation.alert_enrichment import queue_enrichment_job, run_enrichment_job, spawn_enrichment_worker
+
+                    job_json = queue_enrichment_job(
+                        row=row.to_dict(),
+                        primary_message_id=primary_message_id,
+                        config={"alert_enrichment": enrichment_cfg},
+                        config_path=config_path,
+                        chat_id=chat,
+                    )
+                    if job_json is not None:
+                        if bool(enrichment_cfg.get("background", True)):
+                            spawn_enrichment_worker(config_path=config_path, job_json=job_json)
+                        else:
+                            run_enrichment_job(job_json, {"alert_enrichment": enrichment_cfg}, dry_run=False)
+                except Exception as exc:
+                    print(f"alert enrichment failed to start: {exc}")
             state = mark_sent(state, key, row)
             save_state(state_json, state)
             time.sleep(max(0.0, float(sleep_sec)))

@@ -307,6 +307,7 @@ def main() -> int:
     alerts_cfg = config.get("alerts", {})
     telegram_cfg = config.get("telegram", {})
     plot_cfg = config.get("model_plot", {})
+    alert_enrichment_cfg = config.get("alert_enrichment", {})
 
     monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
     state_path = args.state_json.resolve() if args.state_json else resolve_batch_state_path(config, monitor_items_py)
@@ -441,12 +442,14 @@ def main() -> int:
                     opportunities_csv,
                     alert_state_path,
                     alert_monitor_items_py,
+                    config_path=config_path,
                     cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
                     dry_run=True,
                     sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
                     max_alerts=telegram_cfg.get("max_alerts"),
                     alerts_cfg=alerts_cfg,
                     plot_cfg=plot_cfg,
+                    alert_enrichment_cfg=alert_enrichment_cfg,
                 )
                 alert_stats = stats
                 print(
@@ -460,12 +463,14 @@ def main() -> int:
                     opportunities_csv,
                     alert_state_path,
                     alert_monitor_items_py,
+                    config_path=config_path,
                     cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
                     dry_run=False,
                     sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
                     max_alerts=telegram_cfg.get("max_alerts"),
                     alerts_cfg=alerts_cfg,
                     plot_cfg=plot_cfg,
+                    alert_enrichment_cfg=alert_enrichment_cfg,
                 )
                 alert_stats = stats
                 print(
@@ -493,12 +498,14 @@ def main() -> int:
                         snapshot_csv,
                         alert_state_path,
                         alert_monitor_items_py,
+                        config_path=config_path,
                         cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
                         dry_run=False,
                         sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
                         max_alerts=telegram_cfg.get("max_alerts"),
                         alerts_cfg=alerts_cfg,
                         plot_cfg=plot_cfg,
+                        alert_enrichment_cfg=alert_enrichment_cfg,
                     )
                     alert_stats = stats
                     print(

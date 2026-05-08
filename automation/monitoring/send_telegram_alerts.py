@@ -110,6 +110,7 @@ def main() -> int:
     alerts_cfg = config.get("alerts", {})
     telegram_cfg = config.get("telegram", {})
     plot_cfg = config.get("model_plot", {})
+    alert_enrichment_cfg = config.get("alert_enrichment", {})
     opportunities_csv = args.opportunities_csv.resolve() if args.opportunities_csv else path_from_config(config, "opportunities_csv")
     batch_state_json = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
     state_json = args.alert_state_json.resolve() if args.alert_state_json else alert_state_path_from(batch_state_json)
@@ -122,6 +123,7 @@ def main() -> int:
             opportunities_csv,
             state_json,
             monitor_items_py,
+            config_path=args.config.resolve() if args.config else None,
             bot_token=args.bot_token,
             chat_id=args.chat_id,
             cooldown_hours=float(args.cooldown_hours if args.cooldown_hours != 12.0 else telegram_cfg.get("cooldown_hours", 12.0)),
@@ -130,6 +132,7 @@ def main() -> int:
             max_alerts=max_alerts,
             alerts_cfg=alerts_cfg,
             plot_cfg=plot_cfg,
+            alert_enrichment_cfg=alert_enrichment_cfg,
         )
     if args.delete_input_after:
         try:
