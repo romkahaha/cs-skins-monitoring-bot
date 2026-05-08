@@ -13,6 +13,13 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from automation.config import load_json_config, nightly_defaults, path_from_config
+from automation.monitoring.tier_scheduler import (
+    DEFAULT_QUEUE_PATTERN,
+    assign_monitor_tiers,
+    tier_item_paths_from_config,
+    tiers_metadata_path_from_config,
+    write_tier_outputs,
+)
 from automation.risk_filters import FilterConfig, build_monitor_frame, repo_root_from, write_monitor_outputs
 
 
@@ -122,6 +129,38 @@ def main() -> int:
     )
     if bool(config.get("model_coverage", {}).get("require_model_ready_for_monitor", True)):
         frame = apply_model_ready_filter(frame, model_coverage_csv, counts)
+
+    tier_cfg = config.get("monitor_tiers", {})
+    if bool(tier_cfg.get("enabled", True)):
+        score_weights = tier_cfg.get("score_weights", {})
+        tier_frame, tier_counts, normalized_shares = assign_monitor_tiers(
+            frame.loc[frame["monitor_pass"]].copy().reset_index(drop=True),
+            shares=tier_cfg.get("shares", {}),
+            sales_weight=float(score_weights.get("steam_sales_7d_n", 0.75)),
+            turnover_weight=float(score_weights.get("steam_turnover_proxy", 0.25)),
+        )
+        if not tier_frame.empty:
+            frame = frame.merge(
+                tier_frame[["item", "tier", "liquidity_score", "liquidity_rank"]],
+                on="item",
+                how="left",
+            )
+        write_tier_outputs(
+            tier_frame,
+            tier_item_paths=tier_item_paths_from_config(config),
+            metadata_path=tiers_metadata_path_from_config(config),
+            source_csv=risk_csv,
+            counts=counts,
+            shares=normalized_shares,
+            score_weights={
+                "steam_sales_7d_n": float(score_weights.get("steam_sales_7d_n", 0.75)),
+                "steam_turnover_proxy": float(score_weights.get("steam_turnover_proxy", 0.25)),
+            },
+        )
+        counts["tier_a_items"] = int(tier_counts["A"])
+        counts["tier_b_items"] = int(tier_counts["B"])
+        counts["tier_c_items"] = int(tier_counts["C"])
+
     items = write_monitor_outputs(
         frame,
         out_csv,
@@ -141,6 +180,14 @@ def main() -> int:
         print(f"model ready: {counts['model_ready_passed']}")
         print(f"monitor before model-ready filter: {counts['monitor_passed_before_model_ready']}")
     print(f"final monitor items: {counts['monitor_passed']}")
+    if "tier_a_items" in counts:
+        print(
+            "tier split: "
+            f"A={counts['tier_a_items']} "
+            f"B={counts['tier_b_items']} "
+            f"C={counts['tier_c_items']} "
+            f"(queue pattern: {','.join(DEFAULT_QUEUE_PATTERN)})"
+        )
     print(f"saved audit csv: {out_csv}")
     print(f"saved ITEMS py: {out_items_py}")
 

@@ -3,6 +3,10 @@
 from __future__ import annotations
 
 import argparse
+import os
+import shlex
+import shutil
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -14,6 +18,12 @@ if str(_REPO_ROOT) not in sys.path:
 
 from automation.config import load_json_config, monitoring_defaults, path_from_config
 from automation.listing_enrichment import OpportunityConfig, build_enriched_listings, load_items_py, write_opportunity_outputs
+from automation.monitoring.send_telegram_alerts import bootstrap_alert_state
+from automation.monitoring.tier_scheduler import (
+    alert_monitor_items_py_from_config,
+    alert_state_json_from_config,
+    resolve_batch_state_path,
+)
 from automation.risk_filters import repo_root_from
 from automation.state import load_state, mark_run_finished, mark_run_started, save_state, select_batch
 from automation.telegram_alerts import send_opportunity_alerts
@@ -90,6 +100,12 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Batch pointer state file.",
     )
+    parser.add_argument(
+        "--alert-state-json",
+        type=Path,
+        default=None,
+        help="Shared Telegram alert dedupe state JSON.",
+    )
     parser.add_argument("--batch-size", type=int, default=None, help="Number of items to scan in this run.")
     parser.add_argument(
         "--listings-out-csv",
@@ -159,6 +175,67 @@ def check_age(path: Path, label: str, max_age_hours: float | None, *, fail_on_st
     if fail_on_stale:
         raise RuntimeError(msg)
     print(f"warning: {msg}")
+
+
+def queue_alert_snapshot(opportunities_csv: Path, *, start_pointer: int) -> tuple[Path, Path]:
+    queue_dir = opportunities_csv.parent / "telegram_queue"
+    queue_dir.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S_%fZ")
+    stem = f"{opportunities_csv.stem}_{stamp}_p{start_pointer}_pid{os.getpid()}"
+    snapshot_csv = queue_dir / f"{stem}.csv"
+    log_path = queue_dir / f"{stem}.log"
+    shutil.copy2(opportunities_csv, snapshot_csv)
+    return snapshot_csv, log_path
+
+
+def spawn_telegram_sender(
+    *,
+    repo_root: Path,
+    config_path: Path,
+    opportunities_csv: Path,
+    state_json: Path,
+    monitor_items_py: Path,
+    alert_state_json: Path,
+    dry_run: bool,
+    log_path: Path,
+) -> int:
+    sender_cmd = [
+        sys.executable,
+        str(repo_root / "automation" / "monitoring" / "send_telegram_alerts.py"),
+        "--config",
+        str(config_path),
+        "--opportunities-csv",
+        str(opportunities_csv),
+        "--state-json",
+        str(state_json),
+        "--alert-state-json",
+        str(alert_state_json),
+        "--monitor-items-py",
+        str(monitor_items_py),
+        "--delete-input-after",
+    ]
+    if dry_run:
+        sender_cmd.append("--dry-run")
+
+    secrets_file = os.environ.get("CS_ARBITRAGE_SECRETS") or str(repo_root.parent / "secrets.env")
+    if os.path.isfile(secrets_file):
+        bash_cmd = (
+            f"set -a; source {shlex.quote(secrets_file)}; set +a; "
+            f"exec {shlex.join(sender_cmd)}"
+        )
+        cmd = ["/bin/bash", "-lc", bash_cmd]
+    else:
+        cmd = sender_cmd
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    with log_path.open("ab") as handle:
+        proc = subprocess.Popen(
+            cmd,
+            cwd=str(repo_root),
+            stdout=handle,
+            stderr=subprocess.STDOUT,
+            start_new_session=True,
+        )
+    return int(proc.pid)
 
 
 def parse_hhmm(value: str) -> tuple[int, int]:
@@ -232,7 +309,13 @@ def main() -> int:
     plot_cfg = config.get("model_plot", {})
 
     monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
-    state_path = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
+    state_path = args.state_json.resolve() if args.state_json else resolve_batch_state_path(config, monitor_items_py)
+    alert_state_path = (
+        args.alert_state_json.resolve()
+        if args.alert_state_json
+        else alert_state_json_from_config(config, fallback_state_json=state_path)
+    )
+    alert_monitor_items_py = alert_monitor_items_py_from_config(config)
     listings_out_csv = args.listings_out_csv.resolve() if args.listings_out_csv else path_from_config(config, "steam_listings_csv")
     base_snapshot_csv = args.base_out_csv.resolve() if args.base_out_csv else path_from_config(config, "base_snapshot_csv")
     fit_json = args.fit_json.resolve() if args.fit_json else path_from_config(config, "fit_json")
@@ -241,8 +324,9 @@ def main() -> int:
     opportunities_csv = args.out_opportunities_csv.resolve() if args.out_opportunities_csv else path_from_config(config, "opportunities_csv")
     report_csv = args.out_report_csv.resolve() if args.out_report_csv else path_from_config(config, "opportunities_report_csv")
     batch_size = int(args.batch_size if args.batch_size is not None else monitoring_cfg.get("batch_size", 5))
+    config_path = args.config.resolve() if args.config else repo_root_from(Path(__file__)) / "automation" / "configs" / "monitoring.json"
 
-    print(f"config: {args.config.resolve() if args.config else '<defaults>'}")
+    print(f"config: {config_path}")
     print(
         "schedule: "
         f"{schedule_cfg.get('active_from', '<unset>')}..{schedule_cfg.get('active_to', '<unset>')} "
@@ -350,25 +434,92 @@ def main() -> int:
         )
 
         telegram_enabled = bool(telegram_cfg.get("enabled", False)) or args.send_telegram or args.telegram_dry_run
+        force_inline_sender = bool(telegram_cfg.get("force_inline_sender", False))
         if telegram_enabled:
-            stats = send_opportunity_alerts(
-                opportunities_csv,
-                state_path,
-                monitor_items_py,
-                cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
-                dry_run=args.telegram_dry_run,
-                sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
-                max_alerts=telegram_cfg.get("max_alerts"),
-                alerts_cfg=alerts_cfg,
-                plot_cfg=plot_cfg,
-            )
-            alert_stats = stats
-            print(
-                "telegram alerts: "
-                f"loaded={stats['loaded']} filtered={stats['filtered']} "
-                f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
-            )
-            state = load_state(state_path, items)
+            if args.telegram_dry_run:
+                stats = send_opportunity_alerts(
+                    opportunities_csv,
+                    alert_state_path,
+                    alert_monitor_items_py,
+                    cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
+                    dry_run=True,
+                    sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
+                    max_alerts=telegram_cfg.get("max_alerts"),
+                    alerts_cfg=alerts_cfg,
+                    plot_cfg=plot_cfg,
+                )
+                alert_stats = stats
+                print(
+                    "telegram alerts: "
+                    f"loaded={stats['loaded']} filtered={stats['filtered']} "
+                    f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
+                )
+            elif force_inline_sender:
+                bootstrap_alert_state(alert_state_path, state_path)
+                stats = send_opportunity_alerts(
+                    opportunities_csv,
+                    alert_state_path,
+                    alert_monitor_items_py,
+                    cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
+                    dry_run=False,
+                    sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
+                    max_alerts=telegram_cfg.get("max_alerts"),
+                    alerts_cfg=alerts_cfg,
+                    plot_cfg=plot_cfg,
+                )
+                alert_stats = stats
+                print(
+                    "telegram alerts inline: "
+                    f"loaded={stats['loaded']} filtered={stats['filtered']} "
+                    f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
+                )
+            else:
+                snapshot_csv, alert_log = queue_alert_snapshot(opportunities_csv, start_pointer=start_pointer)
+                bootstrap_alert_state(alert_state_path, state_path)
+                try:
+                    sender_pid = spawn_telegram_sender(
+                        repo_root=repo_root,
+                        config_path=config_path,
+                        opportunities_csv=snapshot_csv,
+                        state_json=state_path,
+                        monitor_items_py=alert_monitor_items_py,
+                        alert_state_json=alert_state_path,
+                        dry_run=False,
+                        log_path=alert_log,
+                    )
+                except Exception as exc:
+                    print(f"telegram background sender failed to start, falling back to inline send: {exc}")
+                    stats = send_opportunity_alerts(
+                        snapshot_csv,
+                        alert_state_path,
+                        alert_monitor_items_py,
+                        cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
+                        dry_run=False,
+                        sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
+                        max_alerts=telegram_cfg.get("max_alerts"),
+                        alerts_cfg=alerts_cfg,
+                        plot_cfg=plot_cfg,
+                    )
+                    alert_stats = stats
+                    print(
+                        "telegram alerts: "
+                        f"loaded={stats['loaded']} filtered={stats['filtered']} "
+                        f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
+                    )
+                    try:
+                        snapshot_csv.unlink()
+                    except FileNotFoundError:
+                        pass
+                else:
+                    alert_stats = {
+                        "mode": "background",
+                        "queued_rows": int(len(opportunities)),
+                        "sender_pid": int(sender_pid),
+                    }
+                    print(
+                        "telegram alerts queued: "
+                        f"rows={len(opportunities)} pid={sender_pid} snapshot={snapshot_csv} log={alert_log}"
+                    )
 
     except Exception as exc:
         state = mark_run_finished(
