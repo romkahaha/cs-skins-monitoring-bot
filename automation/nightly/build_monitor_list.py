@@ -1,4 +1,4 @@
-"""CLI for building the latest Steam monitoring list from offline metrics."""
+"""CLI for building the latest Steam monitoring list from risk-passed candidates."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ def parse_args() -> argparse.Namespace:
         "--risk-csv",
         type=Path,
         default=None,
-        help="Path to risk_metrics.csv.",
+        help="Path to risk_candidates_latest.csv (already passed VPS risk filter).",
     )
     parser.add_argument(
         "--summary-csv",
@@ -103,7 +103,7 @@ def main() -> int:
         pred_cv_min=float(high_cv_filter.get("pred_cv_min", 0.075)),
         pred_range_over_mean_min=float(high_cv_filter.get("pred_range_over_mean_min", 0.3)),
     )
-    risk_csv = args.risk_csv.resolve() if args.risk_csv else path_from_config(config, "risk_csv")
+    risk_csv = args.risk_csv.resolve() if args.risk_csv else path_from_config(config, "risk_candidates_csv")
     summary_csv = args.summary_csv.resolve() if args.summary_csv else path_from_config(config, "summary_csv")
     data_dir = args.data_dir.resolve() if args.data_dir else path_from_config(config, "skin_data_dir")
     out_csv = args.out_csv.resolve() if args.out_csv else path_from_config(config, "monitor_csv")
@@ -118,6 +118,7 @@ def main() -> int:
         summary_csv,
         data_dir,
         cfg,
+        assume_risk_passed=True,
     )
     if bool(config.get("model_coverage", {}).get("require_model_ready_for_monitor", True)):
         frame = apply_model_ready_filter(frame, model_coverage_csv, counts)
@@ -133,8 +134,8 @@ def main() -> int:
     print(f"risk csv: {risk_csv}")
     print(f"summary csv: {summary_csv}")
     print(f"data dir: {data_dir}")
-    print(f"total risk rows: {counts['total_risk_rows']}")
-    print(f"risk passed: {counts['risk_passed']}")
+    print(f"total input candidates: {counts['total_risk_rows']}")
+    print(f"risk passed (assumed from VPS candidates): {counts['risk_passed']}")
     print(f"high-CV passed: {counts['high_cv_passed']}")
     if "monitor_passed_before_model_ready" in counts:
         print(f"model ready: {counts['model_ready_passed']}")

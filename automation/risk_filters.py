@@ -225,9 +225,23 @@ def build_monitor_frame(
     summary_csv: Path,
     data_dir: Path,
     cfg: FilterConfig = FilterConfig(),
+    *,
+    assume_risk_passed: bool = False,
 ) -> tuple[pd.DataFrame, dict[str, int]]:
     risk = load_risk_metrics(risk_csv)
-    risk = apply_risk_filter(risk, cfg)
+    if assume_risk_passed:
+        risk = risk.copy()
+        for col in (
+            "risk_rule_trend",
+            "risk_rule_price",
+            "risk_rule_liquidity",
+            "risk_rule_tail",
+            "risk_rule_listings",
+        ):
+            risk[col] = True
+        risk["risk_pass"] = True
+    else:
+        risk = apply_risk_filter(risk, cfg)
     cv = load_cv_metrics(summary_csv, data_dir, risk["item"])
 
     out = risk.merge(cv, on="item", how="left")
