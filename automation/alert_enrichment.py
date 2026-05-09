@@ -526,6 +526,11 @@ def _coerce_range(value: Any) -> list[float] | None:
     return [left, right]
 
 
+def _coerce_label(value: Any, allowed: set[str], default: str) -> str:
+    text = str(value or "").strip().lower()
+    return text if text in allowed else default
+
+
 def _call_gemini_once(
     *,
     prompt: str,
@@ -617,6 +622,11 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
     result = {
         "verdict": str(parsed.get("verdict") or "MAYBE").upper(),
         "confidence": str(parsed.get("confidence") or "medium").lower(),
+        "risk_level": _coerce_label(parsed.get("risk_level"), {"low", "medium", "high"}, "medium"),
+        "item_liquidity": _coerce_label(parsed.get("item_liquidity"), {"low", "medium", "high"}, "medium"),
+        "float_liquidity": _coerce_label(parsed.get("float_liquidity"), {"low", "medium", "high"}, "medium"),
+        "model_agreement": _coerce_label(parsed.get("model_agreement"), {"strong", "mixed", "divergent"}, "mixed"),
+        "target_15pct_fast": _coerce_label(parsed.get("target_15pct_fast"), {"yes", "maybe", "no"}, "maybe"),
         "breakeven_gross_eur": _num(parsed.get("breakeven_gross_eur")),
         "gross_for_minus_5pct": _num(parsed.get("gross_for_minus_5pct")),
         "gross_for_minus_10pct": _num(parsed.get("gross_for_minus_10pct")),
@@ -626,6 +636,9 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "patient_sale_range_eur": _coerce_range(parsed.get("patient_sale_range_eur")),
         "start_listing_range_eur": _coerce_range(parsed.get("start_listing_range_eur")),
         "fast_floor_range_eur": _coerce_range(parsed.get("fast_floor_range_eur")),
+        "fast_spread_range_pct": _coerce_range(parsed.get("fast_spread_range_pct")),
+        "realistic_spread_range_pct": _coerce_range(parsed.get("realistic_spread_range_pct")),
+        "patient_spread_range_pct": _coerce_range(parsed.get("patient_spread_range_pct")),
         "best_comps": [],
         "risks": [],
         "summary": str(parsed.get("summary") or "").strip(),
@@ -660,6 +673,12 @@ def _fmt_range(value: list[float] | None) -> str:
     return f"€{value[0]:.2f}-{value[1]:.2f}"
 
 
+def _fmt_pct_range(value: list[float] | None) -> str:
+    if not value:
+        return "-"
+    return f"{value[0]:+.1f}%..{value[1]:+.1f}%"
+
+
 def _fmt_comp(comp: dict[str, Any]) -> str:
     parts = [_fmt_money(_num(comp.get("price_eur")))]
     flt = _num(comp.get("float_value"))
@@ -684,12 +703,26 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
     lines = [
         "<b>AI note</b>",
         f"Verdict: <b>{html.escape(str(note.get('verdict') or 'MAYBE'))}</b> / {html.escape(str(note.get('confidence') or 'medium'))}",
+        (
+            "Risk / liquidity: "
+            f"<code>risk={html.escape(str(note.get('risk_level') or 'medium'))}</code> "
+            f"<code>item_liq={html.escape(str(note.get('item_liquidity') or 'medium'))}</code> "
+            f"<code>float_liq={html.escape(str(note.get('float_liquidity') or 'medium'))}</code>"
+        ),
+        (
+            "Model / fast -15%: "
+            f"<code>models={html.escape(str(note.get('model_agreement') or 'mixed'))}</code> "
+            f"<code>target_15_fast={html.escape(str(note.get('target_15pct_fast') or 'maybe'))}</code>"
+        ),
         f"Sales source: <code>{html.escape(source_map.get(latest_source, latest_source))}</code>",
         f"Fast sale: <code>{html.escape(_fmt_range(note.get('fast_sale_range_eur')))}</code>",
         f"Realistic: <code>{html.escape(_fmt_range(note.get('realistic_sale_range_eur')))}</code>",
         f"Patient: <code>{html.escape(_fmt_range(note.get('patient_sale_range_eur')))}</code>",
         f"Start listing: <code>{html.escape(_fmt_range(note.get('start_listing_range_eur')))}</code>",
         f"Fast floor: <code>{html.escape(_fmt_range(note.get('fast_floor_range_eur')))}</code>",
+        f"Fast spread: <code>{html.escape(_fmt_pct_range(note.get('fast_spread_range_pct')))}</code>",
+        f"Realistic spread: <code>{html.escape(_fmt_pct_range(note.get('realistic_spread_range_pct')))}</code>",
+        f"Patient spread: <code>{html.escape(_fmt_pct_range(note.get('patient_spread_range_pct')))}</code>",
         "",
         "<b>Breakeven math</b>",
         f"Gross 0%: <code>{html.escape(_fmt_money(note.get('breakeven_gross_eur')))}</code>",
