@@ -1,2 +1,1 @@
 item,needs_backfill,model_ready,backfill_reason,has_summary,summary_ready,summary_n_listings,has_fit,fit_ready,fit_n_clean,pred_cv,pred_mean,pred_min,pred_max
-UMP-45 | K.O. Factory (Factory New),True,False,"missing_summary, missing_fit_json",False,False,,False,False,,,,,

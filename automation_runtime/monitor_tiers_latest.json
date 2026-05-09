@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-05-09T01:54:39.737044+00:00",
+  "items_total": 368,
+  "shares": {
+    "A": 0.2,
+    "B": 0.3,
+    "C": 0.5
+  },
+  "score_weights": {
+    "steam_sales_7d_n": 0.75,
+    "steam_turnover_proxy": 0.25
+  },
+  "counts": {
+    "A": 74,
+    "B": 110,
+    "C": 184
+  }
+}

@@ -3,5 +3,5 @@
 # N_OUTPUT_ITEMS = 1
 
 ITEMS = [
-    "SSG 08 | Fever Dream (Factory New)",
+    "UMP-45 | K.O. Factory (Factory New)",
 ]
