@@ -1,0 +1,34 @@
+{
+  "fixtures": [
+    {
+      "id": "poly_mag_fn",
+      "label": "M4A4 | Poly Mag (Factory New)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T141741_356851Z_p210_pid4178007.csv",
+      "row_index": 0
+    },
+    {
+      "id": "p2000_turf_fn",
+      "label": "P2000 | Turf (Factory New)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T145143_958846Z_p62_pid4180178.csv",
+      "row_index": 0
+    },
+    {
+      "id": "desolate_space_bs",
+      "label": "M4A4 | Desolate Space (Battle-Scarred)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T153343_375101Z_p252_pid4183281.csv",
+      "row_index": 0
+    },
+    {
+      "id": "pp_bizon_brass_fn",
+      "label": "PP-Bizon | Brass (Factory New)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T155749_749560Z_p49_pid4184962.csv",
+      "row_index": 0
+    },
+    {
+      "id": "abyssal_apparition_bs",
+      "label": "MP7 | Abyssal Apparition (Battle-Scarred)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T152001_509280Z_p187_pid4182246.csv",
+      "row_index": 0
+    }
+  ]
+}

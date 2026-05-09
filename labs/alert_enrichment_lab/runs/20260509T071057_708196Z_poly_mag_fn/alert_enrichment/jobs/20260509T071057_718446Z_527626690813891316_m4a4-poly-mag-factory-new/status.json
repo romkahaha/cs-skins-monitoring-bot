@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "updated_at_utc": "2026-05-09T07:10:57.798865+00:00",
+  "started_at_utc": "2026-05-09T07:10:57.720320+00:00",
+  "error": "CSFloat latest-sales HTTP 429",
+  "finished_at_utc": "2026-05-09T07:10:57.798730+00:00"
+}
