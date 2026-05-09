@@ -34,6 +34,12 @@ Evaluation priorities:
 3. Model table / model agreement.
 4. Generic item-wide discount is only a weak supporting signal.
 
+Comp interpretation:
+- For each relevant sales comp, think in realized net_exit terms relative to the current steam_ask:
+  if the user bought now at steam_ask and later sold at that comp gross sale price with 2% fee, what net_exit_pct would that imply?
+- Use those realized comp outcomes to judge whether the candidate protects quick -15%, supports around -10%, or is closer to breakeven / profit.
+- A comp can be close in float but still weak if its realized net exit versus the current ask is too negative.
+
 Critical rules:
 - Do not judge only the item as a whole. Judge the exact candidate float zone.
 - For low-float items, compare to similar low floats, not generic sales.

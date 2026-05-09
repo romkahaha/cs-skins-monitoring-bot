@@ -896,8 +896,15 @@ def _fmt_pct_range(value: list[float] | None) -> str:
     return f"{value[0]:+.1f}%..{value[1]:+.1f}%"
 
 
-def _fmt_comp(comp: dict[str, Any]) -> str:
+def _fmt_pct_value(value: float | None) -> str:
+    return "-" if value is None else f"{value:+.1f}%"
+
+
+def _fmt_comp(comp: dict[str, Any], *, steam_ask: float | None = None, fee_pct: float = 0.02) -> str:
     parts = [_fmt_money(_num(comp.get("price_eur")))]
+    realized_net_exit = _net_exit_pct(_num(comp.get("price_eur")), steam_ask, fee_pct=fee_pct)
+    if realized_net_exit is not None:
+        parts.append(f"(net {_fmt_pct_value(realized_net_exit)} vs ask)")
     flt = _num(comp.get("float_value"))
     if flt is not None:
         parts.append(f"@ {flt:.6f}")
@@ -912,6 +919,7 @@ def _fmt_comp(comp: dict[str, Any]) -> str:
 
 def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], note: dict[str, Any]) -> str:
     latest_source = str(latest_sales.get("source") or "unknown")
+    steam_ask = _num(row.get("ask"))
     source_map = {
         "network": "fresh CSFloat sales",
         "fresh_cache": "cached latest sales",
@@ -971,7 +979,7 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
         lines.extend(["", "<b>Relevant comps</b>"])
         for comp in comps[:3]:
             if isinstance(comp, dict):
-                lines.append(f"• {html.escape(_fmt_comp(comp))}")
+                lines.append(f"• {html.escape(_fmt_comp(comp, steam_ask=steam_ask))}")
     risks = note.get("risks") or []
     if risks:
         lines.extend(["", "<b>Risks</b>"])
