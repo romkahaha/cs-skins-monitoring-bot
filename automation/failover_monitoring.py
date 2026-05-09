@@ -715,18 +715,22 @@ def resolve_syncback_request_payload(
 def push_failover_runtime(repo_root: Path, *, branch: str) -> bool:
     run_git(repo_root, ["config", "user.name", "github-actions[bot]"])
     run_git(repo_root, ["config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"])
-    run_git(
-        repo_root,
-        [
-            "add",
-            str(STATE_REL),
-            str(TIER_STATE_A_REL),
-            str(TIER_STATE_B_REL),
-            str(TIER_STATE_C_REL),
-            str(ALERT_STATE_REL),
-            str(REQUEST_REL),
-        ],
-    )
+    add_paths = [
+        rel
+        for rel in (
+            STATE_REL,
+            TIER_STATE_A_REL,
+            TIER_STATE_B_REL,
+            TIER_STATE_C_REL,
+            ALERT_STATE_REL,
+            REQUEST_REL,
+        )
+        if (repo_root / rel).exists()
+    ]
+    if not add_paths:
+        print("failover runtime sync-back: no runtime files exist to add")
+        return False
+    run_git(repo_root, ["add", *[str(path) for path in add_paths]])
     diff = subprocess.run(["git", "-C", str(repo_root), "diff", "--cached", "--quiet"])
     if diff.returncode == 0:
         print("failover runtime sync-back: no state changes to commit")
