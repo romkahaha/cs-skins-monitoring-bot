@@ -497,6 +497,26 @@ jobs:
 
 def build_failover_config(config: dict[str, Any], *, lease_seconds: int) -> dict[str, Any]:
     out = copy.deepcopy(config)
+    out["paths"] = {
+        "monitor_items_py": "automation_runtime/monitor_list_latest.py",
+        "state_json": "automation_runtime/state.json",
+        "default_batch_state_json": "automation_runtime/state_full_list.json",
+        "alert_state_json": "automation_runtime/state_telegram_alerts.json",
+        "monitor_tier_a_items_py": "automation_runtime/monitor_list_tier_a.py",
+        "monitor_tier_b_items_py": "automation_runtime/monitor_list_tier_b.py",
+        "monitor_tier_c_items_py": "automation_runtime/monitor_list_tier_c.py",
+        "state_tier_a_json": "automation_runtime/state_tier_a.json",
+        "state_tier_b_json": "automation_runtime/state_tier_b.json",
+        "state_tier_c_json": "automation_runtime/state_tier_c.json",
+        "monitor_tiers_json": "automation_runtime/monitor_tiers_latest.json",
+        "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv",
+        "steam_listings_csv": "automation_runtime/steam_listings_latest.csv",
+        "fit_json": "steam_listings/data/float_fit_rel_curves.json",
+        "risk_csv": "automation_runtime/risk_metrics_latest.csv",
+        "enriched_listings_csv": "automation_runtime/enriched_listings_latest.csv",
+        "opportunities_csv": "automation_runtime/opportunities_latest.csv",
+        "opportunities_report_csv": "automation_runtime/opportunities_report_latest.csv",
+    }
     out.setdefault("schedule", {})
     out["schedule"]["enabled"] = False
     out["schedule"]["enforce_active_window"] = False
