@@ -22,6 +22,7 @@ from automation.failover_monitoring import (
     sync_monitoring_failover,
 )
 from automation.listing_enrichment import load_items_py
+from automation.monitoring.runtime_integrity import ensure_monitor_runtime_integrity
 from automation.monitoring.tier_scheduler import (
     alert_state_json_from_config,
     batch_sizes_from_config,
@@ -340,6 +341,14 @@ def main() -> int:
     failover_cfg = load_failover_config(config, root)
     if failover_cfg.enabled:
         maybe_import_failover_runtime(root=root, config=config, quiet=True)
+
+    integrity_report = ensure_monitor_runtime_integrity(config, root)
+    for action in integrity_report.actions:
+        print(f"runtime integrity: {action}")
+    if integrity_report.warnings:
+        for warning in integrity_report.warnings:
+            print(f"runtime integrity warning: {warning}", file=sys.stderr, flush=True)
+        raise RuntimeError("monitor runtime integrity check failed")
 
     use_tiers = False
     queue_pattern: list[str] = []

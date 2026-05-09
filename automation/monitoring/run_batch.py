@@ -18,6 +18,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 from automation.config import load_json_config, monitoring_defaults, path_from_config
 from automation.listing_enrichment import OpportunityConfig, build_enriched_listings, load_items_py, write_opportunity_outputs
+from automation.monitoring.runtime_integrity import ensure_monitor_runtime_integrity
 from automation.monitoring.send_telegram_alerts import bootstrap_alert_state
 from automation.monitoring.tier_scheduler import (
     alert_monitor_items_py_from_config,
@@ -326,6 +327,7 @@ def main() -> int:
     report_csv = args.out_report_csv.resolve() if args.out_report_csv else path_from_config(config, "opportunities_report_csv")
     batch_size = int(args.batch_size if args.batch_size is not None else monitoring_cfg.get("batch_size", 5))
     config_path = args.config.resolve() if args.config else repo_root_from(Path(__file__)) / "automation" / "configs" / "monitoring.json"
+    repo_root = repo_root_from(Path(__file__))
 
     print(f"config: {config_path}")
     print(
@@ -345,6 +347,14 @@ def main() -> int:
             print("outside active window; skipping run")
             return 0
 
+    integrity_report = ensure_monitor_runtime_integrity(config, repo_root)
+    for action in integrity_report.actions:
+        print(f"runtime integrity: {action}")
+    if integrity_report.warnings:
+        for warning in integrity_report.warnings:
+            print(f"runtime integrity warning: {warning}")
+        raise RuntimeError("monitor runtime integrity check failed")
+
     run_preflight(
         config,
         monitor_items_py=monitor_items_py,
@@ -362,7 +372,6 @@ def main() -> int:
         spread_hybrid_disc_max=float(opp_cfg.get("spread_hybrid_disc_max", 0.17)),
     )
 
-    repo_root = repo_root_from(Path(__file__))
     items = load_items_py(monitor_items_py)
     if not items:
         print(f"no items in {monitor_items_py}")
