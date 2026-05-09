@@ -42,6 +42,8 @@ class EnrichmentConfig:
     max_sales_rows: int
     cache_ttl_minutes: float
     use_stale_cache_on_error: bool
+    use_cache: bool
+    persist_cache: bool
     log_dir: Path
     csfloat_base_url: str
     csfloat_timeout_sec: float
@@ -83,6 +85,8 @@ def load_enrichment_config(config: dict[str, Any], *, root: Path | None = None) 
         max_sales_rows=max(1, int(cfg.get("max_sales_rows", 30))),
         cache_ttl_minutes=max(0.0, float(cfg.get("cache_ttl_minutes", 15.0))),
         use_stale_cache_on_error=bool(cfg.get("use_stale_cache_on_error", True)),
+        use_cache=bool(cfg.get("use_cache", True)),
+        persist_cache=bool(cfg.get("persist_cache", True)),
         log_dir=_resolve_path(base_root, cfg.get("log_dir", "automation_runtime/alert_enrichment")),
         csfloat_base_url=str(cfg.get("csfloat_base_url", "https://csfloat.com")).rstrip("/"),
         csfloat_timeout_sec=max(5.0, float(cfg.get("csfloat_timeout_sec", 30.0))),
@@ -382,7 +386,7 @@ def fetch_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> di
 
 def load_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dict[str, Any]:
     cache_path = _cache_path(cfg, item)
-    cached = _load_cache(cache_path)
+    cached = _load_cache(cache_path) if cfg.use_cache else None
     if cached and _is_cache_fresh(cached, cfg.cache_ttl_minutes):
         payload = dict(cached)
         payload["source"] = "fresh_cache"
@@ -407,8 +411,9 @@ def load_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dic
         write_json(job_dir / "latest_sales_error.json", {"error": str(exc), "item": item, "at_utc": utc_now_iso()})
         raise
 
-    cache_path.parent.mkdir(parents=True, exist_ok=True)
-    write_json(cache_path, fresh)
+    if cfg.persist_cache:
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        write_json(cache_path, fresh)
     write_json(job_dir / "latest_sales.json", fresh)
     return fresh
 

@@ -57,6 +57,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--list", action="store_true", help="List fixtures and exit.")
     parser.add_argument("--send-telegram", action="store_true", help="Send base alert, plot, and AI note to Telegram.")
     parser.add_argument(
+        "--live-no-cache",
+        action="store_true",
+        help="Force live CSFloat latest-sales fetch with no cache read/write for this lab run.",
+    )
+    parser.add_argument(
         "--latest-sales-json",
         type=Path,
         default=None,
@@ -111,11 +116,21 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def build_lab_enrichment_config(config: dict[str, Any], *, run_dir: Path) -> dict[str, Any]:
+def build_lab_enrichment_config(
+    config: dict[str, Any],
+    *,
+    run_dir: Path,
+    live_no_cache: bool = False,
+) -> dict[str, Any]:
     merged = dict(config.get("alert_enrichment", {}))
     merged["enabled"] = True
     merged["background"] = False
     merged["log_dir"] = str(run_dir / "alert_enrichment")
+    if live_no_cache:
+        merged["cache_ttl_minutes"] = 0.0
+        merged["use_stale_cache_on_error"] = False
+        merged["use_cache"] = False
+        merged["persist_cache"] = False
     return {"alert_enrichment": merged}
 
 
@@ -199,7 +214,10 @@ def main() -> int:
             )
             write_json(run_dir / "telegram_photo.json", photo_result)
 
-    enrich_config = build_lab_enrichment_config(config, run_dir=run_dir)
+    if args.live_no_cache and args.latest_sales_json is not None:
+        raise SystemExit("--live-no-cache and --latest-sales-json are mutually exclusive")
+
+    enrich_config = build_lab_enrichment_config(config, run_dir=run_dir, live_no_cache=args.live_no_cache)
     if args.latest_sales_json is not None:
         seed_manual_latest_sales(
             str(row.get("item") or ""),
