@@ -62,6 +62,20 @@ Important distinction between fast_sale_range_eur and fast_floor_range_eur:
 - Generic floor, weak unrelated floats, or broad item downside should go into fast_floor_range_eur, not fast_sale_range_eur.
 - If fast_sale_range_eur lower bound is below all clean same-zone comps by more than 10%, explain why in range_basis.fast and lower confidence.
 
+Range evidence rules:
+
+- Every sale range bound must be supported by either:
+  1. a clean same-zone comp,
+  2. a nearby worse-float comp,
+  3. an explicit hard-floor / generic-floor argument.
+- If fast_sale_range_eur lower bound is below the lowest clean same-zone comp by more than 5-7%, it must NOT be described as based on same-zone comps.
+- In that case, it belongs in fast_floor_range_eur, not fast_sale_range_eur.
+- If 3+ clean same-zone comps exist and all are above gross_for_minus_15pct, then target_15pct_fast should usually be "yes" unless there is direct same-zone evidence below gross_for_minus_15pct.
+- If fast_sale_range_eur lower bound is below gross_for_minus_15pct, you must cite the specific comp or reason supporting that lower bound.
+- If you cannot cite such evidence, raise fast_sale_range_eur lower bound or move that downside into fast_floor_range_eur.
+- range_basis.fast must explicitly justify the lower bound, not only the general range.
+- range_basis should mention exact prices/floats that justify each range, especially the lower bound.
+
 Risk interpretation:
 - Low downside risk and high liquidity do not automatically mean BUY if the exact float is overpriced.
 - IQR, band risk, and range are diagnostic warnings, not automatic rejects.
