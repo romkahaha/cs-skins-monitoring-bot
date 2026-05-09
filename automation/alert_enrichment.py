@@ -821,10 +821,17 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "fast_net_exit_pct": _coerce_range(parsed.get("fast_net_exit_pct")),
         "realistic_net_exit_pct": _coerce_range(parsed.get("realistic_net_exit_pct")),
         "patient_net_exit_pct": _coerce_range(parsed.get("patient_net_exit_pct")),
+        "range_basis": {"fast": "", "realistic": "", "patient": ""},
         "best_comps": [],
         "risks": [],
         "summary": str(parsed.get("summary") or "").strip(),
     }
+    range_basis = parsed.get("range_basis")
+    if isinstance(range_basis, dict):
+        for key in ("fast", "realistic", "patient"):
+            value = str(range_basis.get(key) or "").strip()
+            if value:
+                result["range_basis"][key] = value
     best_comps = parsed.get("best_comps")
     if isinstance(best_comps, list):
         for entry in best_comps[:3]:
@@ -915,13 +922,32 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
         f"Fast net exit: <code>{html.escape(_fmt_pct_range(note.get('fast_net_exit_pct')))}</code>",
         f"Realistic net exit: <code>{html.escape(_fmt_pct_range(note.get('realistic_net_exit_pct')))}</code>",
         f"Patient net exit: <code>{html.escape(_fmt_pct_range(note.get('patient_net_exit_pct')))}</code>",
-        "",
-        "<b>Breakeven math</b>",
-        f"Gross 0%: <code>{html.escape(_fmt_money(note.get('breakeven_gross_eur')))}</code>",
-        f"Gross -5%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_5pct')))}</code>",
-        f"Gross -10%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_10pct')))}</code>",
-        f"Gross -15%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_15pct')))}</code>",
     ]
+    range_basis = note.get("range_basis") or {}
+    if isinstance(range_basis, dict):
+        fast_basis = str(range_basis.get("fast") or "").strip()
+        realistic_basis = str(range_basis.get("realistic") or "").strip()
+        patient_basis = str(range_basis.get("patient") or "").strip()
+        if fast_basis or realistic_basis or patient_basis:
+            lines.extend(
+                [
+                    "",
+                    "<b>Range basis</b>",
+                    f"Fast: {html.escape(fast_basis or '-')}",
+                    f"Realistic: {html.escape(realistic_basis or '-')}",
+                    f"Patient: {html.escape(patient_basis or '-')}",
+                ]
+            )
+    lines.extend(
+        [
+            "",
+            "<b>Breakeven math</b>",
+            f"Gross 0%: <code>{html.escape(_fmt_money(note.get('breakeven_gross_eur')))}</code>",
+            f"Gross -5%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_5pct')))}</code>",
+            f"Gross -10%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_10pct')))}</code>",
+            f"Gross -15%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_15pct')))}</code>",
+        ]
+    )
     comps = note.get("best_comps") or []
     if comps:
         lines.extend(["", "<b>Relevant comps</b>"])

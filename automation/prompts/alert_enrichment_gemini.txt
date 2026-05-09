@@ -38,6 +38,30 @@ Critical rules:
 - If model fair values disagree strongly, lower confidence.
 - If comps contradict the model, trust comps more.
 
+Range construction rules:
+- Sale ranges must be grounded in the closest clean same-zone float comps.
+- Do not build sale ranges from generic item floor if relevant same-zone comps exist.
+- If there are 3 or more clean same-zone comps, fast_sale_range_eur and realistic_sale_range_eur should mostly stay near those comps.
+- Generic floor is downside context, not normal fast exit, when exact float-zone liquidity is good.
+- For fast_sale_range_eur, use conservative same-zone comps and nearby worse-float comps.
+- For realistic_sale_range_eur, use the central cluster or median area of same-zone comps.
+- For patient_sale_range_eur, use upper same-zone comps and nearby better-float comps.
+- Rank, near-rank, ultra-low, ultra-high, or extreme sales should only influence patient upside if the candidate is comparable. Otherwise mention them only as upside/outliers.
+- Sticker-contaminated sales should not determine sale ranges unless the candidate has comparable sticker/craft value.
+- If a range bound relies on generic floor, outlier, sticker-contaminated sale, or weak evidence, state this in range_basis and lower confidence.
+- fast_sale_range_eur should represent a practical fast exit, not a worst-case liquidation disaster.
+- fast_floor_range_eur may be more conservative than fast_sale_range_eur and can reflect the hard cut price if capital must be freed.
+
+Important distinction between fast_sale_range_eur and fast_floor_range_eur:
+
+- fast_sale_range_eur means a practical quick sale without panic undercutting.
+- fast_floor_range_eur means hard cut / liquidation price if capital must be freed.
+- Do not put liquidation/generic-floor prices into fast_sale_range_eur when same-zone comps are available.
+- If clean same-zone comps exist, fast_sale_range_eur should usually start near the lower clean same-zone comp or nearby worse-float comp.
+- fast_sale_range_eur lower bound should not be below gross_for_minus_15pct unless there is direct same-zone evidence below that threshold or float liquidity is clearly weak.
+- Generic floor, weak unrelated floats, or broad item downside should go into fast_floor_range_eur, not fast_sale_range_eur.
+- If fast_sale_range_eur lower bound is below all clean same-zone comps by more than 10%, explain why in range_basis.fast and lower confidence.
+
 Risk interpretation:
 - Low downside risk and high liquidity do not automatically mean BUY if the exact float is overpriced.
 - IQR, band risk, and range are diagnostic warnings, not automatic rejects.
@@ -53,6 +77,7 @@ target_15pct_fast:
 - "yes" if fast_sale_range lower bound >= gross_for_minus_15pct.
 - "maybe" if fast sale likely around the -15% threshold but comps are mixed.
 - "no" if fast exit likely falls below gross_for_minus_15pct.
+- If same-zone clean comps are all above gross_for_minus_15pct and float_liquidity is medium/high, target_15pct_fast should usually be "yes", unless there is clear evidence that quick exits require generic-floor pricing.
 
 Return valid JSON only:
 {
@@ -63,29 +88,41 @@ Return valid JSON only:
   "float_liquidity": "low|medium|high",
   "model_agreement": "strong|mixed|divergent",
   "target_15pct_fast": "yes|maybe|no",
+
   "breakeven_gross_eur": number|null,
   "gross_for_minus_5pct": number|null,
   "gross_for_minus_10pct": number|null,
   "gross_for_minus_15pct": number|null,
+
   "fast_sale_range_eur": [number, number]|null,
   "realistic_sale_range_eur": [number, number]|null,
   "patient_sale_range_eur": [number, number]|null,
   "start_listing_range_eur": [number, number]|null,
   "fast_floor_range_eur": [number, number]|null,
+
   "fast_net_exit_pct": [number, number]|null,
   "realistic_net_exit_pct": [number, number]|null,
   "patient_net_exit_pct": [number, number]|null,
+
+  "range_basis": {
+    "fast": "string",
+    "realistic": "string",
+    "patient": "string"
+  },
+
   "best_comps": [
     {"price_eur": number|null, "float_value": number|null, "paint_seed": number|null, "why": string}
   ],
+
   "risks": [string],
-  "summary": string
+  "summary": "string"
 }
 
 Limits:
 - best_comps: max 3.
 - risks: max 3.
 - summary: 2-4 concise sentences.
+- range_basis fields should be concise but explicit.
 - In summary mention: item risk, general liquidity, exact float liquidity, model agreement, and whether quick -15% exit is protected.
 
 INPUT_JSON:
