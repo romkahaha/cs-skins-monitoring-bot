@@ -421,18 +421,55 @@ def _num(value: Any) -> float | None:
     return out if math.isfinite(out) else None
 
 
+def _pct_or_none(value: float | None) -> float | None:
+    return None if value is None or not math.isfinite(value) else value * 100.0
+
+
+def _net_exit_pct(gross_sale_eur: float | None, steam_ask: float | None, *, fee_pct: float) -> float | None:
+    if gross_sale_eur is None or steam_ask is None or steam_ask <= 0:
+        return None
+    return ((gross_sale_eur * (1.0 - fee_pct) / steam_ask) - 1.0) * 100.0
+
+
+def _gross_target(steam_ask: float | None, target_net_pct: float, *, fee_pct: float) -> float | None:
+    if steam_ask is None or steam_ask <= 0 or fee_pct >= 1.0:
+        return None
+    return steam_ask * (1.0 + target_net_pct / 100.0) / (1.0 - fee_pct)
+
+
+def _dispersion_pct(values: list[float | None]) -> float | None:
+    clean = [float(v) for v in values if v is not None and math.isfinite(float(v))]
+    if len(clean) < 2:
+        return None
+    mean = sum(clean) / len(clean)
+    if not math.isfinite(mean) or mean <= 0:
+        return None
+    return ((max(clean) - min(clean)) / mean) * 100.0
+
+
 def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
+    steam_ask = _num(row.get("ask"))
+    smooth_fair = _num(row.get("pred_smooth_eur"))
+    segmented_fair = _num(row.get("pred_segmented_eur"))
+    hybrid_fair = _num(row.get("pred_hybrid_eur"))
+    smooth_disc_fair = _num(row.get("pred_smooth_eur_disc"))
+    segmented_disc_fair = _num(row.get("pred_segmented_eur_disc"))
+    hybrid_disc_fair = _num(row.get("pred_hybrid_eur_disc"))
     return {
         "item": row.get("item"),
         "listing_id": row.get("listing_id"),
-        "ask_eur": row.get("ask"),
+        "steam_ask": steam_ask,
         "float_value": row.get("float_value"),
         "paint_seed": row.get("paint_seed"),
         "hybrid_disc_spread": row.get("spread_hybrid_disc"),
-        "hybrid_fair_eur": row.get("pred_hybrid_eur"),
-        "hybrid_disc_fair_eur": row.get("pred_hybrid_eur_disc"),
-        "smooth_disc_fair_eur": row.get("pred_smooth_eur_disc"),
-        "segmented_disc_fair_eur": row.get("pred_segmented_eur_disc"),
+        "smooth_fair_eur": smooth_fair,
+        "segmented_fair_eur": segmented_fair,
+        "hybrid_fair_eur": hybrid_fair,
+        "smooth_disc_fair_eur": smooth_disc_fair,
+        "segmented_disc_fair_eur": segmented_disc_fair,
+        "hybrid_disc_fair_eur": hybrid_disc_fair,
+        "model_fair_dispersion_pct": _dispersion_pct([smooth_fair, segmented_fair, hybrid_fair]),
+        "model_disc_dispersion_pct": _dispersion_pct([smooth_disc_fair, segmented_disc_fair, hybrid_disc_fair]),
         "continuity_ratio": row.get("continuity_ratio"),
         "steam_sales_7d_n": row.get("steam_sales_7d_n"),
         "steam_sales_7d_downside_risk_pct": row.get("steam_sales_7d_downside_risk%"),
@@ -447,6 +484,10 @@ def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
         "steam_daily_downside_14d_pct": row.get("steam_daily_downside_14d_pct"),
         "steam_sales_7d_iqr_risk_pct": row.get("steam_sales_7d_iqr_risk%"),
         "steam_sales_7d_band_risk_pct": row.get("steam_sales_7d_band_risk%"),
+        "breakeven_gross_eur": _gross_target(steam_ask, 0.0, fee_pct=0.02),
+        "gross_for_minus_5pct": _gross_target(steam_ask, -5.0, fee_pct=0.02),
+        "gross_for_minus_10pct": _gross_target(steam_ask, -10.0, fee_pct=0.02),
+        "gross_for_minus_15pct": _gross_target(steam_ask, -15.0, fee_pct=0.02),
     }
 
 
@@ -529,6 +570,33 @@ def _coerce_range(value: Any) -> list[float] | None:
 def _coerce_label(value: Any, allowed: set[str], default: str) -> str:
     text = str(value or "").strip().lower()
     return text if text in allowed else default
+
+
+def _post_validate_note(note: dict[str, Any]) -> dict[str, Any]:
+    out = dict(note)
+    verdict = str(out.get("verdict") or "MAYBE").upper()
+    confidence = str(out.get("confidence") or "medium").lower()
+    target_15 = str(out.get("target_15pct_fast") or "maybe").lower()
+    float_liq = str(out.get("float_liquidity") or "medium").lower()
+    model_agreement = str(out.get("model_agreement") or "mixed").lower()
+    risk_level = str(out.get("risk_level") or "medium").lower()
+    fast_sale_range = out.get("fast_sale_range_eur")
+    gross_for_minus_15 = _num(out.get("gross_for_minus_15pct"))
+
+    if verdict == "BUY" and target_15 != "yes":
+        verdict = "MAYBE"
+    if verdict == "BUY" and float_liq == "low":
+        verdict = "MAYBE"
+    if verdict == "BUY" and model_agreement == "divergent" and confidence != "high":
+        verdict = "MAYBE"
+    if verdict == "BUY" and risk_level == "high":
+        verdict = "MAYBE"
+    if verdict == "BUY" and isinstance(fast_sale_range, list) and len(fast_sale_range) == 2 and gross_for_minus_15 is not None:
+        fast_low = _num(fast_sale_range[0])
+        if fast_low is not None and fast_low < gross_for_minus_15:
+            verdict = "MAYBE"
+    out["verdict"] = verdict
+    return out
 
 
 def _call_gemini_once(
@@ -636,9 +704,9 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "patient_sale_range_eur": _coerce_range(parsed.get("patient_sale_range_eur")),
         "start_listing_range_eur": _coerce_range(parsed.get("start_listing_range_eur")),
         "fast_floor_range_eur": _coerce_range(parsed.get("fast_floor_range_eur")),
-        "fast_spread_range_pct": _coerce_range(parsed.get("fast_spread_range_pct")),
-        "realistic_spread_range_pct": _coerce_range(parsed.get("realistic_spread_range_pct")),
-        "patient_spread_range_pct": _coerce_range(parsed.get("patient_spread_range_pct")),
+        "fast_net_exit_pct": _coerce_range(parsed.get("fast_net_exit_pct")),
+        "realistic_net_exit_pct": _coerce_range(parsed.get("realistic_net_exit_pct")),
+        "patient_net_exit_pct": _coerce_range(parsed.get("patient_net_exit_pct")),
         "best_comps": [],
         "risks": [],
         "summary": str(parsed.get("summary") or "").strip(),
@@ -659,6 +727,16 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
     risks = parsed.get("risks")
     if isinstance(risks, list):
         result["risks"] = [str(entry).strip() for entry in risks[:3] if str(entry).strip()]
+    for key_prefix in ("fast", "realistic", "patient"):
+        if result.get(f"{key_prefix}_net_exit_pct") is None:
+            sale_range = result.get(f"{key_prefix}_sale_range_eur")
+            if isinstance(sale_range, list) and len(sale_range) == 2:
+                ask = _num(row.get("ask"))
+                lo = _net_exit_pct(_num(sale_range[0]), ask, fee_pct=cfg.fee_pct)
+                hi = _net_exit_pct(_num(sale_range[1]), ask, fee_pct=cfg.fee_pct)
+                if lo is not None and hi is not None:
+                    result[f"{key_prefix}_net_exit_pct"] = [lo, hi]
+    result = _post_validate_note(result)
     write_json(job_dir / "gemini_result.json", result)
     return result
 
@@ -720,9 +798,9 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
         f"Patient: <code>{html.escape(_fmt_range(note.get('patient_sale_range_eur')))}</code>",
         f"Start listing: <code>{html.escape(_fmt_range(note.get('start_listing_range_eur')))}</code>",
         f"Fast floor: <code>{html.escape(_fmt_range(note.get('fast_floor_range_eur')))}</code>",
-        f"Fast spread: <code>{html.escape(_fmt_pct_range(note.get('fast_spread_range_pct')))}</code>",
-        f"Realistic spread: <code>{html.escape(_fmt_pct_range(note.get('realistic_spread_range_pct')))}</code>",
-        f"Patient spread: <code>{html.escape(_fmt_pct_range(note.get('patient_spread_range_pct')))}</code>",
+        f"Fast net exit: <code>{html.escape(_fmt_pct_range(note.get('fast_net_exit_pct')))}</code>",
+        f"Realistic net exit: <code>{html.escape(_fmt_pct_range(note.get('realistic_net_exit_pct')))}</code>",
+        f"Patient net exit: <code>{html.escape(_fmt_pct_range(note.get('patient_net_exit_pct')))}</code>",
         "",
         "<b>Breakeven math</b>",
         f"Gross 0%: <code>{html.escape(_fmt_money(note.get('breakeven_gross_eur')))}</code>",
