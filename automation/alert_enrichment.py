@@ -13,6 +13,7 @@ import subprocess
 import sys
 import time
 import urllib.parse
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -29,6 +30,9 @@ DEFAULT_USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/136.0.0.0 Safari/537.36"
 )
+
+FRANKFURTER_LATEST = "https://api.frankfurter.app/latest"
+ECB_DAILY_XML = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
 
 
 @dataclass(frozen=True)
@@ -313,7 +317,36 @@ def _is_cache_fresh(payload: dict[str, Any], ttl_minutes: float) -> bool:
     return age is not None and age <= max(0.0, ttl_minutes)
 
 
-def _normalize_latest_sale(row: dict[str, Any]) -> dict[str, Any]:
+def fetch_usd_to_eur_multiplier(*, user_agent: str, timeout_sec: float) -> tuple[float, str]:
+    err_ff: Exception | None = None
+    try:
+        response = requests.get(
+            FRANKFURTER_LATEST,
+            params={"from": "USD", "to": "EUR"},
+            timeout=timeout_sec,
+            headers={"User-Agent": user_agent},
+        )
+        response.raise_for_status()
+        payload = response.json()
+        multiplier = float(payload["rates"]["EUR"])
+        day = payload.get("date", "?")
+        return multiplier, f"Frankfurter {day} (ECB)"
+    except Exception as exc:
+        err_ff = exc
+    response = requests.get(ECB_DAILY_XML, timeout=timeout_sec, headers={"User-Agent": user_agent})
+    response.raise_for_status()
+    root = ET.fromstring(response.content)
+    usd_per_1_eur: float | None = None
+    for elem in root.iter():
+        if elem.attrib.get("currency") == "USD":
+            usd_per_1_eur = float(elem.attrib["rate"])
+            break
+    if usd_per_1_eur is None or usd_per_1_eur <= 0:
+        raise RuntimeError(f"USD->EUR: Frankfurter failed ({err_ff!r}); ECB fallback has no USD rate")
+    return 1.0 / usd_per_1_eur, "ECB eurofxref-daily.xml (fallback)"
+
+
+def _normalize_latest_sale(row: dict[str, Any], *, fx_usd_to_eur: float, fx_source: str) -> dict[str, Any]:
     item = row.get("item")
     item_payload = item if isinstance(item, dict) else {}
     stickers = item_payload.get("stickers")
@@ -343,10 +376,25 @@ def _normalize_latest_sale(row: dict[str, Any]) -> dict[str, Any]:
         notes.append(f"blue_gem {blue_gem}")
     if sticker_names:
         notes.append(f"{len(sticker_names)} stickers")
+    price_usd = None
+    price_eur = None
+    raw_price = row.get("price")
+    try:
+        price_minor = float(raw_price)
+    except Exception:
+        pass
+    else:
+        if math.isfinite(price_minor):
+            price_usd = round(price_minor / 100.0, 2)
+            price_eur = round(price_usd * float(fx_usd_to_eur), 2)
     return {
         "sale_id": _json_safe(row.get("id")),
         "sold_at": _json_safe(row.get("sold_at")),
-        "price_eur": _json_safe(row.get("price")),
+        "price_usd": price_usd,
+        "price_eur": price_eur,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": _json_safe(fx_usd_to_eur),
+        "fx_source": fx_source,
         "float_value": _json_safe(item_payload.get("float_value")),
         "paint_seed": _json_safe(item_payload.get("paint_seed")),
         "stickers": sticker_names[:5],
@@ -356,6 +404,10 @@ def _normalize_latest_sale(row: dict[str, Any]) -> dict[str, Any]:
 
 def fetch_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dict[str, Any]:
     url = f"{cfg.csfloat_base_url}/api/v1/history/{urllib.parse.quote(item, safe='')}/sales"
+    fx_usd_to_eur, fx_source = fetch_usd_to_eur_multiplier(
+        user_agent=cfg.user_agent,
+        timeout_sec=cfg.csfloat_timeout_sec,
+    )
     response = requests.get(
         url,
         headers={
@@ -390,7 +442,11 @@ def fetch_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> di
         rows_raw = []
     if not isinstance(rows_raw, list):
         raise RuntimeError("CSFloat latest-sales payload shape is not a list")
-    rows = [_normalize_latest_sale(entry) for entry in rows_raw if isinstance(entry, dict)]
+    rows = [
+        _normalize_latest_sale(entry, fx_usd_to_eur=fx_usd_to_eur, fx_source=fx_source)
+        for entry in rows_raw
+        if isinstance(entry, dict)
+    ]
     rows = rows[: cfg.max_sales_rows]
     if not rows:
         raise RuntimeError("CSFloat latest-sales returned no sales rows")
@@ -401,6 +457,9 @@ def fetch_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> di
         "url": url,
         "fetched_at_utc": utc_now_iso(),
         "raw_row_count": len(rows_raw),
+        "reference_currency": "USD",
+        "fx_usd_to_eur": fx_usd_to_eur,
+        "fx_source": fx_source,
         "sales_rows": rows,
     }
 
