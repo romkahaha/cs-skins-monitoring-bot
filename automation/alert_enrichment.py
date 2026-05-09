@@ -37,6 +37,7 @@ class EnrichmentConfig:
     background: bool
     provider: str
     gemini_model: str
+    prompt_template_path: Path
     fee_pct: float
     max_sales_rows: int
     cache_ttl_minutes: float
@@ -74,6 +75,10 @@ def load_enrichment_config(config: dict[str, Any], *, root: Path | None = None) 
         background=bool(cfg.get("background", True)),
         provider=str(cfg.get("provider", "gemini")).strip() or "gemini",
         gemini_model=str(cfg.get("gemini_model", "gemini-2.5-flash")).strip() or "gemini-2.5-flash",
+        prompt_template_path=_resolve_path(
+            base_root,
+            cfg.get("prompt_template_path", "automation/prompts/alert_enrichment_gemini.txt"),
+        ),
         fee_pct=float(cfg.get("fee_pct", 0.02)),
         max_sales_rows=max(1, int(cfg.get("max_sales_rows", 30))),
         cache_ttl_minutes=max(0.0, float(cfg.get("cache_ttl_minutes", 15.0))),
@@ -445,14 +450,10 @@ def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> str:
-    payload = {
-        "fee_pct": cfg.fee_pct,
-        "alert": _compact_alert_payload(row),
-        "latest_sales_source": latest_sales.get("source"),
-        "latest_sales_count": len(latest_sales.get("sales_rows") or []),
-        "latest_sales": latest_sales.get("sales_rows") or [],
-    }
+def _load_prompt_template(cfg: EnrichmentConfig) -> str:
+    path = cfg.prompt_template_path
+    if path.is_file():
+        return path.read_text(encoding="utf-8")
     return (
         "You are a careful CS2 skins trading assistant. "
         "Be conservative and do not hype trades. "
@@ -477,8 +478,20 @@ def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enric
         "}\n\n"
         "Keep best_comps to at most 3 entries and risks to at most 3 entries. "
         "Use only the given data. If something is unclear, say so briefly in summary.\n\n"
-        f"INPUT_JSON:\n{json.dumps(payload, ensure_ascii=False, separators=(',', ':'))}"
+        "INPUT_JSON:\n__INPUT_JSON__"
     )
+
+
+def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> str:
+    payload = {
+        "fee_pct": cfg.fee_pct,
+        "alert": _compact_alert_payload(row),
+        "latest_sales_source": latest_sales.get("source"),
+        "latest_sales_count": len(latest_sales.get("sales_rows") or []),
+        "latest_sales": latest_sales.get("sales_rows") or [],
+    }
+    template = _load_prompt_template(cfg)
+    return template.replace("__INPUT_JSON__", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
 
 
 def _strip_json_fence(text: str) -> str:

@@ -171,6 +171,7 @@ def monitoring_defaults() -> dict[str, Any]:
             "background": True,
             "provider": "gemini",
             "gemini_model": "gemini-2.5-flash",
+            "prompt_template_path": str(root / "automation" / "prompts" / "alert_enrichment_gemini.txt"),
             "fee_pct": 0.02,
             "max_sales_rows": 30,
             "cache_ttl_minutes": 15.0,
