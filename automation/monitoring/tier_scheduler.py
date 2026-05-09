@@ -93,6 +93,18 @@ def batch_sizes_from_config(config: dict[str, Any], *, default_batch_size: int) 
     return out
 
 
+def listing_caps_from_config(config: dict[str, Any], *, default_max_listings: int) -> dict[str, int]:
+    raw = config.get("cycle", {}).get("tiers", {}).get("max_listings_per_item", {})
+    out: dict[str, int] = {}
+    for tier in TIER_ORDER:
+        value = raw.get(tier, default_max_listings)
+        try:
+            out[tier] = max(1, int(value))
+        except Exception:
+            out[tier] = max(1, int(default_max_listings))
+    return out
+
+
 def load_tier_items(item_paths: dict[str, Path]) -> dict[str, list[str]]:
     out: dict[str, list[str]] = {}
     for tier, path in item_paths.items():

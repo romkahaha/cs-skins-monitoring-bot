@@ -54,12 +54,22 @@ def _load_steam_scm_listings(repo_root: Path):
     return module
 
 
-def _apply_steam_scm_config(module, monitoring_cfg: dict, steam_scm_cfg: dict) -> None:
+def _apply_steam_scm_config(
+    module,
+    monitoring_cfg: dict,
+    steam_scm_cfg: dict,
+    *,
+    max_listings_override: int | None = None,
+) -> None:
     config = getattr(module, "CONFIG", None)
     if not isinstance(config, dict):
         return
 
-    max_listings = steam_scm_cfg.get("max_listings_per_item", monitoring_cfg.get("max_listings_per_item"))
+    max_listings = (
+        max_listings_override
+        if max_listings_override is not None
+        else steam_scm_cfg.get("max_listings_per_item", monitoring_cfg.get("max_listings_per_item"))
+    )
     if max_listings is not None:
         config["max_listings_per_skin"] = int(max_listings)
 
@@ -149,6 +159,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=None,
         help="Output opportunity filter report CSV.",
+    )
+    parser.add_argument(
+        "--max-listings-per-item",
+        type=int,
+        default=None,
+        help="Override max Steam listings depth for this batch.",
     )
     parser.add_argument("--send-telegram", action="store_true", help="Send Telegram alerts after building opportunities.")
     parser.add_argument("--telegram-dry-run", action="store_true", help="Print Telegram messages instead of sending.")
@@ -402,7 +418,14 @@ def main() -> int:
             )
 
         steam_scm_listings = _load_steam_scm_listings(repo_root)
-        _apply_steam_scm_config(steam_scm_listings, monitoring_cfg, steam_scm_cfg)
+        _apply_steam_scm_config(
+            steam_scm_listings,
+            monitoring_cfg,
+            steam_scm_cfg,
+            max_listings_override=args.max_listings_per_item,
+        )
+        if args.max_listings_per_item is not None:
+            print(f"steam depth override: max_listings_per_item={int(args.max_listings_per_item)}")
         listings_path, listing_errors, listings_df = steam_scm_listings.run_batch_to_csv(
             batch,
             out_csv=listings_out_csv,

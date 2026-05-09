@@ -91,11 +91,11 @@ def monitoring_defaults() -> dict[str, Any]:
             "max_listings_per_item": 200,
             "fail_if_all_listing_fetches_error": True,
         },
-        "cycle": {
-            "enabled": True,
-            "batch_size": None,
-            "cycle_sleep_sec": 600.0,
-            "recoverable_error_sleep_sec": 5400.0,
+            "cycle": {
+                "enabled": True,
+                "batch_size": None,
+                "cycle_sleep_sec": 600.0,
+                "recoverable_error_sleep_sec": 5400.0,
             "commit_runtime": True,
             "commit_every_batches": 5,
             "max_runtime_minutes": 330.0,
@@ -103,16 +103,21 @@ def monitoring_defaults() -> dict[str, Any]:
             "max_cycles_per_run": None,
             "respect_active_window": True,
             "checkpoint_message": "Update monitoring runtime [skip ci]",
-            "tiers": {
-                "enabled": True,
-                "queue_pattern": ["A", "A", "B", "A", "A", "B", "C"],
-                "batch_sizes": {
-                    "A": 5,
-                    "B": 5,
-                    "C": 5,
+                "tiers": {
+                    "enabled": True,
+                    "queue_pattern": ["A", "A", "B", "A", "A", "B", "C"],
+                    "batch_sizes": {
+                        "A": 5,
+                        "B": 5,
+                        "C": 5,
+                    },
+                    "max_listings_per_item": {
+                        "A": 100,
+                        "B": 200,
+                        "C": 200,
+                    },
                 },
             },
-        },
         "steam_scm": {
             "listings_per_request": 100,
             "max_listings_per_item": 200,

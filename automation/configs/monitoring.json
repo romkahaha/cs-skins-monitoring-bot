@@ -48,7 +48,21 @@
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
     "respect_active_window": false,
-    "checkpoint_message": "Update monitoring runtime [skip ci]"
+    "checkpoint_message": "Update monitoring runtime [skip ci]",
+    "tiers": {
+      "enabled": true,
+      "queue_pattern": ["A", "A", "B", "A", "A", "B", "C"],
+      "batch_sizes": {
+        "A": 5,
+        "B": 5,
+        "C": 5
+      },
+      "max_listings_per_item": {
+        "A": 100,
+        "B": 200,
+        "C": 200
+      }
+    }
   },
   "steam_scm": {
     "listings_per_request": 100,

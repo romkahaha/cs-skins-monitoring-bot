@@ -26,6 +26,7 @@ from automation.monitoring.runtime_integrity import ensure_monitor_runtime_integ
 from automation.monitoring.tier_scheduler import (
     alert_state_json_from_config,
     batch_sizes_from_config,
+    listing_caps_from_config,
     load_scheduler_state,
     load_tier_items,
     mark_scheduler_run_finished,
@@ -172,6 +173,7 @@ def batch_command(
     monitor_items_py: Path | None = None,
     state_json: Path | None = None,
     alert_state_json: Path | None = None,
+    max_listings_per_item: int | None = None,
 ) -> list[str]:
     cmd = [
         sys.executable,
@@ -189,6 +191,8 @@ def batch_command(
         cmd.extend(["--state-json", str(state_json)])
     if alert_state_json is not None:
         cmd.extend(["--alert-state-json", str(alert_state_json)])
+    if max_listings_per_item is not None:
+        cmd.extend(["--max-listings-per-item", str(max_listings_per_item)])
     if telegram_mode == "real":
         cmd.append("--send-telegram")
     elif telegram_mode == "dry-run":
@@ -298,6 +302,7 @@ def main() -> int:
     config = load_json_config(config_path, monitoring_defaults())
     schedule_cfg = config.get("schedule", {})
     monitoring_cfg = config.get("monitoring", {})
+    steam_scm_cfg = config.get("steam_scm", {})
     cycle_cfg = config.get("cycle", {})
 
     if not bool(monitoring_cfg.get("enabled", True)):
@@ -356,6 +361,10 @@ def main() -> int:
     tier_state_paths = tier_state_paths_from_config(config)
     tier_items: dict[str, list[str]] = {}
     tier_batch_sizes: dict[str, int] = {}
+    default_max_listings = int(
+        steam_scm_cfg.get("max_listings_per_item", monitoring_cfg.get("max_listings_per_item", 200))
+    )
+    tier_listing_caps: dict[str, int] = {}
     if tier_mode_enabled(config):
         tier_items = load_tier_items(tier_item_paths)
         if any(tier_items.values()):
@@ -363,6 +372,7 @@ def main() -> int:
                 use_tiers = True
                 queue_pattern = queue_pattern_from_config(config)
                 tier_batch_sizes = batch_sizes_from_config(config, default_batch_size=batch_size)
+                tier_listing_caps = listing_caps_from_config(config, default_max_listings=default_max_listings)
             else:
                 print("warning: tier files do not match monitor_list_latest.py; falling back to single-list mode")
         else:
@@ -382,13 +392,14 @@ def main() -> int:
         print(
             "tiered monitoring: on "
             f"queue={queue_pattern} "
-            f"A={len(tier_items.get('A', []))}/b{tier_batch_sizes['A']} "
-            f"B={len(tier_items.get('B', []))}/b{tier_batch_sizes['B']} "
-            f"C={len(tier_items.get('C', []))}/b{tier_batch_sizes['C']}"
+            f"A={len(tier_items.get('A', []))}/b{tier_batch_sizes['A']}/d{tier_listing_caps['A']} "
+            f"B={len(tier_items.get('B', []))}/b{tier_batch_sizes['B']}/d{tier_listing_caps['B']} "
+            f"C={len(tier_items.get('C', []))}/b{tier_batch_sizes['C']}/d{tier_listing_caps['C']}"
         )
         print("cycle sleep after queue rounds: skipped in tiered mode")
     else:
         print(f"batch size: {batch_size}")
+        print(f"max listings per item: {default_max_listings}")
         print(f"cycle sleep after full list: {cycle_sleep_sec:.1f}s")
     print(f"telegram mode: {telegram_mode}")
     print(f"runtime checkpoint: {'on' if commit_enabled else 'off'} every {commit_every_batches} batches")
@@ -453,6 +464,7 @@ def main() -> int:
         run_items_path = monitor_items_py
         run_state_path = state_path
         effective_batch_size = batch_size
+        effective_max_listings = default_max_listings
         cycle_boundary_done = False
 
         if use_tiers:
@@ -466,6 +478,7 @@ def main() -> int:
             run_items_path = tier_item_paths[selected_tier]
             run_state_path = tier_state_paths[selected_tier]
             effective_batch_size = tier_batch_sizes[selected_tier]
+            effective_max_listings = tier_listing_caps[selected_tier]
             tier_before = load_state(run_state_path, run_items)
             batch_preview, start_pointer, _ = select_batch(run_items, tier_before, effective_batch_size)
             scheduler_before = mark_scheduler_run_started(
@@ -479,13 +492,18 @@ def main() -> int:
             print(
                 f"\n=== monitoring cycle batch {batches_run + 1} "
                 f"tier={selected_tier} queue_index={queue_index} "
-                f"start_pointer={start_pointer} batch_size={effective_batch_size} ===",
+                f"start_pointer={start_pointer} batch_size={effective_batch_size} "
+                f"max_listings={effective_max_listings} ===",
                 flush=True,
             )
         else:
             before = load_state(run_state_path, run_items)
             start_pointer = int(before.get("batch_pointer") or 0) % len(run_items)
-            print(f"\n=== monitoring cycle batch {batches_run + 1} start_pointer={start_pointer} ===", flush=True)
+            print(
+                f"\n=== monitoring cycle batch {batches_run + 1} "
+                f"start_pointer={start_pointer} max_listings={effective_max_listings} ===",
+                flush=True,
+            )
 
         result = run_cmd(
             batch_command(
@@ -496,6 +514,7 @@ def main() -> int:
                 monitor_items_py=run_items_path,
                 state_json=run_state_path,
                 alert_state_json=alert_state_path,
+                max_listings_per_item=effective_max_listings,
             ),
             root,
             check=False,
