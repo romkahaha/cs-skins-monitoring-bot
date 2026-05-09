@@ -20,6 +20,13 @@ Definitions:
 - gross_for_minus_5pct = steam_ask * 0.95 / 0.98.
 - gross_for_minus_10pct = steam_ask * 0.90 / 0.98.
 - gross_for_minus_15pct = steam_ask * 0.85 / 0.98.
+- In INPUT_JSON, hybrid_disc_spread_pct_of_ask is the old monitoring spread convention:
+  positive means ask is ABOVE discounted fair and therefore worse.
+- In INPUT_JSON, hybrid_disc_edge_pct_of_ask and hybrid_fair_edge_pct_of_ask are the clearer "edge" convention:
+  positive means fair is ABOVE ask and therefore better.
+- In INPUT_JSON, hybrid_disc_gap_pct_of_fair and hybrid_fair_gap_pct_of_fair are fair-relative gaps:
+  positive means fair is ABOVE ask.
+- If these fields disagree, trust the explicit edge/gap fields over the old spread naming.
 
 Evaluation priorities:
 1. Float-specific sales comps.
@@ -76,6 +83,23 @@ Range evidence rules:
 - range_basis.fast must explicitly justify the lower bound, not only the general range.
 - range_basis should mention exact prices/floats that justify each range, especially the lower bound.
 
+Float-zone strictness for fast_sale_range:
+
+- When estimating fast_sale_range, especially the lower bound, use only:
+  1. exact / closest same-zone comps;
+  2. slightly worse-float comps that are still visually and economically near the target;
+  3. if there are not enough close comps, say confidence is low instead of expanding the zone too far.
+- Do NOT use broad high-float / low-float category comps to justify the fast lower bound.
+- For example:
+  - For target float 0.991, comps around 0.985-0.999 may be relevant.
+  - A comp around 0.973 can be used only as a conservative floor warning, not as primary fast-sale evidence.
+  - Comps around 0.77-0.93 are generic/high-float floor evidence, not same-zone fast-sale evidence.
+- Separate the ranges explicitly in your reasoning:
+  - same_zone_fast_sale: based only on close float comps;
+  - conservative_floor: based on broader worse-float comps;
+  - panic_floor: generic floor, used only for worst-case.
+- If the lower bound comes from broader comps, label it as conservative_floor in range_basis, not as same-zone fast-sale evidence.
+
 Risk interpretation:
 - Low downside risk and high liquidity do not automatically mean BUY if the exact float is overpriced.
 - IQR, band risk, and range are diagnostic warnings, not automatic rejects.
@@ -92,6 +116,10 @@ target_15pct_fast:
 - "maybe" if fast sale likely around the -15% threshold but comps are mixed.
 - "no" if fast exit likely falls below gross_for_minus_15pct.
 - If same-zone clean comps are all above gross_for_minus_15pct and float_liquidity is medium/high, target_15pct_fast should usually be "yes", unless there is clear evidence that quick exits require generic-floor pricing.
+- Use same_zone_fast_sale lower bound first.
+- If same_zone_fast_sale lower bound is above the -15% gross threshold, target_15pct_fast should usually be "yes".
+- If only conservative_floor supports the -15% threshold, target_15pct_fast should usually be "maybe".
+- If even conservative_floor is below the -15% threshold, target_15pct_fast should be "no".
 
 Return valid JSON only:
 {
