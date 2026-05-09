@@ -1,6 +1,12 @@
 {
   "fixtures": [
     {
+      "id": "abyssal_apparition_bs",
+      "label": "MP7 | Abyssal Apparition (Battle-Scarred)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T152001_509280Z_p187_pid4182246.csv",
+      "row_index": 0
+    },
+    {
       "id": "poly_mag_fn",
       "label": "M4A4 | Poly Mag (Factory New)",
       "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T141741_356851Z_p210_pid4178007.csv",
@@ -25,9 +31,21 @@
       "row_index": 0
     },
     {
-      "id": "abyssal_apparition_bs",
-      "label": "MP7 | Abyssal Apparition (Battle-Scarred)",
-      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T152001_509280Z_p187_pid4182246.csv",
+      "id": "mp7_fade_mw",
+      "label": "MP7 | Fade (Minimal Wear)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T142711_171931Z_p265_pid4178654.csv",
+      "row_index": 0
+    },
+    {
+      "id": "p90_sand_spray_fn",
+      "label": "P90 | Sand Spray (Factory New)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T145557_291057Z_p82_pid4180416.csv",
+      "row_index": 0
+    },
+    {
+      "id": "five_seven_capillary_fn",
+      "label": "Five-SeveN | Capillary (Factory New)",
+      "source_csv": "automation_runtime/telegram_queue/opportunities_latest_20260505T145758_642003Z_p92_pid4180604.csv",
       "row_index": 0
     }
   ]
