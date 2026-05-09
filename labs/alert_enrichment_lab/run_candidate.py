@@ -62,6 +62,11 @@ def parse_args() -> argparse.Namespace:
         help="Force live CSFloat latest-sales fetch with no cache read/write for this lab run.",
     )
     parser.add_argument(
+        "--github-live",
+        action="store_true",
+        help="Fetch latest sales via the digital_books GitHub Actions runner instead of local CSFloat requests.",
+    )
+    parser.add_argument(
         "--latest-sales-json",
         type=Path,
         default=None,
@@ -121,6 +126,7 @@ def build_lab_enrichment_config(
     *,
     run_dir: Path,
     live_no_cache: bool = False,
+    github_live: bool = False,
 ) -> dict[str, Any]:
     merged = dict(config.get("alert_enrichment", {}))
     merged["enabled"] = True
@@ -131,6 +137,10 @@ def build_lab_enrichment_config(
         merged["use_stale_cache_on_error"] = False
         merged["use_cache"] = False
         merged["persist_cache"] = False
+    github_cfg = dict(merged.get("github_fetch", {}))
+    github_cfg["enabled"] = bool(github_live)
+    github_cfg["required"] = bool(github_live)
+    merged["github_fetch"] = github_cfg
     return {"alert_enrichment": merged}
 
 
@@ -216,8 +226,17 @@ def main() -> int:
 
     if args.live_no_cache and args.latest_sales_json is not None:
         raise SystemExit("--live-no-cache and --latest-sales-json are mutually exclusive")
+    if args.github_live and args.latest_sales_json is not None:
+        raise SystemExit("--github-live and --latest-sales-json are mutually exclusive")
+    if args.live_no_cache and args.github_live:
+        raise SystemExit("--live-no-cache and --github-live are mutually exclusive")
 
-    enrich_config = build_lab_enrichment_config(config, run_dir=run_dir, live_no_cache=args.live_no_cache)
+    enrich_config = build_lab_enrichment_config(
+        config,
+        run_dir=run_dir,
+        live_no_cache=args.live_no_cache,
+        github_live=args.github_live,
+    )
     if args.latest_sales_json is not None:
         seed_manual_latest_sales(
             str(row.get("item") or ""),

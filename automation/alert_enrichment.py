@@ -44,6 +44,13 @@ class EnrichmentConfig:
     use_stale_cache_on_error: bool
     use_cache: bool
     persist_cache: bool
+    github_fetch_enabled: bool
+    github_fetch_required: bool
+    github_fetch_repo_path: Path | None
+    github_fetch_remote_url: str
+    github_fetch_branch: str
+    github_fetch_timeout_sec: float
+    github_fetch_poll_interval_sec: float
     log_dir: Path
     csfloat_base_url: str
     csfloat_timeout_sec: float
@@ -71,7 +78,14 @@ def _resolve_path(root: Path, value: str | Path) -> Path:
 
 def load_enrichment_config(config: dict[str, Any], *, root: Path | None = None) -> EnrichmentConfig:
     cfg = config.get("alert_enrichment", {})
+    github_cfg = cfg.get("github_fetch", {})
+    if not isinstance(github_cfg, dict):
+        github_cfg = {}
     base_root = root or repo_root()
+    github_repo_path_raw = github_cfg.get("repo_path")
+    github_repo_path = None
+    if github_repo_path_raw not in (None, ""):
+        github_repo_path = _resolve_path(base_root, github_repo_path_raw)
     return EnrichmentConfig(
         enabled=bool(cfg.get("enabled", False)),
         background=bool(cfg.get("background", True)),
@@ -87,6 +101,13 @@ def load_enrichment_config(config: dict[str, Any], *, root: Path | None = None) 
         use_stale_cache_on_error=bool(cfg.get("use_stale_cache_on_error", True)),
         use_cache=bool(cfg.get("use_cache", True)),
         persist_cache=bool(cfg.get("persist_cache", True)),
+        github_fetch_enabled=bool(github_cfg.get("enabled", False)),
+        github_fetch_required=bool(github_cfg.get("required", False)),
+        github_fetch_repo_path=github_repo_path,
+        github_fetch_remote_url=str(github_cfg.get("remote_url", "")).strip(),
+        github_fetch_branch=str(github_cfg.get("branch", "main")).strip() or "main",
+        github_fetch_timeout_sec=max(5.0, float(github_cfg.get("timeout_sec", 180.0))),
+        github_fetch_poll_interval_sec=max(1.0, float(github_cfg.get("poll_interval_sec", 5.0))),
         log_dir=_resolve_path(base_root, cfg.get("log_dir", "automation_runtime/alert_enrichment")),
         csfloat_base_url=str(cfg.get("csfloat_base_url", "https://csfloat.com")).rstrip("/"),
         csfloat_timeout_sec=max(5.0, float(cfg.get("csfloat_timeout_sec", 30.0))),
@@ -385,6 +406,35 @@ def fetch_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> di
 
 
 def load_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dict[str, Any]:
+    if cfg.github_fetch_enabled:
+        try:
+            from automation.github_latest_sales import fetch_latest_sales_via_github
+
+            payload = fetch_latest_sales_via_github(
+                item=item,
+                repo_path=cfg.github_fetch_repo_path,
+                remote_url=cfg.github_fetch_remote_url,
+                branch=cfg.github_fetch_branch,
+                timeout_sec=cfg.github_fetch_timeout_sec,
+                poll_interval_sec=cfg.github_fetch_poll_interval_sec,
+                max_sales_rows=cfg.max_sales_rows,
+                job_dir=job_dir,
+            )
+            if cfg.persist_cache:
+                cache_path = _cache_path(cfg, item)
+                cache_path.parent.mkdir(parents=True, exist_ok=True)
+                write_json(cache_path, payload)
+            write_json(job_dir / "latest_sales.json", payload)
+            return payload
+        except Exception as exc:
+            if cfg.github_fetch_required:
+                write_json(job_dir / "latest_sales_error.json", {"error": str(exc), "item": item, "at_utc": utc_now_iso()})
+                raise
+            write_json(
+                job_dir / "latest_sales_github_fallback_error.json",
+                {"error": str(exc), "item": item, "at_utc": utc_now_iso()},
+            )
+
     cache_path = _cache_path(cfg, item)
     cached = _load_cache(cache_path) if cfg.use_cache else None
     if cached and _is_cache_fresh(cached, cfg.cache_ttl_minutes):
