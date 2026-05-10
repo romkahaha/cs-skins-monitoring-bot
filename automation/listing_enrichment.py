@@ -26,6 +26,7 @@ class OpportunityConfig:
 
 DISPLAY_COLUMNS = [
     "item",
+    "tier",
     "listing_id",
     "asset_id",
     "ask",
@@ -84,6 +85,43 @@ def load_items_py(path: Path) -> list[str]:
     if not isinstance(items, list):
         raise ValueError(f"{path} must define ITEMS = [...]")
     return [str(x) for x in items]
+
+
+def _infer_fixed_tier_from_items_py(path: Path | None) -> str | None:
+    if path is None:
+        return None
+    stem = path.stem.lower()
+    if stem.endswith("tier_a"):
+        return "A"
+    if stem.endswith("tier_b"):
+        return "B"
+    if stem.endswith("tier_c"):
+        return "C"
+    return None
+
+
+def load_item_metadata(path: Path | None, items: list[str] | None = None) -> pd.DataFrame | None:
+    if path is None:
+        return None
+    fixed_tier = _infer_fixed_tier_from_items_py(path)
+    if fixed_tier is not None and items:
+        return pd.DataFrame({"item": [str(x) for x in items], "tier": fixed_tier})
+
+    csv_path = path.with_suffix(".csv")
+    if not csv_path.is_file():
+        return None
+    try:
+        meta = pd.read_csv(csv_path, low_memory=False)
+    except pd.errors.EmptyDataError:
+        return None
+    if "item" not in meta.columns:
+        return None
+    keep = [c for c in ["item", "tier", "liquidity_score", "liquidity_rank"] if c in meta.columns]
+    if "item" not in keep or len(keep) == 1:
+        return None
+    meta = meta[keep].copy()
+    meta["item"] = meta["item"].astype(str)
+    return meta.drop_duplicates(subset=["item"], keep="first").reset_index(drop=True)
 
 
 def load_steam_listings(path: Path, items: list[str] | None = None) -> pd.DataFrame:
@@ -287,6 +325,7 @@ def build_enriched_listings(
     cfg: OpportunityConfig = OpportunityConfig(),
 ) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     items = load_items_py(monitor_items_py) if monitor_items_py is not None and monitor_items_py.is_file() else None
+    item_meta = load_item_metadata(monitor_items_py, items)
     listings = load_steam_listings(listings_csv, items)
     base = load_realtime_base(realtime_base_csv)
     risk = load_risk_metrics(risk_csv)
@@ -294,6 +333,10 @@ def build_enriched_listings(
 
     df = listings.merge(base, on="item", how="left", suffixes=("", "_base"))
     df = df.merge(risk, on="item", how="left", suffixes=("", "_risk"))
+    if item_meta is not None and not item_meta.empty:
+        meta_cols = [c for c in item_meta.columns if c != "item" and c not in df.columns]
+        if meta_cols:
+            df = df.merge(item_meta[["item", *meta_cols]], on="item", how="left")
     df = add_model_predictions(df, fit_payload)
     df, report = apply_opportunity_flags(df, cfg)
 
