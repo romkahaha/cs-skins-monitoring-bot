@@ -334,6 +334,7 @@ def format_alert(row: pd.Series) -> str:
         f"Ask: <code>{html.escape(fmt_money(row.get('ask')))}</code>",
         f"Float: <code>{html.escape(fmt_float(row.get('float_value')))}</code>",
         f"Seed: <code>{html.escape(fmt_seed(row.get('paint_seed')))}</code>",
+        f"Tier: <code>{html.escape(str(row.get('tier') or '-'))}</code>",
         f"Listing ID: <code>{html.escape(str(row.get('listing_id') or '-'))}</code>",
         "",
         "<b>Model table</b>",
