@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "36f2b72815649b53cf13867a63e30409bae3d9aa85684f1a1a9f949871045c9a",
-  "items_count": 317,
-  "queue_signature": "7cab378ccb697769fe4d0a155c5ea7f5e41163f3aa308e74d4a855897e8fa29b",
+  "items_signature": "cbe469370a3a0324dd93c20941e477f4ab13ed050d6adbe4dc04a41904592289",
+  "items_count": 267,
+  "queue_signature": "cb0b5bf0ad8955dcd792fffbc328d2fc9ee4f8722ab3542af476f70e57df6a78",
   "queue_pattern": [
     "A",
     "A",
@@ -16,39 +16,43 @@
   "queue_pointer": 5,
   "last_tier": "B",
   "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 65,
+  "last_batch_start_pointer": 75,
   "last_batch_items": [
-    "P250 | Asiimov (Field-Tested)",
-    "Galil AR | Connexion (Factory New)",
-    "M4A1-S | Nightmare (Battle-Scarred)",
-    "P250 | Nevermore (Factory New)",
-    "MP7 | Fade (Field-Tested)"
+    "Desert Eagle | Crimson Web (Field-Tested)",
+    "M4A4 | Tooth Fairy (Factory New)",
+    "P2000 | Amber Fade (Factory New)",
+    "MAG-7 | Justice (Field-Tested)",
+    "P90 | Wave Breaker (Factory New)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 P250 | Asiimov (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P250%20%7C%20Asiimov%20%28Field-Tested%29/render/?query=&start=100&count=100&currency=3&language=english&format=json",
-  "last_run_at_utc": "2026-05-10T20:12:46.995170+00:00",
-  "last_finished_at_utc": "2026-05-10T20:12:54.016222+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-10T20:12:46.993306+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-10T20:12:54.016222+00:00",
-  "last_status": "error",
-  "consecutive_errors": 1,
+  "last_error": null,
+  "last_run_at_utc": "2026-05-11T07:18:41.162029+00:00",
+  "last_finished_at_utc": "2026-05-11T07:18:41.157777+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-11T07:18:41.157777+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "last_status": "running",
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 800,
+  "last_listing_rows": 966,
+  "last_enriched_rows": 966,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 380093
+  },
   "tiers": {
     "A": {
-      "items_signature": "ecf81787be0f22e21c15e248536e118eca2097109d07e93b47a9169eac663bea",
-      "items_count": 63
+      "items_signature": "5aab62369f65fbb0fed306b087b8d5d40197716d33bad6b461f64cb042314ab8",
+      "items_count": 53
     },
     "B": {
-      "items_signature": "d29016f908e9d2ec18fa78cc51bbfa4e29c0eb4fc478b21ac656b21382d79db1",
-      "items_count": 95
+      "items_signature": "c0ed3a8be1fb380652a6d91833d97527eb7b8d81f5bd27fcef0914879bef1197",
+      "items_count": 80
     },
     "C": {
-      "items_signature": "99ffd45143e3284e88f40f165aa34d42704f195ae681ebd635c687434764d6d1",
-      "items_count": 159
+      "items_signature": "d94cedb80a27b8055fd8720615913df7dad3d15b78274f0a307a49d522c99a19",
+      "items_count": 134
     }
   }
 }
