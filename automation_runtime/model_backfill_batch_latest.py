@@ -3,5 +3,5 @@
 # N_OUTPUT_ITEMS = 1
 
 ITEMS = [
-    "UMP-45 | K.O. Factory (Factory New)",
+    "P90 | Module (Factory New)",
 ]
