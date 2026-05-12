@@ -39,6 +39,13 @@ Comp interpretation:
   if the user bought now at steam_ask and later sold at that comp gross sale price with 2% fee, what net_exit_pct would that imply?
 - Use those realized comp outcomes to judge whether the candidate protects quick -15%, supports around -10%, or is closer to breakeven / profit.
 - A comp can be close in float but still weak if its realized net exit versus the current ask is too negative.
+- INPUT_JSON also contains precomputed comp_buckets:
+  same_zone_clean, near_worse_float, better_float_upside, generic_floor, possible_outliers.
+- Prefer these precomputed buckets over manually scanning raw latest_sales.
+- Use same_zone_clean first for fast_sale reasoning.
+- Use near_worse_float as conservative but still relevant downside context.
+- Use generic_floor for hard-floor / panic thinking, not as primary fast-sale evidence when same-zone comps exist.
+- Use possible_outliers only as upside/outlier context unless there is a strong reason they are truly comparable.
 
 Critical rules:
 - Do not judge only the item as a whole. Judge the exact candidate float zone.
@@ -171,6 +178,7 @@ Limits:
 - risks: max 3.
 - summary: 2-4 concise sentences.
 - range_basis fields should be concise but explicit.
+- In best_comps.why, explain relevance only. Do not restate realized net-exit numbers; those are displayed separately.
 - In summary mention: item risk, general liquidity, exact float liquidity, model agreement, and whether quick -15% exit is protected.
 
 INPUT_JSON:

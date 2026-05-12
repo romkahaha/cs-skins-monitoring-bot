@@ -575,6 +575,7 @@ def _dispersion_pct(values: list[float | None]) -> float | None:
 
 def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
     steam_ask = _num(row.get("ask"))
+    item = str(row.get("item") or "").strip()
     smooth_fair = _num(row.get("pred_smooth_eur"))
     segmented_fair = _num(row.get("pred_segmented_eur"))
     hybrid_fair = _num(row.get("pred_hybrid_eur"))
@@ -583,9 +584,11 @@ def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
     hybrid_disc_fair = _num(row.get("pred_hybrid_eur_disc"))
     hybrid_disc_spread = _num(row.get("spread_hybrid_disc"))
     return {
-        "item": row.get("item"),
+        "item": item,
         "listing_id": row.get("listing_id"),
         "steam_ask": steam_ask,
+        "tier": row.get("tier"),
+        "item_exterior": _item_exterior(item),
         "float_value": row.get("float_value"),
         "paint_seed": row.get("paint_seed"),
         "hybrid_disc_spread": hybrid_disc_spread,
@@ -623,6 +626,220 @@ def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _item_exterior(item: str) -> str | None:
+    text = str(item or "").strip()
+    if not text.endswith(")") or "(" not in text:
+        return None
+    return text.rsplit("(", 1)[-1].rstrip(")").strip() or None
+
+
+def _float_bucket_mode(candidate_float: float | None, exterior: str | None) -> tuple[str, float, float]:
+    if candidate_float is None:
+        return "unknown", 0.03, 0.06
+    ext = str(exterior or "").strip().lower()
+    f = float(candidate_float)
+    if ext == "battle-scarred":
+        if f >= 0.985:
+            return "high_float_extreme", 0.010, 0.025
+        if f >= 0.95:
+            return "high_float", 0.020, 0.050
+        return "battle_scarred_general", 0.035, 0.080
+    if ext == "factory new":
+        if f <= 0.01:
+            return "low_float_extreme", 0.004, 0.010
+        if f <= 0.03:
+            return "low_float", 0.008, 0.020
+        return "factory_new_general", 0.020, 0.050
+    if f <= 0.10:
+        return "low_float", 0.012, 0.030
+    if f >= 0.90:
+        return "high_float", 0.020, 0.050
+    return "mid_float", 0.030, 0.060
+
+
+def _better_worse_direction(candidate_float: float | None, comp_float: float | None) -> tuple[str, float | None]:
+    if candidate_float is None or comp_float is None:
+        return "unknown", None
+    target_edge = 1.0 if float(candidate_float) >= 0.5 else 0.0
+    cand_dist = abs(float(candidate_float) - target_edge)
+    comp_dist = abs(float(comp_float) - target_edge)
+    if abs(comp_dist - cand_dist) < 1e-12:
+        return "same", 0.0
+    if comp_dist < cand_dist:
+        return "better", cand_dist - comp_dist
+    return "worse", comp_dist - cand_dist
+
+
+def _quantile(sorted_values: list[float], q: float) -> float:
+    if not sorted_values:
+        raise ValueError("empty values")
+    idx = (len(sorted_values) - 1) * q
+    lo = int(math.floor(idx))
+    hi = int(math.ceil(idx))
+    if lo == hi:
+        return sorted_values[lo]
+    frac = idx - lo
+    return sorted_values[lo] * (1.0 - frac) + sorted_values[hi] * frac
+
+
+def _bucket_view(sale: dict[str, Any], *, steam_ask: float | None, candidate_float: float | None) -> dict[str, Any]:
+    comp_float = _num(sale.get("float_value"))
+    direction, edge_delta = _better_worse_direction(candidate_float, comp_float)
+    stickers = sale.get("stickers") if isinstance(sale.get("stickers"), list) else []
+    notes = sale.get("notes") if isinstance(sale.get("notes"), list) else []
+    return {
+        "price_eur": _num(sale.get("price_eur")),
+        "float_value": comp_float,
+        "paint_seed": _num(sale.get("paint_seed")),
+        "sold_at": sale.get("sold_at"),
+        "realized_net_exit_pct": _net_exit_pct(_num(sale.get("price_eur")), steam_ask, fee_pct=0.02),
+        "float_delta_abs": None if comp_float is None or candidate_float is None else abs(comp_float - candidate_float),
+        "direction_vs_candidate": direction,
+        "edge_distance_delta": edge_delta,
+        "stickers": stickers[:5],
+        "notes": notes[:5],
+        "contaminated": bool(stickers or notes),
+        "outlier": bool(sale.get("_outlier")),
+        "bucket_reason": sale.get("_bucket_reason"),
+    }
+
+
+def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> dict[str, Any]:
+    candidate_float = _num(row.get("float_value"))
+    steam_ask = _num(row.get("ask"))
+    exterior = _item_exterior(str(row.get("item") or ""))
+    mode, same_zone_threshold, nearby_threshold = _float_bucket_mode(candidate_float, exterior)
+    sales_rows = latest_sales.get("sales_rows") or []
+    if not isinstance(sales_rows, list):
+        sales_rows = []
+
+    working: list[dict[str, Any]] = []
+    for raw in sales_rows:
+        if not isinstance(raw, dict):
+            continue
+        price = _num(raw.get("price_eur"))
+        comp_float = _num(raw.get("float_value"))
+        if price is None or comp_float is None:
+            continue
+        sale = dict(raw)
+        stickers = sale.get("stickers") if isinstance(sale.get("stickers"), list) else []
+        notes = sale.get("notes") if isinstance(sale.get("notes"), list) else []
+        sale["_price"] = price
+        sale["_float"] = comp_float
+        sale["_contaminated"] = bool(stickers or notes)
+        sale["_outlier"] = False
+        working.append(sale)
+
+    clean_prices = sorted(s["_price"] for s in working if not s["_contaminated"])
+    if len(clean_prices) >= 4:
+        q1 = _quantile(clean_prices, 0.25)
+        q3 = _quantile(clean_prices, 0.75)
+        iqr = q3 - q1
+        if iqr > 0:
+            lo = q1 - 1.5 * iqr
+            hi = q3 + 1.5 * iqr
+            for sale in working:
+                if sale["_contaminated"]:
+                    continue
+                if sale["_price"] < lo or sale["_price"] > hi:
+                    sale["_outlier"] = True
+
+    def is_same_zone(sale: dict[str, Any]) -> bool:
+        return candidate_float is not None and abs(sale["_float"] - candidate_float) <= same_zone_threshold
+
+    def is_nearby(sale: dict[str, Any]) -> bool:
+        return candidate_float is not None and abs(sale["_float"] - candidate_float) <= nearby_threshold
+
+    def direction(sale: dict[str, Any]) -> str:
+        return _better_worse_direction(candidate_float, sale["_float"])[0]
+
+    same_zone_clean: list[dict[str, Any]] = []
+    near_worse: list[dict[str, Any]] = []
+    better_upside: list[dict[str, Any]] = []
+    generic_floor: list[dict[str, Any]] = []
+    possible_outliers: list[dict[str, Any]] = []
+
+    for sale in working:
+        contaminated = bool(sale["_contaminated"])
+        outlier = bool(sale["_outlier"])
+        sale["_bucket_reason"] = ""
+        if contaminated or outlier:
+            sale["_bucket_reason"] = "contaminated_or_outlier"
+            possible_outliers.append(sale)
+            continue
+        if is_same_zone(sale):
+            sale["_bucket_reason"] = "same_zone_clean"
+            same_zone_clean.append(sale)
+            continue
+        if is_nearby(sale) and direction(sale) == "worse":
+            sale["_bucket_reason"] = "near_worse_float"
+            near_worse.append(sale)
+            continue
+        if is_nearby(sale) and direction(sale) == "better":
+            sale["_bucket_reason"] = "better_float_upside"
+            better_upside.append(sale)
+            continue
+        sale["_bucket_reason"] = "generic_floor"
+        generic_floor.append(sale)
+
+    def sort_same_zone(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        return sorted(
+            entries,
+            key=lambda s: (
+                abs(s["_float"] - candidate_float) if candidate_float is not None else 999.0,
+                -(s["_price"]),
+            ),
+        )
+
+    def sort_by_price_desc(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        return sorted(entries, key=lambda s: (-s["_price"], abs(s["_float"] - candidate_float) if candidate_float is not None else 999.0))
+
+    def sort_by_price_asc(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        return sorted(entries, key=lambda s: (s["_price"], abs(s["_float"] - candidate_float) if candidate_float is not None else 999.0))
+
+    same_zone_clean = sort_same_zone(same_zone_clean)
+    near_worse = sort_same_zone(near_worse)
+    better_upside = sort_same_zone(better_upside)
+    generic_floor = sort_by_price_asc(generic_floor)
+    possible_outliers = sort_by_price_desc(possible_outliers)
+
+    limit = min(max(3, int(cfg.max_sales_rows)), 8)
+    same_zone_threshold_gross = _gross_target(steam_ask, -15.0, fee_pct=cfg.fee_pct)
+    same_zone_prices = [_num(s.get("price_eur")) for s in same_zone_clean]
+    same_zone_prices = [x for x in same_zone_prices if x is not None]
+    same_zone_all_above_minus_15 = (
+        bool(same_zone_prices)
+        and same_zone_threshold_gross is not None
+        and all(price >= same_zone_threshold_gross for price in same_zone_prices)
+    )
+
+    return {
+        "candidate_exterior": exterior,
+        "float_mode": mode,
+        "same_zone_threshold": same_zone_threshold,
+        "nearby_threshold": nearby_threshold,
+        "summary": {
+            "same_zone_clean_count": len(same_zone_clean),
+            "near_worse_count": len(near_worse),
+            "better_upside_count": len(better_upside),
+            "generic_floor_count": len(generic_floor),
+            "possible_outliers_count": len(possible_outliers),
+            "same_zone_all_above_minus_15": same_zone_all_above_minus_15,
+            "same_zone_fast_low_eur": min(same_zone_prices) if same_zone_prices else None,
+            "same_zone_fast_low_net_exit_pct": (
+                _net_exit_pct(min(same_zone_prices), steam_ask, fee_pct=cfg.fee_pct)
+                if same_zone_prices and steam_ask is not None
+                else None
+            ),
+        },
+        "same_zone_clean": [_bucket_view(s, steam_ask=steam_ask, candidate_float=candidate_float) for s in same_zone_clean[:limit]],
+        "near_worse_float": [_bucket_view(s, steam_ask=steam_ask, candidate_float=candidate_float) for s in near_worse[:limit]],
+        "better_float_upside": [_bucket_view(s, steam_ask=steam_ask, candidate_float=candidate_float) for s in better_upside[:limit]],
+        "generic_floor": [_bucket_view(s, steam_ask=steam_ask, candidate_float=candidate_float) for s in generic_floor[:limit]],
+        "possible_outliers": [_bucket_view(s, steam_ask=steam_ask, candidate_float=candidate_float) for s in possible_outliers[:limit]],
+    }
+
+
 def _load_prompt_template(cfg: EnrichmentConfig) -> str:
     path = cfg.prompt_template_path
     if path.is_file():
@@ -656,12 +873,14 @@ def _load_prompt_template(cfg: EnrichmentConfig) -> str:
 
 
 def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> str:
+    comp_buckets = _build_comp_buckets(row, latest_sales, cfg)
     payload = {
         "fee_pct": cfg.fee_pct,
         "alert": _compact_alert_payload(row),
         "latest_sales_source": latest_sales.get("source"),
         "latest_sales_count": len(latest_sales.get("sales_rows") or []),
         "latest_sales": latest_sales.get("sales_rows") or [],
+        "comp_buckets": comp_buckets,
     }
     template = _load_prompt_template(cfg)
     return template.replace("__INPUT_JSON__", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
