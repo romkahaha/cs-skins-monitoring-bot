@@ -41,11 +41,16 @@ Comp interpretation:
 - A comp can be close in float but still weak if its realized net exit versus the current ask is too negative.
 - INPUT_JSON also contains precomputed comp_buckets:
   same_zone_clean, near_worse_float, better_float_upside, generic_floor, possible_outliers.
+- INPUT_JSON.comp_buckets.computed is authoritative deterministic context prepared by code.
+- Do not move comps between buckets.
+- Do not promote generic_floor comps into fast-sale evidence.
+- Do not recalculate fast_sale_range_eur, realistic_sale_range_eur, patient_sale_range_eur, conservative_floor_range_eur, panic_floor_range_eur, target_15pct_fast, or target_10pct_fast if computed values are present in INPUT_JSON.comp_buckets.computed.
 - Prefer these precomputed buckets over manually scanning raw latest_sales.
 - Use same_zone_clean first for fast_sale reasoning.
 - Use near_worse_float as conservative but still relevant downside context.
 - Use generic_floor for hard-floor / panic thinking, not as primary fast-sale evidence when same-zone comps exist.
 - Use possible_outliers only as upside/outlier context unless there is a strong reason they are truly comparable.
+- Use INPUT_JSON.comp_buckets.computed.relevant_comps as the default relevant comps set unless there is a very clear contradiction in the data.
 
 Critical rules:
 - Do not judge only the item as a whole. Judge the exact candidate float zone.
@@ -59,6 +64,7 @@ Critical rules:
 - If comps contradict the model, trust comps more.
 
 Range construction rules:
+- If INPUT_JSON.comp_buckets.computed contains deterministic ranges, treat them as the canonical ranges for this note.
 - Sale ranges must be grounded in the closest clean same-zone float comps.
 - Do not build sale ranges from generic item floor if relevant same-zone comps exist.
 - If there are 3 or more clean same-zone comps, fast_sale_range_eur and realistic_sale_range_eur should mostly stay near those comps.
@@ -125,6 +131,7 @@ Verdict rules:
 - PASS: quick -15% exit is not protected, exact float comps are weak, ask is near patient valuation, risk is bad, or liquidity is weak.
 
 target_15pct_fast:
+- If INPUT_JSON.comp_buckets.computed.target_15pct_fast is present, use it directly.
 - "yes" if fast_sale_range lower bound >= gross_for_minus_15pct.
 - "maybe" if fast sale likely around the -15% threshold but comps are mixed.
 - "no" if fast exit likely falls below gross_for_minus_15pct.

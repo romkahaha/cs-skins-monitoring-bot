@@ -688,6 +688,7 @@ def _bucket_view(sale: dict[str, Any], *, steam_ask: float | None, candidate_flo
     stickers = sale.get("stickers") if isinstance(sale.get("stickers"), list) else []
     notes = sale.get("notes") if isinstance(sale.get("notes"), list) else []
     return {
+        "sale_id": sale.get("_sale_id"),
         "price_eur": _num(sale.get("price_eur")),
         "float_value": comp_float,
         "paint_seed": _num(sale.get("paint_seed")),
@@ -704,6 +705,215 @@ def _bucket_view(sale: dict[str, Any], *, steam_ask: float | None, candidate_flo
     }
 
 
+def _range_from_prices(prices: list[float], *, low_q: float, high_q: float) -> list[float] | None:
+    clean = sorted(float(price) for price in prices if price is not None and math.isfinite(float(price)))
+    if not clean:
+        return None
+    if len(clean) == 1:
+        return [clean[0], clean[0]]
+    if len(clean) == 2:
+        return [clean[0], clean[1]]
+    low = _quantile(clean, low_q)
+    high = _quantile(clean, high_q)
+    if high < low:
+        low, high = high, low
+    return [low, high]
+
+
+def _comp_prices(entries: list[dict[str, Any]]) -> list[float]:
+    return [float(entry["_price"]) for entry in entries if _num(entry.get("_price")) is not None]
+
+
+def _pick_relevant_comps(
+    same_zone_clean: list[dict[str, Any]],
+    near_worse: list[dict[str, Any]],
+    better_upside: list[dict[str, Any]],
+    generic_floor: list[dict[str, Any]],
+    *,
+    steam_ask: float | None,
+    candidate_float: float | None,
+) -> list[dict[str, Any]]:
+    selected: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    def add(entry: dict[str, Any], why: str) -> None:
+        sale_id = str(entry.get("_sale_id") or "")
+        if sale_id and sale_id in seen:
+            return
+        if sale_id:
+            seen.add(sale_id)
+        view = _bucket_view(entry, steam_ask=steam_ask, candidate_float=candidate_float)
+        view["why"] = why
+        selected.append(view)
+
+    for idx, entry in enumerate(same_zone_clean[:3]):
+        direction = str(_bucket_view(entry, steam_ask=steam_ask, candidate_float=candidate_float).get("direction_vs_candidate") or "same")
+        if idx == 0:
+            if direction == "worse":
+                why = "Closest clean same-zone comp; slightly worse float than candidate."
+            elif direction == "better":
+                why = "Closest clean same-zone comp; slightly better float than candidate."
+            else:
+                why = "Closest clean same-zone comp."
+        elif direction == "worse":
+            why = "Clean same-zone comp with a slightly worse float; useful for fast-sale downside."
+        elif direction == "better":
+            why = "Clean same-zone comp with a slightly better float; useful for upside inside the float zone."
+        else:
+            why = "Additional clean same-zone comp."
+        add(entry, why)
+    if len(selected) < 3 and near_worse:
+        add(near_worse[0], "Nearby worse-float comp for conservative downside.")
+    if len(selected) < 3 and better_upside:
+        add(better_upside[0], "Nearby better-float comp for patient upside.")
+    if len(selected) < 3 and generic_floor:
+        add(generic_floor[0], "Generic floor comp; panic downside only.")
+    return selected[:3]
+
+
+def _build_computed_comp_context(
+    row: dict[str, Any],
+    *,
+    same_zone_clean: list[dict[str, Any]],
+    near_worse: list[dict[str, Any]],
+    better_upside: list[dict[str, Any]],
+    generic_floor: list[dict[str, Any]],
+    cfg: EnrichmentConfig,
+) -> dict[str, Any]:
+    steam_ask = _num(row.get("ask"))
+    candidate_float = _num(row.get("float_value"))
+    same_zone_prices = _comp_prices(same_zone_clean)
+    near_worse_prices = _comp_prices(near_worse)
+    better_prices = _comp_prices(better_upside)
+    generic_floor_prices = _comp_prices(generic_floor)
+
+    fast_sale_range = _range_from_prices(same_zone_prices, low_q=0.0, high_q=0.60)
+    if fast_sale_range is None:
+        fast_sale_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.60)
+    realistic_sale_range = _range_from_prices(same_zone_prices, low_q=0.25, high_q=0.85)
+    if realistic_sale_range is None:
+        realistic_sale_range = fast_sale_range
+
+    patient_pool = sorted(same_zone_prices + better_prices)
+    patient_sale_range: list[float] | None = None
+    if patient_pool:
+        patient_low = max(same_zone_prices) if same_zone_prices else patient_pool[0]
+        patient_high = max(patient_pool)
+        patient_sale_range = [patient_low, patient_high] if patient_high >= patient_low else [patient_high, patient_high]
+    elif realistic_sale_range:
+        patient_sale_range = list(realistic_sale_range)
+
+    conservative_floor_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.70)
+    panic_floor_range = _range_from_prices(generic_floor_prices, low_q=0.0, high_q=0.70)
+    if conservative_floor_range is None and panic_floor_range is not None:
+        conservative_floor_range = list(panic_floor_range)
+
+    start_listing_range: list[float] | None = None
+    if patient_sale_range:
+        high = patient_sale_range[1]
+        start_listing_range = [high, high * 1.08]
+    elif realistic_sale_range:
+        high = realistic_sale_range[1]
+        start_listing_range = [high, high * 1.05]
+
+    gross_for_minus_10 = _gross_target(steam_ask, -10.0, fee_pct=cfg.fee_pct)
+    gross_for_minus_15 = _gross_target(steam_ask, -15.0, fee_pct=cfg.fee_pct)
+
+    def target_flag(range_value: list[float] | None, target_gross: float | None) -> str:
+        if not range_value or target_gross is None:
+            return "no"
+        low = _num(range_value[0])
+        high = _num(range_value[1])
+        if low is None or high is None:
+            return "no"
+        if low >= target_gross:
+            return "yes"
+        if high >= target_gross:
+            return "maybe"
+        return "no"
+
+    target_15 = target_flag(fast_sale_range, gross_for_minus_15)
+    target_10 = target_flag(fast_sale_range, gross_for_minus_10)
+
+    def net_exit_range(range_value: list[float] | None) -> list[float] | None:
+        if not range_value:
+            return None
+        low = _net_exit_pct(_num(range_value[0]), steam_ask, fee_pct=cfg.fee_pct)
+        high = _net_exit_pct(_num(range_value[1]), steam_ask, fee_pct=cfg.fee_pct)
+        if low is None or high is None:
+            return None
+        return [low, high]
+
+    relevant_comps = _pick_relevant_comps(
+        same_zone_clean,
+        near_worse,
+        better_upside,
+        generic_floor,
+        steam_ask=steam_ask,
+        candidate_float=candidate_float,
+    )
+
+    return {
+        "fast_sale_range_eur": fast_sale_range,
+        "realistic_sale_range_eur": realistic_sale_range,
+        "patient_sale_range_eur": patient_sale_range,
+        "conservative_floor_range_eur": conservative_floor_range,
+        "panic_floor_range_eur": panic_floor_range,
+        "start_listing_range_eur": start_listing_range,
+        "target_15pct_fast": target_15,
+        "target_10pct_fast": target_10,
+        "fast_net_exit_pct": net_exit_range(fast_sale_range),
+        "realistic_net_exit_pct": net_exit_range(realistic_sale_range),
+        "patient_net_exit_pct": net_exit_range(patient_sale_range),
+        "conservative_net_exit_pct": net_exit_range(conservative_floor_range),
+        "panic_net_exit_pct": net_exit_range(panic_floor_range),
+        "same_zone_count": len(same_zone_clean),
+        "near_worse_count": len(near_worse),
+        "generic_floor_count": len(generic_floor),
+        "relevant_comps": relevant_comps,
+        "fast_basis_ids": [entry.get("sale_id") for entry in relevant_comps if isinstance(entry, dict) and str(entry.get("bucket_reason") or "") == "same_zone_clean"],
+        "conservative_basis_ids": [
+            _bucket_view(entry, steam_ask=steam_ask, candidate_float=candidate_float).get("sale_id")
+            for entry in near_worse[:3]
+        ],
+        "panic_basis_ids": [
+            _bucket_view(entry, steam_ask=steam_ask, candidate_float=candidate_float).get("sale_id")
+            for entry in generic_floor[:3]
+        ],
+    }
+
+
+def _computed_range_basis(note: dict[str, Any]) -> dict[str, str]:
+    computed = note.get("computed_context") if isinstance(note.get("computed_context"), dict) else {}
+    same_zone_count = int(computed.get("same_zone_count") or 0)
+    near_worse_count = int(computed.get("near_worse_count") or 0)
+    generic_floor_count = int(computed.get("generic_floor_count") or 0)
+    fast_range = note.get("fast_sale_range_eur")
+    realistic_range = note.get("realistic_sale_range_eur")
+    patient_range = note.get("patient_sale_range_eur")
+    if same_zone_count > 0:
+        fast_text = f"Deterministic fast range from {same_zone_count} clean same-zone comps."
+        realistic_text = f"Deterministic realistic range from the central same-zone cluster ({same_zone_count} clean comps)."
+        patient_text = "Deterministic patient range from upper same-zone comps plus nearby better-float upside when available."
+    elif near_worse_count > 0:
+        fast_text = f"No clean same-zone comps; fast range falls back to {near_worse_count} nearby worse-float comps."
+        realistic_text = "No clean same-zone comps; realistic range is anchored to nearby worse-float comps."
+        patient_text = "Patient range remains constrained because no direct same-zone liquidity was found."
+    else:
+        fast_text = "No clean same-zone comps; fast range is weakly supported."
+        realistic_text = "Realistic range is weakly supported because float-specific comps are scarce."
+        patient_text = "Patient range is weakly supported because float-specific comps are scarce."
+    if fast_range is None:
+        fast_text = "No deterministic fast range could be computed."
+    if realistic_range is None:
+        realistic_text = "No deterministic realistic range could be computed."
+    if patient_range is None:
+        patient_text = "No deterministic patient range could be computed."
+    if generic_floor_count > 0:
+        fast_text += f" Generic floor comps ({generic_floor_count}) are kept out of fast-sale evidence."
+    return {"fast": fast_text, "realistic": realistic_text, "patient": patient_text}
+
+
 def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> dict[str, Any]:
     candidate_float = _num(row.get("float_value"))
     steam_ask = _num(row.get("ask"))
@@ -714,7 +924,7 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         sales_rows = []
 
     working: list[dict[str, Any]] = []
-    for raw in sales_rows:
+    for idx, raw in enumerate(sales_rows, start=1):
         if not isinstance(raw, dict):
             continue
         price = _num(raw.get("price_eur"))
@@ -728,6 +938,7 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         sale["_float"] = comp_float
         sale["_contaminated"] = bool(stickers or notes)
         sale["_outlier"] = False
+        sale["_sale_id"] = f"sale_{idx}"
         working.append(sale)
 
     clean_prices = sorted(s["_price"] for s in working if not s["_contaminated"])
@@ -813,11 +1024,21 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         and all(price >= same_zone_threshold_gross for price in same_zone_prices)
     )
 
+    computed = _build_computed_comp_context(
+        row,
+        same_zone_clean=same_zone_clean,
+        near_worse=near_worse,
+        better_upside=better_upside,
+        generic_floor=generic_floor,
+        cfg=cfg,
+    )
+
     return {
         "candidate_exterior": exterior,
         "float_mode": mode,
         "same_zone_threshold": same_zone_threshold,
         "nearby_threshold": nearby_threshold,
+        "computed": computed,
         "summary": {
             "same_zone_clean_count": len(same_zone_clean),
             "near_worse_count": len(near_worse),
@@ -1001,6 +1222,10 @@ def _call_gemini_once(
 
 def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig, *, job_dir: Path) -> dict[str, Any]:
     prompt = _gemini_prompt(row, latest_sales, cfg)
+    comp_buckets = _build_comp_buckets(row, latest_sales, cfg)
+    computed = comp_buckets.get("computed") if isinstance(comp_buckets, dict) else {}
+    if not isinstance(computed, dict):
+        computed = {}
     models: list[str] = []
     for model in (cfg.gemini_model, "gemini-2.5-flash-lite"):
         model_name = str(model).strip()
@@ -1045,23 +1270,33 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "item_liquidity": _coerce_label(parsed.get("item_liquidity"), {"low", "medium", "high"}, "medium"),
         "float_liquidity": _coerce_label(parsed.get("float_liquidity"), {"low", "medium", "high"}, "medium"),
         "model_agreement": _coerce_label(parsed.get("model_agreement"), {"strong", "mixed", "divergent"}, "mixed"),
-        "target_15pct_fast": _coerce_label(parsed.get("target_15pct_fast"), {"yes", "maybe", "no"}, "maybe"),
+        "target_15pct_fast": _coerce_label(
+            computed.get("target_15pct_fast"),
+            {"yes", "maybe", "no"},
+            _coerce_label(parsed.get("target_15pct_fast"), {"yes", "maybe", "no"}, "maybe"),
+        ),
+        "target_10pct_fast": _coerce_label(computed.get("target_10pct_fast"), {"yes", "maybe", "no"}, "maybe"),
         "breakeven_gross_eur": _num(parsed.get("breakeven_gross_eur")),
         "gross_for_minus_5pct": _num(parsed.get("gross_for_minus_5pct")),
         "gross_for_minus_10pct": _num(parsed.get("gross_for_minus_10pct")),
         "gross_for_minus_15pct": _num(parsed.get("gross_for_minus_15pct")),
-        "fast_sale_range_eur": _coerce_range(parsed.get("fast_sale_range_eur")),
-        "realistic_sale_range_eur": _coerce_range(parsed.get("realistic_sale_range_eur")),
-        "patient_sale_range_eur": _coerce_range(parsed.get("patient_sale_range_eur")),
-        "start_listing_range_eur": _coerce_range(parsed.get("start_listing_range_eur")),
-        "fast_floor_range_eur": _coerce_range(parsed.get("fast_floor_range_eur")),
-        "fast_net_exit_pct": _coerce_range(parsed.get("fast_net_exit_pct")),
-        "realistic_net_exit_pct": _coerce_range(parsed.get("realistic_net_exit_pct")),
-        "patient_net_exit_pct": _coerce_range(parsed.get("patient_net_exit_pct")),
+        "fast_sale_range_eur": _coerce_range(computed.get("fast_sale_range_eur")) or _coerce_range(parsed.get("fast_sale_range_eur")),
+        "realistic_sale_range_eur": _coerce_range(computed.get("realistic_sale_range_eur")) or _coerce_range(parsed.get("realistic_sale_range_eur")),
+        "patient_sale_range_eur": _coerce_range(computed.get("patient_sale_range_eur")) or _coerce_range(parsed.get("patient_sale_range_eur")),
+        "start_listing_range_eur": _coerce_range(computed.get("start_listing_range_eur")) or _coerce_range(parsed.get("start_listing_range_eur")),
+        "fast_floor_range_eur": _coerce_range(computed.get("conservative_floor_range_eur")) or _coerce_range(parsed.get("fast_floor_range_eur")),
+        "conservative_floor_range_eur": _coerce_range(computed.get("conservative_floor_range_eur")),
+        "panic_floor_range_eur": _coerce_range(computed.get("panic_floor_range_eur")),
+        "fast_net_exit_pct": _coerce_range(computed.get("fast_net_exit_pct")) or _coerce_range(parsed.get("fast_net_exit_pct")),
+        "realistic_net_exit_pct": _coerce_range(computed.get("realistic_net_exit_pct")) or _coerce_range(parsed.get("realistic_net_exit_pct")),
+        "patient_net_exit_pct": _coerce_range(computed.get("patient_net_exit_pct")) or _coerce_range(parsed.get("patient_net_exit_pct")),
+        "conservative_net_exit_pct": _coerce_range(computed.get("conservative_net_exit_pct")),
+        "panic_net_exit_pct": _coerce_range(computed.get("panic_net_exit_pct")),
         "range_basis": {"fast": "", "realistic": "", "patient": ""},
         "best_comps": [],
         "risks": [],
         "summary": str(parsed.get("summary") or "").strip(),
+        "computed_context": computed,
     }
     range_basis = parsed.get("range_basis")
     if isinstance(range_basis, dict):
@@ -1069,13 +1304,17 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
             value = str(range_basis.get(key) or "").strip()
             if value:
                 result["range_basis"][key] = value
-    best_comps = parsed.get("best_comps")
+    if not any(str(result["range_basis"].get(key) or "").strip() for key in ("fast", "realistic", "patient")):
+        result["range_basis"] = _computed_range_basis(result)
+    best_comps = computed.get("relevant_comps") if isinstance(computed.get("relevant_comps"), list) else parsed.get("best_comps")
     if isinstance(best_comps, list):
         for entry in best_comps[:3]:
             if not isinstance(entry, dict):
                 continue
             result["best_comps"].append(
                 {
+                    "sale_id": entry.get("sale_id"),
+                    "bucket_reason": entry.get("bucket_reason"),
                     "price_eur": _num(entry.get("price_eur")),
                     "float_value": _num(entry.get("float_value")),
                     "paint_seed": _num(entry.get("paint_seed")),
@@ -1085,9 +1324,12 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
     risks = parsed.get("risks")
     if isinstance(risks, list):
         result["risks"] = [str(entry).strip() for entry in risks[:3] if str(entry).strip()]
-    for key_prefix in ("fast", "realistic", "patient"):
+    for key_prefix in ("fast", "realistic", "patient", "conservative", "panic"):
         if result.get(f"{key_prefix}_net_exit_pct") is None:
-            sale_range = result.get(f"{key_prefix}_sale_range_eur")
+            if key_prefix in {"conservative", "panic"}:
+                sale_range = result.get(f"{key_prefix}_floor_range_eur")
+            else:
+                sale_range = result.get(f"{key_prefix}_sale_range_eur")
             if isinstance(sale_range, list) and len(sale_range) == 2:
                 ask = _num(row.get("ask"))
                 lo = _net_exit_pct(_num(sale_range[0]), ask, fee_pct=cfg.fee_pct)
@@ -1163,10 +1405,13 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
         f"Realistic: <code>{html.escape(_fmt_range(note.get('realistic_sale_range_eur')))}</code>",
         f"Patient: <code>{html.escape(_fmt_range(note.get('patient_sale_range_eur')))}</code>",
         f"Start listing: <code>{html.escape(_fmt_range(note.get('start_listing_range_eur')))}</code>",
-        f"Fast floor: <code>{html.escape(_fmt_range(note.get('fast_floor_range_eur')))}</code>",
+        f"Conservative floor: <code>{html.escape(_fmt_range(note.get('conservative_floor_range_eur') or note.get('fast_floor_range_eur')))}</code>",
+        f"Panic floor: <code>{html.escape(_fmt_range(note.get('panic_floor_range_eur')))}</code>",
         f"Fast net exit: <code>{html.escape(_fmt_pct_range(note.get('fast_net_exit_pct')))}</code>",
         f"Realistic net exit: <code>{html.escape(_fmt_pct_range(note.get('realistic_net_exit_pct')))}</code>",
         f"Patient net exit: <code>{html.escape(_fmt_pct_range(note.get('patient_net_exit_pct')))}</code>",
+        f"Conservative net exit: <code>{html.escape(_fmt_pct_range(note.get('conservative_net_exit_pct')))}</code>",
+        f"Panic net exit: <code>{html.escape(_fmt_pct_range(note.get('panic_net_exit_pct')))}</code>",
     ]
     range_basis = note.get("range_basis") or {}
     if isinstance(range_basis, dict):
