@@ -720,6 +720,10 @@ def _range_from_prices(prices: list[float], *, low_q: float, high_q: float) -> l
     return [low, high]
 
 
+def _single_band(price: float, *, pct: float) -> list[float]:
+    return [price * (1.0 - pct), price * (1.0 + pct)]
+
+
 def _comp_prices(entries: list[dict[str, Any]]) -> list[float]:
     return [float(entry["_price"]) for entry in entries if _num(entry.get("_price")) is not None]
 
@@ -786,22 +790,47 @@ def _build_computed_comp_context(
     near_worse_prices = _comp_prices(near_worse)
     better_prices = _comp_prices(better_upside)
     generic_floor_prices = _comp_prices(generic_floor)
+    same_zone_prices_sorted = sorted(same_zone_prices)
+    same_zone_floor = same_zone_prices_sorted[0] if same_zone_prices_sorted else None
+    same_zone_count = len(same_zone_prices_sorted)
 
-    fast_sale_range = _range_from_prices(same_zone_prices, low_q=0.0, high_q=0.60)
-    if fast_sale_range is None:
-        fast_sale_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.60)
-    realistic_sale_range = _range_from_prices(same_zone_prices, low_q=0.25, high_q=0.85)
-    if realistic_sale_range is None:
-        realistic_sale_range = fast_sale_range
-
-    patient_pool = sorted(same_zone_prices + better_prices)
+    fast_sale_range: list[float] | None = None
+    realistic_sale_range: list[float] | None = None
     patient_sale_range: list[float] | None = None
-    if patient_pool:
-        patient_low = max(same_zone_prices) if same_zone_prices else patient_pool[0]
-        patient_high = max(patient_pool)
-        patient_sale_range = [patient_low, patient_high] if patient_high >= patient_low else [patient_high, patient_high]
-    elif realistic_sale_range:
-        patient_sale_range = list(realistic_sale_range)
+
+    if same_zone_count >= 6:
+        fast_sale_range = _range_from_prices(same_zone_prices_sorted, low_q=0.20, high_q=0.60)
+        realistic_sale_range = _range_from_prices(same_zone_prices_sorted, low_q=0.40, high_q=0.70)
+        patient_base = _range_from_prices(same_zone_prices_sorted, low_q=0.70, high_q=0.90)
+        patient_high = max(same_zone_prices_sorted + better_prices) if (same_zone_prices_sorted or better_prices) else None
+        if patient_base and patient_high is not None:
+            patient_sale_range = [patient_base[0], max(patient_base[1], patient_high)]
+    elif same_zone_count in {4, 5}:
+        median_idx = same_zone_count // 2
+        second_lowest = same_zone_prices_sorted[1]
+        median_or_second_highest = same_zone_prices_sorted[-2] if same_zone_count == 5 else same_zone_prices_sorted[median_idx]
+        fast_sale_range = [second_lowest, median_or_second_highest]
+        realistic_high = same_zone_prices_sorted[-2]
+        realistic_sale_range = [same_zone_prices_sorted[median_idx], realistic_high] if realistic_high >= same_zone_prices_sorted[median_idx] else [same_zone_prices_sorted[median_idx], same_zone_prices_sorted[median_idx]]
+        patient_low = same_zone_prices_sorted[-2]
+        patient_high = max(same_zone_prices_sorted + better_prices) if (same_zone_prices_sorted or better_prices) else None
+        if patient_high is not None:
+            patient_sale_range = [patient_low, max(patient_low, patient_high)]
+    elif same_zone_count in {2, 3}:
+        fast_sale_range = [same_zone_prices_sorted[0], same_zone_prices_sorted[-1]]
+        realistic_sale_range = list(fast_sale_range)
+        patient_high = max(same_zone_prices_sorted + better_prices) if (same_zone_prices_sorted or better_prices) else None
+        if patient_high is not None:
+            patient_sale_range = [same_zone_prices_sorted[-1], max(same_zone_prices_sorted[-1], patient_high)]
+    elif same_zone_count == 1:
+        fast_sale_range = _single_band(same_zone_prices_sorted[0], pct=0.03)
+        realistic_sale_range = _single_band(same_zone_prices_sorted[0], pct=0.02)
+        patient_high = max(same_zone_prices_sorted + better_prices) if (same_zone_prices_sorted or better_prices) else same_zone_prices_sorted[0]
+        patient_sale_range = [same_zone_prices_sorted[0], max(same_zone_prices_sorted[0], patient_high)]
+    elif near_worse_prices:
+        fast_sale_range = None
+        realistic_sale_range = None
+        patient_sale_range = None
 
     conservative_floor_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.70)
     panic_floor_range = _range_from_prices(generic_floor_prices, low_q=0.0, high_q=0.70)
@@ -823,13 +852,12 @@ def _build_computed_comp_context(
         if not range_value or target_gross is None:
             return "no"
         low = _num(range_value[0])
-        high = _num(range_value[1])
-        if low is None or high is None:
+        if low is None:
             return "no"
         if low >= target_gross:
+            if same_zone_floor is not None and same_zone_floor < target_gross:
+                return "maybe"
             return "yes"
-        if high >= target_gross:
-            return "maybe"
         return "no"
 
     target_15 = target_flag(fast_sale_range, gross_for_minus_15)
@@ -857,6 +885,7 @@ def _build_computed_comp_context(
         "fast_sale_range_eur": fast_sale_range,
         "realistic_sale_range_eur": realistic_sale_range,
         "patient_sale_range_eur": patient_sale_range,
+        "same_zone_floor_eur": [same_zone_floor, same_zone_floor] if same_zone_floor is not None else None,
         "conservative_floor_range_eur": conservative_floor_range,
         "panic_floor_range_eur": panic_floor_range,
         "start_listing_range_eur": start_listing_range,
@@ -865,6 +894,7 @@ def _build_computed_comp_context(
         "fast_net_exit_pct": net_exit_range(fast_sale_range),
         "realistic_net_exit_pct": net_exit_range(realistic_sale_range),
         "patient_net_exit_pct": net_exit_range(patient_sale_range),
+        "same_zone_floor_net_exit_pct": net_exit_range([same_zone_floor, same_zone_floor] if same_zone_floor is not None else None),
         "conservative_net_exit_pct": net_exit_range(conservative_floor_range),
         "panic_net_exit_pct": net_exit_range(panic_floor_range),
         "same_zone_count": len(same_zone_clean),
@@ -888,11 +918,12 @@ def _computed_range_basis(note: dict[str, Any]) -> dict[str, str]:
     same_zone_count = int(computed.get("same_zone_count") or 0)
     near_worse_count = int(computed.get("near_worse_count") or 0)
     generic_floor_count = int(computed.get("generic_floor_count") or 0)
+    same_zone_floor = _coerce_range(computed.get("same_zone_floor_eur"))
     fast_range = note.get("fast_sale_range_eur")
     realistic_range = note.get("realistic_sale_range_eur")
     patient_range = note.get("patient_sale_range_eur")
     if same_zone_count > 0:
-        fast_text = f"Deterministic fast range from {same_zone_count} clean same-zone comps."
+        fast_text = f"Deterministic fast range from {same_zone_count} clean same-zone comps, excluding the worst same-zone print from the main fast range when there is enough depth."
         realistic_text = f"Deterministic realistic range from the central same-zone cluster ({same_zone_count} clean comps)."
         patient_text = "Deterministic patient range from upper same-zone comps plus nearby better-float upside when available."
     elif near_worse_count > 0:
@@ -909,6 +940,8 @@ def _computed_range_basis(note: dict[str, Any]) -> dict[str, str]:
         realistic_text = "No deterministic realistic range could be computed."
     if patient_range is None:
         patient_text = "No deterministic patient range could be computed."
+    if same_zone_floor:
+        fast_text += f" Same-zone floor is {_fmt_range(same_zone_floor)}."
     if generic_floor_count > 0:
         fast_text += f" Generic floor comps ({generic_floor_count}) are kept out of fast-sale evidence."
     return {"fast": fast_text, "realistic": realistic_text, "patient": patient_text}
@@ -1284,12 +1317,14 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "realistic_sale_range_eur": _coerce_range(computed.get("realistic_sale_range_eur")) or _coerce_range(parsed.get("realistic_sale_range_eur")),
         "patient_sale_range_eur": _coerce_range(computed.get("patient_sale_range_eur")) or _coerce_range(parsed.get("patient_sale_range_eur")),
         "start_listing_range_eur": _coerce_range(computed.get("start_listing_range_eur")) or _coerce_range(parsed.get("start_listing_range_eur")),
+        "same_zone_floor_eur": _coerce_range(computed.get("same_zone_floor_eur")),
         "fast_floor_range_eur": _coerce_range(computed.get("conservative_floor_range_eur")) or _coerce_range(parsed.get("fast_floor_range_eur")),
         "conservative_floor_range_eur": _coerce_range(computed.get("conservative_floor_range_eur")),
         "panic_floor_range_eur": _coerce_range(computed.get("panic_floor_range_eur")),
         "fast_net_exit_pct": _coerce_range(computed.get("fast_net_exit_pct")) or _coerce_range(parsed.get("fast_net_exit_pct")),
         "realistic_net_exit_pct": _coerce_range(computed.get("realistic_net_exit_pct")) or _coerce_range(parsed.get("realistic_net_exit_pct")),
         "patient_net_exit_pct": _coerce_range(computed.get("patient_net_exit_pct")) or _coerce_range(parsed.get("patient_net_exit_pct")),
+        "same_zone_floor_net_exit_pct": _coerce_range(computed.get("same_zone_floor_net_exit_pct")),
         "conservative_net_exit_pct": _coerce_range(computed.get("conservative_net_exit_pct")),
         "panic_net_exit_pct": _coerce_range(computed.get("panic_net_exit_pct")),
         "range_basis": {"fast": "", "realistic": "", "patient": ""},
@@ -1298,14 +1333,7 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "summary": str(parsed.get("summary") or "").strip(),
         "computed_context": computed,
     }
-    range_basis = parsed.get("range_basis")
-    if isinstance(range_basis, dict):
-        for key in ("fast", "realistic", "patient"):
-            value = str(range_basis.get(key) or "").strip()
-            if value:
-                result["range_basis"][key] = value
-    if not any(str(result["range_basis"].get(key) or "").strip() for key in ("fast", "realistic", "patient")):
-        result["range_basis"] = _computed_range_basis(result)
+    result["range_basis"] = _computed_range_basis(result)
     best_comps = computed.get("relevant_comps") if isinstance(computed.get("relevant_comps"), list) else parsed.get("best_comps")
     if isinstance(best_comps, list):
         for entry in best_comps[:3]:
@@ -1405,11 +1433,13 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
         f"Realistic: <code>{html.escape(_fmt_range(note.get('realistic_sale_range_eur')))}</code>",
         f"Patient: <code>{html.escape(_fmt_range(note.get('patient_sale_range_eur')))}</code>",
         f"Start listing: <code>{html.escape(_fmt_range(note.get('start_listing_range_eur')))}</code>",
+        f"Same-zone floor: <code>{html.escape(_fmt_range(note.get('same_zone_floor_eur')))}</code>",
         f"Conservative floor: <code>{html.escape(_fmt_range(note.get('conservative_floor_range_eur') or note.get('fast_floor_range_eur')))}</code>",
         f"Panic floor: <code>{html.escape(_fmt_range(note.get('panic_floor_range_eur')))}</code>",
         f"Fast net exit: <code>{html.escape(_fmt_pct_range(note.get('fast_net_exit_pct')))}</code>",
         f"Realistic net exit: <code>{html.escape(_fmt_pct_range(note.get('realistic_net_exit_pct')))}</code>",
         f"Patient net exit: <code>{html.escape(_fmt_pct_range(note.get('patient_net_exit_pct')))}</code>",
+        f"Same-zone floor net exit: <code>{html.escape(_fmt_pct_range(note.get('same_zone_floor_net_exit_pct')))}</code>",
         f"Conservative net exit: <code>{html.escape(_fmt_pct_range(note.get('conservative_net_exit_pct')))}</code>",
         f"Panic net exit: <code>{html.escape(_fmt_pct_range(note.get('panic_net_exit_pct')))}</code>",
     ]
