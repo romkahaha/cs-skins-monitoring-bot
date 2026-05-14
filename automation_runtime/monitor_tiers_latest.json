@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-05-12T01:47:41.744669+00:00",
-  "items_total": 227,
+  "generated_at_utc": "2026-05-14T03:11:30.334525+00:00",
+  "items_total": 155,
   "shares": {
     "A": 0.2,
     "B": 0.3,
@@ -11,8 +11,8 @@
     "steam_turnover_proxy": 0.25
   },
   "counts": {
-    "A": 45,
-    "B": 68,
-    "C": 114
+    "A": 31,
+    "B": 46,
+    "C": 78
   }
 }
