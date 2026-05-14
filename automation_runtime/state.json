@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "394ba1cc1c0436a79bc96adc0f4ac57b25e79dcf2335bdc7d5ed859dc6d132ef",
-  "items_count": 227,
-  "queue_signature": "fbaedfbd120527643973fe6381ec2091fe086b66e897ca97c4f0b4a335a82a17",
+  "items_signature": "943fbc4b48cc7cbc155f6195dbfcac13fcfc65ae9d46684c077541a252c0aec9",
+  "items_count": 155,
+  "queue_signature": "729c68bdff577bb6c478280c7db0de74a7600c99ff0bb42d819b57104fb9ea42",
   "queue_pattern": [
     "A",
     "A",
@@ -13,42 +13,93 @@
     "B",
     "C"
   ],
-  "queue_pointer": 4,
-  "last_tier": "A",
-  "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 5,
+  "queue_pointer": 6,
+  "last_tier": "C",
+  "last_tier_queue_index": 6,
+  "last_batch_start_pointer": 62,
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Field-Tested)",
-    "Glock-18 | Shinobu (Field-Tested)",
-    "AK-47 | Slate (Well-Worn)",
-    "M4A4 | Tooth Fairy (Field-Tested)",
-    "Glock-18 | Vogue (Field-Tested)"
+    "AWP | Asiimov (Battle-Scarred)",
+    "Desert Eagle | Printstream (Factory New)",
+    "AWP | Hyper Beast (Battle-Scarred)",
+    "AWP | POP AWP (Factory New)",
+    "SG 553 | Darkwing (Factory New)"
   ],
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Tooth%20Fairy%20%28Field-Tested%29",
-  "last_run_at_utc": "2026-05-13T20:37:15.403105+00:00",
-  "last_finished_at_utc": "2026-05-13T20:39:16.074576+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T20:37:15.402101+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-13T20:39:16.074576+00:00",
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AWP | Asiimov (Battle-Scarred), Desert Eagle | Printstream (Factory New), AWP | Hyper Beast (Battle-Scarred))",
+  "last_run_at_utc": "2026-05-14T20:39:32.358566+00:00",
+  "last_finished_at_utc": "2026-05-14T20:41:28.656057+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-14T20:39:32.357700+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-14T20:41:28.656057+00:00",
   "last_status": "error",
   "consecutive_errors": 1,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "AWP | Asiimov (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 60
+      }
+    },
+    {
+      "market_hash_name": "Desert Eagle | Printstream (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 60
+      }
+    },
+    {
+      "market_hash_name": "AWP | Hyper Beast (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 60
+      }
+    },
+    {
+      "market_hash_name": "AWP | POP AWP (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 60
+      }
+    },
+    {
+      "market_hash_name": "SG 553 | Darkwing (Factory New)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 60
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
   "last_listing_rows": 0,
-  "last_enriched_rows": 336,
-  "last_opportunities_rows": 0,
+  "last_enriched_rows": 274,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {},
   "tiers": {
     "A": {
-      "items_signature": "a482fc0098727f7e3a3b3a2fcf41e70fd511e3d355dd00320cb9a33faa03b16d",
-      "items_count": 45
+      "items_signature": "8a51cc0546a277f095a4a7b87f0ca8cc7f7343a8ade25fa21427128685c1008c",
+      "items_count": 31
     },
     "B": {
-      "items_signature": "0c4babf75343ff39f6bf358de61e11de6db2f2f38e40f16a92e1bcfbbf3a7258",
-      "items_count": 68
+      "items_signature": "bc4384f4d7c743a8a54a549f5f6d6dd7afe49b79faa6863d282331f31998f93d",
+      "items_count": 46
     },
     "C": {
-      "items_signature": "809d4dafa189dcc0dccf293bd0568010a21f568cae4f7ccd6b3736f2a7d3ce22",
-      "items_count": 114
+      "items_signature": "31fa7e15d343fb6d9d7d5875c4f524a51352b596e0528d034ab3353718416af5",
+      "items_count": 78
     }
   }
 }
