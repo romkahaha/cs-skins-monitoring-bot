@@ -15,31 +15,31 @@
   ],
   "queue_pointer": 1,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 1,
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 29,
   "last_batch_items": [
+    "AUG | Eye of Zapems (Field-Tested)",
+    "XM1014 | Entombed (Minimal Wear)",
+    "USP-S | Jawbreaker (Field-Tested)",
     "AK-47 | Slate (Well-Worn)",
-    "AK-47 | Wintergreen (Minimal Wear)",
-    "M4A1-S | Electrum (Minimal Wear)",
-    "P2000 | Wicked Sick (Field-Tested)",
-    "AK-47 | Slate (Battle-Scarred)"
+    "AK-47 | Wintergreen (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-15T16:39:47.092065+00:00",
-  "last_finished_at_utc": "2026-05-15T16:39:47.091224+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-15T16:39:47.091224+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-15T01:43:50.653958+00:00",
-  "last_status": "running",
+  "last_run_at_utc": "2026-05-15T20:54:42.295260+00:00",
+  "last_finished_at_utc": "2026-05-15T20:55:02.150584+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T20:55:02.150584+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-15T18:26:29.144509+00:00",
+  "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 499,
-  "last_enriched_rows": 499,
+  "last_listing_rows": 497,
+  "last_enriched_rows": 497,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 647513
+    "sender_pid": 687066
   },
   "tiers": {
     "A": {
