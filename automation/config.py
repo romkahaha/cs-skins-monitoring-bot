@@ -88,7 +88,7 @@ def monitoring_defaults() -> dict[str, Any]:
         "monitoring": {
             "enabled": True,
             "batch_size": 5,
-            "max_listings_per_item": 200,
+            "max_listings_per_item": 100,
             "fail_if_all_listing_fetches_error": True,
         },
             "cycle": {
@@ -113,14 +113,14 @@ def monitoring_defaults() -> dict[str, Any]:
                     },
                     "max_listings_per_item": {
                         "A": 100,
-                        "B": 200,
-                        "C": 200,
+                        "B": 80,
+                        "C": 60,
                     },
                 },
             },
         "steam_scm": {
             "listings_per_request": 100,
-            "max_listings_per_item": 200,
+            "max_listings_per_item": 100,
             "request_timeout_sec": 45.0,
             "retry_attempts": 3,
             "retry_sleep_min_sec": 2.0,
@@ -294,6 +294,9 @@ def nightly_defaults() -> dict[str, Any]:
             "steam_currency": 3,
             "auto_refresh_steam_cookies": False,
             "require_stage1_ok": True,
+            "abort_on_expired_steam_cookies": True,
+            "min_output_rows_fraction": 0.9,
+            "min_nonzero_steam_sales_fraction": 0.9,
             "steam_item_delay_min_sec": 6.0,
             "steam_item_delay_max_sec": 11.0,
             "steam_429_retry_wait_sec": 5400.0,
@@ -307,9 +310,9 @@ def nightly_defaults() -> dict[str, Any]:
         "monitor_tiers": {
             "enabled": True,
             "shares": {
-                "A": 0.2,
-                "B": 0.3,
-                "C": 0.5,
+                "A": 0.3,
+                "B": 0.35,
+                "C": 0.35,
             },
             "score_weights": {
                 "steam_sales_7d_n": 0.75,

@@ -9,6 +9,7 @@ each item, collects Steam pricehistory/trend data, then writes one merged CSV.
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import os
 import subprocess
@@ -83,7 +84,21 @@ def validate_stage1(stage1_csv: Path, items_py: Path) -> None:
         raise RuntimeError(f"stage-1 preprocess CSV missing columns: {missing} ({stage1_csv})")
 
 
-def validate_output(output_csv: Path) -> None:
+def load_expected_items(items_py: Path) -> list[str]:
+    spec = importlib.util.spec_from_file_location("_risk_items", items_py)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Could not load risk input item list: {items_py}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    raw_items = getattr(module, "SKINS", None)
+    if raw_items is None:
+        raw_items = getattr(module, "ITEMS", None)
+    if raw_items is None:
+        raise RuntimeError(f"{items_py} must define SKINS or ITEMS")
+    return [str(item) for item in raw_items]
+
+
+def validate_output(output_csv: Path, *, expected_items: list[str], risk_cfg: dict) -> None:
     require_file(output_csv, "risk metrics CSV")
     header = pd.read_csv(output_csv, nrows=0)
     cols = set(header.columns)
@@ -95,6 +110,30 @@ def validate_output(output_csv: Path) -> None:
             "risk metrics CSV is not the expected merged shape: "
             f"missing_stage1={missing_stage1}, missing_risk={missing_risk} ({output_csv})"
         )
+
+    quality_cols = ["item", "steam_sales_7d_n"]
+    df = pd.read_csv(output_csv, usecols=quality_cols)
+    rows = len(df)
+    expected_rows = len(expected_items)
+    min_rows_fraction = float(risk_cfg.get("min_output_rows_fraction", 0.9))
+    min_nonzero_fraction = float(risk_cfg.get("min_nonzero_steam_sales_fraction", 0.9))
+    if expected_rows > 0 and min_rows_fraction > 0:
+        min_rows = int(expected_rows * min_rows_fraction)
+        if rows < min_rows:
+            raise RuntimeError(
+                "risk metrics CSV failed quality gate: "
+                f"rows={rows} expected_items={expected_rows} min_rows={min_rows}"
+            )
+    if rows > 0 and min_nonzero_fraction > 0:
+        steam_n = pd.to_numeric(df["steam_sales_7d_n"], errors="coerce").fillna(0)
+        nonzero = int((steam_n > 0).sum())
+        nonzero_fraction = nonzero / rows
+        if nonzero_fraction < min_nonzero_fraction:
+            raise RuntimeError(
+                "risk metrics CSV failed quality gate: "
+                f"steam_sales_7d_n_nonzero={nonzero}/{rows} "
+                f"fraction={nonzero_fraction:.3f} min_fraction={min_nonzero_fraction:.3f}"
+            )
 
 
 def risk_command(config: dict, *, mode: str) -> list[str]:
@@ -128,8 +167,10 @@ def runtime_payload(config: dict, *, mode: str) -> dict:
         "STEAM_CURRENCY": int(risk_cfg.get("steam_currency", 3)),
         "AUTO_REFRESH_STEAM_COOKIES": bool(risk_cfg.get("auto_refresh_steam_cookies", False)),
         "REQUIRE_STAGE1_OK": bool(risk_cfg.get("require_stage1_ok", True)),
+        "ABORT_ON_EXPIRED_STEAM_COOKIES": bool(risk_cfg.get("abort_on_expired_steam_cookies", True)),
         "STEAM_ITEM_DELAY_MIN": float(risk_cfg.get("steam_item_delay_min_sec", 6.0)),
         "STEAM_ITEM_DELAY_MAX": float(risk_cfg.get("steam_item_delay_max_sec", 11.0)),
+        "STEAM_429_RETRY_WAIT_SEC": float(risk_cfg.get("steam_429_retry_wait_sec", 5400.0)),
     }
 
 
@@ -166,6 +207,7 @@ def main() -> int:
 
     require_file(risk_script, "risk collector script")
     validate_stage1(stage1_csv, items_py)
+    expected_items = load_expected_items(items_py)
 
     cmd = risk_command(config, mode=mode)
     print(f"config: {config_path}")
@@ -192,10 +234,11 @@ def main() -> int:
     write_runtime_config(runtime_json, runtime_cfg)
     env = os.environ.copy()
     env["RISK_PREPROCESS_RUNTIME_CONFIG"] = str(runtime_json)
+    env["FETCHERS_RUNTIME_CONFIG"] = str(runtime_json)
     env["PYTHONIOENCODING"] = "utf-8"
     env["PYTHONUTF8"] = "1"
     subprocess.run(cmd, cwd=str(root), check=True, env=env)
-    validate_output(output_csv)
+    validate_output(output_csv, expected_items=expected_items, risk_cfg=risk_cfg)
 
     rows = len(pd.read_csv(output_csv, usecols=["item"]))
     print(f"saved merged risk metrics: {output_csv} rows={rows}")

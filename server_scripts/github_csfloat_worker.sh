@@ -178,7 +178,11 @@ commit_outputs() {
   git config user.name "github-actions[bot]"
   git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-  git add automation_runtime skin_homog/data_skins_big steam_listings/data/float_fit_rel_curves.json
+  if [[ "$STATUS" == "success" ]]; then
+    git add automation_runtime skin_homog/data_skins_big steam_listings/data/float_fit_rel_curves.json
+  else
+    git add "$STATUS_FILE" "$HISTORY_FILE"
+  fi
   if git diff --cached --quiet; then
     echo "No CSFloat worker output changes to commit."
     return 0
@@ -188,6 +192,30 @@ commit_outputs() {
   git fetch origin main
   git rebase origin/main
   git push origin HEAD:main
+}
+
+discard_partial_outputs_on_failure() {
+  if [[ "$STATUS" == "success" ]]; then
+    return 0
+  fi
+  echo "Discarding partial CSFloat artifacts after failure; only status/history will be committed."
+  git checkout -- \
+    automation_runtime/model_coverage_latest.csv \
+    automation_runtime/model_backfill_queue_latest.csv \
+    automation_runtime/model_backfill_queue_latest.py \
+    automation_runtime/model_backfill_batch_latest.py \
+    automation_runtime/model_backfill_runtime_latest.json \
+    automation_runtime/model_backfill_progress_latest.log \
+    automation_runtime/model_refit_progress_latest.log \
+    automation_runtime/monitor_list_latest.csv \
+    automation_runtime/monitor_list_latest.py \
+    automation_runtime/monitor_list_tier_a.py \
+    automation_runtime/monitor_list_tier_b.py \
+    automation_runtime/monitor_list_tier_c.py \
+    automation_runtime/monitor_tiers_latest.json \
+    automation_runtime/base_snapshot_latest.csv \
+    skin_homog/data_skins_big \
+    steam_listings/data/float_fit_rel_curves.json 2>/dev/null || true
 }
 
 echo "run_id=$RUN_ID"
@@ -200,6 +228,7 @@ if [[ -z "${CSFLOAT_API_KEY:-}" ]]; then
   FINISHED_AT_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
   END_EPOCH="$(date -u +%s)"
   echo "Missing required GitHub secret: CSFLOAT_API_KEY" >&2
+  discard_partial_outputs_on_failure
   write_status_files "$FINISHED_AT_UTC" "$((END_EPOCH - START_EPOCH))"
   commit_outputs
   exit 1
@@ -213,6 +242,7 @@ run_stage "base snapshot" "$PYTHON_BIN" -B automation/nightly/build_base_snapsho
 
 FINISHED_AT_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 END_EPOCH="$(date -u +%s)"
+discard_partial_outputs_on_failure
 write_status_files "$FINISHED_AT_UTC" "$((END_EPOCH - START_EPOCH))"
 commit_outputs
 

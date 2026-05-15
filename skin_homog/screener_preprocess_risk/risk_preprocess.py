@@ -485,6 +485,21 @@ def _write_progress(path: Path, line: str) -> None:
         handle.write(line + "\n")
 
 
+def _abort_if_steam_cookies_expired(fetchers, cfg: dict) -> None:
+    if not _rt_bool(cfg, "ABORT_ON_EXPIRED_STEAM_COOKIES", True):
+        return
+    cookie_header = fetchers._steam_cookie_header()
+    expires_at = fetchers._steam_loginsecure_expiry(cookie_header)
+    if expires_at is None:
+        return
+    now = pd.Timestamp.utcnow().to_pydatetime()
+    if expires_at <= now:
+        raise RuntimeError(
+            "steamLoginSecure expired at "
+            f"{expires_at.isoformat()}; aborting risk rebuild to keep previous good risk artifacts"
+        )
+
+
 def main() -> int:
     cfg = _load_runtime()
     fetchers = _load_fetchers_module()
@@ -496,6 +511,7 @@ def main() -> int:
     steam_currency = _rt_int(cfg, "STEAM_CURRENCY", 3)
     require_ok = _rt_bool(cfg, "REQUIRE_STAGE1_OK", True)
     _ensure_steam_cookies(fetchers, cfg)
+    _abort_if_steam_cookies_expired(fetchers, cfg)
 
     shortlist_items = _load_items(list_path)
     stage1 = _load_stage1(stage1_csv)
@@ -540,6 +556,7 @@ def main() -> int:
 
     merged_df = pd.DataFrame(list(current_by_item.values()))
     for idx, item in enumerate(items_to_run, start=1):
+        _abort_if_steam_cookies_expired(fetchers, cfg)
         src = stage1_by_item.loc[item].to_dict()
         started = time.perf_counter()
         fetch_days = max(trade_days, TREND_FETCH_DAYS)

@@ -41,8 +41,12 @@
     "steam_currency": 3,
     "auto_refresh_steam_cookies": false,
     "require_stage1_ok": true,
+    "abort_on_expired_steam_cookies": true,
+    "min_output_rows_fraction": 0.9,
+    "min_nonzero_steam_sales_fraction": 0.9,
     "steam_item_delay_min_sec": 10.0,
-    "steam_item_delay_max_sec": 20.0
+    "steam_item_delay_max_sec": 20.0,
+    "steam_429_retry_wait_sec": 5400.0
   },
   "monitor_list": {
     "enabled": true,
@@ -51,15 +55,15 @@
     "fail_if_outside_expected_range": false
   },
   "risk_filter": {
-    "ret_7d_min": -0.03,
-    "downside_14d_max": 0.12,
+    "ret_7d_min": -0.05,
+    "downside_14d_max": 0.15,
     "sales_7d_n_min": 50,
-    "tail_ratio_min": 0.9,
+    "tail_ratio_min": 0.8,
     "n_listings_min": 20
   },
   "high_cv_filter": {
-    "pred_cv_min": 0.075,
-    "pred_range_over_mean_min": 0.3,
+    "pred_cv_min": 0.05,
+    "pred_range_over_mean_min": -1,
     "min_listings": 3,
     "missing_cv_policy": "assume_high"
   },
