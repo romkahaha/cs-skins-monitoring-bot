@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "request_id": "20260512T144810_706956Z-vmi2737474",
+  "status": "success",
+  "completed_at_utc": "2026-05-12T14:48:43.630596+00:00",
+  "item": "P2000 | Turf (Factory New)",
+  "latest_sales": {
+    "version": 1,
+    "source": "network",
+    "item": "P2000 | Turf (Factory New)",
+    "url": "https://csfloat.com/api/v1/history/P2000%20%7C%20Turf%20%28Factory%20New%29/sales",
+    "fetched_at_utc": "2026-05-12T14:48:43.630177+00:00",
+    "raw_row_count": 40,
+    "reference_currency": "USD",
+    "fx_usd_to_eur": 0.85193,
+    "fx_source": "Frankfurter 2026-05-12 (ECB)",
+    "sales_rows": [
+      {
+        "sale_id": "970413806591281826",
+        "sold_at": "2026-05-12T03:19:22.221766Z",
+        "price_usd": 18.5,
+        "price_eur": 15.76,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.037483759224414825,
+        "paint_seed": 586,
+        "stickers": [
+          "Sticker | luken (Holo) | Antwerp 2022",
+          "Sticker | luken (Holo) | Antwerp 2022",
+          "Sticker | luken (Holo) | Antwerp 2022"
+        ],
+        "notes": [
+          "3 stickers"
+        ]
+      },
+      {
+        "sale_id": "972632822449835643",
+        "sold_at": "2026-05-10T03:47:34.730863Z",
+        "price_usd": 27.12,
+        "price_eur": 23.1,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.000569674011785537,
+        "paint_seed": 493,
+        "stickers": [],
+        "notes": [
+          "low #490"
+        ]
+      },
+      {
+        "sale_id": "968435121378166606",
+        "sold_at": "2026-05-09T20:31:25.639963Z",
+        "price_usd": 29.66,
+        "price_eur": 25.27,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.00044182586134411395,
+        "paint_seed": 391,
+        "stickers": [],
+        "notes": [
+          "low #387"
+        ]
+      },
+      {
+        "sale_id": "972822577015820051",
+        "sold_at": "2026-05-09T19:24:31.162026Z",
+        "price_usd": 17.7,
+        "price_eur": 15.08,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.05345901846885681,
+        "paint_seed": 904,
+        "stickers": [
+          "Sticker | olofmeister (Foil) | London 2018",
+          "Sticker | olofmeister | Katowice 2019",
+          "Sticker | olofmeister (Foil) | Katowice 2019"
+        ],
+        "notes": [
+          "3 stickers"
+        ]
+      },
+      {
+        "sale_id": "971498389072120504",
+        "sold_at": "2026-05-09T15:52:46.741679Z",
+        "price_usd": 17.7,
+        "price_eur": 15.08,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.022032104432582855,
+        "paint_seed": 493,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "972190790052874759",
+        "sold_at": "2026-05-09T10:13:16.198371Z",
+        "price_usd": 18.85,
+        "price_eur": 16.06,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.05673593282699585,
+        "paint_seed": 0,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970301774902726084",
+        "sold_at": "2026-05-08T04:29:49.372774Z",
+        "price_usd": 29.96,
+        "price_eur": 25.52,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.0003847245534416288,
+        "paint_seed": 831,
+        "stickers": [],
+        "notes": [
+          "low #338"
+        ]
+      },
+      {
+        "sale_id": "972377489269722925",
+        "sold_at": "2026-05-07T06:00:59.355929Z",
+        "price_usd": 16.24,
+        "price_eur": 13.84,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.028406843543052673,
+        "paint_seed": 253,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "971759195160447586",
+        "sold_at": "2026-05-05T13:08:17.645385Z",
+        "price_usd": 23.82,
+        "price_eur": 20.29,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.0006384592852555215,
+        "paint_seed": 752,
+        "stickers": [],
+        "notes": [
+          "low #560"
+        ]
+      },
+      {
+        "sale_id": "970304297042576638",
+        "sold_at": "2026-05-04T05:51:03.693995Z",
+        "price_usd": 26.0,
+        "price_eur": 22.15,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.0021672798320651054,
+        "paint_seed": 940,
+        "stickers": [
+          "Sticker | Assassin",
+          "Sticker | Spartan"
+        ],
+        "notes": [
+          "2 stickers"
+        ]
+      },
+      {
+        "sale_id": "969377164304713569",
+        "sold_at": "2026-05-04T05:50:35.300961Z",
+        "price_usd": 23.95,
+        "price_eur": 20.4,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.005065500736236572,
+        "paint_seed": 487,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970715449379653355",
+        "sold_at": "2026-05-04T05:50:28.448574Z",
+        "price_usd": 23.43,
+        "price_eur": 19.96,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.007613669149577618,
+        "paint_seed": 543,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "969274392636951509",
+        "sold_at": "2026-05-04T05:50:13.869476Z",
+        "price_usd": 25.89,
+        "price_eur": 22.06,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.0014199792640283704,
+        "paint_seed": 796,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "967598927203405027",
+        "sold_at": "2026-05-04T05:50:01.797883Z",
+        "price_usd": 24.29,
+        "price_eur": 20.69,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.0010564073454588652,
+        "paint_seed": 376,
+        "stickers": [
+          "Sticker | BIG | 2020 RMR"
+        ],
+        "notes": [
+          "low #929",
+          "1 stickers"
+        ]
+      },
+      {
+        "sale_id": "969141903499068106",
+        "sold_at": "2026-05-03T23:48:58.929633Z",
+        "price_usd": 22.0,
+        "price_eur": 18.74,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.02480047382414341,
+        "paint_seed": 71,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "971169180906819122",
+        "sold_at": "2026-05-03T23:48:45.088113Z",
+        "price_usd": 21.49,
+        "price_eur": 18.31,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.02773703821003437,
+        "paint_seed": 398,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970557944141843481",
+        "sold_at": "2026-05-03T23:48:38.539272Z",
+        "price_usd": 19.87,
+        "price_eur": 16.93,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.04841405153274536,
+        "paint_seed": 213,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970297229359317285",
+        "sold_at": "2026-05-03T17:49:24.517375Z",
+        "price_usd": 22.4,
+        "price_eur": 19.08,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.0296204574406147,
+        "paint_seed": 265,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970761193931279195",
+        "sold_at": "2026-05-03T17:49:22.383965Z",
+        "price_usd": 22.26,
+        "price_eur": 18.96,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.017176615074276924,
+        "paint_seed": 213,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "968994036977370900",
+        "sold_at": "2026-05-03T17:49:09.322138Z",
+        "price_usd": 21.64,
+        "price_eur": 18.44,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.05919968709349632,
+        "paint_seed": 496,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970844618268737540",
+        "sold_at": "2026-05-03T00:29:55.203685Z",
+        "price_usd": 28.23,
+        "price_eur": 24.05,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.013066662475466728,
+        "paint_seed": 155,
+        "stickers": [
+          "Sticker | OpTic Gaming | Atlanta 2017",
+          "Sticker | OpTic Gaming | Atlanta 2017",
+          "Sticker | mixwell | Atlanta 2017",
+          "Sticker | OpTic Gaming | Atlanta 2017"
+        ],
+        "notes": [
+          "4 stickers"
+        ]
+      },
+      {
+        "sale_id": "970414016738494859",
+        "sold_at": "2026-05-02T18:19:51.338151Z",
+        "price_usd": 19.36,
+        "price_eur": 16.49,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.05513232573866844,
+        "paint_seed": 314,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970048713793864067",
+        "sold_at": "2026-05-02T16:01:51.127321Z",
+        "price_usd": 22.1,
+        "price_eur": 18.83,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.016307104378938675,
+        "paint_seed": 322,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "969952575669536036",
+        "sold_at": "2026-05-02T16:01:32.676328Z",
+        "price_usd": 21.9,
+        "price_eur": 18.66,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.015135395340621471,
+        "paint_seed": 286,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970120612016162479",
+        "sold_at": "2026-05-02T00:41:50.850839Z",
+        "price_usd": 20.41,
+        "price_eur": 17.39,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.03233799710869789,
+        "paint_seed": 638,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970441410241233506",
+        "sold_at": "2026-05-01T22:54:49.222412Z",
+        "price_usd": 24.89,
+        "price_eur": 21.2,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.001538831857033074,
+        "paint_seed": 135,
+        "stickers": [
+          "Sticker | chelo (Holo) | Antwerp 2022",
+          "Sticker | MIBR (Holo) | Antwerp 2022",
+          "Sticker | Tuurtle (Holo) | Antwerp 2022"
+        ],
+        "notes": [
+          "3 stickers"
+        ]
+      },
+      {
+        "sale_id": "970354206584212950",
+        "sold_at": "2026-05-01T18:36:03.791034Z",
+        "price_usd": 25.29,
+        "price_eur": 21.55,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.001965264556929469,
+        "paint_seed": 547,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "968112682114879340",
+        "sold_at": "2026-04-30T22:09:48.160667Z",
+        "price_usd": 21.62,
+        "price_eur": 18.42,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.04602298140525818,
+        "paint_seed": 680,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "970044489089549439",
+        "sold_at": "2026-04-30T19:31:17.266126Z",
+        "price_usd": 26.2,
+        "price_eur": 22.32,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.001449422212317586,
+        "paint_seed": 378,
+        "stickers": [
+          "Sticker | MIBR (Holo) | Antwerp 2022",
+          "Sticker | MIBR (Holo) | Antwerp 2022",
+          "Sticker | MIBR (Holo) | Antwerp 2022",
+          "Sticker | MIBR (Holo) | Antwerp 2022"
+        ],
+        "notes": [
+          "4 stickers"
+        ]
+      },
+      {
+        "sale_id": "969566854672679540",
+        "sold_at": "2026-04-29T12:23:45.833222Z",
+        "price_usd": 26.0,
+        "price_eur": 22.15,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.000569674011785537,
+        "paint_seed": 493,
+        "stickers": [],
+        "notes": [
+          "low #489"
+        ]
+      }
+    ]
+  }
+}

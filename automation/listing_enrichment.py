@@ -75,6 +75,10 @@ def numeric_series(frame: pd.DataFrame, column: str) -> pd.Series:
     return pd.to_numeric(frame[column], errors="coerce")
 
 
+def finite_series(series: pd.Series) -> pd.Series:
+    return pd.Series(np.isfinite(series), index=series.index).fillna(False)
+
+
 def load_items_py(path: Path) -> list[str]:
     spec = importlib.util.spec_from_file_location("_automation_monitor_items", path)
     if spec is None or spec.loader is None:
@@ -225,6 +229,7 @@ def add_model_predictions(df: pd.DataFrame, fit_payload: dict) -> pd.DataFrame:
         gg = group.copy()
         base = numeric_series(gg, "base_eur")
         ask = numeric_series(gg, "ask")
+        ask = ask.where((ask > 0) & finite_series(ask))
         avg_discount = numeric_series(gg, "avg_discount")
 
         for model_name in MODEL_NAMES:
@@ -259,7 +264,13 @@ def add_model_predictions(df: pd.DataFrame, fit_payload: dict) -> pd.DataFrame:
 
 
 def build_opportunity_masks(frame: pd.DataFrame, cfg: OpportunityConfig) -> dict[str, pd.Series]:
+    ask = numeric_series(frame, "ask")
+    spread_hybrid_disc = numeric_series(frame, "spread_hybrid_disc")
     specs = [
+        (
+            "ask > 0",
+            (ask > 0) & finite_series(ask),
+        ),
         (
             f"steam_sales_7d_n >= {cfg.steam_sales_n_min}",
             numeric_series(frame, "steam_sales_7d_n") >= cfg.steam_sales_n_min,
@@ -282,7 +293,7 @@ def build_opportunity_masks(frame: pd.DataFrame, cfg: OpportunityConfig) -> dict
         ),
         (
             f"spread_hybrid_disc <= {cfg.spread_hybrid_disc_max}",
-            numeric_series(frame, "spread_hybrid_disc") <= cfg.spread_hybrid_disc_max,
+            finite_series(spread_hybrid_disc) & (spread_hybrid_disc <= cfg.spread_hybrid_disc_max),
         ),
     ]
     return {label: mask.fillna(False).astype(bool) for label, mask in specs}

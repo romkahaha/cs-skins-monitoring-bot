@@ -1,0 +1,122 @@
+{
+  "verdict": "PASS",
+  "confidence": "low",
+  "risk_level": "high",
+  "item_liquidity": "medium",
+  "float_liquidity": "low",
+  "model_agreement": "strong",
+  "target_15pct_fast": "no",
+  "target_10pct_fast": "no",
+  "breakeven_gross_eur": 6.959183673469388,
+  "gross_for_minus_5pct": 6.6112244897959185,
+  "gross_for_minus_10pct": 6.26326530612245,
+  "gross_for_minus_15pct": 5.915306122448979,
+  "fast_sale_range_eur": null,
+  "realistic_sale_range_eur": null,
+  "patient_sale_range_eur": null,
+  "start_listing_range_eur": null,
+  "same_zone_floor_eur": null,
+  "fast_floor_range_eur": [
+    4.53,
+    4.63
+  ],
+  "conservative_floor_range_eur": [
+    4.53,
+    4.63
+  ],
+  "panic_floor_range_eur": [
+    4.53,
+    4.63
+  ],
+  "fast_net_exit_pct": null,
+  "realistic_net_exit_pct": null,
+  "patient_net_exit_pct": null,
+  "same_zone_floor_net_exit_pct": null,
+  "conservative_net_exit_pct": [
+    -34.90615835777127,
+    -33.469208211143695
+  ],
+  "panic_net_exit_pct": [
+    -34.90615835777127,
+    -33.469208211143695
+  ],
+  "range_basis": {
+    "fast": "No deterministic fast range could be computed. Generic floor comps (21) are kept out of fast-sale evidence.",
+    "realistic": "No deterministic realistic range could be computed.",
+    "patient": "No deterministic patient range could be computed."
+  },
+  "best_comps": [
+    {
+      "sale_id": "sale_22",
+      "bucket_reason": "generic_floor",
+      "price_eur": 4.53,
+      "float_value": 0.6113121509552002,
+      "paint_seed": 464.0,
+      "why": "Generic floor comp; panic downside only."
+    }
+  ],
+  "risks": [
+    "No relevant same-zone sales comps for this extreme high float (0.997).",
+    "All available comps, even the closest float outliers, imply significant losses (-26% to -38%) relative to the Steam ask.",
+    "The item's generic floor is extremely low compared to the Steam ask, indicating high downside risk for this specific float."
+  ],
+  "summary": "This MP7 | Abyssal Apparition (BS) has an extreme high float (0.997) but lacks any direct same-zone sales comps. All available sales, even those with similar high floats, are significantly below the current Steam ask, implying heavy losses. The model agrees on a fair value slightly above the ask, but without float-specific sales, confidence in a quick -15% exit is very low, making this a high-risk pass.",
+  "computed_context": {
+    "fast_sale_range_eur": null,
+    "realistic_sale_range_eur": null,
+    "patient_sale_range_eur": null,
+    "same_zone_floor_eur": null,
+    "conservative_floor_range_eur": [
+      4.53,
+      4.63
+    ],
+    "panic_floor_range_eur": [
+      4.53,
+      4.63
+    ],
+    "start_listing_range_eur": null,
+    "target_15pct_fast": "no",
+    "target_10pct_fast": "no",
+    "fast_net_exit_pct": null,
+    "realistic_net_exit_pct": null,
+    "patient_net_exit_pct": null,
+    "same_zone_floor_net_exit_pct": null,
+    "conservative_net_exit_pct": [
+      -34.90615835777127,
+      -33.469208211143695
+    ],
+    "panic_net_exit_pct": [
+      -34.90615835777127,
+      -33.469208211143695
+    ],
+    "same_zone_count": 0,
+    "near_worse_count": 0,
+    "generic_floor_count": 21,
+    "relevant_comps": [
+      {
+        "sale_id": "sale_22",
+        "price_eur": 4.53,
+        "float_value": 0.6113121509552002,
+        "paint_seed": 464.0,
+        "sold_at": "2026-05-11T01:17:45.109525Z",
+        "realized_net_exit_pct": -34.90615835777127,
+        "float_delta_abs": 0.38577687740325983,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.38577687740325983,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "generic_floor",
+        "why": "Generic floor comp; panic downside only."
+      }
+    ],
+    "fast_basis_ids": [],
+    "conservative_basis_ids": [],
+    "panic_basis_ids": [
+      "sale_22",
+      "sale_14",
+      "sale_13"
+    ]
+  }
+}

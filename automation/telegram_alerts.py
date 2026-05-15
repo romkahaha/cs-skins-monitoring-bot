@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import pandas as pd
 import requests
 
@@ -386,12 +387,28 @@ def _passes_max(frame: pd.DataFrame, column: str, threshold: Any) -> pd.Series:
     return pd.to_numeric(frame[column], errors="coerce") <= float(threshold)
 
 
+def _finite_positive(frame: pd.DataFrame, column: str) -> pd.Series:
+    if column not in frame.columns:
+        return pd.Series(False, index=frame.index)
+    values = pd.to_numeric(frame[column], errors="coerce")
+    return pd.Series(np.isfinite(values), index=frame.index).fillna(False) & (values > 0)
+
+
+def _finite_value(frame: pd.DataFrame, column: str) -> pd.Series:
+    if column not in frame.columns:
+        return pd.Series(False, index=frame.index)
+    values = pd.to_numeric(frame[column], errors="coerce")
+    return pd.Series(np.isfinite(values), index=frame.index).fillna(False)
+
+
 def apply_alert_filters(frame: pd.DataFrame, alerts_cfg: dict[str, Any] | None = None) -> tuple[pd.DataFrame, dict[str, int]]:
     cfg = alerts_cfg or {}
     if not bool(cfg.get("enabled", True)):
         return frame.iloc[0:0].copy(), {"input": len(frame), "passed": 0, "filtered": len(frame)}
 
     mask = pd.Series(True, index=frame.index)
+    mask &= _finite_positive(frame, "ask")
+    mask &= _finite_value(frame, "spread_hybrid_disc")
     mask &= _passes_max(frame, "spread_hybrid_disc", cfg.get("spread_hybrid_disc_max"))
     mask &= _passes_min(frame, "ask", cfg.get("ask_min"))
     mask &= _passes_max(frame, "ask", cfg.get("ask_max"))

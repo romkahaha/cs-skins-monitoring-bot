@@ -48,6 +48,23 @@ def _load_steam_scm_listings(repo_root: Path):
     return module
 
 
+def _load_fetchers(repo_root: Path):
+    fetchers_dir = repo_root / "base_screening_with_trades"
+    fetchers_dir_str = str(fetchers_dir)
+    if fetchers_dir_str not in sys.path:
+        sys.path.insert(0, fetchers_dir_str)
+
+    import importlib.util
+
+    module_path = fetchers_dir / "fetchers.py"
+    spec = importlib.util.spec_from_file_location("health_fetchers", module_path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot import {module_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def parse_args() -> argparse.Namespace:
     root = repo_root_from(Path(__file__))
     parser = argparse.ArgumentParser(description="Check Steam cookies and alert Telegram on failure.")
@@ -174,25 +191,55 @@ def validate_listing_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -
     return True, "Steam listing endpoint returned listings", len(rows), meta
 
 
-def format_failure_alert(*, item: str, reason: str, rows: int | None, meta: dict[str, Any] | None) -> str:
+def validate_pricehistory_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -> tuple[bool, str, int, dict[str, Any]]:
+    if not cfg.get("check_pricehistory_endpoint", True):
+        return True, "pricehistory endpoint check disabled", 0, {}
+
+    module = _load_fetchers(repo_root)
+    module.STEAM_COOKIES = cookies
+    os.environ["STEAM_COOKIES"] = cookies
+    if "request_timeout_sec" in cfg and cfg["request_timeout_sec"] is not None:
+        module.STEAM_429_RETRY_WAIT_SEC = float(cfg.get("steam_429_retry_wait_sec", module.STEAM_429_RETRY_WAIT_SEC))
+    item = str(cfg.get("item", "Dreams & Nightmares Case"))
+    days = int(cfg.get("pricehistory_days", 14))
+    currency = int(cfg.get("currency", 3))
+    points = module.get_scm_trade_points(item, currency=currency, days=days)
+    rows = len(points or [])
+    meta = {"success": bool(points), "points": rows, "days": days}
+    min_points = int(cfg.get("min_pricehistory_points", 1))
+    if not points:
+        return False, "Steam pricehistory returned no trade points", rows, meta
+    if rows < min_points:
+        return False, f"Steam pricehistory returned {rows} points, expected at least {min_points}", rows, meta
+    return True, f"Steam pricehistory returned {rows} trade points", rows, meta
+
+
+def format_failure_alert(*, item: str, reason: str, rows: int | None, meta: dict[str, Any] | None, checked_endpoint: str) -> str:
     lines = [
         "<b>Steam cookies health check failed</b>",
         f"Item: <code>{html.escape(item)}</code>",
+        f"Checked endpoint: <code>{html.escape(checked_endpoint)}</code>",
         f"Reason: <code>{html.escape(reason)}</code>",
     ]
     if rows is not None:
-        lines.append(f"Listing rows: <code>{rows}</code>")
+        lines.append(f"Observed rows: <code>{rows}</code>")
     if meta:
         note = meta.get("note")
         total_count = meta.get("total_count")
         pages = meta.get("pages_fetched")
+        points = meta.get("points")
+        days = meta.get("days")
         if note is not None:
             lines.append(f"Steam note: <code>{html.escape(str(note))}</code>")
         if total_count is not None:
             lines.append(f"Steam total_count: <code>{html.escape(str(total_count))}</code>")
         if pages is not None:
             lines.append(f"Pages fetched: <code>{html.escape(str(pages))}</code>")
-    lines.append("Action: update <code>STEAM_COOKIES</code> in GitHub Secrets.")
+        if points is not None:
+            lines.append(f"Trade points: <code>{html.escape(str(points))}</code>")
+        if days is not None:
+            lines.append(f"Trade days: <code>{html.escape(str(days))}</code>")
+    lines.append("Action: update <code>STEAM_COOKIES</code> in <code>/home/roma/cs-arbitrage/secrets.env</code>.")
     return "\n".join(lines)
 
 
@@ -225,6 +272,7 @@ def run_check(args: argparse.Namespace) -> int:
     print(f"steam cookie health check: item={item!r}, cookies_present={bool(cookies.strip())}")
 
     failed_reason: str | None = None
+    checked_endpoint = "pricehistory"
     rows: int | None = None
     meta: dict[str, Any] | None = None
 
@@ -233,13 +281,22 @@ def run_check(args: argparse.Namespace) -> int:
         rows = 0
         meta = {"success": False, "note": "forced_failure_for_test"}
     else:
-        ok, reason = validate_steam_login(cookies, steam_cfg)
-        print(f"login check: {reason}")
-        if not ok:
-            failed_reason = reason
-        else:
+        if bool(steam_cfg.get("check_login_endpoint", False)):
+            checked_endpoint = "login"
+            ok, reason = validate_steam_login(cookies, steam_cfg)
+            print(f"login check: {reason}")
+            if not ok:
+                failed_reason = reason
+        if failed_reason is None and bool(steam_cfg.get("check_listing_endpoint", False)):
+            checked_endpoint = "listing"
             ok, reason, rows, meta = validate_listing_fetch(repo_root, cookies, steam_cfg)
             print(f"listing check: {reason}; rows={rows}; meta_success={meta.get('success') if meta else None}")
+            if not ok:
+                failed_reason = reason
+        if failed_reason is None and bool(steam_cfg.get("check_pricehistory_endpoint", True)):
+            checked_endpoint = "pricehistory"
+            ok, reason, rows, meta = validate_pricehistory_fetch(repo_root, cookies, steam_cfg)
+            print(f"pricehistory check: {reason}; rows={rows}; meta_success={meta.get('success') if meta else None}")
             if not ok:
                 failed_reason = reason
 
@@ -247,7 +304,13 @@ def run_check(args: argparse.Namespace) -> int:
         print("steam cookie health check ok")
         return 0
 
-    alert = format_failure_alert(item=item, reason=failed_reason, rows=rows, meta=meta)
+    alert = format_failure_alert(
+        item=item,
+        reason=failed_reason,
+        rows=rows,
+        meta=meta,
+        checked_endpoint=checked_endpoint,
+    )
     notify_failure(alert, cfg, dry_run=args.dry_run_telegram)
     print(f"steam cookie health check failed: {failed_reason}")
     return 0 if args.exit_zero_on_failure else 1
@@ -261,4 +324,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

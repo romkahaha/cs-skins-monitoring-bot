@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "items_signature": "8a51cc0546a277f095a4a7b87f0ca8cc7f7343a8ade25fa21427128685c1008c",
+  "items_count": 31,
+  "batch_pointer": 1,
+  "last_run_at_utc": "2026-05-15T16:39:47.897937+00:00",
+  "last_status": "running",
+  "last_batch_items": [
+    "AK-47 | Slate (Well-Worn)",
+    "AK-47 | Wintergreen (Minimal Wear)",
+    "M4A1-S | Electrum (Minimal Wear)",
+    "P2000 | Wicked Sick (Field-Tested)",
+    "AK-47 | Slate (Battle-Scarred)"
+  ],
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-15T16:39:46.864418+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T16:39:46.864418+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-15T01:43:50.602994+00:00",
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 499,
+  "last_enriched_rows": 499,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 647513
+  },
+  "last_batch_start_pointer": 1
+}

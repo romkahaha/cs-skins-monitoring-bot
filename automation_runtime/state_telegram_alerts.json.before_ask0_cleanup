@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "items_signature": "394ba1cc1c0436a79bc96adc0f4ac57b25e79dcf2335bdc7d5ed859dc6d132ef",
+  "items_count": 227,
+  "batch_pointer": 0,
+  "last_run_at_utc": null,
+  "last_status": null,
+  "last_batch_items": [],
+  "last_error": null,
+  "last_finished_at_utc": null,
+  "last_successful_monitoring_at_utc": null,
+  "last_failed_monitoring_at_utc": null,
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 0,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {},
+  "sent_alerts": {
+    "listing:511864977782550561": {
+      "sent_at_utc": "2026-05-12T06:29:25.217449+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "511864977782550561",
+      "spread_hybrid_disc": 0.0697051339500526
+    },
+    "listing:502858064668356640": {
+      "sent_at_utc": "2026-05-12T06:29:47.193269+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "502858064668356640",
+      "spread_hybrid_disc": 0.087477059662687
+    },
+    "listing:518620663117422256": {
+      "sent_at_utc": "2026-05-12T07:45:36.896493+00:00",
+      "item": "MAC-10 | Disco Tech (Field-Tested)",
+      "listing_id": "518620663117422256",
+      "spread_hybrid_disc": 0.0436262425736843
+    },
+    "listing:517494758891895298": {
+      "sent_at_utc": "2026-05-12T07:56:20.371133+00:00",
+      "item": "P250 | Boreal Forest (Factory New)",
+      "listing_id": "517494758891895298",
+      "spread_hybrid_disc": 0.0656172834893907
+    },
+    "listing:523123976862833566": {
+      "sent_at_utc": "2026-05-12T08:52:47.054105+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "523123976862833566",
+      "spread_hybrid_disc": 0.0718003401713807
+    },
+    "listing:490472879532453459": {
+      "sent_at_utc": "2026-05-12T08:53:28.179236+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "490472879532453459",
+      "spread_hybrid_disc": 0.1023893784554075
+    },
+    "listing:501732164535856589": {
+      "sent_at_utc": "2026-05-12T10:08:41.050253+00:00",
+      "item": "AK-47 | Emerald Pinstripe (Battle-Scarred)",
+      "listing_id": "501732164535856589",
+      "spread_hybrid_disc": 0.10113709546678
+    },
+    "listing:500606264646164063": {
+      "sent_at_utc": "2026-05-12T11:45:58.563643+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "500606264646164063",
+      "spread_hybrid_disc": 0.1190811896849057
+    },
+    "listing:512991163851294095": {
+      "sent_at_utc": "2026-05-12T12:05:40.664209+00:00",
+      "item": "AWP | Green Energy (Battle-Scarred)",
+      "listing_id": "512991163851294095",
+      "spread_hybrid_disc": 0.094312414287846
+    },
+    "listing:500606264646253379": {
+      "sent_at_utc": "2026-05-12T12:25:11.754281+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "500606264646253379",
+      "spread_hybrid_disc": 0.0528173853691684
+    },
+    "listing:507361378250110897": {
+      "sent_at_utc": "2026-05-13T11:28:44.855711+00:00",
+      "item": "AK-47 | Wintergreen (Factory New)",
+      "listing_id": "507361378250110897",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:519746657745783598": {
+      "sent_at_utc": "2026-05-13T11:33:20.786463+00:00",
+      "item": "AK-47 | Midnight Laminate (Field-Tested)",
+      "listing_id": "519746657745783598",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:497228659607410091": {
+      "sent_at_utc": "2026-05-13T11:34:02.067049+00:00",
+      "item": "AK-47 | Slate (Well-Worn)",
+      "listing_id": "497228659607410091",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:517494857929528958": {
+      "sent_at_utc": "2026-05-13T11:34:43.190118+00:00",
+      "item": "AK-47 | Slate (Well-Worn)",
+      "listing_id": "517494857929528958",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:517494857929562294": {
+      "sent_at_utc": "2026-05-13T11:35:24.335471+00:00",
+      "item": "Glock-18 | Shinobu (Field-Tested)",
+      "listing_id": "517494857929562294",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:508487658677017641": {
+      "sent_at_utc": "2026-05-13T11:36:05.591649+00:00",
+      "item": "Glock-18 | Shinobu (Field-Tested)",
+      "listing_id": "508487658677017641",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:511865358394202947": {
+      "sent_at_utc": "2026-05-13T11:36:08.637596+00:00",
+      "item": "Glock-18 | Shinobu (Field-Tested)",
+      "listing_id": "511865358394202947",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:493850959885177786": {
+      "sent_at_utc": "2026-05-13T11:36:49.614055+00:00",
+      "item": "Glock-18 | Shinobu (Field-Tested)",
+      "listing_id": "493850959885177786",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:493850959885178002": {
+      "sent_at_utc": "2026-05-13T11:37:30.691797+00:00",
+      "item": "Glock-18 | Shinobu (Field-Tested)",
+      "listing_id": "493850959885178002",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:502858064671613236": {
+      "sent_at_utc": "2026-05-13T11:38:11.687393+00:00",
+      "item": "Glock-18 | Shinobu (Field-Tested)",
+      "listing_id": "502858064671613236",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:529879756907198593": {
+      "sent_at_utc": "2026-05-13T11:38:13.076014+00:00",
+      "item": "Glock-18 | Vogue (Field-Tested)",
+      "listing_id": "529879756907198593",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:508487658676639965": {
+      "sent_at_utc": "2026-05-13T11:38:14.077736+00:00",
+      "item": "Glock-18 | Vogue (Field-Tested)",
+      "listing_id": "508487658676639965",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:515243058115569626": {
+      "sent_at_utc": "2026-05-13T11:38:35.082592+00:00",
+      "item": "M4A4 | Tooth Fairy (Field-Tested)",
+      "listing_id": "515243058115569626",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:512991258303146097": {
+      "sent_at_utc": "2026-05-13T11:39:16.139586+00:00",
+      "item": "M4A4 | Tooth Fairy (Field-Tested)",
+      "listing_id": "512991258303146097",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:492725059980492293": {
+      "sent_at_utc": "2026-05-13T11:39:57.313265+00:00",
+      "item": "AWP | Atheris (Field-Tested)",
+      "listing_id": "492725059980492293",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:518620757836209872": {
+      "sent_at_utc": "2026-05-13T11:40:19.260682+00:00",
+      "item": "AWP | Atheris (Field-Tested)",
+      "listing_id": "518620757836209872",
+      "spread_hybrid_disc": -Infinity
+    },
+    "listing:510739458488707839": {
+      "sent_at_utc": "2026-05-13T11:41:00.579758+00:00",
+      "item": "M4A1-S | Electrum (Minimal Wear)",
+      "listing_id": "510739458488707839",
+      "spread_hybrid_disc": -Infinity
+    }
+  },
+  "last_alert_sent_at_utc": "2026-05-13T11:41:00.579903+00:00"
+}

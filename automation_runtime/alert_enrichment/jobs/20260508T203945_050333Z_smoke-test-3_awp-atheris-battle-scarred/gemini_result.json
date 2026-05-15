@@ -1,0 +1,54 @@
+{
+  "verdict": "MAYBE",
+  "confidence": "medium",
+  "breakeven_gross_eur": 4.18,
+  "gross_for_minus_5pct": 3.97,
+  "gross_for_minus_10pct": 3.76,
+  "gross_for_minus_15pct": 3.55,
+  "fast_sale_range_eur": [
+    4.5,
+    4.7
+  ],
+  "realistic_sale_range_eur": [
+    4.7,
+    4.9
+  ],
+  "patient_sale_range_eur": [
+    4.9,
+    5.2
+  ],
+  "start_listing_range_eur": [
+    5.0,
+    5.3
+  ],
+  "fast_floor_range_eur": [
+    4.4,
+    4.6
+  ],
+  "best_comps": [
+    {
+      "price_eur": 4.98,
+      "float_value": 0.9905,
+      "paint_seed": 181.0,
+      "why": "Similar float to alert, recent sale"
+    },
+    {
+      "price_eur": 4.8,
+      "float_value": 0.9958,
+      "paint_seed": 177.0,
+      "why": "Similar float, recent sale, noted as low #514"
+    },
+    {
+      "price_eur": 6.59,
+      "float_value": 0.9996,
+      "paint_seed": 584.0,
+      "why": "Higher float, recent sale, noted as low #82"
+    }
+  ],
+  "risks": [
+    "One recent sale at 4.0 EUR for a similar float (0.9707) suggests potential downside.",
+    "Steam sales data shows a slight negative trend over 7 days (-2.02% daily return and negative slope).",
+    "The continuity ratio of 1.33 indicates some volatility or inconsistency in pricing."
+  ],
+  "summary": "The alert item has a high float (0.991) which generally commands a premium. Recent sales for similar high floats are around 4.8-4.98 EUR, with one outlier at 6.59 EUR for a slightly higher float. However, there's also a recent sale at 4.0 EUR for a 0.9707 float, which is a concern. The ask price of 4.1 EUR is below the estimated fair values, but the market trend is slightly negative. Given the mixed comps and slight negative trend, this is a MAYBE."
+}

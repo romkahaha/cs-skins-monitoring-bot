@@ -1,0 +1,231 @@
+{
+  "verdict": "PASS",
+  "confidence": "medium",
+  "risk_level": "high",
+  "item_liquidity": "medium",
+  "float_liquidity": "low",
+  "model_agreement": "mixed",
+  "target_15pct_fast": "no",
+  "target_10pct_fast": "no",
+  "breakeven_gross_eur": 28.285714285714285,
+  "gross_for_minus_5pct": 26.871428571428567,
+  "gross_for_minus_10pct": 25.45714285714286,
+  "gross_for_minus_15pct": 24.04285714285714,
+  "fast_sale_range_eur": [
+    20.9035,
+    22.1965
+  ],
+  "realistic_sale_range_eur": [
+    21.119,
+    21.981
+  ],
+  "patient_sale_range_eur": [
+    21.55,
+    21.55
+  ],
+  "start_listing_range_eur": [
+    21.55,
+    23.274
+  ],
+  "same_zone_floor_eur": [
+    21.55,
+    21.55
+  ],
+  "fast_floor_range_eur": [
+    19.96,
+    20.4
+  ],
+  "conservative_floor_range_eur": [
+    19.96,
+    20.4
+  ],
+  "panic_floor_range_eur": [
+    15.08,
+    18.692
+  ],
+  "fast_net_exit_pct": [
+    -26.098737373737368,
+    -21.52752525252526
+  ],
+  "realistic_net_exit_pct": [
+    -25.336868686868684,
+    -22.289393939393932
+  ],
+  "patient_net_exit_pct": [
+    -23.813131313131308,
+    -23.813131313131308
+  ],
+  "same_zone_floor_net_exit_pct": [
+    -23.813131313131308,
+    -23.813131313131308
+  ],
+  "conservative_net_exit_pct": [
+    -29.434343434343436,
+    -27.878787878787882
+  ],
+  "panic_net_exit_pct": [
+    -46.686868686868685,
+    -33.917171717171726
+  ],
+  "range_basis": {
+    "fast": "Deterministic fast range from 1 clean same-zone comps, excluding the worst same-zone print from the main fast range when there is enough depth. Same-zone floor is €21.55-21.55. Generic floor comps (13) are kept out of fast-sale evidence.",
+    "realistic": "Deterministic realistic range from the central same-zone cluster (1 clean comps).",
+    "patient": "Deterministic patient range from upper same-zone comps plus nearby better-float upside when available."
+  },
+  "best_comps": [
+    {
+      "sale_id": "sale_27",
+      "bucket_reason": "same_zone_clean",
+      "price_eur": 21.55,
+      "float_value": 0.001965264556929469,
+      "paint_seed": 547.0,
+      "why": "Closest clean same-zone comp; slightly worse float than candidate."
+    },
+    {
+      "sale_id": "sale_11",
+      "bucket_reason": "near_worse_float",
+      "price_eur": 20.4,
+      "float_value": 0.005065500736236572,
+      "paint_seed": 487.0,
+      "why": "Nearby worse-float comp for conservative downside."
+    },
+    {
+      "sale_id": "sale_5",
+      "bucket_reason": "generic_floor",
+      "price_eur": 15.08,
+      "float_value": 0.022032104432582855,
+      "paint_seed": 493.0,
+      "why": "Generic floor comp; panic downside only."
+    }
+  ],
+  "risks": [
+    "The candidate's float is extremely low (0.0005), but the only clean same-zone comp (0.00196 at 21.55 EUR) implies a significant net loss (-23.81%).",
+    "Several 'low #' sales (e.g., 25.52 EUR for 0.00038 float, 25.27 EUR for 0.00044 float) are marked as contaminated, making their relevance for a clean candidate uncertain.",
+    "The model fair values are mixed, with the hybrid fair value (27.99 EUR) close to the ask, but the discounted fair value (26.53 EUR) is below the ask, indicating potential overpricing."
+  ],
+  "summary": "This P2000 | Turf (Factory New) has an extremely low float, but float-specific liquidity is low with only one clean same-zone comp. The ask price of 27.72 EUR is significantly above recent relevant sales, with the best clean comp implying a -23.81% net exit. The model agreement is mixed, and a quick -15% exit is not protected, making this a high-risk pass.",
+  "computed_context": {
+    "fast_sale_range_eur": [
+      20.9035,
+      22.1965
+    ],
+    "realistic_sale_range_eur": [
+      21.119,
+      21.981
+    ],
+    "patient_sale_range_eur": [
+      21.55,
+      21.55
+    ],
+    "same_zone_floor_eur": [
+      21.55,
+      21.55
+    ],
+    "conservative_floor_range_eur": [
+      19.96,
+      20.4
+    ],
+    "panic_floor_range_eur": [
+      15.08,
+      18.692
+    ],
+    "start_listing_range_eur": [
+      21.55,
+      23.274
+    ],
+    "target_15pct_fast": "no",
+    "target_10pct_fast": "no",
+    "fast_net_exit_pct": [
+      -26.098737373737368,
+      -21.52752525252526
+    ],
+    "realistic_net_exit_pct": [
+      -25.336868686868684,
+      -22.289393939393932
+    ],
+    "patient_net_exit_pct": [
+      -23.813131313131308,
+      -23.813131313131308
+    ],
+    "same_zone_floor_net_exit_pct": [
+      -23.813131313131308,
+      -23.813131313131308
+    ],
+    "conservative_net_exit_pct": [
+      -29.434343434343436,
+      -27.878787878787882
+    ],
+    "panic_net_exit_pct": [
+      -46.686868686868685,
+      -33.917171717171726
+    ],
+    "same_zone_count": 1,
+    "near_worse_count": 2,
+    "generic_floor_count": 13,
+    "relevant_comps": [
+      {
+        "sale_id": "sale_27",
+        "price_eur": 21.55,
+        "float_value": 0.001965264556929469,
+        "paint_seed": 547.0,
+        "sold_at": "2026-05-01T18:36:03.791034Z",
+        "realized_net_exit_pct": -23.813131313131308,
+        "float_delta_abs": 0.0014623035676794693,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.0014623035676794693,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "same_zone_clean",
+        "why": "Closest clean same-zone comp; slightly worse float than candidate."
+      },
+      {
+        "sale_id": "sale_11",
+        "price_eur": 20.4,
+        "float_value": 0.005065500736236572,
+        "paint_seed": 487.0,
+        "sold_at": "2026-05-04T05:50:35.300961Z",
+        "realized_net_exit_pct": -27.878787878787882,
+        "float_delta_abs": 0.004562539746986572,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.004562539746986572,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "near_worse_float",
+        "why": "Nearby worse-float comp for conservative downside."
+      },
+      {
+        "sale_id": "sale_5",
+        "price_eur": 15.08,
+        "float_value": 0.022032104432582855,
+        "paint_seed": 493.0,
+        "sold_at": "2026-05-09T15:52:46.741679Z",
+        "realized_net_exit_pct": -46.686868686868685,
+        "float_delta_abs": 0.021529143443332854,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.021529143443332854,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "generic_floor",
+        "why": "Generic floor comp; panic downside only."
+      }
+    ],
+    "fast_basis_ids": [
+      "sale_27"
+    ],
+    "conservative_basis_ids": [
+      "sale_11",
+      "sale_12"
+    ],
+    "panic_basis_ids": [
+      "sale_5",
+      "sale_6",
+      "sale_22"
+    ]
+  }
+}

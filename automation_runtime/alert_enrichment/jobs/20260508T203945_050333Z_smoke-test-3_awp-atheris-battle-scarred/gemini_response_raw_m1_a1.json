@@ -1,0 +1,35 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-08T20:39:48.425415+00:00",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"MAYBE\",\n  \"confidence\": \"medium\",\n  \"breakeven_gross_eur\": 4.18,\n  \"gross_for_minus_5pct\": 3.97,\n  \"gross_for_minus_10pct\": 3.76,\n  \"gross_for_minus_15pct\": 3.55,\n  \"fast_sale_range_eur\": [\n    4.5,\n    4.7\n  ],\n  \"realistic_sale_range_eur\": [\n    4.7,\n    4.9\n  ],\n  \"patient_sale_range_eur\": [\n    4.9,\n    5.2\n  ],\n  \"start_listing_range_eur\": [\n    5.0,\n    5.3\n  ],\n  \"fast_floor_range_eur\": [\n    4.4,\n    4.6\n  ],\n  \"best_comps\": [\n    {\n      \"price_eur\": 4.98,\n      \"float_value\": 0.9905,\n      \"paint_seed\": 181,\n      \"why\": \"Similar float to alert, recent sale\"\n    },\n    {\n      \"price_eur\": 4.8,\n      \"float_value\": 0.9958,\n      \"paint_seed\": 177,\n      \"why\": \"Similar float, recent sale, noted as low #514\"\n    },\n    {\n      \"price_eur\": 6.59,\n      \"float_value\": 0.9996,\n      \"paint_seed\": 584,\n      \"why\": \"Higher float, recent sale, noted as low #82\"\n    }\n  ],\n  \"risks\": [\n    \"One recent sale at 4.0 EUR for a similar float (0.9707) suggests potential downside.\",\n    \"Steam sales data shows a slight negative trend over 7 days (-2.02% daily return and negative slope).\",\n    \"The continuity ratio of 1.33 indicates some volatility or inconsistency in pricing.\"\n  ],\n  \"summary\": \"The alert item has a high float (0.991) which generally commands a premium. Recent sales for similar high floats are around 4.8-4.98 EUR, with one outlier at 6.59 EUR for a slightly higher float. However, there's also a recent sale at 4.0 EUR for a 0.9707 float, which is a concern. The ask price of 4.1 EUR is below the estimated fair values, but the market trend is slightly negative. Given the mixed comps and slight negative trend, this is a MAYBE.\"\n}"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 1011,
+      "candidatesTokenCount": 642,
+      "totalTokenCount": 1653,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1011
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "EUr-aZ2hDPXwnsEPwu6-iA8"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-08T20:37:03.604836+00:00",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"MAYBE\",\n  \"confidence\": \"medium\",\n  \"breakeven_"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "MAX_TOKENS",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 1269,
+      "candidatesTokenCount": 26,
+      "totalTokenCount": 2155,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1269
+        }
+      ],
+      "thoughtsTokenCount": 860,
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "a0n-afzdJPS0nsEPtKfU0A4"
+  }
+}

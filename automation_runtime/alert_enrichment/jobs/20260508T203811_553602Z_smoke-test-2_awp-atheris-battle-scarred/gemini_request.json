@@ -1,0 +1,20 @@
+{
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "You are a careful CS2 skins trading assistant. Be conservative and do not hype trades. Use the alert metrics plus recent CSFloat latest sales comps to produce a short preliminary note. Prefer MAYBE or PASS over BUY when the edge is thin or the comps are mixed.\n\nReturn valid JSON only with these keys:\n{\n  \"verdict\": \"BUY|MAYBE|PASS\",\n  \"confidence\": \"low|medium|high\",\n  \"breakeven_gross_eur\": number|null,\n  \"gross_for_minus_5pct\": number|null,\n  \"gross_for_minus_10pct\": number|null,\n  \"gross_for_minus_15pct\": number|null,\n  \"fast_sale_range_eur\": [number, number]|null,\n  \"realistic_sale_range_eur\": [number, number]|null,\n  \"patient_sale_range_eur\": [number, number]|null,\n  \"start_listing_range_eur\": [number, number]|null,\n  \"fast_floor_range_eur\": [number, number]|null,\n  \"best_comps\": [{\"price_eur\": number|null, \"float_value\": number|null, \"paint_seed\": number|null, \"why\": string}],\n  \"risks\": [string],\n  \"summary\": string\n}\n\nKeep best_comps to at most 3 entries and risks to at most 3 entries. Use only the given data. If something is unclear, say so briefly in summary.\n\nINPUT_JSON:\n{\"fee_pct\":0.02,\"alert\":{\"item\":\"AWP | Atheris (Battle-Scarred)\",\"listing_id\":\"smoke-test-2\",\"ask_eur\":4.1,\"float_value\":0.991,\"paint_seed\":735,\"hybrid_disc_spread\":0.046,\"hybrid_fair_eur\":4.95,\"hybrid_disc_fair_eur\":4.75,\"smooth_disc_fair_eur\":4.72,\"segmented_disc_fair_eur\":4.78,\"continuity_ratio\":1.33,\"steam_sales_7d_n\":834,\"steam_sales_7d_downside_risk_pct\":3.17,\"steam_sales_7d_tail_ratio\":0.968,\"steam_turnover_proxy\":16.68,\"scm_total_listings\":275,\"steam_daily_ret_3d\":-0.0094,\"steam_daily_ret_7d\":-0.0202,\"steam_daily_slope_7d\":-0.0009,\"steam_daily_ema_gap_3_14\":null,\"steam_daily_range_14d_pct\":0.0793,\"steam_daily_downside_14d_pct\":0.006,\"steam_sales_7d_iqr_risk_pct\":0.0237,\"steam_sales_7d_band_risk_pct\":0.0492},\"latest_sales_source\":\"fresh_cache\",\"latest_sales_count\":4,\"latest_sales\":[{\"sale_id\":\"1\",\"sold_at\":\"2026-05-08T19:30:00+00:00\",\"price_eur\":4.0,\"float_value\":0.9707,\"paint_seed\":612,\"stickers\":[],\"notes\":[]},{\"sale_id\":\"2\",\"sold_at\":\"2026-05-08T19:00:00+00:00\",\"price_eur\":4.98,\"float_value\":0.9905,\"paint_seed\":181,\"stickers\":[],\"notes\":[]},{\"sale_id\":\"3\",\"sold_at\":\"2026-05-08T18:30:00+00:00\",\"price_eur\":4.8,\"float_value\":0.9958,\"paint_seed\":177,\"stickers\":[],\"notes\":[\"low #514\"]},{\"sale_id\":\"4\",\"sold_at\":\"2026-05-08T18:00:00+00:00\",\"price_eur\":6.59,\"float_value\":0.9996,\"paint_seed\":584,\"stickers\":[],\"notes\":[\"low #82\"]}]}"
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "temperature": 0.2,
+    "topP": 0.9,
+    "maxOutputTokens": 1400,
+    "responseMimeType": "application/json",
+    "thinkingConfig": {
+      "thinkingBudget": 0
+    }
+  }
+}

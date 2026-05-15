@@ -1,0 +1,42 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-12T14:23:59.908236+00:00",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"PASS\",\n  \"confidence\": \"medium\",\n  \"risk_level\": \"high\",\n  \"item_liquidity\": \"high\",\n  \"float_liquidity\": \"medium\",\n  \"model_agreement\": \"divergent\",\n  \"target_15pct_fast\": \"no\",\n  \"breakeven_gross_eur\": 4.428571428571429,\n  \"gross_for_minus_5pct\": 4.207142857142856,\n  \"gross_for_minus_10pct\": 3.9857142857142858,\n  \"gross_for_minus_15pct\": 3.764285714285714,\n  \"fast_sale_range_eur\": [\n    3.09,\n    3.17\n  ],\n  \"realistic_sale_range_eur\": [\n    3.15,\n    3.175\n  ],\n  \"patient_sale_range_eur\": [\n    3.175,\n    3.71\n  ],\n  \"start_listing_range_eur\": [\n    3.71,\n    4.0068\n  ],\n  \"fast_floor_range_eur\": [\n    2.31,\n    2.762\n  ],\n  \"fast_net_exit_pct\": [\n    -30.225806451612904,\n    -28.419354838709676\n  ],\n  \"realistic_net_exit_pct\": [\n    -28.870967741935484,\n    -28.306451612903228\n  ],\n  \"patient_net_exit_pct\": [\n    -28.306451612903228,\n    -16.22580645161291\n  ],\n  \"range_basis\": {\n    \"fast\": \"Lower bound based on sale_29 (3.09 EUR, float 0.0076) and upper bound on sale_14 (3.17 EUR, float 0.0038) and sale_10 (3.15 EUR, float 0.0037), all clean same-zone comps.\",\n    \"realistic\": \"Based on the central cluster of clean same-zone comps, specifically sale_10 (3.15 EUR, float 0.0037) and sale_14 (3.17 EUR, float 0.0038).\",\n    \"patient\": \"Lower bound from upper same-zone comps like sale_12 (3.18 EUR, float 0.0034) and sale_11 (3.37 EUR, float 0.0022). Upper bound from better-float comp sale_18 (3.71 EUR, float 0.0006).\"\n  },\n  \"best_comps\": [\n    {\n      \"price_eur\": 3.09,\n      \"float_value\": 0.007616535760462284,\n      \"paint_seed\": 42,\n      \"why\": \"Closest clean same-zone comp; slightly worse float than candidate.\"\n    },\n    {\n      \"price_eur\": 3.17,\n      \"float_value\": 0.003829600987955928,\n      \"paint_seed\": 618,\n      \"why\": \"Clean same-zone comp with a slightly better float; useful for upside inside the float zone.\"\n    },\n    {\n      \"price_eur\": 3.15,\n      \"float_value\": 0.003774895565584302,\n      \"paint_seed\": 770,\n      \"why\": \"Clean same-zone comp with a slightly better float; useful for upside inside the float zone.\"\n    }\n  ],\n  \"risks\": [\n    \"The current Steam ask is significantly above recent float-specific sales, indicating a high risk of immediate loss.\",\n    \"Model fair values are considerably lower than the Steam ask, suggesting overpricing.\",\n    \"Even patient sales are unlikely to reach the -15% exit target, with most relevant comps implying exits worse than -28%.\"\n  ],\n  \"summary\": \"This M4A4 | Poly Mag (Factory New) has high item liquidity but the candidate float (0.00607) is significantly overpriced on Steam. Recent clean same-zone sales are much lower, leading to a divergent model agreement. A quick -15% exit is not protected, with most comps indicating exits worse than -28%.\"\n}"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 15490,
+      "candidatesTokenCount": 1181,
+      "totalTokenCount": 16671,
+      "cachedContentTokenCount": 15281,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 15490
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 15281
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "8TcDavvVFvfxnsEPmt_t6Qw"
+  }
+}

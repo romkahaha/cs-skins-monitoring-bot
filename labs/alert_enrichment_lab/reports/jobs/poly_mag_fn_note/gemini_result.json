@@ -1,0 +1,232 @@
+{
+  "verdict": "PASS",
+  "confidence": "medium",
+  "risk_level": "high",
+  "item_liquidity": "high",
+  "float_liquidity": "medium",
+  "model_agreement": "divergent",
+  "target_15pct_fast": "no",
+  "target_10pct_fast": "no",
+  "breakeven_gross_eur": 4.428571428571429,
+  "gross_for_minus_5pct": 4.207142857142856,
+  "gross_for_minus_10pct": 3.9857142857142858,
+  "gross_for_minus_15pct": 3.764285714285714,
+  "fast_sale_range_eur": [
+    3.09,
+    3.17
+  ],
+  "realistic_sale_range_eur": [
+    3.15,
+    3.175
+  ],
+  "patient_sale_range_eur": [
+    3.175,
+    3.71
+  ],
+  "start_listing_range_eur": [
+    3.71,
+    4.0068
+  ],
+  "same_zone_floor_eur": [
+    2.77,
+    2.77
+  ],
+  "fast_floor_range_eur": [
+    2.78,
+    2.78
+  ],
+  "conservative_floor_range_eur": [
+    2.78,
+    2.78
+  ],
+  "panic_floor_range_eur": [
+    2.31,
+    2.762
+  ],
+  "fast_net_exit_pct": [
+    -30.225806451612904,
+    -28.419354838709676
+  ],
+  "realistic_net_exit_pct": [
+    -28.870967741935484,
+    -28.306451612903228
+  ],
+  "patient_net_exit_pct": [
+    -28.306451612903228,
+    -16.22580645161291
+  ],
+  "same_zone_floor_net_exit_pct": [
+    -37.45161290322581,
+    -37.45161290322581
+  ],
+  "conservative_net_exit_pct": [
+    -37.22580645161291,
+    -37.22580645161291
+  ],
+  "panic_net_exit_pct": [
+    -47.83870967741935,
+    -37.63225806451612
+  ],
+  "range_basis": {
+    "fast": "Deterministic fast range from 6 clean same-zone comps, excluding the worst same-zone print from the main fast range when there is enough depth. Same-zone floor is €2.77-2.77. Generic floor comps (14) are kept out of fast-sale evidence.",
+    "realistic": "Deterministic realistic range from the central same-zone cluster (6 clean comps).",
+    "patient": "Deterministic patient range from upper same-zone comps plus nearby better-float upside when available."
+  },
+  "best_comps": [
+    {
+      "sale_id": "sale_29",
+      "bucket_reason": "same_zone_clean",
+      "price_eur": 3.09,
+      "float_value": 0.007616535760462284,
+      "paint_seed": 42.0,
+      "why": "Closest clean same-zone comp; slightly worse float than candidate."
+    },
+    {
+      "sale_id": "sale_14",
+      "bucket_reason": "same_zone_clean",
+      "price_eur": 3.17,
+      "float_value": 0.003829600987955928,
+      "paint_seed": 618.0,
+      "why": "Clean same-zone comp with a slightly better float; useful for upside inside the float zone."
+    },
+    {
+      "sale_id": "sale_10",
+      "bucket_reason": "same_zone_clean",
+      "price_eur": 3.15,
+      "float_value": 0.003774895565584302,
+      "paint_seed": 770.0,
+      "why": "Clean same-zone comp with a slightly better float; useful for upside inside the float zone."
+    }
+  ],
+  "risks": [
+    "The current Steam ask is significantly above recent float-specific sales, indicating a high risk of immediate loss.",
+    "Model fair values are considerably lower than the Steam ask, suggesting overpricing.",
+    "Even patient sales are unlikely to reach the -15% exit target, with most relevant comps implying exits worse than -28%."
+  ],
+  "summary": "This M4A4 | Poly Mag (Factory New) has high item liquidity but the candidate float (0.00607) is significantly overpriced on Steam. Recent clean same-zone sales are much lower, leading to a divergent model agreement. A quick -15% exit is not protected, with most comps indicating exits worse than -28%.",
+  "computed_context": {
+    "fast_sale_range_eur": [
+      3.09,
+      3.17
+    ],
+    "realistic_sale_range_eur": [
+      3.15,
+      3.175
+    ],
+    "patient_sale_range_eur": [
+      3.175,
+      3.71
+    ],
+    "same_zone_floor_eur": [
+      2.77,
+      2.77
+    ],
+    "conservative_floor_range_eur": [
+      2.78,
+      2.78
+    ],
+    "panic_floor_range_eur": [
+      2.31,
+      2.762
+    ],
+    "start_listing_range_eur": [
+      3.71,
+      4.0068
+    ],
+    "target_15pct_fast": "no",
+    "target_10pct_fast": "no",
+    "fast_net_exit_pct": [
+      -30.225806451612904,
+      -28.419354838709676
+    ],
+    "realistic_net_exit_pct": [
+      -28.870967741935484,
+      -28.306451612903228
+    ],
+    "patient_net_exit_pct": [
+      -28.306451612903228,
+      -16.22580645161291
+    ],
+    "same_zone_floor_net_exit_pct": [
+      -37.45161290322581,
+      -37.45161290322581
+    ],
+    "conservative_net_exit_pct": [
+      -37.22580645161291,
+      -37.22580645161291
+    ],
+    "panic_net_exit_pct": [
+      -47.83870967741935,
+      -37.63225806451612
+    ],
+    "same_zone_count": 6,
+    "near_worse_count": 1,
+    "generic_floor_count": 14,
+    "relevant_comps": [
+      {
+        "sale_id": "sale_29",
+        "price_eur": 3.09,
+        "float_value": 0.007616535760462284,
+        "paint_seed": 42.0,
+        "sold_at": "2026-05-07T17:10:37.00005Z",
+        "realized_net_exit_pct": -30.225806451612904,
+        "float_delta_abs": 0.0015418939292422837,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.0015418939292422837,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "same_zone_clean",
+        "why": "Closest clean same-zone comp; slightly worse float than candidate."
+      },
+      {
+        "sale_id": "sale_14",
+        "price_eur": 3.17,
+        "float_value": 0.003829600987955928,
+        "paint_seed": 618.0,
+        "sold_at": "2026-05-10T11:10:47.799749Z",
+        "realized_net_exit_pct": -28.419354838709676,
+        "float_delta_abs": 0.0022450408432640725,
+        "direction_vs_candidate": "better",
+        "edge_distance_delta": 0.0022450408432640725,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "same_zone_clean",
+        "why": "Clean same-zone comp with a slightly better float; useful for upside inside the float zone."
+      },
+      {
+        "sale_id": "sale_10",
+        "price_eur": 3.15,
+        "float_value": 0.003774895565584302,
+        "paint_seed": 770.0,
+        "sold_at": "2026-05-10T18:01:25.271223Z",
+        "realized_net_exit_pct": -28.870967741935484,
+        "float_delta_abs": 0.0022997462656356984,
+        "direction_vs_candidate": "better",
+        "edge_distance_delta": 0.0022997462656356984,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "same_zone_clean",
+        "why": "Clean same-zone comp with a slightly better float; useful for upside inside the float zone."
+      }
+    ],
+    "fast_basis_ids": [
+      "sale_29",
+      "sale_14",
+      "sale_10"
+    ],
+    "conservative_basis_ids": [
+      "sale_22"
+    ],
+    "panic_basis_ids": [
+      "sale_21",
+      "sale_20",
+      "sale_16"
+    ]
+  }
+}

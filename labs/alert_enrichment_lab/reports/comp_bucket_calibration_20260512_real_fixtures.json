@@ -1,0 +1,338 @@
+[
+  {
+    "fixture_id": "poly_mag_fn",
+    "item": "M4A4 | Poly Mag (Factory New)",
+    "ask": 4.34,
+    "float_value": 0.00607464183122,
+    "latest_sales_source": "fresh_cache",
+    "latest_sales_count": 30,
+    "bucket_counts": {
+      "same_zone_clean_count": 6,
+      "near_worse_count": 1,
+      "better_upside_count": 3,
+      "generic_floor_count": 14,
+      "possible_outliers_count": 6,
+      "same_zone_all_above_minus_15": false,
+      "same_zone_fast_low_eur": 2.77,
+      "same_zone_fast_low_net_exit_pct": -37.45161290322581
+    },
+    "same_zone_clean": [
+      {
+        "sale_id": "sale_29",
+        "price_eur": 3.09,
+        "float_value": 0.007616535760462284,
+        "net_exit_pct": -30.225806451612904,
+        "bucket_reason": "same_zone_clean"
+      },
+      {
+        "sale_id": "sale_14",
+        "price_eur": 3.17,
+        "float_value": 0.003829600987955928,
+        "net_exit_pct": -28.419354838709676,
+        "bucket_reason": "same_zone_clean"
+      },
+      {
+        "sale_id": "sale_10",
+        "price_eur": 3.15,
+        "float_value": 0.003774895565584302,
+        "net_exit_pct": -28.870967741935484,
+        "bucket_reason": "same_zone_clean"
+      },
+      {
+        "sale_id": "sale_12",
+        "price_eur": 3.18,
+        "float_value": 0.0034856011625379324,
+        "net_exit_pct": -28.19354838709677,
+        "bucket_reason": "same_zone_clean"
+      },
+      {
+        "sale_id": "sale_11",
+        "price_eur": 3.37,
+        "float_value": 0.002286267466843128,
+        "net_exit_pct": -23.903225806451612,
+        "bucket_reason": "same_zone_clean"
+      },
+      {
+        "sale_id": "sale_23",
+        "price_eur": 2.77,
+        "float_value": 0.010045762173831463,
+        "net_exit_pct": -37.45161290322581,
+        "bucket_reason": "same_zone_clean"
+      }
+    ],
+    "near_worse_comps": [
+      {
+        "sale_id": "sale_22",
+        "price_eur": 2.78,
+        "float_value": 0.014739961363375187,
+        "net_exit_pct": -37.22580645161291,
+        "bucket_reason": "near_worse_float"
+      }
+    ],
+    "better_float_upside_comps": [
+      {
+        "sale_id": "sale_4",
+        "price_eur": 3.14,
+        "float_value": 0.001731746131554246,
+        "net_exit_pct": -29.09677419354839,
+        "bucket_reason": "better_float_upside"
+      },
+      {
+        "sale_id": "sale_24",
+        "price_eur": 3.4,
+        "float_value": 0.0016792347887530923,
+        "net_exit_pct": -23.225806451612907,
+        "bucket_reason": "better_float_upside"
+      },
+      {
+        "sale_id": "sale_18",
+        "price_eur": 3.71,
+        "float_value": 0.000654304341878742,
+        "net_exit_pct": -16.22580645161291,
+        "bucket_reason": "better_float_upside"
+      }
+    ],
+    "computed_ranges": {
+      "fast_sale": [
+        3.09,
+        3.17
+      ],
+      "realistic": [
+        3.15,
+        3.175
+      ],
+      "patient": [
+        3.175,
+        3.71
+      ]
+    },
+    "floors": {
+      "same_zone_floor": [
+        2.77,
+        2.77
+      ],
+      "conservative_floor": [
+        2.78,
+        2.78
+      ],
+      "panic_floor": [
+        2.31,
+        2.762
+      ]
+    },
+    "gross_thresholds": {
+      "breakeven": 4.428571428571429,
+      "minus_5": 4.207142857142856,
+      "minus_10": 3.9857142857142858,
+      "minus_15": 3.764285714285714
+    },
+    "target_flags": {
+      "fast": "no",
+      "realistic": "no",
+      "patient": "no"
+    },
+    "final_verdict": {
+      "verdict": "PASS",
+      "confidence": "medium"
+    }
+  },
+  {
+    "fixture_id": "abyssal_apparition_bs",
+    "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
+    "ask": 6.82,
+    "float_value": 0.99708902835846,
+    "latest_sales_source": "github_fetch",
+    "latest_sales_count": 30,
+    "bucket_counts": {
+      "same_zone_clean_count": 0,
+      "near_worse_count": 0,
+      "better_upside_count": 0,
+      "generic_floor_count": 21,
+      "possible_outliers_count": 9,
+      "same_zone_all_above_minus_15": false,
+      "same_zone_fast_low_eur": null,
+      "same_zone_fast_low_net_exit_pct": null
+    },
+    "same_zone_clean": [],
+    "near_worse_comps": [],
+    "better_float_upside_comps": [],
+    "computed_ranges": {
+      "fast_sale": null,
+      "realistic": null,
+      "patient": null
+    },
+    "floors": {
+      "same_zone_floor": null,
+      "conservative_floor": [
+        4.53,
+        4.63
+      ],
+      "panic_floor": [
+        4.53,
+        4.63
+      ]
+    },
+    "gross_thresholds": {
+      "breakeven": 6.959183673469388,
+      "minus_5": 6.6112244897959185,
+      "minus_10": 6.26326530612245,
+      "minus_15": 5.915306122448979
+    },
+    "target_flags": {
+      "fast": "no",
+      "realistic": "no",
+      "patient": "no"
+    },
+    "final_verdict": {
+      "verdict": "PASS",
+      "confidence": "low"
+    }
+  },
+  {
+    "fixture_id": "p2000_turf_fn",
+    "item": "P2000 | Turf (Factory New)",
+    "ask": 27.72,
+    "float_value": 0.00050296098925,
+    "latest_sales_source": "github_fetch",
+    "latest_sales_count": 30,
+    "bucket_counts": {
+      "same_zone_clean_count": 1,
+      "near_worse_count": 2,
+      "better_upside_count": 0,
+      "generic_floor_count": 13,
+      "possible_outliers_count": 14,
+      "same_zone_all_above_minus_15": false,
+      "same_zone_fast_low_eur": 21.55,
+      "same_zone_fast_low_net_exit_pct": -23.813131313131308
+    },
+    "same_zone_clean": [
+      {
+        "sale_id": "sale_27",
+        "price_eur": 21.55,
+        "float_value": 0.001965264556929469,
+        "net_exit_pct": -23.813131313131308,
+        "bucket_reason": "same_zone_clean"
+      }
+    ],
+    "near_worse_comps": [
+      {
+        "sale_id": "sale_11",
+        "price_eur": 20.4,
+        "float_value": 0.005065500736236572,
+        "net_exit_pct": -27.878787878787882,
+        "bucket_reason": "near_worse_float"
+      },
+      {
+        "sale_id": "sale_12",
+        "price_eur": 19.96,
+        "float_value": 0.007613669149577618,
+        "net_exit_pct": -29.434343434343436,
+        "bucket_reason": "near_worse_float"
+      }
+    ],
+    "better_float_upside_comps": [],
+    "computed_ranges": {
+      "fast_sale": [
+        20.9035,
+        22.1965
+      ],
+      "realistic": [
+        21.119,
+        21.981
+      ],
+      "patient": [
+        21.55,
+        21.55
+      ]
+    },
+    "floors": {
+      "same_zone_floor": [
+        21.55,
+        21.55
+      ],
+      "conservative_floor": [
+        19.96,
+        20.4
+      ],
+      "panic_floor": [
+        15.08,
+        18.692
+      ]
+    },
+    "gross_thresholds": {
+      "breakeven": 28.285714285714285,
+      "minus_5": 26.871428571428567,
+      "minus_10": 25.45714285714286,
+      "minus_15": 24.04285714285714
+    },
+    "target_flags": {
+      "fast": "no",
+      "realistic": "no",
+      "patient": "no"
+    },
+    "final_verdict": {
+      "verdict": "PASS",
+      "confidence": "medium"
+    }
+  },
+  {
+    "fixture_id": "desolate_space_bs",
+    "item": "M4A4 | Desolate Space (Battle-Scarred)",
+    "ask": 14.28,
+    "float_value": 0.99024534225464,
+    "latest_sales_source": "github_fetch",
+    "latest_sales_count": 30,
+    "bucket_counts": {
+      "same_zone_clean_count": 0,
+      "near_worse_count": 1,
+      "better_upside_count": 0,
+      "generic_floor_count": 11,
+      "possible_outliers_count": 18,
+      "same_zone_all_above_minus_15": false,
+      "same_zone_fast_low_eur": null,
+      "same_zone_fast_low_net_exit_pct": null
+    },
+    "same_zone_clean": [],
+    "near_worse_comps": [
+      {
+        "sale_id": "sale_24",
+        "price_eur": 10.79,
+        "float_value": 0.9749550819396973,
+        "net_exit_pct": -25.950980392156865,
+        "bucket_reason": "near_worse_float"
+      }
+    ],
+    "better_float_upside_comps": [],
+    "computed_ranges": {
+      "fast_sale": null,
+      "realistic": null,
+      "patient": null
+    },
+    "floors": {
+      "same_zone_floor": null,
+      "conservative_floor": [
+        10.79,
+        10.79
+      ],
+      "panic_floor": [
+        9.04,
+        10.44
+      ]
+    },
+    "gross_thresholds": {
+      "breakeven": 14.57,
+      "minus_5": 13.84,
+      "minus_10": 13.11,
+      "minus_15": 12.39
+    },
+    "target_flags": {
+      "fast": "no",
+      "realistic": "no",
+      "patient": "no"
+    },
+    "final_verdict": {
+      "verdict": "PASS",
+      "confidence": "low"
+    }
+  }
+]

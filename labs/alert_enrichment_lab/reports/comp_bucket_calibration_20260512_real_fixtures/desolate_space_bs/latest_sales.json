@@ -1,0 +1,506 @@
+{
+  "version": 1,
+  "source": "github_fetch",
+  "item": "M4A4 | Desolate Space (Battle-Scarred)",
+  "url": "https://csfloat.com/api/v1/history/M4A4%20%7C%20Desolate%20Space%20%28Battle-Scarred%29/sales",
+  "fetched_at_utc": "2026-05-12T14:49:23.458275+00:00",
+  "raw_row_count": 40,
+  "reference_currency": "USD",
+  "fx_usd_to_eur": 0.85193,
+  "fx_source": "Frankfurter 2026-05-12 (ECB)",
+  "sales_rows": [
+    {
+      "sale_id": "974246577700996816",
+      "sold_at": "2026-05-12T09:48:05.297499Z",
+      "price_usd": 12.27,
+      "price_eur": 10.45,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.5656265020370483,
+      "paint_seed": 676,
+      "stickers": [
+        "Sticker | Boost (Holo)",
+        "Sticker | KSCERATO | Katowice 2019",
+        "Sticker | EliGE (Foil) | Boston 2018"
+      ],
+      "notes": [
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "974211926676603631",
+      "sold_at": "2026-05-12T07:30:23.349007Z",
+      "price_usd": 11.4,
+      "price_eur": 9.71,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.47129499912261963,
+      "paint_seed": 651,
+      "stickers": [
+        "Sticker | Delicious Tears"
+      ],
+      "notes": [
+        "1 stickers"
+      ]
+    },
+    {
+      "sale_id": "973759318400828326",
+      "sold_at": "2026-05-11T18:19:37.651124Z",
+      "price_usd": 12.36,
+      "price_eur": 10.53,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.5167439579963684,
+      "paint_seed": 508,
+      "stickers": [
+        "Sticker | Unicorn (Holo)",
+        "Sticker | Rush 4x20 (Holo)"
+      ],
+      "notes": [
+        "2 stickers"
+      ]
+    },
+    {
+      "sale_id": "973995048314209590",
+      "sold_at": "2026-05-11T17:48:51.13422Z",
+      "price_usd": 11.3,
+      "price_eur": 9.63,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.7618784308433533,
+      "paint_seed": 270,
+      "stickers": [
+        "Sticker | Eternal Fire | Antwerp 2022"
+      ],
+      "notes": [
+        "1 stickers"
+      ]
+    },
+    {
+      "sale_id": "973844941237256256",
+      "sold_at": "2026-05-11T16:53:38.24935Z",
+      "price_usd": 12.22,
+      "price_eur": 10.41,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.8804315328598022,
+      "paint_seed": 72,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "973942596386818671",
+      "sold_at": "2026-05-11T13:41:07.00547Z",
+      "price_usd": 15.51,
+      "price_eur": 13.21,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.998536229133606,
+      "paint_seed": 255,
+      "stickers": [
+        "Sticker | Vitality (Holo) | Katowice 2019",
+        "Sticker | Vitality (Holo) | Katowice 2019",
+        "Sticker | Vitality (Holo) | Katowice 2019",
+        "Sticker | Vitality (Holo) | Katowice 2019"
+      ],
+      "notes": [
+        "high #182",
+        "4 stickers"
+      ]
+    },
+    {
+      "sale_id": "973722073866306071",
+      "sold_at": "2026-05-11T08:36:08.954831Z",
+      "price_usd": 12.21,
+      "price_eur": 10.4,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.4925416111946106,
+      "paint_seed": 386,
+      "stickers": [
+        "Sticker | Ninjas in Pyjamas (Glitter) | Antwerp 2022",
+        "Sticker | Ninjas in Pyjamas (Glitter) | Antwerp 2022"
+      ],
+      "notes": [
+        "2 stickers"
+      ]
+    },
+    {
+      "sale_id": "973788179373100525",
+      "sold_at": "2026-05-11T03:26:34.096743Z",
+      "price_usd": 11.29,
+      "price_eur": 9.62,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.6619415283203125,
+      "paint_seed": 41,
+      "stickers": [
+        "Sticker | Counter-Tech"
+      ],
+      "notes": [
+        "1 stickers"
+      ]
+    },
+    {
+      "sale_id": "973587374099530281",
+      "sold_at": "2026-05-10T16:47:08.53641Z",
+      "price_usd": 11.0,
+      "price_eur": 9.37,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.8081318736076355,
+      "paint_seed": 282,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "973414588563456226",
+      "sold_at": "2026-05-10T11:07:58.299124Z",
+      "price_usd": 12.29,
+      "price_eur": 10.47,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9312672019004822,
+      "paint_seed": 969,
+      "stickers": [
+        "Sticker | G2 Esports | Stockholm 2021",
+        "Sticker | VINI | Stockholm 2021",
+        "Sticker | Team Liquid | Stockholm 2021"
+      ],
+      "notes": [
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "970950446493601630",
+      "sold_at": "2026-05-09T20:29:17.494572Z",
+      "price_usd": 13.5,
+      "price_eur": 11.5,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.5913898944854736,
+      "paint_seed": 754,
+      "stickers": [
+        "Sticker | Winstrike Team (Holo) | London 2018",
+        "Sticker | G2 Esports (Holo) | London 2018",
+        "Sticker | mousesports (Holo) | London 2018"
+      ],
+      "notes": [
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "973252226267087637",
+      "sold_at": "2026-05-09T20:27:31.68586Z",
+      "price_usd": 12.29,
+      "price_eur": 10.47,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.534950852394104,
+      "paint_seed": 321,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "973156033226737913",
+      "sold_at": "2026-05-09T12:32:44.49987Z",
+      "price_usd": 12.0,
+      "price_eur": 10.22,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9680827856063843,
+      "paint_seed": 9,
+      "stickers": [
+        "Sticker | Boom Detonation",
+        "Sticker | Team Spirit (Foil) | Austin 2025",
+        "Sticker | Aurora (Foil) | Austin 2025"
+      ],
+      "notes": [
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "972971630152257453",
+      "sold_at": "2026-05-09T10:52:10.119272Z",
+      "price_usd": 12.96,
+      "price_eur": 11.04,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.7813489437103271,
+      "paint_seed": 554,
+      "stickers": [
+        "Sticker | compLexity Gaming (Holo) | London 2018",
+        "Sticker | Glare",
+        "Sticker | Glare"
+      ],
+      "notes": [
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "969521732908091486",
+      "sold_at": "2026-05-09T09:57:53.336311Z",
+      "price_usd": 13.27,
+      "price_eur": 11.31,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.7251163721084595,
+      "paint_seed": 752,
+      "stickers": [
+        "Sticker | Astralis | 2020 RMR",
+        "Sticker | Natus Vincere | 2020 RMR",
+        "Sticker | Astralis | 2020 RMR"
+      ],
+      "notes": [
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "973128918242560330",
+      "sold_at": "2026-05-09T07:46:54.322792Z",
+      "price_usd": 12.19,
+      "price_eur": 10.39,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.900240421295166,
+      "paint_seed": 998,
+      "stickers": [
+        "Sticker | Kawaii T (Holo)",
+        "Sticker | Kawaii T (Holo)",
+        "Sticker | Kawaii T (Holo)",
+        "Sticker | Kawaii T (Holo)"
+      ],
+      "notes": [
+        "4 stickers"
+      ]
+    },
+    {
+      "sale_id": "972817168955736328",
+      "sold_at": "2026-05-08T14:50:40.740987Z",
+      "price_usd": 12.25,
+      "price_eur": 10.44,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.7963134050369263,
+      "paint_seed": 394,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "972823819758733575",
+      "sold_at": "2026-05-08T12:24:18.273055Z",
+      "price_usd": 12.15,
+      "price_eur": 10.35,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9980473518371582,
+      "paint_seed": 807,
+      "stickers": [
+        "Sticker | Stewie2K | London 2018"
+      ],
+      "notes": [
+        "high #246",
+        "1 stickers"
+      ]
+    },
+    {
+      "sale_id": "972604976767566636",
+      "sold_at": "2026-05-07T21:04:56.765418Z",
+      "price_usd": 10.61,
+      "price_eur": 9.04,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.8559688329696655,
+      "paint_seed": 950,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "972541166807548719",
+      "sold_at": "2026-05-07T17:06:48.031365Z",
+      "price_usd": 11.13,
+      "price_eur": 9.48,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9031330347061157,
+      "paint_seed": 508,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "972506042804079677",
+      "sold_at": "2026-05-07T14:32:08.03231Z",
+      "price_usd": 11.69,
+      "price_eur": 9.96,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.6993073225021362,
+      "paint_seed": 763,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "971795646753410873",
+      "sold_at": "2026-05-07T13:22:37.752759Z",
+      "price_usd": 14.67,
+      "price_eur": 12.5,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9952527284622192,
+      "paint_seed": 895,
+      "stickers": [
+        "Sticker | Rush 4x20 (Holo)",
+        "Sticker | Rush 4x20 (Holo)",
+        "Sticker | Rush 4x20 (Holo)"
+      ],
+      "notes": [
+        "high #574",
+        "3 stickers"
+      ]
+    },
+    {
+      "sale_id": "972272146741068433",
+      "sold_at": "2026-05-06T23:02:25.043722Z",
+      "price_usd": 12.1,
+      "price_eur": 10.31,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.5204225182533264,
+      "paint_seed": 595,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "971406711959195616",
+      "sold_at": "2026-05-06T20:59:01.878123Z",
+      "price_usd": 12.66,
+      "price_eur": 10.79,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9749550819396973,
+      "paint_seed": 761,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "972231778041465283",
+      "sold_at": "2026-05-06T20:21:59.121906Z",
+      "price_usd": 12.1,
+      "price_eur": 10.31,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.8521471619606018,
+      "paint_seed": 943,
+      "stickers": [
+        "Sticker | Natus Vincere | Atlanta 2017",
+        "Sticker | Virtus.Pro | Atlanta 2017"
+      ],
+      "notes": [
+        "2 stickers"
+      ]
+    },
+    {
+      "sale_id": "972220691120260052",
+      "sold_at": "2026-05-06T19:37:55.793002Z",
+      "price_usd": 12.3,
+      "price_eur": 10.48,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.8135524988174438,
+      "paint_seed": 421,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "971589293174820710",
+      "sold_at": "2026-05-06T18:27:19.536255Z",
+      "price_usd": 12.82,
+      "price_eur": 10.92,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.850604772567749,
+      "paint_seed": 637,
+      "stickers": [
+        "Sticker | Spirit | 2020 RMR",
+        "Sticker | ENCE | Rio 2022",
+        "Sticker | ESPADA (Holo) | 2020 RMR",
+        "Sticker | zorte (Glitter) | Antwerp 2022"
+      ],
+      "notes": [
+        "4 stickers"
+      ]
+    },
+    {
+      "sale_id": "971822203442171698",
+      "sold_at": "2026-05-06T12:27:37.098743Z",
+      "price_usd": 13.38,
+      "price_eur": 11.4,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.48698583245277405,
+      "paint_seed": 397,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "971342197146389390",
+      "sold_at": "2026-05-05T14:07:36.755259Z",
+      "price_usd": 12.64,
+      "price_eur": 10.77,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.7348020672798157,
+      "paint_seed": 540,
+      "stickers": [
+        "Sticker | Great Wave (Foil)",
+        "Sticker | Cloud9 | Antwerp 2022"
+      ],
+      "notes": [
+        "2 stickers"
+      ]
+    },
+    {
+      "sale_id": "971673503285776204",
+      "sold_at": "2026-05-05T12:43:50.256761Z",
+      "price_usd": 11.8,
+      "price_eur": 10.05,
+      "reference_currency": "USD",
+      "fx_usd_to_eur": 0.85193,
+      "fx_source": "Frankfurter 2026-05-12 (ECB)",
+      "float_value": 0.9008350372314453,
+      "paint_seed": 247,
+      "stickers": [],
+      "notes": []
+    }
+  ],
+  "request_id": "20260512T144852_616086Z-vmi2737474"
+}

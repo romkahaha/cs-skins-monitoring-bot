@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "items_signature": "bc4384f4d7c743a8a54a549f5f6d6dd7afe49b79faa6863d282331f31998f93d",
+  "items_count": 46,
+  "batch_pointer": 12,
+  "last_run_at_utc": "2026-05-15T16:38:35.902113+00:00",
+  "last_status": "ok",
+  "last_batch_items": [
+    "AK-47 | Frontside Misty (Field-Tested)",
+    "AK-47 | Emerald Pinstripe (Field-Tested)",
+    "AK-47 | Nouveau Rouge (Battle-Scarred)",
+    "UMP-45 | K.O. Factory (Battle-Scarred)",
+    "USP-S | Cortex (Battle-Scarred)"
+  ],
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-15T16:38:56.574381+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T16:38:56.574381+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-15T00:10:41.694761+00:00",
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 400,
+  "last_enriched_rows": 400,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 647320
+  },
+  "last_batch_start_pointer": 7
+}

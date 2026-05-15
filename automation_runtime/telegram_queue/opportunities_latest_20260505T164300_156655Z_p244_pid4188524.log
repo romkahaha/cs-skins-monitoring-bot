@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/roma/cs-arbitrage/cs-skins-monitoring-bot/automation/monitoring/send_telegram_alerts.py", line 142, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/roma/cs-arbitrage/cs-skins-monitoring-bot/automation/monitoring/send_telegram_alerts.py", line 115, in main
+    stats = send_opportunity_alerts(
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roma/cs-arbitrage/cs-skins-monitoring-bot/automation/telegram_alerts.py", line 572, in send_opportunity_alerts
+    token, chat = telegram_credentials(bot_token=bot_token, chat_id=chat_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/roma/cs-arbitrage/cs-skins-monitoring-bot/automation/telegram_alerts.py", line 477, in telegram_credentials
+    raise RuntimeError("Missing TELEGRAM_BOT_TOKEN or TG_BOT_TOKEN")
+RuntimeError: Missing TELEGRAM_BOT_TOKEN or TG_BOT_TOKEN

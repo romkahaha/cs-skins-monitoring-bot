@@ -1,0 +1,42 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-12T14:24:05.145780+00:00",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"PASS\",\n  \"confidence\": \"low\",\n  \"risk_level\": \"high\",\n  \"item_liquidity\": \"medium\",\n  \"float_liquidity\": \"low\",\n  \"model_agreement\": \"strong\",\n  \"target_15pct_fast\": \"no\",\n  \"breakeven_gross_eur\": 6.959183673469388,\n  \"gross_for_minus_5pct\": 6.6112244897959185,\n  \"gross_for_minus_10pct\": 6.26326530612245,\n  \"gross_for_minus_15pct\": 5.915306122448979,\n  \"fast_sale_range_eur\": null,\n  \"realistic_sale_range_eur\": null,\n  \"patient_sale_range_eur\": null,\n  \"start_listing_range_eur\": null,\n  \"fast_floor_range_eur\": [\n    4.53,\n    4.63\n  ],\n  \"fast_net_exit_pct\": null,\n  \"realistic_net_exit_pct\": null,\n  \"patient_net_exit_pct\": null,\n  \"range_basis\": {\n    \"fast\": \"No direct same-zone comps. Fast floor is based on generic floor sales (e.g., float 0.611 at 4.53 EUR, float 0.730 at 4.59 EUR) which are significantly worse than the candidate float.\",\n    \"realistic\": \"No direct same-zone comps. Realistic range is not estimable with confidence.\",\n    \"patient\": \"No direct same-zone comps. Patient range is not estimable with confidence.\"\n  },\n  \"best_comps\": [\n    {\n      \"price_eur\": 5.1,\n      \"float_value\": 0.9904860258102417,\n      \"paint_seed\": 417,\n      \"why\": \"Closest float comp, but still an outlier sale and significantly below the required exit price.\"\n    },\n    {\n      \"price_eur\": 5.03,\n      \"float_value\": 0.9950941801071167,\n      \"paint_seed\": 620,\n      \"why\": \"Very close float comp, but also an outlier sale and far from the required exit price.\"\n    },\n    {\n      \"price_eur\": 4.84,\n      \"float_value\": 0.9287691116333008,\n      \"paint_seed\": 448,\n      \"why\": \"A worse float comp, but still within the high-float range. This is an outlier sale.\"\n    }\n  ],\n  \"risks\": [\n    \"No relevant same-zone sales comps for this extreme high float (0.997).\",\n    \"All available comps, even the closest float outliers, imply significant losses (-26% to -38%) relative to the Steam ask.\",\n    \"The item's generic floor is extremely low compared to the Steam ask, indicating high downside risk for this specific float.\"\n  ],\n  \"summary\": \"This MP7 | Abyssal Apparition (BS) has an extreme high float (0.997) but lacks any direct same-zone sales comps. All available sales, even those with similar high floats, are significantly below the current Steam ask, implying heavy losses. The model agrees on a fair value slightly above the ask, but without float-specific sales, confidence in a quick -15% exit is very low, making this a high-risk pass.\"\n}"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 12742,
+      "candidatesTokenCount": 892,
+      "totalTokenCount": 13634,
+      "cachedContentTokenCount": 3052,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 12742
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3052
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "ADgDau7gCpbOnsEPqe_j-Qw"
+  }
+}

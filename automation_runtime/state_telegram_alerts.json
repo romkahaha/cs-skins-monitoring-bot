@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "items_signature": "943fbc4b48cc7cbc155f6195dbfcac13fcfc65ae9d46684c077541a252c0aec9",
+  "items_count": 155,
+  "batch_pointer": 0,
+  "last_run_at_utc": null,
+  "last_status": null,
+  "last_batch_items": [],
+  "last_error": null,
+  "last_finished_at_utc": null,
+  "last_successful_monitoring_at_utc": null,
+  "last_failed_monitoring_at_utc": null,
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 0,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {},
+  "sent_alerts": {
+    "listing:630081042873729172": {
+      "sent_at_utc": "2026-05-15T16:14:22.737338+00:00",
+      "item": "FAMAS | Mecha Industries (Factory New)",
+      "listing_id": "630081042873729172",
+      "spread_hybrid_disc": 0.0235889123910768
+    },
+    "listing:641338773498450617": {
+      "sent_at_utc": "2026-05-15T15:43:51.406911+00:00",
+      "item": "R8 Revolver | Phoenix Marker (Factory New)",
+      "listing_id": "641338773498450617",
+      "spread_hybrid_disc": 0.0451615912088066
+    },
+    "listing:498354464759342875": {
+      "sent_at_utc": "2026-05-15T15:44:32.432734+00:00",
+      "item": "R8 Revolver | Phoenix Marker (Factory New)",
+      "listing_id": "498354464759342875",
+      "spread_hybrid_disc": 0.1040563594951009
+    },
+    "listing:690883546424954206": {
+      "sent_at_utc": "2026-05-14T09:09:57.985326+00:00",
+      "item": "AWP | Duality (Battle-Scarred)",
+      "listing_id": "690883546424954206",
+      "spread_hybrid_disc": 0.0842855059345917
+    },
+    "listing:489347463795436323": {
+      "sent_at_utc": "2026-05-14T09:32:05.793491+00:00",
+      "item": "AK-47 | Nouveau Rouge (Battle-Scarred)",
+      "listing_id": "489347463795436323",
+      "spread_hybrid_disc": -0.054944592981688
+    },
+    "listing:526502160721455987": {
+      "sent_at_utc": "2026-05-14T09:44:51.212980+00:00",
+      "item": "AWP | Duality (Battle-Scarred)",
+      "listing_id": "526502160721455987",
+      "spread_hybrid_disc": 0.0137347123790724
+    },
+    "listing:507361758773523311": {
+      "sent_at_utc": "2026-05-14T10:50:55.392007+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "507361758773523311",
+      "spread_hybrid_disc": 0.0773595861564256
+    },
+    "listing:506235858869474509": {
+      "sent_at_utc": "2026-05-14T19:40:03.091941+00:00",
+      "item": "AK-47 | Wintergreen (Minimal Wear)",
+      "listing_id": "506235858869474509",
+      "spread_hybrid_disc": 0.1119690546329054
+    },
+    "listing:680750447961144679": {
+      "sent_at_utc": "2026-05-14T19:49:04.708571+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "680750447961144679",
+      "spread_hybrid_disc": 0.1100734896141226
+    },
+    "listing:489347463798373779": {
+      "sent_at_utc": "2026-05-14T20:16:08.281497+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "489347463798373779",
+      "spread_hybrid_disc": 0.0989152716658371
+    },
+    "listing:489347463801718431": {
+      "sent_at_utc": "2026-05-15T16:02:53.615041+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "489347463801718431",
+      "spread_hybrid_disc": 0.0581789285684338
+    },
+    "listing:496102759711273465": {
+      "sent_at_utc": "2026-05-15T16:18:27.163153+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "496102759711273465",
+      "spread_hybrid_disc": 0.1048216963720913
+    }
+  },
+  "last_alert_sent_at_utc": "2026-05-15T16:18:27.163333+00:00"
+}

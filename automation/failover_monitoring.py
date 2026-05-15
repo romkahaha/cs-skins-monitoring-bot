@@ -295,10 +295,24 @@ def merge_sent_alerts(
     current: dict[str, Any] | None,
     incoming: dict[str, Any] | None,
 ) -> tuple[dict[str, Any], bool]:
+    def valid_alert(value: Any) -> bool:
+        if not isinstance(value, dict):
+            return False
+        spread = value.get("spread_hybrid_disc")
+        if isinstance(spread, (int, float)) and not math.isfinite(float(spread)):
+            return False
+        return True
+
     merged = dict(current) if isinstance(current, dict) else {}
     changed = False
     incoming = incoming if isinstance(incoming, dict) else {}
+    for key, value in list(merged.items()):
+        if not valid_alert(value):
+            merged.pop(key, None)
+            changed = True
     for key, value in incoming.items():
+        if not valid_alert(value):
+            continue
         if key not in merged:
             merged[key] = value
             changed = True

@@ -1,0 +1,6 @@
+{
+  "failed_at_utc": "2026-05-08T20:37:03.605537+00:00",
+  "item": "AWP | Atheris (Battle-Scarred)",
+  "listing_id": "smoke-test-1",
+  "error": "Unterminated string starting at: line 4 column 3 (char 52)"
+}

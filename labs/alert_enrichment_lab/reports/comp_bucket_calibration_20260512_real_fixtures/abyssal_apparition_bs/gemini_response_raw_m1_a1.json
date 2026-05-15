@@ -1,0 +1,35 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-12T14:48:10.678246+00:00",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"PASS\",\n  \"confidence\": \"low\",\n  \"risk_level\": \"high\",\n  \"item_liquidity\": \"medium\",\n  \"float_liquidity\": \"low\",\n  \"model_agreement\": \"strong\",\n  \"target_15pct_fast\": \"no\",\n  \"breakeven_gross_eur\": 6.959183673469388,\n  \"gross_for_minus_5pct\": 6.6112244897959185,\n  \"gross_for_minus_10pct\": 6.26326530612245,\n  \"gross_for_minus_15pct\": 5.915306122448979,\n  \"fast_sale_range_eur\": null,\n  \"realistic_sale_range_eur\": null,\n  \"patient_sale_range_eur\": null,\n  \"start_listing_range_eur\": null,\n  \"fast_floor_range_eur\": [\n    4.53,\n    4.63\n  ],\n  \"fast_net_exit_pct\": null,\n  \"realistic_net_exit_pct\": null,\n  \"patient_net_exit_pct\": null,\n  \"range_basis\": {\n    \"fast\": \"No relevant same-zone comps. Fast floor based on generic Battle-Scarred sales (e.g., 0.61 float at 4.53 EUR, 0.73 float at 4.59 EUR).\",\n    \"realistic\": \"No relevant same-zone comps. Realistic range is not estimable without specific float evidence.\",\n    \"patient\": \"No relevant same-zone comps. Patient range is not estimable without specific float evidence.\"\n  },\n  \"best_comps\": [\n    {\n      \"price_eur\": 5.1,\n      \"float_value\": 0.9904860258102417,\n      \"paint_seed\": 417,\n      \"why\": \"Closest float comp, slightly worse float, but marked as an outlier.\"\n    },\n    {\n      \"price_eur\": 5.03,\n      \"float_value\": 0.9950941801071167,\n      \"paint_seed\": 620,\n      \"why\": \"Very close float comp, slightly worse float, but marked as an outlier.\"\n    },\n    {\n      \"price_eur\": 4.84,\n      \"float_value\": 0.9287691116333008,\n      \"paint_seed\": 448,\n      \"why\": \"Worse float comp, but still within the high-float range, marked as an outlier.\"\n    }\n  ],\n  \"risks\": [\n    \"No direct same-zone float comps for this extreme high float (0.997).\",\n    \"The few close float comps are marked as outliers and still imply significant losses.\",\n    \"Generic floor sales are far below the -15% exit target, indicating poor liquidity for this specific float.\"\n  ],\n  \"summary\": \"The item has medium overall liquidity, but the specific extreme high float (0.997) lacks direct sales comps, leading to low float liquidity and high risk. While model agreement is strong, the absence of relevant sales makes it difficult to protect a quick -15% exit. The available outlier comps and generic floor sales suggest a significant loss if a fast sale is required.\"\n}"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 12742,
+      "candidatesTokenCount": 845,
+      "totalTokenCount": 13587,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 12742
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "pj0DapbnCuy3vdIPocKuiQ8"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "You are a careful CS2 skins trading assistant. Be conservative and do not hype trades. Use the alert metrics plus recent CSFloat latest sales comps to produce a short preliminary note. Prefer MAYBE or PASS over BUY when the edge is thin or the comps are mixed.\n\nReturn valid JSON only with these keys:\n{\n  \"verdict\": \"BUY|MAYBE|PASS\",\n  \"confidence\": \"low|medium|high\",\n  \"breakeven_gross_eur\": number|null,\n  \"gross_for_minus_5pct\": number|null,\n  \"gross_for_minus_10pct\": number|null,\n  \"gross_for_minus_15pct\": number|null,\n  \"fast_sale_range_eur\": [number, number]|null,\n  \"realistic_sale_range_eur\": [number, number]|null,\n  \"patient_sale_range_eur\": [number, number]|null,\n  \"start_listing_range_eur\": [number, number]|null,\n  \"fast_floor_range_eur\": [number, number]|null,\n  \"best_comps\": [{\"price_eur\": number|null, \"float_value\": number|null, \"paint_seed\": number|null, \"why\": string}],\n  \"risks\": [string],\n  \"summary\": string\n}\n\nKeep best_comps to at most 3 entries and risks to at most 3 entries. Use only the given data. If something is unclear, say so briefly in summary.\n\nINPUT_JSON:\n{\n  \"fee_pct\": 0.02,\n  \"alert\": {\n    \"item\": \"AWP | Atheris (Battle-Scarred)\",\n    \"listing_id\": \"smoke-test-1\",\n    \"ask_eur\": 4.1,\n    \"float_value\": 0.991,\n    \"paint_seed\": 735,\n    \"hybrid_disc_spread\": 0.046,\n    \"hybrid_fair_eur\": 4.95,\n    \"hybrid_disc_fair_eur\": 4.75,\n    \"smooth_disc_fair_eur\": 4.72,\n    \"segmented_disc_fair_eur\": 4.78,\n    \"continuity_ratio\": 1.33,\n    \"steam_sales_7d_n\": 834,\n    \"steam_sales_7d_downside_risk_pct\": 3.17,\n    \"steam_sales_7d_tail_ratio\": 0.968,\n    \"steam_turnover_proxy\": 16.68,\n    \"scm_total_listings\": 275,\n    \"steam_daily_ret_3d\": -0.0094,\n    \"steam_daily_ret_7d\": -0.0202,\n    \"steam_daily_slope_7d\": -0.0009,\n    \"steam_daily_ema_gap_3_14\": null,\n    \"steam_daily_range_14d_pct\": 0.0793,\n    \"steam_daily_downside_14d_pct\": 0.006,\n    \"steam_sales_7d_iqr_risk_pct\": 0.0237,\n    \"steam_sales_7d_band_risk_pct\": 0.0492\n  },\n  \"latest_sales_source\": \"stale_cache\",\n  \"latest_sales_count\": 4,\n  \"latest_sales\": [\n    {\n      \"sale_id\": \"1\",\n      \"sold_at\": \"2026-05-08T07:00:00+00:00\",\n      \"price_eur\": 4.0,\n      \"float_value\": 0.9707,\n      \"paint_seed\": 612,\n      \"stickers\": [],\n      \"notes\": []\n    },\n    {\n      \"sale_id\": \"2\",\n      \"sold_at\": \"2026-05-08T06:00:00+00:00\",\n      \"price_eur\": 4.98,\n      \"float_value\": 0.9905,\n      \"paint_seed\": 181,\n      \"stickers\": [],\n      \"notes\": []\n    },\n    {\n      \"sale_id\": \"3\",\n      \"sold_at\": \"2026-05-08T05:00:00+00:00\",\n      \"price_eur\": 4.8,\n      \"float_value\": 0.9958,\n      \"paint_seed\": 177,\n      \"stickers\": [],\n      \"notes\": [\n        \"low #514\"\n      ]\n    },\n    {\n      \"sale_id\": \"4\",\n      \"sold_at\": \"2026-05-08T04:00:00+00:00\",\n      \"price_eur\": 6.59,\n      \"float_value\": 0.9996,\n      \"paint_seed\": 584,\n      \"stickers\": [],\n      \"notes\": [\n        \"low #82\"\n      ]\n    }\n  ]\n}"
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "temperature": 0.2,
+    "topP": 0.9,
+    "maxOutputTokens": 900,
+    "responseMimeType": "application/json"
+  }
+}

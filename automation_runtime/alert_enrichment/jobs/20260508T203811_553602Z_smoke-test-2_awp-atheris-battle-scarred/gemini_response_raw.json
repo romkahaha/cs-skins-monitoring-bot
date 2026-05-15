@@ -1,0 +1,11 @@
+{
+  "http_status": 503,
+  "received_at_utc": "2026-05-08T20:38:12.633412+00:00",
+  "payload": {
+    "error": {
+      "code": 503,
+      "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "status": "UNAVAILABLE"
+    }
+  }
+}

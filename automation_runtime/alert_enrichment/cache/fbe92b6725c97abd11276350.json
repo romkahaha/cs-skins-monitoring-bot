@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "source": "network",
+  "item": "AWP | Atheris (Battle-Scarred)",
+  "url": "https://csfloat.com/api/v1/history/AWP%20%7C%20Atheris%20%28Battle-Scarred%29/sales",
+  "fetched_at_utc": "2026-05-08T20:35:00+00:00",
+  "raw_row_count": 4,
+  "sales_rows": [
+    {
+      "sale_id": "1",
+      "sold_at": "2026-05-08T19:30:00+00:00",
+      "price_eur": 4.0,
+      "float_value": 0.9707,
+      "paint_seed": 612,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "2",
+      "sold_at": "2026-05-08T19:00:00+00:00",
+      "price_eur": 4.98,
+      "float_value": 0.9905,
+      "paint_seed": 181,
+      "stickers": [],
+      "notes": []
+    },
+    {
+      "sale_id": "3",
+      "sold_at": "2026-05-08T18:30:00+00:00",
+      "price_eur": 4.8,
+      "float_value": 0.9958,
+      "paint_seed": 177,
+      "stickers": [],
+      "notes": [
+        "low #514"
+      ]
+    },
+    {
+      "sale_id": "4",
+      "sold_at": "2026-05-08T18:00:00+00:00",
+      "price_eur": 6.59,
+      "float_value": 0.9996,
+      "paint_seed": 584,
+      "stickers": [],
+      "notes": [
+        "low #82"
+      ]
+    }
+  ]
+}

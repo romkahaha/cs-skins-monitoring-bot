@@ -429,6 +429,7 @@ def main() -> int:
         listings_path, listing_errors, listings_df = steam_scm_listings.run_batch_to_csv(
             batch,
             out_csv=listings_out_csv,
+            max_listings_per_item=args.max_listings_per_item,
         )
         listing_rows = len(listings_df)
         print(f"fresh listings: {listings_path} rows={len(listings_df)} errors={len(listing_errors)}")

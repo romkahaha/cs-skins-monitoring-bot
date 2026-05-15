@@ -1,0 +1,8 @@
+{
+  "fetched_at_utc": "2026-05-12T14:46:09.260585+00:00",
+  "url": "https://csfloat.com/api/v1/history/P2000%20%7C%20Turf%20%28Factory%20New%29/sales",
+  "http_status": 429,
+  "payload": {
+    "error": "You've been making too many requests from too many IPs,"
+  }
+}

@@ -7,15 +7,19 @@
     "github_actions_cron_utc": "7 * * * *"
   },
   "steam": {
-    "item": "Dreams & Nightmares Case",
+    "item": "AWP | Atheris (Field-Tested)",
     "currency": 3,
     "limit": 10,
     "max_listings": 10,
     "min_rows": 1,
     "fail_if_missing_cookies": true,
-    "check_login_endpoint": true,
+    "check_login_endpoint": false,
     "login_check_url": "https://steamcommunity.com/my/",
     "check_listing_endpoint": true,
+    "check_pricehistory_endpoint": true,
+    "pricehistory_days": 14,
+    "min_pricehistory_points": 1,
+    "steam_429_retry_wait_sec": 90.0,
     "listings_per_request": 10,
     "request_timeout_sec": 45.0,
     "retry_attempts": 2,
@@ -30,4 +34,3 @@
     "timeout_sec": 120
   }
 }
-

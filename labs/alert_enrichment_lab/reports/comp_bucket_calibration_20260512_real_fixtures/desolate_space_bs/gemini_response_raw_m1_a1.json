@@ -1,0 +1,42 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-12T14:49:33.822808+00:00",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"PASS\",\n  \"confidence\": \"low\",\n  \"risk_level\": \"high\",\n  \"item_liquidity\": \"medium\",\n  \"float_liquidity\": \"low\",\n  \"model_agreement\": \"divergent\",\n  \"target_15pct_fast\": \"no\",\n  \"breakeven_gross_eur\": 14.57,\n  \"gross_for_minus_5pct\": 13.84,\n  \"gross_for_minus_10pct\": 13.11,\n  \"gross_for_minus_15pct\": 12.39,\n  \"fast_sale_range_eur\": null,\n  \"realistic_sale_range_eur\": null,\n  \"patient_sale_range_eur\": null,\n  \"start_listing_range_eur\": null,\n  \"fast_floor_range_eur\": [\n    9.04,\n    10.79\n  ],\n  \"fast_net_exit_pct\": null,\n  \"realistic_net_exit_pct\": null,\n  \"patient_net_exit_pct\": null,\n  \"range_basis\": {\n    \"fast\": \"No clean same-zone comps. Fast floor is based on a nearby worse-float comp (0.975 float at 10.79 EUR) and generic floor sales (e.g., 0.856 float at 9.04 EUR).\",\n    \"realistic\": \"No clean same-zone comps. Realistic range is highly uncertain.\",\n    \"patient\": \"No clean same-zone comps. Patient range is highly uncertain, with sticker-contaminated high-float sales (e.g., 0.998 float at 13.21 EUR with 4 stickers) suggesting potential upside if a buyer values the float and ignores stickers, but this is speculative.\"\n  },\n  \"best_comps\": [\n    {\n      \"price_eur\": 10.79,\n      \"float_value\": 0.9749550819396973,\n      \"paint_seed\": 761,\n      \"why\": \"Nearby worse-float comp, providing a conservative downside reference for the candidate's float zone.\"\n    },\n    {\n      \"price_eur\": 13.21,\n      \"float_value\": 0.998536229133606,\n      \"paint_seed\": 255,\n      \"why\": \"Higher float, sticker-contaminated sale. Offers a potential, but speculative, upside if a buyer values the float and ignores the stickers.\"\n    },\n    {\n      \"price_eur\": 12.5,\n      \"float_value\": 0.9952527284622192,\n      \"paint_seed\": 895,\n      \"why\": \"Higher float, sticker-contaminated sale. Similar to the 13.21 EUR comp, it suggests a possible patient upside but is not a clean comparison.\"\n    }\n  ],\n  \"risks\": [\n    \"No clean same-zone float comps, making float-specific liquidity and pricing highly uncertain.\",\n    \"Model fair values (12.38 EUR) are significantly below the Steam ask (14.28 EUR), indicating potential overpricing.\",\n    \"All relevant comps (even sticker-contaminated ones) imply a net exit worse than -15% relative to the current ask, with clean comps suggesting -25% to -37%.\"\n  ],\n  \"summary\": \"This M4A4 Desolate Space (BS) has a very high float, but there are no clean, relevant same-zone sales to support the current Steam ask. Model fair values are significantly lower than the ask, and all available comps suggest a net exit far worse than -15%. Float liquidity is low, and the item carries high risk due to the lack of direct pricing evidence.\"\n}"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 14256,
+      "candidatesTokenCount": 915,
+      "totalTokenCount": 15171,
+      "cachedContentTokenCount": 3054,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 14256
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3054
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "-D0DavqeNPeWkdUPvID9yAw"
+  }
+}

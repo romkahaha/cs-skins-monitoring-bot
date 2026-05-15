@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "updated_at_utc": "2026-05-08T20:38:12.634308+00:00",
+  "started_at_utc": "2026-05-08T20:38:11.555712+00:00",
+  "error": "Gemini HTTP 503",
+  "finished_at_utc": "2026-05-08T20:38:12.634194+00:00"
+}

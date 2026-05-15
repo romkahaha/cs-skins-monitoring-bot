@@ -34,7 +34,7 @@
   "monitoring": {
     "enabled": true,
     "batch_size": 5,
-    "max_listings_per_item": 200,
+    "max_listings_per_item": 100,
     "fail_if_all_listing_fetches_error": true
   },
   "cycle": {
@@ -59,14 +59,14 @@
       },
       "max_listings_per_item": {
         "A": 100,
-        "B": 200,
-        "C": 200
+        "B": 80,
+        "C": 60
       }
     }
   },
   "steam_scm": {
     "listings_per_request": 100,
-    "max_listings_per_item": 200,
+    "max_listings_per_item": 100,
     "request_timeout_sec": 45.0,
     "retry_attempts": 3,
     "retry_sleep_min_sec": 2.0,
@@ -99,7 +99,9 @@
     "exclude_any": [
       "Fade",
       "Case Hardened",
-      "Heat Treated"
+      "Heat Treated",
+      "Army Recon (Factory New)",
+      "Melondrama (Battle-Scarred)"
     ]
   },
   "model_plot": {

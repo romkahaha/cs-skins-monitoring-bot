@@ -1,0 +1,149 @@
+{
+  "verdict": "PASS",
+  "confidence": "low",
+  "risk_level": "high",
+  "item_liquidity": "medium",
+  "float_liquidity": "low",
+  "model_agreement": "divergent",
+  "target_15pct_fast": "no",
+  "target_10pct_fast": "no",
+  "breakeven_gross_eur": 14.57,
+  "gross_for_minus_5pct": 13.84,
+  "gross_for_minus_10pct": 13.11,
+  "gross_for_minus_15pct": 12.39,
+  "fast_sale_range_eur": null,
+  "realistic_sale_range_eur": null,
+  "patient_sale_range_eur": null,
+  "start_listing_range_eur": null,
+  "same_zone_floor_eur": null,
+  "fast_floor_range_eur": [
+    10.79,
+    10.79
+  ],
+  "conservative_floor_range_eur": [
+    10.79,
+    10.79
+  ],
+  "panic_floor_range_eur": [
+    9.04,
+    10.44
+  ],
+  "fast_net_exit_pct": null,
+  "realistic_net_exit_pct": null,
+  "patient_net_exit_pct": null,
+  "same_zone_floor_net_exit_pct": null,
+  "conservative_net_exit_pct": [
+    -25.950980392156865,
+    -25.950980392156865
+  ],
+  "panic_net_exit_pct": [
+    -37.96078431372549,
+    -28.35294117647059
+  ],
+  "range_basis": {
+    "fast": "No deterministic fast range could be computed. Generic floor comps (11) are kept out of fast-sale evidence.",
+    "realistic": "No deterministic realistic range could be computed.",
+    "patient": "No deterministic patient range could be computed."
+  },
+  "best_comps": [
+    {
+      "sale_id": "sale_24",
+      "bucket_reason": "near_worse_float",
+      "price_eur": 10.79,
+      "float_value": 0.9749550819396973,
+      "paint_seed": 761.0,
+      "why": "Nearby worse-float comp for conservative downside."
+    },
+    {
+      "sale_id": "sale_19",
+      "bucket_reason": "generic_floor",
+      "price_eur": 9.04,
+      "float_value": 0.8559688329696655,
+      "paint_seed": 950.0,
+      "why": "Generic floor comp; panic downside only."
+    }
+  ],
+  "risks": [
+    "No clean same-zone float comps, making float-specific liquidity and pricing highly uncertain.",
+    "Model fair values (12.38 EUR) are significantly below the Steam ask (14.28 EUR), indicating potential overpricing.",
+    "All relevant comps (even sticker-contaminated ones) imply a net exit worse than -15% relative to the current ask, with clean comps suggesting -25% to -37%."
+  ],
+  "summary": "This M4A4 Desolate Space (BS) has a very high float, but there are no clean, relevant same-zone sales to support the current Steam ask. Model fair values are significantly lower than the ask, and all available comps suggest a net exit far worse than -15%. Float liquidity is low, and the item carries high risk due to the lack of direct pricing evidence.",
+  "computed_context": {
+    "fast_sale_range_eur": null,
+    "realistic_sale_range_eur": null,
+    "patient_sale_range_eur": null,
+    "same_zone_floor_eur": null,
+    "conservative_floor_range_eur": [
+      10.79,
+      10.79
+    ],
+    "panic_floor_range_eur": [
+      9.04,
+      10.44
+    ],
+    "start_listing_range_eur": null,
+    "target_15pct_fast": "no",
+    "target_10pct_fast": "no",
+    "fast_net_exit_pct": null,
+    "realistic_net_exit_pct": null,
+    "patient_net_exit_pct": null,
+    "same_zone_floor_net_exit_pct": null,
+    "conservative_net_exit_pct": [
+      -25.950980392156865,
+      -25.950980392156865
+    ],
+    "panic_net_exit_pct": [
+      -37.96078431372549,
+      -28.35294117647059
+    ],
+    "same_zone_count": 0,
+    "near_worse_count": 1,
+    "generic_floor_count": 11,
+    "relevant_comps": [
+      {
+        "sale_id": "sale_24",
+        "price_eur": 10.79,
+        "float_value": 0.9749550819396973,
+        "paint_seed": 761.0,
+        "sold_at": "2026-05-06T20:59:01.878123Z",
+        "realized_net_exit_pct": -25.950980392156865,
+        "float_delta_abs": 0.015290260314942739,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.015290260314942739,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "near_worse_float",
+        "why": "Nearby worse-float comp for conservative downside."
+      },
+      {
+        "sale_id": "sale_19",
+        "price_eur": 9.04,
+        "float_value": 0.8559688329696655,
+        "paint_seed": 950.0,
+        "sold_at": "2026-05-07T21:04:56.765418Z",
+        "realized_net_exit_pct": -37.96078431372549,
+        "float_delta_abs": 0.13427650928497448,
+        "direction_vs_candidate": "worse",
+        "edge_distance_delta": 0.13427650928497448,
+        "stickers": [],
+        "notes": [],
+        "contaminated": false,
+        "outlier": false,
+        "bucket_reason": "generic_floor",
+        "why": "Generic floor comp; panic downside only."
+      }
+    ],
+    "fast_basis_ids": [],
+    "conservative_basis_ids": [
+      "sale_24"
+    ],
+    "panic_basis_ids": [
+      "sale_19",
+      "sale_9",
+      "sale_20"
+    ]
+  }
+}

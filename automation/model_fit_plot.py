@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import io
 import json
+import re
+from hashlib import sha1
 from pathlib import Path
 from typing import Any
 
@@ -24,20 +26,62 @@ MODEL_COLORS = {
     "hybrid": "tab:green",
 }
 
-
-def load_numeric_panel(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
-    df = df.apply(pd.to_numeric, errors="coerce")
-    return df.replace(STRUCTURAL_GAP, np.nan)
+_FIT_PAYLOAD_CACHE: dict[tuple[str, int, int], dict[str, Any]] = {}
+_PANEL_COLUMN_CACHE: dict[tuple[str, int, int, str], pd.Series] = {}
 
 
-def build_item_df(item: str, panels: dict[str, pd.DataFrame]) -> pd.DataFrame:
+def _path_signature(path: Path) -> tuple[str, int, int]:
+    resolved = path.resolve()
+    stat = resolved.stat()
+    return str(resolved), int(stat.st_mtime_ns), int(stat.st_size)
+
+
+def plot_filename_for_item(item: str) -> str:
+    slug = re.sub(r"[^A-Za-z0-9._-]+", "_", item).strip("._-")
+    if not slug:
+        slug = "item"
+    digest = sha1(item.encode("utf-8")).hexdigest()[:12]
+    return f"{digest}__{slug}.png"
+
+
+def precomputed_plot_path(item: str, directory: Path) -> Path:
+    return directory / plot_filename_for_item(item)
+
+
+def load_numeric_panel_column(path: Path, item: str) -> pd.Series:
+    key = (*_path_signature(path), item)
+    cached = _PANEL_COLUMN_CACHE.get(key)
+    if cached is not None:
+        return cached.copy()
+
+    try:
+        df = pd.read_csv(path, usecols=[item])
+    except ValueError as exc:
+        raise ValueError(f"Item not found in panel {path.name}: {item}") from exc
+    series = pd.to_numeric(df[item], errors="coerce").replace(STRUCTURAL_GAP, np.nan)
+    _PANEL_COLUMN_CACHE[key] = series
+    return series.copy()
+
+
+def load_fit_payload(path: Path) -> dict[str, Any]:
+    key = _path_signature(path)
+    cached = _FIT_PAYLOAD_CACHE.get(key)
+    if cached is not None:
+        return cached
+
+    with path.open(encoding="utf-8") as handle:
+        payload: dict[str, Any] = json.load(handle)
+    _FIT_PAYLOAD_CACHE[key] = payload
+    return payload
+
+
+def build_item_df(item: str, panels: dict[str, pd.Series]) -> pd.DataFrame:
     df = pd.DataFrame(
         {
-            "float_value": panels["float_value"][item],
-            "base": panels["base"][item],
-            "predicted": panels["predicted"][item],
-            "sticker_count": panels["sticker_count"][item],
+            "float_value": panels["float_value"],
+            "base": panels["base"],
+            "predicted": panels["predicted"],
+            "sticker_count": panels["sticker_count"],
         }
     )
     df["pred_rel_dev"] = df["predicted"] / df["base"] - 1.0
@@ -58,15 +102,11 @@ def render_item_fit_plot(
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
-    panels = {name: load_numeric_panel(data_dir / filename) for name, filename in PANEL_FILES.items()}
-    with fit_json.open(encoding="utf-8") as f:
-        fit_payload: dict[str, Any] = json.load(f)
+    panels = {name: load_numeric_panel_column(data_dir / filename, item) for name, filename in PANEL_FILES.items()}
+    fit_payload = load_fit_payload(fit_json)
     fit_per_skin = fit_payload.get("per_skin", {})
     if item not in fit_per_skin:
         raise ValueError(f"Item not found in fit JSON: {item}")
-    missing_panels = [name for name, df in panels.items() if item not in df.columns]
-    if missing_panels:
-        raise ValueError(f"Item not found in panels {missing_panels}: {item}")
 
     fit = fit_per_skin[item]
     item_df = build_item_df(item, panels)

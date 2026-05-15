@@ -1,0 +1,35 @@
+{
+  "http_status": 200,
+  "received_at_utc": "2026-05-12T14:48:52.605978+00:00",
+  "model": "gemini-2.5-flash",
+  "payload": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"verdict\": \"PASS\",\n  \"confidence\": \"medium\",\n  \"risk_level\": \"high\",\n  \"item_liquidity\": \"medium\",\n  \"float_liquidity\": \"low\",\n  \"model_agreement\": \"mixed\",\n  \"target_15pct_fast\": \"no\",\n  \"breakeven_gross_eur\": 28.285714285714285,\n  \"gross_for_minus_5pct\": 26.871428571428567,\n  \"gross_for_minus_10pct\": 25.45714285714286,\n  \"gross_for_minus_15pct\": 24.04285714285714,\n  \"fast_sale_range_eur\": [\n    20.9035,\n    22.1965\n  ],\n  \"realistic_sale_range_eur\": [\n    21.119,\n    21.981\n  ],\n  \"patient_sale_range_eur\": [\n    21.55,\n    21.55\n  ],\n  \"start_listing_range_eur\": [\n    21.55,\n    23.274\n  ],\n  \"fast_floor_range_eur\": [\n    15.08,\n    18.692\n  ],\n  \"fast_net_exit_pct\": [\n    -26.098737373737368,\n    -21.52752525252526\n  ],\n  \"realistic_net_exit_pct\": [\n    -25.336868686868684,\n    -22.289393939393932\n  ],\n  \"patient_net_exit_pct\": [\n    -23.813131313131308,\n    -23.813131313131308\n  ],\n  \"range_basis\": {\n    \"fast\": \"Lower bound based on nearby worse-float comp (0.00506 float at 20.4 EUR) and generic floor comps. Upper bound from same-zone clean comp (0.00196 float at 21.55 EUR) and other near-worse floats.\",\n    \"realistic\": \"Based on the central cluster of same-zone clean comp (0.00196 float at 21.55 EUR) and nearby worse-float comps (0.00506 float at 20.4 EUR, 0.00761 float at 19.96 EUR).\",\n    \"patient\": \"Based on the only clean same-zone comp (0.00196 float at 21.55 EUR).\"\n  },\n  \"best_comps\": [\n    {\n      \"price_eur\": 21.55,\n      \"float_value\": 0.001965264556929469,\n      \"paint_seed\": 547,\n      \"why\": \"Closest clean same-zone comp; slightly worse float than candidate.\"\n    },\n    {\n      \"price_eur\": 20.4,\n      \"float_value\": 0.005065500736236572,\n      \"paint_seed\": 487,\n      \"why\": \"Nearby worse-float comp for conservative downside.\"\n    },\n    {\n      \"price_eur\": 15.08,\n      \"float_value\": 0.022032104432582855,\n      \"paint_seed\": 493,\n      \"why\": \"Generic floor comp; panic downside only.\"\n    }\n  ],\n  \"risks\": [\n    \"The candidate's float is extremely low (0.0005), but the only clean same-zone comp (0.00196 at 21.55 EUR) implies a significant net loss (-23.81%).\",\n    \"Several 'low #' sales (e.g., 25.52 EUR for 0.00038 float, 25.27 EUR for 0.00044 float) are marked as contaminated, making their relevance for a clean candidate uncertain.\",\n    \"The model fair values are mixed, with the hybrid fair value (27.99 EUR) close to the ask, but the discounted fair value (26.53 EUR) is below the ask, indicating potential overpricing.\"\n  ],\n  \"summary\": \"This P2000 | Turf (Factory New) has an extremely low float, but float-specific liquidity is low with only one clean same-zone comp. The ask price of 27.72 EUR is significantly above recent relevant sales, with the best clean comp implying a -23.81% net exit. The model agreement is mixed, and a quick -15% exit is not protected, making this a high-risk pass.\"\n}"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 14714,
+      "candidatesTokenCount": 1249,
+      "totalTokenCount": 15963,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 14714
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-2.5-flash",
+    "responseId": "zj0Dasi_Nvn4vdIPsdiBsAc"
+  }
+}

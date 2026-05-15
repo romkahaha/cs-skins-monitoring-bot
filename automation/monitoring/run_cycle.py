@@ -46,6 +46,8 @@ RECOVERABLE_BATCH_ERROR_PATTERNS = (
     "all Steam listing fetches failed for this batch",
     "Steam listings fetch returned 0 rows with",
     "Steam rate limit (429)",
+    "429",
+    "Too Many Requests",
 )
 
 
@@ -217,7 +219,7 @@ def is_recoverable_batch_error(state: dict, cycle_cfg: dict) -> bool:
 
 def is_rate_limit_batch_error(state: dict, cycle_cfg: dict) -> bool:
     error = str(state.get("last_error") or "")
-    patterns = cycle_cfg.get("failover_trigger_error_patterns", ["Steam rate limit (429)"])
+    patterns = cycle_cfg.get("failover_trigger_error_patterns", ["Steam rate limit (429)", "429", "Too Many Requests"])
     return any(str(pattern) and str(pattern) in error for pattern in patterns)
 
 

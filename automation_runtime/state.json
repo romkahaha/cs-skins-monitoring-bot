@@ -13,81 +13,34 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "C",
-  "last_tier_queue_index": 6,
-  "last_batch_start_pointer": 62,
+  "queue_pointer": 1,
+  "last_tier": "A",
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 1,
   "last_batch_items": [
-    "AWP | Asiimov (Battle-Scarred)",
-    "Desert Eagle | Printstream (Factory New)",
-    "AWP | Hyper Beast (Battle-Scarred)",
-    "AWP | POP AWP (Factory New)",
-    "SG 553 | Darkwing (Factory New)"
+    "AK-47 | Slate (Well-Worn)",
+    "AK-47 | Wintergreen (Minimal Wear)",
+    "M4A1-S | Electrum (Minimal Wear)",
+    "P2000 | Wicked Sick (Field-Tested)",
+    "AK-47 | Slate (Battle-Scarred)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AWP | Asiimov (Battle-Scarred), Desert Eagle | Printstream (Factory New), AWP | Hyper Beast (Battle-Scarred))",
-  "last_run_at_utc": "2026-05-14T20:39:32.358566+00:00",
-  "last_finished_at_utc": "2026-05-14T20:41:28.656057+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-14T20:39:32.357700+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-14T20:41:28.656057+00:00",
-  "last_status": "error",
-  "consecutive_errors": 1,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "AWP | Asiimov (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "Desert Eagle | Printstream (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "AWP | Hyper Beast (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "AWP | POP AWP (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "SG 553 | Darkwing (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    }
-  ],
-  "last_listing_error_count": 5,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 274,
-  "last_opportunities_rows": 1,
-  "last_alert_stats": {},
+  "last_error": null,
+  "last_run_at_utc": "2026-05-15T16:39:47.092065+00:00",
+  "last_finished_at_utc": "2026-05-15T16:39:47.091224+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T16:39:47.091224+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-15T01:43:50.653958+00:00",
+  "last_status": "running",
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 499,
+  "last_enriched_rows": 499,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 647513
+  },
   "tiers": {
     "A": {
       "items_signature": "8a51cc0546a277f095a4a7b87f0ca8cc7f7343a8ade25fa21427128685c1008c",

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "items_signature": "31fa7e15d343fb6d9d7d5875c4f524a51352b596e0528d034ab3353718416af5",
+  "items_count": 78,
+  "batch_pointer": 26,
+  "last_run_at_utc": "2026-05-15T16:38:57.582488+00:00",
+  "last_status": "ok",
+  "last_batch_items": [
+    "AWP | Atheris (Factory New)",
+    "M4A4 | Full Throttle (Battle-Scarred)",
+    "MP9 | Airlock (Field-Tested)",
+    "P250 | Valence (Factory New)",
+    "Negev | dev_texture (Factory New)"
+  ],
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-15T16:39:23.276101+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T16:39:23.276101+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-14T20:41:28.407419+00:00",
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 300,
+  "last_enriched_rows": 300,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 647432
+  },
+  "last_batch_start_pointer": 21
+}
