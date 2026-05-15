@@ -184,7 +184,7 @@ def monitoring_defaults() -> dict[str, Any]:
             "github_fetch": {
                 "enabled": False,
                 "required": False,
-                "repo_path": str(root.parent / "digital_books"),
+                "repo_path": str(root.parent / "csfloat-latest-sales-worker"),
                 "remote_url": "",
                 "branch": "main",
                 "timeout_sec": 180.0,

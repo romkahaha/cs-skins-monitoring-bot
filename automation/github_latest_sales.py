@@ -23,6 +23,8 @@ from automation.state import utc_now_iso
 
 REQUEST_REL = Path("automation_runtime/latest_sales_request_latest.json")
 RESULT_REL = Path("automation_runtime/latest_sales_result_latest.json")
+REQUESTS_DIR_REL = Path("automation_runtime/latest_sales/requests")
+RESULTS_DIR_REL = Path("automation_runtime/latest_sales/results")
 WORKFLOW_REL = Path(".github/workflows/latest_sales_fetch.yml")
 
 
@@ -104,10 +106,18 @@ jobs:
           request_path = Path("automation_runtime/latest_sales_request_latest.json")
           active = "false"
           mode = "missing"
-          if request_path.is_file():
-              payload = json.loads(request_path.read_text(encoding="utf-8"))
+          paths = [request_path]
+          request_dir = Path("automation_runtime/latest_sales/requests")
+          if request_dir.is_dir():
+              paths.extend(sorted(request_dir.glob("*.json")))
+          for path in paths:
+              if not path.is_file():
+                  continue
+              payload = json.loads(path.read_text(encoding="utf-8"))
               mode = str(payload.get("mode", "unknown"))
-              active = "true" if payload.get("trigger_run") else "false"
+              if payload.get("trigger_run"):
+                  active = "true"
+                  break
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
               handle.write(f"active={active}\\n")
               handle.write(f"mode={mode}\\n")
@@ -123,7 +133,7 @@ jobs:
       - name: Run latest-sales request
         if: steps.request.outputs.active == 'true'
         run: |
-          python automation/github_latest_sales.py run-request
+          python automation/latest_sales_worker.py run-request
 """
 
 
@@ -156,6 +166,7 @@ def request_latest_sales(
 
     request = build_request_payload(item=item, max_sales_rows=max_sales_rows)
     write_json(repo / REQUEST_REL, request)
+    write_json(repo / REQUESTS_DIR_REL / f"{request['request_id']}.json", request)
     write_json(
         repo / RESULT_REL,
         {
@@ -166,8 +177,28 @@ def request_latest_sales(
             "item": item,
         },
     )
+    write_json(
+        repo / RESULTS_DIR_REL / f"{request['request_id']}.json",
+        {
+            "version": 1,
+            "request_id": request["request_id"],
+            "status": "pending",
+            "requested_at_utc": request["requested_at_utc"],
+            "item": item,
+        },
+    )
 
-    run_git(repo, ["add", str(REQUEST_REL), str(RESULT_REL), str(WORKFLOW_REL)])
+    run_git(
+        repo,
+        [
+            "add",
+            str(REQUEST_REL),
+            str(RESULT_REL),
+            str(REQUESTS_DIR_REL),
+            str(RESULTS_DIR_REL),
+            str(WORKFLOW_REL),
+        ],
+    )
     diff = subprocess.run(["git", "-C", str(repo), "diff", "--cached", "--quiet"])
     if diff.returncode != 1:
         if diff.returncode == 0:
@@ -201,7 +232,9 @@ def wait_for_result(
             maybe_pull(repo, branch)
         except Exception as exc:
             last_error = str(exc)
-        payload = load_json(repo / RESULT_REL)
+        payload = load_json(repo / RESULTS_DIR_REL / f"{request_id}.json")
+        if not payload:
+            payload = load_json(repo / RESULT_REL)
         if str(payload.get("request_id") or "") == request_id:
             status = str(payload.get("status") or "")
             if status == "success":

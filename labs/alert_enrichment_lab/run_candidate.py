@@ -64,7 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--github-live",
         action="store_true",
-        help="Fetch latest sales via the digital_books GitHub Actions runner instead of local CSFloat requests.",
+        help="Fetch latest sales via the dedicated GitHub Actions latest-sales worker instead of local CSFloat requests.",
     )
     parser.add_argument(
         "--latest-sales-json",

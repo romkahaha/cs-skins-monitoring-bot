@@ -137,8 +137,8 @@
     "github_fetch": {
       "enabled": false,
       "required": false,
-      "repo_path": "/home/roma/cs-arbitrage/digital_books",
-      "remote_url": "git@github.com:romkahaha/digital_books.git",
+      "repo_path": "/home/roma/cs-arbitrage/csfloat-latest-sales-worker",
+      "remote_url": "git@github.com:romkahaha/csfloat-latest-sales-worker.git",
       "branch": "main",
       "timeout_sec": 180.0,
       "poll_interval_sec": 5.0
