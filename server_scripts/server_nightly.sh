@@ -18,6 +18,8 @@ PIPELINE_RUN_ID="$(date -u +"%Y%m%dT%H%M%SZ")-vps-$$"
 PIPELINE_STARTED_AT_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 NIGHTLY_RISK_TIMEOUT_MINUTES="${NIGHTLY_RISK_TIMEOUT_MINUTES:-420}"
 NIGHTLY_BACKUP_DIR="automation_runtime/nightly_backups/$PIPELINE_RUN_ID"
+NIGHTLY_PROMOTE_SOURCE_INPUTS="${NIGHTLY_PROMOTE_SOURCE_INPUTS:-1}"
+NIGHTLY_SOURCE_REPO="${NIGHTLY_SOURCE_REPO:-/home/roma/cs-arbitrage/skins_roundtrip_v1}"
 LOCAL_STASH_REF=""
 LOCAL_STASH_LABEL=""
 NIGHTLY_FAILOVER_CONFIG="automation/configs/monitoring.json"
@@ -88,6 +90,9 @@ send_nightly_status() {
 
 nightly_artifact_paths() {
   cat <<'EOF'
+lists/skins_normal_filtered1.py
+lists/skins_normal2.py
+skin_homog/screener_preprocess/preprocess_metrics.csv
 automation_runtime/risk_metrics_latest.csv
 automation_runtime/risk_progress_latest.log
 automation_runtime/risk_runtime_latest.json
@@ -106,7 +111,7 @@ automation_runtime/monitor_list_tier_b.py
 automation_runtime/monitor_list_tier_c.py
 automation_runtime/monitor_tiers_latest.json
 automation_runtime/base_snapshot_latest.csv
-skin_homog/data_skins_big/_summary.csv
+skin_homog/data_skins_big
 steam_listings/data/float_fit_rel_curves.json
 EOF
 }
@@ -118,7 +123,11 @@ backup_nightly_artifacts() {
     [[ -n "$path" ]] || continue
     if [[ -e "$path" ]]; then
       mkdir -p "$NIGHTLY_BACKUP_DIR/$(dirname "$path")"
-      cp -p "$path" "$NIGHTLY_BACKUP_DIR/$path"
+      if [[ -d "$path" ]]; then
+        cp -a "$path" "$NIGHTLY_BACKUP_DIR/$path"
+      else
+        cp -p "$path" "$NIGHTLY_BACKUP_DIR/$path"
+      fi
     fi
   done <"$NIGHTLY_BACKUP_DIR/managed_paths.txt"
   echo "[$(timestamp)] backed up nightly artifacts: $NIGHTLY_BACKUP_DIR"
@@ -131,13 +140,36 @@ restore_nightly_artifacts() {
   fi
   while IFS= read -r path; do
     [[ -n "$path" ]] || continue
-    rm -f "$path"
+    if [[ -d "$path" ]]; then
+      rm -rf "$path"
+    else
+      rm -f "$path"
+    fi
     if [[ -e "$NIGHTLY_BACKUP_DIR/$path" ]]; then
       mkdir -p "$(dirname "$path")"
-      cp -p "$NIGHTLY_BACKUP_DIR/$path" "$path"
+      if [[ -d "$NIGHTLY_BACKUP_DIR/$path" ]]; then
+        cp -a "$NIGHTLY_BACKUP_DIR/$path" "$(dirname "$path")/"
+      else
+        cp -p "$NIGHTLY_BACKUP_DIR/$path" "$path"
+      fi
     fi
   done <"$NIGHTLY_BACKUP_DIR/managed_paths.txt"
   echo "[$(timestamp)] restored previous nightly artifacts from $NIGHTLY_BACKUP_DIR"
+}
+
+promote_nightly_source_inputs() {
+  if [[ "$NIGHTLY_PROMOTE_SOURCE_INPUTS" != "1" ]]; then
+    echo "[$(timestamp)] nightly source input promotion disabled"
+    return 0
+  fi
+  if [[ ! -d "$NIGHTLY_SOURCE_REPO/.git" ]]; then
+    echo "[$(timestamp)] nightly source repo not found, skipping promotion: $NIGHTLY_SOURCE_REPO"
+    return 0
+  fi
+  echo "[$(timestamp)] promoting nightly source inputs from $NIGHTLY_SOURCE_REPO"
+  "$PYTHON_BIN" -B automation/nightly/promote_source_inputs.py \
+    --source-repo "$NIGHTLY_SOURCE_REPO" \
+    --target-repo "$(pwd)"
 }
 
 handled_nightly_failure() {
@@ -405,6 +437,7 @@ fi
 
 echo "[$(timestamp)] rebuilding VPS risk inputs"
 backup_nightly_artifacts
+promote_nightly_source_inputs
 risk_rc=0
 run_tracked_timeout "$NIGHTLY_RISK_TIMEOUT_MINUTES" "$PYTHON_BIN" -B automation/nightly/build_risk_metrics.py --create || risk_rc="$?"
 if (( risk_rc != 0 )); then
@@ -422,6 +455,12 @@ fi
 write_vps_status "risk_ready" "VPS risk and model backfill queue are ready; GitHub CSFloat worker should start from this push."
 
 git add \
+  lists/skins_normal_filtered1.py \
+  lists/skins_normal2.py \
+  skin_homog/screener_preprocess/preprocess_metrics.csv \
+  skin_homog/data_skins_big \
+  steam_listings/data/float_fit_rel_curves.json \
+  automation_runtime/nightly_source_promote_latest.json \
   automation_runtime/risk_metrics_latest.csv \
   automation_runtime/risk_progress_latest.log \
   automation_runtime/risk_runtime_latest.json \
