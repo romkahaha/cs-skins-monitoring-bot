@@ -41,7 +41,11 @@ def main() -> int:
         print(text)
         return 0
 
-    bot_token, chat_id = telegram_credentials()
+    try:
+        bot_token, chat_id = telegram_credentials()
+    except Exception as exc:
+        print(f"[notify_status] Telegram credentials are missing; notification skipped: {exc}", file=sys.stderr)
+        return 0
     if not bot_token or not chat_id:
         print("[notify_status] Telegram credentials are missing; notification skipped", file=sys.stderr)
         return 0
