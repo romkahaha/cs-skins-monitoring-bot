@@ -1,0 +1,13 @@
+{
+  "source_repo": "/home/roma/cs-arbitrage/skins_roundtrip_v1",
+  "items": 1638,
+  "preprocess_rows": 9867,
+  "preprocess_unique_items": 9867,
+  "summary_rows": 1638,
+  "summary_unique_items": 1638,
+  "fit_per_skin": 1638,
+  "fit_skipped": 0,
+  "target_repo": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
+  "promoted_at_utc": "2026-05-15T21:00:25Z",
+  "check_only": false
+}
