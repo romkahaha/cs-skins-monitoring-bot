@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "ecfca795c5e0655cc4c7d7fda27f06ea5cf812ad46d93107bd596171350c2e74",
-  "items_count": 205,
-  "queue_signature": "d9d15c0b57c529bab6abe54630299bf0f5f5b1d5ee2280939b18ffc22d0cad92",
+  "items_signature": "509cd62885d9d2d8527459e4c706d40a2a4b508488eba3c40f36bd2573e66205",
+  "items_count": 323,
+  "queue_signature": "759c65d82ee89e26728ef27444415385b13ca9c5e3414ce83532aec72fc84672",
   "queue_pattern": [
     "A",
     "A",
@@ -13,46 +13,42 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 61,
+  "queue_pointer": 0,
+  "last_tier": "A",
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 34,
   "last_batch_items": [
-    "M4A1-S | Control Panel (Field-Tested)",
-    "AK-47 | Legion of Anubis (Battle-Scarred)",
-    "AK-47 | The Oligarch (Battle-Scarred)",
-    "StatTrak™ AK-47 | Nightwish (Field-Tested)",
-    "StatTrak™ Dual Berettas | Melondrama (Battle-Scarred)"
+    "USP-S | Cortex (Well-Worn)",
+    "Galil AR | Chromatic Aberration (Field-Tested)",
+    "P2000 | Wicked Sick (Battle-Scarred)",
+    "Dual Berettas | Melondrama (Minimal Wear)",
+    "MP7 | Abyssal Apparition (Minimal Wear)"
   ],
-  "last_error": null,
-  "last_run_at_utc": "2026-05-16T20:53:56.318106+00:00",
-  "last_finished_at_utc": "2026-05-16T20:54:20.716201+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-16T20:54:20.716201+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-16T19:00:34.825120+00:00",
-  "last_status": "ok",
-  "consecutive_errors": 0,
+  "last_error": "Steam rate limit (429) for \"1/5 USP-S | Cortex (Well-Worn)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Well-Worn%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+  "last_run_at_utc": "2026-05-17T19:35:08.997016+00:00",
+  "last_finished_at_utc": "2026-05-17T19:35:11.024562+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-17T19:24:08.683487+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-17T19:35:11.024562+00:00",
+  "last_status": "error",
+  "consecutive_errors": 2,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 343,
-  "last_enriched_rows": 343,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 764110
-  },
+  "last_alert_stats": {},
   "tiers": {
     "A": {
-      "items_signature": "d43e4f564de78287bc4fefa965a67888cdeb3fc33f57719a6c90800226f0bb87",
-      "items_count": 61
+      "items_signature": "c87163719fca4bfffb5f1e590a3bac013b478a41cace51f59811a509cc8eeebb",
+      "items_count": 97
     },
     "B": {
-      "items_signature": "aa8a4aac24b1a443db506031eb94aa3a51d00897cad0664f4cf2885a0a27cdf9",
-      "items_count": 72
+      "items_signature": "36c5d8e5ff238aacd390ab5fda536afdd189a0b7cfae2c93b4509c196ee720a4",
+      "items_count": 113
     },
     "C": {
-      "items_signature": "c67df11965e4b43e25e562470c307d53a62cb6061ff9fa3945e40f2f21f5a623",
-      "items_count": 72
+      "items_signature": "05c097ec901c3a8673dc267595242981931507099d6598e5ab798a45964cf9c5",
+      "items_count": 113
     }
   }
 }
