@@ -1,9 +1,49 @@
 {
   "run_id": "20260516T210001Z-vps-764583",
-  "status": "risk_ready",
-  "source": "vps",
-  "started_at_utc": "2026-05-16T21:00:01Z",
-  "updated_at_utc": "2026-05-17T03:59:34Z",
-  "message": "VPS risk and model backfill queue are ready; GitHub CSFloat worker should start from this push.",
-  "host": "vmi2737474"
+  "status": "success",
+  "source": "github_actions",
+  "started_at_utc": "2026-05-17T04:00:54Z",
+  "finished_at_utc": "2026-05-17T06:02:25Z",
+  "duration_sec": 7291,
+  "github_run_id": "25980816793",
+  "github_run_attempt": "1",
+  "github_sha": "68f9f109ce57639a9e524569592c57624ecdf097",
+  "failed_stage": "",
+  "stages": [
+    {
+      "name": "model backfill",
+      "started_at_utc": "2026-05-17T04:00:54Z",
+      "finished_at_utc": "2026-05-17T04:00:54Z",
+      "duration_sec": 0,
+      "exit_code": 0
+    },
+    {
+      "name": "model refit",
+      "started_at_utc": "2026-05-17T04:00:54Z",
+      "finished_at_utc": "2026-05-17T04:02:54Z",
+      "duration_sec": 120,
+      "exit_code": 0
+    },
+    {
+      "name": "model backfill queue after refit",
+      "started_at_utc": "2026-05-17T04:02:54Z",
+      "finished_at_utc": "2026-05-17T04:02:55Z",
+      "duration_sec": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "monitor list",
+      "started_at_utc": "2026-05-17T04:02:55Z",
+      "finished_at_utc": "2026-05-17T04:02:56Z",
+      "duration_sec": 1,
+      "exit_code": 0
+    },
+    {
+      "name": "base snapshot",
+      "started_at_utc": "2026-05-17T04:02:56Z",
+      "finished_at_utc": "2026-05-17T06:02:25Z",
+      "duration_sec": 7169,
+      "exit_code": 0
+    }
+  ]
 }
