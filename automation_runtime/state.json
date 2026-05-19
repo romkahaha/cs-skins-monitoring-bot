@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "509cd62885d9d2d8527459e4c706d40a2a4b508488eba3c40f36bd2573e66205",
-  "items_count": 323,
-  "queue_signature": "759c65d82ee89e26728ef27444415385b13ca9c5e3414ce83532aec72fc84672",
+  "items_signature": "5e98a4175f99b61590cfb7668a1e626f5493a567534c9b9319641590d0df9e58",
+  "items_count": 423,
+  "queue_signature": "338bd31b8716d803634354016ea4647ea9714ed6af3ac11433a2a144a2934f50",
   "queue_pattern": [
     "A",
     "A",
@@ -13,42 +13,42 @@
     "B",
     "C"
   ],
-  "queue_pointer": 1,
-  "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 20,
+  "queue_pointer": 5,
+  "last_tier": "B",
+  "last_tier_queue_index": 5,
+  "last_batch_start_pointer": 99,
   "last_batch_items": [
-    "AWP | Atheris (Well-Worn)",
-    "AK-47 | Inheritance (Field-Tested)",
-    "XM1014 | Entombed (Field-Tested)",
-    "USP-S | Jawbreaker (Minimal Wear)",
-    "Glock-18 | Shinobu (Battle-Scarred)"
+    "AK-47 | The Oligarch (Battle-Scarred)",
+    "M4A4 | Full Throttle (Field-Tested)",
+    "USP-S | Guardian (Factory New)",
+    "AWP | Neo-Noir (Factory New)",
+    "Desert Eagle | Sputnik (Factory New)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 AWP | Atheris (Well-Worn)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Atheris%20%28Well-Worn%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_run_at_utc": "2026-05-18T07:58:24.189098+00:00",
-  "last_finished_at_utc": "2026-05-18T07:58:25.467339+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-18T07:01:18.837266+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-18T07:58:25.467339+00:00",
+  "last_error": "Steam rate limit (429) for \"1/5 AK-47 | The Oligarch (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20The%20Oligarch%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
+  "last_run_at_utc": "2026-05-19T20:36:33.182014+00:00",
+  "last_finished_at_utc": "2026-05-19T20:36:35.652712+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-19T20:23:11.472291+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-19T20:36:35.652712+00:00",
   "last_status": "error",
   "consecutive_errors": 2,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
   "last_listing_rows": 0,
-  "last_enriched_rows": 0,
+  "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "tiers": {
     "A": {
-      "items_signature": "c87163719fca4bfffb5f1e590a3bac013b478a41cace51f59811a509cc8eeebb",
-      "items_count": 97
+      "items_signature": "c6520b9a209cf36208dc12e82ef05e505e6e070279a48ecb0c2557bf3d410a89",
+      "items_count": 127
     },
     "B": {
-      "items_signature": "36c5d8e5ff238aacd390ab5fda536afdd189a0b7cfae2c93b4509c196ee720a4",
-      "items_count": 113
+      "items_signature": "652fb74bbc40b65766dab2229b4105cc23c24460f724633c955c8550e65d9587",
+      "items_count": 148
     },
     "C": {
-      "items_signature": "05c097ec901c3a8673dc267595242981931507099d6598e5ab798a45964cf9c5",
-      "items_count": 113
+      "items_signature": "fc877656cbc8596ba1baf855446c53d11288c2daebc053f8c92916e08a8e664e",
+      "items_count": 148
     }
   }
 }
