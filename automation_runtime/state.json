@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "5e98a4175f99b61590cfb7668a1e626f5493a567534c9b9319641590d0df9e58",
-  "items_count": 423,
-  "queue_signature": "338bd31b8716d803634354016ea4647ea9714ed6af3ac11433a2a144a2934f50",
+  "items_signature": "b529bf497fe472f60c8eea3c9cb4a9cc479d9b546cd1a2a61e220b46c493a6f8",
+  "items_count": 527,
+  "queue_signature": "a3ea4e6d56d8a9b8f82d2f0cf251f7a8704d9c2896302017b60892a46fd6ada2",
   "queue_pattern": [
     "A",
     "A",
@@ -13,42 +13,46 @@
     "B",
     "C"
   ],
-  "queue_pointer": 3,
+  "queue_pointer": 4,
   "last_tier": "A",
   "last_tier_queue_index": 3,
-  "last_batch_start_pointer": 39,
+  "last_batch_start_pointer": 32,
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Battle-Scarred)",
-    "Sawed-Off | Kiss♥Love (Field-Tested)",
-    "XM1014 | Entombed (Field-Tested)",
-    "UMP-45 | Wild Child (Well-Worn)",
-    "M4A4 | Converter (Factory New)"
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Inheritance (Field-Tested)",
+    "AWP | Duality (Battle-Scarred)",
+    "AWP | Duality (Minimal Wear)",
+    "AWP | Atheris (Well-Worn)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 AK-47 | Midnight Laminate (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Midnight%20Laminate%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_run_at_utc": "2026-05-20T20:27:50.117812+00:00",
-  "last_finished_at_utc": "2026-05-20T20:27:54.185661+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-20T20:13:49.350867+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-20T20:27:54.185661+00:00",
-  "last_status": "error",
-  "consecutive_errors": 2,
+  "last_error": null,
+  "last_run_at_utc": "2026-05-21T20:51:47.167950+00:00",
+  "last_finished_at_utc": "2026-05-21T20:54:21.454748+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-21T20:54:21.454748+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "last_status": "ok",
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 1138493
+  },
   "tiers": {
     "A": {
-      "items_signature": "c6520b9a209cf36208dc12e82ef05e505e6e070279a48ecb0c2557bf3d410a89",
-      "items_count": 127
+      "items_signature": "ecd49b4a336238246bad51b03d1fccb64bc7c2eb402a5663b512f81392e5f193",
+      "items_count": 158
     },
     "B": {
-      "items_signature": "652fb74bbc40b65766dab2229b4105cc23c24460f724633c955c8550e65d9587",
-      "items_count": 148
+      "items_signature": "dba3ddf166e7dc7385bc96a50796efd9c144b145f58200540e63b275c26722bc",
+      "items_count": 185
     },
     "C": {
-      "items_signature": "fc877656cbc8596ba1baf855446c53d11288c2daebc053f8c92916e08a8e664e",
-      "items_count": 148
+      "items_signature": "d320af8b29cf02bf3825a565cee0fa71571cd1c52ed41bd2d555d395a6c0ce8c",
+      "items_count": 184
     }
   }
 }
