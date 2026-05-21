@@ -104,13 +104,33 @@ class FailoverConfig:
 
 
 def derive_failover_lease_seconds(config: dict[str, Any]) -> int:
-    cycle_cfg = config.get("cycle", {})
-    raw = cycle_cfg.get("recoverable_error_sleep_sec", cycle_cfg.get("cycle_sleep_sec", 5400))
+    failover_cfg = config.get("failover", {})
+    raw = failover_cfg.get("lease_seconds")
+    if raw is None:
+        cycle_cfg = config.get("cycle", {})
+        raw = cycle_cfg.get("recoverable_error_sleep_sec", cycle_cfg.get("cycle_sleep_sec", 5400))
     try:
         value = int(float(raw))
     except Exception:
         value = 5400
     return max(60, value)
+
+
+def derive_failover_recoverable_sleep_seconds(config: dict[str, Any], *, lease_seconds: int) -> float:
+    failover_cfg = config.get("failover", {})
+    raw = failover_cfg.get("recoverable_error_sleep_sec")
+    if raw is None:
+        raw = failover_cfg.get("request_recoverable_error_sleep_sec")
+    if raw is None:
+        raw = min(900.0, max(300.0, float(lease_seconds) / 6.0))
+    try:
+        value = float(raw)
+    except Exception:
+        value = 900.0
+    value = max(60.0, value)
+    if lease_seconds > 120:
+        value = min(value, float(lease_seconds) - 60.0)
+    return value
 
 
 def derive_nightly_failover_lease_seconds(config: dict[str, Any]) -> int:
@@ -457,7 +477,7 @@ permissions:
 
 concurrency:
   group: monitoring-failover
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run-failover:
@@ -538,6 +558,10 @@ def build_failover_config(config: dict[str, Any], *, lease_seconds: int) -> dict
     out["cycle"]["commit_runtime"] = False
     out["cycle"]["respect_active_window"] = False
     out["cycle"]["max_runtime_minutes"] = max(1.0, lease_seconds / 60.0)
+    out["cycle"]["recoverable_error_sleep_sec"] = derive_failover_recoverable_sleep_seconds(
+        config,
+        lease_seconds=lease_seconds,
+    )
     out.setdefault("telegram", {})
     out["telegram"]["enabled"] = False
     out["telegram"]["force_inline_sender"] = True

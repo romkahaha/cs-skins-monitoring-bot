@@ -35,13 +35,35 @@
     "enabled": true,
     "batch_size": 5,
     "max_listings_per_item": 100,
-    "fail_if_all_listing_fetches_error": true
+    "fail_if_all_listing_fetches_error": true,
+    "fetch_strategy": {
+      "enabled": true,
+      "page0_listings": 20,
+      "deep_on_new_day": true,
+      "deep_on_page0_ids_change": true,
+      "deep_on_total_count_change": true,
+      "periodic_deep_minutes_by_tier": {
+        "A": 90,
+        "B": 120,
+        "C": 120,
+        "default": 120
+      },
+      "changed_deep_cooldown_minutes_by_tier": {
+        "A": 15,
+        "B": 20,
+        "C": 25,
+        "default": 20
+      },
+      "tail_stop_ask_multiplier": 3.0
+    }
   },
   "cycle": {
     "enabled": true,
     "batch_size": null,
     "cycle_sleep_sec": 600.0,
     "recoverable_error_sleep_sec": 5400.0,
+    "batch_sleep_min_sec": 10.0,
+    "batch_sleep_max_sec": 20.0,
     "commit_runtime": true,
     "commit_every_batches": 5,
     "max_runtime_minutes": 330.0,
@@ -75,6 +97,8 @@
     "delay_between_skins_max_sec": 24.0,
     "delay_between_render_pages_min_sec": 5.0,
     "delay_between_render_pages_max_sec": 10.0,
+    "prefer_route_action": true,
+    "route_action_fallback_to_render": true,
     "batch_log_progress": 1
   },
   "opportunity_filter": {
@@ -152,8 +176,9 @@
     "push_on_cycle_start": true,
     "request_on_rate_limit": true,
     "lease_seconds": 5400,
+    "recoverable_error_sleep_sec": 900,
     "request_on_nightly_start": true,
-    "nightly_lease_seconds": 19800,
+    "nightly_lease_seconds": 25200,
     "copy_precomputed_plots": true
   }
 }

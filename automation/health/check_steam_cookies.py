@@ -173,22 +173,43 @@ def validate_listing_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -
 
     module = _load_steam_scm_listings(repo_root)
     apply_steam_scm_config(module, cfg, cookies)
-    rows, meta = module.fetch_steam_scm_top_listings(
-        str(cfg.get("item", "Dreams & Nightmares Case")),
-        limit=int(cfg.get("limit", 10)),
-        max_listings=int(cfg.get("max_listings", 10)),
-        currency=int(cfg.get("currency", 3)),
-        retry_attempts=int(cfg.get("retry_attempts", 2)),
-        retry_sleep_min_sec=float(cfg.get("retry_sleep_min_sec", 2.0)),
-        retry_sleep_max_sec=float(cfg.get("retry_sleep_max_sec", 5.0)),
-        log_skin_label="steam-cookie-health-check",
-    )
+    try:
+        rows, meta = module.fetch_steam_scm_top_listings(
+            str(cfg.get("item", "Dreams & Nightmares Case")),
+            limit=int(cfg.get("limit", 10)),
+            max_listings=int(cfg.get("max_listings", 10)),
+            currency=int(cfg.get("currency", 3)),
+            retry_attempts=int(cfg.get("retry_attempts", 2)),
+            retry_sleep_min_sec=float(cfg.get("retry_sleep_min_sec", 2.0)),
+            retry_sleep_max_sec=float(cfg.get("retry_sleep_max_sec", 5.0)),
+            log_skin_label="steam-cookie-health-check",
+        )
+    except Exception as exc:
+        return False, f"Steam listing fetch raised: {exc}", 0, {"success": False, "note": str(exc)}
     min_rows = int(cfg.get("min_rows", 1))
     if not bool(meta.get("success")):
         return False, f"Steam listing fetch did not report success: {meta.get('note')}", len(rows), meta
     if len(rows) < min_rows:
         return False, f"Steam listing fetch returned {len(rows)} rows, expected at least {min_rows}", len(rows), meta
     return True, "Steam listing endpoint returned listings", len(rows), meta
+
+
+def is_transient_steam_error(reason: str, meta: dict[str, Any] | None = None) -> bool:
+    text = reason.lower()
+    if meta:
+        text += " " + str(meta.get("note") or "").lower()
+    transient_markers = [
+        "429",
+        "too many requests",
+        "502",
+        "503",
+        "504",
+        "bad gateway",
+        "service unavailable",
+        "gateway timeout",
+        "temporarily unavailable",
+    ]
+    return any(marker in text for marker in transient_markers)
 
 
 def validate_pricehistory_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -> tuple[bool, str, int, dict[str, Any]]:
@@ -292,7 +313,10 @@ def run_check(args: argparse.Namespace) -> int:
             ok, reason, rows, meta = validate_listing_fetch(repo_root, cookies, steam_cfg)
             print(f"listing check: {reason}; rows={rows}; meta_success={meta.get('success') if meta else None}")
             if not ok:
-                failed_reason = reason
+                if is_transient_steam_error(reason, meta):
+                    print("listing check hit transient Steam error; continuing to pricehistory before blaming cookies")
+                else:
+                    failed_reason = reason
         if failed_reason is None and bool(steam_cfg.get("check_pricehistory_endpoint", True)):
             checked_endpoint = "pricehistory"
             ok, reason, rows, meta = validate_pricehistory_fetch(repo_root, cookies, steam_cfg)

@@ -96,7 +96,7 @@ start_log "monitoring_day"
 echo "[$(timestamp)] waiting up to ${MONITORING_LOCK_WAIT_MINUTES} minutes for nightly/main lock"
 acquire_lock_wait "cs-skins-main-pipeline" "$((MONITORING_LOCK_WAIT_MINUTES * 60))"
 load_secrets
-require_env STEAM_COOKIES TELEGRAM_BOT_TOKEN TELEGRAM_CHAT_ID
+require_env TELEGRAM_BOT_TOKEN TELEGRAM_CHAT_ID
 enter_repo
 print_context
 

@@ -83,7 +83,10 @@ def _apply_steam_scm_config(
         "delay_between_skins_max_sec",
         "delay_between_render_pages_min_sec",
         "delay_between_render_pages_max_sec",
+        "prefer_route_action",
+        "route_action_fallback_to_render",
         "batch_log_progress",
+        "tail_stop_ask_multiplier",
     ]
     for key in direct_keys:
         if key in steam_scm_cfg and steam_scm_cfg[key] is not None:
@@ -166,6 +169,7 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Override max Steam listings depth for this batch.",
     )
+    parser.add_argument("--tier", default=None, help="Monitoring tier label for fetch strategy, e.g. A/B/C.")
     parser.add_argument("--send-telegram", action="store_true", help="Send Telegram alerts after building opportunities.")
     parser.add_argument("--telegram-dry-run", action="store_true", help="Print Telegram messages instead of sending.")
     parser.add_argument("--ignore-schedule", action="store_true", help="Run even outside the configured active window.")
@@ -319,6 +323,7 @@ def main() -> int:
     schedule_cfg = config.get("schedule", {})
     preflight_cfg = config.get("preflight", {})
     monitoring_cfg = config.get("monitoring", {})
+    fetch_strategy_cfg = monitoring_cfg.get("fetch_strategy", {}) if isinstance(monitoring_cfg.get("fetch_strategy", {}), dict) else {}
     steam_scm_cfg = config.get("steam_scm", {})
     opp_cfg = config.get("opportunity_filter", {})
     alerts_cfg = config.get("alerts", {})
@@ -399,10 +404,14 @@ def main() -> int:
     state = load_state(state_path, items)
     batch, start_pointer, next_pointer = select_batch(items, state, batch_size)
     state = mark_run_started(state, batch, start_pointer)
+    if bool(fetch_strategy_cfg.get("enabled", False)):
+        state.setdefault("listing_fetch_state", {"version": 1, "items": {}})
     save_state(state_path, state)
 
     print(f"monitor items: {len(items)} from {monitor_items_py}")
     print(f"batch start pointer: {start_pointer}")
+    if bool(fetch_strategy_cfg.get("enabled", False)):
+        print(f"fetch strategy: sentinel tier={args.tier or 'default'}")
     print(f"batch size: {len(batch)}")
     for idx, item in enumerate(batch, start=1):
         print(f"  {idx}. {item}")
@@ -426,11 +435,27 @@ def main() -> int:
         )
         if args.max_listings_per_item is not None:
             print(f"steam depth override: max_listings_per_item={int(args.max_listings_per_item)}")
+        day_tz = ZoneInfo(str(schedule_cfg.get("timezone", "Europe/Prague")))
+        day_key = datetime.now(day_tz).strftime("%Y-%m-%d")
+        fetch_state = state.setdefault("listing_fetch_state", {"version": 1, "items": {}}) if bool(fetch_strategy_cfg.get("enabled", False)) else None
         listings_path, listing_errors, listings_df = steam_scm_listings.run_batch_to_csv(
             batch,
             out_csv=listings_out_csv,
             max_listings_per_item=args.max_listings_per_item,
+            fetch_strategy=fetch_strategy_cfg,
+            fetch_state=fetch_state,
+            tier=args.tier,
+            day_key=day_key,
         )
+        if fetch_state is not None:
+            state["listing_fetch_state"] = fetch_state
+            state["last_fetch_strategy_stats"] = dict(fetch_state.get("last_batch_stats") or {})
+            stats = state["last_fetch_strategy_stats"]
+            print(
+                "fetch strategy stats: "
+                f"deep={stats.get('deep', 0)} page0_only={stats.get('page0_only', 0)} "
+                f"cooldown={stats.get('page0_changed_cooldown', 0)} tail_cutoffs={stats.get('tail_cutoffs', 0)}"
+            )
         listing_rows = len(listings_df)
         print(f"fresh listings: {listings_path} rows={len(listings_df)} errors={len(listing_errors)}")
         print(f"base snapshot: {base_snapshot_csv}")
