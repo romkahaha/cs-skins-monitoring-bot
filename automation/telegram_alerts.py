@@ -147,8 +147,8 @@ BANDS: dict[str, dict[str, Any]] = {
     "steam_daily_ret_7d": {
         "fmt": "pct",
         "bands": [
-            {"label": "bad", "lo": None, "hi": -0.10},
-            {"label": "ok", "lo": -0.10, "hi": -0.03},
+            {"label": "bad", "lo": None, "hi": -0.08},
+            {"label": "ok", "lo": -0.08, "hi": -0.03},
             {"label": "good", "lo": -0.03, "hi": 0.03},
             {"label": "very_good", "lo": 0.03, "hi": 0.08},
             {"label": "excellent", "lo": 0.08, "hi": None},
@@ -401,6 +401,62 @@ def _finite_value(frame: pd.DataFrame, column: str) -> pd.Series:
     return pd.Series(np.isfinite(values), index=frame.index).fillna(False)
 
 
+def _alert_row_label(row: pd.Series) -> str:
+    item = str(row.get("item") or "").strip()
+    listing_id = str(row.get("listing_id") or "").strip()
+    ask = _as_float(row.get("ask"))
+    spread = _as_float(row.get("spread_hybrid_disc"))
+    parts = [f"item={item or '-'}", f"listing_id={listing_id or '-'}"]
+    if ask is not None:
+        parts.append(f"ask={ask:.2f}")
+    if spread is not None:
+        parts.append(f"spread_hybrid_disc={spread:.4f}")
+    return " ".join(parts)
+
+
+def explain_alert_filters(frame: pd.DataFrame, alerts_cfg: dict[str, Any] | None = None) -> dict[int, list[str]]:
+    cfg = alerts_cfg or {}
+    reasons: dict[int, list[str]] = {int(idx): [] for idx in frame.index}
+    if not bool(cfg.get("enabled", True)):
+        for idx in frame.index:
+            reasons[int(idx)].append("alerts_disabled")
+        return reasons
+
+    def add_failed(mask: pd.Series, reason: str) -> None:
+        failed = ~mask.fillna(False)
+        for idx in frame.index[failed]:
+            reasons[int(idx)].append(reason)
+
+    add_failed(_finite_positive(frame, "ask"), "ask_missing_or_non_positive")
+    add_failed(_finite_value(frame, "spread_hybrid_disc"), "spread_hybrid_disc_missing_or_nan")
+    if cfg.get("spread_hybrid_disc_max") is not None:
+        add_failed(_passes_max(frame, "spread_hybrid_disc", cfg.get("spread_hybrid_disc_max")), f"spread_hybrid_disc>{float(cfg.get('spread_hybrid_disc_max')):.4g}")
+    if cfg.get("ask_min") is not None:
+        add_failed(_passes_min(frame, "ask", cfg.get("ask_min")), f"ask<{float(cfg.get('ask_min')):.4g}")
+    if cfg.get("ask_max") is not None:
+        add_failed(_passes_max(frame, "ask", cfg.get("ask_max")), f"ask>{float(cfg.get('ask_max')):.4g}")
+    if cfg.get("steam_sales_7d_n_min") is not None:
+        add_failed(_passes_min(frame, "steam_sales_7d_n", cfg.get("steam_sales_7d_n_min")), f"steam_sales_7d_n<{float(cfg.get('steam_sales_7d_n_min')):.4g}")
+    if cfg.get("steam_sales_7d_downside_risk_max") is not None:
+        add_failed(_passes_max(frame, "steam_sales_7d_downside_risk%", cfg.get("steam_sales_7d_downside_risk_max")), f"steam_sales_7d_downside_risk%>{float(cfg.get('steam_sales_7d_downside_risk_max')):.4g}")
+    if cfg.get("steam_sales_7d_tail_ratio_min") is not None:
+        add_failed(_passes_min(frame, "steam_sales_7d_tail_ratio", cfg.get("steam_sales_7d_tail_ratio_min")), f"steam_sales_7d_tail_ratio<{float(cfg.get('steam_sales_7d_tail_ratio_min')):.4g}")
+    if cfg.get("steam_daily_downside_14d_pct_max") is not None:
+        add_failed(_passes_max(frame, "steam_daily_downside_14d_pct", cfg.get("steam_daily_downside_14d_pct_max")), f"steam_daily_downside_14d_pct>{float(cfg.get('steam_daily_downside_14d_pct_max')):.4g}")
+    if cfg.get("continuity_ratio_max") is not None:
+        add_failed(_passes_max(frame, "continuity_ratio", cfg.get("continuity_ratio_max")), f"continuity_ratio>{float(cfg.get('continuity_ratio_max')):.4g}")
+
+    exclude_any = [str(x).lower() for x in cfg.get("exclude_any", []) if str(x).strip()]
+    if exclude_any and "item" in frame.columns:
+        names = frame["item"].fillna("").astype(str).str.lower()
+        for token in exclude_any:
+            excluded = names.str.contains(token, regex=False)
+            for idx in frame.index[excluded.fillna(False)]:
+                reasons[int(idx)].append(f"excluded:{token}")
+
+    return reasons
+
+
 def apply_alert_filters(frame: pd.DataFrame, alerts_cfg: dict[str, Any] | None = None) -> tuple[pd.DataFrame, dict[str, int]]:
     cfg = alerts_cfg or {}
     if not bool(cfg.get("enabled", True)):
@@ -588,7 +644,11 @@ def send_opportunity_alerts(
     alert_enrichment_cfg: dict[str, Any] | None = None,
 ) -> dict[str, int]:
     raw_df = load_opportunities(opportunities_csv)
+    filter_reasons = explain_alert_filters(raw_df, alerts_cfg)
     df, filter_stats = apply_alert_filters(raw_df, alerts_cfg)
+    for idx, reasons in filter_reasons.items():
+        if reasons and idx in raw_df.index:
+            print(f"alert filtered: {_alert_row_label(raw_df.loc[idx])} reasons={','.join(reasons)}")
     items = load_items_py(monitor_items_py) if monitor_items_py.is_file() else []
     state = load_state(state_json, items)
     plot_cache: dict[str, bytes | None] = {}
@@ -606,6 +666,7 @@ def send_opportunity_alerts(
         considered_n += 1
         key = alert_key(row)
         if not should_send(key, state, cooldown_hours):
+            print(f"alert skipped cooldown: {_alert_row_label(row)} key={key}")
             skipped_n += 1
             continue
         message = format_alert(row)
@@ -621,7 +682,7 @@ def send_opportunity_alerts(
             except Exception as exc:
                 if bool((plot_cfg or {}).get("fail_on_error", False)):
                     raise
-                print(f"telegram text send failed: {exc}")
+                print(f"telegram text send failed: {_alert_row_label(row)} error={exc}")
                 continue
             primary_message_id = None
             result_payload = primary_payload.get("result") if isinstance(primary_payload, dict) else None
@@ -666,6 +727,7 @@ def send_opportunity_alerts(
             state = mark_sent(state, key, row)
             save_state(state_json, state)
             time.sleep(max(0.0, float(sleep_sec)))
+        print(f"alert sent: {_alert_row_label(row)} key={key}")
         sent_n += 1
         if max_alerts is not None and sent_n >= max_alerts:
             break
