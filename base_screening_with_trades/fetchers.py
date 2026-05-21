@@ -424,7 +424,30 @@ def _steam_cookie_header() -> str | None:
     s = str(c).strip()
     if s.lower().startswith("cookie:"):
         s = s[7:].strip()
+    s = _normalize_steam_cookie_header(s)
     return s or None
+
+
+def _normalize_steam_cookie_header(cookie_header: str) -> str:
+    """Collapse duplicate Cookie keys, keeping the last browser value pasted."""
+    pairs: list[tuple[str, str]] = []
+    positions: dict[str, int] = {}
+    for raw_part in str(cookie_header).split(";"):
+        part = raw_part.strip()
+        if not part or "=" not in part:
+            continue
+        name, value = part.split("=", 1)
+        name = name.strip()
+        if not name:
+            continue
+        key = name.lower()
+        pair = (name, value.strip())
+        if key in positions:
+            pairs[positions[key]] = pair
+        else:
+            positions[key] = len(pairs)
+            pairs.append(pair)
+    return "; ".join(f"{name}={value}" for name, value in pairs)
 
 
 def _steam_sessionid_from_cookie_header(cookie_header: str | None) -> str | None:
