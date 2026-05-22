@@ -482,7 +482,7 @@ concurrency:
 jobs:
   run-failover:
     runs-on: ubuntu-latest
-    timeout-minutes: 420
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
 
