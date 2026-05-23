@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
+  "queue_pointer": 4,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 77,
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 6,
   "last_batch_items": [
-    "AWP | Chrome Cannon (Field-Tested)",
-    "AK-47 | Crane Flight (Minimal Wear)",
-    "AK-47 | Nouveau Rouge (Battle-Scarred)",
-    "AWP | Mortis (Minimal Wear)",
-    "AUG | Eye of Zapems (Field-Tested)"
+    "AK-47 | Midnight Laminate (Field-Tested)",
+    "Glock-18 | Shinobu (Field-Tested)",
+    "M4A4 | Tooth Fairy (Field-Tested)",
+    "Glock-18 | Vogue (Field-Tested)",
+    "M4A1-S | Electrum (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-22T20:52:19.823530+00:00",
-  "last_finished_at_utc": "2026-05-22T20:54:43.720365+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-22T20:54:43.720365+00:00",
+  "last_run_at_utc": "2026-05-23T20:53:33.854916+00:00",
+  "last_finished_at_utc": "2026-05-23T20:56:06.923215+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-23T20:56:06.923215+00:00",
   "last_failed_monitoring_at_utc": "2026-05-22T18:22:40.157883+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1204701
+    "sender_pid": 1309697
   },
   "tiers": {
     "A": {
