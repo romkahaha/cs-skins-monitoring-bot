@@ -13,33 +13,74 @@
     "B",
     "C"
   ],
-  "queue_pointer": 4,
+  "queue_pointer": 2,
   "last_tier": "A",
-  "last_tier_queue_index": 3,
-  "last_batch_start_pointer": 6,
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 87,
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Field-Tested)",
-    "Glock-18 | Shinobu (Field-Tested)",
-    "M4A4 | Tooth Fairy (Field-Tested)",
-    "Glock-18 | Vogue (Field-Tested)",
-    "M4A1-S | Electrum (Minimal Wear)"
+    "Galil AR | Sky Mandala (Factory New)",
+    "UMP-45 | Wild Child (Minimal Wear)",
+    "Dual Berettas | Sweet Little Angels (Field-Tested)",
+    "M4A4 | Choppa (Factory New)",
+    "M4A1-S | Black Lotus (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-23T20:53:33.854916+00:00",
-  "last_finished_at_utc": "2026-05-23T20:56:06.923215+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-23T20:56:06.923215+00:00",
+  "last_run_at_utc": "2026-05-24T19:36:50.210443+00:00",
+  "last_finished_at_utc": "2026-05-24T19:37:57.928954+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-24T19:37:57.928954+00:00",
   "last_failed_monitoring_at_utc": "2026-05-22T18:22:40.157883+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 500,
-  "last_enriched_rows": 500,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "UMP-45 | Wild Child (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"2/5 UMP-45 | Wild Child (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/UMP-45%20%7C%20Wild%20Child%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "Dual Berettas | Sweet Little Angels (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"3/5 Dual Berettas | Sweet Little Angels (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Dual%20Berettas%20%7C%20Sweet%20Little%20Angels%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "M4A4 | Choppa (Factory New)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"4/5 M4A4 | Choppa (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Choppa%20%28Factory%20New%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"5/5 M4A1-S | Black Lotus (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Black%20Lotus%20%28Battle-Scarred%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    }
+  ],
+  "last_listing_error_count": 4,
+  "last_listing_rows": 100,
+  "last_enriched_rows": 100,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1309697
+    "sender_pid": 1328306
   },
   "tiers": {
     "A": {
