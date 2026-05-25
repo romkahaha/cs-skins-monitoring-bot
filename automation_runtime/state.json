@@ -13,74 +13,54 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
-  "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 87,
+  "queue_pointer": 6,
+  "last_tier": "B",
+  "last_tier_queue_index": 5,
+  "last_batch_start_pointer": 9,
   "last_batch_items": [
-    "Galil AR | Sky Mandala (Factory New)",
-    "UMP-45 | Wild Child (Minimal Wear)",
-    "Dual Berettas | Sweet Little Angels (Field-Tested)",
-    "M4A4 | Choppa (Factory New)",
-    "M4A1-S | Black Lotus (Battle-Scarred)"
+    "AK-47 | Slate (Factory New)",
+    "M4A1-S | Mud-Spec (Factory New)",
+    "M4A4 | Poly Mag (Factory New)",
+    "M4A1-S | Decimator (Minimal Wear)",
+    "StatTrak™ AK-47 | Elite Build (Well-Worn)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-24T19:36:50.210443+00:00",
-  "last_finished_at_utc": "2026-05-24T19:37:57.928954+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-24T19:37:57.928954+00:00",
+  "last_run_at_utc": "2026-05-25T20:31:20.673116+00:00",
+  "last_finished_at_utc": "2026-05-25T20:33:25.710830+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-25T20:33:25.710830+00:00",
   "last_failed_monitoring_at_utc": "2026-05-22T18:22:40.157883+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [
     {
-      "market_hash_name": "UMP-45 | Wild Child (Minimal Wear)",
+      "market_hash_name": "M4A1-S | Decimator (Minimal Wear)",
       "meta": {
         "success": false,
         "note": "exception",
-        "error": "Steam rate limit (429) for \"2/5 UMP-45 | Wild Child (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/UMP-45%20%7C%20Wild%20Child%20%28Minimal%20Wear%29",
+        "error": "Steam rate limit (429) for \"4/5 M4A1-S | Decimator (Minimal Wear)\": Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Decimator%20%28Minimal%20Wear%29",
         "pages_fetched": 0,
-        "listings_target_cap": 100
+        "listings_target_cap": 80
       }
     },
     {
-      "market_hash_name": "Dual Berettas | Sweet Little Angels (Field-Tested)",
+      "market_hash_name": "StatTrak™ AK-47 | Elite Build (Well-Worn)",
       "meta": {
         "success": false,
         "note": "exception",
-        "error": "Steam rate limit (429) for \"3/5 Dual Berettas | Sweet Little Angels (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Dual%20Berettas%20%7C%20Sweet%20Little%20Angels%20%28Field-Tested%29",
+        "error": "Steam rate limit (429) for \"5/5 StatTrak™ AK-47 | Elite Build (Well-Worn)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29",
         "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    },
-    {
-      "market_hash_name": "M4A4 | Choppa (Factory New)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"4/5 M4A4 | Choppa (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Choppa%20%28Factory%20New%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    },
-    {
-      "market_hash_name": "M4A1-S | Black Lotus (Battle-Scarred)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"5/5 M4A1-S | Black Lotus (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Black%20Lotus%20%28Battle-Scarred%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
+        "listings_target_cap": 80
       }
     }
   ],
-  "last_listing_error_count": 4,
-  "last_listing_rows": 100,
-  "last_enriched_rows": 100,
-  "last_opportunities_rows": 0,
+  "last_listing_error_count": 2,
+  "last_listing_rows": 240,
+  "last_enriched_rows": 240,
+  "last_opportunities_rows": 48,
   "last_alert_stats": {
     "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 1328306
+    "queued_rows": 48,
+    "sender_pid": 1410863
   },
   "tiers": {
     "A": {
