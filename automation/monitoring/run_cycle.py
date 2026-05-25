@@ -348,9 +348,6 @@ def main() -> int:
     monitor_items_py = path_from_config(config, "monitor_items_py")
     state_path = path_from_config(config, "state_json")
     alert_state_path = alert_state_json_from_config(config, fallback_state_json=state_path)
-    items = load_items_py(monitor_items_py)
-    if not items:
-        raise RuntimeError(f"no monitor items in {monitor_items_py}")
     failover_cfg = load_failover_config(config, root)
     if failover_cfg.enabled:
         maybe_import_failover_runtime(root=root, config=config, quiet=True)
@@ -362,6 +359,10 @@ def main() -> int:
         for warning in integrity_report.warnings:
             print(f"runtime integrity warning: {warning}", file=sys.stderr, flush=True)
         raise RuntimeError("monitor runtime integrity check failed")
+
+    items = load_items_py(monitor_items_py)
+    if not items:
+        raise RuntimeError(f"no monitor items in {monitor_items_py}")
 
     use_tiers = False
     queue_pattern: list[str] = []

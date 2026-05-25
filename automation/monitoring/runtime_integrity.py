@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import subprocess
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -65,6 +66,47 @@ def _load_monitor_frame(path: Path) -> pd.DataFrame | None:
     frame = frame.copy()
     frame["item"] = frame["item"].astype(str)
     return frame
+
+
+def _load_risk_candidates_frame(path: Path) -> pd.DataFrame | None:
+    if not path.is_file() or _has_conflict_markers(path):
+        return None
+    try:
+        frame = pd.read_csv(path, low_memory=False)
+    except Exception:
+        return None
+    if "item" not in frame.columns:
+        return None
+    frame = frame.copy()
+    frame["item"] = frame["item"].astype(str)
+    return frame
+
+
+def _monitor_has_only_risk_candidates(monitor_frame: pd.DataFrame, candidates_frame: pd.DataFrame) -> bool:
+    candidate_items = set(candidates_frame["item"].dropna().astype(str))
+    if not candidate_items:
+        return False
+    if "monitor_pass" in monitor_frame.columns:
+        active = monitor_frame.loc[monitor_frame["monitor_pass"].astype(str).str.lower().isin(["true", "1", "yes"])]
+    else:
+        active = monitor_frame
+    monitor_items = set(active["item"].dropna().astype(str))
+    return bool(monitor_items) and monitor_items.issubset(candidate_items)
+
+
+def _rebuild_monitor_list_from_risk_candidates(repo_root: Path) -> bool:
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-B",
+            str(repo_root / "automation" / "nightly" / "build_monitor_list.py"),
+            "--config",
+            str(repo_root / "automation" / "configs" / "nightly.json"),
+        ],
+        cwd=str(repo_root),
+        check=False,
+    )
+    return result.returncode == 0
 
 
 def _restore_file_from_head(repo_root: Path, path: Path) -> bool:
@@ -129,6 +171,7 @@ def ensure_monitor_runtime_integrity(config: dict[str, Any], repo_root: Path) ->
     paths_cfg = config.get("paths", {})
     monitor_csv_value = paths_cfg.get("monitor_csv") or str(repo_root / "automation_runtime" / "monitor_list_latest.csv")
     monitor_csv = Path(monitor_csv_value).resolve()
+    risk_candidates_csv = repo_root / "automation_runtime" / "risk_candidates_latest.csv"
     monitor_items_py = path_from_config(config, "monitor_items_py")
     tier_item_paths = tier_item_paths_from_config(config)
     tiers_metadata_path = tiers_metadata_path_from_config(config)
@@ -141,6 +184,14 @@ def ensure_monitor_runtime_integrity(config: dict[str, Any], repo_root: Path) ->
         frame = _load_monitor_frame(monitor_csv)
         if frame is not None:
             report.actions.append(f"restored {monitor_csv.name} from HEAD because it was unreadable")
+
+    candidates = _load_risk_candidates_frame(risk_candidates_csv)
+    if frame is not None and candidates is not None and not _monitor_has_only_risk_candidates(frame, candidates):
+        if _rebuild_monitor_list_from_risk_candidates(repo_root):
+            report.actions.append(f"rebuilt {monitor_csv.name} from {risk_candidates_csv.name}")
+            frame = _load_monitor_frame(monitor_csv)
+        else:
+            report.warnings.append(f"{monitor_csv.name} did not match {risk_candidates_csv.name} and rebuild failed")
 
     items = _load_items_if_valid(monitor_items_py)
     if items is None and frame is not None:
