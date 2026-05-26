@@ -1,11 +1,9 @@
 {
   "run_id": "20260525T210001Z-vps-1415944",
-  "status": "failure",
-  "source": "vps_manual_recovery",
+  "status": "risk_ready",
+  "source": "vps_manual_github_base_retry",
   "started_at_utc": "2026-05-25T21:00:02Z",
-  "updated_at_utc": "2026-05-26T08:45:03Z",
-  "message": "Risk completed successfully, but CSFloat base snapshot did not complete because both CSFloat keys hit 429 cooldown. Fresh risk/monitor artifacts remain in use with previous base.",
-  "host": "vmi2737474",
-  "finished_at_utc": "2026-05-26T08:45:03Z",
-  "failed_stage": "base snapshot"
+  "updated_at_utc": "2026-05-26T10:10:09Z",
+  "message": "Manual retry requested: run GitHub CSFloat worker for the fresh risk/monitor artifacts.",
+  "host": "vmi2737474"
 }
