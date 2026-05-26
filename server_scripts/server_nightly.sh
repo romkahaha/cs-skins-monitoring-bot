@@ -16,7 +16,7 @@ PIPELINE_POLL_SECONDS="${PIPELINE_POLL_SECONDS:-60}"
 PIPELINE_STATUS_FILE="automation_runtime/server_pipeline_status_latest.json"
 PIPELINE_RUN_ID="$(date -u +"%Y%m%dT%H%M%SZ")-vps-$$"
 PIPELINE_STARTED_AT_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
-NIGHTLY_RISK_TIMEOUT_MINUTES="${NIGHTLY_RISK_TIMEOUT_MINUTES:-420}"
+NIGHTLY_RISK_TIMEOUT_MINUTES="${NIGHTLY_RISK_TIMEOUT_MINUTES:-600}"
 NIGHTLY_BACKUP_DIR="automation_runtime/nightly_backups/$PIPELINE_RUN_ID"
 NIGHTLY_PROMOTE_SOURCE_INPUTS="${NIGHTLY_PROMOTE_SOURCE_INPUTS:-1}"
 NIGHTLY_SOURCE_REPO="${NIGHTLY_SOURCE_REPO:-/home/roma/cs-arbitrage/skins_roundtrip_v1}"
@@ -172,10 +172,41 @@ promote_nightly_source_inputs() {
     --target-repo "$(pwd)"
 }
 
+commit_base_failure_state() {
+  git add \
+    automation_runtime/monitor_list_latest.csv \
+    automation_runtime/monitor_list_latest.py \
+    automation_runtime/monitor_list_tier_a.py \
+    automation_runtime/monitor_list_tier_b.py \
+    automation_runtime/monitor_list_tier_c.py \
+    automation_runtime/monitor_tiers_latest.json \
+    "$PIPELINE_STATUS_FILE"
+  if git diff --cached --quiet; then
+    return 0
+  fi
+  git commit -m "Record base failure with fresh risk monitor list [skip ci]"
+  git push origin main
+}
+
 handled_nightly_failure() {
   local stage="$1"
   local rc="$2"
   local details="$3"
+  if [[ "$stage" == "base" ]]; then
+    echo "[$(timestamp)] base failed after risk was ready; keeping fresh risk artifacts and old base"
+    "$PYTHON_BIN" -B automation/nightly/build_monitor_list.py || echo "[$(timestamp)] warning: monitor list rebuild after base failure failed" >&2
+    write_vps_status "failure" "$stage failed after fresh risk was produced; fresh risk/monitor artifacts remain in use with previous base. rc=$rc"
+    commit_base_failure_state || echo "[$(timestamp)] warning: failed to commit base failure state" >&2
+    send_nightly_status \
+      "Nightly $stage failed" \
+      "error" \
+      "$details
+run_id=$PIPELINE_RUN_ID
+Fresh risk/monitor artifacts remain in use. Previous base remains in use."
+    echo "[$(timestamp)] handled nightly ${stage} failure; fresh risk kept, old base kept; exiting 0 to release lock"
+    exit 0
+  fi
+
   restore_nightly_artifacts
   write_vps_status "failure" "$stage failed before producing a complete nightly artifact set; previous good artifacts remain in use. rc=$rc"
   send_nightly_status \
@@ -257,6 +288,7 @@ stash_local_changes_if_needed() {
   LOCAL_STASH_LABEL="server_nightly:${PIPELINE_RUN_ID}:${reason}"
   echo "[$(timestamp)] stashing local changes before ${reason}"
   git stash push --include-untracked -m "$LOCAL_STASH_LABEL" -- . \
+    ":(exclude)automation_runtime/nightly_backups" \
     ":(exclude)automation_runtime/precomputed_fit_plots" \
     ":(exclude)automation_runtime/telegram_queue" \
     ":(exclude)automation_runtime/state_telegram_alerts.json.lock" >/dev/null
@@ -283,6 +315,7 @@ restore_local_changes_if_needed() {
     local path="$1"
     case "$path" in
       automation_runtime/*latest*|\
+automation_runtime/nightly_backups/*|\
 automation_runtime/monitor_list_tier_*.py|\
 automation_runtime/monitor_tiers_latest.json|\
 automation_runtime/github_csfloat_worker_history.csv|\
@@ -404,6 +437,7 @@ PY
 }
 
 checkpoint_local_monitoring_runtime() {
+  git reset --quiet
   git add \
     automation_runtime/state.json \
     automation_runtime/steam_listings_latest.csv \

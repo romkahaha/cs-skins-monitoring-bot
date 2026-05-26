@@ -1,9 +1,11 @@
 {
   "run_id": "20260525T210001Z-vps-1415944",
-  "status": "risk_ready",
-  "source": "vps",
+  "status": "failure",
+  "source": "vps_manual_recovery",
   "started_at_utc": "2026-05-25T21:00:02Z",
-  "updated_at_utc": "2026-05-26T06:11:29Z",
-  "message": "VPS risk and model backfill queue are ready; GitHub CSFloat worker should start from this push.",
-  "host": "vmi2737474"
+  "updated_at_utc": "2026-05-26T08:45:03Z",
+  "message": "Risk completed successfully, but CSFloat base snapshot did not complete because both CSFloat keys hit 429 cooldown. Fresh risk/monitor artifacts remain in use with previous base.",
+  "host": "vmi2737474",
+  "finished_at_utc": "2026-05-26T08:45:03Z",
+  "failed_stage": "base snapshot"
 }
