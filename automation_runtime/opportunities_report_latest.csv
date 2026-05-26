@@ -1,8 +1,8 @@
 rule,passed_rows,failed_rows
-ask > 0,240,0
-steam_sales_7d_n >= 50,240,0
-steam_sales_7d_downside_risk% <= 10.0,240,0
-steam_sales_7d_tail_ratio >= 0.8,240,0
-steam_daily_downside_14d_pct <= 0.15,240,0
-continuity_ratio <= 3.5,240,0
-spread_hybrid_disc <= 0.12,48,192
+ask > 0,290,0
+steam_sales_7d_n >= 50,290,0
+steam_sales_7d_downside_risk% <= 10.0,290,0
+steam_sales_7d_tail_ratio >= 0.8,290,0
+steam_daily_downside_14d_pct <= 0.15,290,0
+continuity_ratio <= 3.5,290,0
+spread_hybrid_disc <= 0.12,0,290

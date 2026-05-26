@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "f1e2d315cab43fb96ef7e28400cf857b6b3678ae1542709ab144ae17b21aad96",
-  "items_count": 538,
-  "queue_signature": "767186cf13633a30ef54f05de7ad8ca5553daeda5790e387bc10eedecc8e90e7",
+  "items_signature": "3810f3327f0b334e393f0f8dd2ff497a1744708104fa42a7c454d03d7ca3366b",
+  "items_count": 407,
+  "queue_signature": "f9df6a61aa7fe1baaac06886da51d3470076a6f942d7bf7ed4deb4b665df7a46",
   "queue_pattern": [
     "A",
     "A",
@@ -13,67 +13,46 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 9,
+  "queue_pointer": 0,
+  "last_tier": "A",
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 20,
   "last_batch_items": [
-    "AK-47 | Slate (Factory New)",
-    "M4A1-S | Mud-Spec (Factory New)",
-    "M4A4 | Poly Mag (Factory New)",
-    "M4A1-S | Decimator (Minimal Wear)",
-    "StatTrak™ AK-47 | Elite Build (Well-Worn)"
+    "AK-47 | Slate (Minimal Wear)",
+    "AK-47 | Safety Net (Field-Tested)",
+    "P2000 | Wicked Sick (Field-Tested)",
+    "UMP-45 | K.O. Factory (Field-Tested)",
+    "AK-47 | Slate (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-25T20:31:20.673116+00:00",
-  "last_finished_at_utc": "2026-05-25T20:33:25.710830+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-25T20:33:25.710830+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-22T18:22:40.157883+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-26T08:57:57.317572+00:00",
+  "last_finished_at_utc": "2026-05-26T08:57:47.007628+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-26T08:57:47.007628+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "last_status": "running",
   "consecutive_errors": 0,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "M4A1-S | Decimator (Minimal Wear)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"4/5 M4A1-S | Decimator (Minimal Wear)\": Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Decimator%20%28Minimal%20Wear%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    },
-    {
-      "market_hash_name": "StatTrak™ AK-47 | Elite Build (Well-Worn)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"5/5 StatTrak™ AK-47 | Elite Build (Well-Worn)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    }
-  ],
-  "last_listing_error_count": 2,
-  "last_listing_rows": 240,
-  "last_enriched_rows": 240,
-  "last_opportunities_rows": 48,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 290,
+  "last_enriched_rows": 290,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
-    "queued_rows": 48,
-    "sender_pid": 1410863
+    "queued_rows": 0,
+    "sender_pid": 1435397
   },
   "tiers": {
     "A": {
-      "items_signature": "dcd0588fa4d55584fe0638ab80d4f1b0a2105f46ae5968c4642685c8c28cbe4a",
-      "items_count": 162
+      "items_signature": "697eefbb04a7c97e13191858dffac602e62fdc2519048daa77c9cb5d12894857",
+      "items_count": 122
     },
     "B": {
-      "items_signature": "8e58dc0cc83d02678f36de6101689f72e6a2b9e221b34f9dc76de4b349a0c432",
-      "items_count": 188
+      "items_signature": "4caea265d7e43c7eb682e1bef56c850a665620aae80fe5a2d2587e6b587b0442",
+      "items_count": 143
     },
     "C": {
-      "items_signature": "8f0eff0feae93456a3b92b1b0a3e8cf77d93d515aae56c3bb7c879b100a8e25d",
-      "items_count": 188
+      "items_signature": "ce51cb484fe593483f096e17186bc5a32cf441535786558810dce1f0bda7ea58",
+      "items_count": 142
     }
   }
 }
