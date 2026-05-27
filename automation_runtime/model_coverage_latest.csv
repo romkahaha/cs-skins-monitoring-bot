@@ -1,9 +1,10 @@
 item,needs_backfill,model_ready,backfill_reason,has_summary,summary_ready,summary_n_listings,has_fit,fit_ready,fit_n_clean,pred_cv,pred_mean,pred_min,pred_max
 StatTrak™ Galil AR | Chromatic Aberration (Minimal Wear),False,True,,True,True,18,True,True,16,0.0688,13.5889,12.95,16.46
-P250 | Mint Kimono (Field-Tested),False,True,,True,True,19,True,True,19,0.0549,9.6563,9.19,10.51
+★ Moto Gloves | 3rd Commando Company (Battle-Scarred),False,True,,True,True,19,True,True,18,0.0303,45.5758,44.35,50.62
+StatTrak™ FAMAS | Rapid Eye Movement (Well-Worn),False,True,,True,True,20,True,True,20,0.0292,5.1085,4.92,5.25
 USP-S | Printstream (Well-Worn),False,True,,True,True,20,True,True,20,0.0081,37.889,37.49,38.62
-AUG | Fleet Flock (Minimal Wear),False,True,,True,True,21,True,True,20,0.1172,14.15,12.9,17.48
 Zeus x27 | Olympus (Well-Worn),False,True,,True,True,21,True,True,21,0.0046,2.9405,2.92,2.97
+StatTrak™ M4A1-S | Leaded Glass (Battle-Scarred),False,True,,True,True,22,True,True,20,0.0189,14.1032,13.82,15.04
 MP9 | Hydra (Well-Worn),False,True,,True,True,22,True,True,21,0.0303,5.2768,5.18,5.97
 StatTrak™ Galil AR | Chromatic Aberration (Battle-Scarred),False,True,,True,True,22,True,True,22,0.1812,6.6514,5.91,9.43
 ★ Survival Knife | Damascus Steel (Field-Tested),False,True,,True,True,22,True,True,22,0.0104,62.575,61.54,63.46
@@ -18,40 +19,37 @@ StatTrak™ M4A4 | Tooth Fairy (Battle-Scarred),False,True,,True,True,25,True,Tr
 ★ Hydra Gloves | Mangrove (Battle-Scarred),False,True,,True,True,26,True,True,24,0.016,35.8046,35.09,37.3
 StatTrak™ AK-47 | Nightwish (Battle-Scarred),False,True,,True,True,26,True,True,26,0.0924,56.8838,51.52,71.37
 ★ Falchion Knife | Black Laminate (Battle-Scarred),False,True,,True,True,26,True,True,26,0.0762,66.4862,63.63,79.54
-★ Falchion Knife | Freehand (Minimal Wear),False,True,,True,True,26,True,True,26,0.0128,86.7227,85.42,89.59
 AUG | Death by Puppy (Field-Tested),False,True,,True,True,27,True,True,26,0.0367,4.7485,4.49,5.09
 ★ Paracord Knife | Boreal Forest (Field-Tested),False,True,,True,True,27,True,True,27,0.0165,47.997,47.0,49.66
 FAMAS | Pulse (Field-Tested),False,True,,True,True,28,True,True,28,0.0139,10.7093,10.43,10.91
+PP-Bizon | High Roller (Minimal Wear),False,True,,True,True,28,True,True,28,0.073,11.5339,10.97,14.06
 StatTrak™ FAMAS | Rapid Eye Movement (Minimal Wear),False,True,,True,True,29,True,True,26,0.1651,9.4059,7.27,10.83
+Glock-18 | Bullet Queen (Well-Worn),False,True,,True,True,29,True,True,29,0.0083,57.4852,56.84,58.39
+MP7 | Nemesis (Field-Tested),False,True,,True,True,31,True,True,30,0.0659,7.7077,7.09,8.59
+StatTrak™ AK-47 | The Outsiders (Battle-Scarred),False,True,,True,True,33,True,True,32,0.0668,21.0394,20.43,26.84
 AK-47 | Legion of Anubis (Battle-Scarred),False,True,,True,True,33,True,True,33,0.0666,35.107,34.01,42.21
-Tec-9 | Bamboo Forest (Field-Tested),False,True,,True,True,35,True,True,34,0.0193,10.9877,10.74,11.76
+SSG 08 | Dark Water (Field-Tested),False,True,,True,True,34,True,True,34,0.0223,3.4726,3.41,3.7
+StatTrak™ MP9 | Food Chain (Minimal Wear),False,True,,True,True,35,True,True,32,0.0983,14.2589,13.25,18.47
 ★ Shadow Daggers | Black Laminate (Field-Tested),False,True,,True,True,35,True,True,35,0.0112,43.298,42.86,44.59
-SG 553 | Danger Close (Factory New),False,True,,True,True,36,True,True,34,0.1125,3.2269,2.91,4.34
-StatTrak™ Desert Eagle | Light Rail (Well-Worn),False,True,,True,True,36,True,True,34,0.0355,3.4797,3.39,4.17
 AWP | The End (Minimal Wear),False,True,,True,True,36,True,True,35,0.4978,39.4233,35.59,153.88
+StatTrak™ Dual Berettas | Melondrama (Battle-Scarred),False,True,,True,True,36,True,True,35,0.139,5.5219,5.19,8.31
 UMP-45 | Neo-Noir (Well-Worn),False,True,,True,True,36,True,True,35,0.0111,4.4458,4.39,4.7
 StatTrak™ M4A4 | In Living Color (Field-Tested),False,True,,True,True,36,True,True,36,0.0996,33.6044,30.48,39.8
-Desert Eagle | Mecha Industries (Well-Worn),False,True,,True,True,37,True,True,34,0.0357,6.4549,6.36,7.63
-AK-47 | Neon Rider (Battle-Scarred),False,True,,True,True,37,True,True,36,0.0437,46.0305,44.94,55.17
 Galil AR | Eco (Well-Worn),False,True,,True,True,38,True,True,36,0.0224,12.5495,12.38,13.89
 Desert Eagle | Code Red (Well-Worn),False,True,,True,True,38,True,True,37,0.0136,41.7203,41.04,44.97
-SCAR-20 | Bloodsport (Field-Tested),False,True,,True,True,38,True,True,38,0.0333,12.1826,11.51,12.84
+StatTrak™ M4A4 | Desolate Space (Field-Tested),False,True,,True,True,39,True,True,34,0.1159,30.8741,27.62,42.11
+StatTrak™ SSG 08 | Rapid Transit (Minimal Wear),False,True,,True,True,39,True,True,37,0.0939,10.131,8.25,11.29
 AK-47 | The Outsiders (Well-Worn),False,True,,True,True,39,True,True,38,0.025,8.6733,8.43,9.84
-StatTrak™ USP-S | Cortex (Battle-Scarred),False,True,,True,True,40,True,True,40,0.1268,7.4833,6.83,10.36
+AK-47 | Point Disarray (Battle-Scarred),False,True,,True,True,39,True,True,39,0.0653,14.7885,14.31,18.44
+★ Shadow Daggers | Freehand (Field-Tested),False,True,,True,True,39,True,True,39,0.0072,48.1308,47.4,48.71
 AK-47 | Phantom Disruptor (Battle-Scarred),False,True,,True,True,41,True,True,38,0.0559,6.0759,5.91,7.45
-StatTrak™ P250 | Wingshot (Minimal Wear),False,True,,True,True,41,True,True,39,0.105,6.2285,5.45,7.39
-Zeus x27 | Olympus (Battle-Scarred),False,True,,True,True,41,True,True,40,0.073,3.1093,2.97,3.66
 ★ Shadow Daggers | Bright Water (Factory New),False,True,,True,True,41,True,True,40,0.1122,50.9607,46.5,62.8
 ★ Paracord Knife | Ultraviolet (Field-Tested),False,True,,True,True,41,True,True,41,0.0298,68.3795,66.24,73.15
-Five-SeveN | Monkey Business (Well-Worn),False,True,,True,True,42,True,True,39,0.0281,12.5517,12.34,13.91
-Tec-9 | Fuel Injector (Battle-Scarred),False,True,,True,True,42,True,True,41,0.101,11.5771,11.07,16.76
-StatTrak™ UMP-45 | Primal Saber (Field-Tested),False,True,,True,True,42,True,True,42,0.1364,11.8302,10.5,14.54
-P250 | Mint Kimono (Minimal Wear),False,True,,True,True,43,True,True,41,0.0803,12.6737,11.71,14.74
 StatTrak™ AWP | Fever Dream (Field-Tested),False,True,,True,True,43,True,True,41,0.0404,23.4923,22.26,27.28
-Desert Eagle | Kumicho Dragon (Battle-Scarred),False,True,,True,True,43,True,True,42,0.0706,20.94,19.54,25.04
-StatTrak™ P90 | Shallow Grave (Field-Tested),False,True,,True,True,43,True,True,42,0.1243,9.7279,8.23,11.5
+StatTrak™ XM1014 | XOXO (Field-Tested),False,True,,True,True,43,True,True,42,0.1383,4.8184,4.36,6.26
 ★ Shadow Daggers | Bright Water (Field-Tested),False,True,,True,True,43,True,True,43,0.0058,42.6544,42.18,43.21
 StatTrak™ Galil AR | Galigator (Minimal Wear),False,True,,True,True,44,True,True,44,0.0,4.8,4.8,4.8
+StatTrak™ M4A4 | 龍王 (Dragon King) (Field-Tested),False,True,,True,True,44,True,True,44,0.0716,27.018,25.47,31.33
 ★ Falchion Knife | Bright Water (Field-Tested),False,True,,True,True,44,True,True,44,0.0107,66.867,65.94,68.29
 AUG | Death by Puppy (Minimal Wear),False,True,,True,True,45,True,True,44,0.1417,5.8073,5.2,9.29
 StatTrak™ AUG | Stymphalian (Field-Tested),False,True,,True,True,45,True,True,45,0.1378,3.8687,3.34,4.66
@@ -61,42 +59,38 @@ StatTrak™ AK-47 | The Outsiders (Field-Tested),False,True,,True,True,46,True,T
 SG 553 | Darkwing (Factory New),False,True,,True,True,46,True,True,44,0.2088,12.2165,9.46,16.23
 StatTrak™ M4A4 | Magnesium (Minimal Wear),False,True,,True,True,46,True,True,44,0.1972,3.7041,3.37,8.51
 P250 | Asiimov (Well-Worn),False,True,,True,True,46,True,True,46,0.0064,11.967,11.85,12.14
-StatTrak™ USP-S | Cortex (Well-Worn),False,True,,True,True,46,True,True,46,0.0042,6.8841,6.82,6.98
-★ Huntsman Knife | Bright Water (Minimal Wear),False,True,,True,True,46,True,True,46,0.017,62.5987,61.28,65.21
 FAMAS | Bad Trip (Well-Worn),False,True,,True,True,47,True,True,47,0.0028,46.4302,46.17,46.77
 ★ Nomad Knife | Damascus Steel (Field-Tested),False,True,,True,True,47,True,True,47,0.0088,123.4396,121.78,125.41
 ★ Survival Knife | Ultraviolet (Field-Tested),False,True,,True,True,47,True,True,47,0.03,64.5966,62.67,69.26
 StatTrak™ AWP | Chromatic Aberration (Field-Tested),False,True,,True,True,48,True,True,45,0.0492,24.846,23.95,30.53
 StatTrak™ AWP | Atheris (Well-Worn),False,True,,True,True,48,True,True,47,0.0098,8.1725,8.09,8.66
-FAMAS | Eye of Athena (Field-Tested),False,True,,True,True,48,True,True,48,0.1093,6.2065,5.46,7.32
-Tec-9 | Fuel Injector (Well-Worn),False,True,,True,True,48,True,True,48,0.0056,11.3583,11.24,11.54
 AK-47 | Ice Coaled (Well-Worn),False,True,,True,True,49,True,True,46,0.0785,5.3322,5.22,7.96
-XM1014 | XOXO (Well-Worn),False,True,,True,True,49,True,True,49,0.0059,3.5271,3.48,3.56
 ★ Bowie Knife | Ultraviolet (Field-Tested),False,True,,True,True,49,True,True,49,0.0278,65.2678,63.22,71.71
 ★ Kukri Knife | Blue Steel (Field-Tested),False,True,,True,True,49,True,True,49,0.0201,82.8759,80.3,86.3
 R8 Revolver | Fade (Minimal Wear),False,True,,True,True,50,True,True,40,0.0923,90.5048,80.53,109.11
-M4A1-S | Golden Coil (Well-Worn),False,True,,True,True,50,True,True,49,0.0184,56.4972,55.75,63.01
+MP7 | Smoking Kills (Well-Worn),False,True,,True,True,50,True,True,47,0.0175,6.526,6.35,7.05
 Sawed-Off | Kiss♥Love (Battle-Scarred),False,True,,True,True,50,True,True,50,0.1431,3.4516,3.27,5.32
 ★ Bowie Knife | Freehand (Minimal Wear),False,True,,True,True,50,True,True,50,0.0092,71.715,70.99,73.47
 ★ Falchion Knife | Black Laminate (Field-Tested),False,True,,True,True,50,True,True,50,0.0179,66.0538,65.24,70.5
 ★ Huntsman Knife | Ultraviolet (Field-Tested),False,True,,True,True,50,True,True,50,0.0533,64.668,61.3,71.06
 StatTrak™ AWP | Ice Coaled (Battle-Scarred),False,True,,True,True,51,True,True,45,0.1735,13.0661,11.03,17.99
 Negev | Lionfish (Factory New),False,True,,True,True,51,True,True,49,0.262,3.7298,2.97,5.65
-★ Bowie Knife | Rust Coat (Battle-Scarred),False,True,,True,True,51,True,True,50,0.1188,51.7843,49.16,75.86
-★ Ursus Knife | Rust Coat (Battle-Scarred),False,True,,True,True,51,True,True,51,0.1671,63.5406,56.03,99.79
 P250 | Kintsugi (Well-Worn),False,True,,True,True,52,True,True,52,0.0036,6.5246,6.49,6.54
 M4A4 | Desolate Space (Battle-Scarred),False,True,,True,True,53,True,True,50,0.128,13.8162,12.62,18.65
 FAMAS | Bad Trip (Minimal Wear),False,True,,True,True,53,True,True,52,0.0371,51.4258,50.02,55.71
 ★ Shadow Daggers | Lore (Field-Tested),False,True,,True,True,53,True,True,53,0.0321,59.5636,56.98,63.83
+StatTrak™ M4A1-S | Leaded Glass (Minimal Wear),False,True,,True,True,54,True,True,53,0.0547,20.7444,19.79,25.69
 StatTrak™ AWP | Duality (Battle-Scarred),False,True,,True,True,54,True,True,54,0.216,6.6167,5.48,9.75
-UMP-45 | Wild Child (Battle-Scarred),False,True,,True,True,54,True,True,54,0.1382,3.275,2.95,4.65
 AK-47 | Aquamarine Revenge (Well-Worn),False,True,,True,True,55,True,True,54,0.0116,36.9875,36.49,39.33
 AK-47 | Aquamarine Revenge (Battle-Scarred),False,True,,True,True,55,True,True,55,0.0495,40.356,39.12,51.57
-MAG-7 | Justice (Field-Tested),False,True,,True,True,55,True,True,55,0.1166,6.328,5.79,8.24
 ★ Bowie Knife | Black Laminate (Field-Tested),False,True,,True,True,55,True,True,55,0.0173,59.4075,58.53,62.65
+★ Huntsman Knife | Freehand (Field-Tested),False,True,,True,True,55,True,True,55,0.0153,68.0422,66.7,70.96
+★ Kukri Knife | Urban Masked (Field-Tested),False,True,,True,True,55,True,True,55,0.0464,51.408,49.33,56.45
 ★ Navaja Knife | Marble Fade (Factory New),False,True,,True,True,56,True,True,55,0.0377,102.2793,99.96,113.91
+Glock-18 | Fully Tuned (Battle-Scarred),False,True,,True,True,56,True,True,56,0.0049,50.3163,50.14,51.61
 ★ Huntsman Knife | Black Laminate (Field-Tested),False,True,,True,True,56,True,True,56,0.0229,65.2682,64.05,70.93
 P250 | Cartel (Field-Tested),False,True,,True,True,57,True,True,55,0.0986,10.1828,9.61,16.45
+StatTrak™ Galil AR | Chromatic Aberration (Field-Tested),False,True,,True,True,57,True,True,55,0.1381,7.6825,6.76,10.11
 StatTrak™ M4A4 | Turbine (Field-Tested),False,True,,True,True,57,True,True,56,0.1557,3.2947,2.89,4.4
 ★ Huntsman Knife | Rust Coat (Battle-Scarred),False,True,,True,True,57,True,True,56,0.1081,58.7965,55.3,79.16
 AWP | Wildfire (Battle-Scarred),False,True,,True,True,57,True,True,57,0.0432,44.1637,42.59,53.29
@@ -104,51 +98,48 @@ FAMAS | Commemoration (Field-Tested),False,True,,True,True,57,True,True,57,0.026
 ★ Kukri Knife | Boreal Forest (Field-Tested),False,True,,True,True,57,True,True,57,0.0378,46.8698,45.2,50.01
 P90 | Chopper (Factory New),False,True,,True,True,58,True,True,56,0.2139,10.3933,8.11,14.25
 Glock-18 | Wasteland Rebel (Field-Tested),False,True,,True,True,58,True,True,57,0.022,102.4674,100.22,114.84
-P90 | Shapewood (Field-Tested),False,True,,True,True,58,True,True,57,0.0767,9.824,9.22,11.62
-StatTrak™ MP7 | Bloodsport (Field-Tested),False,True,,True,True,58,True,True,57,0.0417,24.4274,23.49,27.0
-StatTrak™ MP7 | Bloodsport (Minimal Wear),False,True,,True,True,58,True,True,57,0.0437,29.5197,27.95,32.74
 MP9 | Starlight Protector (Battle-Scarred),False,True,,True,True,58,True,True,58,0.0482,70.7553,68.46,82.36
 XM1014 | XOXO (Battle-Scarred),False,True,,True,True,58,True,True,58,0.0769,3.3747,3.24,4.35
 USP-S | The Traitor (Battle-Scarred),False,True,,True,True,59,True,True,56,0.085,33.8319,32.29,47.7
 G3SG1 | Flux (Field-Tested),False,True,,True,True,59,True,True,58,0.1201,7.842,6.8,9.22
-AUG | Fleet Flock (Field-Tested),False,True,,True,True,59,True,True,59,0.0633,12.8624,12.2,14.57
-M4A1-S | Nightmare (Well-Worn),False,True,,True,True,59,True,True,59,0.0041,8.5081,8.43,8.66
 AK-47 | Cartel (Battle-Scarred),False,True,,True,True,60,True,True,56,0.1578,17.3825,16.59,37.75
-MP9 | Black Sand (Factory New),False,True,,True,True,60,True,True,58,0.184,4.6807,3.84,6.03
 StatTrak™ Glock-18 | Shinobu (Well-Worn),False,True,,True,True,60,True,True,58,0.0831,8.0668,7.86,13.03
+StatTrak™ MAC-10 | Disco Tech (Field-Tested),False,True,,True,True,60,True,True,58,0.1089,8.5683,7.91,11.99
+P90 | Nostalgia (Field-Tested),False,True,,True,True,60,True,True,59,0.0793,4.4665,4.12,5.22
 P90 | Deathgaze (Well-Worn),False,True,,True,True,60,True,True,60,0.0108,6.61,6.56,6.71
-★ Huntsman Knife | Bright Water (Field-Tested),False,True,,True,True,60,True,True,60,0.0144,57.5652,56.52,59.76
-USP-S | Monster Mashup (Field-Tested),False,True,,True,True,61,True,True,59,0.1332,25.7428,24.41,50.62
-StatTrak™ P250 | Asiimov (Battle-Scarred),False,True,,True,True,61,True,True,61,0.1243,11.8738,11.3,19.42
+AWP | Exoskeleton (Minimal Wear),False,True,,True,True,61,True,True,58,0.0343,16.8608,16.47,19.61
+MP9 | Sand Dashed (Factory New),False,True,,True,True,61,True,True,60,0.1508,3.6015,2.99,4.85
+P90 | Nostalgia (Minimal Wear),False,True,,True,True,61,True,True,61,0.1588,7.6152,6.02,8.88
 ★ Shadow Daggers | Marble Fade (Factory New),False,True,,True,True,61,True,True,61,0.0355,108.7598,106.41,126.18
+StatTrak™ SSG 08 | Memorial (Factory New),False,True,,True,True,62,True,True,58,0.4536,4.2671,3.27,17.99
 Glock-18 | Mirror Mosaic (Battle-Scarred),False,True,,True,True,62,True,True,61,0.1284,5.3039,4.65,6.87
-★ Kukri Knife | Night Stripe (Field-Tested),False,True,,True,True,62,True,True,62,0.0306,52.5523,50.97,55.81
+StatTrak™ Five-SeveN | Monkey Business (Field-Tested),False,True,,True,True,62,True,True,62,0.1624,14.8079,12.91,19.91
+★ Nomad Knife | Ultraviolet (Field-Tested),False,True,,True,True,62,True,True,62,0.0359,118.7353,113.92,129.27
 FAMAS | Rapid Eye Movement (Battle-Scarred),False,True,,True,True,63,True,True,56,0.2476,7.8948,6.41,17.75
 StatTrak™ AK-47 | Phantom Disruptor (Minimal Wear),False,True,,True,True,63,True,True,61,0.0356,20.4759,19.33,22.72
 Dual Berettas | Melondrama (Battle-Scarred),False,True,,True,True,63,True,True,62,0.2049,7.5029,6.49,12.13
-P2000 | Urban Hazard (Factory New),False,True,,True,True,63,True,True,62,0.1335,8.7424,6.99,11.11
-AUG | Amber Slipstream (Factory New),False,True,,True,True,63,True,True,63,0.2314,2.9684,2.41,4.1
 StatTrak™ AK-47 | Nightwish (Field-Tested),False,True,,True,True,63,True,True,63,0.0961,60.0783,55.54,74.72
-AK-47 | Inheritance (Well-Worn),False,True,,True,True,64,True,True,61,0.0201,46.285,45.3,50.28
-StatTrak™ M4A4 | Evil Daimyo (Field-Tested),False,True,,True,True,64,True,True,61,0.0522,8.6034,8.27,10.54
+StatTrak™ AK-47 | Head Shot (Minimal Wear),False,True,,True,True,64,True,True,60,0.0706,48.1567,44.32,58.91
 StatTrak™ MP7 | Abyssal Apparition (Field-Tested),False,True,,True,True,64,True,True,62,0.1783,6.78,5.55,8.62
 UMP-45 | Wild Child (Well-Worn),False,True,,True,True,64,True,True,63,0.1635,3.3581,3.26,7.68
-★ Kukri Knife | Safari Mesh (Field-Tested),False,True,,True,True,64,True,True,64,0.0206,43.5066,42.63,45.75
-AK-47 | Midnight Laminate (Battle-Scarred),False,True,,True,True,65,True,True,63,0.0949,3.4402,3.07,4.27
+StatTrak™ P2000 | Wicked Sick (Minimal Wear),False,True,,True,True,65,True,True,62,0.1737,9.5838,6.93,12.5
 Sawed-Off | Devourer (Field-Tested),False,True,,True,True,65,True,True,64,0.1458,5.0831,4.41,6.41
-AWP | Hyper Beast (Well-Worn),False,True,,True,True,65,True,True,65,0.0036,34.1169,33.84,34.36
+MP9 | Food Chain (Well-Worn),False,True,,True,True,66,True,True,64,0.0082,3.5529,3.52,3.71
+M4A4 | Full Throttle (Battle-Scarred),False,True,,True,True,66,True,True,65,0.0952,31.0603,28.67,41.02
 StatTrak™ AK-47 | Searing Rage (Battle-Scarred),False,True,,True,True,66,True,True,65,0.1463,9.4165,8.52,12.69
 P250 | Kintsugi (Field-Tested),False,True,,True,True,66,True,True,66,0.0,7.31,7.31,7.31
 Galil AR | Chromatic Aberration (Battle-Scarred),False,True,,True,True,67,True,True,64,0.222,3.604,3.26,8.3
 ★ Kukri Knife | Scorched (Field-Tested),False,True,,True,True,67,True,True,67,0.0193,47.1112,46.29,49.88
-AK-47 | Nouveau Rouge (Battle-Scarred),False,True,,True,True,68,True,True,66,0.1623,12.5828,11.17,18.13
+Galil AR | Chatterbox (Battle-Scarred),False,True,,True,True,68,True,True,67,0.0219,109.7565,107.26,125.84
+M4A4 | Cyber Security (Field-Tested),False,True,,True,True,68,True,True,67,0.0757,27.1504,25.49,31.91
 StatTrak™ UMP-45 | Wild Child (Field-Tested),False,True,,True,True,68,True,True,67,0.2361,4.0626,3.36,5.89
 StatTrak™ USP-S | Blueprint (Field-Tested),False,True,,True,True,69,True,True,64,0.1091,12.5303,11.61,19.15
 AWP | Elite Build (Battle-Scarred),False,True,,True,True,69,True,True,66,0.1722,15.36,13.78,24.06
+UMP-45 | K.O. Factory (Battle-Scarred),False,True,,True,True,69,True,True,67,0.1269,4.5567,4.28,6.53
 ★ Navaja Knife | Tiger Tooth (Factory New),False,True,,True,True,69,True,True,68,0.0521,75.1407,71.42,89.41
 AK-47 | The Outsiders (Battle-Scarred),False,True,,True,True,69,True,True,69,0.0589,8.7555,8.47,10.81
-FAMAS | Roll Cage (Field-Tested),False,True,,True,True,69,True,True,69,0.0315,105.5441,100.01,112.43
 Five-SeveN | Fowl Play (Field-Tested),False,True,,True,True,69,True,True,69,0.0502,20.2017,19.32,22.94
+SG 553 | Cyrex (Field-Tested),False,True,,True,True,69,True,True,69,0.0985,5.2683,4.87,6.56
 M4A1-S | Decimator (Battle-Scarred),False,True,,True,True,70,True,True,69,0.0532,13.9813,13.67,17.83
 P250 | See Ya Later (Minimal Wear),False,True,,True,True,70,True,True,69,0.0354,98.1159,95.15,107.84
 P90 | Deathgaze (Minimal Wear),False,True,,True,True,70,True,True,69,0.0165,13.8473,13.82,15.73
@@ -157,66 +148,53 @@ StatTrak™ M4A4 | Neo-Noir (Field-Tested),False,True,,True,True,70,True,True,70
 AK-47 | Head Shot (Battle-Scarred),False,True,,True,True,71,True,True,65,0.1654,30.8545,28.28,64.54
 AK-47 | The Oligarch (Battle-Scarred),False,True,,True,True,71,True,True,69,0.0985,48.1741,44.15,64.0
 StatTrak™ P2000 | Wicked Sick (Field-Tested),False,True,,True,True,71,True,True,69,0.2156,4.0931,3.38,5.75
-StatTrak™ AK-47 | Phantom Disruptor (Field-Tested),False,True,,True,True,72,True,True,68,0.1134,14.8522,14.3,27.87
 ★ Survival Knife | Rust Coat (Battle-Scarred),False,True,,True,True,72,True,True,69,0.1855,50.7943,44.57,84.69
-★ Bowie Knife | Lore (Field-Tested),False,True,,True,True,72,True,True,71,0.0219,88.3597,86.27,94.7
 StatTrak™ M4A4 | Temukau (Field-Tested),False,True,,True,True,72,True,True,72,0.0883,36.1774,34.06,46.42
-StatTrak™ USP-S | Jawbreaker (Battle-Scarred),False,True,,True,True,73,True,True,69,0.1841,8.3201,7.33,12.2
-Five-SeveN | Boost Protocol (Field-Tested),False,True,,True,True,73,True,True,72,0.0494,3.2749,3.03,3.53
 M4A4 | Tooth Fairy (Battle-Scarred),False,True,,True,True,73,True,True,72,0.0549,3.9347,3.83,4.9
 StatTrak™ Dual Berettas | Melondrama (Minimal Wear),False,True,,True,True,73,True,True,72,0.1903,7.3768,6.26,9.67
 ★ Falchion Knife | Autotronic (Field-Tested),False,True,,True,True,73,True,True,72,0.0219,103.7716,101.61,111.6
-AUG | Chameleon (Field-Tested),False,True,,True,True,73,True,True,73,0.0076,79.1333,77.9,81.0
 P2000 | Wicked Sick (Well-Worn),False,True,,True,True,73,True,True,73,0.0097,3.3777,3.34,3.47
-AK-47 | Head Shot (Well-Worn),False,True,,True,True,74,True,True,71,0.0244,33.9897,33.44,39.07
+StatTrak™ USP-S | Cyrex (Factory New),False,True,,True,True,74,True,True,71,0.1969,17.6166,15.65,26.99
 MP7 | Abyssal Apparition (Battle-Scarred),False,True,,True,True,74,True,True,72,0.1682,7.0815,6.35,10.19
 P250 | Asiimov (Battle-Scarred),False,True,,True,True,74,True,True,72,0.4469,13.3001,11.99,61.98
 AK-47 | The Empress (Well-Worn),False,True,,True,True,75,True,True,73,0.0103,96.3243,95.32,101.73
-AK-47 | Nouveau Rouge (Well-Worn),False,True,,True,True,75,True,True,74,0.0116,11.5411,11.39,12.35
-FAMAS | Djinn (Field-Tested),False,True,,True,True,76,True,True,75,0.0731,13.3221,12.65,16.55
 StatTrak™ AK-47 | Legion of Anubis (Field-Tested),False,True,,True,True,76,True,True,75,0.0831,34.8438,33.39,57.64
 ★ Falchion Knife | Marble Fade (Factory New),False,True,,True,True,76,True,True,75,0.0318,188.1574,183.65,220.45
 ★ Ursus Knife | Marble Fade (Factory New),False,True,,True,True,76,True,True,75,0.0228,154.6754,152.37,179.37
-SG 553 | Damascus Steel (Factory New),False,True,,True,True,77,True,True,75,0.1997,4.4294,3.48,6.05
 ★ Nomad Knife | Rust Coat (Battle-Scarred),False,True,,True,True,77,True,True,75,0.1557,106.9232,98.2,157.76
-AUG | Stymphalian (Factory New),False,True,,True,True,78,True,True,77,0.2203,25.5901,20.71,37.8
+StatTrak™ AWP | Phobos (Minimal Wear),False,True,,True,True,78,True,True,76,0.0633,6.1454,5.95,9.01
 Galil AR | Chromatic Aberration (Well-Worn),False,True,,True,True,78,True,True,78,0.0041,3.6055,3.58,3.69
 P2000 | Wicked Sick (Battle-Scarred),False,True,,True,True,79,True,True,76,0.1593,3.3842,3.06,5.06
+StatTrak™ P250 | Asiimov (Field-Tested),False,True,,True,True,79,True,True,76,0.1195,14.7447,13.75,20.64
 StatTrak™ M4A1-S | Leaded Glass (Field-Tested),False,True,,True,True,79,True,True,77,0.0319,13.951,13.66,16.49
 Desert Eagle | Firebreathing (Minimal Wear),False,True,,True,True,79,True,True,78,0.0537,2.9991,2.98,4.41
 Five-SeveN | Angry Mob (Field-Tested),False,True,,True,True,79,True,True,79,0.0383,60.7385,57.24,69.77
-Five-SeveN | Boost Protocol (Minimal Wear),False,True,,True,True,79,True,True,79,0.0941,5.3367,4.91,6.28
-P90 | Trigon (Field-Tested),False,True,,True,True,79,True,True,79,0.0516,9.9389,9.63,11.19
 ★ Paracord Knife | Rust Coat (Battle-Scarred),False,True,,True,True,79,True,True,79,0.1746,51.0452,45.06,78.67
+StatTrak™ AK-47 | Asiimov (Field-Tested),False,True,,True,True,80,True,True,76,0.4478,74.5298,66.07,364.47
 StatTrak™ FAMAS | Rapid Eye Movement (Field-Tested),False,True,,True,True,80,True,True,76,0.1646,6.1727,5.42,11.28
+MAC-10 | Heat (Field-Tested),False,True,,True,True,80,True,True,77,0.1748,3.6586,2.9,4.54
 StatTrak™ UMP-45 | K.O. Factory (Field-Tested),False,True,,True,True,80,True,True,78,0.1519,6.9979,5.84,8.72
 P250 | Kintsugi (Minimal Wear),False,True,,True,True,80,True,True,80,0.0008,13.6312,13.63,13.73
+StatTrak™ M4A1-S | Basilisk (Field-Tested),False,True,,True,True,81,True,True,76,0.0929,22.9027,22.0,37.59
 AK-47 | Frontside Misty (Well-Worn),False,True,,True,True,81,True,True,79,0.0106,16.9252,16.72,18.02
-Nova | Gila (Minimal Wear),False,True,,True,True,81,True,True,80,0.1,4.1963,3.77,4.86
 StatTrak™ Desert Eagle | Mecha Industries (Minimal Wear),False,True,,True,True,82,True,True,77,0.0596,16.9918,16.25,20.87
 AWP | Printstream (Battle-Scarred),False,True,,True,True,82,True,True,82,0.0541,44.9843,43.41,58.53
 StatTrak™ MP7 | Just Smile (Factory New),False,True,,True,True,82,True,True,82,0.2128,8.6423,6.09,10.92
-StatTrak™ Glock-18 | Shinobu (Minimal Wear),False,True,,True,True,83,True,True,74,0.2732,21.4267,19.54,64.8
 StatTrak™ AK-47 | Head Shot (Field-Tested),False,True,,True,True,83,True,True,79,0.0976,32.8566,29.92,40.99
 StatTrak™ USP-S | Flashback (Factory New),False,True,,True,True,83,True,True,80,0.3591,5.0157,3.9,16.84
 M4A1-S | Black Lotus (Well-Worn),False,True,,True,True,84,True,True,79,0.0221,6.3106,6.15,6.95
-Glock-18 | Royal Legion (Minimal Wear),False,True,,True,True,84,True,True,83,0.0641,8.4029,7.9,9.82
-PP-Bizon | High Roller (Field-Tested),False,True,,True,True,84,True,True,83,0.0677,10.2019,9.64,12.0
+StatTrak™ AWP | Mortis (Minimal Wear),False,True,,True,True,84,True,True,80,0.094,10.6752,10.16,17.67
+★ Bowie Knife | Marble Fade (Factory New),False,True,,True,True,84,True,True,84,0.0305,161.9239,158.86,180.94
 AWP | Mortis (Battle-Scarred),False,True,,True,True,85,True,True,79,0.093,4.2359,4.01,6.15
-M4A1-S | Nightmare (Battle-Scarred),False,True,,True,True,85,True,True,80,0.4215,9.4779,8.35,34.33
 ★ Huntsman Knife | Autotronic (Field-Tested),False,True,,True,True,85,True,True,85,0.0202,104.3979,102.38,111.43
-AK-47 | The Oligarch (Well-Worn),False,True,,True,True,86,True,True,82,0.0327,45.5224,44.22,57.57
 Glock-18 | Fully Tuned (Minimal Wear),False,True,,True,True,86,True,True,85,0.0103,111.9902,111.76,118.19
-StatTrak™ M4A4 | Tooth Fairy (Factory New),False,True,,True,True,87,True,True,84,0.2381,31.6277,25.51,46.3
 R8 Revolver | Llama Cannon (Field-Tested),False,True,,True,True,87,True,True,86,0.0844,10.5052,9.71,12.25
 AK-47 | Breakthrough (Minimal Wear),False,True,,True,True,87,True,True,87,0.0039,9.0467,9.04,9.28
+AUG | Stymphalian (Minimal Wear),False,True,,True,True,87,True,True,87,0.1601,6.3095,5.4,7.72
 ★ Bowie Knife | Autotronic (Field-Tested),False,True,,True,True,87,True,True,87,0.0197,84.0623,82.2,88.18
 ★ Falchion Knife | Lore (Field-Tested),False,True,,True,True,87,True,True,87,0.0264,103.7733,100.78,110.79
-AUG | Syd Mead (Minimal Wear),False,True,,True,True,88,True,True,88,0.1225,13.7473,11.71,16.6
 USP-S | The Traitor (Well-Worn),False,True,,True,True,89,True,True,89,0.0075,36.5046,36.06,37.82
 ★ Kukri Knife | Slaughter (Minimal Wear),False,True,,True,True,89,True,True,89,0.0121,132.374,130.54,135.66
-★ Skeleton Knife | Ultraviolet (Field-Tested),False,True,,True,True,89,True,True,89,0.0368,188.1906,181.92,203.95
-MP9 | Slide (Factory New),False,True,,True,True,90,True,True,85,0.2548,3.5438,2.76,10.61
 AWP | Ice Coaled (Well-Worn),False,True,,True,True,90,True,True,88,0.0117,6.6168,6.51,6.9
 Dual Berettas | Twin Turbo (Minimal Wear),False,True,,True,True,90,True,True,89,0.0887,7.7259,7.19,9.44
 Glock-18 | Bullet Queen (Field-Tested),False,True,,True,True,90,True,True,89,0.0549,61.0603,58.62,72.74
@@ -224,8 +202,9 @@ Glock-18 | Bullet Queen (Field-Tested),False,True,,True,True,90,True,True,89,0.0
 AWP | Queen's Gambit (Well-Worn),False,True,,True,True,90,True,True,90,0.0016,62.5523,62.54,63.48
 StatTrak™ MP9 | Starlight Protector (Field-Tested),False,True,,True,True,90,True,True,90,0.086,60.4916,56.29,74.05
 StatTrak™ M4A1-S | Decimator (Field-Tested),False,True,,True,True,91,True,True,88,0.2785,30.2064,28.42,108.76
+AK-47 | Orbit Mk01 (Minimal Wear),False,True,,True,True,91,True,True,89,0.0166,41.8795,41.23,46.29
+Desert Eagle | Conspiracy (Field-Tested),False,True,,True,True,91,True,True,90,0.0179,19.6382,19.29,22.55
 Glock-18 | Fully Tuned (Well-Worn),False,True,,True,True,91,True,True,90,0.0083,61.6709,61.61,66.44
-AK-47 | Safety Net (Minimal Wear),False,True,,True,True,92,True,True,91,0.0285,4.6101,4.47,4.94
 AWP | Chrome Cannon (Battle-Scarred),False,True,,True,True,93,True,True,92,0.1027,28.9269,27.17,37.61
 ★ Bowie Knife | Tiger Tooth (Factory New),False,True,,True,True,93,True,True,92,0.0393,132.5212,130.04,160.74
 StatTrak™ Desert Eagle | Conspiracy (Minimal Wear),False,True,,True,True,94,True,True,87,0.107,21.9684,20.76,38.49
@@ -234,6 +213,8 @@ AUG | Chameleon (Minimal Wear),False,True,,True,True,94,True,True,94,0.0199,81.1
 USP-S | Cortex (Battle-Scarred),False,True,,True,True,95,True,True,86,0.1262,3.8604,3.56,5.35
 StatTrak™ UMP-45 | K.O. Factory (Minimal Wear),False,True,,True,True,95,True,True,92,0.2175,11.4619,8.81,14.97
 UMP-45 | Momentum (Field-Tested),False,True,,True,True,95,True,True,95,0.0729,4.8495,4.36,5.35
+★ Broken Fang Gloves | Needle Point (Field-Tested),False,True,,True,True,95,True,True,95,0.0621,51.4826,47.21,57.49
+★ Hand Wraps | Giraffe (Field-Tested),False,True,,True,True,95,True,True,95,0.0632,49.7019,46.43,54.94
 ★ Paracord Knife | Tiger Tooth (Factory New),False,True,,True,True,95,True,True,95,0.0411,116.062,113.26,142.62
 MP5-SD | Phosphor (Field-Tested),False,True,,True,True,96,True,True,95,0.0822,4.5002,4.25,5.52
 ★ Skeleton Knife | Rust Coat (Battle-Scarred),False,True,,True,True,96,True,True,95,0.1449,138.7608,128.25,226.02
@@ -242,126 +223,96 @@ AK-47 | Orbit Mk01 (Field-Tested),False,True,,True,True,97,True,True,95,0.018,30
 AK-47 | Nightwish (Well-Worn),False,True,,True,True,97,True,True,96,0.0085,67.7999,66.9,72.67
 MP9 | Airlock (Minimal Wear),False,True,,True,True,97,True,True,96,0.0721,13.1957,12.65,16.37
 P90 | Deathgaze (Field-Tested),False,True,,True,True,97,True,True,97,0.012,6.4392,6.4,6.59
-StatTrak™ USP-S | Cortex (Minimal Wear),False,True,,True,True,98,True,True,93,0.0483,14.9914,14.12,18.68
+MP9 | Starlight Protector (Minimal Wear),False,True,,True,True,98,True,True,97,0.03,77.3183,75.34,84.94
 StatTrak™ Glock-18 | Water Elemental (Field-Tested),False,True,,True,True,98,True,True,98,0.0387,24.3492,23.49,27.99
 StatTrak™ AWP | PAW (Factory New),False,True,,True,True,99,True,True,94,0.27,16.3558,14.09,44.27
 StatTrak™ AWP | Phobos (Factory New),False,True,,True,True,99,True,True,95,0.178,9.4497,8.42,15.51
-AK-47 | Nightwish (Battle-Scarred),False,True,,True,True,99,True,True,99,0.1236,74.3932,66.17,113.88
 StatTrak™ AWP | Atheris (Field-Tested),False,True,,True,True,100,True,True,98,0.0542,9.0528,8.78,11.46
 StatTrak™ AK-47 | Frontside Misty (Field-Tested),False,True,,True,True,101,True,True,99,0.0708,35.7868,34.03,43.73
-MP9 | Airlock (Field-Tested),False,True,,True,True,101,True,True,101,0.0757,12.111,11.47,15.14
 ★ Hand Wraps | Constrictor (Field-Tested),False,True,,True,True,101,True,True,101,0.0633,54.9795,51.55,60.89
 MAC-10 | Disco Tech (Minimal Wear),False,True,,True,True,102,True,True,95,0.1046,8.9987,8.3,13.19
 ★ Hydra Gloves | Mangrove (Field-Tested),False,True,,True,True,102,True,True,102,0.0314,36.9829,35.46,38.93
 USP-S | Neo-Noir (Minimal Wear),False,True,,True,True,104,True,True,100,0.028,91.1428,87.68,100.7
 ★ Survival Knife | Tiger Tooth (Factory New),False,True,,True,True,104,True,True,104,0.0291,112.0248,110.15,134.08
 AWP | Exoskeleton (Battle-Scarred),False,True,,True,True,105,True,True,101,0.1654,5.6174,4.75,8.66
-StatTrak™ XM1014 | Entombed (Minimal Wear),False,True,,True,True,105,True,True,105,0.2013,7.4527,5.7,9.4
-Glock-18 | Mirror Mosaic (Well-Worn),False,True,,True,True,106,True,True,101,0.0144,6.8604,6.43,7.17
-StatTrak™ Glock-18 | Block-18 (Factory New),False,True,,True,True,107,True,True,101,0.2129,7.094,5.35,10.58
 AWP | Chrome Cannon (Well-Worn),False,True,,True,True,107,True,True,102,0.0166,27.6142,27.21,31.33
-SSG 08 | Bloodshot (Field-Tested),False,True,,True,True,107,True,True,107,0.1847,22.6851,19.0,33.62
 M4A1-S | Control Panel (Well-Worn),False,True,,True,True,108,True,True,104,0.0167,5.6801,5.63,6.49
 AWP | Hyper Beast (Battle-Scarred),False,True,,True,True,109,True,True,107,0.2017,40.2615,34.15,60.26
 SG 553 | Pulse (Minimal Wear),False,True,,True,True,109,True,True,107,0.1497,8.4497,7.72,14.2
-AUG | Syd Mead (Field-Tested),False,True,,True,True,110,True,True,110,0.0923,12.7981,11.32,14.55
 StatTrak™ AWP | PAW (Field-Tested),False,True,,True,True,112,True,True,105,0.0277,7.1079,6.91,8.2
-P250 | See Ya Later (Field-Tested),False,True,,True,True,112,True,True,112,0.0454,103.0722,97.46,114.36
 ★ Huntsman Knife | Lore (Field-Tested),False,True,,True,True,112,True,True,112,0.032,100.5796,96.87,107.67
-StatTrak™ P250 | Visions (Minimal Wear),False,True,,True,True,114,True,True,112,0.2097,9.1681,6.72,20.18
+★ Paracord Knife | Marble Fade (Factory New),False,True,,True,True,113,True,True,113,0.0455,138.8065,135.75,172.08
 MAC-10 | Neon Rider (Field-Tested),False,True,,True,True,114,True,True,114,0.0109,114.8073,112.06,118.69
-Sawed-Off | Kiss♥Love (Factory New),False,True,,True,True,114,True,True,114,0.2138,34.7043,26.15,45.68
-UMP-45 | Momentum (Minimal Wear),False,True,,True,True,114,True,True,114,0.1538,5.8716,5.3,8.04
 ★ Hydra Gloves | Rattler (Field-Tested),False,True,,True,True,114,True,True,114,0.0258,36.2732,34.94,38.12
 StatTrak™ AWP | Duality (Minimal Wear),False,True,,True,True,115,True,True,110,0.1457,12.7625,10.71,15.78
-StatTrak™ Desert Eagle | Mecha Industries (Field-Tested),False,True,,True,True,115,True,True,110,0.0304,13.094,12.52,15.58
+StatTrak™ Glock-18 | Vogue (Minimal Wear),False,True,,True,True,116,True,True,111,0.136,12.8959,11.22,16.34
 USP-S | Printstream (Battle-Scarred),False,True,,True,True,116,True,True,112,0.0366,34.8744,34.07,44.8
+StatTrak™ M4A4 | Tooth Fairy (Field-Tested),False,True,,True,True,116,True,True,113,0.1121,7.5254,7.03,10.37
 StatTrak™ AWP | Worm God (Factory New),False,True,,True,True,118,True,True,115,0.1684,9.8433,9.07,15.88
-MP7 | Abyssal Apparition (Well-Worn),False,True,,True,True,118,True,True,118,0.0325,6.3349,6.08,6.64
 ★ Hand Wraps | Arboreal (Field-Tested),False,True,,True,True,118,True,True,118,0.0762,50.4097,46.61,57.87
-StatTrak™ AWP | PAW (Minimal Wear),False,True,,True,True,119,True,True,116,0.0326,8.4883,8.28,9.41
 Tec-9 | Brother (Factory New),False,True,,True,True,119,True,True,117,0.1996,13.4965,10.33,19.4
 ★ Survival Knife | Marble Fade (Factory New),False,True,,True,True,119,True,True,118,0.0425,135.2062,131.68,162.26
-AWP | Exoskeleton (Field-Tested),False,True,,True,True,120,True,True,118,0.0899,5.8479,5.66,10.85
-M4A1-S | Hyper Beast (Minimal Wear),False,True,,True,True,122,True,True,121,0.0275,114.0984,110.52,128.06
+M4A1-S | Electrum (Field-Tested),False,True,,True,True,120,True,True,115,0.0342,2.4753,2.46,3.04
+MP7 | Nemesis (Minimal Wear),False,True,,True,True,120,True,True,118,0.1516,9.4647,8.05,13.35
 Dual Berettas | Melondrama (Well-Worn),False,True,,True,True,122,True,True,122,0.0075,6.4451,6.37,6.62
-UMP-45 | Neo-Noir (Field-Tested),False,True,,True,True,123,True,True,120,0.1578,6.5445,5.64,8.3
 ★ Hydra Gloves | Emerald (Field-Tested),False,True,,True,True,123,True,True,123,0.0394,41.5063,40.05,45.77
 AK-47 | Nightwish (Minimal Wear),False,True,,True,True,125,True,True,123,0.0336,78.4655,76.53,92.6
 StatTrak™ Glock-18 | Shinobu (Field-Tested),False,True,,True,True,126,True,True,120,0.1282,9.0865,8.49,16.83
 ★ Nomad Knife | Tiger Tooth (Factory New),False,True,,True,True,126,True,True,125,0.0339,195.6353,191.27,233.45
-Desert Eagle | The Bronze (Factory New),False,True,,True,True,127,True,True,123,0.1707,14.6409,12.91,20.34
 MP9 | Hydra (Minimal Wear),False,True,,True,True,127,True,True,125,0.0988,12.4176,11.97,22.77
 StatTrak™ Desert Eagle | Printstream (Field-Tested),False,True,,True,True,128,True,True,122,0.0915,66.0388,60.08,83.66
+CZ75-Auto | Tuxedo (Factory New),False,True,,True,True,128,True,True,126,0.2097,4.326,3.68,6.47
 Glock-18 | Neo-Noir (Field-Tested),False,True,,True,True,128,True,True,127,0.0717,41.658,39.23,50.26
 StatTrak™ Dual Berettas | Melondrama (Field-Tested),False,True,,True,True,128,True,True,128,0.1452,6.3434,5.54,8.03
 M4A4 | Full Throttle (Minimal Wear),False,True,,True,True,129,True,True,119,0.0541,93.0808,87.88,122.27
 SG 553 | Integrale (Field-Tested),False,True,,True,True,129,True,True,126,0.1958,10.3175,8.6,14.85
 StatTrak™ P250 | Visions (Field-Tested),False,True,,True,True,129,True,True,128,0.1619,5.1637,4.08,6.34
+UMP-45 | K.O. Factory (Well-Worn),False,True,,True,True,130,True,True,130,0.0066,4.4903,4.44,4.56
+AWP | Ice Coaled (Factory New),False,True,,True,True,131,True,True,127,0.1687,41.8311,36.76,60.59
 Desert Eagle | Printstream (Battle-Scarred),False,True,,True,True,131,True,True,130,0.0378,37.115,35.67,46.99
-M4A4 | Royal Paladin (Field-Tested),False,True,,True,True,132,True,True,131,0.0715,87.3698,81.86,106.23
 UMP-45 | Primal Saber (Minimal Wear),False,True,,True,True,132,True,True,132,0.1313,14.9772,12.82,18.62
 UMP-45 | Wild Child (Minimal Wear),False,True,,True,True,132,True,True,132,0.2111,8.1068,6.62,10.89
 AWP | Crakow! (Well-Worn),False,True,,True,True,133,True,True,130,0.0286,24.9582,24.66,31.65
 StatTrak™ AK-47 | Ice Coaled (Minimal Wear),False,True,,True,True,134,True,True,125,0.0932,20.2559,19.38,38.35
 Desert Eagle | Code Red (Field-Tested),False,True,,True,True,134,True,True,133,0.0581,45.9578,43.63,54.66
-Glock-18 | Gold Toof (Minimal Wear),False,True,,True,True,135,True,True,129,0.0908,50.7506,46.06,83.37
-StatTrak™ Zeus x27 | Olympus (Minimal Wear),False,True,,True,True,135,True,True,130,0.18,12.9582,9.64,19.33
 MP7 | Bloodsport (Field-Tested),False,True,,True,True,135,True,True,134,0.033,37.7276,36.04,40.32
 StatTrak™ Glock-18 | Moonrise (Minimal Wear),False,True,,True,True,136,True,True,130,0.2042,3.4358,3.19,9.59
-AWP | POP AWP (Minimal Wear),False,True,,True,True,136,True,True,133,0.0373,13.0171,12.6,14.93
-XM1014 | Incinegator (Field-Tested),False,True,,True,True,136,True,True,134,0.19,7.4893,5.66,9.6
 StatTrak™ AWP | Mortis (Field-Tested),False,True,,True,True,137,True,True,130,0.1095,7.4622,7.16,14.46
+M4A4 | Turbine (Minimal Wear),False,True,,True,True,137,True,True,134,0.0922,4.1531,3.76,5.65
 StatTrak™ AWP | Worm God (Field-Tested),False,True,,True,True,139,True,True,133,0.0191,5.9688,5.86,6.68
 StatTrak™ Zeus x27 | Olympus (Field-Tested),False,True,,True,True,139,True,True,135,0.1559,6.502,5.65,13.71
-USP-S | The Traitor (Minimal Wear),False,True,,True,True,139,True,True,138,0.0425,69.0547,67.04,83.2
-AWP | Chrome Cannon (Minimal Wear),False,True,,True,True,140,True,True,133,0.0801,41.6596,39.99,73.63
 USP-S | Royal Blue (Field-Tested),False,True,,True,True,140,True,True,140,0.0142,10.5704,10.35,11.13
-Galil AR | Blue Titanium (Factory New),False,True,,True,True,141,True,True,134,0.1158,17.8701,16.45,26.56
 AK-47 | The Empress (Minimal Wear),False,True,,True,True,142,True,True,133,0.3428,97.8185,91.13,492.56
 AWP | Queen's Gambit (Field-Tested),False,True,,True,True,142,True,True,140,0.0118,74.2368,74.11,83.18
 StatTrak™ M4A1-S | Black Lotus (Minimal Wear),False,True,,True,True,143,True,True,135,0.0722,24.5236,23.01,30.69
 ★ Kukri Knife | Crimson Web (Field-Tested),False,True,,True,True,144,True,True,144,0.0606,96.3822,89.0,107.88
 USP-S | Cortex (Well-Worn),False,True,,True,True,145,True,True,143,0.1362,3.5813,3.51,9.41
-USP-S | Neo-Noir (Field-Tested),False,True,,True,True,145,True,True,144,0.031,99.0411,96.24,110.53
 AWP | Printstream (Well-Worn),False,True,,True,True,146,True,True,138,0.0897,45.5013,44.47,93.72
 StatTrak™ AK-47 | Uncharted (Minimal Wear),False,True,,True,True,146,True,True,140,0.0337,3.0345,2.94,3.89
-MP9 | Ruby Poison Dart (Factory New),False,True,,True,True,146,True,True,141,0.177,10.3305,9.08,14.87
 MAC-10 | Neon Rider (Minimal Wear),False,True,,True,True,146,True,True,144,1.1845,127.6554,112.99,1942.11
 ★ Broken Fang Gloves | Yellow-banded (Field-Tested),False,True,,True,True,146,True,True,146,0.0618,59.361,55.47,66.24
 ★ Navaja Knife | Doppler (Factory New),False,True,,True,True,147,True,True,146,0.4667,184.9659,119.63,417.41
-StatTrak™ Glock-18 | Vogue (Field-Tested),False,True,,True,True,148,True,True,142,0.1659,6.7293,6.17,17.36
 AWP | Green Energy (Minimal Wear),False,True,,True,True,148,True,True,145,0.0717,27.9753,26.33,35.97
-StatTrak™ M4A1-S | Emphorosaur-S (Factory New),False,True,,True,True,149,True,True,142,0.1538,8.7132,7.53,12.2
+★ Hand Wraps | Desert Shamagh (Field-Tested),False,True,,True,True,148,True,True,148,0.0628,48.7989,45.73,55.19
 ★ Broken Fang Gloves | Unhinged (Field-Tested),False,True,,True,True,149,True,True,149,0.061,63.672,59.91,72.34
-USP-S | Jawbreaker (Battle-Scarred),False,True,,True,True,150,True,True,145,0.1402,3.9108,3.59,5.59
 SSG 08 | Turbo Peek (Field-Tested),False,True,,True,True,151,True,True,149,0.0766,18.1542,17.09,22.91
-AUG | Momentum (Field-Tested),False,True,,True,True,151,True,True,151,0.1707,6.7709,5.64,8.7
 Glock-18 | Trace Lock (Factory New),False,True,,True,True,151,True,True,151,0.0224,9.6115,9.2,9.97
 MP7 | Astrolabe (Factory New),False,True,,True,True,152,True,True,146,0.1841,14.3506,11.2,20.8
-SSG 08 | Abyss (Factory New),False,True,,True,True,152,True,True,146,0.0999,9.0991,8.44,13.06
 Galil AR | Connexion (Factory New),False,True,,True,True,152,True,True,147,0.2194,7.3869,5.65,10.2
-Sawed-Off | Kiss♥Love (Minimal Wear),False,True,,True,True,153,True,True,153,0.1778,8.071,6.69,10.3
+M4A4 | In Living Color (Minimal Wear),False,True,,True,True,153,True,True,153,0.0532,57.1263,54.66,65.27
 ★ Broken Fang Gloves | Jade (Field-Tested),False,True,,True,True,153,True,True,153,0.0564,97.0799,90.81,107.8
 AK-47 | Ice Coaled (Battle-Scarred),False,True,,True,True,154,True,True,139,0.1161,4.636,4.31,9.33
-AWP | Asiimov (Well-Worn),False,True,,True,True,155,True,True,150,0.0444,91.8623,89.49,133.9
-AK-47 | Steel Delta (Factory New),False,True,,True,True,156,True,True,150,0.153,27.7831,24.65,39.46
+AK-47 | Rat Rod (Field-Tested),False,True,,True,True,154,True,True,148,0.0567,4.8597,4.69,6.92
 StatTrak™ Glock-18 | Shinobu (Battle-Scarred),False,True,,True,True,156,True,True,154,0.2126,9.4573,8.11,15.58
 M4A4 | Full Throttle (Field-Tested),False,True,,True,True,158,True,True,140,0.1821,48.3767,41.52,91.21
-G3SG1 | Dream Glade (Factory New),False,True,,True,True,159,True,True,159,0.1919,7.5252,6.05,10.41
-AK-47 | Emerald Pinstripe (Well-Worn),False,True,,True,True,160,True,True,148,0.0316,2.5317,2.5,3.38
 AWP | Crakow! (Battle-Scarred),False,True,,True,True,160,True,True,151,0.1885,29.8671,25.52,45.5
 M4A1-S | Chantico's Fire (Field-Tested),False,True,,True,True,160,True,True,159,0.0622,109.7594,104.02,131.88
 AWP | Elite Build (Field-Tested),False,True,,True,True,161,True,True,157,0.0407,14.4016,13.97,18.3
-XM1014 | Entombed (Factory New),False,True,,True,True,161,True,True,158,0.2463,12.0669,8.45,15.94
 ★ Driver Gloves | Racing Green (Field-Tested),False,True,,True,True,161,True,True,161,0.0955,39.5024,35.83,46.96
 P250 | Epicenter (Field-Tested),False,True,,True,True,163,True,True,161,0.1411,6.524,5.43,8.01
 USP-S | Jawbreaker (Well-Worn),False,True,,True,True,164,True,True,156,0.0488,3.614,3.55,5.48
-AWP | Neo-Noir (Minimal Wear),False,True,,True,True,164,True,True,157,0.0633,46.5923,45.1,77.14
 M4A1-S | Atomic Alloy (Field-Tested),False,True,,True,True,164,True,True,158,0.1015,33.5431,32.23,62.6
 AWP | Black Nile (Field-Tested),False,True,,True,True,165,True,True,150,0.0707,3.5467,3.39,4.76
-Desert Eagle | Kumicho Dragon (Field-Tested),False,True,,True,True,165,True,True,162,0.0322,20.7144,20.08,23.13
-AK-47 | Aquamarine Revenge (Minimal Wear),False,True,,True,True,166,True,True,165,0.0473,72.9979,70.47,100.2
 FAMAS | Rapid Eye Movement (Well-Worn),False,True,,True,True,166,True,True,166,0.0082,6.6092,6.53,6.82
 AK-47 | Neon Rider (Minimal Wear),False,True,,True,True,167,True,True,154,0.0447,78.3437,75.03,90.03
 AWP | Duality (Battle-Scarred),False,True,,True,True,167,True,True,156,0.1602,3.6671,3.3,7.36
@@ -370,82 +321,70 @@ AWP | Sun in Leo (Field-Tested),False,True,,True,True,167,True,True,164,0.0938,2
 M4A4 | Polysoup (Field-Tested),False,True,,True,True,167,True,True,164,0.096,15.1051,13.98,18.97
 ★ Specialist Gloves | Buckshot (Field-Tested),False,True,,True,True,168,True,True,168,0.0921,60.116,53.76,71.34
 AWP | Black Nile (Minimal Wear),False,True,,True,True,169,True,True,164,0.0764,6.0357,5.82,11.31
+AK-47 | Baroque Purple (Field-Tested),False,True,,True,True,169,True,True,167,0.0251,6.3175,6.12,7.64
 AWP | Ice Coaled (Battle-Scarred),False,True,,True,True,170,True,True,162,0.2038,5.6115,4.78,17.69
 MAC-10 | Cat Fight (Factory New),False,True,,True,True,170,True,True,163,0.1876,5.0445,4.25,7.52
-AK-47 | Crane Flight (Minimal Wear),False,True,,True,True,172,True,True,163,0.0811,42.2772,40.31,77.41
-★ Moto Gloves | 3rd Commando Company (Field-Tested),False,True,,True,True,172,True,True,171,0.0886,49.6303,45.21,59.74
+StatTrak™ Glock-18 | Moonrise (Factory New),False,True,,True,True,170,True,True,166,0.197,7.4102,6.49,11.6
+★ Hand Wraps | CAUTION! (Field-Tested),False,True,,True,True,171,True,True,171,0.0686,132.3313,124.24,153.14
+MP9 | Mount Fuji (Field-Tested),False,True,,True,True,172,True,True,169,0.0807,6.5147,5.86,7.75
 StatTrak™ AK-47 | Searing Rage (Field-Tested),False,True,,True,True,173,True,True,166,0.0714,10.139,9.54,13.25
-AK-47 | Inheritance (Battle-Scarred),False,True,,True,True,174,True,True,163,0.0947,44.4124,42.56,87.56
-StatTrak™ AK-47 | Ice Coaled (Field-Tested),False,True,,True,True,174,True,True,164,0.081,11.1634,10.76,16.89
 AK-47 | Legion of Anubis (Minimal Wear),False,True,,True,True,174,True,True,170,0.036,39.0429,37.96,50.67
-P2000 | Wicked Sick (Minimal Wear),False,True,,True,True,174,True,True,173,0.201,8.1194,6.62,10.72
 AWP | Fever Dream (Minimal Wear),False,True,,True,True,176,True,True,171,0.0264,16.0649,15.69,17.78
-M4A1-S | Fizzy POP (Factory New),False,True,,True,True,179,True,True,175,0.2014,13.1687,11.08,19.6
 AK-47 | Emerald Pinstripe (Battle-Scarred),False,True,,True,True,180,True,True,166,1.1053,3.4161,2.55,53.15
 P90 | Asiimov (Field-Tested),False,True,,True,True,180,True,True,179,0.0397,181.2289,173.8,200.23
 AK-47 | The Oligarch (Minimal Wear),False,True,,True,True,181,True,True,169,0.0895,108.3499,102.57,214.13
 Glock-18 | Mirror Mosaic (Field-Tested),False,True,,True,True,181,True,True,172,0.1387,7.8302,7.13,15.6
-AWP | Hyper Beast (Minimal Wear),False,True,,True,True,181,True,True,177,0.0879,56.1144,53.9,113.62
 M4A1-S | Electrum (Minimal Wear),False,True,,True,True,181,True,True,178,0.101,4.6034,4.56,10.7
 AWP | Atheris (Well-Worn),False,True,,True,True,184,True,True,176,0.1021,3.7817,3.69,8.71
-Glock-18 | Blue Fissure (Minimal Wear),False,True,,True,True,185,True,True,177,0.4575,10.9243,9.76,70.09
-AK-47 | Crane Flight (Field-Tested),False,True,,True,True,186,True,True,183,0.0188,26.3732,26.31,31.54
+M4A4 | 龍王 (Dragon King) (Minimal Wear),False,True,,True,True,186,True,True,183,0.0489,28.3181,27.26,33.29
 M4A4 | Temukau (Factory New),False,True,,True,True,187,True,True,178,0.2239,137.1898,113.22,217.78
 AWP | Fever Dream (Field-Tested),False,True,,True,True,188,True,True,184,0.0183,13.3046,12.97,14.52
 Tec-9 | Groundwater (Factory New),False,True,,True,True,188,True,True,185,0.116,3.7751,3.46,5.59
 M4A4 | 龍王 (Dragon King) (Field-Tested),False,True,,True,True,188,True,True,186,0.0659,15.7045,14.92,21.46
-StatTrak™ USP-S | Guardian (Minimal Wear),False,True,,True,True,189,True,True,185,0.0369,7.1852,6.99,8.87
+Desert Eagle | Mecha Industries (Factory New),False,True,,True,True,189,True,True,182,0.1966,19.3763,17.34,32.6
 AWP | Chromatic Aberration (Field-Tested),False,True,,True,True,189,True,True,186,0.0471,38.5518,37.0,46.22
 MP7 | Bloodsport (Minimal Wear),False,True,,True,True,189,True,True,188,0.1479,52.6596,45.78,72.85
 StatTrak™ M4A1-S | Black Lotus (Field-Tested),False,True,,True,True,190,True,True,181,0.0872,15.6575,15.03,25.93
 M4A1-S | Golden Coil (Field-Tested),False,True,,True,True,191,True,True,185,0.0619,72.4588,68.64,93.12
+AK-47 | Rat Rod (Minimal Wear),False,True,,True,True,191,True,True,189,0.0233,10.147,9.91,10.97
 P250 | Muertos (Field-Tested),False,True,,True,True,191,True,True,189,0.0403,13.4751,12.74,14.68
-AUG | Stymphalian (Field-Tested),False,True,,True,True,191,True,True,191,0.0888,4.0386,3.67,4.67
-Five-SeveN | Urban Hazard (Factory New),False,True,,True,True,194,True,True,190,0.3683,6.3598,5.66,35.86
 ★ Hand Wraps | Duct Tape (Field-Tested),False,True,,True,True,194,True,True,194,0.0669,55.5445,52.08,63.88
 ★ Moto Gloves | Transport (Field-Tested),False,True,,True,True,194,True,True,194,0.1018,46.0599,40.63,56.21
-AK-47 | Emerald Pinstripe (Factory New),False,True,,True,True,195,True,True,192,0.1935,32.0039,27.52,46.95
 UMP-45 | K.O. Factory (Minimal Wear),False,True,,True,True,195,True,True,193,0.205,8.9555,7.05,11.92
 Glock-18 | Gold Toof (Field-Tested),False,True,,True,True,197,True,True,192,0.1082,37.0579,32.53,65.45
+Desert Eagle | Ocean Drive (Field-Tested),False,True,,True,True,197,True,True,195,0.0652,71.8687,67.61,88.55
 M4A4 | In Living Color (Field-Tested),False,True,,True,True,198,True,True,195,0.0638,40.0613,37.97,48.08
+AWP | Neo-Noir (Factory New),False,True,,True,True,203,True,True,198,0.1111,60.4147,56.48,87.44
 FAMAS | Bad Trip (Field-Tested),False,True,,True,True,203,True,True,202,0.0356,50.088,48.82,61.31
 M4A1-S | Vaporwave (Minimal Wear),False,True,,True,True,204,True,True,198,0.0608,97.6363,91.44,117.95
 AK-47 | Breakthrough (Field-Tested),False,True,,True,True,205,True,True,201,0.0257,3.8311,3.82,4.99
 StatTrak™ M4A1-S | Night Terror (Factory New),False,True,,True,True,205,True,True,201,0.1858,6.8923,5.77,9.9
 M4A1-S | Black Lotus (Battle-Scarred),False,True,,True,True,206,True,True,191,0.308,6.5608,5.55,29.9
+StatTrak™ USP-S | Ticket to Hell (Factory New),False,True,,True,True,206,True,True,201,0.1858,7.1055,6.02,11.12
+AK-47 | Legion of Anubis (Factory New),False,True,,True,True,207,True,True,202,0.2168,72.0259,63.08,113.6
 M4A1-S | Leaded Glass (Minimal Wear),False,True,,True,True,207,True,True,202,0.0441,10.6261,10.2,12.88
-AK-47 | Safety Net (Field-Tested),False,True,,True,True,208,True,True,195,0.0613,3.0527,2.9,4.83
-MP7 | Abyssal Apparition (Minimal Wear),False,True,,True,True,208,True,True,207,0.117,9.8053,8.81,12.38
+Glock-18 | Nuclear Garden (Factory New),False,True,,True,True,209,True,True,203,0.186,35.059,31.01,72.21
 M4A4 | Tooth Fairy (Minimal Wear),False,True,,True,True,211,True,True,209,0.136,6.9521,6.05,8.76
 AWP | Neo-Noir (Field-Tested),False,True,,True,True,212,True,True,207,0.0265,43.796,42.65,55.22
 AK-47 | The Oligarch (Field-Tested),False,True,,True,True,214,True,True,208,0.0939,85.5716,78.73,105.85
 AK-47 | Emerald Pinstripe (Minimal Wear),False,True,,True,True,216,True,True,207,0.3678,4.9388,4.51,30.63
-MP9 | Hydra (Field-Tested),False,True,,True,True,216,True,True,209,0.129,6.9597,6.26,11.27
 USP-S | Kill Confirmed (Field-Tested),False,True,,True,True,217,True,True,213,0.0971,74.507,69.28,138.13
 AWP | Black Nile (Battle-Scarred),False,True,,True,True,219,True,True,205,0.2208,4.3921,3.33,8.83
 AWP | Atheris (Battle-Scarred),False,True,,True,True,219,True,True,211,0.4506,4.6979,3.93,28.17
 AK-47 | Searing Rage (Battle-Scarred),False,True,,True,True,221,True,True,211,0.0987,4.6325,4.44,6.65
-Dual Berettas | Melondrama (Minimal Wear),False,True,,True,True,221,True,True,220,0.1274,9.9824,8.92,14.07
-★ Moto Gloves | Blood Pressure (Field-Tested),False,True,,True,True,221,True,True,221,0.1236,148.333,128.4,186.48
 USP-S | Black Lotus (Minimal Wear),False,True,,True,True,223,True,True,217,0.0838,3.3096,3.15,7.0
-Glock-18 | Water Elemental (Factory New),False,True,,True,True,225,True,True,223,0.1149,40.1508,37.65,59.83
 M4A1-S | Blood Tiger (Minimal Wear),False,True,,True,True,226,True,True,214,0.0751,5.4045,5.17,10.49
 StatTrak™ AWP | Duality (Field-Tested),False,True,,True,True,227,True,True,219,0.1358,6.5759,5.93,11.45
-AK-47 | Point Disarray (Minimal Wear),False,True,,True,True,227,True,True,220,0.0362,24.5118,23.77,30.29
 AK-47 | Neon Revolution (Field-Tested),False,True,,True,True,227,True,True,221,0.0382,102.176,97.85,126.21
+Sawed-Off | Kiss♥Love (Field-Tested),False,True,,True,True,227,True,True,224,0.1546,3.9099,3.44,5.32
 Glock-18 | Block-18 (Factory New),False,True,,True,True,228,True,True,219,0.2539,3.8655,3.04,9.17
-FAMAS | Rapid Eye Movement (Minimal Wear),False,True,,True,True,228,True,True,225,0.0945,9.5837,9.02,13.59
 M4A1-S | Mecha Industries (Field-Tested),False,True,,True,True,228,True,True,225,0.0412,100.4827,97.11,128.69
 M4A1-S | Guardian (Field-Tested),False,True,,True,True,230,True,True,219,0.0799,28.6777,27.68,57.93
 ★ Driver Gloves | Queen Jaguar (Field-Tested),False,True,,True,True,232,True,True,232,0.1224,68.4708,58.04,82.52
 Glock-18 | Grinder (Minimal Wear),False,True,,True,True,233,True,True,226,0.0507,3.5964,3.45,5.47
-M4A1-S | Cyrex (Field-Tested),False,True,,True,True,234,True,True,232,0.0194,172.6095,168.78,187.36
 AWP | Ice Coaled (Field-Tested),False,True,,True,True,237,True,True,234,0.1066,8.5013,7.63,13.29
-Desert Eagle | Printstream (Factory New),False,True,,True,True,239,True,True,224,0.2292,100.0509,84.26,198.73
-AK-47 | Phantom Disruptor (Minimal Wear),False,True,,True,True,239,True,True,236,0.0417,8.9982,8.72,10.55
 AK-47 | Cartel (Minimal Wear),False,True,,True,True,244,True,True,237,0.131,23.0828,22.38,66.59
 P250 | Visions (Minimal Wear),False,True,,True,True,244,True,True,242,0.1864,7.0155,5.52,9.04
-★ Shadow Daggers | Gamma Doppler (Factory New),False,True,,True,True,245,True,True,245,0.3582,136.9781,107.94,272.12
 AK-47 | The Outsiders (Field-Tested),False,True,,True,True,246,True,True,238,0.0712,8.801,8.35,11.53
 StatTrak™ USP-S | Guardian (Field-Tested),False,True,,True,True,248,True,True,232,0.1031,5.1867,4.71,9.72
 ★ Driver Gloves | Rezan the Red (Field-Tested),False,True,,True,True,248,True,True,247,0.0985,74.7131,67.0,89.38
@@ -456,37 +395,31 @@ M4A1-S | Hyper Beast (Field-Tested),False,True,,True,True,253,True,True,252,0.07
 UMP-45 | Primal Saber (Field-Tested),False,True,,True,True,253,True,True,253,0.1192,14.2123,12.28,17.11
 AK-47 | Bloodsport (Minimal Wear),False,True,,True,True,256,True,True,252,0.0649,137.9577,133.24,245.77
 StatTrak™ AK-47 | Slate (Minimal Wear),False,True,,True,True,260,True,True,238,0.0998,22.6413,21.73,41.6
+StatTrak™ AK-47 | Slate (Well-Worn),False,True,,True,True,262,True,True,250,0.0474,13.1831,12.75,18.09
 ★ Moto Gloves | POW! (Field-Tested),False,True,,True,True,262,True,True,262,0.1505,129.8501,106.47,170.56
 Desert Eagle | Mecha Industries (Minimal Wear),False,True,,True,True,264,True,True,256,0.0668,8.7657,8.34,11.21
 ★ Moto Gloves | Smoke Out (Field-Tested),False,True,,True,True,264,True,True,264,0.1516,133.8694,114.32,176.7
 Glock-18 | Vogue (Minimal Wear),False,True,,True,True,265,True,True,258,0.1776,6.7715,6.29,19.5
 ★ Sport Gloves | Bronze Morph (Field-Tested),False,True,,True,True,265,True,True,265,0.067,115.6724,106.21,134.12
 Desert Eagle | Crimson Web (Field-Tested),False,True,,True,True,269,True,True,266,0.1242,13.7436,12.83,35.45
-XM1014 | Entombed (Minimal Wear),False,True,,True,True,269,True,True,268,0.2031,6.068,4.44,7.58
-Tec-9 | Fuel Injector (Field-Tested),False,True,,True,True,270,True,True,266,0.0873,12.2222,11.43,22.77
+M4A4 | Evil Daimyo (Field-Tested),False,True,,True,True,275,True,True,263,0.2554,3.6381,3.47,18.67
 AK-47 | Bloodsport (Field-Tested),False,True,,True,True,275,True,True,268,0.0289,131.4582,127.5,166.19
 AWP | Hyper Beast (Field-Tested),False,True,,True,True,276,True,True,270,0.0747,38.4565,35.99,47.19
-AK-47 | Nouveau Rouge (Field-Tested),False,True,,True,True,277,True,True,269,0.1244,16.2647,14.45,21.62
-M4A1-S | Player Two (Field-Tested),False,True,,True,True,278,True,True,274,0.0883,63.2409,57.76,77.27
+★ Specialist Gloves | Marble Fade (Field-Tested),False,True,,True,True,276,True,True,276,0.2044,185.5174,144.97,262.23
 USP-S | The Traitor (Field-Tested),False,True,,True,True,279,True,True,276,0.0725,40.9052,38.97,55.07
-★ Driver Gloves | Overtake (Field-Tested),False,True,,True,True,282,True,True,281,0.117,66.8698,57.3,83.35
 Glock-18 | Shinobu (Well-Worn),False,True,,True,True,283,True,True,276,0.0318,4.3671,4.32,5.79
+AK-47 | Frontside Misty (Minimal Wear),False,True,,True,True,285,True,True,276,0.1341,31.8267,30.4,92.09
 StatTrak™ AK-47 | Slate (Battle-Scarred),False,True,,True,True,286,True,True,264,0.1281,12.9036,11.81,22.75
-Galil AR | Tuxedo (Factory New),False,True,,True,True,286,True,True,271,0.4232,4.7257,3.97,30.66
-M4A1-S | Nitro (Factory New),False,True,,True,True,290,True,True,276,0.0928,20.8976,19.93,46.79
-M4A1-S | Decimator (Minimal Wear),False,True,,True,True,292,True,True,277,0.1078,20.7397,19.83,45.04
-AK-47 | Inheritance (Factory New),False,True,,True,True,294,True,True,277,1.0412,159.7097,130.64,2970.49
-Glock-18 | Shinobu (Minimal Wear),False,True,,True,True,295,True,True,280,0.1221,10.0594,9.37,20.84
-Galil AR | Eco (Field-Tested),False,True,,True,True,295,True,True,283,0.2354,16.418,12.94,24.75
+AK-47 | Aquamarine Revenge (Field-Tested),False,True,,True,True,287,True,True,277,0.0876,45.065,42.01,63.81
 AK-47 | Head Shot (Minimal Wear),False,True,,True,True,297,True,True,291,0.116,65.3897,59.01,87.68
 AK-47 | Crossfade (Minimal Wear),False,True,,True,True,300,True,True,292,0.0443,3.71,3.56,4.86
 Galil AR | Chromatic Aberration (Field-Tested),False,True,,True,True,305,True,True,298,0.0695,4.4918,4.31,6.53
-Desert Eagle | Sputnik (Factory New),False,True,,True,True,305,True,True,300,0.1943,10.369,9.03,19.7
-★ Specialist Gloves | Mogul (Field-Tested),False,True,,True,True,308,True,True,308,0.0931,123.5584,110.31,145.92
 M4A1-S | Glitched Paint (Minimal Wear),False,True,,True,True,309,True,True,300,0.2281,5.355,4.6,23.3
 AWP | Mortis (Minimal Wear),False,True,,True,True,309,True,True,306,0.0789,6.0949,5.82,7.68
 M4A4 | Temukau (Minimal Wear),False,True,,True,True,311,True,True,301,0.144,77.2444,61.76,98.07
+★ Paracord Knife | Doppler (Factory New),False,True,,True,True,315,True,True,315,0.4728,323.5178,197.19,733.64
 Desert Eagle | Printstream (Minimal Wear),False,True,,True,True,317,True,True,303,0.0833,48.5124,45.3,75.38
+★ Sport Gloves | Big Game (Field-Tested),False,True,,True,True,319,True,True,310,0.1088,168.7508,143.74,206.17
 M4A1-S | Stratosphere (Field-Tested),False,True,,True,True,319,True,True,317,0.1516,8.045,6.55,9.95
 Galil AR | Sky Mandala (Factory New),False,True,,True,True,319,True,True,318,0.1972,2.72,2.69,12.27
 P2000 | Amber Fade (Factory New),False,True,,True,True,321,True,True,310,0.2172,4.6247,3.86,12.81
@@ -496,27 +429,22 @@ USP-S | Cyrex (Minimal Wear),False,True,,True,True,322,True,True,314,0.0341,4.26
 MP7 | Fade (Minimal Wear),False,True,,True,True,324,True,True,280,0.1179,9.9002,8.55,12.74
 AK-47 | Point Disarray (Field-Tested),False,True,,True,True,325,True,True,315,0.0419,14.7068,14.33,20.03
 ★ Hand Wraps | Overprint (Field-Tested),False,True,,True,True,325,True,True,325,0.0589,118.4122,111.16,133.7
-AWP | Printstream (Minimal Wear),False,True,,True,True,328,True,True,314,0.1049,90.3197,86.47,206.93
 AK-47 | Legion of Anubis (Field-Tested),False,True,,True,True,328,True,True,326,0.0406,39.0168,37.3,44.81
-AWP | Chromatic Aberration (Minimal Wear),False,True,,True,True,331,True,True,329,0.1805,64.5389,44.66,78.78
 ★ Gut Knife | Doppler (Factory New),False,True,,True,True,332,True,True,330,0.6011,190.1822,126.0,558.33
 AWP | Atheris (Minimal Wear),False,True,,True,True,334,True,True,316,0.1783,8.6657,8.3,33.32
+USP-S | Stainless (Minimal Wear),False,True,,True,True,334,True,True,327,0.2608,12.8422,12.21,70.8
 ★ Moto Gloves | Polygon (Field-Tested),False,True,,True,True,335,True,True,335,0.1208,140.2474,120.33,173.18
 M4A4 | Neo-Noir (Field-Tested),False,True,,True,True,345,True,True,341,0.1199,39.5447,35.4,53.73
-StatTrak™ AK-47 | Elite Build (Well-Worn),False,True,,True,True,347,True,True,337,0.1795,4.1525,4.02,17.93
 MP9 | Starlight Protector (Field-Tested),False,True,,True,True,347,True,True,346,0.0742,73.2824,67.73,93.46
 AWP | Wildfire (Field-Tested),False,True,,True,True,348,True,True,337,0.062,49.7881,47.38,59.96
 USP-S | Ticket to Hell (Factory New),False,True,,True,True,350,True,True,339,0.2039,4.412,3.69,6.53
 USP-S | Cortex (Minimal Wear),False,True,,True,True,351,True,True,339,0.0615,7.9677,7.79,15.59
-AK-47 | Neon Rider (Field-Tested),False,True,,True,True,353,True,True,332,0.0824,48.5702,45.44,63.25
-MAC-10 | Disco Tech (Field-Tested),False,True,,True,True,363,True,True,350,0.0955,6.234,5.84,11.51
+AK-47 | Searing Rage (Minimal Wear),False,True,,True,True,355,True,True,347,0.1491,9.1317,7.85,15.04
 AWP | Chrome Cannon (Field-Tested),False,True,,True,True,364,True,True,353,0.0916,33.01,30.62,45.88
 ★ Kukri Knife | Fade (Factory New),False,True,,True,True,369,True,True,320,0.0955,201.6015,177.11,261.57
-USP-S | Printstream (Minimal Wear),False,True,,True,True,369,True,True,357,0.1386,72.6273,63.79,178.08
 M4A1-S | Nightmare (Field-Tested),False,True,,True,True,370,True,True,364,0.0998,9.7184,9.15,13.42
 StatTrak™ AK-47 | Elite Build (Field-Tested),False,True,,True,True,375,True,True,365,0.0634,5.886,5.7,9.71
 UMP-45 | K.O. Factory (Field-Tested),False,True,,True,True,378,True,True,376,0.1524,5.9289,5.06,7.75
-M4A4 | The Emperor (Field-Tested),False,True,,True,True,380,True,True,374,0.1272,68.4127,58.89,89.51
 Desert Eagle | Mecha Industries (Field-Tested),False,True,,True,True,381,True,True,368,0.0452,6.0052,5.78,7.89
 M4A1-S | Leaded Glass (Field-Tested),False,True,,True,True,382,True,True,376,0.044,10.3013,10.01,14.77
 USP-S | Cyrex (Field-Tested),False,True,,True,True,384,True,True,378,0.0671,3.9882,3.87,8.7
@@ -525,7 +453,6 @@ Glock-18 | Gamma Doppler (Field-Tested),False,True,,True,True,390,True,True,369,
 Glock-18 | Shinobu (Battle-Scarred),False,True,,True,True,391,True,True,379,3.2115,6.5801,4.52,422.47
 StatTrak™ AK-47 | Slate (Field-Tested),False,True,,True,True,394,True,True,359,0.0991,14.911,14.13,32.2
 AWP | PAW (Minimal Wear),False,True,,True,True,397,True,True,383,0.0492,3.5869,3.51,6.2
-Glock-18 | Gamma Doppler (Minimal Wear),False,True,,True,True,400,True,True,346,0.6304,186.9142,103.59,476.61
 AK-47 | Slate (Well-Worn),False,True,,True,True,400,True,True,360,0.4365,4.2942,4.06,39.41
 Desert Eagle | Heat Treated (Minimal Wear),False,True,,True,True,400,True,True,363,0.5113,3.9314,3.51,29.58
 AK-47 | Slate (Battle-Scarred),False,True,,True,True,400,True,True,366,0.1461,4.4753,4.02,7.08
@@ -537,19 +464,15 @@ AK-47 | Elite Build (Minimal Wear),False,True,,True,True,400,True,True,371,0.083
 AK-47 | Ice Coaled (Field-Tested),False,True,,True,True,400,True,True,375,0.1581,5.0839,4.72,18.68
 M4A1-S | Black Lotus (Minimal Wear),False,True,,True,True,400,True,True,375,0.1113,9.4723,8.82,23.82
 USP-S | Jawbreaker (Field-Tested),False,True,,True,True,400,True,True,377,0.1219,4.4624,4.15,8.14
-AK-47 | Redline (Field-Tested),False,True,,True,True,400,True,True,378,0.334,43.5744,31.48,125.93
-AK-47 | Slate (Factory New),False,True,,True,True,400,True,True,380,0.1972,22.1814,19.69,60.46
 USP-S | Cortex (Field-Tested),False,True,,True,True,400,True,True,380,0.1551,4.0462,3.9,15.58
-AK-47 | Ice Coaled (Factory New),False,True,,True,True,400,True,True,381,0.2124,24.0195,21.11,69.99
-AK-47 | Midnight Laminate (Field-Tested),False,True,,True,True,400,True,True,381,0.2393,6.2808,4.56,12.71
 AK-47 | Slate (Minimal Wear),False,True,,True,True,400,True,True,381,0.1659,7.6176,7.2,29.12
 AWP | Atheris (Field-Tested),False,True,,True,True,400,True,True,381,0.11,5.1582,4.87,9.97
 AWP | Redline (Field-Tested),False,True,,True,True,400,True,True,382,0.1595,41.5479,38.61,149.32
 AK-47 | Ice Coaled (Minimal Wear),False,True,,True,True,400,True,True,383,0.0716,8.6675,8.21,13.93
+AWP | Asiimov (Field-Tested),False,True,,True,True,400,True,True,383,0.1979,126.2979,110.35,280.25
 AWP | Asiimov (Battle-Scarred),False,True,,True,True,400,True,True,384,0.6937,179.5199,78.44,433.09
 M4A1-S | Black Lotus (Field-Tested),False,True,,True,True,400,True,True,384,0.2711,5.9976,5.64,37.74
 Desert Eagle | Printstream (Field-Tested),False,True,,True,True,400,True,True,385,0.0823,40.192,36.49,65.7
-M4A1-S | Decimator (Field-Tested),False,True,,True,True,400,True,True,385,0.0474,14.3104,13.72,17.87
 M4A1-S | Solitude (Minimal Wear),False,True,,True,True,400,True,True,385,0.4794,5.851,5.31,60.18
 AWP | Mortis (Field-Tested),False,True,,True,True,400,True,True,386,0.0508,3.9137,3.8,6.77
 AWP | Printstream (Field-Tested),False,True,,True,True,400,True,True,386,0.1686,55.502,48.25,160.84
@@ -557,20 +480,15 @@ Desert Eagle | Mulberry (Field-Tested),False,True,,True,True,400,True,True,386,0
 AK-47 | Phantom Disruptor (Field-Tested),False,True,,True,True,400,True,True,387,0.0273,6.1064,5.92,6.78
 Glock-18 | Shinobu (Field-Tested),False,True,,True,True,400,True,True,387,0.1114,5.6246,5.3,10.82
 Glock-18 | Vogue (Field-Tested),False,True,,True,True,400,True,True,387,0.0955,4.2092,3.91,5.83
-M4A1-S | Printstream (Field-Tested),False,True,,True,True,400,True,True,387,0.0803,193.488,177.25,240.97
 AWP | Duality (Minimal Wear),False,True,,True,True,400,True,True,388,0.2136,8.0703,6.33,13.95
+USP-S | Guardian (Minimal Wear),False,True,,True,True,400,True,True,388,0.1845,3.7653,3.54,14.39
 USP-S | Printstream (Field-Tested),False,True,,True,True,400,True,True,390,0.1218,42.9025,37.86,54.72
-USP-S | Royal Guard (Minimal Wear),False,True,,True,True,400,True,True,390,0.1155,4.8396,4.29,8.56
-Desert Eagle | Conspiracy (Minimal Wear),False,True,,True,True,400,True,True,391,0.0375,19.4615,18.84,26.47
 Zeus x27 | Olympus (Minimal Wear),False,True,,True,True,400,True,True,391,0.2119,5.7743,4.32,10.57
 AK-47 | Frontside Misty (Field-Tested),False,True,,True,True,400,True,True,392,0.1003,18.996,17.33,27.22
-AK-47 | Inheritance (Minimal Wear),False,True,,True,True,400,True,True,392,0.0474,77.1028,72.96,90.59
 AK-47 | Searing Rage (Field-Tested),False,True,,True,True,400,True,True,392,0.148,5.6884,5.23,13.05
-Five-SeveN | Monkey Business (Field-Tested),False,True,,True,True,400,True,True,392,0.1719,14.7627,12.59,21.7
+M4A1-S | Vaporwave (Field-Tested),False,True,,True,True,400,True,True,392,0.0697,60.8379,56.42,75.62
 AK-47 | Asiimov (Field-Tested),False,True,,True,True,400,True,True,393,0.0941,46.0501,41.65,59.41
-AK-47 | Inheritance (Field-Tested),False,True,,True,True,400,True,True,393,0.0951,52.7715,48.19,64.54
 M4A4 | Tooth Fairy (Field-Tested),False,True,,True,True,400,True,True,393,0.0942,4.1594,3.79,5.41
-Desert Eagle | Mulberry (Minimal Wear),False,True,,True,True,400,True,True,394,0.1011,13.1415,11.55,16.95
 XM1014 | Solitude (Minimal Wear),False,True,,True,True,400,True,True,394,0.2415,5.7053,5.25,31.31
 AWP | Duality (Field-Tested),False,True,,True,True,400,True,True,395,0.2373,4.7477,3.69,6.47
 Glock-18 | Glockingbird (Minimal Wear),False,True,,True,True,400,True,True,395,0.1124,3.1296,2.54,3.63
@@ -580,15 +498,9 @@ M4A4 | Temukau (Field-Tested),False,True,,True,True,400,True,True,396,0.1275,42.
 P250 | Visions (Field-Tested),False,True,,True,True,400,True,True,396,0.1439,4.2694,3.5,5.33
 Zeus x27 | Olympus (Field-Tested),False,True,,True,True,400,True,True,396,0.1391,3.5793,3.07,4.37
 AK-47 | Head Shot (Field-Tested),False,True,,True,True,400,True,True,397,0.1476,42.7844,36.68,56.75
-Glock-18 | Water Elemental (Field-Tested),False,True,,True,True,400,True,True,397,0.0424,19.6666,18.78,21.99
-P2000 | Wicked Sick (Field-Tested),False,True,,True,True,400,True,True,398,0.2434,4.7232,3.61,6.68
-★ Specialist Gloves | Crimson Web (Field-Tested),False,True,,True,True,400,True,True,398,0.191,171.8204,137.11,233.39
 FAMAS | Rapid Eye Movement (Field-Tested),False,True,,True,True,400,True,True,399,0.0908,7.1108,6.18,8.94
 MP7 | Abyssal Apparition (Field-Tested),False,True,,True,True,400,True,True,399,0.0936,7.1173,6.36,8.88
 P250 | Asiimov (Field-Tested),False,True,,True,True,400,True,True,399,0.1666,14.3947,12.54,21.45
-UMP-45 | Wild Child (Field-Tested),False,True,,True,True,400,True,True,399,0.2076,4.8985,3.58,6.4
 ★ Driver Gloves | Black Tie (Field-Tested),False,True,,True,True,400,True,True,399,0.2088,168.5133,134.06,232.46
+★ Driver Gloves | Imperial Plaid (Field-Tested),False,True,,True,True,400,True,True,399,0.2265,242.4119,187.03,330.74
 ★ Driver Gloves | King Snake (Field-Tested),False,True,,True,True,400,True,True,399,0.2809,205.654,145.94,286.67
-★ Specialist Gloves | Fade (Field-Tested),False,True,,True,True,400,True,True,399,0.2429,251.0359,185.86,342.8
-XM1014 | Entombed (Field-Tested),False,True,,True,True,400,True,True,400,0.1019,4.184,3.54,4.75
-★ Sport Gloves | Omega (Field-Tested),False,True,,True,True,400,True,True,400,0.2047,253.9164,198.47,342.79
