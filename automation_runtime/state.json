@@ -13,54 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
+  "queue_pointer": 5,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 21,
+  "last_tier_queue_index": 4,
+  "last_batch_start_pointer": 63,
   "last_batch_items": [
-    "M4A1-S | Black Lotus (Minimal Wear)",
-    "AK-47 | Ice Coaled (Minimal Wear)",
-    "AK-47 | Slate (Minimal Wear)",
-    "USP-S | Cortex (Field-Tested)",
-    "Desert Eagle | Mulberry (Field-Tested)"
+    "AK-47 | Emerald Pinstripe (Field-Tested)",
+    "Glock-18 | Vogue (Minimal Wear)",
+    "UMP-45 | K.O. Factory (Minimal Wear)",
+    "AK-47 | Frontside Misty (Field-Tested)",
+    "AWP | Mortis (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-27T20:05:05.510258+00:00",
-  "last_finished_at_utc": "2026-05-27T20:07:14.859147+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-27T20:07:14.859147+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-27T16:51:11.771360+00:00",
+  "last_run_at_utc": "2026-05-28T20:51:39.501186+00:00",
+  "last_finished_at_utc": "2026-05-28T20:54:08.832600+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-28T20:54:08.832600+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-28T17:04:17.561973+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "USP-S | Cortex (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"4/5 USP-S | Cortex (Field-Tested)\": Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    },
-    {
-      "market_hash_name": "Desert Eagle | Mulberry (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"5/5 Desert Eagle | Mulberry (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mulberry%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    }
-  ],
-  "last_listing_error_count": 2,
-  "last_listing_rows": 300,
-  "last_enriched_rows": 300,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 418,
+  "last_enriched_rows": 418,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1553064
+    "sender_pid": 1594063
   },
   "tiers": {
     "A": {
