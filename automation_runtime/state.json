@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "c6400fa844f510e29b31932533047ce9ef8ef2015e1e2bce42791a69e33c6276",
-  "items_count": 346,
-  "queue_signature": "b72d30238d19ef65aa4d4df8e19ceb9a95a6c4f6229ae2bda4c8427948530aaf",
+  "items_signature": "e2c8416a4991e4200a46dbbe7ab382e94a4500e5717ae244d494e98e2baa9662",
+  "items_count": 373,
+  "queue_signature": "ba468a3e759ed9ea9a0315ef24dfd682373c218d9533076d67570dda392cdb1d",
   "queue_pattern": [
     "A",
     "A",
@@ -16,43 +16,43 @@
   "queue_pointer": 5,
   "last_tier": "A",
   "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 63,
+  "last_batch_start_pointer": 38,
   "last_batch_items": [
-    "AK-47 | Emerald Pinstripe (Field-Tested)",
-    "Glock-18 | Vogue (Minimal Wear)",
-    "UMP-45 | K.O. Factory (Minimal Wear)",
-    "AK-47 | Frontside Misty (Field-Tested)",
-    "AWP | Mortis (Minimal Wear)"
+    "USP-S | Royal Guard (Minimal Wear)",
+    "AK-47 | Searing Rage (Minimal Wear)",
+    "MP9 | Starlight Protector (Field-Tested)",
+    "AWP | Duality (Battle-Scarred)",
+    "XM1014 | Entombed (Field-Tested)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-28T20:51:39.501186+00:00",
-  "last_finished_at_utc": "2026-05-28T20:54:08.832600+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-28T20:54:08.832600+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-28T17:04:17.561973+00:00",
+  "last_run_at_utc": "2026-05-29T20:52:53.791544+00:00",
+  "last_finished_at_utc": "2026-05-29T20:55:25.036031+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-29T20:55:25.036031+00:00",
+  "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 418,
-  "last_enriched_rows": 418,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1594063
+    "sender_pid": 1654780
   },
   "tiers": {
     "A": {
-      "items_signature": "0f58880ca0b4ca3255e4182cc3947786cf2b3412bda9e673764036712c8c6fcc",
-      "items_count": 104
+      "items_signature": "fb451729cc515d79e21d733508db6a2353724f4f504c564146e365b20458da17",
+      "items_count": 112
     },
     "B": {
-      "items_signature": "18453531ceb62c5a7a6e14104b979f99481bf1c84a9c550070d155bf9b4c3887",
-      "items_count": 121
+      "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
+      "items_count": 131
     },
     "C": {
-      "items_signature": "213a5ee0a282bba68cdfb1ee2022d0ab15ed8503acde1fda5d9dd361ca0c72e9",
-      "items_count": 121
+      "items_signature": "fc12724f486579a04529cbc776988abcc3162fb536df79fd1ca9a899edc43e07",
+      "items_count": 130
     }
   }
 }
