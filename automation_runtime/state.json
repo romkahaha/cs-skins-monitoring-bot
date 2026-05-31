@@ -13,64 +13,54 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
+  "queue_pointer": 1,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 28,
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 23,
   "last_batch_items": [
-    "M4A1-S | Solitude (Minimal Wear)",
-    "AK-47 | Elite Build (Minimal Wear)",
-    "P250 | Visions (Field-Tested)",
-    "AK-47 | Ice Coaled (Battle-Scarred)",
-    "AK-47 | Searing Rage (Battle-Scarred)"
+    "AK-47 | Slate (Battle-Scarred)",
+    "AK-47 | Ice Coaled (Minimal Wear)",
+    "USP-S | Cortex (Field-Tested)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "M4A1-S | Black Lotus (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-30T19:39:20.318721+00:00",
-  "last_finished_at_utc": "2026-05-30T19:41:15.028969+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-30T19:41:15.028969+00:00",
-  "last_failed_monitoring_at_utc": null,
+  "last_run_at_utc": "2026-05-31T19:57:16.084294+00:00",
+  "last_finished_at_utc": "2026-05-31T19:59:58.684388+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-31T19:59:58.684388+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-31T10:07:31.193236+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [
     {
-      "market_hash_name": "P250 | Visions (Field-Tested)",
+      "market_hash_name": "Desert Eagle | Mulberry (Field-Tested)",
       "meta": {
         "success": false,
         "note": "exception",
-        "error": "Steam rate limit (429) for \"3/5 P250 | Visions (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P250%20%7C%20Visions%20%28Field-Tested%29",
+        "error": "Steam rate limit (429) for \"4/5 Desert Eagle | Mulberry (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mulberry%20%28Field-Tested%29",
         "pages_fetched": 0,
         "listings_target_cap": 100
       }
     },
     {
-      "market_hash_name": "AK-47 | Ice Coaled (Battle-Scarred)",
+      "market_hash_name": "M4A1-S | Black Lotus (Minimal Wear)",
       "meta": {
         "success": false,
         "note": "exception",
-        "error": "Steam rate limit (429) for \"4/5 AK-47 | Ice Coaled (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Ice%20Coaled%20%28Battle-Scarred%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    },
-    {
-      "market_hash_name": "AK-47 | Searing Rage (Battle-Scarred)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"5/5 AK-47 | Searing Rage (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Searing%20Rage%20%28Battle-Scarred%29",
+        "error": "Steam rate limit (429) for \"5/5 M4A1-S | Black Lotus (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Black%20Lotus%20%28Minimal%20Wear%29",
         "pages_fetched": 0,
         "listings_target_cap": 100
       }
     }
   ],
-  "last_listing_error_count": 3,
-  "last_listing_rows": 119,
-  "last_enriched_rows": 119,
+  "last_listing_error_count": 2,
+  "last_listing_rows": 157,
+  "last_enriched_rows": 157,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1694255
+    "sender_pid": 1760444
   },
   "tiers": {
     "A": {
