@@ -16,19 +16,19 @@
   "queue_pointer": 2,
   "last_tier": "A",
   "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 92,
+  "last_batch_start_pointer": 28,
   "last_batch_items": [
-    "Desert Eagle | Firebreathing (Factory New)",
-    "MP5-SD | Phosphor (Field-Tested)",
-    "AWP | Black Nile (Minimal Wear)",
-    "MP7 | Fade (Minimal Wear)",
-    "M4A4 | Griffin (Field-Tested)"
+    "M4A1-S | Solitude (Minimal Wear)",
+    "AK-47 | Elite Build (Minimal Wear)",
+    "P250 | Visions (Field-Tested)",
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Searing Rage (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-03T20:53:00.534354+00:00",
-  "last_finished_at_utc": "2026-06-03T20:55:09.707357+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-03T20:55:09.707357+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-31T10:07:31.193236+00:00",
+  "last_run_at_utc": "2026-06-04T20:53:09.443229+00:00",
+  "last_finished_at_utc": "2026-06-04T20:55:39.942989+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-04T20:55:39.942989+00:00",
+  "last_failed_monitoring_at_utc": "2026-06-04T15:15:55.174884+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
@@ -39,7 +39,7 @@
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1859751
+    "sender_pid": 1898313
   },
   "tiers": {
     "A": {
