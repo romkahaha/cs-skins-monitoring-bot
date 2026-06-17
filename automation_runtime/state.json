@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "e2c8416a4991e4200a46dbbe7ab382e94a4500e5717ae244d494e98e2baa9662",
-  "items_count": 373,
-  "queue_signature": "ba468a3e759ed9ea9a0315ef24dfd682373c218d9533076d67570dda392cdb1d",
+  "items_signature": "d2de71cca8d72826f00798011379de1de0a2f581ad1d6d293d3dc41f242ddf6d",
+  "items_count": 504,
+  "queue_signature": "49d4b2185e625af03c7c9611744cbafa0858e92427bf5fe949524e98f4cbbabd",
   "queue_pattern": [
     "A",
     "A",
@@ -13,46 +13,46 @@
     "B",
     "C"
   ],
-  "queue_pointer": 5,
-  "last_tier": "A",
-  "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 56,
+  "queue_pointer": 6,
+  "last_tier": "B",
+  "last_tier_queue_index": 5,
+  "last_batch_start_pointer": 168,
   "last_batch_items": [
-    "AK-47 | The Outsiders (Field-Tested)",
-    "M4A4 | Temukau (Field-Tested)",
-    "Galil AR | Chromatic Aberration (Field-Tested)",
-    "M4A1-S | Stratosphere (Field-Tested)",
-    "AK-47 | Nightwish (Field-Tested)"
+    "UMP-45 | Wild Child (Factory New)",
+    "★ Hand Wraps | Arboreal (Field-Tested)",
+    "AUG | Amber Slipstream (Factory New)",
+    "★ Broken Fang Gloves | Yellow-banded (Field-Tested)",
+    "MP5-SD | Phosphor (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-16T20:52:48.149685+00:00",
-  "last_finished_at_utc": "2026-06-16T20:55:32.813674+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-16T20:55:32.813674+00:00",
-  "last_failed_monitoring_at_utc": "2026-06-14T18:08:07.940337+00:00",
+  "last_run_at_utc": "2026-06-17T20:52:24.228638+00:00",
+  "last_finished_at_utc": "2026-06-17T20:54:14.119602+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-17T20:54:14.119602+00:00",
+  "last_failed_monitoring_at_utc": "2026-06-17T19:14:49.935171+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 393,
+  "last_enriched_rows": 393,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2398364
+    "sender_pid": 2489273
   },
   "tiers": {
     "A": {
-      "items_signature": "fb451729cc515d79e21d733508db6a2353724f4f504c564146e365b20458da17",
-      "items_count": 112
+      "items_signature": "80248106a24c59f8432dfdd2ea598456a842734cc679b7569edd8ebbf05cffb2",
+      "items_count": 151
     },
     "B": {
-      "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
-      "items_count": 131
+      "items_signature": "9d4c10f1696c1e67b7ce9e11bdbedc86d93f34c727cccd481494fbcded9bdf10",
+      "items_count": 177
     },
     "C": {
-      "items_signature": "fc12724f486579a04529cbc776988abcc3162fb536df79fd1ca9a899edc43e07",
-      "items_count": 130
+      "items_signature": "eb35bb70455fd45bcd2bbf4d0a5844e50972b81d05e97711f70a52c6a9b8473a",
+      "items_count": 176
     }
   }
 }
