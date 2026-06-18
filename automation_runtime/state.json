@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 168,
+  "queue_pointer": 4,
+  "last_tier": "A",
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 27,
   "last_batch_items": [
-    "UMP-45 | Wild Child (Factory New)",
-    "★ Hand Wraps | Arboreal (Field-Tested)",
-    "AUG | Amber Slipstream (Factory New)",
-    "★ Broken Fang Gloves | Yellow-banded (Field-Tested)",
-    "MP5-SD | Phosphor (Minimal Wear)"
+    "AK-47 | Elite Build (Minimal Wear)",
+    "M4A1-S | Black Lotus (Minimal Wear)",
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AWP | Black Nile (Field-Tested)",
+    "AK-47 | Midnight Laminate (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-17T20:52:24.228638+00:00",
-  "last_finished_at_utc": "2026-06-17T20:54:14.119602+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-17T20:54:14.119602+00:00",
+  "last_run_at_utc": "2026-06-18T20:51:59.685457+00:00",
+  "last_finished_at_utc": "2026-06-18T20:54:37.539484+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-18T20:54:37.539484+00:00",
   "last_failed_monitoring_at_utc": "2026-06-17T19:14:49.935171+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 393,
-  "last_enriched_rows": 393,
+  "last_listing_rows": 419,
+  "last_enriched_rows": 419,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2489273
+    "sender_pid": 2530991
   },
   "tiers": {
     "A": {
