@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "8345af97a22c47633a5b44ec23cb1ab89190dd9663010f248e09173f4229c2f8",
-  "items_count": 490,
-  "queue_signature": "2c2363deefb1eedfa8ecbe11f293e76fe38db2697f28329b8113eaae0d027d5c",
+  "items_signature": "bbe9bbaf30062b88f1ddaa0997daa1c1d9707876a436d250398328f690909047",
+  "items_count": 488,
+  "queue_signature": "46a948e5e47defb02799750da6b29a0eb0bd6d441ff4af404b98eeb234270237",
   "queue_pattern": [
     "A",
     "A",
@@ -13,45 +13,45 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
+  "queue_pointer": 5,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 55,
+  "last_tier_queue_index": 4,
+  "last_batch_start_pointer": 11,
   "last_batch_items": [
-    "Glock-18 | Shinobu (Minimal Wear)",
-    "AK-47 | The Outsiders (Field-Tested)",
-    "Glock-18 | Glockingbird (Minimal Wear)",
-    "MP7 | Abyssal Apparition (Minimal Wear)",
-    "Galil AR | Chromatic Aberration (Field-Tested)"
+    "AK-47 | Slate (Well-Worn)",
+    "Glock-18 | Vogue (Field-Tested)",
+    "AWP | Atheris (Field-Tested)",
+    "Desert Eagle | Firebreathing (Minimal Wear)",
+    "AK-47 | Slate (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-21T20:52:56.119534+00:00",
-  "last_finished_at_utc": "2026-06-21T20:55:37.935125+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-21T20:55:37.935125+00:00",
-  "last_failed_monitoring_at_utc": null,
+  "last_run_at_utc": "2026-06-22T20:51:30.999899+00:00",
+  "last_finished_at_utc": "2026-06-22T20:54:12.966619+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-22T20:54:12.966619+00:00",
+  "last_failed_monitoring_at_utc": "2026-06-22T19:16:48.310895+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 500,
-  "last_enriched_rows": 500,
+  "last_listing_rows": 419,
+  "last_enriched_rows": 419,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2615049
+    "sender_pid": 2638705
   },
   "tiers": {
     "A": {
-      "items_signature": "e691a6f4e84180a6ce53e234f591edbe070bd23b7573abfee148ae2b15cedfe3",
-      "items_count": 147
+      "items_signature": "61cae94be84a265dd4a6b592b29420a425a1d7a50eb51d42220321f932cd2a75",
+      "items_count": 146
     },
     "B": {
-      "items_signature": "1c509bc88363312b5b7c459d4adc3dfe48ce55cded5bfe13f049164d3c02e6c6",
-      "items_count": 172
+      "items_signature": "23c938212f5d612e367ee427fe3d1d2ec55271f7aef5b5dd2ec72b6ce70135cf",
+      "items_count": 171
     },
     "C": {
-      "items_signature": "5f0d992a11419bd3c5426973f30af948b5c4a786965f5fd8357bac1bd69eeb1c",
+      "items_signature": "3ce312ea8259c17645b9f2cdc711385541fb9ac501a98d2ed44f11cb823e9d65",
       "items_count": 171
     }
   }
