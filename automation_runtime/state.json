@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 5,
+  "queue_pointer": 2,
   "last_tier": "A",
-  "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 11,
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 65,
   "last_batch_items": [
-    "AK-47 | Slate (Well-Worn)",
-    "Glock-18 | Vogue (Field-Tested)",
-    "AWP | Atheris (Field-Tested)",
-    "Desert Eagle | Firebreathing (Minimal Wear)",
-    "AK-47 | Slate (Battle-Scarred)"
+    "AWP | Ice Coaled (Field-Tested)",
+    "M4A4 | Evil Daimyo (Field-Tested)",
+    "MP7 | Abyssal Apparition (Minimal Wear)",
+    "Desert Eagle | Printstream (Field-Tested)",
+    "M4A4 | Tooth Fairy (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-22T20:51:30.999899+00:00",
-  "last_finished_at_utc": "2026-06-22T20:54:12.966619+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-22T20:54:12.966619+00:00",
+  "last_run_at_utc": "2026-06-23T20:51:53.159678+00:00",
+  "last_finished_at_utc": "2026-06-23T20:54:29.278205+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-23T20:54:29.278205+00:00",
   "last_failed_monitoring_at_utc": "2026-06-22T19:16:48.310895+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2638705
+    "sender_pid": 2666378
   },
   "tiers": {
     "A": {
