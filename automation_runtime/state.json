@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "bbe9bbaf30062b88f1ddaa0997daa1c1d9707876a436d250398328f690909047",
-  "items_count": 488,
-  "queue_signature": "46a948e5e47defb02799750da6b29a0eb0bd6d441ff4af404b98eeb234270237",
+  "items_signature": "24b21d94bdaead1aeda421875d2032a61c89667fa486d0679ce719644742eb34",
+  "items_count": 531,
+  "queue_signature": "b2580d2cab7ca27e05e13cd7d4aa119324d287be761b7c5b2c863ea0752ece90",
   "queue_pattern": [
     "A",
     "A",
@@ -13,46 +13,46 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
+  "queue_pointer": 4,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 109,
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 154,
   "last_batch_items": [
-    "MAC-10 | Disco Tech (Field-Tested)",
-    "AK-47 | Asiimov (Field-Tested)",
-    "AK-47 | The Outsiders (Battle-Scarred)",
-    "Dual Berettas | Sweet Little Angels (Field-Tested)",
-    "AK-47 | Head Shot (Field-Tested)"
+    "Glock-18 | Glockingbird (Factory New)",
+    "P250 | Red Tide (Factory New)",
+    "StatTrak™ Glock-18 | Vogue (Field-Tested)",
+    "XM1014 | Entombed (Factory New)",
+    "AWP | Exoskeleton (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-24T20:51:54.855972+00:00",
-  "last_finished_at_utc": "2026-06-24T20:54:42.142535+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-24T20:54:42.142535+00:00",
-  "last_failed_monitoring_at_utc": "2026-06-22T19:16:48.310895+00:00",
+  "last_run_at_utc": "2026-06-25T20:52:18.386002+00:00",
+  "last_finished_at_utc": "2026-06-25T20:55:21.016500+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-25T20:55:21.016500+00:00",
+  "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 500,
-  "last_enriched_rows": 500,
+  "last_listing_rows": 419,
+  "last_enriched_rows": 419,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2700706
+    "sender_pid": 2742972
   },
   "tiers": {
     "A": {
-      "items_signature": "61cae94be84a265dd4a6b592b29420a425a1d7a50eb51d42220321f932cd2a75",
-      "items_count": 146
+      "items_signature": "8aa6650f667380aff07d012f30feb2b4f91c30f5c042eacc1af8a773b1d1c6c9",
+      "items_count": 159
     },
     "B": {
-      "items_signature": "23c938212f5d612e367ee427fe3d1d2ec55271f7aef5b5dd2ec72b6ce70135cf",
-      "items_count": 171
+      "items_signature": "55011cec296b18ea1a23b22832ee42696722c73761462c142785c7a50ad92c51",
+      "items_count": 186
     },
     "C": {
-      "items_signature": "3ce312ea8259c17645b9f2cdc711385541fb9ac501a98d2ed44f11cb823e9d65",
-      "items_count": 171
+      "items_signature": "0e53f87729229fb0171d9660a640249abd2554c15c574e7f7422d31c57d4ac39",
+      "items_count": 186
     }
   }
 }
