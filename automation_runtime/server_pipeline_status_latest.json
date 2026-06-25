@@ -1,9 +1,9 @@
 {
   "run_id": "20260624T210001Z-vps-2701587",
-  "status": "risk_ready",
+  "status": "failure",
   "source": "vps",
   "started_at_utc": "2026-06-24T21:00:01Z",
-  "updated_at_utc": "2026-06-25T06:17:32Z",
-  "message": "VPS risk and model backfill queue are ready; GitHub CSFloat worker should start from this push.",
+  "updated_at_utc": "2026-06-25T09:18:27Z",
+  "message": "base failed after fresh risk was produced; fresh risk/monitor artifacts remain in use with previous base. rc=124",
   "host": "vmi2737474"
 }
