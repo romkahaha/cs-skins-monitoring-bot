@@ -13,21 +13,21 @@
     "B",
     "C"
   ],
-  "queue_pointer": 4,
+  "queue_pointer": 2,
   "last_tier": "A",
-  "last_tier_queue_index": 3,
-  "last_batch_start_pointer": 154,
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 35,
   "last_batch_items": [
-    "Glock-18 | Glockingbird (Factory New)",
-    "P250 | Red Tide (Factory New)",
-    "StatTrak™ Glock-18 | Vogue (Field-Tested)",
-    "XM1014 | Entombed (Factory New)",
-    "AWP | Exoskeleton (Battle-Scarred)"
+    "AWP | Duality (Battle-Scarred)",
+    "AK-47 | Searing Rage (Battle-Scarred)",
+    "M4A1-S | Solitude (Minimal Wear)",
+    "AWP | Atheris (Well-Worn)",
+    "Desert Eagle | Serpent Strike (Factory New)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-25T20:52:18.386002+00:00",
-  "last_finished_at_utc": "2026-06-25T20:55:21.016500+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-25T20:55:21.016500+00:00",
+  "last_run_at_utc": "2026-06-26T20:51:33.481161+00:00",
+  "last_finished_at_utc": "2026-06-26T20:54:42.421954+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-26T20:54:42.421954+00:00",
   "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
@@ -39,7 +39,7 @@
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2742972
+    "sender_pid": 2782645
   },
   "tiers": {
     "A": {
