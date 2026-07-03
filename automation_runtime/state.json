@@ -16,30 +16,30 @@
   "queue_pointer": 2,
   "last_tier": "A",
   "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 50,
+  "last_batch_start_pointer": 95,
   "last_batch_items": [
-    "AK-47 | Inheritance (Field-Tested)",
-    "AK-47 | Nouveau Rouge (Battle-Scarred)",
-    "AWP | Atheris (Minimal Wear)",
-    "UMP-45 | Wild Child (Well-Worn)",
-    "MP9 | Starlight Protector (Field-Tested)"
+    "Dual Berettas | Melondrama (Battle-Scarred)",
+    "MP9 | Arctic Tri-Tone (Field-Tested)",
+    "StatTrak™ AWP | Duality (Field-Tested)",
+    "FAMAS | Rapid Eye Movement (Battle-Scarred)",
+    "AWP | Mortis (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-07-02T20:54:09.585999+00:00",
-  "last_finished_at_utc": "2026-07-02T20:56:41.986260+00:00",
-  "last_successful_monitoring_at_utc": "2026-07-02T20:56:41.986260+00:00",
-  "last_failed_monitoring_at_utc": null,
+  "last_run_at_utc": "2026-07-03T20:52:28.273304+00:00",
+  "last_finished_at_utc": "2026-07-03T20:54:53.307955+00:00",
+  "last_successful_monitoring_at_utc": "2026-07-03T20:54:53.307955+00:00",
+  "last_failed_monitoring_at_utc": "2026-07-03T16:00:27.741788+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2955732
+    "sender_pid": 2978219
   },
   "tiers": {
     "A": {
