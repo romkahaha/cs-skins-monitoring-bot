@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
+  "queue_pointer": 1,
   "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 67,
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 48,
   "last_batch_items": [
-    "Dual Berettas | Melondrama (Minimal Wear)",
-    "AK-47 | Emerald Pinstripe (Field-Tested)",
-    "Sawed-Off | Kiss♥Love (Field-Tested)",
-    "M4A4 | Evil Daimyo (Field-Tested)",
-    "Glock-18 | Glockingbird (Minimal Wear)"
+    "Zeus x27 | Olympus (Minimal Wear)",
+    "AK-47 | Searing Rage (Minimal Wear)",
+    "AK-47 | Inheritance (Field-Tested)",
+    "AK-47 | Nouveau Rouge (Battle-Scarred)",
+    "AWP | Atheris (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-07-05T20:51:51.216747+00:00",
-  "last_finished_at_utc": "2026-07-05T20:54:10.655036+00:00",
-  "last_successful_monitoring_at_utc": "2026-07-05T20:54:10.655036+00:00",
+  "last_run_at_utc": "2026-07-06T20:51:32.035768+00:00",
+  "last_finished_at_utc": "2026-07-06T20:54:22.366855+00:00",
+  "last_successful_monitoring_at_utc": "2026-07-06T20:54:22.366855+00:00",
   "last_failed_monitoring_at_utc": "2026-07-03T16:00:27.741788+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 500,
-  "last_enriched_rows": 500,
+  "last_listing_rows": 419,
+  "last_enriched_rows": 419,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 3034047
+    "sender_pid": 3078048
   },
   "tiers": {
     "A": {
