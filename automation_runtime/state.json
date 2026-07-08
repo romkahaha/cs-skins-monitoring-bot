@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 0,
-  "last_tier": "C",
-  "last_tier_queue_index": 6,
-  "last_batch_start_pointer": 155,
+  "queue_pointer": 1,
+  "last_tier": "A",
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 79,
   "last_batch_items": [
-    "M4A4 | Full Throttle (Minimal Wear)",
-    "StatTrak™ AK-47 | Inheritance (Field-Tested)",
-    "FAMAS | Eye of Athena (Minimal Wear)",
-    "Galil AR | Rocket Pop (Factory New)",
-    "M4A1-S | Vaporwave (Minimal Wear)"
+    "Desert Eagle | Mint Fan (Factory New)",
+    "P2000 | Wicked Sick (Battle-Scarred)",
+    "USP-S | Cyrex (Field-Tested)",
+    "AWP | Atheris (Battle-Scarred)",
+    "FAMAS | Yeti Camo (Factory New)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-07-07T20:53:25.760457+00:00",
-  "last_finished_at_utc": "2026-07-07T20:54:39.910492+00:00",
-  "last_successful_monitoring_at_utc": "2026-07-07T20:54:39.910492+00:00",
+  "last_run_at_utc": "2026-07-08T20:53:58.288449+00:00",
+  "last_finished_at_utc": "2026-07-08T20:56:27.145028+00:00",
+  "last_successful_monitoring_at_utc": "2026-07-08T20:56:27.145028+00:00",
   "last_failed_monitoring_at_utc": "2026-07-03T16:00:27.741788+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 297,
-  "last_enriched_rows": 297,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 3123488
+    "sender_pid": 3161752
   },
   "tiers": {
     "A": {
