@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
+  "queue_pointer": 3,
   "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 1,
+  "last_tier_queue_index": 2,
+  "last_batch_start_pointer": 154,
   "last_batch_items": [
-    "StatTrak™ Desert Eagle | Light Rail (Field-Tested)",
-    "AWP | Green Energy (Minimal Wear)",
-    "Sawed-Off | Kiss♥Love (Minimal Wear)",
-    "StatTrak™ AWP | Mortis (Field-Tested)",
-    "StatTrak™ AK-47 | Elite Build (Well-Worn)"
+    "Five-SeveN | Capillary (Factory New)",
+    "USP-S | Guardian (Factory New)",
+    "★ Driver Gloves | Overtake (Field-Tested)",
+    "AWP | Wildfire (Field-Tested)",
+    "MAC-10 | Heat (Field-Tested)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-07-10T20:53:27.530375+00:00",
-  "last_finished_at_utc": "2026-07-10T20:55:15.921232+00:00",
-  "last_successful_monitoring_at_utc": "2026-07-10T20:55:15.921232+00:00",
+  "last_run_at_utc": "2026-07-11T20:53:13.192940+00:00",
+  "last_finished_at_utc": "2026-07-11T20:55:07.524953+00:00",
+  "last_successful_monitoring_at_utc": "2026-07-11T20:55:07.524953+00:00",
   "last_failed_monitoring_at_utc": "2026-07-09T14:25:28.306044+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 400,
-  "last_enriched_rows": 400,
+  "last_listing_rows": 374,
+  "last_enriched_rows": 374,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 3213119
+    "sender_pid": 3248471
   },
   "tiers": {
     "A": {
